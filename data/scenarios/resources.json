@@ -1,0 +1,84 @@
+{
+  "legal_resources": [
+    {
+      "name": "Department of Labor and Employment (DOLE)",
+      "description": "Primary government agency for labor policy, standards enforcement, and dispute resolution.",
+      "hotline": "1349",
+      "website": "https://www.dole.gov.ph",
+      "services": ["Labor standards complaints", "Request for assistance (RFA)", "SENA mediation"]
+    },
+    {
+      "name": "Philippine Overseas Employment Administration (POEA)",
+      "description": "Regulates overseas employment and protects OFWs from illegal recruitment.",
+      "hotline": "(02) 8722-1144",
+      "website": "https://www.dmw.gov.ph",
+      "services": ["Verify licensed agencies", "Report illegal recruitment", "OFW contract verification"]
+    },
+    {
+      "name": "Department of Migrant Workers (DMW)",
+      "description": "Consolidated agency for OFW welfare, replacing functions of POEA and OWWA.",
+      "hotline": "1348",
+      "website": "https://www.dmw.gov.ph",
+      "services": ["Pre-departure orientation", "Migrant worker assistance", "Repatriation support"]
+    },
+    {
+      "name": "National Labor Relations Commission (NLRC)",
+      "description": "Quasi-judicial body that resolves labor disputes including illegal dismissal and money claims.",
+      "hotline": "(02) 8527-3000",
+      "website": "https://nlrc.dole.gov.ph",
+      "services": ["Illegal dismissal cases", "Wage claims", "Unfair labor practice complaints"]
+    },
+    {
+      "name": "Overseas Workers Welfare Administration (OWWA)",
+      "description": "Provides welfare programs and assistance to OFWs and their families.",
+      "hotline": "(02) 8551-6641",
+      "website": "https://owwa.gov.ph",
+      "services": ["Emergency repatriation", "Education and training", "Insurance and loan programs"]
+    },
+    {
+      "name": "Public Attorney's Office (PAO)",
+      "description": "Free legal assistance for workers who cannot afford private lawyers.",
+      "hotline": "(02) 8929-9436",
+      "website": "https://pao.gov.ph",
+      "services": ["Free legal representation", "Legal advice", "Case filing assistance"]
+    },
+    {
+      "name": "National Wages and Productivity Commission (NWPC)",
+      "description": "Sets minimum wage rates and promotes productivity improvement.",
+      "website": "https://nwpc.dole.gov.ph",
+      "services": ["Minimum wage inquiries", "Wage order compliance"]
+    }
+  ],
+  "key_laws": [
+    {
+      "name": "Labor Code of the Philippines (PD 442)",
+      "description": "Foundational law governing employment, working conditions, and labor relations."
+    },
+    {
+      "name": "Migrant Workers Act (RA 10022)",
+      "description": "Protects OFWs from illegal recruitment and ensures minimum employment standards abroad."
+    },
+    {
+      "name": "Anti-Illegal Recruitment Act",
+      "description": "Criminalizes illegal recruitment, especially large-scale and syndicated recruitment."
+    },
+    {
+      "name": "Occupational Safety and Health Standards Act (RA 11058)",
+      "description": "Mandates safe working conditions and employer accountability for workplace hazards."
+    },
+    {
+      "name": "Social Security Act (RA 11199)",
+      "description": "Provides social security coverage for private sector workers including gig workers."
+    },
+    {
+      "name": "Telecommuting Act (RA 11165)",
+      "description": "Establishes framework for telecommuting arrangements with equal treatment provisions."
+    }
+  ],
+  "emergency_contacts": [
+    { "name": "DOLE Hotline", "number": "1349" },
+    { "name": "DMW/POEA OFW Helpline", "number": "1348" },
+    { "name": "National Emergency Hotline", "number": "911" },
+    { "name": "Commission on Human Rights", "number": "(02) 8294-8704" }
+  ]
+}

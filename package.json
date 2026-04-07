@@ -1,0 +1,19 @@
+{
+  "name": "labor-rights-rpg",
+  "version": "1.0.0",
+  "description": "Text-based narrative RPG about OFW and gig worker labor rights in the Philippines",
+  "private": true,
+  "scripts": {
+    "dev": "concurrently \"npm run dev:server\" \"npm run dev:client\"",
+    "dev:server": "cd server && npm run dev",
+    "dev:client": "cd client && npm run dev",
+    "build": "cd client && npm run build",
+    "start": "cd server && npm start",
+    "generate": "node scripts/generate.js",
+    "lint": "eslint server/src client/src scripts"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2",
+    "eslint": "^9.0.0"
+  }
+}

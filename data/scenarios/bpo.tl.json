@@ -1,0 +1,917 @@
+{
+  "nodes": {
+    "bpo_start": {
+      "id": "bpo_start",
+      "title": "Ang Offer Letter",
+      "narrative": "Nakatitig si Angela Cruz sa offer letter na nakalatag sa laminated na mesa ng isang Jollibee sa Makati. Twenty-six years old siya, graduate ng isang probinsyang unibersidad, at tatlong buwan na siyang naghahanap ng trabaho sa Metro Manila. Ang BPO company na GlobalConnect Solutions ay tatlong palapag ang kinukuha sa isang glass tower sa Ayala Avenue. Ang sweldo ay 18,000 pesos kada buwan -- hindi maganda, pero sapat na para sa isang bedspace sa Poblacion at padala sa pamilya niya sa Leyte.\n\nAng HR coordinator, isang masayahing babaeng si Ms. Reyes, mabilis na inexplain lahat nung orientation. Ang kontrata ay limang buwan -- 'project-based,' sabi niya. Napansin ni Angela yung term pero hindi na niya tinanong. Lahat naman ng kilala niya sa BPO ganoon din ang deal. Limang buwan dito, limang buwan doon. Hindi kailanman umabot ng anim.\n\nPero may kumakatok sa isip niya. Ang tita niya, isang labor organizer sa Tacloban, nagsabi sa kanya noon: 'Anak, kapag pinatapos ka nang anim na buwan, regular ka na. Yan ang batas.' Binasa ulit ni Angela ang kontrata. Start date: January 15. End date: June 14. Eksaktong limang buwan. Parang sinadya.\n\nBinuksan niya ang pen niya. Maingay ang Jollibee dahil lunch crowd. Hinihintay ni Ms. Reyes ang signed copy by 5 PM.",
+      "theme": "contractualization",
+      "choices": [
+        {
+          "text": "Pirmahan ang kontrata nang walang tanong -- kailangan niya ang trabaho.",
+          "nextNode": "bpo_hire_01",
+          "consequence": "Pumirma si Angela at nagsimula sa trabaho, pero nananatiling vulnerable sa endo cycle.",
+          "scoreChange": -5,
+          "knowledgeGained": null
+        },
+        {
+          "text": "Tanungin si Ms. Reyes kung bakit limang buwan lang ang kontrata at posible ba ang regularization.",
+          "nextNode": "bpo_hire_02",
+          "consequence": "Nagtanong si Angela ng diretso pero magalang tungkol sa tagal ng kontrata.",
+          "scoreChange": 10,
+          "knowledgeGained": "Ayon sa Labor Code Art. 295, ang isang empleyado na nagsilbi ng hindi bababa sa 6 na buwan ay ituturing na regular employee."
+        },
+        {
+          "text": "Pirmahan ang kontrata pero pribadong mag-research tungkol sa karapatan niya sa tagal ng kontrata.",
+          "nextNode": "bpo_hire_03",
+          "consequence": "Pumirma si Angela pero nagsimulang mag-aral tungkol sa labor law.",
+          "scoreChange": 5,
+          "knowledgeGained": "Ang DOLE Department Order 174 ay nagbabawal ng 'endo' -- ang praktis na tinatanggal ang mga manggagawa bago umabot ng 6 na buwan para maiwasan ang regularization."
+        }
+      ],
+      "isEnding": false
+    },
+    "bpo_hire_01": {
+      "id": "bpo_hire_01",
+      "title": "Limang Buwan Na",
+      "narrative": "Mabilis na lumipas ang limang buwan sa gitna ng mga headset at script. Natutunan ni Angela ang IVR system, na-memorize niya ang troubleshooting flowcharts, at na-survive niya ang unang encounter niya sa isang American customer na sumigaw sa kanya ng apatnapung minuto tungkol sa cable bill. Sabi ni Sir Jomar, ang team leader niya, isa siya sa pinakamahusay na bagong hire.\n\nNung June 10, apat na araw bago matapos ang kontrata niya, nagpadala si Ms. Reyes ng masayang email: 'Hi Angela! Gusto ka naming i-keep on board. Naka-attach ang bagong project-based contract mo. Same terms, same role. Paki-sign at ibalik by Friday.'\n\nPanibagong limang buwan na kontrata. Tumatawa nang mapait si Denise, ang katabi niya sa opisina. 'Girl, pang-apat ko na 'tong contract renewal. Same job, same desk, same everything. Pinalitan lang nila yung project name.' Halos dalawang taon na si Denise sa GlobalConnect -- palaging limang buwan ang kontrata, hindi kailanman na-regular.\n\nNakatitig si Angela sa bagong kontrata. May hindi tama dito.",
+      "theme": "contractualization",
+      "choices": [
+        {
+          "text": "Pirmahan ang renewal -- at least may trabaho pa siya.",
+          "nextNode": "bpo_hire_04",
+          "consequence": "Nagpatuloy si Angela sa endo cycle, sinacrifice ang long-term security para sa short-term stability.",
+          "scoreChange": -5,
+          "knowledgeGained": null
+        },
+        {
+          "text": "Tanungin si Denise kung pwede silang magkasama na lumapit sa HR para magtanong tungkol sa regularization.",
+          "nextNode": "bpo_hire_05",
+          "consequence": "Sinubukan ni Angela na bumuo ng solidarity kasama ang isang coworker na pareho ang sitwasyon.",
+          "scoreChange": 10,
+          "knowledgeGained": "Ang mga manggagawa na gumagawa ng mga gawaing kailangan at katanggap-tanggap sa negosyo ng employer nang hindi bababa sa 6 na buwan ay itinuturing na regular employee kahit anong nakalagay sa kontrata."
+        },
+        {
+          "text": "Tahimik na tawagan ang DOLE hotline (1349) para itanong ang sitwasyon niya.",
+          "nextNode": "bpo_hire_06",
+          "consequence": "Humingi si Angela ng expert na gabay mula sa government labor agency.",
+          "scoreChange": 15,
+          "knowledgeGained": "Ang DOLE Hotline 1349 ay nagbibigay ng libreng tulong sa labor law. Pwede ka ring pumunta sa kahit anong DOLE regional/field office para sa konsultasyon."
+        }
+      ],
+      "isEnding": false
+    },
+    "bpo_hire_02": {
+      "id": "bpo_hire_02",
+      "title": "Ang Pag-iwas ni Ms. Reyes",
+      "narrative": "Tinawagan ni Angela si Ms. Reyes bago mag-deadline. 'Ma'am, napansin ko po na limang buwan lang ang kontrata. Meron po bang pathway para maging regular employee?'\n\nMay katahimikan sa linya. Nung nagsalita ulit si Ms. Reyes, friendly pa rin pero parang naensayo na. 'Angela, lahat ng agents namin ay nagsisimula bilang project-based. Standard yan sa BPO industry. Ang regularization ay depende sa client volume at company needs. Focus ka lang sa metrics mo at tingnan natin kung ano mangyayari.'\n\nNon-answer. Narinig na ni Angela ang ganitong uri ng vague promises mula sa ibang company. Pero pumirma pa rin siya sa kontrata -- kailangan niya ang income. Ang gamot ng nanay niya sa Leyte ay 3,000 pesos kada buwan.\n\nLimang buwan mamaya, nangyari na naman. Panibagong limang buwan na kontrata. Same desk. Same phone. Same headset. Sa ikatlong renewal niya, labinlimang buwan na si Angela sa GlobalConnect. Ayon sa batas, regular employee na siya -- pero tinatrato siya ng company na parang bago ulit sa bawat limang buwan.",
+      "theme": "contractualization",
+      "choices": [
+        {
+          "text": "Direktang kausapin ang HR at i-cite ang Article 295 ng Labor Code tungkol sa regularization pagkatapos ng anim na buwan.",
+          "nextNode": "bpo_hire_05",
+          "consequence": "Direktang ipinaglaban ni Angela ang kanyang legal na karapatan sa company.",
+          "scoreChange": 15,
+          "knowledgeGained": "Labor Code Art. 295: Ang empleyado na nagsilbi ng hindi bababa sa 6 na buwan ay itinuturing na regular, kahit anong nakalagay sa anumang nakasulat na kontrata."
+        },
+        {
+          "text": "Mag-file ng complaint sa DOLE tungkol sa paulit-ulit na short-term contracts.",
+          "nextNode": "bpo_hire_06",
+          "consequence": "Kumilos si Angela sa tamang channel ng gobyerno.",
+          "scoreChange": 12,
+          "knowledgeGained": "Pwede kang mag-file ng endo complaint sa kahit anong DOLE field office. Magdala ng kopya ng lahat ng kontrata at payslips bilang ebidensya."
+        },
+        {
+          "text": "Tanggapin na lang ang sitwasyon at patuloy na lang na mag-sign ng renewals.",
+          "nextNode": "bpo_hire_04",
+          "consequence": "Sumuko si Angela sa regularization at nananatiling vulnerable.",
+          "scoreChange": -5,
+          "knowledgeGained": null
+        }
+      ],
+      "isEnding": false
+    },
+    "bpo_hire_03": {
+      "id": "bpo_hire_03",
+      "title": "Gabi ng Pananaliksik",
+      "narrative": "Pumirma si Angela sa kontrata pero ginugol niya ang susunod na rest day sa isang internet cafe sa Guadalupe, nag-reresearch tungkol sa Philippine labor law. Nakita niya ang buong teksto ng Labor Code sa DOLE website at maingat na binasa ang Article 295. Nadiskubre rin niya ang DOLE Department Order 174, na direktang tinatarget ang endo practice.\n\nSum-join din siya sa isang Facebook group na tinatawag na 'BPO Workers Rights PH,' kung saan libu-libong call center agent ang nagkukuwento ng karanasang halos kapareho ng sa kanya -- limang buwan na kontrata, walang benefits, walang security. May isang post mula sa isang labor lawyer na nag-aalok ng libreng konsultasyon tuwing Sabado sa Ateneo Human Rights Center.\n\nLimang buwan mamaya, gaya ng inaasahan, nag-offer ang GlobalConnect ng panibagong limang buwan na kontrata. Pero ngayon handa na si Angela. May mga screenshot siya ng mga petsa ng kontrata niya, kopya ng mga payslip niya, at malinaw na pag-unawa sa sinasabi ng batas.\n\nNapansin din niya ang isa pang bagay sa payslip niya na hindi mukhang tama. Ang gabi niyang shift ay walang lumalabas na differential pay.",
+      "theme": "contractualization",
+      "choices": [
+        {
+          "text": "I-raise ang parehong isyu ng regularization at ng missing night differential sa HR.",
+          "nextNode": "bpo_hire_05",
+          "consequence": "Kinonfrontahan ni Angela ang maraming labor violation nang sabay-sabay, armado ng kaalaman.",
+          "scoreChange": 15,
+          "knowledgeGained": "Labor Code Art. 86: Ang night shift differential na hindi bababa sa 10% ay kailangang ibayad para sa trabahong ginawa mula 10:00 PM hanggang 6:00 AM."
+        },
+        {
+          "text": "Pumunta sa libreng legal consultation sa Ateneo para kumuha muna ng tamang payo.",
+          "nextNode": "bpo_hire_06",
+          "consequence": "Humingi muna si Angela ng propesyonal na legal advice bago kumilos.",
+          "scoreChange": 12,
+          "knowledgeGained": "Maraming organisasyon ang nag-aalok ng libreng legal aid para sa mga manggagawa: FLAG (Free Legal Assistance Group), Ateneo Human Rights Center, at PAO (Public Attorney's Office o Opisina ng Abogado ng Bayan)."
+        },
+        {
+          "text": "I-focus muna ang night differential issue dahil mas madaling patunayan.",
+          "nextNode": "bpo_night_01",
+          "consequence": "Inuna ni Angela ang isyu sa sahod na malinaw niyang madocument.",
+          "scoreChange": 7,
+          "knowledgeGained": null
+        }
+      ],
+      "isEnding": false
+    },
+    "bpo_hire_04": {
+      "id": "bpo_hire_04",
+      "title": "Nakulong sa Siklo",
+      "narrative": "Pumirma si Angela sa ikatlong limang buwan na kontrata niya. Tapos ang pang-apat. Sa bawat pagkakataon, ini-assure siya ni Ms. Reyes na ang regularization ay 'bine-review pa ng management.' Sa bawat pagkakataon, walang nagbago.\n\nNgayon, dalawampung buwan na si Angela sa GlobalConnect. Tinuturuan niya ang mga bagong hire, hawak niya ang pinakamahirap na accounts, at palaging maganda ang metrics niya. Pero sa papel, 'project-based' pa rin siya. Walang separation pay kung tanggalin siya. Walang security of tenure. Walang tunay na benefits maliban sa legally mandated na SSS at PhilHealth.\n\nIsang gabi habang naka-shift siya, narinig niya si Sir Jomar sa telepono. 'Oo, ile-let go natin yung batch nung January. Nagdo-downsize ang client.' Kumulo ang tiyan ni Angela. Batch niya yung January.\n\nDalawang araw mamaya, nagpadala ulit ng email si Ms. Reyes. Hindi renewal ang email na ito. 'Dahil sa pagkatapos ng project, hindi na mae-extend ang kontrata mo. Ang huling araw mo ay sa Biyernes. Paki-surrender ang ID at headset mo sa Security.'",
+      "theme": "contractualization",
+      "choices": [
+        {
+          "text": "Tanggapin nang tahimik ang pagkatanggal at magsimulang maghanap ulit ng trabaho.",
+          "nextNode": "bpo_term_05",
+          "consequence": "Umalis si Angela nang hindi ipinaglaban ang kahit anong karapatan niya.",
+          "scoreChange": -10,
+          "knowledgeGained": null
+        },
+        {
+          "text": "Sabihin sa HR na pagkatapos ng 20 buwan, legally regular employee na siya at hindi pwedeng tanggalin nang ganito.",
+          "nextNode": "bpo_term_01",
+          "consequence": "Sa wakas ay tumayo si Angela at ipinaglaban ang karapatan niya sa security of tenure.",
+          "scoreChange": 12,
+          "knowledgeGained": "Ang manggagawa na tuloy-tuloy na nag-trabaho nang higit sa 6 na buwan sa gawaing kailangan ng negosyo ay regular employee. Ang pagtatanggal nang walang just o authorized cause ay illegal dismissal."
+        },
+        {
+          "text": "Kumonsulta muna sa labor lawyer bago sumagot sa pagkatanggal.",
+          "nextNode": "bpo_term_02",
+          "consequence": "Humingi si Angela ng legal counsel para maintindihan ang mga opsyon niya.",
+          "scoreChange": 10,
+          "knowledgeGained": null
+        }
+      ],
+      "isEnding": false
+    },
+    "bpo_hire_05": {
+      "id": "bpo_hire_05",
+      "title": "Lakas sa Bilang",
+      "narrative": "Magkaharap sina Angela at Denise kay Ms. Reyes sa HR conference room. May dala si Angela na printouts ng Labor Code Article 295 at DOLE Department Order 174. Nanginginig ang mga kamay niya sa ilalim ng mesa, pero steady ang boses niya.\n\n'Ma'am, dalawang taon na si Denise dito at ako naman ay mahigit isang taon na. Tuloy-tuloy kaming gumagawa ng parehong trabaho. Ayon sa Labor Code, na-regular na sana kami pagkatapos ng ikaanim na buwan namin. Hinihingi namin na kilalanin ng company ang status namin bilang regular employees.'\n\nHindi nagbago ang ngiti ni Ms. Reyes, pero tumining ang mga mata niya. 'Naiintindihan ko ang concern niyo, Angela. Pero malinaw na nakalagay sa kontrata niyo na project-based ang employment niyo. Pag natapos ang project, natapos ang kontrata. Ganoon talaga sa BPO.'\n\n'With respect po, ma'am,' singit ni Denise, 'may ruling ang Supreme Court na ang uri ng trabaho, hindi ang label ng kontrata, ang nagtatakda ng employment status. Pareho ang ginagawa naming trabaho sa mga regular agent niyo.'\n\nNagpaalam si Ms. Reyes para 'kumonsulta sa legal.' Kinabukasan, tinawag sina Angela at Denise sa meeting kasama ang operations manager, na kapansin-pansing hindi na palakaibigan.",
+      "theme": "contractualization",
+      "choices": [
+        {
+          "text": "Maging matatag at ulitin ang demand para sa regularization, na cini-cite ang specific na legal provisions.",
+          "nextNode": "bpo_night_01",
+          "consequence": "Nanatiling matatag si Angela kahit may pressure mula sa management. Hindi gustong-gusto ng company pero nagsimulang iproseso ang regularization nila pero inilipat sila sa pinakamasamang shift.",
+          "scoreChange": 15,
+          "knowledgeGained": "Ayon sa Supreme Court precedent (Magsalin v. National Organization of Working Men), ang paulit-ulit na pag-hire para sa parehong posisyon ay ebidensya ng regular employment."
+        },
+        {
+          "text": "Umurong nang sinabi ng operations manager na ang pagtutulak nito ay pwedeng 'makaapekto sa standing nila.'",
+          "nextNode": "bpo_hire_04",
+          "consequence": "Na-intimidate ng banta, umurong si Angela.",
+          "scoreChange": -5,
+          "knowledgeGained": null
+        },
+        {
+          "text": "Mag-file ng pormal na kahilingan sa sulat at magpadala ng kopya sa DOLE para sa dokumentasyon.",
+          "nextNode": "bpo_hire_06",
+          "consequence": "Gumawa si Angela ng paper trail na magpoprotekta sa kanya legally.",
+          "scoreChange": 13,
+          "knowledgeGained": "Palaging idokumento ang mga labor complaint sa sulat. Ang nakasulat na kahilingan sa employer, na may kopya sa DOLE, ay gumagawa ng paper trail na napakahalaga sa anumang labor case sa hinaharap."
+        }
+      ],
+      "isEnding": false
+    },
+    "bpo_hire_06": {
+      "id": "bpo_hire_06",
+      "title": "Pumasok ang DOLE",
+      "narrative": "Pumunta si Angela sa DOLE-NCR field office sa Intramuros sa day off niya. Punong-puno ang waiting area -- mga construction worker, empleyado ng pabrika, mga kasambahay, lahat may kanya-kanyang kwento. Kumuha siya ng numero at naghintay ng tatlong oras.\n\nAng labor inspector na humawak ng kaso niya, si Attorney Mendoza, ay masinop. Nirebyu niya ang mga kontrata, payslips, at timeline ng employment ni Angela. 'Ms. Cruz, base sa ipinakita niyo sa akin, malakas ang kaso niyo. Ang paulit-ulit na limang buwan na kontrata para sa parehong posisyon ay textbook endo scheme. Sa ilalim ng DO 174, ipinagbabawal ito.'\n\nIniexplain niya ang mga opsyon: pwedeng mag-conduct ang DOLE ng routine inspection sa GlobalConnect, o pwedeng mag-file si Angela ng pormal na complaint. Ang inspection route ay hindi gaanong confrontational pero mas mabagal. Ang pormal na complaint ay mas mabilis pero malalaman ng company na si Angela ang nag-file.\n\n'Alinmang paraan,' sabi ni Attorney Mendoza, 'dapat malaman mong regular employee ka na sa ilalim ng batas. Ang tanong ay kung boluntaryong kikilalanin ng company o kailangan nating pilitin sila.'\n\nSumakay si Angela ng bus pabalik ng Makati, puno ang isip. Gabi na naman ang shift niya mamaya.",
+      "theme": "contractualization",
+      "choices": [
+        {
+          "text": "Hilingin sa DOLE na mag-conduct ng routine inspection para hindi siya matukoy.",
+          "nextNode": "bpo_night_01",
+          "consequence": "Nag-schedule ang DOLE ng inspection. Samantala, bumalik si Angela sa gabi niyang shift.",
+          "scoreChange": 10,
+          "knowledgeGained": "Pwedeng mag-conduct ang DOLE ng labor inspections sa ilalim ng Labor Standards Enforcement Framework (LSEF) nang hindi kailangan ng pormal na complaint mula sa specific na manggagawa."
+        },
+        {
+          "text": "Mag-file ng pormal na complaint para mapabilis ang proseso kahit may risk.",
+          "nextNode": "bpo_night_01",
+          "consequence": "Nag-file si Angela ng complaint, alam na pwedeng gumanti ang company. Ipinroseso ng DOLE ang kaso niya.",
+          "scoreChange": 13,
+          "knowledgeGained": "Ilegal para sa mga employer na gumanti sa mga manggagawa na nag-file ng DOLE complaints. Ang pagganti ay unfair labor practice sa ilalim ng Art. 248 ng Labor Code."
+        },
+        {
+          "text": "Magpasyang maghintay at mag-isip pa bago kumilos.",
+          "nextNode": "bpo_night_01",
+          "consequence": "Nag-alinlangan si Angela pero bumalik sa night shift, kung saan may bagong problema.",
+          "scoreChange": 0,
+          "knowledgeGained": null
+        }
+      ],
+      "isEnding": false
+    },
+    "bpo_night_01": {
+      "id": "bpo_night_01",
+      "title": "Ang Graveyard Shift",
+      "narrative": "2:47 AM na. Anim na oras na si Angela ng sunud-sunod na tawag. Sobrang lakas ng aircon sa opisina kaya naka-jacket siya sa ibabaw ng company polo niya. Pinapalitaw ng fluorescent lights na medyo sakit-sakit ang hitsura ng lahat. Sa paligid niya, isang daang agent ang bumubulong sa mga headset nila, na ang mga boses ay nagsasama-sama sa isang mahinang hum.\n\nLumapit si Sir Jomar sa station niya. 'Angela, mahaba pa ang queue. Kailangan ko mag-extend ka ng dalawang oras tonight. Mandatory OT.' Chineck ni Angela ang schedule niya -- 10 PM to 6 AM na ang shift niya. Dagdag pang dalawang oras ibig sabihin hindi siya makakauwi sa bedspace niya sa Poblacion hanggang halos 10 AM, at kailangan niya nang bumalik by 9:30 PM para sa susunod na shift.\n\n'Sir, mandatory po ba? May errands ako bukas,' sabi niya. Kibit-balikat si Jomar. 'Management decision. Lahat sa floor mag-e-extend. Kapag hindi ka sumama, magre-reflect sa performance review mo.'\n\nMasakit ang paa ni Angela. Tuyo ang mga mata niya sa pagtitig sa monitor. Ang iniisip na dalawang oras pa ng mga galit na caller ay nagpapasikip ng dibdib niya.",
+      "theme": "forced_overtime",
+      "choices": [
+        {
+          "text": "Pumayag sa mandatory overtime nang walang reklamo.",
+          "nextNode": "bpo_night_02",
+          "consequence": "Nagstay si Angela, pagod na pagod, at hindi chineck kung tama man ang bayad ng OT.",
+          "scoreChange": -5,
+          "knowledgeGained": null
+        },
+        {
+          "text": "Pumayag pero hilingin kay Sir Jomar na i-confirm sa sulat na tama ang computation ng OT pay.",
+          "nextNode": "bpo_night_03",
+          "consequence": "Sumunod si Angela pero pinoprotektahan ang sarili sa pamamagitan ng paghingi ng dokumentasyon.",
+          "scoreChange": 8,
+          "knowledgeGained": "Labor Code Art. 87: Ang overtime work ay kailangang bayaran ng dagdag na 25% ng regular wage. Kapag ginawa sa rest day o holiday, 30% ang premium."
+        },
+        {
+          "text": "Magalang na tumanggi, na cini-cite na ang overtime ay dapat voluntary ayon sa Labor Code.",
+          "nextNode": "bpo_night_04",
+          "consequence": "Ipinaglaban ni Angela ang karapatan niyang tumanggi sa sapilitang overtime.",
+          "scoreChange": 12,
+          "knowledgeGained": "Sa ilalim ng Labor Code, ang overtime work ay generally voluntary. Hindi pwedeng pilitin ng employer ang overtime maliban sa mga emergency o urgent na trabaho para maiwasan ang pagkamatay o pagkawala ng ari-arian."
+        }
+      ],
+      "isEnding": false
+    },
+    "bpo_night_02": {
+      "id": "bpo_night_02",
+      "title": "Ang Nawawalang Differential",
+      "narrative": "Nag-extend si Angela ng shift hanggang 8 AM. Pagdating sa bedspace niya, matindi na ang sikat ng araw sa manipis na kurtina. Hindi siya makatulog nang maayos, gumigising bawat oras dahil sa ingay ng neighborhood -- jeepney, karaoke, construction.\n\nNung dumating ang susunod na payslip sa email, halos hindi na chineck ni Angela. Pero may sinabi si Denise na bumabalik sa isip niya: 'Girl, palaging i-check ang payslip mo. Inaasahan nila na hindi tayo titingin.'\n\nBinuksan ni Angela ang PDF sa phone niya. Nandoon ang basic pay niya. Mukhang tama ang SSS at PhilHealth deductions. Pero dalawang bagay ang nawawala. Una, ang overtime hours niya nitong nakaraang linggo ay regular hourly rate lang -- walang 25% premium. Pangalawa, at ito ang mas nagulat sa kanya, walang night shift differential. 10 PM to 6 AM ang shift niya nang maraming buwan, at ni minsan walang lumabas na 10% night differential sa kahit anong payslip niya.\n\nSina-scroll niya pabalik ang mga lumang payslip na nasa email niya. Wala ni isang nagpapakita ng night differential pay. Kinompyut ni Angela sa calculator ng phone niya: sa 10% ng hourly rate niya para sa bawat oras ng night shift, libo-libong piso ang utang ng company sa kanya.",
+      "theme": "wage_theft",
+      "choices": [
+        {
+          "text": "Agad dalhin sa HR ang mga discrepancy sa payslip kasama ang nakasulat na computation ng utang sa kanya.",
+          "nextNode": "bpo_night_05",
+          "consequence": "Kinonfrontahan ni Angela ang wage theft gamit ang ebidensya.",
+          "scoreChange": 13,
+          "knowledgeGained": "Labor Code Art. 86: Bawat empleyado ay kailangang bayaran ng night shift differential na hindi bababa sa 10% ng regular wage para sa bawat oras ng trabaho mula 10 PM hanggang 6 AM."
+        },
+        {
+          "text": "Magtanong kung ang ibang agent sa night shift ay nawawalan din ng differential pay.",
+          "nextNode": "bpo_night_06",
+          "consequence": "Iniimbestiga ni Angela kung company-wide ang isyu.",
+          "scoreChange": 10,
+          "knowledgeGained": "Ang wage theft na nakakaapekto sa maraming manggagawa ay pwedeng i-report sa DOLE bilang labor standards violation, na magti-trigger ng company-wide inspection."
+        },
+        {
+          "text": "Isipin na baka kasama na sa base pay at huwag nang gawing isyu.",
+          "nextNode": "bpo_health_01",
+          "consequence": "Pinabayaan ni Angela ang wage theft na walang paglaban.",
+          "scoreChange": -8,
+          "knowledgeGained": null
+        }
+      ],
+      "isEnding": false
+    },
+    "bpo_night_03": {
+      "id": "bpo_night_03",
+      "title": "Mga Paper Trail",
+      "narrative": "Nagulat si Sir Jomar nang humingi si Angela ng written confirmation ng overtime arrangement. 'Written? I-check mo na lang sa payslip mo next cut-off, nandoon yan.' Ngumiti si Angela pero mahinahon na nag-insist. 'Sir, para lang po sa records ko. Pwede niyo po ba i-email sa akin ang OT authorization? Nakakatulong po sa budget planning ko.'\n\nNagpadala si Jomar ng maikling email: 'Angela Cruz, authorized for 2 hrs OT, March 15.' Hindi malaki pero something ito. Ni-forward ni Angela sa personal email niya at ni-screenshot.\n\nNag-work siya ng dagdag na dalawang oras. Brutal ang mga tawag -- isang customer na nagbantang 'ipapafire' siya dahil sa billing error na hindi naman department niya. By 8 AM, paos na ang boses niya at kumakalam ang kanang kamay niya mula sa pagta-type ng case notes.\n\nNung dumating ang payslip, maingat na chineck ni Angela. Nakalista ang overtime hours, pero mali ang rate -- straight time lang, hindi ang 25% premium na required ng batas. At gaya ng bawat payslip, zero ang night shift differential.\n\nArmado ng email ni Jomar bilang patunay ng OT authorization, malinaw ang ebidensya ni Angela ng underpayment.",
+      "theme": "wage_theft",
+      "choices": [
+        {
+          "text": "I-compile lahat ng ebidensya -- payslips, OT authorization, kontrata -- at dalhin lahat sa HR.",
+          "nextNode": "bpo_night_05",
+          "consequence": "Nagbuo si Angela ng comprehensive na kaso bago lumapit sa management.",
+          "scoreChange": 13,
+          "knowledgeGained": "Itago ang kopya ng lahat ng employment documents: kontrata, payslips, emails, at company memos. Ito ang kritikal na ebidensya sa anumang labor dispute."
+        },
+        {
+          "text": "I-report ang underpayment sa DOLE kasama ang documentary evidence.",
+          "nextNode": "bpo_night_06",
+          "consequence": "Diretso na pumunta si Angela sa enforcement agency.",
+          "scoreChange": 12,
+          "knowledgeGained": "Pwedeng i-order ng DOLE ang mga employer na magbayad ng wage differentials at penalties. Ang mga claim para sa unpaid wages ay pwedeng mag-cover ng hanggang 3 taon ng back pay."
+        },
+        {
+          "text": "Casual na banggitin kay Sir Jomar at umasa na i-escalate niya.",
+          "nextNode": "bpo_night_02",
+          "consequence": "Nag-passive approach si Angela, at walang nagbago.",
+          "scoreChange": -3,
+          "knowledgeGained": null
+        }
+      ],
+      "isEnding": false
+    },
+    "bpo_night_04": {
+      "id": "bpo_night_04",
+      "title": "Tumayo sa Paninindigan",
+      "narrative": "Sinabi ni Angela kay Sir Jomar na tatapusin niya ang regular shift niya pero hindi siya mag-e-extend. Pumiglas ang mukha ni Jomar. 'Angela, lahat naman nagse-stay. Ino-note ito.' Tumango siya. 'Naiintindihan ko po, Sir. Pero walong oras na akong nag-trabaho at kailangan kong magpahinga. Mas magiging productive ako sa susunod na shift ko kapag hindi ako halos walang tulog.'\n\nNag-log off siya exactly 6 AM, kinuha ang bag mula sa locker, at sumakay ng elevator pababa sa Ayala Avenue lobby. Tumama ang maaga pang hangin sa mukha niya -- mainit na agad, kahit madaling araw pa lang. Dumadagundong ang mga jeepney. Ang mga security guard mula sa mga katabing gusali ay nagpapalitan ng shift.\n\nSa shuttle pauwi, binuksan ni Angela ang payslip sa phone niya. Gusto niyang i-check kung tama ang bayad ng overtime nitong nakaraang linggo (na pinagbigyan niya). Hindi tama ang numbers. Walang 25% premium. At isa pang nawawala -- ang night shift differential. Sampung porsyento ekstra para sa bawat oras na nagtrabaho mula 10 PM hanggang 6 AM. Wala ito. Hindi ito naging nandoon kailanman.\n\nNararamdaman ni Angela ang unti-unting galit. Iba ang ipinilit na mag-overtime. Iba ang hindi man lang mabayaran nang tama para sa trabahong nagawa na niya.",
+      "theme": "wage_theft",
+      "choices": [
+        {
+          "text": "I-dokumento lahat at pormal na i-raise ang mga isyu sa payslip sa HR.",
+          "nextNode": "bpo_night_05",
+          "consequence": "Nagdesisyon si Angela na labanan ang wage theft nang harapan.",
+          "scoreChange": 12,
+          "knowledgeGained": "Ang night shift differential at overtime premiums ay mandatory sa ilalim ng Labor Code. Hindi ito pwedeng i-waive ng kontrata o company policy."
+        },
+        {
+          "text": "Kausapin ang mga kasamahan tungkol sa missing night differential para malaman kung apektado lahat.",
+          "nextNode": "bpo_night_06",
+          "consequence": "Nagpalaganap si Angela ng kamalayan sa mga kapwa niya agent.",
+          "scoreChange": 10,
+          "knowledgeGained": null
+        },
+        {
+          "text": "Hayaan na lang muna at mag-focus na lang sa pag-survive sa night shifts.",
+          "nextNode": "bpo_health_01",
+          "consequence": "Pinigilan ni Angela ang frustration niya, at lumalala ang epekto sa katawan niya.",
+          "scoreChange": -5,
+          "knowledgeGained": null
+        }
+      ],
+      "isEnding": false
+    },
+    "bpo_night_05": {
+      "id": "bpo_night_05",
+      "title": "Mga Dahilan ng HR",
+      "narrative": "Nakaupo si Angela sa HR office na may dalang folder ng naka-print na payslips, naka-highlight ng dilaw kung saan dapat lumabas ang night differential at OT premiums. Tinanggap siya ni Ms. Reyes na may kaparehong practiced na ngiti.\n\n'Angela, nirebyu ko na ang concern mo. Ang night shift differential ay kasama na talaga sa base pay mo. Ito yung tinatawag naming all-in rate. At tungkol sa overtime, ang policy namin ay kinokompyut ang OT base sa basic rate bago ang adjustments.'\n\nUmiling si Angela. 'Ma'am, with respect po, malinaw ang Labor Code. Sinasabi ng Article 86 na ang night differential ay hindi bababa sa 10% sa ibabaw ng regular wage. Kailangang lumabas ito bilang hiwalay na line item. Ang all-in rate na hindi ito bina-break out ay hindi compliant. At ang overtime sa ilalim ng Article 87 ay kailangang i-compute sa 125% ng hourly rate, hindi 100%.'\n\nNanghina ang ngiti ni Ms. Reyes. 'Kailangan ko... i-escalate ito sa legal department namin.' Kinuha niya ang folder ni Angela. 'Babalikan ka namin within the week.'\n\nLumipas ang isang linggo. Tapos dalawa. Walang sagot. Nagpadala si Angela ng follow-up email. Walang reply. Sinadya ang katahimikan.",
+      "theme": "wage_theft",
+      "choices": [
+        {
+          "text": "Mag-file ng wage complaint sa DOLE, i-attach ang mga payslip at hindi sinagot na emails sa HR.",
+          "nextNode": "bpo_health_01",
+          "consequence": "Inescalate ni Angela sa gobyerno. Ipinroseso ng DOLE ang complaint at nag-schedule ng conference.",
+          "scoreChange": 15,
+          "knowledgeGained": "Kapag hindi pinansin ng employer ang valid na wage complaint, pwedeng mag-file ang manggagawa diretso sa DOLE. Ang mga employer na hindi nagbabayad ng tamang sahod ay may penalties sa ilalim ng RA 8188 (Strengthening the Penalties for Violations of the Labor Code)."
+        },
+        {
+          "text": "Magpadala ng huling nakasulat na demand na may deadline, at i-copy ang isang labor lawyer.",
+          "nextNode": "bpo_health_01",
+          "consequence": "Dinagdagan ni Angela ang pressure gamit ang legal backing.",
+          "scoreChange": 12,
+          "knowledgeGained": "Ang demand letter mula sa abogado ay madalas nagtutulak sa mga employer na mag-settle. Kapag hindi, nagiging malakas na ebidensya ng bad faith sa isang labor case."
+        },
+        {
+          "text": "Iwan na ang isyu -- natatakot siyang ma-blacklist sa BPO industry.",
+          "nextNode": "bpo_health_01",
+          "consequence": "Nanalo ang takot. Pinabayaan ni Angela ang company na itago ang perang legally sa kanya.",
+          "scoreChange": -7,
+          "knowledgeGained": null
+        }
+      ],
+      "isEnding": false
+    },
+    "bpo_night_06": {
+      "id": "bpo_night_06",
+      "title": "Ang Night Shift Coalition",
+      "narrative": "Binangggit ito ni Angela habang naka-break ng 3 AM sa pantry. Kumakain siya ng cup noodles kasama si Denise, si Paolo (isang team leader mula sa ibang account), at si Meg, isang bagong hire na nasa training pa. 'May nag-check na ba sa inyo ng payslip niyo para sa night differential?'\n\nAgad ang reaksyon. Halos matapon ni Paolo ang kape niya. 'Teka, may night differential tayo? Dalawang taon na ako sa graveyard.' Naguluhan si Meg. 'Ano yung night differential?'\n\nSa mga susunod na araw, tahimik na nagtanong si Angela sa mas maraming kasamahan. Sa tatlumpung agent sa floor nila na nagtatrabaho ng 10 PM to 6 AM shift, wala ni isa ang tumatanggap ng legally mandated na 10% night shift premium. Tatlumpung manggagawa na kulang ang bayad sa bawat paycheck. Ang halaga na utang sa lahat ng sila-sila ay pwedeng umabot ng daan-daang libong piso.\n\nNagsimula ng Signal chat ang grupo -- encrypted, malayo sa company monitoring. Tinawag nila itong 'Night Shift Rights.' Sa loob ng isang linggo, apatnapu't limang miyembro na mula sa iba't ibang account at floor.",
+      "theme": "wage_theft",
+      "choices": [
+        {
+          "text": "Mag-organize ng kolektibong nakasulat na complaint sa management na nilagdaan ng lahat ng 45 miyembro.",
+          "nextNode": "bpo_health_01",
+          "consequence": "Nagpakita ang grupo ng united front. Hindi pwedeng gumanti ang management sa lahat.",
+          "scoreChange": 15,
+          "knowledgeGained": "Ang kolektibong aksyon ng mga manggagawa ay protektado sa ilalim ng constitutional right to self-organization (Art. XIII, Sec. 3, 1987 Philippine Constitution). Hindi pwedeng parusahan ng mga employer ang mga manggagawa dahil sa kolektibong reklamo."
+        },
+        {
+          "text": "Mag-file ng group complaint sa DOLE para sa lahat ng apektadong night shift workers.",
+          "nextNode": "bpo_health_01",
+          "consequence": "Sabay-sabay na kumuha ang grupo ng pormal na legal na ruta.",
+          "scoreChange": 13,
+          "knowledgeGained": "Maraming manggagawa ang pwedeng mag-file ng joint complaint sa DOLE. Ang mga group complaint ay madalas na mas mabilis na pinagtutuunan at nagti-trigger ng company-wide inspections."
+        },
+        {
+          "text": "Gawin lang ang Signal group para sa information-sharing at hayaang magdesisyon ang bawat isa.",
+          "nextNode": "bpo_health_01",
+          "consequence": "Nanatiling informal ang grupo. May ilang kumilos, karamihan hindi. Nabawasan ang impact.",
+          "scoreChange": 5,
+          "knowledgeGained": null
+        }
+      ],
+      "isEnding": false
+    },
+    "bpo_health_01": {
+      "id": "bpo_health_01",
+      "title": "Sumasagot ang Katawan",
+      "narrative": "Tatlong buwan ng graveyard shift at gumuguho na ang katawan ni Angela. Hindi na siya nakakakita ng sikat ng araw nang maayos sa mga nakalipas na linggo. Wasak ang sleep schedule niya -- nakahiga siya sa bedspace niya tuwing tanghali, nakabukas ang mga mata, habang puno ng buhay ang neighborhood sa labas ng manipis na plywood walls. Kapag nakakatulog siya, mababaw at walang panaginip, naging-gising dahil sa mabilis na tibok ng puso.\n\nAng company nurse, si Ate Cristina, ay may tuloy-tuloy na pila ng night shift agents na may parehong mga reklamo: insomnia, acid reflux, chronic headaches, anxiety. 'Normal yan sa BPO,' sabi niya, habang inabot kay Angela ang isang pack ng melatonin tablets mula sa company supply. 'Maadjust din ang katawan mo.'\n\nPero hindi umadjust ang katawan ni Angela. Ang kanang wrist niya ay nagsimulang sumakit mula sa constant na pagta-type -- isang matulis na sakit na umakyat hanggang sa siko kapag inabot niya ang mouse. Gino-Google niya ang mga sintomas niya: carpal tunnel syndrome, repetitive strain injury. Nakakatakot ang WebMD rabbit hole.\n\nNoong nakaraang Martes, nagka-panic attack siya habang nasa call. Sumisigaw ang customer tungkol sa unauthorized charges, at bigla na lang hindi na makahinga si Angela. Ni-hold niya ang caller, pumunta sa restroom, at umiyak ng sampung minuto. Walang nakapansin. Walang nagtanong.",
+      "theme": "health_hazards",
+      "choices": [
+        {
+          "text": "Magpatingin sa doktor tungkol sa sakit ng wrist at sleep issues, at humingi ng medical certificate para sa sick leave.",
+          "nextNode": "bpo_health_02",
+          "consequence": "Inuna ni Angela ang kalusugan niya sa pamamagitan ng pagpapatingin sa doktor.",
+          "scoreChange": 10,
+          "knowledgeGained": "May karapatan ang mga empleyado sa sick leave ayon sa company policy at, para sa SSS members, ang SSS Sickness Benefit (hanggang 120 araw bawat taon sa 90% ng daily salary credit)."
+        },
+        {
+          "text": "Itanong sa company ang tungkol sa mental health support programs na required ng Mental Health Act.",
+          "nextNode": "bpo_health_03",
+          "consequence": "Ginamit ni Angela ang karapatan niya sa ilalim ng RA 11036.",
+          "scoreChange": 12,
+          "knowledgeGained": "Ang RA 11036 (Philippine Mental Health Act) ay nag-aatas sa lahat ng workplace na gumawa ng mga polisiya tungkol sa mental health, kasama ang access sa psychosocial support at non-discrimination laban sa mga manggagawa na may mental health conditions."
+        },
+        {
+          "text": "Tiisin na lang -- hindi niya afford na mag-absent o magpakitang mahina.",
+          "nextNode": "bpo_health_04",
+          "consequence": "Hindi pinansin ni Angela ang lumalala niyang kalusugan at patuloy na nagpumilit hanggang sa burnout.",
+          "scoreChange": -8,
+          "knowledgeGained": null
+        }
+      ],
+      "isEnding": false
+    },
+    "bpo_health_02": {
+      "id": "bpo_health_02",
+      "title": "Ang Sulat ng Doktor",
+      "narrative": "Pumunta si Angela sa isang clinic sa Makati sa mga off-hours niya. Inexamine ni Dr. Santos, isang general practitioner, ang wrist niya, tinanong tungkol sa work schedule niya, at nakinig habang kwinukwento niya ang panic attack. Daan-daan na ang BPO workers na napatingin sa kanya.\n\n'May early signs ka ng carpal tunnel syndrome. Completely disrupted ang sleep pattern mo -- tinatawag naming shift work sleep disorder. At ang dinescribe mo sa restroom ay mukhang panic attack, posibleng related sa chronic work stress.' Sumulat siya ng reseta para sa wrist brace, sleep hygiene recommendations, at referral sa psychiatrist. Binigyan din niya siya ng medical certificate na nagrerekomenda ng tatlong araw na pahinga.\n\nKinabukasan, sinubmit ni Angela ang medical certificate sa HR. Sumimangot si Ms. Reyes. 'Angela, apat na buwan ka pa lang sa kontratang ito. Ang sick leave benefit namin ay limang araw bawat taon, pero applicable lang ito pagkatapos ng regularization.' Nakatitig si Angela. 'So wala akong sick leave?' Nag-shrug ng may sorry si Ms. Reyes. 'Pwede kang mag-file ng leave without pay. O pwede kang mag-apply para sa SSS sickness benefit kung lalampas ng apat na araw ang sakit.'\n\nLumabas si Angela sa HR na nararamdaman ang pamilyar na halo ng galit at kawalan ng magawa. May sakit siya dahil sa trabahong ito, at hindi man lang siya pahahingahin ng trabaho.",
+      "theme": "health_hazards",
+      "choices": [
+        {
+          "text": "Mag-file ng SSS sickness benefit at mag-medical leave kahit anong sabihin ng company policy.",
+          "nextNode": "bpo_health_05",
+          "consequence": "Ginamit ni Angela ang social safety net na available sa kanya.",
+          "scoreChange": 12,
+          "knowledgeGained": "SSS Sickness Benefit: Ang mga miyembro na hindi makapagtrabaho dahil sa sakit ay pwedeng makatanggap ng daily cash allowance ng hanggang 120 araw. Inaadvance ng employer ang benepisyo at pagkatapos ay rini-reimburse ng SSS."
+        },
+        {
+          "text": "I-challenge ang sinabi ng HR -- kahit project-based employees ay entitled sa service incentive leave pagkatapos ng isang taon.",
+          "nextNode": "bpo_health_05",
+          "consequence": "Lumaban si Angela sa pagtanggi ng sick leave.",
+          "scoreChange": 13,
+          "knowledgeGained": "Labor Code Art. 95: Bawat empleyado na nagsilbi ng hindi bababa sa isang taon ay entitled sa 5 araw na service incentive leave na may bayad, kahit anong employment status."
+        },
+        {
+          "text": "I-skip ang leave at bumalik sa trabaho kahit ano pa ang rekomenda ng doktor.",
+          "nextNode": "bpo_health_04",
+          "consequence": "Lumala ang kondisyon ni Angela nang walang pahinga.",
+          "scoreChange": -5,
+          "knowledgeGained": null
+        }
+      ],
+      "isEnding": false
+    },
+    "bpo_health_03": {
+      "id": "bpo_health_03",
+      "title": "Ang Mental Health Act",
+      "narrative": "Nag-email si Angela sa HR ng pormal na kahilingan na cini-cite ang Republic Act 11036, ang Philippine Mental Health Act. Isinulat niya: 'Sa ilalim ng RA 11036 at mga implementing rules nito, lahat ng workplace ay kailangang gumawa at mag-implement ng mental health workplace policies, kasama ang psychosocial support programs at referral systems. Humihiling ako ng impormasyon tungkol sa mental health program ng GlobalConnect at access sa counseling services.'\n\nIsang linggo bago dumating ang sagot. Hindi mula kay Ms. Reyes kundi mula sa legal department: 'Committed ang GlobalConnect Solutions sa employee wellness. Meron kaming quarterly wellness webinar series at Employee Assistance Program (EAP) sa pamamagitan ng third-party provider namin. Naka-attach ang EAP hotline number.'\n\nTinawagan ni Angela ang EAP number habang naka-break. Isang call center ito -- ironic. Naghintay siya ng dalawampung minuto bago nakausap ang isang counselor na nagbigay ng generic na stress management advice: 'Subukan ang deep breathing sa pagitan ng mga tawag. Mag-hydrate. Mag-exercise.' Walang nabanggit tungkol sa structural issues -- ang mandatory overtime, ang abusive KPIs, ang sleep deprivation na built-in sa shift schedule.\n\nSamantala, nagsimula nang bigyan siya ni Sir Jomar ng mas mahirap na accounts -- 'escalation calls,' yung mga tawag kung saan galit na ang customer bago pa man magsalita si Angela. Hinala niya na pagganti ito dahil sa HR email.",
+      "theme": "health_hazards",
+      "choices": [
+        {
+          "text": "I-dokumento ang apparent na pagganti at i-report sa DOLE bilang paglabag sa non-discrimination provisions ng Mental Health Act.",
+          "nextNode": "bpo_health_05",
+          "consequence": "Itinuring ni Angela ang pagganti bilang hiwalay na legal violation.",
+          "scoreChange": 15,
+          "knowledgeGained": "RA 11036 Sec. 28: Ipinagbabawal ang diskriminasyon sa workplace batay sa pagkakaroon ng mental health condition. Kasama dito ang pagganti sa mga naghahanap ng mental health support."
+        },
+        {
+          "text": "Humiling ng pormal na occupational health and safety assessment ng mga kondisyon ng night shift.",
+          "nextNode": "bpo_health_05",
+          "consequence": "Itinulak ni Angela ang systemic na pagbabago sa working conditions.",
+          "scoreChange": 12,
+          "knowledgeGained": "Ang RA 11058 (Occupational Safety and Health Standards Act) ay nag-aatas sa mga employer na tiyakin ang ligtas na working conditions at magsagawa ng regular na assessments, kasama para sa psychosocial hazards."
+        },
+        {
+          "text": "Gamitin ang EAP counseling pero huwag nang itulak pa ang isyu sa management.",
+          "nextNode": "bpo_health_04",
+          "consequence": "Nakakuha si Angela ng minimal na suporta pero nananatili ang ugat ng problema.",
+          "scoreChange": 0,
+          "knowledgeGained": null
+        }
+      ],
+      "isEnding": false
+    },
+    "bpo_health_04": {
+      "id": "bpo_health_04",
+      "title": "Burnout",
+      "narrative": "Tumigil na si Angela sa paglaban at nagsimulang mag-survive na lang. Sumasagot siya ng tawag nang mekanikal, humihit sa metrics na sapat lang para maiwasan ang performance improvement plan. Natutulog siya ng pira-piraso -- dalawang oras dito, tatlong oras doon. Nabubuhay siya sa instant coffee at pagkain mula sa convenience store. Naging kasama na niya araw-araw ang sakit ng wrist.\n\nIsang gabi, nakatulog siya habang nasa bathroom break. Limang minuto lang, nakasandal sa cubicle wall. Nang nagising siya na kabog ang puso, na-realize niyang labinlimang minuto na siyang wala. Hinahanap na siya ni Sir Jomar.\n\nBumaba ang CSAT scores niya -- customer satisfaction. Tumaas ang average handle time niya. Nagkakamali na siya: maling account numbers, maling policies ang cini-cite, nakakalimutang mag-log ng cases. Na-flag ng quality assurance audit ang tatlo niyang tawag sa isang linggo.\n\nTinawag siya ni Sir Jomar sa meeting room. 'Angela, bumababa ang performance mo. Ilalagay kita sa Performance Improvement Plan. Tatlumpung araw ang meron ka para ayusin ang numbers mo, o kailangan nating pag-usapan ang pagpapatuloy ng employment mo.'\n\nParang death sentence ang PIP. Alam ni Angela na may sakit siya, alam na lalong lumalala dahil sa trabaho, at alam na ginagamit ng company ang bumababang performance niya bilang dahilan para itaboy siya.",
+      "theme": "health_hazards",
+      "choices": [
+        {
+          "text": "Sa wakas ay magpatingin sa doktor, magpa-diagnose nang maayos, at mag-file ng sick leave na may SSS sickness benefit.",
+          "nextNode": "bpo_health_05",
+          "consequence": "Pinutol ni Angela ang pababang spiral at inalagaan ang kalusugan niya.",
+          "scoreChange": 10,
+          "knowledgeGained": "Ang PIP (Performance Improvement Plan) ay hindi pwedeng i-override ang medical leave rights. Kung ang pagbaba ng performance ay dahil sa work-related illness, pwedeng maging liable ang employer sa ilalim ng occupational health laws."
+        },
+        {
+          "text": "Kausapin ang mga kasamahan tungkol sa systemic na mga problema sa kalusugan na dulot ng working conditions.",
+          "nextNode": "bpo_union_01",
+          "consequence": "Ang personal na krisis ni Angela ay naging simula ng collective action.",
+          "scoreChange": 8,
+          "knowledgeGained": null
+        },
+        {
+          "text": "Subukang i-survive ang 30-day PIP mag-isa sa pamamagitan ng sheer willpower.",
+          "nextNode": "bpo_health_06",
+          "consequence": "Itinulak ni Angela ang sarili hanggang sa breaking point.",
+          "scoreChange": -7,
+          "knowledgeGained": null
+        }
+      ],
+      "isEnding": false
+    },
+    "bpo_health_05": {
+      "id": "bpo_health_05",
+      "title": "Paggaling at Determinasyon",
+      "narrative": "Nanindigan si Angela para sa kalusugan niya. Nagpatingin siya sa doktor, na-diagnose ng shift work sleep disorder at early carpal tunnel syndrome, at nakakuha ng medical certificate. Nag-file siya ng SSS sickness benefit at nag-leave of absence.\n\nHabang naka-leave, natulog siya -- tunay na natulog -- sa unang pagkakataon sa loob ng maraming buwan. Kumain siya ng luto ng tita niya (pumunta ang tita niya mula Tacloban para alagaan siya). Nagpa-physical therapy siya para sa wrist niya. Nagsimula siyang magpatingin sa psychologist sa pamamagitan ng PhilHealth mental health coverage.\n\nAng psychologist, si Dr. Villanueva, ay tinulungan si Angela na makita ang mas malaking larawan. 'Ang nararanasan mo ay hindi personal failure. Ito ay inaasahang resulta ng mga working conditions na dinisenyo para kumuha ng maximum productivity habang binabawasan ang labor costs. Ang tanong ay: ano ang gusto mong gawin tungkol dito?'\n\nBumalik si Angela sa trabaho pagkatapos ng dalawang linggo. Nakapagpahinga na siya, mas malinaw ang isip, at galit sa produktibong paraan. Lumaki ang Signal group sa animnapung miyembro. Kumalat ang balita tungkol sa night differential issue. At nagsisimula nang bulong-bulungan ang mga tao tungkol sa mas malaking bagay -- union.",
+      "theme": "health_hazards",
+      "choices": [
+        {
+          "text": "Sumali sa lumalaking usapan tungkol sa pagbuo ng union sa GlobalConnect.",
+          "nextNode": "bpo_union_01",
+          "consequence": "Ginawa ni Angela ang karanasan niya bilang lakas para sa systemic change.",
+          "scoreChange": 12,
+          "knowledgeGained": null
+        },
+        {
+          "text": "Mag-focus sa individual case niya -- i-file ang mga natitirang wage complaint at ituloy ang regularization.",
+          "nextNode": "bpo_union_01",
+          "consequence": "Itinuloy ni Angela ang personal na mga kaso niya habang patuloy ang usapan tungkol sa union sa paligid niya.",
+          "scoreChange": 8,
+          "knowledgeGained": null
+        },
+        {
+          "text": "Mag-low profile na lang at subukang mag-survive hanggang sa makahanap ng mas magandang trabaho.",
+          "nextNode": "bpo_union_01",
+          "consequence": "Umurong si Angela pero hindi niya maiwasan ang lumalaking kilusan sa GlobalConnect.",
+          "scoreChange": 0,
+          "knowledgeGained": null
+        }
+      ],
+      "isEnding": false
+    },
+    "bpo_health_06": {
+      "id": "bpo_health_06",
+      "title": "Pagbagsak",
+      "narrative": "Pinilit ni Angela na lampasan ang PIP. Doble ang doses ng energy drinks, naka-strap ang wrist brace, at pinilit ang sarili sa bawat shift. Sa loob ng dalawang linggo, bahagyang bumuti ang numbers niya.\n\nTapos, isang Miyerkules ng gabi sa 3 AM, habang naka-call sa isang customer sa Texas, lumabo ang paningin ni Angela. Sumikip ang dibdib niya. Hindi siya makahinga. Kumiling ang kwarto. Hinubad niya ang headset, tumayo, at agad na nawalan ng malay sa tabi ng workstation niya.\n\nGising siya sa Makati Medical Center. Acute anxiety attack na may kasamang severe sleep deprivation. Inutos ng attending doctor ang minimum na isang linggong pahinga at ni-refer siya sa psychiatrist. Lumipad ang tita niya mula Tacloban. Ang medical bills ay bahagyang covered ng PhilHealth, bahagyang ng company HMO, pero ang HMO ay ER visit lang ang covered -- hindi ang follow-up psychiatric care.\n\nBumisita si Sir Jomar sa hospital, mukhang hindi komportable. 'Get well, Angela. Kokontakin ka ng HR tungkol sa leave mo.' Ang paraan ng pagsabi niya ay malinaw na ang insidenteng ito ay hindi makakatulong sa PIP situation niya.",
+      "theme": "health_hazards",
+      "choices": [
+        {
+          "text": "Mag-file ng SSS sickness benefit at Employees' Compensation (EC) dahil work-related ang sakit.",
+          "nextNode": "bpo_union_01",
+          "consequence": "Kinuha ni Angela ang lahat ng available na benepisyo at kinilala na systemic problem ito.",
+          "scoreChange": 12,
+          "knowledgeGained": "Ang Employees' Compensation Commission (ECC) ay nagbibigay ng benepisyo para sa work-related illness o injury, hiwalay sa SSS. Ang night shift sleep disorders at anxiety mula sa hostile working conditions ay pwedeng ma-qualify."
+        },
+        {
+          "text": "Bumalik sa trabaho kaagad kahit hindi payo ng doktor.",
+          "nextNode": "bpo_union_01",
+          "consequence": "Physically present si Angela pero halos hindi na functional. Nabuksan na ng krisis ang mga mata niya.",
+          "scoreChange": -5,
+          "knowledgeGained": null
+        }
+      ],
+      "isEnding": false
+    },
+    "bpo_union_01": {
+      "id": "bpo_union_01",
+      "title": "Ang Bulung-Bulungan",
+      "narrative": "Nagsimula ito, gaya ng karamihan sa BPO, habang naka-break ng 3 AM. Nasa pantry si Angela kasama sina Denise, Paolo, at ilan pa mula sa Signal group. Napunta ang usapan sa announcement nitong nakaraang linggo: 'streamlining operations' ang GlobalConnect, na alam ng lahat ibig sabihin ay tanggalan.\n\n'Dalawampung agent mula sa telco account ang tinanggal noong Biyernes,' sabi ni Paolo, habang hinahalo ang kape niya. 'Walang separation pay. Walang notice. Lahat sila limang buwan ang kontrata.' Dagdag ni Denise: 'Sabi ng friend ko sa healthcare account, pwedeng ma-dissolve ang buong floor nila by June.'\n\nTumingin si Angela sa paligid ng pantry. Lahat ng mukha ay nagpapakita ng parehong pagod at takot. 'Paano kung gumawa tayo ng paraan?' sabi niya nang tahimik. 'Paano kung mag-organize tayo?'\n\nAng salitang 'union' ay bumagsak sa usapan tulad ng bato sa tubig. May ilang mukha na nagliwanag. Ang iba ay namutla. 'Baliw ka ba?' bulong ni Meg. 'Tatanggalin tayong lahat.' Pero sumandal si Paolo palapit. 'Ang tiyuhin ko ay union leader sa pantalan. Sabi niya ang karapatan na mag-organize ay constitutional. Hindi nila tayo pwedeng pigilan nang legal.'\n\nNag-evolve ang Signal group. Ang dating chat tungkol sa payslips ay naging usapan tungkol sa mas malaking bagay.",
+      "theme": "union_busting",
+      "choices": [
+        {
+          "text": "Manguna sa pag-research kung paano legal na bumuo ng union at i-share ang proseso sa grupo.",
+          "nextNode": "bpo_union_02",
+          "consequence": "Naging organizer si Angela, na tinuturuan ang mga kasamahan niya tungkol sa karapatan nila.",
+          "scoreChange": 15,
+          "knowledgeGained": "Para makabuo ng union, kailangan ng lagda ng hindi bababa sa 20% ng bargaining unit. Ang registration ay ini-file sa DOLE Bureau of Labor Relations (BLR). Kapag nairehistro na, pwede nang mag-petition ang union para sa certification election."
+        },
+        {
+          "text": "Suportahan ang ideya pero hayaan ang iba na manguna -- natatakot siyang maging target.",
+          "nextNode": "bpo_union_03",
+          "consequence": "Lumahok si Angela pero iniiwasan ang spotlight.",
+          "scoreChange": 5,
+          "knowledgeGained": null
+        },
+        {
+          "text": "Balaan ang grupo na maging maingat dahil malamang minomonitor ng company ang komunikasyon nila.",
+          "nextNode": "bpo_union_02",
+          "consequence": "Ang pag-iingat ni Angela ay nakatulong sa grupo na mag-organize nang mas secure.",
+          "scoreChange": 8,
+          "knowledgeGained": "Ang employer surveillance ng union organizing activities ay isang uri ng unfair labor practice sa ilalim ng Art. 248(a) ng Labor Code -- panghihimasok sa karapatan ng self-organization."
+        }
+      ],
+      "isEnding": false
+    },
+    "bpo_union_02": {
+      "id": "bpo_union_02",
+      "title": "Organizing sa Ilalim",
+      "narrative": "Bumuo ng core organizing committee sina Angela, Paolo, at Denise. Maingat silang kumikilos. Ang mga meeting ay nangyayari sa labas ng opisina -- sa isang Pancake House sa Legaspi Village, sa apartment ni Paolo sa Mandaluyong, minsan sa parking lot ng 7-Eleven pagkatapos ng shift. Hindi sila kailanman gumagamit ng company devices o office Wi-Fi para sa union business.\n\nKinonnect ng tiyuhin ni Paolo, si Mang Boy, sila sa isang federation -- ang Alliance of BPO Workers (ABW), isang grupo na matagal nang nagsisikap mag-organize sa call center industry. Nagpadala ang ABW ng organizer, si Ate Jen, na sinamahan sila sa legal process.\n\n'Kailangan niyo ng lagda mula sa hindi bababa sa 20% ng rank-and-file employees sa bargaining unit niyo,' iniexplain ni Ate Jen habang nagsheshare ng isang order ng sisig. 'Yan ang unang target niyo. Kapag nag-file kayo ng registration sa DOLE-BLR, protected na kayo. Hindi pwedeng legally na makialam ang company.'\n\nNagsimula ang signature campaign. Mabagal -- maraming manggagawa ang natatakot. May ilan na hindi naniniwala na makakatulong ang union. Ang iba ay hindi pa nakarinig ng union kailanman. Nakita ni Angela ang sarili na paulit-ulit na nagbibigay ng parehong speech: 'Naalala niyo ba yung night differential na ninakaw nila? Naalala niyo ba yung endo contracts? Ang union ang magbibigay sa atin ng kapangyarihan na makipag-negotiate.'\n\nPagkatapos ng tatlong linggo, meron na silang 67 na lagda mula sa bargaining unit na may 280. Twenty-four percent yan -- sapat na para mag-file.",
+      "theme": "union_busting",
+      "choices": [
+        {
+          "text": "I-file agad ang union registration sa DOLE-BLR bago malaman ng company.",
+          "nextNode": "bpo_union_04",
+          "consequence": "Mabilis kumilos ang mga organizer para ma-lock in ang legal protection nila.",
+          "scoreChange": 13,
+          "knowledgeGained": "Kapag nag-file na ang union ng registration sa DOLE-BLR, ang mga miyembro nito ay nakakatanggap ng legal protection laban sa pagganti. Ang registration process ay tumatagal ng mga 30 araw."
+        },
+        {
+          "text": "Magpatuloy na mag-gather ng mas maraming lagda para bumuo ng mas malakas na base bago mag-file.",
+          "nextNode": "bpo_union_03",
+          "consequence": "Ang pagkaantala ay nagbigay ng pagkakataon sa company na madiskubre ang organizing effort.",
+          "scoreChange": 5,
+          "knowledgeGained": null
+        },
+        {
+          "text": "Kumonsulta muna sa labor lawyer para masiguradong airtight ang petisyon.",
+          "nextNode": "bpo_union_04",
+          "consequence": "Sinigurado ni Angela na legally solid ang filing.",
+          "scoreChange": 10,
+          "knowledgeGained": "Ang karaniwang dahilan ng pagtanggi sa union registration ay: maling bargaining unit definition, kulang na lagda, at mga technical errors sa application. Ang legal review ay nakakatulong na maiwasan ang mga pitfall na ito."
+        }
+      ],
+      "isEnding": false
+    },
+    "bpo_union_03": {
+      "id": "bpo_union_03",
+      "title": "Nalaman ng Management",
+      "narrative": "Nalaman ng company ang union drive. Baka may nagsumbong, baka na-flag ng IT ang Signal group, baka may supervisor na nakapansin sa mga bulung-bulungan sa pantry. Paano man nangyari, mabilis ang tugon.\n\nNoong Lunes, lahat ng agent ay nakatanggap ng email mula sa CEO, si Mr. David Tan: 'Dear GlobalConnect Family, napag-alaman namin na may ilang indibidwal na nagsisikap na gambalain ang workplace harmony natin sa pamamagitan ng pag-promote ng external organizations. Lagi nang itinuring ng GlobalConnect ang mga empleyado nito bilang pamilya. Meron tayong open-door policy at maraming channel para sa mga concern niyo. Hindi kailangan at kontraproduktibo ang interference ng third-party.'\n\nNang hapon na yon, tinawag ang 'town hall.' Mandatory ang attendance. Ang operations director, si Ms. Navarro, ay nakatayo sa podium. 'Pamilya tayo dito,' pag-uulit niya. 'Kapag may problema kayo, lumapit kayo sa amin. Huwag kayong pumunta sa mga outsider. Ang mga sumusubok na gambalain ang operations natin ay malalaman na may hangganan ang pamilyang ito.'\n\nPagkatapos ng town hall, isa-isang tinawag ang mga agent sa 'one-on-one conversations' kasama ang team leader nila. Malinaw ang mensahe: ang pagsali sa union ay gagawin kang target.\n\nNakatanggap si Angela ng text mula kay Denise: 'Pinasok nila ako sa meeting. Alam nilang involved ako. Natatakot ako.'",
+      "theme": "union_busting",
+      "choices": [
+        {
+          "text": "I-dokumento lahat ng anti-union actions ng management at mag-file ng unfair labor practice complaint sa DOLE.",
+          "nextNode": "bpo_union_04",
+          "consequence": "Kinilala ni Angela ang behavior ng company bilang textbook union-busting at kumilos nang legal.",
+          "scoreChange": 15,
+          "knowledgeGained": "Labor Code Art. 248: Unfair labor practice ang panghihimasok, pagpigil, o pagpilit sa mga empleyado sa paggamit ng karapatan sa self-organization. Kasama dito ang mga banta, surveillance, at 'captive audience' meetings."
+        },
+        {
+          "text": "Patibaying ang loob ng grupo at pabilisin ang union filing bago makapag-retaliate pa ang management.",
+          "nextNode": "bpo_union_04",
+          "consequence": "Itinulak ni Angela na i-formalize ang union habang may momentum pa sila.",
+          "scoreChange": 12,
+          "knowledgeGained": "Mahalaga ang bilis sa union organizing. Kapag nalaman na ng employer, karaniwan nilang dadagdagan ang panghihimasok. Ang mabilis na pag-file ng petisyon ay nagbibigay ng legal protection sa mga organizer."
+        },
+        {
+          "text": "Umurong mula sa organizing effort -- sobrang taas ng risk.",
+          "nextNode": "bpo_term_01",
+          "consequence": "Umurong si Angela, pero huli na. Nasa listahan na ng management ang pangalan niya.",
+          "scoreChange": -5,
+          "knowledgeGained": null
+        }
+      ],
+      "isEnding": false
+    },
+    "bpo_union_04": {
+      "id": "bpo_union_04",
+      "title": "Ang Pag-file",
+      "narrative": "Sumakay ng jeepney sina Angela, Paolo, at Ate Jen mula sa ABW papuntang DOLE Bureau of Labor Relations office sa Intramuros. May dalang makapal na folder ng mga dokumento: ang union charter at constitution, listahan ng officers, ang 67 na signed membership forms, at mga proof ng unfair labor practices ng company.\n\nStraightforward pero nakakakaba ang filing. Nirebyu ng BLR officer ang mga dokumento, tinimbrahan ang application, at nag-issue ng receipt. 'Processing takes about thirty days,' sabi niya. 'Sa panahong ito, ipinagbabawal sa employer na makialam sa pagbuo ng union.'\n\nNung gabing yon, bumalik si Angela sa opisina para sa shift niya. Halos inaasahan niyang pigilin siya ng security sa pinto. Pero walang nangyari. Normal ang gabi -- tawag, scripts, metrics. Halos anticlimactic.\n\nHindi nagtagal ang katahimikan. Kinaumagahan, nakatanggap si Angela ng email mula sa HR: 'Paki-report sa opisina ng Operations Director sa simula ng susunod mong shift para sa meeting tungkol sa employment status mo.' Pareho ring email ang natanggap ni Denise at tatlo pang kilalang organizer.",
+      "theme": "union_busting",
+      "choices": [
+        {
+          "text": "Pumunta sa meeting pero magdala ng witness at i-record lahat (ipaalam sa kanila ang recording).",
+          "nextNode": "bpo_union_05",
+          "consequence": "Pinoprotektahan ni Angela ang sarili gamit ang dokumentasyon habang hinaharap ang management.",
+          "scoreChange": 12,
+          "knowledgeGained": "Sa ilalim ng RA 4200 (Anti-Wiretapping Act), legal ang pag-record ng usapan kung pumayag ang kahit isang partido (hal., si Angela mismo). Admissible bilang ebidensya ang recording."
+        },
+        {
+          "text": "Agad na i-contact ang DOLE para i-report ang apparent na pagganti at humingi ng tulong bago pumunta sa meeting.",
+          "nextNode": "bpo_union_05",
+          "consequence": "Preemptive na humingi si Angela ng proteksyon ng gobyerno laban sa pagganti.",
+          "scoreChange": 15,
+          "knowledgeGained": "Pwedeng humingi ang mga manggagawa ng tulong sa DOLE sa ilalim ng 'assumption of jurisdiction' power kapag may imminent threat ng pagganti kaugnay ng union organizing."
+        },
+        {
+          "text": "Pumunta mag-isa at subukang i-de-escalate ang sitwasyon sa management.",
+          "nextNode": "bpo_union_06",
+          "consequence": "Hinarap ni Angela ang management nang walang backup, na nagpahina sa posisyon niya.",
+          "scoreChange": -3,
+          "knowledgeGained": null
+        }
+      ],
+      "isEnding": false
+    },
+    "bpo_union_05": {
+      "id": "bpo_union_05",
+      "title": "Ang Komprontasyon",
+      "narrative": "Pumasok si Angela sa opisina ng Operations Director kasama si Ate Jen mula sa ABW bilang representative niya. Nakaupo si Paolo sa labas, handa nang pumasok susunod. Nakaupo si Ms. Navarro sa desk niya, katabi ang company lawyer, si Attorney Chua.\n\n'Angela,' simula ni Ms. Navarro, 'nagdesisyon kaming mag-implement ng redundancy program na makakaapekto sa ilang posisyon, kasama ang iyo. Ang huling araw mo ay--'\n\n'With respect po, ma'am,' singit ni Ate Jen, 'natanggap nina Angela at apat pang empleyado ang mga notice na ito sa parehong araw na natukoy sila bilang union organizers. Hindi nagkataon ang timing. Ito ay textbook unfair labor practice sa ilalim ng Article 248 ng Labor Code.'\n\nSumandal si Attorney Chua palapit. 'Ito ay lehitimong business decision. Binawasan ng client ang scope ng kontrata. Meron kaming dokumentasyon.'\n\nNilagay ni Ate Jen ang isang folder sa desk. 'Meron din kaming dokumentasyon. Nag-file kami ng union registration kahapon. Sa ilalim ng Labor Code, ang panghihimasok sa union organizing -- kasama ang pagtanggal sa mga organizer -- ay ilegal. Na-notify na namin ang DOLE. Kapag itinuloy niyo, mag-fi-file kami ng unfair labor practice charge at illegal dismissal case sa NLRC.'\n\nTumahimik ang kwarto. Nagkatinginan sina Ms. Navarro at Attorney Chua.",
+      "theme": "union_busting",
+      "choices": [
+        {
+          "text": "Hayaang ituloy ni Ate Jen ang negotiation -- ito mismo ang dahilan kung bakit nag-affiliate sila sa federation.",
+          "nextNode": "bpo_term_01",
+          "consequence": "Napakahalaga ng karanasan ng federation sa mga labor dispute.",
+          "scoreChange": 12,
+          "knowledgeGained": "Ang pag-affiliate sa isang labor federation ay nagbibigay ng organizing support, legal assistance, at may karanasang negotiators -- mga resources na hindi makukuha ng individual workers nang mag-isa."
+        },
+        {
+          "text": "Magsalita nang personal at sabihin sa management na hindi magpapatakot ang union.",
+          "nextNode": "bpo_term_01",
+          "consequence": "Idinagdag ni Angela ang boses niya sa komprontasyon, nagpapakita ng personal na resolve.",
+          "scoreChange": 10,
+          "knowledgeGained": null
+        }
+      ],
+      "isEnding": false
+    },
+    "bpo_union_06": {
+      "id": "bpo_union_06",
+      "title": "Mag-isa sa Kwarto",
+      "narrative": "Nakaupo si Angela sa harap nina Ms. Navarro at Attorney Chua. Mag-isa. Pinili niyang hindi magdala ng representative, umaasang magiging civil ang usapan.\n\nDiretso si Ms. Navarro. 'Angela, dahil sa business restructuring, na-deem na redundant ang posisyon mo. Nag-aalok kami ng separation package: isang buwang sweldo. Kailangan mo lang na pirmahan ito.' Isinlide niya ang isang dokumento sa mesa.\n\nBinasa ito ni Angela. Isang quitclaim at waiver. Kapag pumirma siya, ire-release niya ang GlobalConnect mula sa 'any and all claims, past, present, or future, arising from or connected with her employment.' Ibig sabihin isusurender niya ang karapatan niyang mag-file ng illegal dismissal, unpaid night differential, overtime pay -- lahat.\n\n'Standard ito,' sabi ni Attorney Chua na may kinis. 'Lahat pumipirma. Part ito ng separation process.'\n\nNanginginig ang mga kamay ni Angela. Makakatulong ang isang buwang sweldo sa renta. Pero ang boses ng tita niya ay umalingawngaw sa isip niya: 'Huwag kang pipirma ng anumang bagay na hindi mo lubos na nauunawaan.'",
+      "theme": "union_busting",
+      "choices": [
+        {
+          "text": "Tumanggi na pirmahan ang quitclaim at sabihing kailangan niya ng oras para kumonsulta sa abogado.",
+          "nextNode": "bpo_term_01",
+          "consequence": "Pinoprotektahan ni Angela ang legal rights niya sa pamamagitan ng pagtanggi na pumirma sa ilalim ng pressure.",
+          "scoreChange": 15,
+          "knowledgeGained": "Ang mga quitclaim na pinirmahan sa ilalim ng pressure o walang buong pagkaunawa sa mga karapatan ay pwedeng ma-void ayon sa Philippine jurisprudence. Paulit-ulit na niruluhan ng Supreme Court na mahigpit na sinusuri ang mga quitclaim at void ang mga ito kapag ang kabayaran ay unconscionably mababa."
+        },
+        {
+          "text": "Pirmahan ang quitclaim para makuha ang separation pay -- kailangan niya ang pera.",
+          "nextNode": "bpo_term_05",
+          "consequence": "Pinirmahan ni Angela ang mga karapatan niya kapalit ng maliit na bahagi ng utang sa kanya.",
+          "scoreChange": -10,
+          "knowledgeGained": null
+        },
+        {
+          "text": "Hingin na dalhin muna ang dokumento sa bahay at ibalik bukas.",
+          "nextNode": "bpo_term_02",
+          "consequence": "Bumili si Angela ng oras nang hindi ibinubunyag ang mga intensyon niya.",
+          "scoreChange": 8,
+          "knowledgeGained": "Hindi ka kailanman obligadong pumirma ng anumang dokumento sa mismong oras. Ang employer na nag-iinsist ng agad na pirma ay malamang na sinusubukan kang pigilan na humingi ng legal advice."
+        }
+      ],
+      "isEnding": false
+    },
+    "bpo_term_01": {
+      "id": "bpo_term_01",
+      "title": "Ang Pagkatanggal",
+      "narrative": "Sa kabila ng lahat -- ang union filing, ang DOLE notifications, ang legal threats -- itinuloy ng GlobalConnect ang pagtanggal kay Angela at sa apat pang union organizers. Ang posisyon ng company ay ang pagtanggal ay dahil sa 'redundancy' at walang kinalaman sa union activities.\n\nSurreal ang huling araw ni Angela. Sumasagot siya ng tawag ng walong oras, alam na katapusan na. Hindi alam ng mga regular caller niya. Nagyakapan ang mga kasamahan niya sa pantry, may ilan na luhaan. Pinisil ni Denise ang kamay niya. 'Hindi natin ito pababayaan.'\n\nSa exit interview, isinlide ni Ms. Reyes ang quitclaim sa mesa. Inaasahan na ito ni Angela. 'Hindi ko pipirmahan yan,' sabi niya nang kalmado. 'Naniniwala akong ilegal ang pagkatanggal sa akin at mag-fi-file ako ng kaso sa NLRC.'\n\nNawala ang ngiti ni Ms. Reyes. 'Kung hindi ka pipirma, hindi namin mapoproseso ang final pay at 13th month mo.' Tumango si Angela. 'Ilegal din po yan, ma'am. Ang final pay ay kailangang i-release sa loob ng tatlumpung araw mula sa separation kahit pumirma ako o hindi ng waiver. At ang pagwi-withhold ng 13th month pay ay criminal offense sa ilalim ng PD 851.'\n\nIsinarender ni Angela ang ID at headset. Lumabas siya ng glass tower sa Ayala Avenue sa init ng tanghali. Sa unang pagkakataon sa loob ng maraming buwan, matutulog siya kapag madilim sa labas.",
+      "theme": "union_busting",
+      "choices": [
+        {
+          "text": "Agad na mag-file ng illegal dismissal case sa NLRC, na cini-cite ang unfair labor practice.",
+          "nextNode": "bpo_term_03",
+          "consequence": "Dinala ni Angela ang laban sa labor courts.",
+          "scoreChange": 15,
+          "knowledgeGained": "Art. 294: Ang illegally dismissed na empleyado ay entitled sa reinstatement nang walang pagkawala ng seniority at buong backwages mula sa oras ng pagtanggal hanggang sa aktwal na reinstatement."
+        },
+        {
+          "text": "Kumonsulta sa PAO (Public Attorney's Office o Opisina ng Abogado ng Bayan) para sa libreng legal representation bago mag-file.",
+          "nextNode": "bpo_term_02",
+          "consequence": "Nakakuha si Angela ng tamang legal representation.",
+          "scoreChange": 12,
+          "knowledgeGained": "Ang Public Attorney's Office (PAO) ay nagbibigay ng libreng legal assistance sa mga kwalipikadong indibidwal, kasama ang representasyon sa mga labor case sa NLRC."
+        },
+        {
+          "text": "Subukang makipag-negotiate sa company para sa mas magandang separation package nang hindi nag-fi-file ng kaso.",
+          "nextNode": "bpo_term_04",
+          "consequence": "Sinubukan ni Angela na ayusin ang usapin nang walang litigation.",
+          "scoreChange": 5,
+          "knowledgeGained": null
+        }
+      ],
+      "isEnding": false
+    },
+    "bpo_term_02": {
+      "id": "bpo_term_02",
+      "title": "Paghahanap ng Katarungan",
+      "narrative": "Bumisita si Angela sa Public Attorney's Office sa Makati. Pagkatapos ng dalawang oras na paghihintay, nakilala niya si Attorney Garcia, isang labor law specialist na humawak na ng daan-daang illegal dismissal cases.\n\nPinakingan niya ang buong kwento -- ang endo contracts, ang nawawalang night differential, ang overtime na walang premium pay, ang tinanggihang sick leave, ang union organizing, at ang retaliatory na pagtanggal. Kontroladong pagkamayamo ang nasa mukha niya.\n\n'Ms. Cruz, maraming causes of action kayo dito,' sabi niya, binibilang sa mga daliri. 'Illegal dismissal. Unfair labor practice. Wage underpayment kasama ang night shift differential at overtime premium. Non-payment ng service incentive leave. Posibleng moral at exemplary damages. At kung wini-withhold nila ang final pay at 13th month mo, dagdag pang violation yan.'\n\nTinanggap niyang kunin ang kaso niya nang pro bono. 'Mag-fi-file tayo ng complaint sa NLRC. Gusto kong malaman mo na matagal ang prosesong ito -- buwan, minsan higit sa isang taon para sa desisyon. Pero malinaw na nasa panig mo ang batas.'\n\nTumango si Angela. Pagod siya, pero hindi siya wasak. 'Attorney, hindi lang po ito tungkol sa akin. Daan-daang agent sa GlobalConnect ang dumadaan sa parehong sitwasyon. At meron na kaming union.'",
+      "theme": "contractualization",
+      "choices": [
+        {
+          "text": "I-file ang comprehensive NLRC complaint na sumasaklaw sa lahat ng violations.",
+          "nextNode": "bpo_term_03",
+          "consequence": "Nag-file sina Angela at ang abogado niya ng masusing kaso.",
+          "scoreChange": 15,
+          "knowledgeGained": "Ang NLRC complaints ay dapat kasama ang lahat ng causes of action: illegal dismissal, unpaid wages, damages, at attorney's fees. Ang complaint ay kailangang i-file sa loob ng 4 na taon para sa money claims at 4 na taon para sa illegal dismissal."
+        },
+        {
+          "text": "Tanungin si Attorney Garcia kung posible ang settlement para maiwasan ang mahabang legal battle.",
+          "nextNode": "bpo_term_04",
+          "consequence": "In-explore ni Angela ang mas mabilis na resolusyon.",
+          "scoreChange": 8,
+          "knowledgeGained": "Ang NLRC mandatory conciliation-mediation ay nangyayari bago ang pormal na hearing. Maraming kaso ang nasesettle sa yugtong ito. Ang makatwirang settlement ay dapat kasama ang backwages, separation pay, at unpaid benefits."
+        }
+      ],
+      "isEnding": false
+    },
+    "bpo_term_03": {
+      "id": "bpo_term_03",
+      "title": "Ang NLRC Case",
+      "narrative": "Nag-file si Attorney Garcia ng complaint sa NLRC-NCR. Na-docket ang kaso at naiassign kay Labor Arbiter Dimaculangan. Ang unang conference ay naka-set sa tatlong linggo mula ngayon.\n\nNagpadala ang legal team ng GlobalConnect ng position paper nila, na sinasabing project-based employee si Angela na natapos lang ang kontrata dahil sa completion ng project. Tinatanggi nila ang anumang koneksyon sa pagitan ng pagtanggal at ng union organizing. Sinasabi nilang kasama na ang night differential sa 'all-in' rate at na tama ang bayad ng overtime.\n\nNag-file si Attorney Garcia ng mapaminsalang reply. Iprinisinta niya ang apat na magkakasunod na limang buwan na kontrata ni Angela, lahat para sa parehong posisyon. Nagpakita siya ng payslip computations na nagpapatunay ng mathematical impossibility ng 'all-in rate' claim. Isinumite niya ang timeline na nagpapakita na ang pagtanggal ay ilang araw lang pagkatapos ng union registration filing.\n\nNangyari ang mandatory conciliation conference sa NLRC. Hinila ni Attorney Chua, ang abogado ng company, si Attorney Garcia sa tabi. 'Pag-usapan natin ang settlement. Ano ba gusto ng client mo?'\n\nAng alok: tatlong buwang sweldo bilang separation pay, bayad ng computed night differential para sa huling tatlong buwan lang, at 'neutral' na certificate of employment. Kapalit, babawiin ni Angela ang lahat ng kaso.",
+      "theme": "contractualization",
+      "choices": [
+        {
+          "text": "I-reject ang mababang alok at magpatuloy sa full hearing -- deserved niya ang reinstatement at buong backwages.",
+          "nextNode": "bpo_term_ending_win",
+          "consequence": "Tumanggi si Angela na mag-settle ng mas mababa kaysa sa ipinagkaloob ng batas.",
+          "scoreChange": 15,
+          "knowledgeGained": "Sa mga illegal dismissal cases, ang empleyado ay entitled sa reinstatement AT buong backwages. Ang mga settlement offers ay madalas na significantly mas mababa kaysa sa iaward ng korte. Isaalang-alang ang buong halaga ng claim mo bago tanggapin."
+        },
+        {
+          "text": "Makipag-negotiate para sa mas magandang settlement -- hingin ang 12 buwang sweldo at buong back pay ng lahat ng differentials.",
+          "nextNode": "bpo_term_ending_settle",
+          "consequence": "Itinulak ni Angela ang patas na settlement na umiiwas sa mahabang court battle.",
+          "scoreChange": 10,
+          "knowledgeGained": "Ang malakas na negotiating position ay kasama ang pag-alam sa buong halaga ng mga claim mo. Gamitin ang potential court award (backwages + reinstatement + damages) bilang leverage para sa patas na settlement."
+        },
+        {
+          "text": "Tanggapin ang settlement offer ng company para matapos na ang pagsubok.",
+          "nextNode": "bpo_term_ending_low",
+          "consequence": "Kinuha ni Angela ang maliit na bahagi ng utang sa kanya para maiwasan ang stress ng litigation.",
+          "scoreChange": -3,
+          "knowledgeGained": null
+        }
+      ],
+      "isEnding": false
+    },
+    "bpo_term_04": {
+      "id": "bpo_term_04",
+      "title": "Mesa ng Negosasyon",
+      "narrative": "Bago sumusulong ang NLRC case, pumayag ang magkabilang panig sa settlement conference na pinasilitan ng NCMB (National Conciliation and Mediation Board). Nakaupo si Angela sa kabila ng mesa mula kina Attorney Chua at Ms. Navarro. Katabi niya si Attorney Garcia.\n\nBinuksan ng company ang alok: dalawang buwang sweldo at malinis na employment record. Sumagot si Attorney Garcia: reinstatement bilang regular employee, buong backwages mula sa petsa ng pagtanggal, bayad ng lahat ng unpaid night shift differentials at overtime premiums para sa buong duration ng employment ni Angela, moral at exemplary damages, at pagkilala sa union.\n\nTense ang negotiation. Inargue ni Attorney Chua na ang reinstatement ay 'impractical given the damaged relationship.' Sumagot si Attorney Garcia na ito mismo ang dahilan kung bakit nagbibigay ang batas ng separation pay in lieu of reinstatement -- isang buwan bawat taon ng serbisyo -- dagdag ang buong backwages.\n\nPagkatapos ng anim na oras na pag-usap, nag-propose ang mediator ng compromise: separation pay na katumbas ng isang buwan bawat taon ng serbisyo, anim na buwang backwages, buong bayad ng computed night differentials at OT premiums, 13th month pay, at withdraw ng company ng anumang oposisyon sa union registration.",
+      "theme": "contractualization",
+      "choices": [
+        {
+          "text": "Tanggapin ang compromise ng mediator -- saklaw nito ang karamihan ng utang kay Angela at pinoprotektahan ang union.",
+          "nextNode": "bpo_term_ending_settle",
+          "consequence": "Nakakuha si Angela ng makabuluhang settlement na nakikinabang din sa mga kasamahan niya.",
+          "scoreChange": 12,
+          "knowledgeGained": "Ang mga NCMB-mediated settlements ay binding at enforceable. Ang magandang settlement ay bina-balance ang buong legal entitlements ng manggagawa laban sa oras, gastos, at kawalan ng katiyakan ng matagal na litigation."
+        },
+        {
+          "text": "Itulak ang buong legal entitlement at dalhin ang kaso sa full NLRC hearing.",
+          "nextNode": "bpo_term_ending_win",
+          "consequence": "Iginiit ni Angela ang maximum na ibinibigay ng batas.",
+          "scoreChange": 10,
+          "knowledgeGained": null
+        },
+        {
+          "text": "Tanggapin pero i-negotiate ang dagdag na non-retaliation clause na nagpoprotekta sa lahat ng union members.",
+          "nextNode": "bpo_term_ending_settle",
+          "consequence": "Sinigurado ni Angela na ang settlement ay nagpoprotekta hindi lang sa kanya kundi sa mga kasamahan niya.",
+          "scoreChange": 15,
+          "knowledgeGained": "Ang mga settlement agreement ay pwedeng magkaroon ng protective clauses para sa mga third parties. Ang non-retaliation clause ay tinitiyak na hindi pwedeng parusahan ng company ang ibang union members."
+        }
+      ],
+      "isEnding": false
+    },
+    "bpo_term_05": {
+      "id": "bpo_term_05",
+      "title": "Umalis na Walang Dala",
+      "narrative": "Pumirma si Angela sa quitclaim. Kinolekta niya ang isang buwang separation pay -- 18,000 pesos. Isinarender niya ang ID, headset, at access card niya. In-escort siya ng Security hanggang sa elevator.\n\nNakatayo siya sa Ayala Avenue ng 7 ng umaga, hawak-hawak ang isang brown envelope na may certificate of employment at final paycheck. Nagmamadaling dumadaan ang mga commuter. Pader ng ingay ang morning traffic. Parang invisible siya.\n\nSa pagpirma ng quitclaim, iniwanan ni Angela ang karapatan niyang i-claim ang libo-libong piso ng unpaid night shift differential, overtime premium pay, at ang posibleng daan-daang libo sa backwages mula sa illegal dismissal case. Ibinigay niya ang lahat para sa isang buwang sweldo.\n\nSumakay siya ng MRT pabalik sa bedspace. May sapat siyang ipon para sa dalawang buwang renta. Pagkatapos noon, kailangan na niyang humanap ng bagong trabaho. Binuksan niya ang JobStreet sa phone niya at nagsimulang mag-scroll sa mga BPO listings. Limang buwan na kontrata. Night shifts. Parehong siklo, sa ibang company.\n\nNag-buzz ang phone niya. Message mula sa Signal group: 'Angela, na-approve ang union registration. Nanalo tayo. Nasaan ka?'",
+      "theme": "contractualization",
+      "choices": [
+        {
+          "text": "Ma-realize ang pagkakamali niya at kumonsulta sa abogado kung pwede bang ma-void ang quitclaim.",
+          "nextNode": "bpo_term_ending_second_chance",
+          "consequence": "Natuklasan ni Angela na pwede pa palang lumaban.",
+          "scoreChange": 8,
+          "knowledgeGained": "Nag-void na ang Philippine courts ng mga quitclaim kapag: (1) pinilit ang empleyado, (2) unconscionably mababa ang kabayaran, (3) hindi lubos na naunawaan ng empleyado ang dokumento, o (4) labag ito sa batas at public policy."
+        },
+        {
+          "text": "Mag-move on at mag-apply sa ibang BPO companies.",
+          "nextNode": "bpo_term_ending_exploited",
+          "consequence": "Tinanggap ni Angela ang pagkatalo at bumalik sa parehong exploitative na siklo.",
+          "scoreChange": -5,
+          "knowledgeGained": null
+        }
+      ],
+      "isEnding": false
+    },
+    "bpo_term_ending_win": {
+      "id": "bpo_term_ending_win",
+      "title": "Naghari ang Katarungan",
+      "narrative": "Pagkatapos ng walong buwan ng mga pagdinig, nagpasya si Labor Arbiter Dimaculangan na pabor kay Angela. Malinaw ang desisyon: napatunayang guilty ang GlobalConnect Solutions ng illegal dismissal at unfair labor practice.\n\nAng award: reinstatement sa dating posisyon niya bilang regular employee, na may buong backwages mula sa petsa ng pagtanggal hanggang sa aktwal na reinstatement. Bayad ng lahat ng unpaid night shift differentials at overtime premiums sa buong duration ng employment niya, computed sa 10% at 25% ayon sa pagkakabanggit. Moral damages na 50,000 pesos. Exemplary damages na 50,000 pesos. Attorney's fees na katumbas ng 10% ng kabuuang monetary award.\n\nNag-appeal ang GlobalConnect sa NLRC Commission, pero na-affirm ang desisyon. Bumalik si Angela sa trabaho -- ngayon bilang kinikilalang regular employee, na may buong benefits, security of tenure, at proteksyon ng isang registered union sa likod niya.\n\nNanalo ang union sa certification election tatlong buwan mamaya. Nahalal si Angela bilang unang secretary ng GlobalConnect Employees Union. Nagsimula ang unang CBA negotiation nila sa susunod na quarter. Nasa agenda: night shift differential compliance, overtime policy reform, mental health programs, at pagwawakas ng endo system.\n\nNa-cite ang kaso ni Angela sa isang DOLE advisory tungkol sa contractualization sa BPO industry. Ang kwento niya, at ang mga kwento ng mga manggagawa tulad niya, ay naging bahagi ng lumalaking kilusan para sa karapatan ng manggagawa sa Philippine outsourcing sector.\n\nResources: DOLE Hotline 1349 | NLRC: nlrc.dole.gov.ph | PAO: pao.gov.ph | DOLE-BLR para sa union registration | SSS: sss.gov.ph | PhilHealth mental health coverage | Employees' Compensation Commission (ECC)",
+      "theme": "union_busting",
+      "choices": [],
+      "isEnding": true
+    },
+    "bpo_term_ending_settle": {
+      "id": "bpo_term_ending_settle",
+      "title": "Isang Pinaghirapang Kasunduan",
+      "narrative": "Pumirma si Angela sa settlement agreement sa NCMB office. Hindi lahat ng ipinaglaban niya, pero malaki-laki: separation pay para sa mga taon ng serbisyo niya, anim na buwang backwages, buong bayad ng computed night shift differentials at overtime premiums, 13th month pay niya, at -- ang pinakamahalaga para sa mga kasamahan niya -- ang nakasulat na commitment ng company na hindi tutulan ang union registration o gaganti sa mga union members.\n\nAng tseke ay mas malaking pera kaysa sa hawak ni Angela sa isang pagkakataon. Pero ang union provision ang pinakamahalaga. Nang ipakita niya ang agreement sa Signal group, electric ang reaksyon. Sa unang pagkakataon, may leverage ang mga manggagawa ng GlobalConnect.\n\nHindi na bumalik si Angela sa GlobalConnect. Ginamit niya ang bahagi ng settlement para mag-enroll sa paralegal course sa UP Open University. Inalok siya ni Ate Jen mula sa ABW ng part-time na posisyon bilang organizer, na umaabot sa ibang BPO companies sa Makati, BGC, at Ortigas.\n\nAnim na buwan mamaya, nagsalita si Angela sa isang DOLE forum tungkol sa labor rights sa BPO industry. Ikinuwento niya ang kwento niya -- ang endo contracts, ang ninakaw na night differential, ang burnout, ang union, ang laban. 'Nasa panig natin ang batas,' sabi niya sa isang kwartong puno ng call center agents. 'Pero gumagana lang ang batas kung alam natin at ginagamit natin ito.'\n\nNagbigay ang kwarto ng standing ovation. Tapos nag-exchange sila ng numbers at nagsimula ng bagong Signal group.\n\nResources: DOLE Hotline 1349 | NLRC: nlrc.dole.gov.ph | NCMB: ncmb.dole.gov.ph | PAO: pao.gov.ph | DOLE-BLR para sa union registration | SSS: sss.gov.ph | Alliance of BPO Workers",
+      "theme": "union_busting",
+      "choices": [],
+      "isEnding": true
+    },
+    "bpo_term_ending_low": {
+      "id": "bpo_term_ending_low",
+      "title": "Nakontento sa Kaunti",
+      "narrative": "Tinanggap ni Angela ang unang alok ng company: tatlong buwang sweldo at huling tatlong buwan ng night differential. Bumuntong-hininga si Attorney Garcia pero nirerespeto ang desisyon niya. 'Karapatan mong tanggapin, Angela. Pero gusto kong malaman mo na mas malaki sana ang iaward ng korte.'\n\nUmabot sa mga 70,000 pesos ang kabuuang settlement. Sapat para sa ilang buwang gastusin, pero maliit na bahagi lang ito ng legally utang sa kanya. Ang buong computation ng unpaid night differentials lang -- para sa lahat ng buwan na nag-night shift siya -- ay mahigit 40,000 pesos sana. Ang backwages mula sa illegal dismissal, kung fully litigated ang kaso, ay pwedeng lumagpas ng 200,000 pesos.\n\nKumuha si Angela ng bagong BPO job sa BGC. Mas maganda ang oras -- mid-shift, 2 PM to 10 PM. Pero limang buwan ang kontrata. Nagsimula ulit ang siklo.\n\nNanatili siya sa Signal group, though. Nagpatuloy ang union sa GlobalConnect nang wala siya. Sinusubaybayan niya ang progreso nila na may magkahalong damdamin -- pagmamalaki sa binuo nila, panghihinayang na hindi niya natapos ang sarili niyang laban.\n\nIsang gabi, nagtanong ang isang bagong miyembro ng Signal group: 'Hindi binabayaran ng company ko ang night differential. Ano dapat kong gawin?' I-type ni Angela ang sagot niya: detalyadong paliwanag ng Labor Code Article 86, ang DOLE complaint process, at isang babala -- 'Huwag kang magsettle ng mas mababa kaysa sa utang sa iyo. Ginawa ko, at sana hindi ko ginawa.'\n\nResources: DOLE Hotline 1349 | NLRC: nlrc.dole.gov.ph | PAO: pao.gov.ph | Libreng legal aid: FLAG (Free Legal Assistance Group) | DOLE-BLR para sa mga tanong tungkol sa union",
+      "theme": "wage_theft",
+      "choices": [],
+      "isEnding": true
+    },
+    "bpo_term_ending_exploited": {
+      "id": "bpo_term_ending_exploited",
+      "title": "Nagpatuloy ang Siklo",
+      "narrative": "Nagsimula si Angela sa bagong BPO company sa susunod na buwan. Ibang gusali, ibang logo sa ID, parehong fluorescent-lit na floor, parehong headset, parehong script. Limang buwan ang kontrata. Wala ang night shift differential sa payslip. Sabi ng team leader na 'expected' ang overtime.\n\nHindi niya chineck ang payslip niya. Hindi siya nagtanong tungkol sa regularization. Hindi siya sumali sa anumang group chat. Nakayuko lang siya, sumasagot ng tawag, at nagpapadala ng pera sa Leyte.\n\nNagnuninuot ang mga buwan. Dalawampu't pito na si Angela. Tapos dalawampu't walo. Lumilipat siya mula sa company papuntang company, palaging short-term contracts, hindi kailanman nagtatayo ng seniority, hindi kailanman kumukuha ng seguridad. Sa bawat pagtapos ng kontrata, ilang linggong puno ng kaba ang paghahanap ng trabaho bago magsimula ang susunod. Walang safety net. Walang union. Walang lumalaban para sa kanya.\n\nMinsan, hating-gabi sa pagitan ng mga tawag, iniisip niya ang Signal group at nagtataka kung ano na ang nangyari sa union sa GlobalConnect. Iniisip niya ang quitclaim na pinirmahan niya at ang mga karapatang ibinigay niya. Iniisip niya ang sinabi ng tita niya: 'Alamin ang karapatan mo, anak. Hindi nila pwedeng kunin ang ayaw mong ibigay.'\n\nPero magkaiba ang malaman ang karapatan mo at ang ipaglaban ito. Natutunan ni Angela ang halaga ng katahimikan. Ang tanong ay kung makakahanap siya ng lakas ng loob na magsalita ulit.\n\nResources: Hindi kailanman huli para malaman ang karapatan mo. DOLE Hotline 1349 | NLRC: nlrc.dole.gov.ph | PAO: pao.gov.ph | SSS: sss.gov.ph | BPO Industry Employees Network (BIEN) | Atty. On Duty - Libreng legal consultations sa DOLE regional offices",
+      "theme": "contractualization",
+      "choices": [],
+      "isEnding": true
+    },
+    "bpo_term_ending_second_chance": {
+      "id": "bpo_term_ending_second_chance",
+      "title": "Pangalawang Pagkakataon",
+      "narrative": "Bumisita si Angela kay Attorney Garcia sa PAO, hawak-hawak ang quitclaim na pinirmahan niya. 'Attorney, nagkamali po ako. Huli na ba?'\n\nMaingat na binasa ni Attorney Garcia ang dokumento. Tapos tumingala siya na may bahagyang ngiti. 'Angela, napakalinaw ng Supreme Court tungkol dito. Sa Periquet v. NLRC, sinabi ng Korte na ang mga quitclaim ay kinasusuklaman bilang labag sa public policy. Ang quitclaim mo ay pwedeng ma-void sa ilang dahilan: unconscionably mababa ang kabayaran -- isang buwang sweldo para sa halos dalawang taon ng serbisyo. Under duress ka -- sinabi nila na iwi-withhold ang final pay mo kung hindi ka pipirma. At sinusubukan ng quitclaim na i-waive ang mga karapatan na hindi pwedeng legally i-waive, tulad ng unpaid night differential.'\n\nNag-file siya ng kaso. Ni-void ng NLRC Labor Arbiter ang quitclaim at ipinruseso ang illegal dismissal complaint ni Angela. Tumagal ng siyam na buwan ang proseso, pero in-award kay Angela ang reinstatement, backwages, at bayad ng lahat ng unpaid wage differentials.\n\nHindi na bumalik si Angela sa GlobalConnect -- tinanggap niya ang separation pay in lieu of reinstatement. Gamit ang pera, binayaran niya ang medical bills ng nanay niya at nag-enroll sa labor studies program. Nagsimula siyang mag-volunteer sa ABW, na tinuturuan ang ibang BPO workers tungkol sa karapatan nila.\n\n'Halos ibinigay ko ang lahat,' sabi niya sa isang grupo ng call center agents sa isang Saturday seminar sa Quezon City. 'Inaasahan ng company na hindi ko alam ang karapatan ko. Ngayon tinitiyak kong alam ng bawat manggagawa na makilala ko ang sa kanila.'\n\nResources: DOLE Hotline 1349 | NLRC: nlrc.dole.gov.ph | PAO: pao.gov.ph | DOLE-BLR para sa union registration | SSS: sss.gov.ph | UP SOLAIR (School of Labor and Industrial Relations) | TUCP (Trade Union Congress of the Philippines)",
+      "theme": "contractualization",
+      "choices": [],
+      "isEnding": true
+    }
+  },
+  "startNode": "bpo_start"
+}

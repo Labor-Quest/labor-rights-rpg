@@ -1,0 +1,738 @@
+{
+  "nodes": {
+    "ofw_start": {
+      "id": "ofw_start",
+      "title": "The Promise of Dubai",
+      "narrative": "Maria Santos stares at the colorful flyer tacked to the sari-sari store wall in Bacolor, Pampanga: 'HIRING! Domestic Helper - Dubai, UAE. Salary: $800/month. Free food and accommodation. Apply now!' The amount dances in her mind. Eight hundred dollars — nearly forty-five thousand pesos a month. More than triple what her father earns driving a tricycle.\n\nHer younger brother, Miguel, needs tuition for his last year of engineering school. Her mother's diabetes medication costs more each month. The family's small house still has a tarp for a roof after the last typhoon. Maria feels the weight of utang na loob pressing on her chest — her parents sacrificed everything so she could finish college, and now it is her turn to give back.\n\nThat evening, a woman named Ate Becky visits their home. She says she is a recruiter and heard Maria was interested. She speaks warmly in Kapampangan, flattering Maria's mother, bringing a box of polvoron. 'I've sent hundreds of girls abroad,' she says, smiling. 'They all send money home. Their families build concrete houses.' She places a glossy brochure on the table showing smiling Filipinas in neat uniforms.\n\nMaria's mother squeezes her hand under the table, eyes bright with hope. Her father stays quiet, staring at his calloused hands.",
+      "theme": "recruitment_scams",
+      "choices": [
+        {
+          "text": "Ask Ate Becky for the agency's name and POEA license number to verify online.",
+          "nextNode": "ofw_recruit_01",
+          "consequence": "Maria decides to verify the agency's legitimacy before committing.",
+          "scoreChange": 15,
+          "knowledgeGained": "Under RA 10022, only POEA-licensed agencies can legally recruit OFWs. You can verify an agency's license status at the DMW (formerly POEA) website."
+        },
+        {
+          "text": "Tell Ate Becky you're interested and ask what you need to do to apply right away.",
+          "nextNode": "ofw_recruit_02",
+          "consequence": "Eager to help her family, Maria skips verification and moves forward with the recruiter.",
+          "scoreChange": -5,
+          "knowledgeGained": null
+        },
+        {
+          "text": "Say you need a few days to think about it and research working abroad.",
+          "nextNode": "ofw_recruit_03",
+          "consequence": "Maria buys herself time to learn about the OFW process.",
+          "scoreChange": 8,
+          "knowledgeGained": "It is always wise to research the legal process for overseas employment before committing to any recruiter or agency."
+        }
+      ],
+      "isEnding": false
+    },
+    "ofw_recruit_01": {
+      "id": "ofw_recruit_01",
+      "title": "Checking the License",
+      "narrative": "Ate Becky's smile falters for just a moment before she recovers. 'Of course, anak! The agency is Golden Future International Manpower. Very legitimate. We've been in business for fifteen years.' She writes the name on a piece of paper but does not provide a license number, saying she will text it later.\n\nThe next morning, Maria walks to the internet cafe near the public market. She searches for the agency name on the DMW website's list of licensed agencies. She also asks a neighbor, Kuya Ronaldo, who worked in Saudi Arabia for ten years, for advice.\n\nKuya Ronaldo tells her: 'Mareng Maria, the most important thing is to check if the agency is licensed. If they cannot show a valid POEA or DMW license, walk away. Also, never pay more than one month's salary as a placement fee — that's the law under RA 10022. Some agencies charge fifty thousand, eighty thousand — that's illegal.'",
+      "theme": "recruitment_scams",
+      "choices": [
+        {
+          "text": "The agency appears on the DMW list as licensed. Visit their official office in Manila to apply formally.",
+          "nextNode": "ofw_recruit_04",
+          "consequence": "Maria confirms the agency is legitimate and proceeds through proper channels.",
+          "scoreChange": 12,
+          "knowledgeGained": "Always apply at the agency's official office address listed on the DMW website. Legitimate agencies process applications in their registered offices, not in houses or hotel rooms."
+        },
+        {
+          "text": "The agency is NOT on the DMW list but Ate Becky insists they have a 'special arrangement.' Trust her anyway.",
+          "nextNode": "ofw_recruit_05",
+          "consequence": "Maria ignores the red flag and proceeds with the unlicensed recruiter.",
+          "scoreChange": -8,
+          "knowledgeGained": null
+        },
+        {
+          "text": "The agency is NOT on the DMW list. Report Ate Becky to the local PESO office and look for a licensed agency instead.",
+          "nextNode": "ofw_recruit_06",
+          "consequence": "Maria reports the illegal recruiter and starts her journey through proper channels.",
+          "scoreChange": 15,
+          "knowledgeGained": "Illegal recruitment is a crime under RA 10022. You can report suspected illegal recruiters to POEA/DMW, the local Public Employment Service Office (PESO), or call the POEA hotline."
+        }
+      ],
+      "isEnding": false
+    },
+    "ofw_recruit_02": {
+      "id": "ofw_recruit_02",
+      "title": "Rushing In",
+      "narrative": "Ate Becky beams. 'Mabilis ka talaga! I like that. Okay, here's what we need: your passport, NBI clearance, medical exam, and — this is important — the placement fee. Seventy-five thousand pesos. I know it's a lot, but think of it as an investment. You'll earn it back in two months!'\n\nSeventy-five thousand pesos. Maria's stomach drops. That's more than her father earns in six months. But Ate Becky is already talking about how other girls' families mortgaged their land or borrowed from the 5-6 lender in the market.\n\nMaria's mother overhears and immediately says she will ask Tita Lourdes to lend them the money. 'Para sa kinabukasan mo, anak,' she says. For your future. The pressure of her family's expectations feels like a wall closing in. Maria remembers that her college classmate, Joy, also went to Dubai last year through a friend of a friend. Joy hasn't been heard from in three months.\n\nAte Becky pushes a crumpled receipt pad forward. 'Just pay the first twenty-five thousand now as reservation fee. The slot might be gone by next week.'",
+      "theme": "recruitment_scams",
+      "choices": [
+        {
+          "text": "Pay the 25,000 peso reservation fee to secure the slot.",
+          "nextNode": "ofw_recruit_05",
+          "consequence": "Maria pays money to an unverified recruiter without checking if the agency is licensed.",
+          "scoreChange": -10,
+          "knowledgeGained": null
+        },
+        {
+          "text": "Pause and ask Ate Becky for the agency's POEA/DMW license number before paying anything.",
+          "nextNode": "ofw_recruit_01",
+          "consequence": "Maria catches herself and decides to verify the agency first.",
+          "scoreChange": 10,
+          "knowledgeGained": "Never pay any fees before verifying that a recruitment agency is licensed by the DMW (formerly POEA). The legal maximum placement fee under RA 10022 is one month's salary."
+        },
+        {
+          "text": "Tell Ate Becky that 75,000 pesos seems too high and ask if that is the legal amount.",
+          "nextNode": "ofw_recruit_03",
+          "consequence": "Maria questions the fee amount, buying time to learn more.",
+          "scoreChange": 5,
+          "knowledgeGained": "Under RA 10022, the maximum placement fee a licensed agency can charge is equivalent to one month of the worker's salary. Charging more is illegal."
+        }
+      ],
+      "isEnding": false
+    },
+    "ofw_recruit_03": {
+      "id": "ofw_recruit_03",
+      "title": "Doing Her Homework",
+      "narrative": "Maria tells Ate Becky she needs time. The recruiter looks annoyed — 'The slot won't wait forever, ha' — but Maria stands firm despite the hiya she feels at seeming ungrateful for the opportunity.\n\nOver the next few days, Maria does her research. She visits the PESO office at the Pampanga Provincial Capitol, where a kind government employee named Ate Dina explains the legal process for working abroad. Maria learns several crucial things:\n\nFirst, all agencies must be licensed by the DMW. She can check at dmw.gov.ph. Second, the maximum placement fee is one month's salary — for a domestic helper position paying $400-800/month, the fee should be no more than that equivalent in pesos. Third, she should attend PDOS (Pre-Departure Orientation Seminar) before leaving. Fourth, she should never surrender her original passport to anyone except immigration officers.\n\nAte Dina also gives her a list of DMW-licensed agencies that have verified job orders for domestic helpers in the Middle East. 'Huwag kang magmadali, Maria. Mas mabuti ang matagal pero ligtas, kaysa mabilis pero mapanganib.' Don't rush. Better slow and safe than fast and dangerous.",
+      "theme": "recruitment_scams",
+      "choices": [
+        {
+          "text": "Apply through one of the licensed agencies on the PESO list.",
+          "nextNode": "ofw_recruit_04",
+          "consequence": "Maria chooses a verified, licensed agency from the government list.",
+          "scoreChange": 12,
+          "knowledgeGained": "The Public Employment Service Office (PESO) at your provincial or city hall can provide a list of verified licensed agencies and help you with the OFW application process for free."
+        },
+        {
+          "text": "Go back to Ate Becky but negotiate for a lower placement fee.",
+          "nextNode": "ofw_recruit_02",
+          "consequence": "Maria returns to the unverified recruiter despite learning better options exist.",
+          "scoreChange": -3,
+          "knowledgeGained": null
+        }
+      ],
+      "isEnding": false
+    },
+    "ofw_recruit_04": {
+      "id": "ofw_recruit_04",
+      "title": "The Licensed Agency",
+      "narrative": "Maria takes the bus to Manila and visits Bright Horizons International Placement, a licensed agency in Ermita with a proper office, air conditioning, and framed DMW certificates on the wall. The staff are professional. They explain the process clearly: medical exam, NBI clearance, skills training for household service workers, PDOS seminar, contract signing, and deployment.\n\nThe placement fee is $400 — equivalent to one month's salary for the Dubai position, exactly the legal maximum. They issue an official receipt and tell Maria she can pay in installments through salary deduction once she starts working, which is also legal.\n\nThe agency coordinator, Sir Dennis, reviews the job order with Maria. The position is for a household service worker in Dubai, UAE. Monthly salary: $400. Benefits: free food and accommodation, one rest day per week, 30 days annual leave after one year, round-trip airfare. Contract duration: two years.\n\nSir Dennis says: 'Maria, I need to be honest with you. The work is hard. You will be far from your family. But if you know your rights and follow the legal process, you will be protected. Let me explain the next steps.'",
+      "theme": "recruitment_scams",
+      "choices": [
+        {
+          "text": "Proceed with the application and attend all required pre-departure seminars.",
+          "nextNode": "ofw_predep_01",
+          "consequence": "Maria follows the proper deployment process through the licensed agency.",
+          "scoreChange": 10,
+          "knowledgeGained": "Licensed agencies are required to process workers through proper channels including medical exams, skills testing, PDOS, and contract verification at POLO."
+        },
+        {
+          "text": "Ask Sir Dennis detailed questions about the employer and working conditions before signing anything.",
+          "nextNode": "ofw_predep_02",
+          "consequence": "Maria exercises due diligence by asking about her future employer.",
+          "scoreChange": 12,
+          "knowledgeGained": "Before accepting a job order, you have the right to ask about the employer's background, the specific duties, working hours, accommodation details, and the experiences of previously deployed workers."
+        }
+      ],
+      "isEnding": false
+    },
+    "ofw_recruit_05": {
+      "id": "ofw_recruit_05",
+      "title": "The Unlicensed Path",
+      "narrative": "Maria proceeds with Ate Becky despite the warning signs. The recruiter processes everything from her house in a subdivision in San Fernando, Pampanga — no proper office, no official receipts, just handwritten notes and promises. Maria pays 75,000 pesos total, borrowing from a 5-6 money lender at crushing interest.\n\nAte Becky takes Maria's passport 'for processing' and promises the visa will be ready in two weeks. Maria waits. Two weeks become three, then four. Every time she asks, Ate Becky says, 'Malapit na, sandali lang.' Almost ready, just wait.\n\nAfter six weeks, Ate Becky hands Maria a tourist visa to Kuwait — not the work visa to Dubai she was promised. 'Plans changed,' Becky says casually. 'But don't worry, same salary. Your employer in Kuwait is very kind. You'll convert to a work visa when you get there.' This is a major red flag — entering on a tourist visa to work is illegal and leaves Maria with no labor protections.\n\nMaria's family has already borrowed the money. Her mother has told all the neighbors. The pressure to just go and make it work feels overwhelming. Mapapahiya sila kung hindi na tuloy.",
+      "theme": "recruitment_scams",
+      "choices": [
+        {
+          "text": "Refuse to go on a tourist visa and demand a refund, threatening to report Ate Becky to the authorities.",
+          "nextNode": "ofw_recruit_06",
+          "consequence": "Maria stands up for herself despite the financial and social pressure.",
+          "scoreChange": 15,
+          "knowledgeGained": "Deploying a worker on a tourist visa is illegal recruitment under RA 10022. Workers deployed this way have no labor protections and can be detained or deported. You can file a case against illegal recruiters at the DMW or NBI."
+        },
+        {
+          "text": "Accept the tourist visa to Kuwait because your family already spent the money and you can't back out now.",
+          "nextNode": "ofw_predep_04",
+          "consequence": "Maria goes along with the illegal arrangement out of desperation.",
+          "scoreChange": -10,
+          "knowledgeGained": null
+        },
+        {
+          "text": "Ask a friend or relative who is an OFW for advice about this sudden change in plans.",
+          "nextNode": "ofw_predep_05",
+          "consequence": "Maria seeks guidance from someone with overseas work experience.",
+          "scoreChange": 7,
+          "knowledgeGained": "Experienced OFWs and their support networks can be valuable sources of information and can help identify recruitment scams."
+        }
+      ],
+      "isEnding": false
+    },
+    "ofw_recruit_06": {
+      "id": "ofw_recruit_06",
+      "title": "Taking a Stand",
+      "narrative": "Maria reports Ate Becky to the local PESO office and files a complaint with the DMW. The process is intimidating — Ate Becky sends angry text messages, and some neighbors whisper that Maria is ungrateful and is causing trouble. Her mother worries that they've made an enemy.\n\nBut Ate Dina from PESO reassures her: 'Tama ang ginawa mo, Maria. You may have saved other women from being trafficked.' The DMW investigates and discovers that Ate Becky has sent at least twelve women abroad on tourist visas in the past year. Three of them are now stranded in Kuwait with no work permits, no contracts, and no way home.\n\nThe investigation takes weeks, but eventually Ate Becky is charged with illegal recruitment — a crime that carries a penalty of 12 years imprisonment and a fine of at least 500,000 pesos under RA 10022. Maria gets her passport back. The 75,000 pesos is harder to recover, but the DMW helps her file a case.\n\nMeanwhile, the PESO office connects Maria with a legitimate, licensed agency that has a verified job order for Dubai. It feels like starting over, and the debt still weighs on her, but Maria knows she made the right choice.",
+      "theme": "recruitment_scams",
+      "choices": [
+        {
+          "text": "Proceed with the licensed agency and restart the proper deployment process.",
+          "nextNode": "ofw_recruit_04",
+          "consequence": "Maria begins again through legitimate channels, wiser and more careful.",
+          "scoreChange": 10,
+          "knowledgeGained": "Illegal recruitment under RA 10022 is punishable by 12 years to life imprisonment (if committed by a syndicate or in large scale) and fines of 500,000 to 1 million pesos."
+        }
+      ],
+      "isEnding": false
+    },
+    "ofw_predep_01": {
+      "id": "ofw_predep_01",
+      "title": "Pre-Departure Orientation Seminar",
+      "narrative": "Maria attends the PDOS at the OWWA office in Pasay City. The seminar room is packed with other OFWs — nurses going to the UK, construction workers headed for Qatar, domestic helpers bound for Hong Kong and the Middle East. Maria feels a strange kinship with all of them: Filipinos leaving their families behind to earn a living.\n\nThe PDOS covers the country profile of the UAE, cultural differences, labor laws, worker rights, emergency hotlines, and how to handle common problems. Maria takes notes diligently. The facilitator, a former OFW herself, speaks from experience: 'Remember — your employer cannot take your passport. Your rest day is your right, not a privilege. If you are abused, call the Philippine Embassy immediately.'\n\nThe facilitator distributes cards with emergency numbers: the Philippine Overseas Labor Office (POLO) in Dubai, the OWWA hotline 1348, and the DFA hotline for distressed OFWs. Maria saves all the numbers in her phone and writes them on a small piece of paper she tucks into her wallet.\n\nAfter the seminar, the agency tells Maria her contract is ready for review and signing.",
+      "theme": "contract_substitution",
+      "choices": [
+        {
+          "text": "Read the employment contract carefully line by line before signing.",
+          "nextNode": "ofw_predep_02",
+          "consequence": "Maria takes time to review every clause of her contract.",
+          "scoreChange": 12,
+          "knowledgeGained": "Always read your employment contract completely before signing. The contract should match the terms in the job order: salary, benefits, working hours, rest days, and termination conditions."
+        },
+        {
+          "text": "Sign the contract quickly since the agency is licensed and you trust them.",
+          "nextNode": "ofw_predep_03",
+          "consequence": "Maria signs without reading the details carefully.",
+          "scoreChange": -3,
+          "knowledgeGained": null
+        }
+      ],
+      "isEnding": false
+    },
+    "ofw_predep_02": {
+      "id": "ofw_predep_02",
+      "title": "Reading the Fine Print",
+      "narrative": "Maria sits in the agency office and reads the contract word by word. Sir Dennis seems slightly impatient but respects her diligence. Maria notices several important things:\n\nThe contract states her salary is $400/month, matching the job order. Free food and suitable accommodation are provided. She gets one rest day per week. Medical insurance is covered by the employer. The contract is for two years with a three-month probation period. Termination provisions are outlined clearly.\n\nHowever, Maria notices one clause that concerns her: 'Employee agrees to perform such duties as assigned by the employer, including but not limited to household duties, cooking, cleaning, childcare, and any other tasks as required.' The phrase 'any other tasks as required' is vague. She also notices the contract doesn't specify maximum working hours per day.\n\nSir Dennis explains that the Standard Employment Contract for domestic helpers should guarantee a minimum of 8 hours of rest per day. He advises Maria to request that this be explicitly written into her contract. 'The more specific your contract, the more protected you are,' he says.",
+      "theme": "contract_substitution",
+      "choices": [
+        {
+          "text": "Request that maximum working hours and specific duties be explicitly written into the contract.",
+          "nextNode": "ofw_predep_06",
+          "consequence": "Maria insists on clearer contract terms to protect herself.",
+          "scoreChange": 15,
+          "knowledgeGained": "Under the Standard Employment Contract for domestic workers, you are entitled to a minimum of 8 continuous hours of rest per day. Insist on clear, specific contract terms regarding duties, working hours, and rest periods."
+        },
+        {
+          "text": "Sign the contract as-is since it mostly looks fine and you don't want to delay deployment.",
+          "nextNode": "ofw_predep_03",
+          "consequence": "Maria accepts the vague language to avoid complications.",
+          "scoreChange": -2,
+          "knowledgeGained": null
+        }
+      ],
+      "isEnding": false
+    },
+    "ofw_predep_03": {
+      "id": "ofw_predep_03",
+      "title": "Contract Signing Day",
+      "narrative": "Maria signs the contract. The agency processes her OEC (Overseas Employment Certificate) and books her flight. In the days before departure, Maria's family throws a small despedida — a going-away gathering. Her mother cooks dinuguan and puto, her father gives her a small wooden crucifix, and Miguel promises to study hard so her sacrifice won't be wasted.\n\nAt the airport, Maria's mother cries and clings to her. 'Mag-ingat ka, anak. Tawagan mo kami palagi.' Take care. Call us always. Maria blinks back her own tears and reminds herself she is doing this for them.\n\nSir Dennis from the agency meets her at NAIA Terminal 1 with her ticket and documents. He hands her a sealed envelope. 'Give this to the person meeting you at Dubai Airport. Don't open it.' Maria wonders what is inside but doesn't ask.\n\nAs she waits at the gate, she sees dozens of other Filipinas with the same look in their eyes — hope mixed with fear. A woman beside her, Ate Gemma, who is on her third deployment, strikes up a conversation.",
+      "theme": "contract_substitution",
+      "choices": [
+        {
+          "text": "Ask Ate Gemma for advice about what to expect when you arrive in Dubai.",
+          "nextNode": "ofw_work_01",
+          "consequence": "Maria gains valuable insights from an experienced OFW.",
+          "scoreChange": 7,
+          "knowledgeGained": "Experienced OFWs are valuable sources of practical advice. Building a support network with fellow Filipinos abroad can be crucial for safety and well-being."
+        },
+        {
+          "text": "Open the sealed envelope to see what documents are inside.",
+          "nextNode": "ofw_predep_06",
+          "consequence": "Maria discovers that the envelope contains documents she should know about.",
+          "scoreChange": 10,
+          "knowledgeGained": "You have the right to know and keep copies of all documents related to your employment. Never carry sealed documents you haven't reviewed."
+        }
+      ],
+      "isEnding": false
+    },
+    "ofw_predep_04": {
+      "id": "ofw_predep_04",
+      "title": "Arrival on a Tourist Visa",
+      "narrative": "Maria arrives in Kuwait on a tourist visa, terrified she'll be caught at immigration. She isn't — the officers stamp her passport without much scrutiny. But as she walks into the arrivals hall, she realizes how alone she is. No POLO has processed her papers. No contract is registered with the Philippine Embassy. She has no OEC, no OWWA membership, no insurance. She is invisible to the system designed to protect her.\n\nA man she has never met holds a cardboard sign with her name. He speaks no Tagalog and little English. He drives her to a residential compound in a dusty suburb. The house is large but forbidding. A stern-looking woman — her employer, Madam Fatima — opens the door and immediately takes Maria's passport. 'I keep this. For safekeeping,' she says flatly.\n\nMaria is shown to a small room next to the kitchen, barely bigger than a closet, with a thin mattress on the floor. Madam Fatima explains that Maria will care for four children, cook three meals a day, clean the entire six-bedroom house, do laundry, and tend the garden. 'You start now,' she says. It is 10 PM.\n\nMaria has no contract, no embassy number saved, and no idea where she is. The 75,000 pesos her family borrowed hangs over her like a curse.",
+      "theme": "document_confiscation",
+      "choices": [
+        {
+          "text": "Comply with Madam Fatima's demands and start working immediately, hoping things will improve.",
+          "nextNode": "ofw_work_04",
+          "consequence": "Maria submits to the situation out of fear and desperation.",
+          "scoreChange": -8,
+          "knowledgeGained": null
+        },
+        {
+          "text": "Politely but firmly tell Madam Fatima you need to keep your own passport.",
+          "nextNode": "ofw_work_02",
+          "consequence": "Maria tries to assert her rights despite her vulnerable position.",
+          "scoreChange": 5,
+          "knowledgeGained": "Passport confiscation by an employer is illegal under the laws of most Middle Eastern countries and violates international labor standards. Your passport is your property."
+        }
+      ],
+      "isEnding": false
+    },
+    "ofw_predep_05": {
+      "id": "ofw_predep_05",
+      "title": "Seeking Advice from a Fellow OFW",
+      "narrative": "Maria calls her cousin, Ate Fely, who has been working as a domestic helper in Riyadh for five years. She explains the situation — the tourist visa, the change from Dubai to Kuwait, Ate Becky's assurances.\n\nAte Fely is alarmed. 'Maria, huwag kang pumunta! That is illegal recruitment! I know girls who went on tourist visas. Their employers treated them like slaves because they had no legal protection. One girl from Tarlac, she couldn't even call for help because her employer took her phone. She was stuck for two years before the embassy found her.'\n\nAte Fely tells Maria about the proper process: licensed agencies, verified job orders, POEA-processed contracts, OEC, PDOS, and OWWA membership. 'If you go through the back door, you have no protection. If the employer beats you, who will you call? The embassy won't even have your name on file.'\n\nMaria feels the cold weight of reality. Seventy-five thousand pesos gone to Ate Becky. Her family in debt. But Ate Fely's words echo: 'Better to lose money than lose your life.'",
+      "theme": "recruitment_scams",
+      "choices": [
+        {
+          "text": "Take Ate Fely's advice — refuse the tourist visa and report Ate Becky to the authorities.",
+          "nextNode": "ofw_recruit_06",
+          "consequence": "Maria heeds the warning and takes the legal route despite the financial loss.",
+          "scoreChange": 12,
+          "knowledgeGained": "Workers who are deployed without proper documentation (no OEC, no registered contract) have no access to government protection, OWWA benefits, or embassy assistance abroad."
+        },
+        {
+          "text": "Thank Ate Fely but proceed anyway — you can't face your family with nothing to show for the 75,000 pesos.",
+          "nextNode": "ofw_predep_04",
+          "consequence": "Maria goes ahead with the illegal deployment despite the warnings.",
+          "scoreChange": -7,
+          "knowledgeGained": null
+        }
+      ],
+      "isEnding": false
+    },
+    "ofw_predep_06": {
+      "id": "ofw_predep_06",
+      "title": "Contract Verification at POLO",
+      "narrative": "Maria takes control of her deployment process. Whether it was insisting on clearer contract terms or opening the sealed envelope to find a second contract with different terms, Maria now understands the critical importance of contract verification.\n\nSir Dennis, to his credit, supports Maria in getting her contract verified and authenticated by the Philippine Overseas Labor Office (POLO) in the UAE. This process ensures that the contract Maria signed in the Philippines is the same one that will govern her employment abroad.\n\nMaria learns about contract substitution — a common abuse where workers sign a favorable contract in the Philippines, but upon arrival, the employer presents a different contract with lower salary and worse conditions. With her contract verified by POLO, Maria has legal proof of what was agreed upon.\n\nShe also ensures she has copies of all her documents: passport, contract, OEC, medical certificate, and OWWA membership. She photographs everything and emails copies to herself, her family, and Ate Fely abroad. Sir Dennis nods approvingly: 'Maria, you are one of the smartest workers I've processed. You'll be okay.'",
+      "theme": "contract_substitution",
+      "choices": [
+        {
+          "text": "Depart for Dubai feeling prepared, with all documents in order and emergency numbers saved.",
+          "nextNode": "ofw_work_01",
+          "consequence": "Maria leaves the Philippines fully prepared and documented.",
+          "scoreChange": 10,
+          "knowledgeGained": "Contract substitution is illegal. Always have your contract verified by POLO. Keep copies of all documents — photograph them and send copies to family. Your POLO-verified contract is your strongest legal protection abroad."
+        }
+      ],
+      "isEnding": false
+    },
+    "ofw_work_01": {
+      "id": "ofw_work_01",
+      "title": "Arriving in Dubai",
+      "narrative": "Maria lands at Dubai International Airport. The air-conditioned terminal gives way to a wall of heat as she exits. A driver holds a sign with her name. He takes her to a villa in Jumeirah, a wealthy residential area. The house is enormous — marble floors, a swimming pool, rooms she cannot count.\n\nHer employer, Madam Aisha, is a well-dressed woman in her forties. She greets Maria politely and shows her to a clean, private room with a bed, a small closet, and her own bathroom. It's nicer than Maria expected. Madam Aisha explains the household: she has three children (ages 4, 7, and 10), a husband who travels frequently, and a driver.\n\nThen Madam Aisha says casually, 'I'll keep your passport in the house safe. Don't worry, it's just for security. Everyone does this here.' She extends her hand, waiting.\n\nMaria remembers the PDOS facilitator's words: 'Your employer cannot take your passport.' She also remembers Ate Gemma at the airport saying, 'Some employers are good but still take the passport out of habit. It's up to you to say no politely.'",
+      "theme": "document_confiscation",
+      "choices": [
+        {
+          "text": "Politely decline and explain that you prefer to keep your passport yourself, as advised by the Philippine Embassy.",
+          "nextNode": "ofw_work_03",
+          "consequence": "Maria respectfully asserts her right to keep her passport.",
+          "scoreChange": 15,
+          "knowledgeGained": "Under UAE law and international conventions, passport confiscation by employers is illegal. Your passport is your property. You can politely cite Philippine Embassy guidelines when declining."
+        },
+        {
+          "text": "Hand over your passport to avoid conflict on your first day.",
+          "nextNode": "ofw_work_02",
+          "consequence": "Maria surrenders her passport to keep the peace.",
+          "scoreChange": -5,
+          "knowledgeGained": null
+        },
+        {
+          "text": "Ask if you can photocopy the passport first and keep the copy, then give her the original.",
+          "nextNode": "ofw_work_02",
+          "consequence": "Maria compromises by keeping a copy but surrendering the original.",
+          "scoreChange": 0,
+          "knowledgeGained": "While keeping a photocopy of your passport is always advisable, it is not a substitute for keeping the original. Employers have no legal right to confiscate your passport."
+        }
+      ],
+      "isEnding": false
+    },
+    "ofw_work_02": {
+      "id": "ofw_work_02",
+      "title": "Without Her Passport",
+      "narrative": "Maria's passport is now in Madam Aisha's safe — or Madam Fatima's drawer, depending on the path that brought her here. Either way, Maria feels a chill knowing that her most important document, her lifeline home, is not in her hands.\n\nThe first few weeks pass in a blur of work. Maria wakes at 5:30 AM to prepare breakfast, gets the children ready for school, cleans the house, does laundry, prepares lunch, picks up the children, helps with homework, cooks dinner, cleans up, and finally collapses into bed around 11 PM. That is seventeen and a half hours of work per day.\n\nHer contract states she is entitled to one rest day per week. But when Friday comes — the day off in the UAE — Madam Aisha says, 'Maria, I need you today. The children are home. Maybe next week.' Next week comes and goes. Then the next. Maria has not had a single day off in a month.\n\nShe is exhausted but afraid to complain. She thinks of her mother's voice: 'Tiis-tiis lang, anak.' Just endure. But her body is breaking down. She falls asleep standing up while ironing and burns her arm.",
+      "theme": "unsafe_conditions",
+      "choices": [
+        {
+          "text": "Politely but firmly remind Madam Aisha that your contract guarantees one rest day per week.",
+          "nextNode": "ofw_work_05",
+          "consequence": "Maria asserts her contractual right to a rest day.",
+          "scoreChange": 12,
+          "knowledgeGained": "The Standard Employment Contract for household service workers guarantees one rest day per week. This is also mandated by UAE labor law for domestic workers (Federal Law No. 10 of 2017)."
+        },
+        {
+          "text": "Keep working without complaining — you need this job for your family.",
+          "nextNode": "ofw_work_04",
+          "consequence": "Maria endures the exploitation in silence.",
+          "scoreChange": -5,
+          "knowledgeGained": null
+        },
+        {
+          "text": "Secretly contact the Philippine Embassy to ask for advice.",
+          "nextNode": "ofw_help_01",
+          "consequence": "Maria reaches out for help without confronting her employer directly.",
+          "scoreChange": 10,
+          "knowledgeGained": "You can contact the Philippine Embassy or POLO office confidentially for advice about labor issues. They can guide you on how to address violations without putting yourself at risk."
+        }
+      ],
+      "isEnding": false
+    },
+    "ofw_work_03": {
+      "id": "ofw_work_03",
+      "title": "Keeping Her Passport",
+      "narrative": "Maria takes a deep breath. 'Ma'am Aisha, thank you for your concern, but the Philippine Embassy advises us to keep our own passports. I will keep it safe in my room, I promise. It is very important to me.' She says it with a gentle smile, trying not to sound confrontational.\n\nMadam Aisha raises an eyebrow but then shrugs. 'Fine, as you wish. Just don't lose it.' Maria exhales with relief. She has her passport, her lifeline.\n\nThe first weeks of work are demanding but manageable. Maria wakes early, cares for the children, keeps the house spotless, and cooks Filipino dishes that the family comes to love. Madam Aisha is strict but not cruel. The children, especially the youngest, Haya, grow attached to Maria, calling her 'Ate Maria.'\n\nHowever, at the end of the first month, something is wrong. Madam Aisha hands Maria an envelope with her salary: 1,100 AED. Maria's contract states 1,470 AED ($400/month). She is being shorted by 370 AED — about $100.\n\n'That is after deductions,' Madam Aisha says vaguely. 'Food, electricity, your room.' Maria knows her contract says food and accommodation are free.",
+      "theme": "wage_theft",
+      "choices": [
+        {
+          "text": "Show Madam Aisha the contract clause stating food and accommodation are free, and politely ask for the full salary.",
+          "nextNode": "ofw_work_05",
+          "consequence": "Maria uses her contract to dispute the unauthorized deductions.",
+          "scoreChange": 15,
+          "knowledgeGained": "Under the Standard Employment Contract, food and suitable accommodation are provided free by the employer. Any deduction not specified in the contract is illegal wage theft."
+        },
+        {
+          "text": "Accept the reduced salary this month and hope it will be corrected next month.",
+          "nextNode": "ofw_work_06",
+          "consequence": "Maria lets the wage theft slide, setting a dangerous precedent.",
+          "scoreChange": -5,
+          "knowledgeGained": null
+        },
+        {
+          "text": "Document the discrepancy — keep the pay envelope, photograph it, and note the date and amount received.",
+          "nextNode": "ofw_work_06",
+          "consequence": "Maria doesn't confront the issue yet but carefully documents the evidence.",
+          "scoreChange": 8,
+          "knowledgeGained": "Always document salary payments: keep pay slips, photograph cash amounts, record dates and amounts in a notebook. This evidence is crucial if you need to file a wage theft complaint later."
+        }
+      ],
+      "isEnding": false
+    },
+    "ofw_work_04": {
+      "id": "ofw_work_04",
+      "title": "Spiraling Downward",
+      "narrative": "The months blur together in an endless cycle of work. Maria is now working 18-hour days, seven days a week. She has not had a single rest day in three months. Her salary — when it comes at all — is less than what was promised. Some months, the employer says 'next month' and the payment never materializes.\n\nMaria has lost weight. Her hands are cracked and raw from constant cleaning with harsh chemicals. She sleeps four to five hours a night. When she makes a mistake — burning the rice, leaving a smudge on a glass — her employer screams at her in Arabic. Once, Madam throws a shoe at her head.\n\nMaria calls home on the rare occasions she can access a phone. She tells her mother everything is fine. 'Okay naman po dito, 'Nay. Maganda yung bahay.' She cannot bear to tell the truth. Her mother would worry herself sick, and her father would feel helpless. Besides, they need the money she's sending — or trying to send.\n\nOne night, while cleaning the kitchen at midnight, Maria hears another Filipina's voice through the wall. Her neighbor's helper, Jen, is calling out in Tagalog: 'Tulong, may tao ba diyan?' Help, is anyone there?",
+      "theme": "unsafe_conditions",
+      "choices": [
+        {
+          "text": "Find a way to talk to Jen and share your situations — two voices are stronger than one.",
+          "nextNode": "ofw_help_03",
+          "consequence": "Maria connects with a fellow OFW in distress.",
+          "scoreChange": 10,
+          "knowledgeGained": "Building connections with fellow OFWs can be lifesaving. Together, you can share information, provide emotional support, and help each other access assistance."
+        },
+        {
+          "text": "Ignore Jen's voice — getting involved could make your own situation worse.",
+          "nextNode": "ofw_work_07",
+          "consequence": "Maria retreats further into isolation.",
+          "scoreChange": -3,
+          "knowledgeGained": null
+        },
+        {
+          "text": "The next time you can access a phone, call the OWWA hotline 1348 or the Philippine Embassy.",
+          "nextNode": "ofw_help_01",
+          "consequence": "Maria finally decides to seek official help.",
+          "scoreChange": 12,
+          "knowledgeGained": "The OWWA hotline 1348 and the DFA hotline for distressed OFWs are available 24/7. The Philippine Embassy can intervene on your behalf even if you entered the country through irregular channels."
+        }
+      ],
+      "isEnding": false
+    },
+    "ofw_work_05": {
+      "id": "ofw_work_05",
+      "title": "Asserting Her Rights",
+      "narrative": "Maria gathers her courage and speaks to her employer. She holds up her POLO-verified contract — or her copy of the signed agreement — and points to the specific clauses: the agreed salary, the free food and accommodation, the weekly rest day.\n\n'Ma'am, with all respect, this is what we agreed to. I work hard for you and I am happy to be here, but I also need my rights to be respected. The Philippine Embassy says these are protected by law.'\n\nThe employer's reaction is mixed. There is surprise — most helpers don't push back. There is annoyance. But there is also a grudging respect. In Maria's case with Madam Aisha in Dubai, the employer eventually relents: 'Fine. You'll get your full salary and your Friday off. But I expect the house to be perfect the rest of the week.'\n\nFor Maria on the harder path — with an abusive employer — the response is different. The employer may become hostile, threaten to send Maria home, or lock her in her room. In that case, Maria must decide her next move carefully.\n\nMaria's heart pounds, but she stands her ground. She has learned that knowing your rights is not enough — you must also have the courage to assert them.",
+      "theme": "wage_theft",
+      "choices": [
+        {
+          "text": "Thank the employer and continue working with the corrected terms, documenting everything.",
+          "nextNode": "ofw_work_08",
+          "consequence": "Maria's situation improves and she maintains careful records.",
+          "scoreChange": 10,
+          "knowledgeGained": "When an employer corrects a violation after being confronted, continue to document all payments and conditions. A positive resolution now does not guarantee there won't be issues later."
+        },
+        {
+          "text": "The employer reacts angrily and threatens to terminate you. Contact the Philippine Embassy immediately.",
+          "nextNode": "ofw_help_01",
+          "consequence": "The confrontation escalates and Maria needs embassy support.",
+          "scoreChange": 8,
+          "knowledgeGained": "If an employer retaliates against you for asserting your legal rights, contact the Philippine Embassy or POLO immediately. Retaliation for asserting rights is itself a violation."
+        }
+      ],
+      "isEnding": false
+    },
+    "ofw_work_06": {
+      "id": "ofw_work_06",
+      "title": "The Wages Shrink",
+      "narrative": "By the third month, the pattern is clear. Maria has never received her full contractual salary. The deductions change every month — this time for 'advance,' next time for 'broken glass,' then for 'phone calls.' Her net salary is barely $250 of the $400 she was promised.\n\nMaria does the math with trembling hands. After paying the monthly installment for her placement fee, sending money home for Miguel's tuition and her mother's medicine, there is almost nothing left for herself. She hasn't bought new clothes since arriving. Her one pair of rubber slippers is falling apart.\n\nShe keeps a careful record in a small notebook she hides under her mattress: dates, amounts promised, amounts received, reasons given for deductions. She photographs pay slips when they are provided, which is rarely.\n\nOne day, while cleaning Madam Aisha's home office, Maria overhears a phone call. Madam Aisha is speaking to her sister about 'the helper': 'She's so naive. I told the agency I'd pay $400 but I'm only spending $250. She doesn't know her rights.' Maria's blood runs cold.",
+      "theme": "wage_theft",
+      "choices": [
+        {
+          "text": "Confront Madam Aisha with your records and demand full payment of all back wages.",
+          "nextNode": "ofw_work_05",
+          "consequence": "Armed with evidence, Maria confronts the wage theft directly.",
+          "scoreChange": 12,
+          "knowledgeGained": "Systematic underpayment is wage theft. Document everything: dates, amounts, deductions. This evidence is essential for filing a complaint with the Philippine Embassy or the host country's labor ministry."
+        },
+        {
+          "text": "Contact the Philippine Embassy secretly and report the wage theft.",
+          "nextNode": "ofw_help_01",
+          "consequence": "Maria seeks official intervention for the wage theft.",
+          "scoreChange": 10,
+          "knowledgeGained": "You can report wage theft to the POLO office at the Philippine Embassy. They can mediate with the employer and, if necessary, help you file a formal complaint."
+        },
+        {
+          "text": "Continue documenting but do nothing yet — you're afraid of losing the job entirely.",
+          "nextNode": "ofw_work_07",
+          "consequence": "Maria's fear prevents her from acting on the evidence she's gathered.",
+          "scoreChange": -2,
+          "knowledgeGained": null
+        }
+      ],
+      "isEnding": false
+    },
+    "ofw_work_07": {
+      "id": "ofw_work_07",
+      "title": "Breaking Point",
+      "narrative": "Eight months into her deployment. Maria is a shadow of the hopeful young woman who left Pampanga. She has lost fifteen pounds. Dark circles frame her eyes. Her hands shake when she's tired, which is always.\n\nTonight, she made a mistake. She accidentally used the wrong spice in the evening meal. Her employer flies into a rage, overturning the pot of food onto the kitchen floor. 'Clean it up! You are useless! I should send you back to your poor country!' The scalding liquid burns Maria's ankles. She bites her lip to keep from crying out.\n\nAlone in her room that night, she cries into her pillow. She thinks about her family, about the dreams they had when she left. She looks at her phone — the one luxury she fought to keep — and scrolls through her contacts. She has the Philippine Embassy number. She has the OWWA hotline. She has Ate Fely's number.\n\nShe is also starting to have dark thoughts. The walls of her tiny room feel like they're closing in. She remembers something the PDOS facilitator said: 'No amount of money is worth your life. If you are in danger, call for help. That is not weakness — that is survival.'",
+      "theme": "unsafe_conditions",
+      "choices": [
+        {
+          "text": "Call the Philippine Embassy emergency hotline right now, tonight.",
+          "nextNode": "ofw_help_01",
+          "consequence": "Maria finally reaches out for help at her most desperate moment.",
+          "scoreChange": 15,
+          "knowledgeGained": "The Philippine Embassy maintains an emergency hotline for distressed OFWs. Abuse — physical, verbal, or psychological — is grounds for emergency rescue and repatriation."
+        },
+        {
+          "text": "Text Ate Fely and ask her to contact the embassy on your behalf.",
+          "nextNode": "ofw_help_03",
+          "consequence": "Maria reaches out through her support network.",
+          "scoreChange": 10,
+          "knowledgeGained": "If you cannot safely contact the embassy yourself, ask a trusted friend or family member to report your situation. Third-party reports are accepted and acted upon."
+        },
+        {
+          "text": "Try to endure one more month — you're so close to paying off the family's debt.",
+          "nextNode": "ofw_resolve_05",
+          "consequence": "Maria pushes herself past her breaking point.",
+          "scoreChange": -8,
+          "knowledgeGained": null
+        }
+      ],
+      "isEnding": false
+    },
+    "ofw_work_08": {
+      "id": "ofw_work_08",
+      "title": "A Stable Situation",
+      "narrative": "After asserting her rights, Maria's working conditions improve significantly. Madam Aisha pays the full $400 salary on time. Maria gets her Friday off, which she spends at the Pinoy community gathering at a church in Deira, where she meets other OFWs, shares stories, and finds emotional support.\n\nMonths pass. Maria sends money home faithfully. Miguel is in his final semester. Her mother's medication is covered. Her father used some savings to finally replace the tarp roof with galvanized iron sheets. Maria allows herself to feel a cautious pride.\n\nBut one day, Maria meets a new Filipina helper in the neighborhood named Grace. Grace is clearly in distress — thin, scared, with bruises on her arms she tries to hide. She tells Maria in hurried whispers that her employer beats her, hasn't paid her in three months, and took her passport. Grace begs Maria for help.\n\nMaria realizes that her own good fortune is not universal. She knows the system, the numbers, the rights. She has a choice about what to do with that knowledge.",
+      "theme": "unsafe_conditions",
+      "choices": [
+        {
+          "text": "Help Grace contact the Philippine Embassy and offer to accompany her to the POLO office on your day off.",
+          "nextNode": "ofw_help_02",
+          "consequence": "Maria uses her knowledge to help a fellow OFW in crisis.",
+          "scoreChange": 15,
+          "knowledgeGained": "You can help fellow OFWs by connecting them with the Philippine Embassy, POLO, or OWWA. Accompanying a distressed worker to report abuse provides moral support and can strengthen their case."
+        },
+        {
+          "text": "Give Grace the embassy number but don't get further involved — you don't want to risk your own position.",
+          "nextNode": "ofw_help_04",
+          "consequence": "Maria offers limited help to avoid potential complications.",
+          "scoreChange": 5,
+          "knowledgeGained": "Even sharing information about rights and emergency contacts can save a life. Every bit of knowledge shared empowers another worker."
+        }
+      ],
+      "isEnding": false
+    },
+    "ofw_help_01": {
+      "id": "ofw_help_01",
+      "title": "The Embassy Call",
+      "narrative": "Maria dials the Philippine Embassy. Her hands shake. A Filipina voice answers: 'Philippine Overseas Labor Office, Dubai. Paano po kita matutulungan?' How can I help you?\n\nMaria pours out her story in a rush of Tagalog and tears — the long hours, the confiscated passport, the unpaid wages, the verbal abuse, the burn on her ankles. The POLO officer, Ma'am Elena, listens patiently and takes careful notes.\n\n'Maria, hindi ka nag-iisa. You are not alone. We handle cases like yours every day. Here is what we can do: First, we can summon your employer for mediation. If the employer does not cooperate, we can file a case with the UAE Ministry of Human Resources. Second, if you are in immediate danger, we can arrange for your emergency shelter at the Bahay Kalinga — a shelter for distressed OFWs at the embassy. Third, we will help you recover your passport and unpaid wages.'\n\nMa'am Elena also explains that Maria can file a complaint against her recruitment agency in the Philippines under RA 8042, which holds the agency jointly and solidarily liable with the foreign employer for all money claims.\n\n'Maria, kailan mo gusto pumunta dito? When do you want to come to us?'",
+      "theme": "unsafe_conditions",
+      "choices": [
+        {
+          "text": "Go to the embassy immediately and request shelter at Bahay Kalinga — you don't feel safe going back.",
+          "nextNode": "ofw_help_05",
+          "consequence": "Maria seeks emergency shelter and protection at the embassy.",
+          "scoreChange": 12,
+          "knowledgeGained": "Bahay Kalinga is a temporary shelter run by the Philippine Embassy for distressed OFWs. It provides safe housing, food, counseling, and legal assistance while cases are being processed."
+        },
+        {
+          "text": "Ask the embassy to summon your employer for mediation so you can try to resolve things without leaving the job.",
+          "nextNode": "ofw_help_04",
+          "consequence": "Maria opts for mediation, hoping to fix the situation while keeping her job.",
+          "scoreChange": 8,
+          "knowledgeGained": "POLO can summon employers for mediation to resolve labor disputes. This is often faster than filing a formal case and can result in payment of back wages and improved conditions."
+        },
+        {
+          "text": "Thank the embassy but decide to handle it yourself — you'll talk to your employer first.",
+          "nextNode": "ofw_work_05",
+          "consequence": "Maria attempts to resolve the situation independently before seeking formal intervention.",
+          "scoreChange": 3,
+          "knowledgeGained": null
+        }
+      ],
+      "isEnding": false
+    },
+    "ofw_help_02": {
+      "id": "ofw_help_02",
+      "title": "Helping Grace",
+      "narrative": "On her next Friday off, Maria meets Grace at the Pinoy community gathering. Grace is trembling, wearing long sleeves despite the heat to hide the bruises. Maria holds her hand and tells her: 'Kayang-kaya natin 'to, Grace. Hindi ka nag-iisa.'\n\nMaria calls the POLO office and explains Grace's situation. She accompanies Grace to the embassy the following week, having gotten permission from Madam Aisha by saying she had a medical appointment. At the POLO office, Grace tells her story to the labor attache, who documents the physical abuse, wage theft, and passport confiscation.\n\nThe embassy acts quickly. Within a week, they recover Grace's passport through coordination with UAE authorities. Grace is sheltered at Bahay Kalinga. A case is filed against Grace's employer with the UAE Ministry of Human Resources, and simultaneously, a complaint is filed against the recruitment agency in Manila.\n\nGrace clings to Maria at the shelter. 'Salamat, Ate Maria. Kung hindi dahil sa 'yo...' If not for you. Maria feels something shift inside her — she is no longer just surviving. She is making a difference.\n\nWord spreads among the Filipina helpers in the neighborhood. Maria becomes a quiet source of information and hope. She starts keeping a list of emergency numbers and rights on a card that she discreetly shares with new arrivals.",
+      "theme": "unsafe_conditions",
+      "choices": [
+        {
+          "text": "Continue your contract with a sense of purpose, helping other OFWs and building a support network.",
+          "nextNode": "ofw_resolve_01",
+          "consequence": "Maria completes her contract as an empowered advocate for fellow OFWs.",
+          "scoreChange": 15,
+          "knowledgeGained": "OFWs who help fellow workers are protected by RA 10022. No one can be penalized for reporting labor violations or helping others access government services."
+        }
+      ],
+      "isEnding": false
+    },
+    "ofw_help_03": {
+      "id": "ofw_help_03",
+      "title": "The OFW Network",
+      "narrative": "Maria connects with Jen, the Filipina helper next door, through whispered conversations over the garden wall during the brief minutes they are both outside. Jen's situation is similar to Maria's — overworked, underpaid, passport confiscated. But Jen has been here longer and has connections.\n\nJen tells Maria about an informal network of Filipina domestic helpers in the area who look out for each other. They communicate through a secret WhatsApp group using borrowed phones and stolen minutes. The group, called 'Bahay Kalinga sa Bayan' (Shelter in Our Community), shares practical information: which employers are known to be abusive, how to contact the embassy, which hospital to go to in an emergency, and how to get legal help.\n\nThrough the network, Maria learns that OWWA provides several benefits she didn't know about: death and disability benefits, education assistance for OFW children, repatriation assistance, and reintegration programs. She also learns that under RA 8042, she can file money claims against her recruitment agency even after returning to the Philippines.\n\nThe network gives Maria something she had lost: hope. Jen says, 'Ate Maria, we don't have to suffer alone. We are millions of OFWs — we are not powerless if we stand together.'",
+      "theme": "unsafe_conditions",
+      "choices": [
+        {
+          "text": "Use the network's help to contact the Philippine Embassy and plan a safe exit from your employer.",
+          "nextNode": "ofw_help_05",
+          "consequence": "Maria leverages the support network to seek official help.",
+          "scoreChange": 12,
+          "knowledgeGained": "OFW community networks can provide critical support: emotional aid, practical information, help contacting authorities, and even temporary assistance for those who have escaped abusive employers."
+        },
+        {
+          "text": "Stay with your employer but use the network's information to document violations and plan a future complaint.",
+          "nextNode": "ofw_help_04",
+          "consequence": "Maria stays but builds a stronger case with the network's help.",
+          "scoreChange": 7,
+          "knowledgeGained": "Documentation of labor violations — photos, records, witness statements — strengthens any future legal complaint. A well-documented case has a much higher chance of resulting in compensation."
+        }
+      ],
+      "isEnding": false
+    },
+    "ofw_help_04": {
+      "id": "ofw_help_04",
+      "title": "Mediation and Documentation",
+      "narrative": "Maria pursues a middle path — documenting everything while seeking mediation through the POLO office. The POLO labor attache sends a formal letter to Maria's employer requesting a meeting to discuss the terms of employment.\n\nThe mediation meeting takes place at the POLO office. Maria, her employer, and a POLO officer sit across a table. The atmosphere is tense. The POLO officer lays out the facts: Maria's contract guarantees $400/month with free food and accommodation. She has been receiving only $250-300/month with illegal deductions. She has not received her mandated rest days.\n\nFaced with the official documentation and the presence of a Philippine government officer, the employer is forced to respond. In some cases, the employer agrees to comply and pay back wages. In others, the employer refuses and the case must escalate to the UAE Ministry of Human Resources or the Philippine government.\n\nThe mediation results in a signed agreement: the employer will pay Maria the full salary going forward and settle back wages in installments. Maria will receive her weekly rest day. The POLO officer warns the employer that any retaliation will result in a formal case filing.",
+      "theme": "wage_theft",
+      "choices": [
+        {
+          "text": "Return to work with the mediation agreement, monitoring closely to ensure compliance.",
+          "nextNode": "ofw_work_08",
+          "consequence": "Maria returns with official protection and a documented agreement.",
+          "scoreChange": 10,
+          "knowledgeGained": "POLO-mediated agreements are documented and create a record. If the employer violates the agreement, the case automatically escalates to a formal complaint with stronger legal consequences."
+        },
+        {
+          "text": "Decide this employer cannot be trusted — request contract termination and repatriation assistance from the embassy.",
+          "nextNode": "ofw_help_06",
+          "consequence": "Maria decides to leave and seeks repatriation assistance.",
+          "scoreChange": 7,
+          "knowledgeGained": "You have the right to terminate your employment if your employer has violated the contract. Under these circumstances, you are entitled to repatriation at the employer's expense."
+        }
+      ],
+      "isEnding": false
+    },
+    "ofw_help_05": {
+      "id": "ofw_help_05",
+      "title": "Bahay Kalinga",
+      "narrative": "Maria arrives at the Philippine Embassy compound in Dubai. Bahay Kalinga is a modest but clean facility within the embassy grounds. There are about twenty other Filipinas there — some have been beaten, some haven't been paid in months, some were trafficked. Despite the sadness, there is a sense of solidarity. The women cook together, share stories, and look after each other.\n\nA social worker named Ate Joy processes Maria's case. Maria surrenders her phone for documentation — photos of her injuries, screenshots of messages, her meticulous notebook of salary records. Ate Joy is impressed: 'Maria, your documentation is excellent. This will make a very strong case.'\n\nThe embassy coordinates with UAE authorities to recover Maria's passport. Within five days, it is returned. The POLO office files a formal complaint against Maria's employer with the UAE Ministry of Human Resources, demanding payment of all back wages, overtime, and compensation for the abuse.\n\nMaria also provides a sworn statement that will be used to file a case against her recruitment agency in the Philippines under RA 8042 for joint and solidary liability. This means the agency can be held equally responsible for the employer's violations.",
+      "theme": "unsafe_conditions",
+      "choices": [
+        {
+          "text": "Pursue the case fully — file complaints against both the employer and the recruitment agency.",
+          "nextNode": "ofw_help_06",
+          "consequence": "Maria commits to seeking full justice through legal channels.",
+          "scoreChange": 15,
+          "knowledgeGained": "Under RA 8042, the recruitment agency and the foreign employer have joint and solidary liability. This means Maria can collect damages from the agency in the Philippines even if the foreign employer refuses to pay."
+        },
+        {
+          "text": "Just get your passport back and request immediate repatriation — you want to go home.",
+          "nextNode": "ofw_resolve_03",
+          "consequence": "Maria chooses to return home as quickly as possible.",
+          "scoreChange": 5,
+          "knowledgeGained": "OWWA provides repatriation assistance for distressed OFWs, including plane tickets and airport assistance. You can still file cases after returning to the Philippines."
+        }
+      ],
+      "isEnding": false
+    },
+    "ofw_help_06": {
+      "id": "ofw_help_06",
+      "title": "Filing the Case",
+      "narrative": "Maria decides to pursue justice fully. At the POLO office, she files a formal complaint listing all violations: wage theft (underpayment totaling approximately $1,800 over her employment period), illegal salary deductions, passport confiscation, denial of rest days, physical and verbal abuse, and violation of the Standard Employment Contract.\n\nThe POLO labor attache explains the legal process: In the UAE, the case will go through the Ministry of Human Resources. If the employer doesn't settle, it can proceed to UAE labor court. Simultaneously, in the Philippines, a case will be filed at the National Labor Relations Commission (NLRC) against the recruitment agency under RA 8042's joint and solidary liability provision.\n\nMaria also learns about the recruitment agency's surety bond — a financial guarantee required by law for all licensed agencies. This bond can be used to pay workers' claims if the agency or employer fails to pay.\n\n'The process takes time,' the POLO attache warns. 'It may take six months to a year. But you have a strong case, Maria. And you will not be alone.' Maria thinks of her mother's words: 'Ang taong nagtitiyaga, ay may makukuha rin.' Those who persevere will gain something in the end.\n\nWhile the case is processed, OWWA approves Maria's repatriation. She will fly home next week.",
+      "theme": "wage_theft",
+      "choices": [
+        {
+          "text": "Return to the Philippines and continue pursuing your case at the NLRC while rebuilding your life.",
+          "nextNode": "ofw_resolve_02",
+          "consequence": "Maria goes home to fight for justice from the Philippines.",
+          "scoreChange": 12,
+          "knowledgeGained": "Cases filed at the NLRC under RA 8042 can be pursued even after the OFW has returned to the Philippines. The agency's surety bond serves as a guarantee for money claims."
+        },
+        {
+          "text": "Stay in the UAE at Bahay Kalinga until the case is resolved to ensure the employer can't escape liability.",
+          "nextNode": "ofw_resolve_04",
+          "consequence": "Maria stays abroad to see the case through in the UAE courts.",
+          "scoreChange": 8,
+          "knowledgeGained": "Some OFWs choose to stay in the host country while cases are being processed. The embassy can provide shelter and assistance during this period, though it can take several months."
+        }
+      ],
+      "isEnding": false
+    },
+    "ofw_resolve_01": {
+      "id": "ofw_resolve_01",
+      "title": "The Empowered OFW",
+      "narrative": "Maria completes her two-year contract in Dubai with her rights intact. She earned the full salary as promised, had her weekly rest days, kept her passport throughout, and even helped several fellow Filipinas access embassy services and assert their own rights.\n\nShe returns to the Philippines with savings of nearly 400,000 pesos — enough to finish paying for Miguel's engineering degree, build a small extension to her family's house, and start a modest sari-sari store that her mother can run. At NAIA, her entire family is waiting, holding a banner that reads 'Welcome Home, Ate Maria!'\n\nBut Maria's journey doesn't end there. She enrolls in OWWA's reintegration program, which provides livelihood training and small business loans for returning OFWs. She also volunteers at the local PESO office, sharing her experience with other aspiring OFWs.\n\n'Ang pinaka-importante,' she tells them, 'is that you know your rights before you leave. Don't be afraid to ask questions. Don't be afraid to say no. And always, always, keep your passport.'\n\nMaria's story becomes one of empowerment — not because everything was easy, but because she was prepared, informed, and courageous enough to stand up for herself and others.",
+      "theme": "unsafe_conditions",
+      "choices": [],
+      "isEnding": true
+    },
+    "ofw_resolve_02": {
+      "id": "ofw_resolve_02",
+      "title": "Justice Through the NLRC",
+      "narrative": "Maria returns to the Philippines and immediately files her case at the NLRC office in Quezon City. Her lawyer — provided free by the Public Attorney's Office (PAO) — files a money claim against Bright Horizons International Placement (or the relevant agency) under RA 8042, citing joint and solidary liability.\n\nThe case documents include Maria's detailed salary records, photographs of injuries, the POLO-verified contract showing agreed terms versus actual payments, the embassy's mediation records, and sworn statements from Maria and other witnesses.\n\nThe NLRC process takes eight months. The recruitment agency argues that it is not responsible for the employer's violations, but the NLRC cites Section 10 of RA 8042 as amended by RA 10022: the agency and the employer are jointly and solidarily liable for all claims arising from the employment contract. The agency's surety bond of one million pesos is ordered released to cover Maria's claims.\n\nMaria is awarded 180,000 pesos in back wages, 50,000 pesos in moral damages, and 25,000 in attorney's fees. It's not a fortune, but it's justice. She uses the money to complete her family's house repairs and invest in a small catering business.\n\nShe also joins Migrante International, an OFW advocacy organization, to help reform the system that allowed her exploitation.\n\nResources: NLRC hotline (02) 527-3000 | PAO hotline (02) 929-9436 | OWWA hotline 1348 | DMW website: dmw.gov.ph",
+      "theme": "wage_theft",
+      "choices": [],
+      "isEnding": true
+    },
+    "ofw_resolve_03": {
+      "id": "ofw_resolve_03",
+      "title": "Going Home Early",
+      "narrative": "Maria chooses to come home. OWWA arranges her repatriation — a plane ticket, airport assistance, and a small cash allowance for immediate needs. At NAIA Terminal 1, Maria walks through the arrivals gate carrying a single bag, much lighter than when she left.\n\nHer family is confused and worried. Maria tells them the truth — not all of it, not the worst parts, but enough. Her mother cries. Her father's jaw tightens. Miguel says quietly, 'Ate, you should have told us. We would have found another way.'\n\nThe adjustment is hard. Maria has nightmares. She feels like a failure, even though she knows she isn't. The OWWA office in San Fernando, Pampanga refers her to their psychosocial support program — free counseling for returning OFWs. She attends hesitantly at first, then regularly.\n\nA counselor tells her: 'Maria, you survived. That is not failure. That is strength.' Slowly, Maria starts to believe it. She learns about OWWA's livelihood assistance program, which provides up to 20,000 pesos in seed capital for returning OFWs who want to start small businesses.\n\nMaria did not file a case against her employer or agency. The wages she lost are likely gone. But she is home, she is safe, and she has her whole life ahead of her. She tells herself: next time — if there is a next time — she will be prepared.\n\nResources: OWWA reintegration program | OWWA hotline 1348 | National Center for Mental Health Crisis Hotline: 0917-899-8727 | DMW website: dmw.gov.ph",
+      "theme": "unsafe_conditions",
+      "choices": [],
+      "isEnding": true
+    },
+    "ofw_resolve_04": {
+      "id": "ofw_resolve_04",
+      "title": "Seeing It Through Abroad",
+      "narrative": "Maria stays at Bahay Kalinga for four months while her case winds through the UAE Ministry of Human Resources. It is a long, tedious process. Some days she feels hopeless. But the embassy staff and her fellow shelter residents keep her spirits up. She helps cook meals, teaches other Filipinas about their rights, and even starts an informal English class.\n\nThe UAE labor court rules in Maria's favor. Her employer is ordered to pay: full back wages for the duration of underpayment (approximately 6,660 AED), compensation for unpaid rest days (2,940 AED), a return plane ticket, and end-of-service gratuity. The total comes to roughly 12,000 AED — about $3,200.\n\nThe employer pays reluctantly, under threat of a travel ban. Maria receives the money through the embassy. She also receives confirmation that the NLRC case against the recruitment agency in the Philippines is proceeding.\n\nMaria flies home with her head held high. She didn't just survive — she fought the system and won. At NAIA, she tells her mother: ''Nay, I'm okay. I went through something hard, but I came out stronger.'\n\nShe returns to Pampanga and begins rebuilding. She uses OWWA's reintegration program to start a small business and volunteers at the local PESO office. She becomes the person that future OFWs come to for advice — the Kuya Ronaldo of the next generation.\n\nResources: POLO-Dubai: +971-4-220-7999 | OWWA hotline 1348 | DMW hotline: (02) 7217-2399 | Bahay Kalinga Emergency Shelter at Philippine Embassies worldwide",
+      "theme": "wage_theft",
+      "choices": [],
+      "isEnding": true
+    },
+    "ofw_resolve_05": {
+      "id": "ofw_resolve_05",
+      "title": "The Cost of Silence",
+      "narrative": "Maria endures. One more month becomes two, becomes six. She stops counting the hours, stops tracking the unpaid wages, stops hoping for a rest day. She becomes a ghost in the big house — silent, efficient, invisible.\n\nHer health deteriorates. She develops chronic back pain from sleeping on a thin mattress. Her eyesight weakens from working in dimly lit rooms. She has lost so much weight that her family wouldn't recognize her. When she calls home, she lies. 'Okay naman po ako dito.' I'm okay here.\n\nOne day, she collapses while mopping the stairs. The employer, alarmed by the liability, calls an ambulance. At the hospital, a doctor notes signs of severe exhaustion, malnutrition, and untreated injuries. A social worker contacts the Philippine Embassy.\n\nThe embassy intervenes. Maria is taken to Bahay Kalinga, her passport is recovered, and her employer is reported to UAE authorities. But by this point, Maria has lost nearly two years of her life to exploitation, her health is damaged, and the emotional scars run deep.\n\nMaria's story is tragically common. Thousands of OFWs endure in silence because of family pressure, debt, hiya, and a system that doesn't always protect them. But help is always available — the key is reaching out before it's too late.",
+      "theme": "unsafe_conditions",
+      "choices": [
+        {
+          "text": "Accept the embassy's help and begin the process of recovery and repatriation.",
+          "nextNode": "ofw_resolve_06",
+          "consequence": "Maria finally receives the help she needed all along.",
+          "scoreChange": 5,
+          "knowledgeGained": "It is never too late to seek help. The Philippine Embassy, POLO, and OWWA assist distressed OFWs regardless of how long the abuse has continued or whether the worker entered through legal channels."
+        }
+      ],
+      "isEnding": false
+    },
+    "ofw_resolve_06": {
+      "id": "ofw_resolve_06",
+      "title": "A Difficult Homecoming",
+      "narrative": "Maria returns to Pampanga a different person than the one who left. She is thinner, quieter, and flinches at loud voices. Her family is shocked by her appearance. Her mother holds her and whispers, 'Patawarin mo kami, anak. Hindi namin alam.' Forgive us, child. We didn't know.\n\nRecovery is slow. OWWA's psychosocial support program connects Maria with a counselor who specializes in OFW trauma. She attends sessions twice a month. She has nightmares about the big house, about the scalding food, about the sound of her employer's voice. But gradually, with the support of her family and the counselor, the nightmares become less frequent.\n\nThe embassy files cases against Maria's employer and recruitment agency. Through the NLRC and the agency's surety bond, Maria eventually recovers some of her unpaid wages — not all, but enough to pay off the family's debts. The recruitment agency is blacklisted by the DMW.\n\nMaria does not go abroad again. Instead, she finds work at a local BPO company in Clark, Pampanga. The salary is modest but she is home, she is safe, and she is healing. She volunteers at the church, quietly sharing her story with women considering going abroad: 'Know your rights. Verify your agency. Never give up your passport. And if something goes wrong — call for help. Don't wait like I did.'\n\nResources: OWWA hotline 1348 | National Center for Mental Health Crisis Hotline: 0917-899-8727 | DMW hotline: (02) 7217-2399 | PAO (free legal assistance): (02) 929-9436 | Migrante International: mifrante.net | Blas F. Ople Policy Center: blaspople.com",
+      "theme": "unsafe_conditions",
+      "choices": [],
+      "isEnding": true
+    }
+  },
+  "startNode": "ofw_start"
+}

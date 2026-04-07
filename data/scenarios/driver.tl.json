@@ -1,0 +1,807 @@
+{
+  "nodes": {
+    "driver_start": {
+      "id": "driver_start",
+      "title": "Walong Taon na Parang Pamilya",
+      "narrative": "Si Mang Ernesto 'Erning' Bautista, 52, nakaupo sa naka-idle na puting Toyota Fortuner na nakaparada sa harap ng bahay ng pamilyang Villanueva sa Ayala Heights, Quezon City. 6:15 AM na at nandito na siya simula alas-sais -- tulad ng araw-araw sa nakaraang walong taon. Tumataktak ang orasan sa dashboard. Yung mga anak ng mga Villanueva, college na ngayon, dati siyang tinatawag na 'Tito Erning.' Ngayon, text na lang sila ng 'G na, kuya' pag kailangan ng ride.\n\nWalong taon. Ganun na katagal si Ernesto na driver ng mga Villanueva. Walang kontratang na-sign kailanman. Walang payslip na na-issue. Nung nagsimula siya noong 2018, kinamayan siya ni Don Victor Villanueva -- isang mid-level executive sa isang korporasyon sa Makati -- at sinabi, 'Kuya Erning, simple lang naman tayo. P8,000 a month, bahala ka sa oras basta available ka lagi.' Tumaas na ang sahod niya sa P12,000 a month, pero dahil lang dalawang beses siyang humingi, parehong may nanginginig na kamay.\n\nP12,000 a month. Halos P400 lang yan isang araw -- para sa 12 hanggang 14 oras na trabaho, anim hanggang pitong araw sa isang linggo. Ang NCR minimum wage ay P610 kada araw para sa walong oras na shift. Hindi alam ni Ernesto ang numerong ito. Hindi niya kailanman ni-look up.\n\nNgayong umaga, habang naghihintay siya sa mga bata, tumingin siya sa phone niya. Nag-message ang asawa niyang si Lorna kaninang 5:47 AM: 'Erning, tinawagan ko yung SSS hotline. Sabi nila wala kang record. Wala tayong SSS, wala tayong PhilHealth, wala tayong Pag-IBIG. Eight years na tayo dito. Paano tayo pag tumanda na tayo?'",
+      "theme": "no_contract",
+      "choices": [
+        {
+          "text": "Kausapin si Lorna nang seryoso mamaya tungkol sa sitwasyon ninyo at kung ano ang susunod na gagawin.",
+          "nextNode": "driver_hire_01",
+          "consequence": "Nagdesisyon si Ernesto na harapin ang realidad ng kanyang employment situation.",
+          "scoreChange": 10,
+          "knowledgeGained": "Sa ilalim ng Labor Code, pwedeng mag-exist ang employer-employee relationship kahit walang written contract. Ang kawalan ng kontrata ay hindi nangangahulugang wala kang karapatan."
+        },
+        {
+          "text": "Balewalain ang message ni Lorna -- mabait naman ang mga Villanueva, huwag nang gumawa ng gulo.",
+          "nextNode": "driver_hire_02",
+          "consequence": "Iniiwasan ni Ernesto ang usapan, pero hindi nawawala ang problema.",
+          "scoreChange": -5,
+          "knowledgeGained": null
+        },
+        {
+          "text": "I-forward ang message sa kumpare mong si Tonyo, isang taxi driver na may alam daw tungkol sa labor rights.",
+          "nextNode": "driver_hire_03",
+          "consequence": "Nag-reach out si Ernesto sa isang taong baka may useful na impormasyon.",
+          "scoreChange": 8,
+          "knowledgeGained": "Pwedeng humingi ng informal na advice ang mga manggagawa mula sa mga kapwa workers, unyon, o labor NGOs bago gumawa ng formal na hakbang."
+        }
+      ],
+      "isEnding": false
+    },
+    "driver_hire_01": {
+      "id": "driver_hire_01",
+      "title": "Ang Usapan sa Mesa ng Kusina",
+      "narrative": "Kinagabihan, sa rented apartment nila sa Fairview, Quezon City -- P6,500 a month, kalahati ng sahod ni Ernesto -- magkaharap sila ni Lorna sa mesa ng kusina. Ang anak nilang si Mae, 22, nagta-trabaho bilang call center agent sa Eastwood at nagbibigay ng P3,000 buwan-buwan. Ang anak nilang si Jun-Jun, 17, Grade 11 sa isang public school sa Novaliches.\n\nBinuklat ni Lorna ang lahat. 'Erning, wala tayong ipon. P12,000 lang sweldo mo, P6,500 upa, P2,000 kuryente at tubig, P3,000 pagkain. Wala nang natitira. Tapos walang SSS -- paano kung magkasakit ka? Paano kung i-tanggal ka nila?' Nilabas niya ang calculator. Walong taon na walang SSS -- ibig sabihin walong taon ng nawalang contributions -- posibleng P150,000 o higit pa sa retirement benefits ang nalugi.\n\nNaramdaman ni Ernesto ang bigat. Naalala niya nung sinabi ni Ma'am Cynthia sa kanya noong unang Pasko niya, 'Kuya Erning, parang pamilya ka na namin.' Binigyan siya ng P5,000 cash gift sa red envelope. Nagpasalamat siya. Hindi niya alam na ang 13th month pay -- na dapat P12,000 -- ay legal niyang karapatan, hindi regalo.\n\n'Dapat mag-usap tayo ni Sir Victor,' mahinang sabi ni Ernesto. 'Hihingi ako ng kontrata.'",
+      "theme": "no_contract",
+      "choices": [
+        {
+          "text": "Lapitan si Sir Victor nang direkta at magalang na humingi ng written employment contract.",
+          "nextNode": "driver_hire_04",
+          "consequence": "Nangahas si Ernesto na hingin ang legally entitled niyang karapatan.",
+          "scoreChange": 12,
+          "knowledgeGained": "Sa ilalim ng Labor Code Art. 295, ang four-fold test ang nagde-determine ng employer-employee relationship: (1) pagpili at pag-hire, (2) pagbabayad ng sahod, (3) kapangyarihang magtanggal, (4) kapangyarihang kontrolin ang paraan at pamamaraan ng trabaho."
+        },
+        {
+          "text": "Si Ma'am Cynthia na lang ang kausapin -- mas approachable at sympathetic siya.",
+          "nextNode": "driver_hire_05",
+          "consequence": "Sinubukan ni Ernesto ang mas malumanay na paraan sa pamamagitan ni Ma'am Cynthia.",
+          "scoreChange": 5,
+          "knowledgeGained": null
+        },
+        {
+          "text": "Mag-research muna ng karapatan bago lumapit kanino man -- pumunta sa barangay o DOLE office.",
+          "nextNode": "driver_hire_06",
+          "consequence": "Nagdesisyon si Ernesto na mag-armas muna ng kaalaman bago kumilos.",
+          "scoreChange": 15,
+          "knowledgeGained": "Ang DOLE ay may libreng hotline (1349) para sa mga katanungan tungkol sa labor. Pwede ring bumisita ang mga manggagawa sa kahit anong DOLE Regional Office para sa libreng legal advice nang hindi nagfa-file ng formal complaint."
+        }
+      ],
+      "isEnding": false
+    },
+    "driver_hire_02": {
+      "id": "driver_hire_02",
+      "title": "May Kapalit ang Katahimikan",
+      "narrative": "Ibinulsa ni Ernesto ang phone at hindi nag-reply kay Lorna. Pagdating niya sa bahay kinagabihang 9 PM -- may dinner meeting si Sir Victor sa BGC -- sinabi niya, 'Huwag mo nang problemahin yan. Mabait naman ang mga Villanueva. Hindi naman nila tayo pababayaan.'\n\nTinitigan siya ni Lorna. 'Erning, hindi tayo pamilya nila. Empleyado ka nila. May kaibahan yun.'\n\nDalawang linggo pa, dumating ang consequences. Si Jun-Jun, anak nila, nagka-dengue. Ang ospital sa East Avenue Medical Center ay humihingi ng P8,000 para sa admission at initial treatment. Walang PhilHealth, kaya galing lahat sa bulsa nila. Humingi si Ernesto ng cash advance kay Ma'am Cynthia. Nagbigay ito ng P5,000 at sinabi, 'Kuya Erning, ito muna, ha. Kaltas na lang namin sa sweldo mo sa susunod na buwan.' Utang na bababawasan sa sahod -- hindi advance mula sa isang caring family.\n\nSa hospital corridor, nakatitig kay Jun-Jun na may IV drip, may naramdaman si Ernesto na nabiyak sa loob niya. Walong taon. Walang safety net. Walang proteksyon. Wala.\n\nNakaupo si Lorna sa tabi niya. 'Erning, hindi pa huli. Pwede pa nating ayusin ito.'",
+      "theme": "no_benefits",
+      "choices": [
+        {
+          "text": "Sumang-ayon kay Lorna -- oras na para maintindihan ang karapatan mo at kumilos.",
+          "nextNode": "driver_hire_06",
+          "consequence": "Naging turning point para kay Ernesto ang hospital scare.",
+          "scoreChange": 10,
+          "knowledgeGained": "Sa ilalim ng PhilHealth Act, obligasyon ng employer na i-register ang kanilang mga empleyado sa PhilHealth. Ang hindi pagsunod dito ay paglabag na may karampatang parusa sa batas."
+        },
+        {
+          "text": "Tanggapin na lang ang sitwasyon at mag-focus muna sa pagbayad ng hospital bill.",
+          "nextNode": "driver_daily_01",
+          "consequence": "Nagtiis si Ernesto pero nananatiling vulnerable.",
+          "scoreChange": -3,
+          "knowledgeGained": null
+        }
+      ],
+      "isEnding": false
+    },
+    "driver_hire_03": {
+      "id": "driver_hire_03",
+      "title": "May Alam si Kumpare Tonyo",
+      "narrative": "Tinawagan pabalik si Ernesto ng kumpare niyang si Tonyo -- isang taxi driver na 15 taon na at ngayon ay driver sa ride-hailing app -- kinagabihan. 'Pre, pareho tayo ng sitwasyon dati,' sabi ni Tonyo. 'Noon, driver din ako ng isang pamilya sa Valle Verde. Sampung taon akong walang kontrata. Tapos biglang tinanggal nila ako kasi bumili sila ng bagong kotse na automatic -- hindi ko raw alam mag-drive ng automatic.'\n\nKinuwento ni Tonyo kay Ernesto ang natutunan niya nang mahirapan: 'Pumunta ako sa DOLE sa QC, sa may Quezon Avenue. Libre ang konsulta, pre. Sabi nila, kahit walang kontrata, empleyado ka pa rin basta pasok sa four-fold test. Yung employer mo ang pumili sa iyo, siya ang nagpapasuweldo, siya ang pwedeng magtanggal sa iyo, at siya ang nag-uutos kung paano mo gagawin ang trabaho. Kung lahat yan oo, empleyado ka.'\n\nTumigil si Tonyo sandali. 'Pre, nag-file ako sa NLRC (National Labor Relations Commission -- dito dinidinig ang mga labor case). Nakuha ko yung separation pay at back wages ko. Hindi madali, pero worth it. Ang advice ko, magsimula kang mag-document ngayon. Itago mo lahat -- text messages, GCash receipts, schedule nila, lahat.'\n\nKonting nanginginig ang kamay ni Ernesto. Documentation. Evidence. Bago ang mga salitang ito sa bokabularyo niya.",
+      "theme": "employer_employee_test",
+      "choices": [
+        {
+          "text": "Simulang i-document lahat -- screenshots ng texts, notes sa daily schedule, mga photos ng tasks.",
+          "nextNode": "driver_hire_06",
+          "consequence": "Nagsimulang gumawa si Ernesto ng paper trail na pwedeng mag-prove ng employment relationship niya.",
+          "scoreChange": 15,
+          "knowledgeGained": "Mga ebidensya ng employer-employee relationship: text messages na nagpapakita ng instructions/control, payment records (GCash, bank transfers), photos ng trabaho, testimony ng ibang household staff, at records ng daily schedules na dinidiktahan ng employer."
+        },
+        {
+          "text": "Pasalamatan si Tonyo pero mag-hesitate -- parang sobra naman ang mag-file ng kaso, baka masira ang relasyon.",
+          "nextNode": "driver_hire_05",
+          "consequence": "Pinasalamatan ni Ernesto ang impormasyon pero natatakot sa confrontation.",
+          "scoreChange": 3,
+          "knowledgeGained": "Madalas nag-aalangan ang mga manggagawa na igiit ang kanilang karapatan dahil sa 'utang na loob' at takot mawalan ng kabuhayan, pero may mga legal protections na sadyang ginawa para sa ganitong power imbalance."
+        }
+      ],
+      "isEnding": false
+    },
+    "driver_hire_04": {
+      "id": "driver_hire_04",
+      "title": "Kinakausap si Sir Victor",
+      "narrative": "Isang gabing Martes, pagkatapos ihatid si Sir Victor mula sa Makati office niya, nag-ipon ng lakas ng loob si Ernesto. Nakaparada sila sa garahe ng mga Villanueva. 'Sir Victor, may gusto po sana akong pag-usapan. Walo pong taon na ako sa inyo. Masaya po ako dito. Pero sabi po ng asawa ko, wala po akong SSS, wala pong PhilHealth. Baka naman po pwede tayong mag-usap tungkol sa kontrata?'\n\nNagbago ang ekspresyon ni Sir Victor. Medyo lumamig ang dating mainit na pakikitungo. 'Kuya Erning, anong kontrata? Hindi ba okay na naman ang arrangement natin? Libre ka sa bahay pag kailangan mo. Binibigyan kita ng bonus sa Pasko. Parang pamilya ka na namin dito, di ba?'\n\nMahinang nagpursige si Ernesto. 'Opo, Sir. Pero yung SSS po, para po sa retirement ko. Wala po akong maihuhulog. Baka naman po--'\n\nPinutol siya ni Sir Victor. 'Sige, pag-iisipan ko. Pero Kuya, huwag mo namang isipin na hindi ka namin pinapahalagahan. Alam mo namang inaalagaan ka namin.' Pumasok siya sa bahay.\n\nNakaupo si Ernesto sa madilim na garahe. Siyamnapung segundo lang ang usapan. Wala siyang sagot, walang commitment, at may buhol sa tiyan niya.",
+      "theme": "no_contract",
+      "choices": [
+        {
+          "text": "I-follow up si Sir Victor sa isang linggo -- huwag hayaang mamatay ang usapan.",
+          "nextNode": "driver_daily_01",
+          "consequence": "Nagplano si Ernesto na magpursige, kahit na-deflect ang unang attempt.",
+          "scoreChange": 8,
+          "knowledgeGained": "Ang 'parang pamilya' rhetoric ay isang karaniwang taktika para pigilan ang mga manggagawa sa pag-assert ng legal rights. Ang emotional framing ay hindi nagbu-bura ng statutory obligations."
+        },
+        {
+          "text": "Tanggapin ang deflection ni Sir Victor bilang rejection at simulang mag-explore ng options sa labas ng household.",
+          "nextNode": "driver_hire_06",
+          "consequence": "Nagdesisyon si Ernesto na humingi ng external guidance kaysa umasa sa goodwill ng employer.",
+          "scoreChange": 12,
+          "knowledgeGained": "Hindi kailangan ng mga manggagawa ang permiso ng employer para mag-inquire tungkol sa kanilang karapatan sa DOLE. Libre at confidential ang consultation."
+        }
+      ],
+      "isEnding": false
+    },
+    "driver_hire_05": {
+      "id": "driver_hire_05",
+      "title": "Ang Malumanay na Pagtanggi ni Ma'am Cynthia",
+      "narrative": "Kinausap ni Ernesto si Ma'am Cynthia isang umaga pagkatapos ihatid ang mga bata sa Ateneo de Manila. 'Ma'am, pasensya na po. May tanong lang po sana ako tungkol sa SSS.' Maingat siyang nagsalita, magalang -- ang paraan ng pag-navigate niya sa household na ito.\n\nNgumiti nang mainit si Ma'am Cynthia. 'Ay, Kuya Erning, huwag kang mag-alala. I-raraos natin yan. Alam mo naman, ikaw pa rin ang pinaka-trusted namin. Sabi ko nga kay Victor, si Kuya Erning, kahit anong oras, reliable.' Tinapik ang braso niya. 'Pag-usapan namin ni Victor, ha? Basta, don't worry.'\n\nMukhang nakakaaliw ang sagot. Pero narinig na ito ni Ernesto noon -- halos salita por salita -- nung humingi siya ng raise dalawang taon na ang nakalipas. Apat na buwan at dalawa pang pagtatangka bago nag-materialize ang raise, at kahit ganun P1,000 lang ang dagdag.\n\nLumipas ang isang linggo. Dalawang linggo. Isang buwan. Walang nag-bring up ng SSS ulit. Malinaw ang mensahe: mas gusto ng mga Villanueva ang status quo. Nakakapag-save sila sa arrangement na 'pamilya' -- walang employer SSS contributions (na magko-cost sa kanila ng mga P1,000-P2,000/buwan), walang overtime calculations, walang legal obligations. Mura, loyal, at tahimik si Ernesto.\n\nPero tanong ni Lorna gabi-gabi. 'May sinabi na ba sila?'",
+      "theme": "no_benefits",
+      "choices": [
+        {
+          "text": "Huwag nang umasa sa mga Villanueva at diretso na sa DOLE para malaman ang karapatan mo.",
+          "nextNode": "driver_hire_06",
+          "consequence": "Hindi na umaasa si Ernesto sa goodwill ng employer at siya na ang kumilos.",
+          "scoreChange": 12,
+          "knowledgeGained": "Hindi dapat umasa lang ang mga manggagawa sa kusang-loob ng employer para sa statutory benefits. Ang pag-register sa SSS, PhilHealth, at Pag-IBIG ay mandatory na obligasyon ng employer, hindi pabor."
+        },
+        {
+          "text": "Subukan pang muli kay Sir Victor, ngayon may dalang printed na listahan ng mga hinihingi mo.",
+          "nextNode": "driver_daily_01",
+          "consequence": "Binigyan ni Ernesto ang mga Villanueva ng isa pang pagkakataon, ngayon may mas malinaw na ask.",
+          "scoreChange": 5,
+          "knowledgeGained": null
+        }
+      ],
+      "isEnding": false
+    },
+    "driver_hire_06": {
+      "id": "driver_hire_06",
+      "title": "Ang Kaalaman ay Kapangyarihan",
+      "narrative": "Nagising nang maaga si Ernesto sa kanyang nag-iisang free morning -- nag-visit si Ma'am Cynthia sa kapatid niya sa Tagaytay at hindi kailangan ng driver hanggang 4 PM. Sumakay siya ng jeepney papuntang DOLE Regional Office sa Quezon Avenue. Busy ang opisina, puno ng mga taong kamukha niya -- mga driver, kasambahay, construction workers, factory hands, lahat may dalang folders ng documents at parehong uncertain na ekspresyon.\n\nIsang DOLE officer, isang batang abogada na si Attorney Reyes, mahinahong nakinig sa kwento niya. Ipinaliwanag niya: 'Mang Ernesto, base sa sinasabi ninyo, employer-employee relationship po ang meron kayo. Kahit walang kontrata. Ang tinitingnan po namin ay yung four-fold test: sino ang pumili sa inyo, sino ang nagpapasuweldo, sino ang may kapangyarihang magtanggal sa inyo, at sino ang nagko-control kung paano ninyo ginagawa ang trabaho. Kung ang mga Villanueva ang sumasagot sa lahat ng yan -- at mukhang ganun nga -- empleyado po kayo.'\n\nBinigyan siya ng printed checklist ng mga karapatan niya: minimum wage (P610/araw para sa NCR), overtime pay (25% premium sa trabahong lampas sa 8 oras), 13th month pay (1/12 ng taunang sahod sa ilalim ng PD 851), SSS, PhilHealth, Pag-IBIG, service incentive leave (5 araw/taon pagkatapos ng isang taon ng serbisyo), holiday pay, at night shift differential kung applicable.\n\nNanginginig ang kamay ni Ernesto habang binabasa ang listahan. Sa walong taon, wala siyang natanggap kahit isa sa mga ito. Mahinang sinabi ni Attorney Reyes, 'Hindi po huli. Pwede pa ninyong i-recover ang ilan sa mga yan. Pero kailangan po natin ng ebidensya.'",
+      "theme": "employer_employee_test",
+      "choices": [
+        {
+          "text": "Tanungin si Attorney Reyes kung ano exactly ang kailangan mong ebidensya at paano simulang mangolekta.",
+          "nextNode": "driver_daily_01",
+          "consequence": "Nakakuha si Ernesto ng malinaw na action plan para sa pag-document ng employment relationship niya.",
+          "scoreChange": 15,
+          "knowledgeGained": "Mga pangunahing ebidensya para sa pagpapatunay ng employer-employee relationship: (1) text/chat messages na nagpapakita ng instructions ng employer, (2) payment records tulad ng GCash o bank transfers, (3) photos ng sasakyan, bahay, at trabaho, (4) mga pangalan ng ibang household staff bilang witnesses, (5) daily logs ng tasks at oras."
+        },
+        {
+          "text": "Pasalamatan si Attorney Reyes at umalis -- kailangan mong i-process lahat ng ito bago magdesisyon.",
+          "nextNode": "driver_daily_01",
+          "consequence": "Informed na si Ernesto pero overwhelmed. Kailangan niyang balikan ang plano niya.",
+          "scoreChange": 5,
+          "knowledgeGained": "Libre ang DOLE consultation at hindi automatic na may case na ifi-file. Pwedeng bumalik ang mga manggagawa anumang oras."
+        }
+      ],
+      "isEnding": false
+    },
+    "driver_daily_01": {
+      "id": "driver_daily_01",
+      "title": "Isang Karaniwang Araw sa Buhay",
+      "narrative": "Lunes. Nag-alarm si Ernesto ng 5:15 AM sa Fairview. Sumakay siya ng tricycle papuntang bahay ng mga Villanueva sa Ayala Heights -- 40-minutong biyahe na P35 galing sa sarili niyang bulsa. Bago mag-6:00 AM, nag-warm up na siya ng Fortuner.\n\n6:30 AM: Ihatid ang mga Villanueva kids sa Ateneo de Manila, Katipunan. 7:15 AM: Ihatid si Ma'am Cynthia sa office niya sa Ortigas. 8:00 AM: Balik sa bahay. 8:30 AM: Nag-text si Ma'am -- 'Kuya, pabili ng groceries sa Rustan's Katipunan. Dito yung list.' 10:00 AM: Ihatid ang dry cleaning sa Ayala Heights commercial center. 10:30 AM: Nag-text ulit si Ma'am -- 'Kuya, pakipunta sa Mercury Drug, yung reseta ni Victor.' 11:30 AM: Hintay sa bahay. Walang break -- kumain siya ng baon sa kotse. 12:30 PM: Nag-text si Ma'am -- 'Pick up kids at 3:30 ha. Tapos si Victor, 6:30 sa Makati office niya.'\n\n3:30 PM: Sunduin ang mga bata. 4:30 PM: Balik sa bahay. 5:00 PM: Nag-text si Sir Victor -- 'Erning, 7 PM na lang pala. May meeting pa.' Naghintay si Ernesto. 7:00 PM: Drive papuntang Makati. 7:45 PM: Sumakay si Sir Victor. 'Erning, saglit lang, may dinner pa kami sa Greenbelt. I-text kita pag tapos na.' Naghintay si Ernesto sa kotse, naka-off ang engine, nanonood ng YouTube sa phone para maka-save ng gas. 10:30 PM: 'Tara na, Erning.'\n\nDumating siya sa bahay ng 11:15 PM. Labing-pitong oras siyang nag-trabaho -- o naka-on call. Sahod niya sa araw na iyon: P400.",
+      "theme": "overtime",
+      "choices": [
+        {
+          "text": "Magsimula ng maliit na notebook para i-track ang daily hours, tasks, at actual na oras ng trabaho.",
+          "nextNode": "driver_daily_02",
+          "consequence": "Nagsimulang i-document ni Ernesto ang nakakapagod niyang schedule bilang potential evidence.",
+          "scoreChange": 15,
+          "knowledgeGained": "Sa ilalim ng Labor Code Art. 83, ang normal working hours ay hindi dapat lumagpas sa 8 oras sa isang araw. Inaatas ng Art. 87 ang overtime pay na dagdag na 25% ng hourly rate para sa trabahong lampas sa 8 oras sa ordinary days, at 30% sa rest days o holidays."
+        },
+        {
+          "text": "I-text si Sir Victor na kailangan mong mag-set ng fixed end time -- hindi pwedeng hanggang hatinggabi ang trabaho.",
+          "nextNode": "driver_daily_03",
+          "consequence": "Sinubukan ni Ernesto na mag-set ng boundary direkta sa employer niya.",
+          "scoreChange": 8,
+          "knowledgeGained": null
+        },
+        {
+          "text": "Tanggapin na lang -- ganito talaga ang buhay ng private driver.",
+          "nextNode": "driver_daily_04",
+          "consequence": "Na-normalize ni Ernesto ang exploitation, lalo siyang nawalan ng laban.",
+          "scoreChange": -5,
+          "knowledgeGained": null
+        }
+      ],
+      "isEnding": false
+    },
+    "driver_daily_02": {
+      "id": "driver_daily_02",
+      "title": "Ang Notebook",
+      "narrative": "Bumili si Ernesto ng maliit na asul na notebook sa National Bookstore sa halagang P25. Sa unang pahina, sinulat niya: 'DAILY LOG -- Mang Erning.' Tuwing gabi bago matulog, ire-record niya: petsa, time in, time out, mga ginawang trabaho, at sino ang nag-utos. Tinutulungan siya ni Lorna na ayusin.\n\nPagkalipas ng dalawang linggo, hindi na mapag-aalinlanganan ang mga patterns. Average daily hours: 14.3. Araw na walang pasok sa dalawang linggo: zero. Mga task na hindi driving: pamimili ng groceries (8 beses), Mercury Drug runs (3 beses), pagkuha ng dry cleaning (4 na beses), pagdadala ng documents sa office ni Sir Victor (2 beses), paghuhugas ng kotse (tuwing Sabado), pagbubuhat ng furniture nung nag-rearrange si Ma'am ng sala (isang beses, masakit pa rin ang likod niya).\n\nKinuwenta ni Lorna: kung 8-hour days ang trabaho ni Ernesto sa NCR minimum wage (P610/araw), ang monthly salary niya ay dapat P15,860 at least. Kasama ang overtime na 25% premium para sa dagdag na 6+ oras araw-araw, mas malaki pa sana ang kita niya. Sa halip, P12,000 lang flat ang sahod.\n\nTiningnan ni Mae, ang anak nilang babae, ang notebook. Nagta-trabaho siya sa BPO at naiintindihan ang payslips. 'Pa, underpaid ka. At saka yung mga pinapagawa sa iyo na hindi driving -- yan, hindi dapat kasama sa trabaho mo unless nasa contract. Oh wait, wala nga palang contract.'",
+      "theme": "wage_theft",
+      "choices": [
+        {
+          "text": "Ituloy ang pag-document ng isa pang buwan para magkaroon ng matibay na kaso bago kumilos.",
+          "nextNode": "driver_daily_05",
+          "consequence": "Gumagawa si Ernesto ng comprehensive na record ng wage theft at sobrang oras ng trabaho.",
+          "scoreChange": 12,
+          "knowledgeGained": "Ang mga claims sa wage theft ay napapatibay ng consistent at detalyadong records na ginawa ng manggagawa mismo. Kahit handwritten notebook ay admissible bilang ebidensya sa NLRC proceedings."
+        },
+        {
+          "text": "Ipakita ang notebook kay Sir Victor at humingi ng overtime pay at revised na arrangement.",
+          "nextNode": "driver_daily_03",
+          "consequence": "Hinarap ni Ernesto ang employer gamit ang ebidensya ng actual working hours niya.",
+          "scoreChange": 8,
+          "knowledgeGained": null
+        }
+      ],
+      "isEnding": false
+    },
+    "driver_daily_03": {
+      "id": "driver_daily_03",
+      "title": "Ang Usapan Tungkol sa Boundary",
+      "narrative": "Binuksan ni Ernesto ang topic isang Sabado ng umaga habang naghuhugas ng kotse -- isa na namang non-driving task na ginagawa niya nang walang reklamo, hanggang ngayon. 'Sir Victor, pasensya na po. Gusto ko lang po sana mag-request. Yung oras ko po, pwede po ba tayong mag-set ng fixed schedule? Halimbawa, 6 AM hanggang 6 PM? Kasi po minsan umuuwi po ako ng 11 PM.'\n\nSi Sir Victor, nagbabasa ng Philippine Star sa veranda, ibinaba ang diyaryo. 'Erning, driver ka. Hindi naman laging ganun. Paminsan-minsan lang naman yung gabi, di ba? At saka, hindi mo naman ginagawa yung mga oras na yun -- naghihintay ka lang sa kotse. Ibang-iba yun sa actual na trabaho.'\n\nGusto sanang sabihin ni Ernesto: ang paghihintay sa kotse ng tatlong oras sa Greenbelt parking lot AY trabaho. Naka-on call siya. Hindi siya pwedeng umuwi. Wala siyang ibang magagawa. Sa ilalim ng Labor Code, ang 'hours worked' ay kasama ang lahat ng oras kung saan required ang empleyado na nasa employer's premises o on duty.\n\nPero hindi niya ito sinabi. Sa halip, tumango siya. 'Opo, Sir. Pero baka naman po, pag weekend, pwede po akong mag-off?'\n\nBumuntong-hininga si Sir Victor. 'Kuya, tingnan natin. Minsan kasi kailangan ka ni Cynthia pag Sunday. Bahala na, pag-uusapan natin.' Ang parehong deflection. Ang parehong walang sagot.",
+      "theme": "overtime",
+      "choices": [
+        {
+          "text": "Tanggapin muna ang walang sagot pero patuloy na i-build ang documentation nang tahimik.",
+          "nextNode": "driver_daily_05",
+          "consequence": "Naglalaro si Ernesto ng mahabang laro, nangongolekta ng ebidensya habang pinapanatili ang relasyon.",
+          "scoreChange": 7,
+          "knowledgeGained": "Sa ilalim ng Labor Code Art. 84, kasama sa hours worked ang lahat ng oras na required ang empleyado na on duty o nasa premises ng employer. Ang waiting time na nasa kontrol ng employer ay compensable work time."
+        },
+        {
+          "text": "Matatag pero magalang na igiit na kahit isang guaranteed rest day sa isang linggo.",
+          "nextNode": "driver_daily_06",
+          "consequence": "Mas pinagtibay ni Ernesto ang push sa rest day issue.",
+          "scoreChange": 10,
+          "knowledgeGained": "Inaatas ng Labor Code Art. 91 ang hindi bababa sa isang rest day kada linggo (24 consecutive hours). Kung pinatrabaho ang empleyado sa rest day, may premium pay na 30%."
+        }
+      ],
+      "isEnding": false
+    },
+    "driver_daily_04": {
+      "id": "driver_daily_04",
+      "title": "Ang Bigat ng Pagtanggap",
+      "narrative": "Sinabi ni Ernesto sa sarili na ganito talaga ang trabaho ng private driving. Ang mga kababayan niya sa probinsya, mga pinsan niyang magsasaka ng bigas sa Nueva Ecija, mas mababa pa ang kita. At least nasa Manila siya. At least hindi malupit ang mga Villanueva. Hindi sumisigaw si Sir Victor. Nagbibigay si Ma'am Cynthia ng tira-tirang pagkain mula sa parties nila -- minsan isang buong tray ng pansit palabok mula sa Via Mare.\n\nPero may kapalit ang pagtanggap. Masakit ang likod niya mula sa furniture na binuhat niya noong nakaraang linggo. Mataas ang blood pressure -- 140/90 nung huling check sa free screening sa SM Fairview. Walang health coverage para mag-follow up. Kumakaluskos ang mga tuhod niya sa pagsakay-baba sa Fortuner ilang dosenang beses bawat araw.\n\nIsang umaga, habang naghihintay sa Ateneo parking lot, narinig niya ang dalawang family driver na nag-uusap. 'Pare, yung boss ko, naka-register ako sa SSS. May PhilHealth pa. Tapos 13th month, tama yung computation -- isang buwan na sweldo, hindi yung bonus-bonus na P3,000 lang.' Tumango ang isa. 'Oo, ganun dapat. Kami rin. May rest day pa ako every Sunday.'\n\nNakinig si Ernesto, at sa unang pagkakataon naramdaman niya hindi pasasalamat kundi isang mas matinding emosyon. Baka galit.",
+      "theme": "no_benefits",
+      "choices": [
+        {
+          "text": "Lapitan ang ibang drivers at tanungin kung paano nag-set up ng benefits ang mga employer nila.",
+          "nextNode": "driver_daily_05",
+          "consequence": "Natuto si Ernesto mula sa mga kapwa na may maayos na employment arrangement.",
+          "scoreChange": 10,
+          "knowledgeGained": "Maraming household employers ang sumusunod sa labor laws. Ang tamang registration sa SSS, PhilHealth, at Pag-IBIG ay legal standard, hindi special na pabor."
+        },
+        {
+          "text": "Maramdaman ang galit pero itulak pababa -- hindi mo kayang mawalan ng trabahong ito.",
+          "nextNode": "driver_benefits_01",
+          "consequence": "Sinupil ni Ernesto ang lumalaking kamalayan niya, pero pipilitin siya ng sitwasyon na kumilos.",
+          "scoreChange": -3,
+          "knowledgeGained": null
+        }
+      ],
+      "isEnding": false
+    },
+    "driver_daily_05": {
+      "id": "driver_daily_05",
+      "title": "Dumadami ang Ebidensya",
+      "narrative": "Pagkatapos ng isang buwang masinsinang pag-record, 30 araw na ng entries ang asul na notebook ni Ernesto. Ang mga numero ay nagsasabi ng nakakatakot na kwento:\n\nKabuuang oras na nagtrabaho sa 30 araw: 429 oras. Average na 14.3 oras bawat araw. Sa legal standard na 8 oras bawat araw, 189 oras ang overtime niya -- walang bayad. Sa daily rate niyang P400 (na mas mababa pa sa P610 minimum wage), ang overtime premium lang ay daan-daang libong piso na ang halaga.\n\nMay 47 din siyang screenshots ng text messages mula kina Ma'am Cynthia at Sir Victor na nagbibigay ng instructions: saan pupunta, anong bibilhin, anong oras darating. Bawat text ay ebidensya ng control -- ang pinaka-kritikal na elemento ng four-fold test.\n\nTinulungan siya ni Mae na ayusin lahat sa isang folder. Gumawa pa siya ng simpleng spreadsheet sa laptop niya. 'Pa, malaking kaso ito,' mahinang sabi niya. 'Hindi lang ikaw ang affected. Pati yung mga naunang driver nila, baka ganun din ang nangyari.'\n\nDagdag ni Lorna, 'At kung mag-retire ka nang walang SSS, walang pension, paano tayo? Ang tanong, Erning, handa ka na bang lumaban?'",
+      "theme": "wage_theft",
+      "choices": [
+        {
+          "text": "Oo -- dalhin ang ebidensya sa DOLE at magtanong tungkol sa pag-file ng formal complaint.",
+          "nextNode": "driver_benefits_01",
+          "consequence": "Handa na si Ernesto na gumawa ng formal na hakbang na may matibay na ebidensya.",
+          "scoreChange": 15,
+          "knowledgeGained": "Ang isang well-documented na kaso ay lubos na nagpapataas ng chances ng paborableng resulta sa DOLE mediation o NLRC proceedings. Ang ebidensya ng control (text messages na may instructions) ang pinakamalakas na patunay ng employer-employee relationship."
+        },
+        {
+          "text": "Subukan pang muli na makipag-negotiate sa mga Villanueva gamit ang ebidensya bilang leverage.",
+          "nextNode": "driver_benefits_01",
+          "consequence": "Sinubukan muna ni Ernesto ang negotiated solution bago mag-escalate.",
+          "scoreChange": 7,
+          "knowledgeGained": "Pwedeng tangkaing ayusin ng mga manggagawa ang disputes nang informal bago mag-file sa DOLE, pero dapat handang mag-escalate kung tumanggi ang employer."
+        }
+      ],
+      "isEnding": false
+    },
+    "driver_daily_06": {
+      "id": "driver_daily_06",
+      "title": "Matatag na Paggigiit sa Rest Day",
+      "narrative": "Huminga nang malalim si Ernesto at nagsalita nang may hindi pangkaraniwang katatagan. 'Sir Victor, sa totoo lang po, walo na pong taon akong walang fixed na day-off. Hindi po ako nagrereklamo sa dami ng trabaho. Pero kahit po isang araw sa isang linggo -- Sunday po sana -- para makasama ko ang pamilya ko.'\n\nMay kung ano sa tono ni Ernesto na nakapagpa-tingin kay Sir Victor. Siguro ito ang unang pagkakataon na nag-insist ang driver niya sa kahit ano. 'Sige, Erning. Sunday off ka. Pero pag may emergency, tawagan kita ha?'\n\nPumayag si Ernesto. Kakaiba ang pakiramdam ng unang Sunday off. Pumunta sila sa morning mass sa Sto. Nino de Novaliches parish kasama si Lorna. Kumain sila ng lugaw sa carinderia malapit sa apartment nila. Pinapanood ni Jun-Jun sa kanya ang mga TikTok videos. Bumisita si Mae sa hapon. Ito ang unang buong araw na kasama niya ang pamilya sa loob ng ilang buwan.\n\nPero noong sumunod na Sunday, nang 9 AM, tumunog ang phone niya. 'Kuya Erning, si Victor. Sorry ha, kailangan ko ng sasakyan. May lakad kami ni Cynthia sa Tagaytay, balik din agad.' Naglaho ang rest day. Nag-drive si Ernesto papuntang Tagaytay, naghintay ng apat na oras sa Starbucks na naka-harap sa Taal, at nag-drive pabalik. Dumating siya sa bahay ng 8 PM. Walang extra pay.",
+      "theme": "overtime",
+      "choices": [
+        {
+          "text": "Magalang na paalalahanan si Sir Victor na dapat kang tumanggap ng rest day premium pay para sa pagta-trabaho sa day off mo.",
+          "nextNode": "driver_benefits_01",
+          "consequence": "Inassert ni Ernesto ang karapatan niya sa premium pay para sa rest day work.",
+          "scoreChange": 12,
+          "knowledgeGained": "Sa ilalim ng Labor Code Art. 93, ang trabaho sa scheduled rest day ng empleyado ay may premium na 30% ng daily rate. Kung ang rest day ay holiday, mas mataas pa ang premium."
+        },
+        {
+          "text": "Hayaan na lang ngayon pero i-mark sa notebook bilang isa pang documented violation.",
+          "nextNode": "driver_benefits_01",
+          "consequence": "Ni-note ni Ernesto ang rest day violation pero hindi pa hinarap.",
+          "scoreChange": 6,
+          "knowledgeGained": null
+        }
+      ],
+      "isEnding": false
+    },
+    "driver_benefits_01": {
+      "id": "driver_benefits_01",
+      "title": "Ang Hospital Bill",
+      "narrative": "Isang Huwebes ng Setyembre, nagising si Ernesto na may paninikip ng dibdib. Hindi niya pinansin -- matagal na niyang binabalewala ang maliliit na health problems. Bago mag-tanghali, matalim na ang sakit. Habang nakaparada sa bahay ng mga Villanueva, naghihintay kay Ma'am Cynthia, nahilo siya. Pumaliit ang paningin niya. Na-manage niyang i-text si Lorna: 'Masakit dibdib ko.'\n\nNatagpuan siya ni Ma'am Cynthia na nakasandal sa driver's seat. Sa kapurihan niya, nagpanic siya at tumawag ng ambulansya. Dinala si Ernesto sa Quezon City General Hospital. Diagnosis: hypertensive crisis. Kailangan niya ng observation, gamot, at mga test kasama ang ECG at blood work. Ang bill: P15,000.\n\nWala si Ernesto sa PhilHealth. Walang HMO. Walang emergency fund. P15,000 ay higit pa sa isang buwang sahod.\n\nBinisita siya ni Ma'am Cynthia sa ospital. 'Kuya Erning, huwag kang mag-alala. Sasagutin namin yung bill.' Naramdaman ni Ernesto ang pasasalamat -- hanggang narinig niya ang kasunod: 'Kaltas na lang namin sa sweldo mo, konti-konti, para hindi masakit.' Kaya ang P15,000 ay bababawasan sa P12,000 niyang buwanang sahod. Sa susunod na dalawang buwan, mas maliit pa ang uuwing pera.\n\nNakahiga sa hospital bed na may IV sa braso, na-realize ni Ernesto: kung may PhilHealth siya -- na legally required na ibigay ng employer niya -- substantially covered sana ang bill na ito.",
+      "theme": "no_benefits",
+      "choices": [
+        {
+          "text": "Sabihin kay Ma'am Cynthia na hindi tama ang pag-deduct ng buong bill sa sahod -- dapat may PhilHealth ka.",
+          "nextNode": "driver_benefits_02",
+          "consequence": "Binanggit ni Ernesto ang PhilHealth issue sa isang vulnerable na sandali.",
+          "scoreChange": 12,
+          "knowledgeGained": "Sa ilalim ng Universal Health Care Act (RA 11223) at ng PhilHealth Act, obligasyon ng employer na i-register ang kanilang mga empleyado. Ang hindi pag-remit ng PhilHealth contributions ay criminal offense na may kaparusahang multa at pagkakulong."
+        },
+        {
+          "text": "Tanggapin ang deduction nang may pasasalamat -- at least babayaran nila ang bill.",
+          "nextNode": "driver_benefits_03",
+          "consequence": "Tinanggap ni Ernesto ang deduction, binabalangkas ang paglabag ng employer bilang kabutihang-loob.",
+          "scoreChange": -5,
+          "knowledgeGained": null
+        },
+        {
+          "text": "Ipag-research kay Mae kung anong benefits ang legally dapat mong natatanggap.",
+          "nextNode": "driver_benefits_04",
+          "consequence": "Hiningi ni Ernesto ang tulong ng mas informed niyang anak para mag-imbestiga.",
+          "scoreChange": 10,
+          "knowledgeGained": null
+        }
+      ],
+      "isEnding": false
+    },
+    "driver_benefits_02": {
+      "id": "driver_benefits_02",
+      "title": "Ang PhilHealth Confrontation",
+      "narrative": "Mula sa hospital bed, naka-IV pa rin, nagsalita si Ernesto. Ito ang pinaka-matapang na ginawa niya sa walong taon. 'Ma'am Cynthia, maraming salamat po sa tulong. Pero po, naisip ko -- kung naka-PhilHealth po ako, hindi po ganito kalaki ang babayaran. Walo pong taon, wala po akong PhilHealth. Dapat po ba hindi na-register?'\n\nKumitid ang ngiti ni Ma'am Cynthia. 'Kuya Erning, parang hindi mo naman kami sinisingil. May sakit ka, tinutulungan ka namin, tapos ganito pa--'\n\n'Hindi po ako nagrereklamo, Ma'am. Nagtatanong lang po.' Matatag ang boses ni Ernesto kahit may heart monitor na nagbi-beep sa tabi niya. 'Nag-inquire po ako sa DOLE. Sabi po nila, mandatory po ang PhilHealth pag may employer-employee relationship. Kasama rin po ang SSS at Pag-IBIG.'\n\nTumahimik ang kwarto. Tumigas ang ekspresyon ni Ma'am Cynthia. 'DOLE? Nagpunta ka sa DOLE?' Tumayo siya. 'Kuya Erning, magpahinga ka muna. Pag-uusapan namin ito ni Victor.' Umalis siya.\n\nNakatitig si Ernesto sa kisame. Nag-cross na siya ng linya. Wala nang babalikan sa 'parang pamilya.'",
+      "theme": "no_benefits",
+      "choices": [
+        {
+          "text": "Mag-prepare sa worst -- i-text si Mae at Lorna na i-secure ang lahat ng copies ng ebidensya sa bahay.",
+          "nextNode": "driver_benefits_05",
+          "consequence": "Prinotektahan ni Ernesto ang ebidensya niya kung sakaling gumanti ang employer.",
+          "scoreChange": 15,
+          "knowledgeGained": "Ang mga manggagawang nag-assert ng karapatan nila ay dapat laging may copies ng ebidensya sa hiwalay at secure na lugar. Kung ma-terminate dahil sa pag-file ng complaint, ito ay illegal dismissal (retaliatory dismissal) sa ilalim ng Labor Code Art. 294."
+        },
+        {
+          "text": "Pagsisihan ang pagbanggit ng DOLE at subukang mag-smooth things over pag bumalik si Ma'am Cynthia.",
+          "nextNode": "driver_benefits_03",
+          "consequence": "Umatras si Ernesto, humina ang posisyon niya.",
+          "scoreChange": -3,
+          "knowledgeGained": null
+        }
+      ],
+      "isEnding": false
+    },
+    "driver_benefits_03": {
+      "id": "driver_benefits_03",
+      "title": "Ang Christmas 'Bonus'",
+      "narrative": "Dumating ang Disyembre. Bumalik na sa trabaho si Ernesto pagkatapos ng ospital, mas mahina at may P15,000 na salary deductions. Noong Disyembre 22, iniabot ni Ma'am Cynthia ang isang pulang sobre sa annual Villanueva family Christmas party. 'Kuya Erning, Merry Christmas! Ito, regalo namin sa iyo. Para sa pamilya mo.'\n\nSa loob: P5,000.\n\nSinabi ni Ernesto ang 'Maraming salamat po, Ma'am' at ibinulsa ito. Sinabi niya ang eksaktong linyang ito tuwing Disyembre sa loob ng walong taon. Pero ngayong taon, may alam na siyang hindi niya alam dati: sa ilalim ng PD 851 (Presidential Decree No. 851), bawat employer ay required na magbayad ng 13th month pay na katumbas ng isa sa labindalawang bahagi ng kabuuang basic salary na kinita sa buong taon. Para kay Ernesto, dapat P12,000 iyon -- hindi P5,000 na nakabalot sa Christmas envelope at tinawag na 'bonus.'\n\nSa walong taon, kulang ang binayad ng mga Villanueva sa 13th month niya ng approximately P56,000 total (ang pagkakaiba ng P12,000 na dapat ibigay taun-taon at ng P5,000 na ibinigay). 13th month lang iyon. Ang overtime, ang wage differential, ang hindi na-remit na SSS -- ang kabuuang utang ay aabot sa daan-daang libo.\n\nTinanong ni Lorna, 'Magkano ngayon?' Sumagot si Ernesto, 'Limang libo.' Walang sinabi si Lorna. Hindi na niya kailangang magsabi.",
+      "theme": "wage_theft",
+      "choices": [
+        {
+          "text": "I-compute nang eksakto kung magkano ang utang ng mga Villanueva sa lahat ng violations at mag-prepare ng formal demand.",
+          "nextNode": "driver_benefits_05",
+          "consequence": "In-quantify ni Ernesto ang walong taon ng underpayment at naghandang kumilos.",
+          "scoreChange": 13,
+          "knowledgeGained": "Sa ilalim ng PD 851, ang 13th month pay ay mandatory para sa lahat ng rank-and-file employees, anuman ang posisyon, designation, o employment status. Dapat itong bayaran on or before December 24 ng bawat taon. Ang 'Christmas bonus' framing ay hindi tumutupad sa legal obligation na ito."
+        },
+        {
+          "text": "Magpasalamat na lang sa P5,000 at mag-move on -- at least nagbigay sila.",
+          "nextNode": "driver_accident_01",
+          "consequence": "Tinanggap na naman ni Ernesto ang underpayment.",
+          "scoreChange": -5,
+          "knowledgeGained": null
+        }
+      ],
+      "isEnding": false
+    },
+    "driver_benefits_04": {
+      "id": "driver_benefits_04",
+      "title": "Si Mae ang Nag-research",
+      "narrative": "Si Mae Bautista, 22, sanay sa pag-navigate ng systems. Night shift siya sa isang BPO sa Taguig at may maayos na benefits -- SSS, PhilHealth, Pag-IBIG, 13th month, overtime rates na malinaw na nakaprint sa payslip niya. Alam niya kung ano ang legal na employment arrangement dahil iyon ang pinagdadaanan niya.\n\nIsang Sabado ng umaga habang nag-almusal ng tapsilog sa Fairview apartment nila, ibinuklat ni Mae ang mga findings niya sa laptop. 'Pa, ito yung mga dapat mong natatanggap base sa Labor Code:'\n\nMinimum wage (NCR): P610/araw. Ang nakukuha mo: P400. Underpayment kada araw: P210.\nOvertime (25% premium sa oras na lampas sa 8): Sa average mong 14 oras/araw, 6 oras OT yan kada araw sa halos P19.06/oras premium. Unpaid OT kada araw: ~P114.\n13th month pay: Dapat P12,000/taon. Ang natatanggap mo: P5,000. Kakulangan taun-taon: P7,000.\nSSS: Ang employer ay dapat mag-contribute ng ~P1,000-2,000/buwan. Walong taon na zero contributions.\nPhilHealth: Ang buwanang premium ay dapat hati-hati. Zero contributions sa 8 taon.\nPag-IBIG: Pareho. Zero.\nService Incentive Leave: 5 paid leave days kada taon pagkatapos ng 1 taon na serbisyo. Zero ang natatanggap mo.\n\n'Pa,' sabi ni Mae, konting nababali ang boses, 'hindi ka lang underpaid. Ninanakawan ka. At nangyayari ito sa harap ng mukha natin, at tinatawag pa nilang pamilya.'",
+      "theme": "wage_theft",
+      "choices": [
+        {
+          "text": "Hingin ang tulong ni Mae na i-compute ang kabuuang halaga at mag-draft ng formal letter sa mga Villanueva.",
+          "nextNode": "driver_benefits_05",
+          "consequence": "Nagtulungan sina Ernesto at Mae para i-quantify ang walong taon ng wage theft.",
+          "scoreChange": 13,
+          "knowledgeGained": "Ang mga money claims na nagmumula sa employer-employee relations ay pwedeng i-file sa NLRC kung ang halaga ay lumampas sa P5,000. Para sa halagang P5,000 at pababa, ang DOLE Regional Director ang may jurisdiction. Dahil sa 8 taon ng violations, ang claim ni Ernesto ay sobrang lampas sa P5,000."
+        },
+        {
+          "text": "Ma-overwhelm sa mga numero at magdesisyong mag-focus na lang sa pagkuha ng SSS at PhilHealth mula ngayon.",
+          "nextNode": "driver_benefits_06",
+          "consequence": "Inuna ni Ernesto ang proteksyon sa hinaharap kaysa i-recover ang nakaraang pagkalugi.",
+          "scoreChange": 5,
+          "knowledgeGained": "Kahit importante ang pag-recover ng mga nakaraang violations, pwede ring mag-focus ang mga manggagawa sa pag-secure ng current at future compliance bilang immediate step."
+        }
+      ],
+      "isEnding": false
+    },
+    "driver_benefits_05": {
+      "id": "driver_benefits_05",
+      "title": "Hindi Nagsisinungaling ang Mga Numero",
+      "narrative": "Nakaupo sina Ernesto, Lorna, at Mae sa mesa ng kusina kasama ang asul na notebook, calculator, at laptop ni Mae. Kinuwenta nila ang walong taon ng violations:\n\nWage underpayment (P210/araw x ~313 working days/taon x 8 taon): approximately P525,840.\nUnpaid overtime (estimated 6 OT hours/araw x P19.06 premium x 313 araw x 8 taon): approximately P285,990.\nUnpaid 13th month pay differential (P7,000/taon x 8 taon): P56,000.\nService incentive leave (5 araw x P610 x 8 taon): P24,400.\nUnremitted SSS employer share (estimated P1,500/buwan x 96 buwan): P144,000.\nUnremitted PhilHealth at Pag-IBIG shares: dagdag na halaga.\n\nAng rough total ay lumampas sa P1,000,000.\n\nIsang milyong piso. Nakatitig si Ernesto sa numero. Walong taon ng 'parang pamilya,' at may utang sa kanya ang mga Villanueva ng mahigit isang milyong piso sa unpaid wages at benefits. Umiiyak si Lorna. Galit si Mae. Si Jun-Jun, nakarinig mula sa kabilang kwarto, pumasok. 'Pa, totoo ba yan?'\n\nDahan-dahang tumango si Ernesto. 'Totoo.' Isinara niya ang notebook. 'Bukas, pupunta ako sa DOLE.'",
+      "theme": "wage_theft",
+      "choices": [
+        {
+          "text": "Pumunta sa DOLE at mag-file ng SENA (Single Entry Approach -- mandatory na mediation process) bilang unang hakbang.",
+          "nextNode": "driver_accident_01",
+          "consequence": "Ginawa ni Ernesto ang unang formal na legal step.",
+          "scoreChange": 15,
+          "knowledgeGained": "Sa ilalim ng RA 10396, ang SENA (Single Entry Approach) ay mandatory na 30-araw na conciliation-mediation process bago mag-file ng kahit anong labor case. Libre ito at naglalayong magkaroon ng amicable settlement."
+        },
+        {
+          "text": "Bigyan ng huling pagkakataon ang mga Villanueva -- magpadala ng formal letter na naka-lista lahat ng utang bago pumunta sa DOLE.",
+          "nextNode": "driver_accident_01",
+          "consequence": "Sinubukan ni Ernesto ang demand letter bago ang formal proceedings.",
+          "scoreChange": 8,
+          "knowledgeGained": "Hindi legally required ang formal demand letter bago mag-file sa DOLE, pero pwede itong magsilbing dagdag na ebidensya ng good faith attempt ng empleyado na ayusin ang problema."
+        }
+      ],
+      "isEnding": false
+    },
+    "driver_benefits_06": {
+      "id": "driver_benefits_06",
+      "title": "Isang Bahagyang Hakbang Pasulong",
+      "narrative": "Nagdesisyon si Ernesto na mag-focus sa pag-secure kahit man lang ng SSS at PhilHealth mula ngayon. Nilapitan niya si Sir Victor muli, ngayon may dalang printed SSS employer registration form na kinuha niya sa SSS Fairview branch.\n\n'Sir Victor, ito po yung form para sa SSS. Kung pwede po sana, para makapag-start na po ng contribution. Hati-hati naman po tayo sa bayad -- may share po ang employer at may share po ang employee.'\n\nKinuha ni Sir Victor ang form, tiningnan, at inilapag sa counter. 'Kuya, bakit naman may pa-form form pa? Komplikado naman nito. Sige, pag-aralan ko.'\n\nDalawang linggo pa, nasa counter pa rin ang form, nakabaon na sa ilalim ng grocery flyers at bills. Hindi na nagtanong ulit si Ernesto. Na-realize niyang hindi darating ang voluntary compliance.\n\nSa halip, pumunta siya sa SSS Fairview nang mag-isa at nag-register bilang voluntary member, nagbabayad ng minimum contribution na P480/buwan mula sa sarili niyang bulsa. Masakit -- dahil dapat hati-hati sana ito sa employer niya. Pero naisip ni Ernesto na mas mabuting may coverage kaysa wala. Ganun din ang ginawa niya sa PhilHealth, nagbabayad ng P450/buwan bilang voluntary member.",
+      "theme": "no_benefits",
+      "choices": [
+        {
+          "text": "Magpatuloy na mag-bayad voluntarily pero i-document na tumanggi ang employer na i-register ka -- ebidensya ito para sa hinaharap.",
+          "nextNode": "driver_accident_01",
+          "consequence": "Ginagawa ni Ernesto ang safety net niya habang pinapreserve ang ebidensya ng employer non-compliance.",
+          "scoreChange": 8,
+          "knowledgeGained": "Ang pagbayad ng SSS/PhilHealth voluntarily ay hindi nagpapalaya sa employer sa legal obligation niya. Ang pagtanggi ng employer na i-register ang empleyado ay pwedeng i-report sa SSS, na may kapangyarihang mag-audit ng employers at pilitin ang compliance na may penalties."
+        },
+        {
+          "text": "Direktang i-report ang mga Villanueva sa SSS dahil sa failure to register ng empleyado.",
+          "nextNode": "driver_accident_01",
+          "consequence": "Gumawa si Ernesto ng mas agresibong hakbang sa pamamagitan ng SSS enforcement mechanism.",
+          "scoreChange": 12,
+          "knowledgeGained": "Sa ilalim ng SSS Act (RA 11199), ang mga employer na hindi nag-register ng mga empleyado o hindi nag-remit ng contributions ay may penalties na 2% kada buwan ng unremitted amounts, kasama ang posibleng criminal liability."
+        }
+      ],
+      "isEnding": false
+    },
+    "driver_accident_01": {
+      "id": "driver_accident_01",
+      "title": "Ang Banggaan",
+      "narrative": "Isang Martes ng hapon. Nagda-drive si Ernesto pauwi kasama si Ma'am Cynthia mula sa medical appointment sa Medical City, Ortigas. Ang trapik sa EDSA-Shaw ay ang karaniwang usad-pagong. May motor courier na sumingit sa pagitan ng mga lane at sumagasa sa left side mirror ng Fortuner, nabiyak ang salamin at nagasgas ang door panel. Tumakas ang motor. Ligtas na naka-pull over si Ernesto. Nagulat si Ma'am Cynthia pero hindi nasugatan.\n\nAng pinsala: basag na side mirror (P8,000 para palitan) at 12-inch na gasgas sa door panel (P17,000 para sa repaint sa dealership). Total: P25,000.\n\nKinagabihang iyon, tiningnan ni Sir Victor ang kotse at sinabi kay Ernesto: 'Kuya, kailangan bayaran mo ito. Hindi naman ito insurance claim -- maliit lang. P5,000 na lang kaltas natin kada buwan, limang buwan. Fair naman, di ba?'\n\nP5,000 kada buwan mula sa P12,000 na sahod. Sa limang buwan, P7,000 lang ang iuuwi ni Ernesto -- mas mababa pa sa kalahati ng NCR minimum wage. Para sa aksidenteng gawa ng ibang tao, sa sasakyang hindi kanya, habang ginagawa ang trabaho niya.\n\nLumalamig ang kamay ni Ernesto. Parang may mali dito. Naaalala niya ang sinabi ni Attorney Reyes sa DOLE tungkol sa illegal deductions.",
+      "theme": "wage_theft",
+      "choices": [
+        {
+          "text": "Sabihin kay Sir Victor na hindi legal sa ilalim ng Labor Code ang pag-deduct ng buong repair cost mula sa sahod mo.",
+          "nextNode": "driver_accident_02",
+          "consequence": "Direktang hinamon ni Ernesto ang illegal na deduction.",
+          "scoreChange": 15,
+          "knowledgeGained": "Sa ilalim ng Labor Code Art. 113, walang employer na pwedeng mag-deduct sa sahod ng empleyado maliban sa mga specific cases na pinapayagan ng batas. Sinasabi ng Art. 114 na ang mga deposits para sa pagkawala o pinsala ay hindi dapat lumagpas sa actual na pagkalugi at kailangan ng written authorization ng empleyado."
+        },
+        {
+          "text": "Makipag-negotiate para sa mas maliit na buwanang deduction -- baka P2,500 sa sampung buwan.",
+          "nextNode": "driver_accident_03",
+          "consequence": "Nakipag-bargain si Ernesto pero tinanggap pa rin ang fundamentally unfair na arrangement.",
+          "scoreChange": 0,
+          "knowledgeGained": "Ang pag-negotiate ng terms ng illegal deduction ay hindi nagpapalegal ng deduction mismo."
+        },
+        {
+          "text": "Tanggapin ang P5,000/buwan na deduction -- ikaw ang nagmamaneho, kaya parang responsibilidad mo.",
+          "nextNode": "driver_accident_04",
+          "consequence": "Sinalo ni Ernesto ang gastos na hindi naman legally sa kanya.",
+          "scoreChange": -8,
+          "knowledgeGained": null
+        }
+      ],
+      "isEnding": false
+    },
+    "driver_accident_02": {
+      "id": "driver_accident_02",
+      "title": "Pag-banggit ng Batas",
+      "narrative": "Huminga si Ernesto. Nanginginig ang boses niya, pero nagsalita siya. 'Sir Victor, pasensya na po. Pero nag-aral po ako ng konti tungkol dito. Sa Labor Code po, Article 113 hanggang 116, bawal po ang deduction sa sweldo maliban lang sa mga specific na cases tulad ng SSS at tax. Yung damage sa kotse po, hindi po iyon kasalanan ko -- may motor po na sumalpak. Hindi po tama na sa akin ang bayad.'\n\nNamula ang mukha ni Sir Victor. 'Erning, ikaw ang nagmamaneho. Responsibilidad mo ang kotse. At saka, kailan ka pa naging abogado? Sino ang nagturo sa iyo niyan?'\n\n'Nag-inquire po ako sa DOLE, Sir.'\n\nLumamig ang temperatura sa garahe ng sampung degrees. Tinignan ni Sir Victor si Ernesto na parang unang beses niya itong nakita. Hindi bilang Kuya Erning, loyal na family driver. Kundi bilang isang taong maaaring talagang alam ang karapatan niya.\n\n'Ganun ba, Erning? DOLE?' Tahimik at kontrolado ang boses ni Sir Victor. 'Sige. Hindi ko muna ika-kaltas. Pero pag-uusapan natin ito. Maigi.' Pumihit at pumasok siya sa bahay. Mas malakas ang pagkakasara ng pinto kaysa sa karaniwan.\n\nNakatayo si Ernesto sa garahe, bumibilis ang tibok ng puso. Kaka-cite niya lang ng Labor Code sa employer niya. May fundamentally nagbago.",
+      "theme": "wage_theft",
+      "choices": [
+        {
+          "text": "Umasa ng ganti at mag-prepare sa pamamagitan ng pag-kopya ng lahat ng ebidensya, kasama ang detalye ng usapan ngayong gabi.",
+          "nextNode": "driver_accident_05",
+          "consequence": "Inantisipate ni Ernesto ang susunod na gawin ng employer at pinoprotektahan ang sarili.",
+          "scoreChange": 15,
+          "knowledgeGained": "Sa ilalim ng Labor Code Art. 294, ang pagtanggal na dulot ng pag-exercise ng empleyado sa kanyang legal rights ay illegal dismissal. Ang constructive dismissal -- paggawa ng working conditions na napaka-intolerable na napipilitan ang empleyado na mag-resign -- ay illegal din."
+        },
+        {
+          "text": "Umasa na lang na mag-cool down si Sir Victor at ma-realize niyang hindi patas ang deduction.",
+          "nextNode": "driver_accident_05",
+          "consequence": "Naghintay si Ernesto nang passive, iniwan sa employer ang susunod na hakbang.",
+          "scoreChange": 2,
+          "knowledgeGained": null
+        }
+      ],
+      "isEnding": false
+    },
+    "driver_accident_03": {
+      "id": "driver_accident_03",
+      "title": "Paghahati ng Pinsala",
+      "narrative": "Sinubukan ni Ernesto ang middle ground. 'Sir Victor, baka naman po pwedeng P2,500 na lang po kada buwan? Para naman po hindi masyadong mabigat. Sampung buwan po, mababayaran ko pa rin.'\n\nNag-isip si Sir Victor. 'Sige, Erning. P2,500 na lang. Pero next time, mag-ingat ka. Mahal yang kotse na yan.' Nag-sign off na parang pabor ang ginawa niya kay Ernesto.\n\nP2,500 kada buwan sa 10 buwan = P25,000 mula sa bulsa ni Ernesto para sa pinsalang gawa ng random na motorcycle courier. P9,500 na lang ang iuuwi ni Ernesto bawat buwan -- para sa pamilya ng apat, sa Metro Manila, kung saan P50 ang isang kilo ng bigas at P1,200 ang isang tangke ng LPG.\n\nNagulat si Lorna nang marinig. 'Bakit ka pumayag? Hindi mo naman kasalanan!' Pero si Ernesto, na-condition ng walong taon ng 'pamilya,' pakiramdam niya hindi siya pwedeng lumaban nang mas malakas. Ang hiya -- ang kahihiyang harapin ang isang makapangyarihang employer -- hawak-hawak pa rin siya.\n\nKinagabihang iyon, tumawag si Mae mula sa trabaho. 'Pa, nakita ko sa Facebook -- may labor group na nagbibigay ng free legal consultations sa QC Hall every Saturday. Sama ka?'",
+      "theme": "wage_theft",
+      "choices": [
+        {
+          "text": "Sumama kay Mae sa free legal consultation at magtanong tungkol sa salary deduction.",
+          "nextNode": "driver_accident_05",
+          "consequence": "Humingi si Ernesto ng tamang legal advice tungkol sa deduction.",
+          "scoreChange": 12,
+          "knowledgeGained": "Ang PAO (Public Attorney's Office) ay nagbibigay ng libreng legal assistance sa mga qualified individuals. Ang mga labor unions at NGOs ay nag-o-offer din ng libre consultations para sa workers' rights issues."
+        },
+        {
+          "text": "Tiisin na lang ang deduction -- baka mas lumala pa ang sitwasyon sa trabaho kung labanan.",
+          "nextNode": "driver_accident_04",
+          "consequence": "Pinagtiisan ni Ernesto ang isa pang financial blow nang walang paglaban.",
+          "scoreChange": -5,
+          "knowledgeGained": null
+        }
+      ],
+      "isEnding": false
+    },
+    "driver_accident_04": {
+      "id": "driver_accident_04",
+      "title": "Nasaktan si Ernesto",
+      "narrative": "Tatlong buwan pagkatapos ng banggaan -- habang nagbabayad pa si Ernesto ng P2,500 o P5,000 buwanang deductions -- mas malala ang nangyari. Nagbubuhat siya ng mabibigat na kahon ng Christmas decorations mula sa Fortuner papasok sa bahay ng mga Villanueva (isa na namang non-driving task). Ang pinakamalaking kahon, puno ng ceramic nativity figures, ay awkward at mabigat. Sa harap ng hagdanan, nadulas ang paa niya. Nabuwal siya patagilid, bumagsak ang kahon, at malakas siyang tumama sa kanang balikat.\n\nAgaran at matalim ang sakit. Hindi niya maiangat ang braso. Dali-daling lumabas si Ma'am Cynthia. 'Kuya Erning! Okay ka lang?' Hindi siya okay. Sa QC General Hospital emergency room, ipinakita ng X-ray ang dislocated shoulder na may posibleng rotator cuff tear. Kailangan niya ng MRI (P12,000), posibleng surgery (P80,000-150,000), at hindi bababa sa 6-8 linggo ng rehabilitation.\n\nAt saka ang nakadudurog na realisasyon: walang workers' compensation. Walang ECC (Employees' Compensation Commission -- ahensyang nagbibigay ng benefits sa work-related injuries) coverage. Dahil hindi siya kailanman ni-register ng mga Villanueva sa SSS, wala siyang access sa ECC injury, sickness, o disability benefits. Kung naka-register siya, sasagutin ng ECC ang medical expenses, nawalang sahod habang nagpapagaling, at disability benefits.\n\nBumisita si Sir Victor sa ER at sinabi, 'Erning, magpahinga ka. Humanap muna kami ng kapalit habang nagpapagaling ka. Huwag kang mag-alala sa sweldo -- tingnan natin.'",
+      "theme": "no_benefits",
+      "choices": [
+        {
+          "text": "Direktang tanungin si Sir Victor: 'Matatanggap ko po ba ang buong sahod ko habang nagpapagaling? Nasugatan po ako sa trabaho.'",
+          "nextNode": "driver_accident_05",
+          "consequence": "Inassert ni Ernesto ang karapatan niya sa sick leave at work-injury compensation.",
+          "scoreChange": 12,
+          "knowledgeGained": "Sa ilalim ng SSS Act, ang mga empleyadong may work-related injury o sakit ay entitled sa ECC benefits kasama ang medical reimbursement, rehabilitation, temporary total disability benefits (90% ng average daily salary), at permanent disability benefits. Ang mga employer na hindi nag-register ng empleyado ay liable sa mga benefits na ito mula sa sarili nilang bulsa."
+        },
+        {
+          "text": "Sabihing 'Opo, Sir' at umuwi -- sobrang sakit para lumaban ngayon.",
+          "nextNode": "driver_accident_06",
+          "consequence": "Sobrang pagod physically at emotionally si Ernesto para i-assert ang karapatan niya sa sandaling iyon.",
+          "scoreChange": -2,
+          "knowledgeGained": null
+        }
+      ],
+      "isEnding": false
+    },
+    "driver_accident_05": {
+      "id": "driver_accident_05",
+      "title": "Sumisikip ang mga Pader",
+      "narrative": "Malamig ang mga araw pagkatapos ng confrontation ni Ernesto -- tungkol man sa deduction, sa DOLE visit, o sa benefits. Naging curt si Sir Victor. Text na lang ang mga instructions, wala nang friendly chats. Tumigil na si Ma'am Cynthia sa pag-offer ng tira-tirang pagkain. Ang init ng 'parang pamilya' ay pinalitan ng mas malamig na bagay.\n\nTapos nagsimula ang squeeze. Nagsimulang maging picky si Sir Victor. 'Erning, bakit may dumi sa upuan?' 'Erning, na-late ka ng limang minuto.' 'Erning, parang ang gastos ng gas -- sure ka bang hindi ka nag-detour?' Maliliit na kritisismo, araw-araw, designed para mag-feel na hindi welcome si Ernesto. Ito ay constructive dismissal na dahan-dahan.\n\nNa-recognize ni Mae ang pattern mula sa mga kwento na nabasa niya online. 'Pa, ginagawa nilang uncomfortable para ikaw na lang ang mag-resign. Kasi pag nag-resign ka, walang separation pay. Pero pag tinerminate ka nila, may kaso ka.'\n\nDagdag ni Lorna, 'At kung tinanggal ka nila dahil nagrereklamo ka, illegal dismissal yun. Diba sabi sa DOLE?'\n\nNararamdaman ni Ernesto ang pagsisikip ng bitag. Manatili at maging miserable? Mag-resign at mawalan ng lahat? O lumaban?",
+      "theme": "employer_employee_test",
+      "choices": [
+        {
+          "text": "Huwag mag-resign sa anumang pagkakataon -- pilitin silang i-terminate ka kung gusto ka nilang maalis.",
+          "nextNode": "driver_fight_01",
+          "consequence": "Nanatiling matatag si Ernesto, alam na ang resignation ay pagbitiw sa mga pangunahing karapatan.",
+          "scoreChange": 15,
+          "knowledgeGained": "Huwag dapat mag-resign ang mga manggagawa sa ilalim ng pressure kung naniniwala silang sila ay constructively dismissed. Ang voluntary resignation ay nagwa-waive ng karapatan sa separation pay at nagpapahirap sa pag-claim ng illegal dismissal. Ang constructive dismissal -- kung saan ginagawang intolerable ng employer ang mga kondisyon para piliting mag-resign -- ay itinuturing na illegal termination."
+        },
+        {
+          "text": "Tahimik na maghanap ng bagong driving job habang patuloy na dino-document ang lahat.",
+          "nextNode": "driver_fight_01",
+          "consequence": "Nagha-handang lumabas si Ernesto habang prinopreserve ang legal options niya.",
+          "scoreChange": 10,
+          "knowledgeGained": "Pwedeng maghanap ng bagong trabaho ang mga manggagawa habang empleyado pa. Hindi nakakapigil ang pag-file ng labor case sa pagta-trabaho sa ibang kompanya. Ang pagkakaroon ng alternatibong kita ay nagpapababa ng pressure na tanggapin ang unfair settlements."
+        },
+        {
+          "text": "Mag-resign na at umalis -- hindi na worth it ang stress.",
+          "nextNode": "driver_accident_06",
+          "consequence": "Sumuko si Ernesto, nawala ang leverage para sa anumang claims.",
+          "scoreChange": -8,
+          "knowledgeGained": null
+        }
+      ],
+      "isEnding": false
+    },
+    "driver_accident_06": {
+      "id": "driver_accident_06",
+      "title": "Pinakamababang Punto",
+      "narrative": "Nasa pinakamababang punto na si Ernesto. Nasaktan, posibleng mawalan ng trabaho, walang ipon at walang safety net. Nakaupo siya sa Fairview apartment nila, nakas-sling ang kanang braso, pinapanood ang liwanag ng hapon na gumagalaw sa dingding. May water stain ang kisame mula sa unit sa itaas. Si Jun-Jun ay nasa eskwela. Si Mae ay natutulog bago ang night shift niya. Si Lorna ay naglalaba gamit ang kamay dahil hindi nila kayang mag-laundromat ngayong buwan.\n\nNag-vibrate ang phone niya. Message mula kay Sir Victor: 'Erning, kelan ka babalik? Kailangan ko ng driver. Kung hindi ka pa makakabalik ng two weeks, baka kailangan ko na humanap ng iba.'\n\nDalawang linggo. Kailangan ng balikat ni Ernesto ng hindi bababa sa anim hanggang walong linggo para gumaling. Dalawang linggo lang ang ibinibigay ni Sir Victor. Kung hindi siya bumalik, papalitan siya. Walong taon ng serbisyo, at dalawang linggo lang ng pasensya ang job security niya.\n\nBinasa ni Lorna ang message sa likod ng balikat niya. 'Erning, tama na. Kailangan mo nang lumaban. Hindi na kaya ng katawan mo, hindi na kaya ng pamilya natin, at hindi na tama ang sitwasyon natin. Pumunta tayo sa DOLE.'",
+      "theme": "no_benefits",
+      "choices": [
+        {
+          "text": "Makinig kay Lorna -- pumunta sa DOLE at simulan ang formal complaint process.",
+          "nextNode": "driver_fight_01",
+          "consequence": "Nagdesisyon na si Ernesto na lumaban para sa karapatan niya sa tamang legal na paraan.",
+          "scoreChange": 12,
+          "knowledgeGained": "Ang pagtanggal ng empleyado na nasa medical leave dahil sa work-related injury ay pwedeng maging illegal dismissal. Hindi pwedeng palitan ng employer ang empleyado dahil lang nagpapagaling ito mula sa injury na natamo sa pagta-trabaho."
+        },
+        {
+          "text": "I-reply kay Sir Victor na susubukan mong bumalik sa dalawang linggo, kahit hindi ka pa fully healed.",
+          "nextNode": "ending_stays_accepts",
+          "consequence": "Bumalik si Ernesto nang masyadong maaga, hindi kailanman lumaban, at nagpatuloy ang cycle ng exploitation hanggang sa sumuko ang katawan niya.",
+          "scoreChange": -8,
+          "knowledgeGained": null
+        }
+      ],
+      "isEnding": false
+    },
+    "driver_fight_01": {
+      "id": "driver_fight_01",
+      "title": "Ang DOLE Office, Quezon Avenue",
+      "narrative": "Ang DOLE Regional Office para sa NCR ay nasa Quezon Avenue, isang mababang government building na may fluorescent lights at plastic chairs. Dumating si Ernesto ng 8 AM kasama si Lorna. Naka-suot ang pinakamalinis niyang polo shirt, yung asul na bigay ni Mae noong nakaraang Father's Day. Naka-sling pa rin ang kanang braso niya. Sa kaliwang kamay, may dalang yellow folder na naglalaman ng: ang asul na notebook na may 60 araw na time logs, 47 printed screenshots ng text messages, GCash transaction records na nagpapakita ng buwanang bayad mula kay Sir Victor, isang computation sheet na ginawa ni Mae, at ang mga hospital bills.\n\nAng intake officer, isang babaeng nagngangalang Ms. Santos, rinibyu ang mga documents niya. 'Mang Ernesto, kumpleto naman ang ebidensya ninyo. Ang unang step po natin ay SENA -- Single Entry Approach. Ito po ay mediation, libre, at mandatory bago mag-file ng formal case. Tatawagin po namin ang employer ninyo para mag-usap kayo sa harap ng mediator.'\n\nIpinaliwanag niya ang proseso: 30 araw ang window ng SENA. Mag-fa-facilitate ang DOLE mediator ng conference sa pagitan ni Ernesto at ng mga Villanueva. Ang layunin ay magkaroon ng amicable settlement. Kung hindi magkasundo, pwede mag-proceed si Ernesto na mag-file ng formal case sa NLRC.\n\n'Hindi po kayo nag-iisa, Mang Ernesto,' sabi ni Ms. Santos. 'Maraming katulad ng sitwasyon ninyo. At may karapatan po kayo.'",
+      "theme": "employer_employee_test",
+      "choices": [
+        {
+          "text": "I-file kaagad ang SENA request at i-lista lahat ng violations: wage theft, walang benefits, illegal deductions, posibleng illegal dismissal.",
+          "nextNode": "driver_fight_02",
+          "consequence": "Nag-file si Ernesto ng comprehensive na SENA request na sumasaklaw sa lahat ng walong taon ng violations.",
+          "scoreChange": 15,
+          "knowledgeGained": "Ang SENA (Single Entry Approach) sa ilalim ng RA 10396 ay mandatory na 30-araw na conciliation-mediation mechanism. Libre ito, non-adversarial, at ang mga settlement agreements na naabot sa pamamagitan ng SENA ay may bisa ng court judgment."
+        },
+        {
+          "text": "Magtanong kung pwede munang kumuha ng libreng legal representation bago mag-file ng kahit ano.",
+          "nextNode": "driver_fight_03",
+          "consequence": "Naghanap muna si Ernesto ng legal support bago mag-proceed.",
+          "scoreChange": 10,
+          "knowledgeGained": "Ang PAO (Public Attorney's Office) ay nagbibigay ng libreng legal assistance sa mga manggagawang hindi kayang mag-afford ng private counsel. Ang mga PAO lawyers ay pwedeng kumatawan sa mga manggagawa sa NLRC proceedings."
+        }
+      ],
+      "isEnding": false
+    },
+    "driver_fight_02": {
+      "id": "driver_fight_02",
+      "title": "Araw ng SENA Mediation",
+      "narrative": "Dalawang linggo ang lumipas. Ang SENA conference room sa DOLE building. Isang mahabang mesa, plastic water pitcher, isang wall-mounted electric fan na umuugong. Nakaupo si Ernesto sa isang panig kasama si Lorna. Sa kabila: si Sir Victor Villanueva sa crisp barong tagalog, kasama ang isang abogado -- si Attorney Mendoza, isang corporate litigator mula sa isang Makati firm.\n\nBinuksan ng mediator, si Attorney Garcia mula sa DOLE, ang sesyon. 'Ang layunin po natin dito ay makahanap ng solusyon na katanggap-tanggap sa magkabilang panig. Mang Ernesto, pwede po bang i-present ninyo ang concerns ninyo?'\n\nSi Ernesto, nanginginig ang kamay, binasa ang computation sheet ni Mae. Walong taon. Minimum wage differential. Overtime. 13th month pay. SSS. PhilHealth. Pag-IBIG. Illegal deductions. Ang total: mahigit isang milyong piso.\n\nMalamig na sumagot si Attorney Mendoza: 'With all due respect, si Mr. Bautista ay hindi empleyado. Siya ay independent contractor. Siya ang nag-se-set ng sarili niyang schedule, gumagamit ng sasakyan ng pamilya, at tumatanggap ng fixed monthly retainer. Walang employer-employee relationship dito.'\n\nTumahimik ang kwarto. Naramdaman ni Ernesto ang pagbagsak ng tiyan niya. Iniisasa nila ang lahat. Ang walong taon, ang araw-araw na texts, ang mga instructions -- wala raw nangyari ayon sa abogado ng mga Villanueva.\n\nBumaling si Attorney Garcia kay Ernesto. 'Mang Ernesto, may ebidensya po ba kayo na may employer-employee relationship?'",
+      "theme": "employer_employee_test",
+      "choices": [
+        {
+          "text": "I-present lahat ng ebidensya: ang text messages na nagpapakita ng control, payment records, daily logs, at testimony tungkol sa four-fold test.",
+          "nextNode": "driver_fight_04",
+          "consequence": "Ang masusing documentation ni Ernesto ang nagpatunay ng employment relationship.",
+          "scoreChange": 15,
+          "knowledgeGained": "Sa SENA mediation at NLRC proceedings, ang burden of proving na walang employer-employee relationship ay lumilipat sa alleged employer kapag nag-present ng substantial evidence ang manggagawa. Ang four-fold test, lalo na ang control test, ang nagde-determine ng relationship anuman ang tawag dito ng mga partido."
+        },
+        {
+          "text": "Ma-intimidate ng abogado at mag-offer na mag-settle na lang sa mas mababang halaga para matapos na.",
+          "nextNode": "driver_fight_05",
+          "consequence": "Ang takot ni Ernesto ang nagtulak sa kanya na tanggapin ang mas mababa sa dapat.",
+          "scoreChange": -3,
+          "knowledgeGained": null
+        }
+      ],
+      "isEnding": false
+    },
+    "driver_fight_03": {
+      "id": "driver_fight_03",
+      "title": "Paghahanap ng Legal na Kakampi",
+      "narrative": "Binigyan ni Ms. Santos sa DOLE si Ernesto ng tatlong options para sa libreng legal help:\n\n1. Ang PAO (Public Attorney's Office) sa QC Hall -- libreng legal representation para sa mga qualified (buwanang kita na mas mababa sa P14,000). Qualified si Ernesto.\n2. Ang IBP (Integrated Bar of the Philippines) QC Chapter -- libreng legal aid clinics tuwing Sabado.\n3. Ang SENTRO (Sentro ng mga Nagkakaisa at Progresibong Manggagawa) -- isang labor center na tumutulong sa informal workers.\n\nPumunta si Ernesto sa PAO kinabukasan. Pagkatapos ng dalawang oras na paghihintay, nakilala niya si Attorney Villaran, isang batang public attorney na humahawak ng labor cases. Maingat niyang rinibyu ang mga documents. 'Mang Ernesto, matibay ang kaso ninyo. Ang dami ng ebidensya. Pero ang pinaka-importante: ang mga text messages na nagpapakita na sila ang nagbibigay ng instructions sa inyo -- san pupunta, anong oras, anong gagawin. Yan ang proof ng control test. Yan ang core ng employer-employee relationship.'\n\nPumayag siyang kumatawan sa kanya sa SENA mediation. 'Huwag po kayong matakot. Ang batas, nasa panig ninyo. Ang importante lang, huwag kayong magre-resign at huwag kayong pipirma ng kahit ano nang walang lawyer.'",
+      "theme": "employer_employee_test",
+      "choices": [
+        {
+          "text": "Mag-proceed sa SENA mediation na si Attorney Villaran ang representative mo.",
+          "nextNode": "driver_fight_04",
+          "consequence": "Pumasok si Ernesto sa mediation na may tamang legal support.",
+          "scoreChange": 15,
+          "knowledgeGained": "Ang pagkakaroon ng legal representation sa SENA mediation ay lubos na nagpapabuti ng outcomes. Ang mga PAO lawyers ay may karanasan sa labor cases at ang mga serbisyo nila ay completely free para sa mga qualified individuals."
+        },
+        {
+          "text": "Tanungin si Attorney Villaran kung ano ang realistic na best at worst outcomes bago mag-commit.",
+          "nextNode": "driver_fight_04",
+          "consequence": "Kumuha si Ernesto ng malinaw na assessment ng kaso niya bago mag-proceed.",
+          "scoreChange": 12,
+          "knowledgeGained": "Sa mga labor case, ang best outcome ay full payment ng lahat ng claims kasama ang reinstatement o separation pay. Realistic settlements ay madalas nasa 50-80% ng total claims. Worst case: mapatunayan ng employer na walang employer-employee relationship, pero unlikely ito kung matibay ang ebidensya."
+        }
+      ],
+      "isEnding": false
+    },
+    "driver_fight_04": {
+      "id": "driver_fight_04",
+      "title": "Nagsalita ang Ebidensya",
+      "narrative": "Si Ernesto -- o si Attorney Villaran, kung nandiyan siya -- methodically na inilahad ang ebidensya.\n\nUna, ang four-fold test:\n1. Selection and engagement: 'Personal po akong hinire ni Sir Victor noong 2018. Pwede kong ipakita ang text message mula kay Ma'am Cynthia na nag-recommend sa akin kay Sir Victor.'\n2. Payment of wages: 'Tumatanggap po ako ng P12,000 buwanan, transferred sa pamamagitan ng GCash ni Sir Victor. Narito ang 24 na buwan ng GCash records.'\n3. Power of dismissal: 'Tinreat po ni Sir Victor na papalitan ako noong nasugatan ako. Narito ang text message na nagbibigay ng two-week ultimatum.'\n4. Power of control -- ang pinaka-kritikal: 'Narito po ang 47 text messages kung saan sinabi nina Ma'am Cynthia at Sir Victor sa akin kung saan exactly pupunta, anong oras, anong route, anong errands ang gagawin. Kinontrol nila hindi lang ang resulta ng trabaho ko kundi pati ang paraan at pamamaraan.'\n\nSinubukang i-argue ni Attorney Mendoza na libre si Ernesto na tumanggi sa mga tasks. Binasa ni Attorney Garcia, ang mediator, ang mga text messages. Isang message ang nagsasabi: 'Kuya, puntahan mo yung Rustan's ngayon. Bilhin mo yung nasa list. Huwag ka muna umuwi.' Isa pa: 'Erning, 6 AM bukas ha. Huwag ma-late.'\n\nTiningnan ng mediator si Attorney Mendoza. 'Counsel, base sa mga messages na ito, malinaw na satisfied ang control test. Ang mga Villanueva ay nag-exercise ng control sa paraan, pamamaraan, oras, at lugar ng trabaho. Ito ay employer-employee relationship sa ilalim ng settled jurisprudence.'",
+      "theme": "employer_employee_test",
+      "choices": [
+        {
+          "text": "I-push ang full settlement na sumasaklaw sa lahat ng walong taon ng violations -- walang kompromiso sa statutory rights.",
+          "nextNode": "driver_fight_06",
+          "consequence": "Hiningi ni Ernesto ang buong compliance sa batas.",
+          "scoreChange": 13,
+          "knowledgeGained": "Kapag na-establish na ang employer-employee relationship, lahat ng labor standards ay automatic na applicable retroactively. Hindi pwedeng takasan ng employer ang liability para sa nakaraang violations sa pag-argue na 'hindi nila alam' o na 'informal' lang ang arrangement."
+        },
+        {
+          "text": "Maging open sa reasonable settlement na sumasaklaw sa major claims pero nagpapahintulot sa magkabilang panig na mag-move forward.",
+          "nextNode": "driver_fight_05",
+          "consequence": "Gumamit si Ernesto ng pragmatic na approach sa resolution.",
+          "scoreChange": 7,
+          "knowledgeGained": "Ang SENA settlements ay madalas na mga kompromiso. Pwedeng tanggapin ng mga manggagawa ang mas mababa sa buong legal amount kapalit ng katiyakan, bilis, at pag-iwas sa matagal na NLRC case."
+        }
+      ],
+      "isEnding": false
+    },
+    "driver_fight_05": {
+      "id": "driver_fight_05",
+      "title": "Ang Negosasyon",
+      "narrative": "Dahil na-establish na (o at least matibay ang ebidensya ng) employer-employee relationship, lumipat ang usapan sa mga numero. Bumulong si Attorney Mendoza kay Sir Victor, na namumutla. Wala na ang casual at confident na dating. Nahaharap siya sa liability na higit sa P1,000,000, kasama ang posibleng criminal complaints sa SSS at PhilHealth dahil sa non-registration.\n\nDirekta na nagsalita si Sir Victor sa unang pagkakataon. Nanginginig ang boses niya. 'Kuya Erning, ayaw ko namang mag-away tayo. Ang tagal mo na sa amin. Pero yung milyon-milyon, hindi ko kaya. Hindi ganun kalaki ang kita ko.'\n\nIto ang sandali. Si Ernesto, ang taong nagmaneho para sa pamilyang ito ng walong taon, na tinawag na 'kuya' at 'pamilya' habang binabayaran ng mas mababa sa minimum wage na walang benefits -- ang taong ito ngayon ay may leverage.\n\nNag-suggest si Attorney Garcia ng structured settlement: immediate payment ng lump sum na sumasaklaw sa pinaka-kritikal na claims (13th month pay, wage differential), kasama ang prospective registration sa SSS, PhilHealth, at Pag-IBIG, kasama ang written employment contract moving forward.\n\nKumontesto ang abogado ni Sir Victor: P150,000 lump sum at mutual release. Walang admission of liability.\n\nP150,000. Mas mababa sa 15% ng utang. Pero ito ang pinakamalaking perang hawak ni Ernesto sa buong buhay niya.",
+      "theme": "wage_theft",
+      "choices": [
+        {
+          "text": "I-reject ang P150,000 at i-counter ng hindi bababa sa P500,000 kasama ang full SSS/PhilHealth registration moving forward.",
+          "nextNode": "driver_fight_06",
+          "consequence": "Nanatiling matatag si Ernesto at humingi ng mas malapit sa kung ano ang required ng batas.",
+          "scoreChange": 13,
+          "knowledgeGained": "Hindi dapat tanggapin ng mga manggagawa ang unang settlement offer sa mediation. Madalas na mababa ang simula ng mga employer. Ang reasonable counter-offer, na sinusuportahan ng ebidensya at legal computation, ay karaniwang nagre-resulta sa mas magandang final settlement."
+        },
+        {
+          "text": "Tanggapin ang P150,000 settlement -- guaranteed money na ito ngayon kumpara sa uncertain at matagal na NLRC case.",
+          "nextNode": "ending_partial_settlement",
+          "consequence": "Kinuha ni Ernesto ang pera at isinara ang kabanata, kahit sobrang mababa sa dapat.",
+          "scoreChange": -2,
+          "knowledgeGained": "Ang pagtanggap ng mababang settlement ay personal na desisyon, pero dapat maintindihan ng mga manggagawa na ang SENA settlements ay binding at hindi na pwedeng i-appeal. Kapag pumirma ka, winwave mo na ang karapatang mag-file ng dagdag na claims para sa parehong violations."
+        }
+      ],
+      "isEnding": false
+    },
+    "driver_fight_06": {
+      "id": "driver_fight_06",
+      "title": "Utang na Loob",
+      "narrative": "Umabot na sa kritikal na punto ang mediation. Si Sir Victor, na nararamdamang talo siya, naglabas ng huling card. Tumingin siya direkta kay Ernesto, lumampas sa mga abogado, sa mediator, sa mga pormalidad.\n\n'Erning. Walo na taon tayo. Naalala mo ba nung nagkasakit si Jun-Jun? Sino ang nagbigay ng pera? Nung kailangan ni Mae ng laptop para sa college? Sino ang nagpahiram? Nung binaha yung apartment ninyo, saan kayo tumira ng tatlong araw? Sa bahay namin. Hindi ba, Erning? Parang pamilya. Tapos ganito ang ganti mo?'\n\nUtang na loob. Ang hindi sinasabing utang. Ang bigat ng kulturang Pilipino na nagsasabing: kung may tumulong sa iyo, may utang ka habambuhay, at ang pag-assert ng legal rights mo laban sa kanila ay pagtataksil.\n\nNaramdaman ni Ernesto ang hatak. Totoo ito. Nagpahiram nga si Sir Victor ng pera para sa hospital bill ni Jun-Jun. Nagbigay nga si Ma'am Cynthia ng lumang laptop kay Mae. Pinatuloy nga nila ang pamilya nung baha. Mga tunay na kabutihang-loob ito.\n\nPero ang kabutihang-loob ay hindi nagbu-bura ng walong taon ng paglabag sa labor law. Ang kabutihang-loob ay hindi pamalit sa SSS. Ang pasasalamat ay hindi pambayad sa shoulder surgery. Ang 'parang pamilya' ay hindi pang-sustento ng pamilya kapag matanda ka na para magmaneho.\n\nPinisil ni Lorna ang kamay ni Ernesto sa ilalim ng mesa.",
+      "theme": "employer_employee_test",
+      "choices": [
+        {
+          "text": "Kilalanin ang kabutihang-loob pero matatag na sabihin: 'Salamat po sa lahat, Sir. Pero ang batas, batas. Ang karapatan ko, karapatan ko.'",
+          "nextNode": "ending_full_backwages",
+          "consequence": "Pinaghiwalay ni Ernesto ang pasasalamat sa legal rights -- ang pinakamahirap pero pinaka-importanteng pagkakaiba.",
+          "scoreChange": 15,
+          "knowledgeGained": "Ang utang na loob ay malalim na ugat na Filipino value, pero hindi ito pwedeng gamitin para i-justify ang mga paglabag sa labor law. Paulit-ulit na pinanghawakan ng Supreme Court na ang employer-employee relationships ay pinapatnubayan ng batas, hindi ng personal favors o emotional bonds."
+        },
+        {
+          "text": "Ma-overwhelm ng guilt at mag-offer na bawasan nang malaki ang claims bilang kompromiso.",
+          "nextNode": "ending_compromise",
+          "consequence": "Ang guilt ni Ernesto ang naging dahilan ng settlement na sobrang mababa sa required ng batas.",
+          "scoreChange": 0,
+          "knowledgeGained": "Ang emotional manipulation sa panahon ng mediation ay karaniwang taktika ng employer. Ang pagkakaroon ng legal counsel ay nakakatulong na mapanatili ang objectivity."
+        },
+        {
+          "text": "Mag-break down emotionally at pumayag na i-withdraw ang complaint nang buo.",
+          "nextNode": "ending_withdrawal",
+          "consequence": "Isinuko ni Ernesto ang mga karapatan niya, nadaig ng cultural pressure.",
+          "scoreChange": -10,
+          "knowledgeGained": null
+        }
+      ],
+      "isEnding": false
+    },
+    "ending_full_backwages": {
+      "id": "ending_full_backwages",
+      "title": "Hustisya, Dahan-dahan",
+      "narrative": "Hindi nagtagumpay ang SENA mediation na makagawa ng kasunduan. Si Ernesto, kasama si Attorney Villaran mula sa PAO, nag-file ng formal complaint sa NLRC (National Labor Relations Commission -- ang ahensyang humahawak ng mga labor dispute), NCR Arbitration Branch sa Quezon City. Naka-docket na ang kaso.\n\nAng proseso ay tumagal ng walong buwan. May mga hearing, position papers, at mahabang paghihintay sa plastic chairs. Pero overwhelming ang ebidensya: ang text messages, ang GCash records, ang asul na notebook, ang hospital bills, ang testimony ng iba pang household staff ng mga Villanueva (ang kasambahay nila na si Ate Nena, kinumpirma ang araw-araw na schedule ni Ernesto).\n\nNagpabor sa kaso ni Ernesto ang NLRC Labor Arbiter. Iniutos sa desisyon na bayaran ng mga Villanueva ang: P525,840 sa minimum wage differential, P285,990 sa unpaid overtime, P56,000 sa 13th month pay differential, P24,400 sa service incentive leave pay, at attorney's fees na 10% ng total monetary award. Inutos din sa mga Villanueva na i-register si Ernesto sa SSS, PhilHealth, at Pag-IBIG at i-remit lahat ng contributions retroactively. Kabuuang monetary award: approximately P982,853.\n\nHindi nag-appeal si Sir Victor. Inadvise siya ng abogado niya na well-supported ang ruling ng NLRC at malamang na matatalo ang appeal sa Court of Appeals.\n\nNatanggap ni Ernesto ang tseke isang umaga ng Martes. Umuwi siya sa Fairview at inilagay sa mesa ng kusina. Tinitigan ito ni Lorna. 'Erning, totoo ba ito?' Tumango si Ernesto. 'Totoo, Lorna. Karapatan natin ito.'\n\nGinamit niya ang pera para bayaran ang shoulder surgery, pagtapos ni Jun-Jun sa senior high school, at pagbukas ng maliit na savings account -- ang una niya. Nakahanap siya ng bagong driving job sa isang logistics company sa QC na nagbibigay ng full benefits, written contract, at 8-hour schedule na may overtime pay.\n\nMinsan, sa mga tahimik na gabi, iniisip niya ang mga Villanueva. Wala na siyang galit. Mayroon siyang mas malapit sa linaw. Hindi sila masasamang tao. Pero masasamang employer sila. At ang batas ay nag-e-exist para sa espasyo sa pagitan ng dalawang bagay na iyon.\n\nKung ikaw o may kakilala ka na nasa katulad na sitwasyon, tandaan: DOLE Hotline 1349 (24/7, libre). PAO (Public Attorney's Office) -- libreng legal aid para sa mga qualified. SSS Hotline (02) 8920-6446. NLRC offices sa lahat ng rehiyon. Hindi ka nag-iisa, at may karapatan ka.",
+      "theme": "employer_employee_test",
+      "choices": [],
+      "isEnding": true
+    },
+    "ending_partial_settlement": {
+      "id": "ending_partial_settlement",
+      "title": "Kinuha ang Makukuha",
+      "narrative": "Pinirmahan ni Ernesto ang SENA settlement agreement sa halagang P150,000. May kasamang mutual release -- ibig sabihin winwave niya ang karapatang mag-file ng dagdag na claims laban sa mga Villanueva para sa parehong panahon. Walang admission ng employer-employee relationship. Walang prospective SSS registration. Pera lang at isang handshake.\n\nKinakamayan siya ni Sir Victor nang mahigpit. 'Walang personalan, Erning.' Lumabas siya nang hindi lumilingon. Walong taon na natapos sa siyamnapung segundo.\n\nNakatulong ang P150,000. Binayaran ni Ernesto ang hospital bills, nakaabot sa upa, at may sapat para sa tatlong buwan ng gastusin habang naghahanap ng bagong trabaho. Nag-register siya bilang voluntary SSS at PhilHealth member. Tinulungan siya ni Mae na gumawa ng account sa JobStreet.\n\nPero sa gabi, kinuwenta ni Ernesto. P150,000 laban sa mahigit P1,000,000 sa mga utang na sahod at benefits. Tinanggap niya ang 15 sentimos sa bawat piso. Mag-hi-hire ang mga Villanueva ng bagong driver, malamang isa pang Mang Erning, at mauulit ang cycle.\n\nPraktikal si Lorna. 'Erning, tapos na. Ang importante, natutunan natin. Sa susunod na trabaho mo, kontrata agad. SSS agad. Hindi na tayo magpapaloko.'\n\nTama siya. Ang aral na iyon ay nagkahalaga ng walong taon at P850,000 sa hindi nakolektang karapatan. Pero alam na ngayon ni Ernesto kung magkano ang halaga niya sa ilalim ng batas. At ang kaalamang iyon, kahit kailan, hindi nila maaagaw.\n\nMga Resources: DOLE Hotline 1349. PAO para sa libreng legal aid. SSS voluntary membership: bumisita sa kahit anong SSS branch. Para sa mga susunod na trabaho, laging humingi ng written contract at i-verify ang SSS, PhilHealth, at Pag-IBIG registration sa loob ng unang buwan.",
+      "theme": "wage_theft",
+      "choices": [],
+      "isEnding": true
+    },
+    "ending_compromise": {
+      "id": "ending_compromise",
+      "title": "Ang Bigat ng Kompromiso",
+      "narrative": "Si Ernesto, nahuli sa pagitan ng legal rights at utang na loob, nag-propose ng reduced settlement: P350,000 -- halos katlo ng utang -- kasama ang prospective SSS at PhilHealth registration. Si Sir Victor, nakahinga nang maluwag, pumayag. Pinirmahan ang SENA agreement.\n\nHindi ito hustisya. Pero hindi rin ito wala. Ang P350,000 ay sapat para sa shoulder surgery ni Ernesto (P120,000), anim na buwan ng gastusin sa bahay (P78,000), at isang katamtamang emergency fund. Ni-register ng mga Villanueva si Ernesto sa SSS at PhilHealth moving forward, kahit na hinire nila siya sa 'probationary' basis ng anim na buwan -- isang legal maneuver na iminungkahi ng abogado nila.\n\nPermanenteng nagbago ang dynamics sa bahay ng mga Villanueva. Professional pero distant si Sir Victor. Hindi na sinasabi ni Ma'am Cynthia ang 'parang pamilya.' Ang Christmas red envelope ay napalitan ng tamang 13th month pay computation. May written contract na si Ernesto na nag-specify ng oras niya (8 AM hanggang 6 PM), duties (driving lang), rest day (Sunday), at buwanang sahod (P18,000, mas malapit pero mas mababa pa rin sa tunay na legal rate).\n\nPagkatapos ng probationary period, nagdesisyon ang mga Villanueva na hindi i-renew ang kontrata ni Ernesto. Binigyan siya ng isang buwang notice. Si Ernesto, ngayon may armas ng kaalaman, nakipag-negotiate ng maliit na separation package at umalis na nakataas ang ulo kaysa nung dumating siya.\n\nNakahanap siya ng trabaho sa isang car rental company sa Commonwealth Avenue na nagbabayad ng P20,000/buwan na may full benefits. Sa unang payday niya, nakatanggap siya ng payslip. Ito ang unang payslip sa buong buhay niya. In-frame niya ito.\n\nMga Resources: DOLE Hotline 1349 para sa labor rights inquiries. SSS (02) 8920-6446. NLRC para sa formal labor complaints. PAO para sa libreng legal representation.",
+      "theme": "wage_theft",
+      "choices": [],
+      "isEnding": true
+    },
+    "ending_withdrawal": {
+      "id": "ending_withdrawal",
+      "title": "Ang Utang na Hindi Natatapos",
+      "narrative": "In-withdraw ni Ernesto ang complaint niya. Ang salitang 'utang na loob' ay umalingawngaw sa isip niya habang pinipirmahan ang withdrawal form. Tinapik ni Sir Victor ang balikat niya sa DOLE hallway. 'Tama yan, Erning. Ayusin natin ang lahat. Pamilya pa rin tayo.'\n\nWalang nagbago. Nanatili ang P12,000 na sahod. Hindi kailanman nangyari ang SSS registration. Patuloy na walang bayad ang overtime. Pero ngayon, may hindi sinasabing dagdag sa arrangement: hindi na kailanman pwedeng magreklamo si Ernesto. Ginamit na niya ang nag-iisa niyang pagkakataon at ibinigay ito.\n\nAnim na buwan pa, bumili ang mga Villanueva ng bagong kotse -- isang Tesla, automatic. Sinabi ni Sir Victor kay Ernesto, 'Erning, hindi ka na kailangan mag-maneho ng bagong kotse. Si Cynthia na lang ang magda-drive. Baka bawasan natin yung araw mo ha? Tatlong araw na lang siguro.' Tatlong araw sa isang linggo. P6,000 isang buwan. Walang benefits. Walang protesta.\n\nIsang taon pa, sumuko na ang balikat ni Ernesto. Halos hindi na siya makahawak ng manibela. Pinakawalan siya ng mga Villanueva na may P10,000 na 'farewell gift' sa isang pulang sobre. Walang separation pay. Walang back wages. Walang 13th month. Walang SSS pension na babalikan. Isang pulang sobre lang at isang 'Salamat, Kuya Erning. Ingat ka.'\n\n53 na si Ernesto, nasugatan, walang trabaho, at invisible sa sistema. Sana lumaban siya.\n\nKung ikaw ay nasa ganitong sitwasyon, HINDI pa huli. Tawagan ang DOLE Hotline 1349. Bumisita sa pinakamalapit na PAO office para sa libreng legal aid. Pwede ka pa ring mag-file ng claims para sa unpaid wages at benefits. Ang prescriptive period para sa money claims sa ilalim ng Labor Code ay tatlong taon mula sa oras na nag-arise ang cause of action. Huwag maghintay. Huwag tumahimik. Ang karapatan mo ay hindi nag-e-expire kasabay ng pasasalamat mo.",
+      "theme": "no_benefits",
+      "choices": [],
+      "isEnding": true
+    },
+    "ending_stays_accepts": {
+      "id": "ending_stays_accepts",
+      "title": "Ang Tahimik na Pagsuko",
+      "narrative": "Hindi kailanman nag-file ng complaint si Ernesto. Hindi kailanman pumunta sa DOLE. Patuloy siyang nagmaneho para sa mga Villanueva, taon-taon, sinasabi sa sarili na pwede pang lumala. At sa ilang paraan, totoo -- may narinig siyang mga kwento mula sa ibang drivers tungkol sa mga employer na sumisigaw, nananampal, hindi nagbabayad langkoy. At least magalang ang mga Villanueva.\n\nPero ang pagiging magalang ay hindi compliance. Ang courtesy ay hindi kontrata. At ang 'parang pamilya' ay hindi pension.\n\nSa edad na 60, sumuko na ang katawan ni Ernesto. P2,500 bawat buwan ang gamot niya sa blood pressure. Halos hindi na kaya ng mga tuhod niya ang pedal. Walang SSS pension, walang PhilHealth coverage, walang ipon. Ang mga Villanueva -- na ang mga anak ay nasa abroad na, at ang bagong driver nila ay isang 30 taong gulang na si Jayson -- nagpadala ng huling pulang sobre na may P20,000 at isang card na nakalagdang 'With love and gratitude, The Villanueva Family.'\n\nP20,000 para sa isang lifetime. Nakaupo si Ernesto sa Fairview apartment nila, ang card sa mesa, at kinuwenta sa huling pagkakataon. Labindalawang taon ng serbisyo (nanatili siya ng apat pang taon matapos magsimula ang kwento). Mahigit P1.5 milyon sa unpaid wages at benefits. At isang pulang sobre.\n\nSi Mae, ngayon 30 na at team leader sa BPO niya, ang umagapay sa gastusin ng bahay. Si Jun-Jun, nagtatrabaho bilang technician, tumutulong. Binuhat nila ang tatay nila dahil ang sistema -- at ang employer niya -- ay hindi.\n\nMangyaring matuto mula sa kwento ni Mang Ernesto. Tawagan ang DOLE Hotline 1349. Bumisita sa PAO para sa libreng legal aid. Mag-register sa SSS kahit bilang voluntary member kung tumatanggi ang employer mo. I-document lahat. Alamin ang karapatan mo. Pinoprotektahan ka ng batas -- pero kung gagamitin mo lang ito.",
+      "theme": "no_contract",
+      "choices": [],
+      "isEnding": true
+    }
+  },
+  "startNode": "driver_start"
+}

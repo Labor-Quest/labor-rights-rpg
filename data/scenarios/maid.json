@@ -1,0 +1,805 @@
+{
+  "nodes": {
+    "maid_start": {
+      "id": "maid_start",
+      "title": "A New Life in the City",
+      "narrative": "Aling Rosa Mendoza, 48, sits on the edge of a thin foam mattress in a windowless storage room behind the kitchen of a two-story house in BF Homes, Paranaque. Three years ago, she left her small barangay in Calbayog, Samar -- left behind her husband Mang Tonyo who farms copra, and her three grown children -- because her cousin Ate Liling said she knew a 'mabuting pamilya' in Manila who needed a kasambahay.\n\n'Mabait naman sila, Rosa,' Ate Liling had assured her over the phone. 'P3,500 a month, plus libre na pagkain at tulugan. Malaki na yun compared sa probinsya.' Rosa had calculated: after sending P2,000 home to Samar each month for Tonyo's blood pressure medication and their youngest's college fund, she'd have P1,500 left. Hindi masama.\n\nShe arrived at the Ramos household with a single bag. Mr. and Mrs. Ramos -- both professionals in their 40s with two children, 8-year-old Miguel and 5-year-old Sofia -- welcomed her warmly. 'Ate Rosa, parang pamilya ka na namin dito,' Mrs. Ramos said, handing her a plate of adobo. No contract was signed. No terms were discussed in writing. Just a handshake and 'bahala na, pag-usapan natin kung may problema.'\n\nNow, three years later, Rosa's pay is still P3,500 a month. She works from 5 AM to 10 PM, seven days a week. She has never had a rest day. She has no SSS, no PhilHealth, no Pag-IBIG. And tonight, while scrolling Facebook on the old phone Mrs. Ramos lets her use after 9 PM, she sees a post from a group called 'Kasambahay United.' It says: 'Alam mo ba na may batas na nagpoprotekta sa mga kasambahay? RA 10361 -- Batas Kasambahay.'",
+      "theme": "kasambahay_law",
+      "choices": [
+        {
+          "text": "Read the entire Facebook post carefully and take notes on what RA 10361 says.",
+          "nextNode": "maid_hire_01",
+          "consequence": "Rosa discovers that an entire law exists to protect kasambahay like her -- and she's been denied almost every right it guarantees.",
+          "scoreChange": 10,
+          "knowledgeGained": "RA 10361 or the 'Batas Kasambahay' was signed into law in 2013. It covers all domestic workers and guarantees minimum wage, written contracts, rest days, SSS/PhilHealth/Pag-IBIG coverage, and protection from abuse."
+        },
+        {
+          "text": "Scroll past it -- it might cause trouble if the Ramos family finds out she's reading about workers' rights.",
+          "nextNode": "maid_hire_02",
+          "consequence": "Rosa ignores the post out of fear, remaining unaware of the law that protects her.",
+          "scoreChange": -5,
+          "knowledgeGained": null
+        },
+        {
+          "text": "Send a private message to the Kasambahay United page asking for more information.",
+          "nextNode": "maid_hire_03",
+          "consequence": "Rosa reaches out directly and connects with an advocate who can guide her.",
+          "scoreChange": 12,
+          "knowledgeGained": "Organizations like UNITED, SUMAPI, and VISAFIL provide free legal education and support for kasambahay. DOLE also has a dedicated Kasambahay Desk."
+        }
+      ],
+      "isEnding": false
+    },
+    "maid_hire_01": {
+      "id": "maid_hire_01",
+      "title": "The Law Rosa Never Knew",
+      "narrative": "Rosa reads the post three times, her heart beating faster with each pass. The Kasambahay United page has a simple infographic: 'KARAPATAN MO BILANG KASAMBAHAY.' It lists them clearly -- minimum wage of P6,000 in NCR, mandatory written contract, weekly rest day, SSS/PhilHealth/Pag-IBIG coverage, 13th month pay, and protection from abuse.\n\nP6,000 minimum wage. Rosa does the math on her fingers. She's been receiving P3,500 a month for three years. That's P2,500 below minimum every single month. Thirty-six months times P2,500 -- P90,000. Siyam na pung libo. That's almost enough to build a small sari-sari store back in Samar.\n\nBut a colder realization follows: she has no written contract. Nothing on paper that says what her duties are, what her salary should be, when her rest days are. Mrs. Ramos always said 'Hindi na natin kailangan yan, Ate Rosa. Hindi naman tayo ganyan ka-formal. Pamilya ka na namin.' And Rosa, raised to value utang na loob and pakikisama, never questioned it.\n\nThe Facebook post says that under RA 10361 Section 11, a written employment contract is MANDATORY. Without it, the employer is already violating the law.",
+      "theme": "no_contract",
+      "choices": [
+        {
+          "text": "Approach Mrs. Ramos calmly tomorrow and ask about getting a written contract.",
+          "nextNode": "maid_hire_04",
+          "consequence": "Rosa gathers her courage to raise the contract issue directly with her employer.",
+          "scoreChange": 10,
+          "knowledgeGained": "Under RA 10361 Sec. 11, it is the employer's OBLIGATION to execute a written contract with the kasambahay. The contract must specify duties, hours, compensation, rest days, and other terms."
+        },
+        {
+          "text": "Keep reading and learning first before saying anything -- knowledge is power.",
+          "nextNode": "maid_hire_05",
+          "consequence": "Rosa continues educating herself, building a stronger foundation before confronting the situation.",
+          "scoreChange": 8,
+          "knowledgeGained": "Before negotiating, it helps to know your full rights. RA 10361 covers wages (Sec. 24), rest days (Sec. 28), benefits (Sec. 30-33), and protections from abuse (Sec. 5)."
+        },
+        {
+          "text": "Feel grateful that the Ramos family took her in -- maybe she's being ungrateful by questioning them.",
+          "nextNode": "maid_hire_06",
+          "consequence": "Rosa's sense of utang na loob overrides her newly discovered rights.",
+          "scoreChange": -5,
+          "knowledgeGained": null
+        }
+      ],
+      "isEnding": false
+    },
+    "maid_hire_02": {
+      "id": "maid_hire_02",
+      "title": "Silence and the Status Quo",
+      "narrative": "Rosa scrolls past the post, her thumb moving quickly as if the words might burn her. 'Baka magalit si Ma'am,' she whispers to herself in the dark. She's heard stories from other kasambahay in the subdivision -- Ate Nena next door was fired on the spot when her employer found her reading about labor rights online. 'Sinabi ng amo niya, kung hindi ka kontento, umalis ka.'\n\nRosa puts the phone down and stares at the ceiling. The fluorescent light in the hallway leaks under her door, casting a blue glow on the concrete wall. From upstairs, she can hear the Ramos children laughing at a cartoon. She loves Miguel and Sofia -- has practically raised them for three years. Sofia calls her 'Mama Rosa' and runs to her, not to Mrs. Ramos, when she scrapes her knee.\n\nBut love doesn't pay for Tonyo's losartan. Love doesn't cover Junjun's tuition at Eastern Samar State. And Rosa's back aches more each morning from washing clothes by hand in the outdoor labahan because Mrs. Ramos says a washing machine is 'sayang sa kuryente.'\n\nThe next morning, Rosa wakes at 4:50 AM as always. As she boils water for the Ramos family's breakfast, she overhears Mrs. Ramos on the phone: 'Oo nga, reliable naman si Ate Rosa. At mura lang -- P3,500. Saan ka pa makakakita ng ganyan?'",
+      "theme": "wage_theft",
+      "choices": [
+        {
+          "text": "Hearing the phone call sparks something -- secretly search for that Kasambahay United post again.",
+          "nextNode": "maid_hire_01",
+          "consequence": "The employer's own words reveal how she views Rosa's low pay as a bargain, motivating Rosa to learn her rights.",
+          "scoreChange": 7,
+          "knowledgeGained": "An employer who acknowledges paying below market rate may be knowingly violating RA 10361 Sec. 24 minimum wage provisions."
+        },
+        {
+          "text": "Confront Mrs. Ramos about the overheard phone call right now.",
+          "nextNode": "maid_hire_06",
+          "consequence": "Rosa reacts emotionally without preparation, catching Mrs. Ramos off guard.",
+          "scoreChange": -3,
+          "knowledgeGained": null
+        },
+        {
+          "text": "Say nothing and continue cooking breakfast, but start keeping a mental note of things.",
+          "nextNode": "maid_work_01",
+          "consequence": "Rosa stays silent but begins to pay closer attention to her working conditions.",
+          "scoreChange": 3,
+          "knowledgeGained": null
+        }
+      ],
+      "isEnding": false
+    },
+    "maid_hire_03": {
+      "id": "maid_hire_03",
+      "title": "A Kasambahay Ally",
+      "narrative": "Rosa types carefully on the cracked screen of the old Samsung phone, her thumbs slow but determined: 'Good evening po. Kasambahay po ako sa Paranaque, 3 years na. Wala po akong contract, P3,500 lang po sahod ko, at walang day off. Totoo po ba yung sinasabi nyo na may batas para sa amin?'\n\nWithin an hour, she receives a reply from 'Ka Linda,' a volunteer at Kasambahay United who was herself a domestic worker for 15 years before becoming an organizer: 'Ate Rosa, totoo po yan. RA 10361 -- Batas Kasambahay. Lahat ng sinabi mo, violation po ng amo mo. Minimum wage sa NCR, P6,000 po. Required ang written contract. At may karapatan ka sa rest day, SSS, PhilHealth, at Pag-IBIG.'\n\nKa Linda sends her a PDF -- a simple Tagalog guide to the Batas Kasambahay, with pictures and bullet points. She also sends Rosa the number of the DOLE Kasambahay Desk: 1349. 'Ate, huwag kang matakot. Hindi porke nasa loob ka ng bahay nila, wala ka nang karapatan. Ang bahay nila ay workplace mo -- at may batas na nagpoprotekta sa lahat ng workplace.'\n\nRosa saves the PDF and the number. For the first time in three years, she feels something she hasn't felt in a long time: may pag-asa.",
+      "theme": "kasambahay_law",
+      "choices": [
+        {
+          "text": "Ask Ka Linda for specific advice on how to approach the Ramos family about a contract and proper wages.",
+          "nextNode": "maid_hire_04",
+          "consequence": "Ka Linda helps Rosa prepare a strategy for negotiating with her employers.",
+          "scoreChange": 12,
+          "knowledgeGained": "When asserting kasambahay rights, it helps to approach the employer calmly, cite the specific law (RA 10361), and have the DOLE Kasambahay Desk number (1349) ready as backup."
+        },
+        {
+          "text": "Thank Ka Linda but decide to handle things on her own -- she doesn't want outsiders involved.",
+          "nextNode": "maid_hire_05",
+          "consequence": "Rosa appreciates the information but prefers to act independently.",
+          "scoreChange": 5,
+          "knowledgeGained": "RA 10361 applies to ALL kasambahay regardless of whether they have a written contract. The absence of a contract is itself a violation by the employer."
+        }
+      ],
+      "isEnding": false
+    },
+    "maid_hire_04": {
+      "id": "maid_hire_04",
+      "title": "The Contract Conversation",
+      "narrative": "Rosa waits until Sunday afternoon, when Mr. Ramos is playing golf and the children are at a birthday party. She finds Mrs. Ramos in the sala watching a Korean drama. Her hands are trembling, but she speaks in a steady voice.\n\n'Ma'am, pwede po ba tayong mag-usap?' Mrs. Ramos looks up, mildly surprised. 'Oo naman, Ate Rosa. Ano yun?'\n\nRosa takes a breath. 'Ma'am, tatlong taon na po ako dito sa inyo. Nagpapasalamat po ako sa lahat. Pero nalaman ko po na may batas -- RA 10361 po, Batas Kasambahay. Sabi po dun, kailangan po ng written contract between employer and kasambahay. At ang minimum wage po sa NCR ay P6,000.'\n\nMrs. Ramos puts down the remote. Her face shifts through several expressions -- surprise, irritation, then something that looks like guilt before settling into defensiveness. 'Ate Rosa, sinong nagsabi sa iyo niyan? May kausap ka ba sa labas? Parang pamilya ka na namin dito -- hindi ba sapat yun? Hindi ba namin binibigyan ka ng pagkain, ng tirahan? Kung ibabawas mo yung food at lodging, mas malaki pa sa P6,000 ang natatanggap mo.'",
+      "theme": "no_contract",
+      "choices": [
+        {
+          "text": "Calmly explain that under the law, food and lodging cannot be deducted to bring wages below minimum -- and that a contract protects both of them.",
+          "nextNode": "maid_hire_05",
+          "consequence": "Rosa stands firm with legal knowledge, reframing the contract as mutual protection.",
+          "scoreChange": 15,
+          "knowledgeGained": "Under RA 10361 Sec. 25, deductions for food and lodging must not exceed a certain percentage of wages and must NEVER reduce the wage below the minimum. The employer cannot use 'free food and board' to justify sub-minimum pay."
+        },
+        {
+          "text": "Apologize and back down -- say she was just asking, she didn't mean to cause trouble.",
+          "nextNode": "maid_hire_06",
+          "consequence": "Rosa retreats, and the power imbalance remains unchanged.",
+          "scoreChange": -5,
+          "knowledgeGained": null
+        },
+        {
+          "text": "Tell Mrs. Ramos that she can call DOLE hotline 1349 together to verify what the law says.",
+          "nextNode": "maid_work_01",
+          "consequence": "Rosa suggests an authoritative third party, which makes Mrs. Ramos take the conversation more seriously.",
+          "scoreChange": 12,
+          "knowledgeGained": "DOLE Hotline 1349 provides free information and assistance on labor concerns, including kasambahay rights. It operates 24/7."
+        }
+      ],
+      "isEnding": false
+    },
+    "maid_hire_05": {
+      "id": "maid_hire_05",
+      "title": "Studying the Law in Secret",
+      "narrative": "For the next two weeks, Rosa uses every spare moment -- the 15 minutes after lunch when Mrs. Ramos naps, the late nights after finishing dishes -- to read everything she can about RA 10361. She uses the free WiFi to download the full text of the law from the DOLE website.\n\nShe learns that Section 11 requires a written contract covering compensation, hours of work, rest days, and other terms. Section 24 sets the NCR minimum at P6,000. Section 27 mandates 13th month pay -- she's never received even one. Sections 30 to 33 require the employer to register her for SSS, PhilHealth, and Pag-IBIG, with the employer paying the larger share of contributions.\n\nShe starts keeping a small notebook hidden inside her pillowcase. In it, she writes down her daily schedule: 5:00 AM wake up, cook breakfast. 6:30 AM clean house. 8:00 AM laundry by hand. 10:00 AM iron clothes. 11:30 AM cook lunch. 1:00 PM bathe Sofia. 2:00 PM help Miguel with homework. 4:00 PM cook merienda. 5:30 PM cook dinner. 7:00 PM wash dishes. 8:30 PM fold laundry. 10:00 PM finally done.\n\nSeventeen hours. Seven days a week. No rest day in three years. Rosa looks at the notebook and sees, in black and white, the shape of her exploitation.",
+      "theme": "no_contract",
+      "choices": [
+        {
+          "text": "Use this documentation to approach the Ramos family with specific, undeniable evidence of her working conditions.",
+          "nextNode": "maid_work_01",
+          "consequence": "Rosa's meticulous records become powerful evidence of systematic labor violations.",
+          "scoreChange": 12,
+          "knowledgeGained": "Keeping a detailed log of working hours, duties, and pay is crucial evidence in labor disputes. Under RA 10361 Sec. 28, kasambahay are entitled to a rest period of at least 24 consecutive hours per week."
+        },
+        {
+          "text": "Show the notebook to Ate Nena, the kasambahay next door, and ask if her situation is similar.",
+          "nextNode": "maid_work_02",
+          "consequence": "Rosa builds solidarity with a fellow kasambahay and discovers she's not alone.",
+          "scoreChange": 8,
+          "knowledgeGained": "Many kasambahay face similar violations. Solidarity among domestic workers is important -- RA 10361 Sec. 40 even encourages the formation of kasambahay organizations."
+        }
+      ],
+      "isEnding": false
+    },
+    "maid_hire_06": {
+      "id": "maid_hire_06",
+      "title": "The Weight of Utang na Loob",
+      "narrative": "Rosa backs down, the familiar weight of hiya and utang na loob pressing on her chest. 'Pasensya na po, Ma'am. Nagtatanong lang po.' Mrs. Ramos waves her hand dismissively. 'Wag ka nang mag-alala sa ganyan, Ate Rosa. Magtiwala ka na lang sa amin. Hindi ka namin pababayaan.'\n\nThat night, Rosa lies on her mattress thinking about what 'hindi ka namin pababayaan' actually means. It means P3,500 a month -- less than what a part-time student earns at Jollibee. It means washing clothes by hand because Mrs. Ramos won't buy a washing machine. It means she hasn't seen Tonyo or her children in Samar for three years because she has no rest day long enough to travel, and no savings for the fare.\n\nShe thinks about what her mother used to say: 'Ang utang na loob ay hindi utang na pera -- hindi mo mababayaran ng karapatan mo.' But in Manila, inside this house, the lines between gratitude and servitude have blurred into something Rosa can no longer tell apart.\n\nThe next morning, Mrs. Ramos asks Rosa to help prepare food for her weekend catering business -- lechon kawali for 50 people. 'Extra lang yan, Ate Rosa, dagdag trabaho pero walang dagdag bayad -- pamilya naman tayo diba?' Rosa feels her jaw tighten. She picks up the knife and starts chopping.",
+      "theme": "kasambahay_law",
+      "choices": [
+        {
+          "text": "While chopping, decide that enough is enough -- she needs to learn her rights no matter what.",
+          "nextNode": "maid_hire_05",
+          "consequence": "The catering demand becomes the final push Rosa needs to start educating herself.",
+          "scoreChange": 7,
+          "knowledgeGained": "Tasks outside the original scope of work (like helping with an employer's business) may constitute additional labor that requires separate compensation."
+        },
+        {
+          "text": "Accept the catering work and everything else -- this is just how life is for people like her.",
+          "nextNode": "maid_work_01",
+          "consequence": "Rosa's resignation deepens as more demands are piled on without compensation.",
+          "scoreChange": -7,
+          "knowledgeGained": null
+        }
+      ],
+      "isEnding": false
+    },
+    "maid_work_01": {
+      "id": "maid_work_01",
+      "title": "A Day Without End",
+      "narrative": "Monday. Rosa's alarm -- the rooster from the neighbor's yard -- goes off at 4:50 AM. By 5:00, she's in the kitchen boiling water for Mr. Ramos's coffee and frying tocino for the children's breakfast. By 6:30, the family has eaten and left, and Rosa faces the wreckage: greasy plates, rice stuck to the kaldero, spilled juice on the tile floor.\n\nShe washes dishes, sweeps and mops the entire ground floor -- sala, dining room, kitchen, two bathrooms -- then moves upstairs: three bedrooms, another bathroom, the hallway. By 8:00, she's hauling the laundry basket to the outdoor labahan. Three loads today -- Mr. Ramos's polo shirts that must be hand-washed, the children's school uniforms, the bed sheets. Her knuckles are cracked and stained from years of detergent exposure.\n\nBy 10:00, she's ironing. By 11:00, cooking lunch: sinigang and fried fish. The children come home at 2:00 -- merienda, then helping Miguel with his math homework while keeping Sofia from climbing the bookshelf. By 5:00, she starts dinner. By 7:30, dishes again. By 9:00, folding laundry while the Ramos family watches TV in the sala.\n\nAt 10:00 PM, she finally sits on her mattress. Seventeen hours. Tomorrow will be the same. It has been the same for 1,095 days.\n\nMrs. Ramos appears at her door: 'Ate Rosa, bukas pwede mo bang hugasan yung kotse ni Sir? At yung garden, nakakalat na.'",
+      "theme": "no_benefits",
+      "choices": [
+        {
+          "text": "Tell Mrs. Ramos respectfully that car washing and gardening were not part of her original duties, and ask when she can have a rest day.",
+          "nextNode": "maid_work_03",
+          "consequence": "Rosa asserts boundaries on her duties and raises the rest day issue for the first time.",
+          "scoreChange": 12,
+          "knowledgeGained": "Under RA 10361 Sec. 28, every kasambahay is entitled to at least 24 consecutive hours of rest per week. The employer must determine this schedule with the kasambahay."
+        },
+        {
+          "text": "Agree to wash the car and clean the garden -- adding two more tasks to her already crushing schedule.",
+          "nextNode": "maid_work_04",
+          "consequence": "Rosa's workload grows heavier while her pay stays the same.",
+          "scoreChange": -5,
+          "knowledgeGained": null
+        },
+        {
+          "text": "Say nothing about the new tasks, but bring up the idea of at least one Sunday off per month.",
+          "nextNode": "maid_work_02",
+          "consequence": "Rosa tries a compromise approach -- accepting extra duties but asking for minimal rest.",
+          "scoreChange": 5,
+          "knowledgeGained": "While RA 10361 guarantees a WEEKLY rest day, even requesting one day off per month would be a step toward asserting the right."
+        }
+      ],
+      "isEnding": false
+    },
+    "maid_work_02": {
+      "id": "maid_work_02",
+      "title": "Fellow Workers in the Shadows",
+      "narrative": "Rosa catches Ate Nena over the fence the next morning. Nena, 52, has been a kasambahay for the Garcia family next door for five years. They talk in hushed Tagalog while pretending to hang laundry.\n\n'Magkano sahod mo, Ate Nena?' Rosa asks. 'P4,000,' Nena replies. 'Pero dati P3,000 lang. Tumataas lang kasi nag-threaten akong aalis.' Rosa tells her about RA 10361 and the P6,000 minimum. Nena's eyes widen. 'Totoo ba yan? Hindi ko alam. Ang alam ko lang, wala akong choice kasi wala akong natapos.'\n\nNena shares her own struggles: no rest day, no 13th month, no SSS. Her employer even deducts P300 every time the Garcia children's clothes 'fade' in the wash. 'Sabi nila, kasalanan ko daw kasi hindi ko binabad ng maayos.'\n\nBut Nena also shares something useful: she knows a kasambahay named Ate Mercy in the next street who actually has SSS and a written contract. 'Mabait daw ang amo niya. Baka pwede natin siyang kausapin, tanungin kung paano niya nakuha yun.'\n\nRosa and Nena agree to talk to Ate Mercy together on the next opportunity.",
+      "theme": "kasambahay_law",
+      "choices": [
+        {
+          "text": "Visit Ate Mercy as soon as possible and learn how she got a proper contract and benefits.",
+          "nextNode": "maid_work_05",
+          "consequence": "Rosa and Nena find a role model who shows them what lawful kasambahay employment looks like.",
+          "scoreChange": 10,
+          "knowledgeGained": "A proper kasambahay arrangement under RA 10361 includes a written contract, minimum wage, SSS/PhilHealth/Pag-IBIG registration, weekly rest days, and 13th month pay. Some employers DO comply."
+        },
+        {
+          "text": "Start a small group chat with Nena and other kasambahay in the subdivision to share information about their rights.",
+          "nextNode": "maid_work_06",
+          "consequence": "Rosa begins building a support network among kasambahay in the area.",
+          "scoreChange": 12,
+          "knowledgeGained": "RA 10361 Sec. 40 encourages the formation of kasambahay organizations at the barangay level. Collective action is more powerful than individual complaints."
+        }
+      ],
+      "isEnding": false
+    },
+    "maid_work_03": {
+      "id": "maid_work_03",
+      "title": "Drawing the Line",
+      "narrative": "'Ma'am,' Rosa says carefully, 'yung paghugas ng kotse at paglilinis ng garden, hindi po yun kasama sa pinag-usapan natin nung dumating ako. Yung luto, linis, laba, at pag-aalaga ng mga bata -- yun po ang trabaho ko. At Ma'am... tatlong taon na po ako dito, wala pa po akong day off kahit isang araw.'\n\nMrs. Ramos's face hardens. 'Ate Rosa, sino magluluto kung wala ka? Sino mag-aalaga kay Sofia? Hindi pwedeng mag-day off kung walang papalit sa iyo.' She crosses her arms. 'At yung kotse at garden -- bahay namin ito. Part ng maintenance yun. Ikaw ang kasambahay, trabaho mo lahat ng bahay.'\n\nRosa feels her stomach clench but forces herself to continue. 'Ma'am, sa batas po -- RA 10361 -- may karapatan po ang kasambahay sa isang araw na day off every week. At kung magtatrabaho po ako sa day off ko, may additional na 30% po sa sahod.'\n\nMrs. Ramos's expression shifts to cold surprise. 'Ngayon may alam ka na sa batas, Ate Rosa? Kanino mo yan narinig? Baka may sinusundan kang advice na hindi naman tama.' She pauses, then adds more softly: 'Ate Rosa, huwag mong sirain ang magandang relasyon natin. Matagal ka na sa amin. Huwag mo kaming ituring na amo lang -- pamilya ka namin.'",
+      "theme": "no_benefits",
+      "choices": [
+        {
+          "text": "Hold firm -- say that family doesn't mean she gives up her legal rights, and suggest they settle this properly.",
+          "nextNode": "maid_wage_01",
+          "consequence": "Rosa refuses to let emotional manipulation override her legal rights.",
+          "scoreChange": 15,
+          "knowledgeGained": "The 'parang pamilya' rhetoric is a common tactic to discourage kasambahay from asserting legal rights. Under RA 10361, the kasambahay-employer relationship is a LABOR relationship regardless of familial closeness."
+        },
+        {
+          "text": "Back down on the rest day for now, but insist that at minimum the car and garden are not her responsibility.",
+          "nextNode": "maid_work_04",
+          "consequence": "Rosa compromises, winning on duties but losing on the rest day issue.",
+          "scoreChange": 5,
+          "knowledgeGained": "A kasambahay's duties should be clearly defined in the written contract under RA 10361 Sec. 11. Additional tasks not in the contract may constitute additional labor."
+        }
+      ],
+      "isEnding": false
+    },
+    "maid_work_04": {
+      "id": "maid_work_04",
+      "title": "The Expanding Burden",
+      "narrative": "Rosa washes Mr. Ramos's SUV the next morning. The black Fortuner is caked with mud from a weekend drive to Tagaytay -- a trip Rosa was not invited on, naturally. She spends an hour and a half scrubbing, rinsing, and drying, her arms aching from reaching across the roof. Then she moves to the garden: pulling weeds, sweeping dead leaves, watering the plants.\n\nBy the time she's done, it's already 10 AM, and she hasn't started the regular housework. She rushes through the cleaning, barely manages to cook lunch on time, and burns the rice. Mrs. Ramos scowls. 'Ate Rosa, ang tagal mong magluto ngayon. Anong nangyari?'\n\nRosa wants to say: 'Yung kotse at garden mo ang nangyari.' But she says nothing.\n\nThe following week, a new task appears. Mrs. Ramos's catering business -- 'Ramos Homestyle Catering' -- has a big order: adobo, caldereta, and pancit canton for a corporate event. 'Ate Rosa, tulungan mo ako. We need to cook for 80 people by Saturday.' Rosa spends the entire week doing double duty: her regular 17-hour workload plus cooking for the catering business. She sees no extra centavo.\n\nHer back aches. Her fingers are swollen. She calculates: P3,500 divided by 30 days, divided by 17 hours. That's P6.86 per hour. Less than the price of a single piece of pandesal.",
+      "theme": "wage_theft",
+      "choices": [
+        {
+          "text": "Confront Mrs. Ramos about the catering work -- helping with a business is NOT part of being a kasambahay.",
+          "nextNode": "maid_wage_01",
+          "consequence": "Rosa draws a clear line between domestic work and commercial labor.",
+          "scoreChange": 12,
+          "knowledgeGained": "If a kasambahay is made to work for the employer's business, this may create a separate employer-employee relationship under the Labor Code, entitling the worker to regular labor standards including minimum wage under the general Labor Code (higher than kasambahay minimum)."
+        },
+        {
+          "text": "Start secretly documenting all extra tasks and unpaid catering hours in her notebook.",
+          "nextNode": "maid_wage_02",
+          "consequence": "Rosa builds a record of exploitation that could become powerful evidence later.",
+          "scoreChange": 8,
+          "knowledgeGained": "Written records with dates, times, and descriptions of work performed are admissible evidence in DOLE complaints and NLRC cases."
+        },
+        {
+          "text": "Accept the situation -- at least she has a roof over her head and food to eat.",
+          "nextNode": "maid_wage_03",
+          "consequence": "Rosa surrenders to the exploitation, her world growing smaller.",
+          "scoreChange": -8,
+          "knowledgeGained": null
+        }
+      ],
+      "isEnding": false
+    },
+    "maid_work_05": {
+      "id": "maid_work_05",
+      "title": "A Model Employer",
+      "narrative": "Rosa and Nena manage to visit Ate Mercy during a rare moment when both their employers are out. Mercy, 45, works for the Lim family three houses down. She welcomes them with instant coffee and a warm smile.\n\n'Oo, may contract ako,' Mercy says, pulling out a folder from her cabinet. She shows them a two-page document: clearly stating her duties (cooking, cleaning, laundry, childcare for one child), her salary (P7,500 per month -- above minimum), her rest day (every Sunday), and her benefits. 'Naka-SSS ako, may PhilHealth, may Pag-IBIG. Si Ma'am Lim mismo ang nagpa-register sa akin.'\n\nRosa stares at the contract like it's a holy relic. 'Paano mo nakuha yan, Ate Mercy?' Mercy laughs. 'Hindi ko kinuha -- binigay nila. Pero alam mo, noong una, wala rin akong ganyan. Nagtanong ako sa barangay, at sila ang nagsabi sa amo ko na required pala. May Kasambahay Desk sa barangay namin.'\n\nMercy shows them her SSS statement -- she has actual contributions, actual savings. She even received her 13th month pay: P7,500 last December. Rosa does the math: in three years, she should have received P18,000 in 13th month pay alone. Zero. She received zero.",
+      "theme": "kasambahay_law",
+      "choices": [
+        {
+          "text": "Ask Mercy to help her approach the barangay Kasambahay Desk for assistance with her situation.",
+          "nextNode": "maid_fight_01",
+          "consequence": "Rosa takes the first step toward formal resolution through proper channels.",
+          "scoreChange": 12,
+          "knowledgeGained": "Under RA 10361 Sec. 41, every barangay shall establish a Kasambahay Desk to register kasambahay, maintain a registry, and assist in settling disputes."
+        },
+        {
+          "text": "Go back to Mrs. Ramos armed with Mercy's contract as proof that proper employment is possible.",
+          "nextNode": "maid_wage_01",
+          "consequence": "Rosa uses a real-world example to counter the 'nobody does that' excuse.",
+          "scoreChange": 10,
+          "knowledgeGained": "Employers cannot claim ignorance of RA 10361 -- the law has been in effect since 2013 and barangays are mandated to enforce it."
+        }
+      ],
+      "isEnding": false
+    },
+    "maid_work_06": {
+      "id": "maid_work_06",
+      "title": "Kasambahay Solidarity",
+      "narrative": "Rosa creates a group chat on Messenger: 'Kasambahay ng BF Homes.' Within a week, there are seven members -- Rosa, Nena, Ate Mercy, and four others from nearby streets. Their stories are heartbreakingly similar: sub-minimum wages ranging from P2,500 to P4,000, no contracts, no rest days, no benefits.\n\nAte Diding, 55, shares that her employer deducts P1,000 every month for 'electricity and water usage.' Ate Cora, 39, reveals she hasn't been paid for two months because her employer said 'wala pa akong cash, next month na lang.' Ate Joy, 28, the youngest, says her employer locks the gate and won't give her a key: 'Parang preso ako sa loob.'\n\nMercy, the only one with a proper contract, becomes the group's informal advisor. 'Lahat yan, violation ng Batas Kasambahay,' she tells them. 'Hindi kayo alone. Sa buong Pilipinas, milyon ang kasambahay na ganyan ang kalagayan. Pero may batas na -- ang problema, hindi lang naipapatupad.'\n\nThe group decides to act. They'll support each other as they each approach their employers. And if that fails, they'll go to the barangay together. Mas malakas ang boses pag marami.",
+      "theme": "kasambahay_law",
+      "choices": [
+        {
+          "text": "Use the group's collective strength -- Rosa approaches the Ramos family about a contract, knowing she has support.",
+          "nextNode": "maid_wage_01",
+          "consequence": "Rosa draws courage from solidarity and confronts her employer about all the violations.",
+          "scoreChange": 12,
+          "knowledgeGained": "Collective action among kasambahay is protected and encouraged under RA 10361 Sec. 40. Workers have a constitutional right to self-organization under Art. XIII of the 1987 Constitution."
+        },
+        {
+          "text": "Suggest that the entire group go to the barangay Kasambahay Desk together to report multiple violations.",
+          "nextNode": "maid_fight_01",
+          "consequence": "The kasambahay act collectively, making it harder for any single employer to retaliate.",
+          "scoreChange": 15,
+          "knowledgeGained": "Filing complaints collectively gives each kasambahay protection in numbers and makes it harder for employers to dismiss or retaliate against individual workers."
+        }
+      ],
+      "isEnding": false
+    },
+    "maid_wage_01": {
+      "id": "maid_wage_01",
+      "title": "Counting What Is Owed",
+      "narrative": "Rosa sits down with her notebook and does the full accounting of what the Ramos family owes her under the law.\n\nWage underpayment: P6,000 minimum minus P3,500 actual = P2,500 per month. Over 36 months = P90,000.\n\n13th month pay: P6,000 x 3 years = P18,000 never received.\n\nRest day premium: If she had worked on her rest days (which she did -- ALL of them), she's owed an additional 30% for each of those days. That's roughly 52 rest days per year x 3 years = 156 days at 30% premium.\n\nSSS, PhilHealth, Pag-IBIG: Three years of contributions the employer should have remitted, including the employer's share.\n\nThe number is staggering. Even conservatively, the Ramos family owes Rosa well over P150,000.\n\nRosa's hands shake as she writes the final figure. P150,000. That's more than three years of what they actually paid her. That could build the sari-sari store. That could pay for Junjun's entire remaining tuition. That could buy Tonyo's medication for years.\n\nShe approaches Mrs. Ramos with her notebook. 'Ma'am, kailangan po talaga nating pag-usapan ito. Ayon po sa batas, ito po ang mga karapatan ko na hindi po nabibigay sa akin.'",
+      "theme": "wage_theft",
+      "choices": [
+        {
+          "text": "Present the full computation calmly and ask the Ramos family to comply going forward, with a plan to settle back wages over time.",
+          "nextNode": "maid_wage_04",
+          "consequence": "Rosa takes a firm but fair approach, giving the employer a chance to make things right.",
+          "scoreChange": 15,
+          "knowledgeGained": "Under RA 10361 Sec. 24, wage underpayment is a violation punishable by fine. Back wages can be claimed for the entire period of underpayment."
+        },
+        {
+          "text": "Focus only on adjusting the current salary to P6,000 and getting a contract -- don't bring up back wages yet.",
+          "nextNode": "maid_wage_05",
+          "consequence": "Rosa takes a gradual approach, prioritizing current compliance over historical claims.",
+          "scoreChange": 8,
+          "knowledgeGained": "While it may be strategic to start with current compliance, kasambahay should be aware they can claim back wages for the full period of underpayment."
+        },
+        {
+          "text": "Demand everything at once and threaten to go to DOLE if the Ramos family doesn't pay immediately.",
+          "nextNode": "maid_wage_06",
+          "consequence": "Rosa's aggressive approach puts the employer on the defensive and escalates the conflict.",
+          "scoreChange": 3,
+          "knowledgeGained": "While kasambahay have the right to file complaints with DOLE, an adversarial approach may lead to immediate termination. It's often better to negotiate first."
+        }
+      ],
+      "isEnding": false
+    },
+    "maid_wage_02": {
+      "id": "maid_wage_02",
+      "title": "The Secret Ledger",
+      "narrative": "Rosa's notebook grows thicker each week. She writes everything in careful block letters -- dates, times, tasks performed, any extra work outside her usual duties. She notes the catering jobs: 'Oct 15 -- cooked adobo, caldereta for 80 pax, employer's catering business, 6 extra hours, no pay.' She notes the deductions: 'Nov 3 -- Ma'am deducted P800 for broken plate (Corelle, actually from Divisoria, costs P150 at most).'\n\nShe also starts taking photos when she can. A screenshot of Mrs. Ramos's catering page on Facebook, showing Rosa's cooking being sold for P250 per tray. A photo of her payroll -- or rather, the crumpled P3,500 in bills that Mrs. Ramos hands her each month with no payslip, no record, nothing to sign.\n\nOne day, while cleaning Mrs. Ramos's home office, Rosa sees a document on the desk: the family's annual income tax return. Combined household income: P2.4 million per year. That's P200,000 a month. They pay Rosa P3,500 -- 1.75% of their monthly income -- for 17 hours of work every single day.\n\nThe math hits Rosa like a slap. These are not poor people who can't afford to pay her fairly. They simply choose not to.",
+      "theme": "wage_theft",
+      "choices": [
+        {
+          "text": "Use all this evidence to prepare a formal complaint and approach the barangay for mediation.",
+          "nextNode": "maid_fight_01",
+          "consequence": "Rosa's thorough documentation becomes the foundation of a strong legal case.",
+          "scoreChange": 12,
+          "knowledgeGained": "Evidence such as photos, written logs, and financial records can support a kasambahay's complaint at the barangay level or before DOLE. The burden of proof for wage claims often shifts to the employer."
+        },
+        {
+          "text": "Confront Mrs. Ramos privately with the computation of what she's owed.",
+          "nextNode": "maid_wage_04",
+          "consequence": "Rosa confronts her employer armed with undeniable evidence.",
+          "scoreChange": 10,
+          "knowledgeGained": "Presenting clear documentation of violations gives the kasambahay a stronger negotiating position than verbal complaints alone."
+        }
+      ],
+      "isEnding": false
+    },
+    "maid_wage_03": {
+      "id": "maid_wage_03",
+      "title": "The Shrinking World",
+      "narrative": "Rosa accepts. She always accepts. She cooks for the catering, washes the car, cleans the garden, and still does all her regular work. Her world has shrunk to the four walls of the Ramos house. She hasn't left the subdivision in three months. She hasn't been to a mall, a park, or a church.\n\nHer body is breaking down. Her lower back throbs constantly from years of hand-washing laundry in a bent position. Her hands are rough and cracked, the skin peeling from bleach and detergent. She's lost weight -- not from dieting, but from eating whatever's left after the Ramos family finishes their meals. Sometimes it's just rice and the broth from last night's sinigang.\n\nOne evening, Rosa is ironing Mr. Ramos's polo shirt when she feels a sharp pain in her chest. She sits down, breathing hard. Is this a heart attack? Gas pain? She doesn't know because she hasn't seen a doctor in three years. She has no PhilHealth card, no health insurance of any kind. If she collapses tonight, who will take her to the hospital? Who will pay?\n\nThe ironing board wavers. Rosa grips it and steadies herself. She thinks of Tonyo and her children in Samar. If something happens to her in this house, they might not even know for days.",
+      "theme": "no_benefits",
+      "choices": [
+        {
+          "text": "The health scare is a wake-up call -- she MUST demand PhilHealth registration and see a doctor immediately.",
+          "nextNode": "maid_wage_04",
+          "consequence": "Fear for her own life finally overcomes Rosa's fear of confrontation.",
+          "scoreChange": 10,
+          "knowledgeGained": "Under RA 10361 Sec. 30-33, the employer is REQUIRED to register the kasambahay for PhilHealth, SSS, and Pag-IBIG. The employer pays the larger share of contributions. Failure to register is a punishable offense."
+        },
+        {
+          "text": "Tell Mrs. Ramos about the chest pain and ask to be taken to a clinic.",
+          "nextNode": "maid_abuse_01",
+          "consequence": "Rosa asks for help, and the employer's response reveals the true nature of their 'family' relationship.",
+          "scoreChange": 5,
+          "knowledgeGained": "Under RA 10361 Sec. 29, the employer must provide the kasambahay with emergency medical assistance."
+        }
+      ],
+      "isEnding": false
+    },
+    "maid_wage_04": {
+      "id": "maid_wage_04",
+      "title": "The Reckoning",
+      "narrative": "Rosa lays her notebook on the dining table, open to the page with her calculations. Mrs. Ramos stares at the numbers. Mr. Ramos, who has joined the conversation at his wife's panicked request, adjusts his glasses and reads silently.\n\nP90,000 in wage underpayment. P18,000 in unpaid 13th month. Estimated P30,000+ in rest day premiums. SSS, PhilHealth, and Pag-IBIG contributions: unremitted for three years.\n\n'Ate Rosa,' Mr. Ramos says slowly, 'saan mo naman nakuha ang mga numerong ito?' His voice is controlled but Rosa can see his jaw working.\n\n'Sa batas po, Sir. RA 10361. Batas Kasambahay. Tatlong taon na po ang batas na ito, at hindi po kayo sumunod kahit isa.' Rosa's voice is trembling but clear.\n\nMrs. Ramos erupts: 'Ganyan ka ba magpasalamat, Ate Rosa? Tatlong taon naming pinakain ka, binigyan ng tirahan, tinuring na pamilya -- tapos ngayon, ganito?'\n\nMr. Ramos raises his hand to quiet his wife. He looks at the notebook again, then at Rosa. 'Ate Rosa, let's talk about this rationally. Siguro may point ka. Pero hindi namin kayang bayaran lahat yan ng isang bagsakan.'",
+      "theme": "wage_theft",
+      "choices": [
+        {
+          "text": "Accept a reasonable installment plan for back wages, but insist on immediate adjustment to minimum wage and a written contract starting today.",
+          "nextNode": "maid_wage_05",
+          "consequence": "Rosa negotiates firmly but fairly -- securing immediate compliance with future protections while allowing time for back payments.",
+          "scoreChange": 15,
+          "knowledgeGained": "Negotiated settlements that include immediate compliance with the law plus a payment plan for back wages are a practical resolution. The agreement should be in writing and witnessed."
+        },
+        {
+          "text": "Tell them this isn't a negotiation -- either they comply with the full law or she files a complaint with DOLE.",
+          "nextNode": "maid_wage_06",
+          "consequence": "Rosa takes an uncompromising stance.",
+          "scoreChange": 5,
+          "knowledgeGained": "Kasambahay can file complaints directly with DOLE through the Kasambahay Desk or through the barangay. SENA (Single Entry Approach) provides a 30-day mandatory mediation before formal proceedings."
+        }
+      ],
+      "isEnding": false
+    },
+    "maid_wage_05": {
+      "id": "maid_wage_05",
+      "title": "A New Agreement",
+      "narrative": "After three hours of tense negotiation at the dining table, Rosa and the Ramos family reach an agreement. Mr. Ramos, the more reasonable of the two, drafts the terms on his laptop:\n\n1. Rosa's salary is immediately adjusted to P6,500 per month (above the P6,000 minimum).\n2. A written employment contract will be executed, specifying Rosa's duties: cooking, cleaning, laundry, and childcare ONLY. No catering work, no car washing, no gardening.\n3. Rosa gets every Sunday off, starting this week.\n4. The Ramos family will register Rosa for SSS, PhilHealth, and Pag-IBIG within 30 days.\n5. 13th month pay will be given every December.\n6. Back wages of P90,000 will be paid in monthly installments of P5,000 over 18 months.\n\nRosa reads the document carefully. It's not everything she's owed -- the rest day premiums and some other amounts aren't included -- but it's a massive improvement. She thinks about what Ka Linda from Kasambahay United told her: 'Minsan, ang magandang settlement ay mas mabilis at mas sigurado kaysa sa mahabang kaso.'\n\nShe signs. Mr. Ramos signs. Mrs. Ramos signs last, her lips pressed thin.",
+      "theme": "kasambahay_law",
+      "choices": [
+        {
+          "text": "Keep a copy of the signed agreement, continue documenting, and verify that the Ramos family actually follows through.",
+          "nextNode": "maid_fight_04",
+          "consequence": "Rosa secures the agreement but stays vigilant -- trust but verify.",
+          "scoreChange": 15,
+          "knowledgeGained": "Always keep copies of signed agreements. Under RA 10361 Sec. 11, both employer and kasambahay should retain copies of the employment contract. Follow up to ensure SSS/PhilHealth/Pag-IBIG registration actually happens."
+        },
+        {
+          "text": "Feel relieved and trust that the Ramos family will honor their word without further monitoring.",
+          "nextNode": "maid_fight_05",
+          "consequence": "Rosa relaxes too soon, and compliance becomes inconsistent over time.",
+          "scoreChange": 3,
+          "knowledgeGained": null
+        }
+      ],
+      "isEnding": false
+    },
+    "maid_wage_06": {
+      "id": "maid_wage_06",
+      "title": "The Employer Strikes Back",
+      "narrative": "The threat of DOLE changes the atmosphere in the Ramos household overnight. Mrs. Ramos becomes cold and distant. She stops calling Rosa 'Ate' and starts calling her 'Rosa' -- flat, without warmth. Mr. Ramos avoids eye contact.\n\nThree days later, Mrs. Ramos calls Rosa to the sala. 'Rosa, nag-isip kami. Siguro tama ka -- hindi na kami nag-comply sa batas. Kaya ito ang desisyon namin: we'll give you one month's notice. Aalis ka sa bahay na ito sa loob ng 30 days. Bibigyan ka namin ng P10,000 as separation -- that's more than generous.'\n\nRosa feels the ground shift. P10,000? When they owe her over P100,000? And she'll lose her housing, her source of income, her connection to the children she's raised?\n\nMrs. Ramos adds, with a thin smile: 'At kung pupunta ka sa DOLE, Rosa, tandaan mo -- wala kang contract. Wala kang evidence. Sinong paniniwalaan nila -- dalawang professional na may titulo, o isang kasambahay na hindi nagtapos ng high school?'\n\nThe threat is clear. But Mrs. Ramos is wrong about one thing: Rosa has evidence. The notebook. The photos. Three years of meticulous records.",
+      "theme": "abuse",
+      "choices": [
+        {
+          "text": "Accept the termination but refuse the P10,000 -- go directly to the barangay and file a complaint for all unpaid wages and benefits.",
+          "nextNode": "maid_fight_01",
+          "consequence": "Rosa knows the P10,000 is an insult and decides to pursue the full amount through proper channels.",
+          "scoreChange": 12,
+          "knowledgeGained": "Under RA 10361 Sec. 34, if the kasambahay is unjustly dismissed, they are entitled to already earned wages, 13th month pay, and separation pay equivalent to 15 days' work for every year of service."
+        },
+        {
+          "text": "Tell Mrs. Ramos that terminating her in retaliation for asserting her rights is ILLEGAL and she knows it.",
+          "nextNode": "maid_fight_02",
+          "consequence": "Rosa stands her ground and calls out the retaliatory termination.",
+          "scoreChange": 10,
+          "knowledgeGained": "Retaliatory dismissal for asserting labor rights is illegal under Philippine law. The kasambahay can file an illegal dismissal complaint, which may result in reinstatement and back wages."
+        },
+        {
+          "text": "Take the P10,000 and leave quietly -- she's tired of fighting.",
+          "nextNode": "maid_fight_06",
+          "consequence": "Rosa accepts far less than she's owed and leaves without her rightful compensation.",
+          "scoreChange": -8,
+          "knowledgeGained": null
+        }
+      ],
+      "isEnding": false
+    },
+    "maid_abuse_01": {
+      "id": "maid_abuse_01",
+      "title": "The True Colors",
+      "narrative": "Rosa approaches Mrs. Ramos the morning after her chest pain. 'Ma'am, masakit po yung dibdib ko kagabi. Pwede po ba akong magpa-check up sa health center?'\n\nMrs. Ramos barely looks up from her phone. 'Ate Rosa, wag kang OA naman. Baka kabag lang yan. Uminom ka ng biogesic. Ang daming trabaho ngayon -- yung mga bisita ni Sir, darating sila mamayang hapon. Kailangan malinis ang buong bahay.'\n\nRosa presses: 'Ma'am, hindi po biro yung chest pain. Baka kailangan ko po ng--'\n\n'Ate Rosa.' Mrs. Ramos's voice turns sharp. 'Sinabi ko nang kabag lang yan. Kung gusto mong magpa-clinic, ikaw ang bahala sa gastos mo. Wala akong oras para ihatid ka -- may meeting pa ako.' She pauses, then adds: 'At kung masyado kang masakitin, baka kailangan ko na lang maghanap ng iba.'\n\nThe threat hangs in the air like smoke. Rosa returns to the kitchen and takes a Biogesic with water. Her hands are shaking -- not from the chest pain, but from the realization that in three years of 'parang pamilya,' she cannot even ask to see a doctor without being threatened with replacement.\n\nThat evening, the chest pain returns. Rosa endures it in silence, praying the rosary on her mattress.",
+      "theme": "abuse",
+      "choices": [
+        {
+          "text": "Go to the barangay health center on her own the next morning -- her health comes first, regardless of what Mrs. Ramos says.",
+          "nextNode": "maid_abuse_03",
+          "consequence": "Rosa prioritizes her health and asserts her right to medical care.",
+          "scoreChange": 10,
+          "knowledgeGained": "Under RA 10361 Sec. 29, the employer must provide emergency medical assistance to the kasambahay at no cost. A kasambahay cannot be prevented from seeking medical care."
+        },
+        {
+          "text": "Endure the pain and keep working -- she can't risk being replaced.",
+          "nextNode": "maid_abuse_02",
+          "consequence": "Rosa's fear of losing her job overrides her concern for her own health.",
+          "scoreChange": -7,
+          "knowledgeGained": null
+        }
+      ],
+      "isEnding": false
+    },
+    "maid_abuse_02": {
+      "id": "maid_abuse_02",
+      "title": "When 'Tanga' Becomes Routine",
+      "narrative": "The verbal abuse escalates as the weeks pass. Rosa has noticed the pattern: Mrs. Ramos is sweetest when she needs something, and cruelest when she's stressed from work.\n\n'Ang tanga mo naman, Ate Rosa! Ilang beses ko bang sasabihin -- hindi ganyan ang pagplancha ng polo ni Sir!' The words are like small cuts -- each one barely draws blood, but after three years, Rosa is covered in invisible scars.\n\nThe children have started to absorb their mother's tone. Eight-year-old Miguel, once sweet, now says: 'Ate Rosa, bilisan mo! Ang bagal mo!' Five-year-old Sofia still clings to Rosa, but even she has begun parroting: 'Tanga!' when Rosa drops something.\n\nOne evening, Rosa serves dinner five minutes late because the rice cooker malfunctioned. Mr. Ramos sighs heavily. Mrs. Ramos slams her hand on the table: 'Rosa! Hindi ka ba marunong magluto? Tatlong taon ka na dito, ganito pa rin?! Siguro sa probinsya niyo ganyan talaga -- walang kwenta!'\n\nThe insult cuts deep. 'Walang kwenta.' Worthless. Rosa stands frozen by the dining table, a serving spoon in her hand, tears streaming silently down her face.\n\nMrs. Ramos rolls her eyes. 'Ayan, iiyak na naman. Drama queen.'",
+      "theme": "abuse",
+      "choices": [
+        {
+          "text": "Tell Mrs. Ramos clearly: 'Ma'am, may dignidad po ako. Bawal po ang verbal abuse sa kasambahay ayon sa batas.'",
+          "nextNode": "maid_abuse_04",
+          "consequence": "Rosa asserts her dignity and invokes her legal protection against abuse.",
+          "scoreChange": 15,
+          "knowledgeGained": "RA 10361 Sec. 5 explicitly states that kasambahay shall not be subjected to any form of psychological violence or abuse, including verbal degradation. This is a punishable offense under the law."
+        },
+        {
+          "text": "Say nothing and retreat to her room, crying silently where no one can hear.",
+          "nextNode": "maid_abuse_04",
+          "consequence": "Rosa absorbs the abuse in silence, her spirit slowly breaking.",
+          "scoreChange": -5,
+          "knowledgeGained": null
+        },
+        {
+          "text": "Call her husband Tonyo in Samar that night and tell him everything.",
+          "nextNode": "maid_abuse_03",
+          "consequence": "Rosa reaches out to her support system for the first time in three years.",
+          "scoreChange": 7,
+          "knowledgeGained": "Emotional support from family and friends is crucial for workers experiencing abuse. Isolation is a common tactic of abusive employers."
+        }
+      ],
+      "isEnding": false
+    },
+    "maid_abuse_03": {
+      "id": "maid_abuse_03",
+      "title": "Breaking the Isolation",
+      "narrative": "Rosa calls Tonyo from the outdoor labahan area at 10:30 PM, speaking in a near-whisper in Waray. She tells him everything -- the P3,500 salary, the 17-hour days, the verbal abuse, the chest pains, the lack of rest days. For the first time in three years, she admits the truth she's been hiding in every phone call: she is not okay.\n\nTonyo is silent for a long moment. Then: 'Rosa, gulik na didi. Uli na. Diri na importante an kwarta kun mawawara ka naman ha akon.' Come home. The money isn't important if I lose you.\n\nBut Rosa knows it's not that simple. If she leaves with nothing -- no back wages, no separation pay, no SSS -- she'll go home to Samar with empty hands after three years of sacrifice. Junjun's tuition is due next month. Tonyo's medication costs P800 a month.\n\nShe visits the barangay health center the next day, telling Mrs. Ramos she's going to buy detergent. The doctor -- a young woman doing her rural service -- checks her blood pressure: 150/95. Stage 2 hypertension. 'Ate, kailangan mo ng regular medication. At kailangan mo ng rest. Sobrang taas ng BP mo.'\n\nThe doctor also asks: 'May PhilHealth ka ba?' Rosa shakes her head. The doctor frowns. 'Kasambahay ka? Eh di dapat may PhilHealth ka -- obligasyon ng employer mo yan.'",
+      "theme": "abuse",
+      "choices": [
+        {
+          "text": "Ask the doctor to write a medical certificate documenting her condition and the need for rest -- she'll use it as evidence.",
+          "nextNode": "maid_abuse_05",
+          "consequence": "Rosa gets medical documentation that proves the toll of her working conditions.",
+          "scoreChange": 12,
+          "knowledgeGained": "Medical certificates documenting health conditions caused or aggravated by working conditions are important evidence. High blood pressure from overwork and stress supports a case for enforcing rest day and benefit provisions."
+        },
+        {
+          "text": "Thank the doctor and go back to the Ramos house, resolving to endure until she can save enough to leave on her own terms.",
+          "nextNode": "maid_abuse_04",
+          "consequence": "Rosa gets a reality check about her health but still doesn't take action.",
+          "scoreChange": 0,
+          "knowledgeGained": null
+        }
+      ],
+      "isEnding": false
+    },
+    "maid_abuse_04": {
+      "id": "maid_abuse_04",
+      "title": "The Slap",
+      "narrative": "It happens on a Thursday afternoon. Mrs. Ramos comes home from work in a foul mood -- something about a client backing out of a deal. Rosa is in the kitchen, bathing Sofia, who is giggling and splashing water everywhere.\n\n'Rosa! Bakit basa yung sahig ng kitchen?!' Mrs. Ramos screams from the doorway. 'Ang kalat-kalat! Hindi ka ba marunong mag-linis?!'\n\nRosa tries to explain: 'Ma'am, nilalabhan ko lang po si Sofia, nag-splash po siya--'\n\nThe slap comes fast and hard. Mrs. Ramos's palm connects with Rosa's left cheek with a crack that echoes off the kitchen tiles. Sofia bursts into tears. Rosa stumbles backward, her ear ringing, her cheek burning.\n\n'Huwag mo akong sagutan!' Mrs. Ramos hisses, her face inches from Rosa's. 'Huwag. Mo. Akong. Sagutin.'\n\nRosa stands very still, her hand on her cheek, tasting blood where she bit her inner lip. Sofia is clinging to her leg, sobbing. And in that suspended moment of pain and shock, something crystallizes in Rosa's mind with absolute clarity: this is not a family. This has never been a family. This is an employer who thinks she owns her.\n\nThat night, Rosa takes a photo of the bruise on her cheek with her phone. She dates it. She writes in her notebook: 'Dec 5 -- Ma'am sinampal ako sa kitchen. May bruise sa kaliwang pisngi. Saksi: Sofia (5 years old).'",
+      "theme": "abuse",
+      "choices": [
+        {
+          "text": "Go to the barangay the next morning to report the physical abuse and file a formal complaint.",
+          "nextNode": "maid_fight_01",
+          "consequence": "Rosa takes immediate legal action against the assault.",
+          "scoreChange": 15,
+          "knowledgeGained": "Physical violence against a kasambahay is a criminal offense. Under RA 10361 Sec. 5, kasambahay are protected from physical violence or abuse. The kasambahay can file a complaint at the barangay and with the police. Physical assault may also be prosecuted under the Revised Penal Code."
+        },
+        {
+          "text": "Call Ka Linda from Kasambahay United and ask for immediate guidance on what to do.",
+          "nextNode": "maid_fight_02",
+          "consequence": "Rosa reaches out to her advocate network for emergency support.",
+          "scoreChange": 12,
+          "knowledgeGained": "In cases of physical abuse, kasambahay organizations can provide emergency support, legal referrals, and even temporary shelter. DOLE and DSWD also have hotlines for abused workers."
+        },
+        {
+          "text": "Pack her bag and leave the house tonight -- she cannot stay one more minute in this place.",
+          "nextNode": "maid_fight_03",
+          "consequence": "Rosa's survival instinct takes over and she escapes the abusive situation immediately.",
+          "scoreChange": 8,
+          "knowledgeGained": "Under RA 10361 Sec. 34, a kasambahay may terminate employment WITHOUT notice if the employer commits physical assault or violence. The kasambahay is still entitled to all unpaid wages and benefits."
+        }
+      ],
+      "isEnding": false
+    },
+    "maid_abuse_05": {
+      "id": "maid_abuse_05",
+      "title": "The Evidence Mounts",
+      "narrative": "The doctor writes a medical certificate: 'Patient Rosa Mendoza, 48 years old, presents with Stage 2 hypertension (BP 150/95), chronic lower back pain, and signs of physical and emotional exhaustion consistent with prolonged overwork and stress. Patient reports working 17 hours daily, 7 days a week, with no rest days for 3 years. Patient has no health insurance. Recommend immediate reduction in workload, regular rest periods, and enrollment in PhilHealth.'\n\nRosa tucks the certificate into her notebook, which is now thick with evidence: three months of daily work logs, photos of her bruised cheek from the slap, screenshots of Mrs. Ramos's catering business page, the medical certificate. She even has a record of every monthly payment -- P3,500, always in cash, never with a payslip.\n\nShe also has something new: a Viber group with seven other kasambahay from the subdivision, all sharing similar stories. And she has Ka Linda's number on speed dial.\n\nThat evening, as she folds the Ramos children's clothes, Rosa makes her decision. She opens her notebook and writes on a fresh page: 'PLAN.' Below it: '1. File complaint at barangay. 2. Contact DOLE Kasambahay Desk. 3. If needed, file case at NLRC through PAO.'\n\nFor the first time since she arrived in Manila, Rosa Mendoza has a plan.",
+      "theme": "kasambahay_law",
+      "choices": [
+        {
+          "text": "Execute the plan -- go to the barangay first thing tomorrow morning.",
+          "nextNode": "maid_fight_01",
+          "consequence": "Rosa follows through on her plan, starting with the barangay as the first step.",
+          "scoreChange": 15,
+          "knowledgeGained": "The proper sequence for kasambahay complaints is: (1) Barangay Kasambahay Desk for mediation, (2) DOLE Kasambahay Desk if barangay mediation fails, (3) NLRC through PAO (Public Attorney's Office) for formal cases."
+        },
+        {
+          "text": "Give the Ramos family one final chance -- show them the evidence and the medical certificate, and ask them to do the right thing.",
+          "nextNode": "maid_wage_04",
+          "consequence": "Rosa offers one last opportunity for resolution before filing formal complaints.",
+          "scoreChange": 8,
+          "knowledgeGained": "Presenting compiled evidence before filing a formal complaint gives the employer a chance to settle. If they refuse, the same evidence strengthens the formal case."
+        }
+      ],
+      "isEnding": false
+    },
+    "maid_fight_01": {
+      "id": "maid_fight_01",
+      "title": "The Barangay",
+      "narrative": "Rosa wakes at 5 AM as usual, but today she doesn't start cooking. She puts on her cleanest blouse, tucks her notebook into a plastic bag, and walks to the BF Homes barangay hall. Her legs feel weak but her mind is clear.\n\nAt the barangay, she asks for the Kasambahay Desk. The clerk looks confused at first -- 'Kasambahay Desk? Ah, oo, meron kami nun.' She's directed to a small office where a barangay kagawad named Ka Tony handles domestic worker concerns.\n\nKa Tony listens as Rosa tells her story. Three years. P3,500 a month. No contract. No rest days. No SSS, PhilHealth, or Pag-IBIG. No 13th month pay. Verbal abuse. Physical violence. She shows him the notebook, the photos, the medical certificate.\n\nKa Tony's expression grows more serious with each page. 'Ate Rosa, maraming violation ito. Under RA 10361, lahat ng sinasabi mo -- wage underpayment, walang contract, walang benefits, walang rest day, at lalo na yung pambubugbog -- lahat yan punishable.'\n\nHe explains the process: the barangay will summon the Ramos family for mediation. If they refuse to appear or if mediation fails, the case gets referred to DOLE. For the physical violence, Rosa can also file a separate criminal complaint.\n\n'Handa ka ba, Ate Rosa? Pag nag-file ka, walang bawian.'",
+      "theme": "kasambahay_law",
+      "choices": [
+        {
+          "text": "File the complaint -- she's ready, and she has the evidence to back it up.",
+          "nextNode": "maid_fight_02",
+          "consequence": "Rosa formally initiates the legal process, putting the Ramos family on notice.",
+          "scoreChange": 15,
+          "knowledgeGained": "Under RA 10361 Sec. 41, the barangay Kasambahay Desk handles disputes between kasambahay and employers. Barangay mediation is a mandatory first step before DOLE or NLRC proceedings."
+        },
+        {
+          "text": "Ask Ka Tony to call the Ramos family for mediation first -- give them one chance to settle before it becomes formal.",
+          "nextNode": "maid_fight_03",
+          "consequence": "Rosa chooses the mediation path, seeking resolution without immediate confrontation.",
+          "scoreChange": 10,
+          "knowledgeGained": "Barangay mediation (Katarungang Pambarangay) is often the fastest path to resolution. If both parties agree to a settlement, it becomes an enforceable contract."
+        }
+      ],
+      "isEnding": false
+    },
+    "maid_fight_02": {
+      "id": "maid_fight_02",
+      "title": "The DOLE Kasambahay Desk",
+      "narrative": "When barangay mediation fails -- Mrs. Ramos refuses to attend, sending only a text message that says 'Hindi kami papayag na mandamay ang barangay sa personal na bagay' -- Ka Tony issues a Certificate to File Action, clearing the way for Rosa to escalate.\n\nKa Linda from Kasambahay United accompanies Rosa to the DOLE Regional Office in Manila. They take the bus at 6 AM, Rosa clutching her notebook like a shield. At the DOLE building, they go to the Kasambahay Desk on the second floor.\n\nThe DOLE officer, Atty. Villanueva, reviews Rosa's documents with careful attention. 'Ate Rosa, malakas ang kaso mo,' she says. 'May documentation ka -- ito ang pinaka-important. Karamihan ng kasambahay na nag-file dito, walang evidence. Ikaw, parang may sarili kang filing system.'\n\nAtty. Villanueva explains the SENA process -- Single Entry Approach -- a mandatory 30-day mediation between Rosa and the Ramos family. If SENA fails, the case goes to the NLRC. 'Pero sa experience ko,' she says, 'karamihan sa employer, nag-se-settle sa SENA kapag nakita nila ang evidence. Hindi nila gusto ng NLRC case -- mahal ang abogado.'\n\nRosa fills out the complaint form. She lists every violation. Her hand is steady now.",
+      "theme": "kasambahay_law",
+      "choices": [
+        {
+          "text": "Proceed with SENA mediation and negotiate firmly for full back wages, benefits, and separation pay.",
+          "nextNode": "maid_fight_04",
+          "consequence": "Rosa enters the formal mediation process with strong evidence and clear demands.",
+          "scoreChange": 15,
+          "knowledgeGained": "SENA (Single Entry Approach) under RA 10396 is a mandatory 30-day mediation period before any labor case reaches the NLRC. A SENA officer facilitates the negotiation. Settlements reached through SENA are legally binding."
+        },
+        {
+          "text": "Ask Atty. Villanueva about filing a separate criminal case for the physical abuse.",
+          "nextNode": "maid_fight_03",
+          "consequence": "Rosa pursues both labor and criminal remedies for the assault.",
+          "scoreChange": 12,
+          "knowledgeGained": "Physical abuse of a kasambahay can be pursued as both a labor violation under RA 10361 and as a criminal offense (physical assault/battery) under the Revised Penal Code. These are separate cases and can proceed simultaneously."
+        }
+      ],
+      "isEnding": false
+    },
+    "maid_fight_03": {
+      "id": "maid_fight_03",
+      "title": "The Confrontation",
+      "narrative": "The Ramos family receives the summons -- either from the barangay or from DOLE. Mr. Ramos calls Rosa's phone that evening. His voice is tightly controlled.\n\n'Rosa, ano bang ginawa mo? Bakit may summons sa barangay? Alam mo ba kung ano ang gagawin nito sa reputation namin? May mga kapitbahay tayong nakakakita!'\n\nRosa, sitting in the small room she shares with Ate Nena temporarily -- Nena's employer is kinder and has allowed Rosa to stay for a few days -- answers calmly: 'Sir, tatlong taon po akong nagtatrabaho sa inyo. Alam nyo po na hindi po tama yung kalagayan ko. Sinampal po ako ng asawa nyo. P3,500 lang po ang sahod ko. Wala po akong day off. Wala po akong SSS. Gusto ko lang po ng makatarungan.'\n\nMr. Ramos is quiet for a long time. Then: 'Rosa, let me talk to my wife. Baka pwede nating ayusin ito nang hindi dadaan sa barangay. How much... how much do you want?'\n\nRosa looks at her notebook. She knows her numbers. P90,000 in wage underpayment. P18,000 in 13th month pay. SSS contributions for three years. Separation pay of 15 days per year of service. And something no amount of money can compensate: her dignity.",
+      "theme": "kasambahay_law",
+      "choices": [
+        {
+          "text": "Insist on going through proper channels -- barangay or DOLE mediation -- to ensure any agreement is legally binding and enforceable.",
+          "nextNode": "maid_fight_04",
+          "consequence": "Rosa wisely insists on formal mediation, protecting herself from empty promises.",
+          "scoreChange": 15,
+          "knowledgeGained": "Private settlements without formal mediation are harder to enforce. Barangay settlements (Kasunduang Pag-aayos) and SENA settlements have the force of law and can be enforced through courts."
+        },
+        {
+          "text": "Negotiate directly with Mr. Ramos and settle for a lump sum payment to end the matter quickly.",
+          "nextNode": "maid_fight_05",
+          "consequence": "Rosa negotiates privately, which is faster but carries more risk.",
+          "scoreChange": 5,
+          "knowledgeGained": "Private settlements are possible but should always be documented in writing, signed by both parties, and ideally witnessed by a third party."
+        }
+      ],
+      "isEnding": false
+    },
+    "maid_fight_04": {
+      "id": "maid_fight_04",
+      "title": "Justice, Slowly",
+      "narrative": "The SENA mediation takes place at the DOLE office. Rosa sits on one side of the table with Ka Linda beside her. The Ramos family sits on the other side with their lawyer -- a young associate from Mr. Ramos's firm.\n\nThe SENA officer, a patient woman named Ms. Santos, lays out the facts: 36 months of wage underpayment, zero 13th month payments, zero SSS/PhilHealth/Pag-IBIG contributions, zero rest days, physical violence documented by photo and medical certificate.\n\nThe Ramos lawyer begins confidently: 'My clients provided free food and lodging, which should be factored--' Ms. Santos cuts him off: 'Counselor, under RA 10361 Section 25, food and lodging deductions cannot reduce wages below the minimum. Your clients paid P3,500 against a P6,000 minimum. Even with maximum allowable deductions, they're in violation.'\n\nThe lawyer adjusts his approach. After two hours of back-and-forth, Mr. Ramos -- who has been calculating on his phone -- speaks up: 'We'll settle. We want to settle.'\n\nThe final agreement: P120,000 in back wages and separation pay, paid in three installments over three months. A letter from the Ramos family acknowledging the violations. And Mr. Ramos personally accompanies the SENA officer to register Rosa's SSS, PhilHealth, and Pag-IBIG with retroactive employer contributions for three years.\n\nRosa signs the settlement. Her hands are steady.",
+      "theme": "kasambahay_law",
+      "choices": [
+        {
+          "text": "Accept the settlement and use the money to start a new chapter -- with full knowledge of her rights going forward.",
+          "nextNode": "maid_ending_01",
+          "consequence": "Rosa secures a meaningful settlement and begins her new life empowered by knowledge.",
+          "scoreChange": 15,
+          "knowledgeGained": "SENA settlements are legally binding. If the employer fails to comply, the settlement can be enforced through the NLRC. Rosa should keep copies of all documents and verify each installment payment."
+        },
+        {
+          "text": "Accept the settlement but also help Ate Nena and the other kasambahay in the group file their own cases.",
+          "nextNode": "maid_ending_02",
+          "consequence": "Rosa's victory becomes a catalyst for change in the entire subdivision.",
+          "scoreChange": 15,
+          "knowledgeGained": "One successful kasambahay case can inspire and empower an entire community. Organizations like SUMAPI, UNITED, and VISAFIL replicate this model of community organizing."
+        }
+      ],
+      "isEnding": false
+    },
+    "maid_fight_05": {
+      "id": "maid_fight_05",
+      "title": "Broken Promises",
+      "narrative": "Rosa agrees to settle privately with Mr. Ramos. He writes a check for P50,000 -- far less than the P120,000+ she's owed, but he frames it as 'tulong na lang namin.' He promises to deposit another P30,000 next month and register her for SSS before the end of the quarter.\n\nRosa moves out of the Ramos house and stays temporarily with Ate Nena's employer, who allows her to sleep in the service area. She deposits Mr. Ramos's check -- it clears. P50,000. More money than she's ever held at once.\n\nBut the second payment never comes. Rosa texts Mr. Ramos after 30 days. 'Sir, yung P30,000 po?' He replies: 'Sorry Rosa, medyo tight ngayon. Next month.' Next month comes. Nothing. She texts again. No reply. The SSS registration never happens.\n\nRosa has the P50,000, but she's owed at least P70,000 more. She has no written settlement agreement -- just Mr. Ramos's verbal promise and a single bank deposit as evidence. She realizes now what Atty. Villanueva at DOLE told her: 'Private settlements without formal mediation are harder to enforce.'",
+      "theme": "wage_theft",
+      "choices": [
+        {
+          "text": "Go back to DOLE and file the formal complaint she should have filed from the beginning.",
+          "nextNode": "maid_ending_03",
+          "consequence": "Rosa returns to DOLE to pursue the remaining amount owed to her through proper channels.",
+          "scoreChange": 8,
+          "knowledgeGained": "A partial private settlement does not bar a kasambahay from filing a complaint for the remaining unpaid amounts. The P50,000 already received will be credited against the total owed."
+        },
+        {
+          "text": "Accept the P50,000 as the final amount and move on with her life.",
+          "nextNode": "maid_ending_04",
+          "consequence": "Rosa settles for less than half of what she's owed, but gains her freedom.",
+          "scoreChange": 0,
+          "knowledgeGained": null
+        }
+      ],
+      "isEnding": false
+    },
+    "maid_fight_06": {
+      "id": "maid_fight_06",
+      "title": "Walking Away with Nothing",
+      "narrative": "Rosa takes the P10,000 from Mrs. Ramos's outstretched hand. The bills feel thin and insufficient -- because they are. Ten thousand pesos for three years of her life. Three years of waking at 5 AM, cooking three meals a day, washing clothes until her knuckles cracked, raising two children who aren't hers, enduring insults and a slap to the face.\n\nShe packs her single bag -- the same bag she arrived with from Samar three years ago. It's lighter now. She owns less than when she came. Mrs. Ramos watches from the doorway of the sala, arms crossed, face impassive.\n\nSofia runs to Rosa at the gate, hugging her legs and crying. 'Mama Rosa, huwag ka umalis! Mama Rosa!' Rosa kneels and holds the girl tight, tears streaming down her face. 'Mag-iingat ka, anak. Maging mabait ka.' She kisses Sofia's forehead and stands.\n\nMiguel watches from the window. He waves once, then turns away.\n\nRosa walks out of the BF Homes gate for the first time in months. The sunlight is blinding. She realizes she doesn't know which jeepney to take. She's been inside for so long she's forgotten the routes.",
+      "theme": "abuse",
+      "choices": [
+        {
+          "text": "Even now, it's not too late -- find the nearest barangay hall and file a complaint before leaving the area.",
+          "nextNode": "maid_ending_03",
+          "consequence": "Rosa finds the courage to seek justice even as she walks away.",
+          "scoreChange": 8,
+          "knowledgeGained": "A kasambahay can file a complaint even after leaving the employer. Under labor law, money claims prescribe after 3 years from the time the cause of action accrued."
+        },
+        {
+          "text": "Go to the bus terminal and take the first bus home to Samar -- she just wants to see Tonyo and her children.",
+          "nextNode": "maid_ending_05",
+          "consequence": "Rosa goes home without pursuing her claims, carrying only P10,000 and three years of pain.",
+          "scoreChange": -5,
+          "knowledgeGained": null
+        }
+      ],
+      "isEnding": false
+    },
+    "maid_ending_01": {
+      "id": "maid_ending_01",
+      "title": "A New Dawn",
+      "narrative": "Three months later, all three installments of the P120,000 settlement have been paid. Rosa's SSS, PhilHealth, and Pag-IBIG are registered and up to date with retroactive contributions. She opens a savings account at a rural bank -- her first -- and deposits P80,000. She sends P20,000 to Tonyo for Junjun's tuition and P20,000 for household expenses.\n\nWith Ka Linda's help, Rosa finds a new employer -- a retired teacher in Las Pinas who lives alone and needs help with cooking and light housework. The arrangement is proper from the start: a written contract specifying duties, P7,000 per month salary, every Sunday off, SSS/PhilHealth/Pag-IBIG registration within the first week. The retired teacher, Mrs. Flores, even encourages Rosa to attend the ALS (Alternative Learning System) classes on Sundays.\n\nRosa takes the classes. At 48, she's learning things she never had the chance to learn. She joins the local SUMAPI chapter -- a kasambahay organization -- and volunteers to teach other domestic workers about RA 10361.\n\nOne Sunday, as she walks to her ALS class, her phone rings. It's Sofia. 'Mama Rosa? Miss na kita.' Rosa smiles, her eyes wet. 'Miss na rin kita, anak. Mag-aral ka mabuti, ha?'\n\nRosa Mendoza is still a kasambahay. But now she is a kasambahay who knows her rights -- and who fights to make sure others know theirs too.\n\n---\nRESOURCES: DOLE Hotline 1349 | PAO (Public Attorney's Office) | SSS Hotline 1455 | PhilHealth Hotline 02-8441-7442 | Pag-IBIG Hotline 02-8724-4244 | SUMAPI/UNITED/VISAFIL Kasambahay Organizations | Barangay Kasambahay Desk",
+      "theme": "kasambahay_law",
+      "choices": [],
+      "isEnding": true
+    },
+    "maid_ending_02": {
+      "id": "maid_ending_02",
+      "title": "Ripple Effect",
+      "narrative": "Rosa's case sends shockwaves through BF Homes. Within a month of her settlement, four more kasambahay from the Messenger group -- Ate Nena, Ate Diding, Ate Cora, and Ate Joy -- file their own complaints at the barangay. Ka Tony, the barangay kagawad, conducts a subdivision-wide information drive about RA 10361, posting infographics on the barangay bulletin board and the homeowners' association Facebook page.\n\nThe results are transformative. Three of the four employers settle at the barangay level. Ate Joy's employer, who had been locking her inside the house, is reported to the police and faces criminal charges for illegal detention in addition to the labor violations.\n\nRosa returns to Samar for the first time in three years. Tonyo meets her at the Calbayog pier. He looks older, thinner, but his smile is the same. Junjun, now a college senior, carries her bag. Her youngest daughter is there with her one-year-old baby -- a grandchild Rosa has never met.\n\nRosa uses part of her settlement to build a small sari-sari store attached to their house. She names it 'Tindahan ni Ate Rosa.' On the wall, she pins a laminated copy of the RA 10361 infographic from Kasambahay United.\n\nEvery month, she calls the group chat. 'Kumusta kayo? May problema ba? Kaya natin yan. Sama-sama tayo.'\n\nShe is home. She is whole. And the ripples of her courage continue to spread.\n\n---\nRESOURCES: DOLE Hotline 1349 | PAO (Public Attorney's Office) | SSS Hotline 1455 | PhilHealth Hotline 02-8441-7442 | Pag-IBIG Hotline 02-8724-4244 | SUMAPI/UNITED/VISAFIL Kasambahay Organizations | Barangay Kasambahay Desk | DSWD Hotline 02-8931-8101",
+      "theme": "kasambahay_law",
+      "choices": [],
+      "isEnding": true
+    },
+    "maid_ending_03": {
+      "id": "maid_ending_03",
+      "title": "The Long Road to Justice",
+      "narrative": "Rosa files a formal complaint at DOLE. The case enters the SENA process. This time, the Ramos family brings their lawyer to the mediation. After two contentious sessions, they reach a settlement: the remaining amount owed to Rosa, computed by the SENA officer at P85,000 (accounting for the P50,000 already received, if applicable), to be paid in full within 60 days.\n\nThe process is slow and exhausting. There are days when Rosa, now staying at a temporary shelter arranged by Ka Linda and Kasambahay United, wonders if it's worth it. But Ka Linda reminds her: 'Ate Rosa, hindi lang para sa iyo ito. Para sa lahat ng kasambahay na natatakot magsalita.'\n\nAfter 60 days, the settlement is paid. Rosa receives her SSS registration, her PhilHealth card, and her Pag-IBIG membership. Small plastic cards that represent something enormous: she exists in the system. She is recognized. She has social protection.\n\nRosa decides to stay in Manila a while longer. She finds work with a kinder employer through a referral from DOLE's Kasambahay Desk. This time, she signs a contract on her first day. She checks that her SSS contribution appears on her statement every month. She takes her rest day every Sunday without guilt.\n\nShe has learned the most important lesson: her labor has value, her rights have teeth, and no amount of 'parang pamilya' rhetoric can substitute for a written contract and lawful wages.\n\n---\nRESOURCES: DOLE Hotline 1349 | SENA (Single Entry Approach) at DOLE Regional Offices | PAO (Public Attorney's Office) for free legal assistance | SSS Hotline 1455 | SUMAPI/UNITED/VISAFIL Kasambahay Organizations | Barangay Kasambahay Desk",
+      "theme": "kasambahay_law",
+      "choices": [],
+      "isEnding": true
+    },
+    "maid_ending_04": {
+      "id": "maid_ending_04",
+      "title": "Half a Victory",
+      "narrative": "Rosa takes the P50,000 and moves on. It's less than half of what she's owed, but it's more than she's ever saved. She sends P30,000 to Samar immediately -- Tonyo's medication, Junjun's tuition, household expenses. She keeps P20,000 as emergency fund.\n\nShe finds a new job through Ate Mercy's employer, who recommends her to a friend. The new employer is decent -- not perfect, but decent. Rosa, now armed with knowledge of RA 10361, negotiates from day one: P6,500 salary, written contract, Sunday rest day, SSS registration within the first month.\n\nThe new employer raises an eyebrow at Rosa's assertiveness but agrees. 'Okay, Ate Rosa. Fair naman yan.'\n\nSome nights, Rosa still thinks about the P70,000 the Ramos family never paid. She thinks about the three years of 13th month pay, the rest day premiums, the SSS contributions that were never made. She knows she could still file a case -- the prescriptive period hasn't lapsed. But she's tired. She chose peace over justice, and she has to live with that choice.\n\nBut she also knows this: the next employer who tries to shortchange her will face a different Rosa. A Rosa who knows the law, who keeps records, and who will never again mistake 'parang pamilya' for a substitute for a contract.\n\n---\nRESOURCES: DOLE Hotline 1349 | PAO (Public Attorney's Office) for free legal assistance | SSS Hotline 1455 | PhilHealth Hotline 02-8441-7442 | Pag-IBIG Hotline 02-8724-4244 | Note: Money claims under the Labor Code prescribe after 3 years -- it may not be too late to file.",
+      "theme": "kasambahay_law",
+      "choices": [],
+      "isEnding": true
+    },
+    "maid_ending_05": {
+      "id": "maid_ending_05",
+      "title": "The Return to Samar",
+      "narrative": "Rosa boards the bus to Samar with P10,000 in her pocket and three years of her life she'll never get back. The fare alone costs P1,800. By the time she buys food for the 20-hour journey and a boat ticket from Allen to Calbayog, she arrives home with P7,500.\n\nTonyo is at the pier. He takes her bag -- still just the one bag -- and they ride a tricycle home in silence. The house looks smaller than she remembered. The roof has a new leak. Junjun's tuition for next semester is P15,000, and Rosa has half of that.\n\nShe doesn't tell Tonyo about the slap. She doesn't tell him about the P3,500 salary that should have been P6,000, or the P90,000 in back wages she never claimed, or the SSS she never had. She tells him: 'Nag-resign na lang ako, Tonyo. Hindi na okay yung amo ko.'\n\nAt night, Rosa lies awake listening to the rain on the tin roof. She thinks about the Kasambahay United post she scrolled past three years ago. She thinks about the notebook she left behind in the Ramos house. She thinks about Sofia's little hands gripping her leg.\n\nShe made it home. But she left her rights -- and over P150,000 in lawful wages and benefits -- behind in that house in Paranaque.\n\nIt doesn't have to end this way. The law exists. The protections are real. But they only work when workers know about them -- and have the courage and support to use them.\n\n---\nRESOURCES: Even from the province, Rosa can still file a complaint. DOLE Hotline 1349 (nationwide) | PAO (Public Attorney's Office) -- free legal aid in every province | SSS Hotline 1455 | SUMAPI/UNITED/VISAFIL Kasambahay Organizations | Money claims prescribe after 3 years -- Rosa still has time to act.",
+      "theme": "kasambahay_law",
+      "choices": [],
+      "isEnding": true
+    }
+  },
+  "startNode": "maid_start"
+}

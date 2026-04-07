@@ -1,0 +1,677 @@
+{
+  "nodes": {
+    "rider_start": {
+      "id": "rider_start",
+      "title": "Bagong Rider, Nag-Sign Up",
+      "narrative": "Si Jake Reyes, 24 years old, nakatitig sa GrabFood-style app sa phone niya. Yung sign-up page ng 'DeliverNa' -- isa sa pinakamalaking food delivery platform sa Manila -- naka-display ang promise: 'Be your own boss! Kumita ng hanggang P20,000 a week!' Tatlong buwan na siyang walang trabaho mula nang mag-graduate sa two-year TESDA course sa automotive servicing, at lagi siyang pinapaalalahanan ng nanay niya tungkol sa P3,500 monthly contribution sa bahay nila sa isang maliit na apartment sa Mandaluyong.\n\nSimple lang naman ang requirements: motorsiklo (nagbabayad pa siya ng P4,800/month installment sa Honda TMX niya), valid driver's license, at Android phone. Pero kailangan muna niyang bilhin ang 'official starter kit' -- thermal delivery bag na P1,500, branded jacket na P800, at phone mount na P350. P2,650 lahat mula sa natitirang ipon niya.\n\nNag-message sa kanya ang kumpare niyang si Bong, anim na buwan nang rider sa DeliverNa: 'Kuya Jake, punta ka na. Okay naman kita, lalo pag weekends. Pero basahin mo muna yung Terms of Service ha. May mga kakaiba dun.'\n\nNag-scroll si Jake sa Terms of Service -- isang makapal na pader ng legal text, 47 pages ang haba.",
+      "theme": "misclassification",
+      "choices": [
+        {
+          "text": "Basahin nang buo at maigi ang buong Terms of Service bago mag-sign.",
+          "nextNode": "rider_onboard_01",
+          "consequence": "Dalawang oras ginugol ni Jake sa pagbabasa ng fine print at may nadiskubre siyang mahahalagang clauses.",
+          "scoreChange": 10,
+          "knowledgeGained": "Palaging basahin ang mga kontrata bago pumirma. Sa Philippine law, hindi excuse ang hindi pagkaalam ng mga terms ng kontratang pinirmahan mo."
+        },
+        {
+          "text": "I-skim na lang nang mabilis -- hanapin lang yung mga importanteng parte.",
+          "nextNode": "rider_onboard_02",
+          "consequence": "Nakita ni Jake ang ilang key terms pero may na-miss siyang mga critical details na nakabaon sa document.",
+          "scoreChange": 5,
+          "knowledgeGained": "Pag nag-skim ka lang ng kontrata, baka ma-miss mo ang mga clause tungkol sa dispute resolution, liability waivers, at employment classification."
+        },
+        {
+          "text": "Scroll na lang sa baba at i-tap ang 'I Agree' -- ganun naman ginagawa ng lahat eh.",
+          "nextNode": "rider_onboard_03",
+          "consequence": "Hindi namamalayan ni Jake na pumayag siya sa mga terms na nag-waive ng marami sa mga karapatan niya.",
+          "scoreChange": -5,
+          "knowledgeGained": null
+        }
+      ],
+      "isEnding": false
+    },
+    "rider_onboard_01": {
+      "id": "rider_onboard_01",
+      "title": "Lahat ng Nakatago sa Fine Print",
+      "narrative": "Mabuti na lang binasa ni Jake nang maigi. Lumaki ang mga mata niya sa Section 14.3: 'Kinikilala at sinasang-ayunan ng Delivery Partner na siya ay isang independent contractor at HINDI empleyado ng DeliverNa Technologies Inc. Walang karapatang mag-claim ang Delivery Partner ng employee benefits kabilang ang SSS, PhilHealth, Pag-IBIG, 13th month pay, overtime pay, holiday pay, o separation pay.'\n\nMas nakakatakot pa ang Section 22.1: 'May karapatan ang DeliverNa na baguhin ang delivery fees, incentive structures, at platform policies kahit kailan nang walang prior notice.' Section 28.7: 'Lahat ng disputes ay dapat resolbahin sa pamamagitan ng binding arbitration, at isinusuko ng Delivery Partner ang karapatan niyang mag-file ng kaso sa NLRC (National Labor Relations Commission) o anumang labor tribunal.'\n\nNaalala ni Jake ang isang Facebook post ng Riders Pilipinas -- isang riders' advocacy group. Binanggit nila ang 'four-fold test' na nagdedetermina kung talagang empleyado o contractor ang isang tao. Ni-screenshot niya ang mga suspicious clauses at ipinadala sa group chat.\n\nSumagot ang isang law student sa grupo: 'Kuya, baka void yang arbitration clause na yan. Ang labor rights ay constitutional rights sa ilalim ng Article XIII ng 1987 Constitution -- hindi mo ma-waive ang NLRC jurisdiction sa pamamagitan ng kontrata.'",
+      "theme": "misclassification",
+      "choices": [
+        {
+          "text": "I-research muna ang four-fold test bago ituloy ang sign-up.",
+          "nextNode": "rider_onboard_04",
+          "consequence": "Nalaman ni Jake ang legal test na maaaring patunayan na empleyado talaga siya.",
+          "scoreChange": 15,
+          "knowledgeGained": "Ang four-fold test sa ilalim ng Labor Code Art. 295: (1) selection and engagement o pagpili at pagkuha, (2) payment of wages o pagbayad ng sahod, (3) power of dismissal o kapangyarihang magtanggal, (4) power to control hindi lang ang resulta kundi pati ang paraan at pamamaraan ng trabaho. Ang control test ang pinaka-importanteng factor."
+        },
+        {
+          "text": "Mag-sign up na rin pero i-save ang mga screenshots para sa future reference.",
+          "nextNode": "rider_onboard_05",
+          "consequence": "Nagpatuloy si Jake na may kamalayan sa mga risks, ini-keep ang mga ebidensya.",
+          "scoreChange": 7,
+          "knowledgeGained": "Ang pag-document ng contract terms at platform policies ay mahalagang ebidensya kung kailangan mong mag-file ng labor complaint sa hinaharap."
+        }
+      ],
+      "isEnding": false
+    },
+    "rider_onboard_02": {
+      "id": "rider_onboard_02",
+      "title": "Speed Reading ng Kontrata",
+      "narrative": "Na-skim ni Jake ang document, nakuha niya ang ilang bagay: ma-classify siya bilang 'independent contractor,' 25% commission ang kinukuha ng platform sa bawat delivery, at may rating system na nagdedetermina ng order priority. Napansin din niya ang P500 na penalty para sa 'order cancellations after acceptance.'\n\nPero na-miss niya ang mga clause tungkol sa binding arbitration, ang karapatan ng platform na baguhin ang pay rates nang walang notice, at ang malawak na indemnification clause na ginagawa siyang personally liable sa anumang damage, injury, o loss habang nagde-deliver -- kasama na ang sa customers, restaurants, o third parties.\n\nKibit-balikat lang siya. 'Parang normal naman,' isip niya. Ang kaibigan niyang si Bong ay kumikita naman ng okay, at libu-libong riders ang nasa platform. Hindi naman siguro ganun kalala, diba?\n\nTinap niya ang 'I Agree' at pumunta para bumili ng starter kit sa DeliverNa hub sa Pasig, kung saan napapalibutan siya ng dose-dosenang mga bagong riders na nag-sign up din sa parehong araw.",
+      "theme": "misclassification",
+      "choices": [
+        {
+          "text": "Tanungin ang hub staff kung talagang independent contractors ba ang mga rider o empleyado.",
+          "nextNode": "rider_onboard_05",
+          "consequence": "Nag-bigay ang staff ng rehearsed answer, pero nagsimulang mag-isip nang malalim si Jake tungkol sa arrangement.",
+          "scoreChange": 5,
+          "knowledgeGained": "Madalas tine-train ng mga platform companies ang staff nila na i-emphasize ang 'flexibility' at 'pagiging sariling boss' para i-justify ang contractor classification, pero ang tunay na working relationship ay baka ibang kwento."
+        },
+        {
+          "text": "Bayaran na lang ang starter kit at magsimulang mag-ride kaagad.",
+          "nextNode": "rider_onboard_06",
+          "consequence": "Sumabak na si Jake nang hindi naiintindihan ang legal standing niya.",
+          "scoreChange": -3,
+          "knowledgeGained": null
+        }
+      ],
+      "isEnding": false
+    },
+    "rider_onboard_03": {
+      "id": "rider_onboard_03",
+      "title": "Pumirma Nang Hindi Binasa",
+      "narrative": "Mabilis na nag-scroll si Jake sa baba ng Terms of Service at tinap ang 'I Agree' nang walang binasang kahit isang clause. Pumunta siya sa DeliverNa hub sa Ortigas Center para bumili ng starter kit -- P2,650 na siningil niya sa already-strained GCash credit niya.\n\nSa hub, nagkaroon ng 30-minute video presentation ang isang masiglang orientation facilitator. 'Kayo ay independent contractors,' diin niya nang may malaking ngiti. 'Ibig sabihin, kalayaan! Walang boss, walang time clock, walang office politics. Kung gaano kayo kasipag, ganun ang kikitain ninyo.' Nag-nod ang 40 bagong riders sa room.\n\nPero may napansin si Jake sa 'onboarding checklist': kailangan niyang sundin ang specific dress code (DeliverNa jacket at all times), gamitin lang ang DeliverNa thermal bag (bawal third-party bags), sundin ang prescribed route ng app, at tapusin ang deliveries sa loob ng time estimate ng app o may penalty. Kailangan din niyang maintain ang 4.5-star rating o mas mataas para mapanatili ang 'priority rider' status.\n\n'Para sa independent contractor, ang daming rules ah,' bulong ng rider na katabi niya. Kibit-balikat lang si Jake at nag-focus sa earning projections na nasa screen.",
+      "theme": "misclassification",
+      "choices": [
+        {
+          "text": "Mag-raise ng kamay at tanungin kung bakit ang daming mandatory rules para sa independent contractors.",
+          "nextNode": "rider_onboard_05",
+          "consequence": "Na-deflect ng facilitator, pero ang tanong ni Jake ay nagtanim ng duda sa ibang riders.",
+          "scoreChange": 8,
+          "knowledgeGained": "Kapag kinokontrol ng kumpanya ang paraan at pamamaraan ng trabaho mo -- hindi lang ang resulta -- nagpapahiwatig ito ng employer-employee relationship sa ilalim ng control test, kahit ano pa ang nakasulat sa kontrata."
+        },
+        {
+          "text": "Manahimik at tapusin ang onboarding nang walang gulo.",
+          "nextNode": "rider_onboard_06",
+          "consequence": "Natapos ni Jake ang onboarding at nagsimulang mag-accept ng deliveries kinabukasan.",
+          "scoreChange": -2,
+          "knowledgeGained": null
+        }
+      ],
+      "isEnding": false
+    },
+    "rider_onboard_04": {
+      "id": "rider_onboard_04",
+      "title": "Pag-unawa sa Four-Fold Test",
+      "narrative": "Ginugol ni Jake ang gabi niya sa pag-research. Nakakita siya ng PAO (Public Attorney's Office) explainer at isang Supreme Court decision, at ni-map niya ito sa sitwasyon niya sa DeliverNa:\n\n1) Selection and engagement -- Pinili siya ng DeliverNa pagkatapos i-review ang application niya, nang may required na specific documents. Puwede nilang i-reject ang applicants. Parang hiring ito.\n2) Payment of wages -- Ang DeliverNa ang nagse-set ng delivery fee, kinukuha ang commission, at binabayaran siya sa app. Hindi siya nag-ne-negotiate ng rates sa customers. Parang payment of wages ito.\n3) Power of dismissal -- Puwedeng i-'deactivate' ng DeliverNa ang account niya dahil sa mababang ratings, policy violations, o sa sarili nilang discretion ayon sa Section 31 ng ToS. Ang deactivation ay effectively termination.\n4) Power of control -- Ito ang pinakamalaki. Dinidiktahan ng DeliverNa ang uniform, ang bag, ang route, ang time limits, at may penalty pag lumihis. Real-time pa ang GPS tracking ng app at may automated warnings pag nag-stop siya nang matagal.\n\nNa-realize ni Jake: 'Mukhang employee talaga ako.' Nag-sign up pa rin siya kasi kailangan niya ng income, pero sumali siya sa Riders Pilipinas sa Facebook at nagsimulang i-document lahat mula Day 1.",
+      "theme": "misclassification",
+      "choices": [
+        {
+          "text": "Mag-sign up pero masinsinang i-document ang bawat pagkakataon na kinokontrol ng platform ang trabaho mo.",
+          "nextNode": "rider_onboard_06",
+          "consequence": "Nagsimulang mag-build si Jake ng detalyadong record na puwedeng sumuporta sa future misclassification claim.",
+          "scoreChange": 12,
+          "knowledgeGained": "Kritikal ang documentation sa mga labor cases. Ang mga screenshot ng app instructions, GPS tracking, penalty notices, at pay rate changes ay lahat puwedeng gamitin bilang ebidensya ng employer control sa ilalim ng four-fold test."
+        },
+        {
+          "text": "Mag-sign up at i-share ang research mo sa ibang bagong riders sa hub.",
+          "nextNode": "rider_onboard_06",
+          "consequence": "Tinulungan ni Jake ang ibang riders na maintindihan ang mga karapatan nila bago pa man sila magsimula.",
+          "scoreChange": 14,
+          "knowledgeGained": "Ang collective awareness ang unang hakbang sa collective action. Sa ilalim ng Art. III, Sec. 8 ng Constitution, ginagarantiyahan ang karapatang bumuo ng mga unyon at asosasyon kahit para sa mga manggagawa sa non-traditional arrangements."
+        }
+      ],
+      "isEnding": false
+    },
+    "rider_onboard_05": {
+      "id": "rider_onboard_05",
+      "title": "Mga Binhi ng Pagdududa",
+      "narrative": "Mapa-pagbasa ng kontrata, pagtatanong sa staff, o pagsasalita habang orientation, mayroon nang kumakalam na pakiramdam si Jake na may mali sa 'independent contractor' label. Iginiit ng DeliverNa hub staff: 'Free ka mag-online o mag-offline kahit kailan gusto mo -- yan ang dahilan kung bakit independent ka.'\n\nPero may isang senior rider na si Kuya Rodel, dalawang taon nang nagrride, hinila si Jake sa tabi malapit sa parking area. 'Hijo, free ka nga mag-online anytime. Pero pag hindi ka nag-online during peak hours, bababa yung priority score mo. Tapos pag bumaba yun, konti lang orders mo. So technically free ka, pero practically, pinapapasok ka rin nila sa schedule nila.'\n\nIpinakita ni Kuya Rodel kay Jake ang phone niya -- isang spreadsheet na matagal na niyang ini-keep ng daily earnings, hours worked, at platform deductions. 'I've been averaging P380 a day for 10-12 hours of riding. Minus gas, maintenance, data load -- minsan P200 na lang talaga ang net ko. Mas mababa pa sa minimum wage.'\n\nNanginig ang panga ni Jake. Ang minimum wage sa NCR ay P610 per day. Kahit gross pa, mas mababa pa rin ang kinikita ni Kuya Rodel.",
+      "theme": "misclassification",
+      "choices": [
+        {
+          "text": "Magsimulang mag-keep ng sariling detalyadong earnings spreadsheet mula Day 1.",
+          "nextNode": "rider_onboard_06",
+          "consequence": "Sinunod ni Jake ang halimbawa ni Kuya Rodel at sinimulan ang pag-track ng lahat.",
+          "scoreChange": 10,
+          "knowledgeGained": "Ang pag-track ng actual hours worked vs. net earnings ay makakapagpakita na ang mga gig workers ay kumikita ng mas mababa sa minimum wage, na nagpapatibay sa argumento na dapat silang i-classify bilang employees na may karapatan sa minimum wage protection sa ilalim ng RA 6727 (Wage Rationalization Act)."
+        },
+        {
+          "text": "Kumbinsihin ang sarili na iba naman para sa iyo -- mas sisipagan mo.",
+          "nextNode": "rider_onboard_06",
+          "consequence": "Hindi pinansin ni Jake ang babala at sumabak nang buong optimismo.",
+          "scoreChange": -3,
+          "knowledgeGained": null
+        }
+      ],
+      "isEnding": false
+    },
+    "rider_onboard_06": {
+      "id": "rider_onboard_06",
+      "title": "Unang Araw sa Kalsada",
+      "narrative": "Ang unang araw ni Jake bilang DeliverNa rider ay nagsimula ng 10:30 AM ng isang mainit na Martes. Nag-posisyon siya malapit sa Megamall area sa Mandaluyong, kung saan maraming restaurants. Nag-ping ang app: unang order niya, P189 na lunch mula Jollibee papunta sa isang condo sa Shaw Boulevard. Delivery fee: P49. Parte niya pagkatapos ng 25% platform commission: P36.75.\n\nSumingit siya sa matinding EDSA traffic, kabog ang dibdib habang ang mga bus ay sumiswerve at ang mga jeepney ay humihinto nang walang babala. Natapos niya ang delivery sa 22 minutes -- mas mabilis sa 30-minute estimate ng app. Binigyan siya ng customer ng 5 stars. Isang munting rush ng achievement.\n\nPagsapit ng 9 PM, pagkatapos ng halos 11 oras sa kalsada, nakatapos si Jake ng 14 deliveries. Gross earnings: P514.50. Minus P180 para sa gas, P50 para sa phone data, P30 para sa tubig at isang tinapay mula sa 7-Eleven -- ang net niya ay P254.50. Masakit ang likod niya, pulikat ang mga kamay niya mula sa pagkakahawak sa handlebars, at 3% na lang ang battery ng phone niya.\n\nGinawa niya ang math. P254.50 sa 11 oras. P23.14 per hour. Mas mababa sa minimum wage kahit paano mo tingnan. Pero ang app notification ay nagsabi: 'Great first day! Keep grinding para ma-unlock ang BONUS TIER rewards!'",
+      "theme": "algorithmic_management",
+      "choices": [
+        {
+          "text": "Ituloy ang pag-ride at umasa na gaganda ang kita sa experience at bonus tiers.",
+          "nextNode": "rider_daily_01",
+          "consequence": "Nagpursige si Jake, hinahabol ang gamified incentive promises ng platform.",
+          "scoreChange": 0,
+          "knowledgeGained": null
+        },
+        {
+          "text": "I-post ang actual earnings breakdown mo sa Riders Pilipinas group chat.",
+          "nextNode": "rider_daily_01",
+          "consequence": "Ang transparency ni Jake ay nakatulong sa ibang riders na makita ang tunay na numbers sa likod ng platform promises.",
+          "scoreChange": 8,
+          "knowledgeGained": "Ang pag-share ng actual earnings data sa mga kapwa manggagawa ay nakakatulong kontra sa information asymmetry. Nakakapakinabang ang mga platform kapag hindi nagko-compare ng notes ang mga riders -- ang transparency ay isang anyo ng collective power."
+        }
+      ],
+      "isEnding": false
+    },
+    "rider_daily_01": {
+      "id": "rider_daily_01",
+      "title": "Binawasan ang Bayad",
+      "narrative": "Tatlong linggo na sa pag-ride, binuksan ni Jake ang app isang umaga at may nakitang notification na nakabaon sa ilalim ng mga promotional banners: 'Updated Fee Structure Effective Today.' Ang base delivery fee ay biglang bumaba mula P49 tungong P35 -- 28.5% na bawas. Ang per-delivery take niya pagkatapos ng commission ay bumaba mula P36.75 tungong P26.25.\n\nSumabog ang Riders Pilipinas Telegram group sa galit na mga mensahe. 'Wala man lang notice!' 'Paano na yung installment ko?' 'Pataas ng pataas presyo ng gas, pababa ng pababa ang bayad!' Nagpadala ng voice message si Kuya Rodel: 'Dalawang taon na ako dito. Dati P65 ang base fee. Ngayon P35 na. Pero yung commission nila, 25% pa rin.'\n\nBinuksan ni Jake ang Section 22.1 ng ToS -- ang clause na nagpapahintulot sa DeliverNa na baguhin ang fees 'at any time without prior notice.' Naalala niya ngayon. Yung clause na baka binasa niya, baka hindi.\n\nNoong hapon na iyon, may kumalat na mensahe: may mga rider na nagpaplano na pumunta sa DeliverNa office sa BGC para humingi ng paliwanag. Ang iba naman ay nagsabing mag-file sila ng complaint sa DTI o DOLE. May iba ring nagsabing ituloy lang ang pag-ride -- 'walang magagawa eh.'",
+      "theme": "algorithmic_management",
+      "choices": [
+        {
+          "text": "Sumali sa mga riders na pupunta sa DeliverNa office para humingi ng transparency sa pay cut.",
+          "nextNode": "rider_daily_02",
+          "consequence": "Sumama si Jake sa dose-dosenang riders sa BGC office, ginawa nilang visible ang reklamo.",
+          "scoreChange": 12,
+          "knowledgeGained": "Sa ilalim ng Labor Code, may karapatan ang mga manggagawa sa self-organization at collective action. Kahit classified bilang contractors, ang constitutional right to peaceful assembly (Art. III, Sec. 4) ay nagpoprotekta sa mga public gatherings."
+        },
+        {
+          "text": "Mag-trabaho ng extra hours para mabawi ang mas mababang per-delivery rate.",
+          "nextNode": "rider_daily_03",
+          "consequence": "Pinahaba ni Jake ang riding hours niya mula 11 hanggang 14 oras bawat araw, mas tuminding ang pagod at panganib.",
+          "scoreChange": -5,
+          "knowledgeGained": null
+        },
+        {
+          "text": "I-research kung puwedeng mag-intervene ang DOLE sa pay rates ng gig workers.",
+          "nextNode": "rider_daily_04",
+          "consequence": "Nadiskubre ni Jake ang mga existing government mechanisms na maaaring makatulong.",
+          "scoreChange": 10,
+          "knowledgeGained": "Ang DOLE ay nag-issue ng mga Labor Advisories tungkol sa gig economy. Kung may employer-employee relationship, ang minimum wage laws sa ilalim ng RA 6727 (Wage Rationalization Act) ay nag-a-apply kahit ano pa ang nakasulat sa kontrata."
+        }
+      ],
+      "isEnding": false
+    },
+    "rider_daily_02": {
+      "id": "rider_daily_02",
+      "title": "Harapan sa BGC Office",
+      "narrative": "Mga 50 riders ang nagtipon sa labas ng DeliverNa Philippines office sa isang commercial building sa 26th Street sa BGC, Taguig. Pinila nila ang mga motorsiklo, naka-display ang mga thermal bags. May mga may hawak na handwritten signs: 'Hindi Kami Robot -- Rider Kami!' at 'P35 Para Sa Buhay Namin?'\n\nTinangkang paalisin sila ng building security, pero nanatiling mapayapa at maayos ang mga riders sa public sidewalk. Eventually lumabas ang isang DeliverNa community manager -- isang batang babae na may tablet, kitang-kitang kinakabahan. 'The fee adjustment is part of a system-wide optimization to ensure platform sustainability,' binasa niya mula sa mukhang prepared script.\n\n'Sustainability para kanino?' sagot ni Kuya Rodel. 'Kayo nag-IPO last year, billions ang valuation niyo. Kami naman, P200 ang net per day.'\n\nDumating ang isang reporter mula sa Rappler -- may nag-tip off sa media. Bumalik sa loob ang community manager. Sa loob ng isang oras, nag-release ang DeliverNa ng isang malabong statement tungkol sa 'pagsusuri ng mga concerns ng riders' at 'patuloy na dialogue sa aming delivery partner community.'",
+      "theme": "algorithmic_management",
+      "choices": [
+        {
+          "text": "Kausapin ang Rappler reporter at i-share ang actual earnings data mo on record.",
+          "nextNode": "rider_daily_05",
+          "consequence": "Na-publish ang kwento ni Jake, dala ang atensyon ng publiko sa rider exploitation.",
+          "scoreChange": 13,
+          "knowledgeGained": "Ang media coverage ng labor issues ay lumikha ng public pressure at makakapag-push sa mga kumpanya at regulators na kumilos. Ang freedom of the press (Art. III, Sec. 4) at freedom of expression ay nagpoprotekta sa mga manggagawang nagsasalita nang publiko tungkol sa kalagayan nila."
+        },
+        {
+          "text": "Manatili sa background -- nag-aalala ka sa retaliation mula sa platform.",
+          "nextNode": "rider_daily_05",
+          "consequence": "Sinuportahan ni Jake ang protesta pero nag-keep ng low profile para protektahan ang account niya.",
+          "scoreChange": 3,
+          "knowledgeGained": "Ang takot sa retaliation ay isang malaking hadlang sa pag-organisa ng mga manggagawa. Sa ilalim ng Labor Code, anumang anyo ng retaliation laban sa mga manggagawang gumagamit ng kanilang mga karapatan ay unfair labor practice (Art. 259)."
+        }
+      ],
+      "isEnding": false
+    },
+    "rider_daily_03": {
+      "id": "rider_daily_03",
+      "title": "Mas Tuminding ang Pagod",
+      "narrative": "Nagsimulang gumising si Jake ng 5 AM para abutin ang breakfast rush at hindi titigil hanggang 11 PM o mamaya pa. 14-16 oras na ang mga araw niya, anim na araw sa isang linggo. Tumaas ang daily deliveries niya mula 14 hanggang 20-22, pero ang net earnings niya ay umabot lang sa mga P320-P350 per day pagkatapos ng expenses.\n\nNakakapagod nang husto. Halos mabangga niya ang isang truck sa C5 isang gabi nang napikit ang mga mata niya nang isang segundo. Nabubuhay siya sa energy drinks at lugaw mula sa isang street vendor malapit sa staging area niya sa Ortigas. Bumaba ang timbang niya. Napansin ng nanay niya ang maitim na bilog sa ilalim ng mga mata niya.\n\nPatuloy ang app sa pagpu-push ng notifications: 'Kumpletuhin ang 5 pang deliveries para ma-unlock ang DAILY BONUS na P75!' Parang bitag ang gamification -- lagi na lang siyang ilang deliveries ang layo sa bonus na halos pantakip lang sa gas niya.\n\nIsang gabi, habang pauwi sa Shaw Boulevard ng hatinggabi, nakita niya ang isa pang rider na naka-pull over sa gilid ng kalsada, nakaupo sa curb na nakayuko ang ulo sa mga kamay. Huminto si Jake. Ang rider, halos 20 years old, sabi niya 18 oras na siyang sunod-sunod na nagrride. 'Hindi ko na kaya, kuya. Pero hindi ko rin kayang huminto.'",
+      "theme": "algorithmic_management",
+      "choices": [
+        {
+          "text": "Tulungan ang pagod na rider at mangakong mag-set ng mas malusog na work limits para sa sarili mo.",
+          "nextNode": "rider_daily_05",
+          "consequence": "Na-realize ni Jake ang hindi napapanatili ng grind at nagsimulang maging mas strategic.",
+          "scoreChange": 7,
+          "knowledgeGained": "Sa ilalim ng RA 11058 (Occupational Safety and Health Standards Act na nagtatakda ng mga pamantayan sa kaligtasan at kalusugan sa trabaho), lahat ng manggagawa -- kasama ang nasa non-traditional arrangements -- ay may karapatan sa ligtas na kapaligiran sa trabaho. Ang mga aksidenteng dulot ng pagod ay isyu ng occupational safety."
+        },
+        {
+          "text": "Ituloy ang pagpupursige -- magpapahinga ka kapag may naipon ka na.",
+          "nextNode": "rider_daily_06",
+          "consequence": "Itinuloy ni Jake ang nakapapagod na schedule, lalong tumitinding ang panganib.",
+          "scoreChange": -7,
+          "knowledgeGained": null
+        }
+      ],
+      "isEnding": false
+    },
+    "rider_daily_04": {
+      "id": "rider_daily_04",
+      "title": "Pag-research ng Legal Options",
+      "narrative": "Bumisita si Jake sa DOLE NCR office sa Intramuros sa isang bihirang day off niya. Punuan ang waiting area -- karamihan factory workers at construction laborers. Nang makausap na niya ang isang labor officer, ipinaliwanag niya ang sitwasyon niya.\n\nMaingat na nakinig ang officer. 'Marami na kaming naririnig na ganyang kwento,' sabi niya. 'Gray area ang classification ng platform workers, pero pinag-aaralan ito ng DOLE. Kung maipakita mong kinokontrol ng platform ang paraan at pamamaraan ng trabaho mo -- hindi lang ang resulta -- may mga grounds para i-argue ang employer-employee relationship.'\n\nBinigyan niya si Jake ng pamphlet tungkol sa DOLE's Single Entry Approach (SEnA) -- isang mandatory 30-day conciliation-mediation process bago ang formal labor cases. Binanggit din niya ang DOLE Department Order No. 174 tungkol sa contracting at subcontracting. 'Kung mapatunayang labor-only contractor ang platform, lahat ng riders ay maituturing na regular employees.'\n\nDagdag ng officer: 'Samantala, puwede kang mag-register para sa voluntary SSS coverage sa ilalim ng RA 11199 (Social Security Act of 2018). Hindi nito masosolusyunan lahat, pero at least may social protection ka.'",
+      "theme": "misclassification",
+      "choices": [
+        {
+          "text": "Mag-file ng request for SEnA conciliation-mediation sa DOLE.",
+          "nextNode": "rider_daily_05",
+          "consequence": "Pormal na pumasok si Jake sa government dispute resolution process.",
+          "scoreChange": 14,
+          "knowledgeGained": "Ang DOLE's SEnA (Single Entry Approach) sa ilalim ng RA 10396 ay isang libre at mandatory na 30-day conciliation-mediation process. Mas mabilis at mas mura kaysa sa diretso sa NLRC, at ang mga settlement agreements ay enforceable."
+        },
+        {
+          "text": "Mag-register muna sa voluntary SSS coverage habang pinag-iisipan ang karagdagang legal action.",
+          "nextNode": "rider_daily_05",
+          "consequence": "Gumawa si Jake ng praktikal na hakbang para protektahan ang sarili habang tinitimbang ang mga options.",
+          "scoreChange": 9,
+          "knowledgeGained": "Sa ilalim ng RA 11199 (Social Security Act of 2018), ang mga self-employed at voluntary members ay puwedeng mag-register sa SSS coverage. Nagsisimula ang monthly contributions sa P580 para sa minimum bracket, na nagbibigay ng sickness, disability, maternity, at death benefits."
+        }
+      ],
+      "isEnding": false
+    },
+    "rider_daily_05": {
+      "id": "rider_daily_05",
+      "title": "Ang Bitag ng Rating",
+      "narrative": "Isang buwan na, bumaba ang rider rating ni Jake mula 4.8 hanggang 4.3 stars pagkatapos ng sunod-sunod na malas: isang restaurant ang tumagal ng 25 minuto sa pag-prepare ng order (si Jake ang sinisi ng customer), isang customer ang naglagay ng maling address at nag-rate sa kanya ng 1 star nang na-late ang delivery, at nag-glitch ang app habang nagde-deliver kaya nagkaroon ng 'late completion' flag.\n\nAgad ang mga consequences. Dahil below 4.5 ang rating, nawala kay Jake ang 'priority rider' status. Natuyo ang order queue niya -- mula sa pag-receive ng ping every 5-8 minutes, naging 20-30 minutes na ang hintayan sa pagitan ng orders. Bumaba ang daily delivery count niya sa 8-10, at bumagsak ang kita sa P180-P220 per day gross.\n\nNag-show ang app ng masayang mensahe: 'I-improve ang rating mo para ma-unlock ang mas maraming orders! Tips: Maging mas mabilis, ngumiti pa, i-double check ang orders!' Walang appeals process, walang paraan para i-dispute ang unfair ratings, at walang mekanismo para alisin ang ratings na dulot ng restaurant delays o app errors.\n\nNa-realize ni Jake na ang rating system ay hindi lang feedback -- ito ay isang control mechanism. Gawin mo nang eksakto ang gusto ng algorithm, o magugutom ka. Hindi ka nila sine-fire. Hindi ka lang nila binibigyan ng trabaho.",
+      "theme": "algorithmic_management",
+      "choices": [
+        {
+          "text": "I-document ang unfair rating system at mag-propose ng rider appeals process sa DeliverNa.",
+          "nextNode": "rider_daily_06",
+          "consequence": "Gumawa si Jake ng formal letter na may ebidensya ng mga depekto sa rating system.",
+          "scoreChange": 10,
+          "knowledgeGained": "Ang algorithmic management na nagpaparusa sa mga manggagawa para sa mga bagay na hindi nila kontrolado ay maaaring bumuo ng constructive dismissal. Kung effectively hinaharangan ka ng platform sa pagtatrabaho sa pamamagitan ng pag-manipulate ng algorithm, ito ay maaaring i-challenge bilang illegal dismissal sa ilalim ng Labor Code Art. 297."
+        },
+        {
+          "text": "Mag-trabaho nang mas malakas para ibalik ang rating -- tanggapin lahat ng order, gaano man kalayo.",
+          "nextNode": "rider_daily_06",
+          "consequence": "Tinanggap ni Jake ang mga hindi kumikitang long-distance deliveries para mabawi ang rating niya.",
+          "scoreChange": -4,
+          "knowledgeGained": null
+        }
+      ],
+      "isEnding": false
+    },
+    "rider_daily_06": {
+      "id": "rider_daily_06",
+      "title": "Typhoon Signal No. 2",
+      "narrative": "Tumama ang Typhoon Dagundong malapit sa Aurora province, at nag-raise ang PAGASA ng Signal No. 2 sa Metro Manila. Hinagupit ng ulan ang lungsod, bumaha sa mga low-lying areas ng Mandaluyong at Pasig. Yumuyuko ang mga puno sa hangin. Nagpayo ang MMDA na manatili sa loob ng bahay.\n\nPero walang tigil ang pagbu-buzz ng phone ni Jake. Nag-activate ang DeliverNa ng 'Storm Surge Pricing' -- tumalon ang delivery fees sa P85 per order, halos triple ng reduced base rate. Ang app notification: 'High demand! I-maximize ang kita mo ngayon!' May special badge pa: 'Storm Warrior' para sa riders na nakaka-complete ng 15+ deliveries habang may bagyo.\n\nPero ang tunay na pressure ay mas banayad. Isang maliit na notification sa ilalim ng screen: 'Note: Maaaring maapektuhan ang rider priority scores ng availability sa high-demand periods.' Sa madaling salita: kung hindi ka mag-ride habang may bagyo, bababa ang score mo at mas konti ang orders mo sa mga susunod na araw.\n\nNahati ang Telegram group. May mga rider na nasa labas na, nagpo-post ng mga video ng baha sa kalsada. May iba namang nagsha-share ng balita tungkol sa isang rider sa Quezon City na na-electrocute ng nabuwal na power line noong huling bagyo.",
+      "theme": "no_benefits",
+      "choices": [
+        {
+          "text": "Tumanggi sa pag-ride -- walang halaga ng pera ang katumbas ng buhay mo sa gitna ng bagyo.",
+          "nextNode": "rider_accident_01",
+          "consequence": "Nanatili si Jake sa bahay, tinanggap ang bawas sa priority score para protektahan ang kaligtasan niya.",
+          "scoreChange": 12,
+          "knowledgeGained": "Sa ilalim ng RA 11058 (Occupational Safety and Health Act na para sa kaligtasan sa trabaho), hindi maaaring pilitin ang mga manggagawa na magtrabaho sa conditions na may imminent danger. Kahit gig workers ay hindi dapat pilitin sa unsafe work sa pamamagitan ng algorithmic penalties."
+        },
+        {
+          "text": "Mag-ride habang may bagyo para kumita sa surge pricing at mapanatili ang priority score.",
+          "nextNode": "rider_accident_01",
+          "consequence": "Nag-ride si Jake sa mapanganib na kondisyon, itinutulak ng financial desperation at algorithmic pressure.",
+          "scoreChange": -8,
+          "knowledgeGained": null
+        },
+        {
+          "text": "Mag-coordinate sa ibang riders na sabay-sabay mag-offline habang may bagyo at i-post ito publically.",
+          "nextNode": "rider_accident_01",
+          "consequence": "Isang grupo ng riders ang publically tumanggi na mag-ride, ini-highlight ang mapanganib na incentive structure ng platform.",
+          "scoreChange": 15,
+          "knowledgeGained": "Ang collective refusal na magtrabaho sa unsafe conditions ay isang protected form ng concerted activity. Ang RA 11058 Sec. 5 ay nagsasaad na may karapatan ang mga manggagawa na tumanggi sa unsafe work nang walang banta ng paghihiganti."
+        }
+      ],
+      "isEnding": false
+    },
+    "rider_accident_01": {
+      "id": "rider_accident_01",
+      "title": "Ang Aksidente",
+      "narrative": "Dalawang buwan na sa DeliverNa career niya, isang Huwebes ng gabi sa rush hour, nagde-deliver si Jake sa 5th Avenue sa BGC. May dala siyang P680 na sushi order papunta sa isang condo sa Burgos Circle. Ang timer ng app ay nagpapakita ng 8 minutes na lang sa delivery estimate.\n\nIsang puting SUV ang tumakbo sa red light sa intersection ng 5th Avenue at 28th Street. Sumwerve si Jake para iwasan ito pero nasagi ang bumper ng SUV. Napalupad siya mula sa motorsiklo, dumulas sa aspalto. Bumukas ang thermal bag niya, nagkalat ang mga sushi containers sa kalsada.\n\nNang idilat ni Jake ang mga mata niya, nasa sahig na siya. Ang kaliwang braso niya ay nakabali sa maling anggulo -- fracture. Road rash ang bumabalot sa kanang binti niya. Ang front fork ng motorsiklo niya ay baluktot, basag ang headlight. Nagtipun-tipon ang mga tao. May tumawag ng ambulansya.\n\nSa gitna ng sakit, ang unang instinct ni Jake ay i-check ang phone niya. Tumatakbo pa rin ang app. May notification: 'Delivery overdue. Na-refund na ang customer. Isang P500 cancellation penalty ang na-apply sa account mo.' Lumabo ang paningin niya sa luha -- mula sa sakit at mula sa matinding injustice nito.",
+      "theme": "accident_liability",
+      "choices": [
+        {
+          "text": "Tawagan kaagad ang DeliverNa hotline para i-report ang aksidente at igiit na managot sila.",
+          "nextNode": "rider_accident_02",
+          "consequence": "Sinubukan ni Jake na papanagutin ang platform habang nasa eksena pa.",
+          "scoreChange": 10,
+          "knowledgeGained": "I-report kaagad ang mga workplace accidents at isulat ito. Sa ilalim ng Employees' Compensation Commission (ECC) rules, ang mga work-related injuries ay kailangang i-report agad. Kahit bilang gig worker, ang pag-document ng aksidente ay gumagawa ng record."
+        },
+        {
+          "text": "Unahin muna ang medical help -- harapin ang platform mamaya.",
+          "nextNode": "rider_accident_03",
+          "consequence": "Inuna ni Jake ang kalusugan niya, na tamang immediate choice pero na-delay ang paper trail.",
+          "scoreChange": 5,
+          "knowledgeGained": "Unahin ang kalusugan mo, pero subukang may mag-picture ng scene, kumuha ng witness information, at i-note ang oras at lokasyon. Ang mga ebidensyang ito ay mahalaga para sa anumang future claim."
+        },
+        {
+          "text": "Tanggapin na lang na ito ang risk ng pagiging rider -- independent contractor ka naman eh.",
+          "nextNode": "rider_accident_03",
+          "consequence": "Na-internalize ni Jake ang messaging ng platform na siya ang may dala ng lahat ng risk.",
+          "scoreChange": -8,
+          "knowledgeGained": null
+        }
+      ],
+      "isEnding": false
+    },
+    "rider_accident_02": {
+      "id": "rider_accident_02",
+      "title": "Ang Sagot ng Platform",
+      "narrative": "Mula sa ambulansya, tinawagan ni Jake ang DeliverNa rider support hotline. Pagkatapos ng 12 minutos na pag-hold at pakikinig sa masayang musika, sumagot ang isang support agent. Ipinaliwanag ni Jake na na-aksidente siya habang nagde-deliver.\n\n'I'm sorry to hear that, sir. Okay ka ba?' tanong ng agent. 'Let me check your account.' Isang pause. 'Sir, nakita ko ang cancelled delivery. Puwede ko i-waive ang P500 penalty bilang one-time courtesy. Tungkol sa medical expenses, unfortunately, nakalagay sa Delivery Partner Agreement namin na bilang independent contractor, ikaw ang responsable sa sarili mong insurance at medical costs.'\n\nNag-protesta si Jake: 'Nagde-deliver ako ng order ng CUSTOMER ninyo, gamit ang APP ninyo, sinusundan ang ROUTE ninyo, suot ang UNIFORM ninyo. Paano ako hindi responsibilidad ninyo?'\n\nAng agent, mukhang tunay na naaawa pero walang magawa, sabi: 'Sir, naiintindihan ko ang frustration ninyo. I can escalate this sa Partner Relations team namin. Makocontact kayo within 5-7 business days. Samantala, irerekomenda ko na mag-file kayo ng police report para sa insurance purposes.'\n\nLima hanggang pitong business days. Sinasakay na si Jake sa ambulansya na may fractured arm at ang platform ay nagbibigay sa kanya ng customer service timeline.",
+      "theme": "accident_liability",
+      "choices": [
+        {
+          "text": "Humingi ng supervisor at igiit ang formal, nakasulat na sagot tungkol sa accident liability.",
+          "nextNode": "rider_accident_04",
+          "consequence": "Agresibong nag-escalate si Jake, gumagawa ng documented trail ng pagtanggi ng platform.",
+          "scoreChange": 12,
+          "knowledgeGained": "Palaging kumuha ng mga sagot sa nakasulat -- emails, chat transcripts, o recorded calls. Mahina ang evidentiary value ng mga verbal promises. Ang mga nakasulat na pagtanggi na magbigay ng benefits ay puwedeng gamitin bilang ebidensya sa labor cases."
+        },
+        {
+          "text": "Tanggapin ang penalty waiver at ibaba ang tawag para mag-focus sa pagpapagamot.",
+          "nextNode": "rider_accident_04",
+          "consequence": "Napalagpas ni Jake ang pagkakataong gumawa ng immediate record pero nag-focus sa recovery.",
+          "scoreChange": 2,
+          "knowledgeGained": null
+        }
+      ],
+      "isEnding": false
+    },
+    "rider_accident_03": {
+      "id": "rider_accident_03",
+      "title": "Sa Emergency Room",
+      "narrative": "Dinala si Jake sa Taguig-Pateros District Hospital emergency room. Ang initial assessment: closed fracture ng kaliwang radius, multiple contusions, at malalim na road rash na nangangailangan ng debridement. Sabi ng ER doctor kailangan niya ng surgery para ma-set ang buto -- metal plate at screws.\n\nInabot ng hospital cashier ang estimate: ER fees P3,500, X-ray P1,800, surgery P45,000-P65,000, medications P5,000-P8,000, room and board (3-4 days) P12,000-P16,000. Total estimated cost: P67,300 hanggang P94,300.\n\nNakatitig si Jake sa mga numero. P8,200 ang nasa savings niya. Walang SSS. Walang PhilHealth. Walang ECC. Walang HMO. Wala. Kasi 'independent contractor' siya, wala ni isa sa mga mandatory employer contributions na nakukuha ng bawat regular employee ang nagawa para sa kanya.\n\nDumating ang nanay niya sa hospital, umiiyak. Ang nakababatang kapatid niyang babae, isang call center agent, nag-alok na magpahiram ng P15,000 mula sa ipon niya. Ang tito niya sa Bulacan ay baka makapagpadala ng P10,000. Pero sobrang kulang pa rin. At hindi pa kasama dito ang motorcycle repair -- estimated na P18,000 -- o ang mga linggo ng lost income habang nagre-recover siya.",
+      "theme": "no_benefits",
+      "choices": [
+        {
+          "text": "Mag-apply ng PhilHealth coverage retroactively bilang self-employed individual para mabawasan ang hospital costs.",
+          "nextNode": "rider_accident_04",
+          "consequence": "Tiningan ni Jake kung puwede pa siyang maka-access ng government health insurance.",
+          "scoreChange": 8,
+          "knowledgeGained": "Pinapayagan ng PhilHealth ang retroactive enrollment para sa informal sector, pero maaaring limitado ang benefits sa unang ilang buwan. Ang PhilHealth Z-benefit package ay sumasaklaw sa ilang catastrophic conditions. Para sa gig workers, kritikal ang maagang pagpapa-register."
+        },
+        {
+          "text": "Mag-start ng GoFundMe/GCash fundraiser at i-share ang kwento mo sa social media.",
+          "nextNode": "rider_accident_04",
+          "consequence": "Kumalat ang kwento ni Jake online, ini-highlight ang human cost ng gig misclassification.",
+          "scoreChange": 6,
+          "knowledgeGained": "Bagaman ang crowdfunding ay makakapagbigay ng immediate relief, hindi ito dapat pumalit sa systemic protections. Ang pangangailangan ng gig workers na mag-fundraise para sa accident costs ay sariling ebidensya ng kabiguan ng contractor classification model."
+        },
+        {
+          "text": "Mangutang sa 5-6 lending scheme para matakpan ang mga immediate bills.",
+          "nextNode": "rider_accident_05",
+          "consequence": "Nahulog si Jake sa high-interest debt trap dagdag pa sa mga injury niya.",
+          "scoreChange": -10,
+          "knowledgeGained": null
+        }
+      ],
+      "isEnding": false
+    },
+    "rider_accident_04": {
+      "id": "rider_accident_04",
+      "title": "Pagbuo ng Kaso",
+      "narrative": "Habang nagre-recover sa bahay -- naka-cast ang braso, hindi makapag-ride -- nagsimulang buuin ni Jake ang lahat ng piraso sa tulong ng Riders Pilipinas at isang volunteer lawyer mula sa Ateneo Human Rights Center na tumatanggap ng pro bono cases para sa gig workers.\n\nNi-review ni Atty. Marga Santos ang sitwasyon ni Jake sa isang video call. 'Jake, base sa sinabi mo sa akin, may malakas kang kaso para sa employer-employee relationship sa ilalim ng four-fold test. Pinipili ng platform ang mga riders, nagse-set at nagbabayad ng fees, puwedeng i-deactivate ang accounts na effectively dismissal, at may control sa pamamagitan ng app -- routes, uniforms, timing, ratings.'\n\nIpinaliwanag niya ang mga options: 'Puwede tayong mag-file ng complaint sa DOLE para sa misclassification, na puwedeng humantong sa isang order na nagde-declare na empleyado ka. Kung i-deactivate nila ang account mo bilang retaliation, mag-file tayo ng illegal dismissal sa NLRC. Puwede rin tayong mag-file sa SSS para sa coverage, na nag-a-argue na dapat sana nag-co-contribute ang platform buhat pa noong simula.'\n\nPero nagbabala siya: 'Matagal ang mga cases na ito -- months, minsan years. At may mga mamahaling abogado ang platform. Kailangan natin ng matibay na documentation. May mga records ka ba?'",
+      "theme": "misclassification",
+      "choices": [
+        {
+          "text": "I-present lahat ng documentation -- screenshots, earnings records, contract analysis -- at pumayag na mag-file sa DOLE.",
+          "nextNode": "rider_accident_06",
+          "consequence": "Nagbunga ang maingat na record-keeping ni Jake dahil nakakita ng matibay na ebidensya si Atty. Santos para sa kaso.",
+          "scoreChange": 15,
+          "knowledgeGained": "Sa mga labor cases, madalas lumilipat ang burden of proof sa employer para patunayan na WALANG employer-employee relationship. Ang matibay na documentation mula sa panig ng manggagawa -- screenshots, payment records, communications -- ang nagpapahirap na i-dismiss ang kaso."
+        },
+        {
+          "text": "Hilingin kay Atty. Santos na magpadala muna ng demand letter sa DeliverNa bago mag-formal filing.",
+          "nextNode": "rider_accident_06",
+          "consequence": "Isang formal demand letter ang ipinadala, na naglalagay sa DeliverNa sa notice.",
+          "scoreChange": 10,
+          "knowledgeGained": "Ang demand letter mula sa isang abogado ay naglalagay sa kumpanya sa notice at gumagawa ng formal record. Maraming disputes ang nareresolba sa stage na ito kasi mas pipiliin ng mga kumpanya ang settlement kaysa sa reputational risk ng isang public labor case."
+        }
+      ],
+      "isEnding": false
+    },
+    "rider_accident_05": {
+      "id": "rider_accident_05",
+      "title": "Nalulunod sa Utang",
+      "narrative": "Desperado at masakit ang katawan, nangutang si Jake ng P50,000 sa isang lending app na 15% monthly interest -- yung tipong ina-advertise sa Facebook na 'No collateral, instant approval!' Natakpan ang surgery, pero ngayon utang niya P57,500 pagkatapos ng first month's interest.\n\nSira pa rin ang motorsiklo niya, kaya hindi siya makapag-ride kahit gumaling na ang braso niya. Nangutang ulit siya ng P20,000 para sa repairs. Total debt: P77,500 at pataas pa. Nagpapadala ang lending app ng threatening text messages pag na-miss niya ang payments. Bumagsak ang credit score niya.\n\nSamantala, idle ang DeliverNa account niya. Pagkatapos ng 30 araw na inactivity, nakatanggap siya ng automated email: 'Ang Delivery Partner account mo ay na-flag para sa extended inactivity. Para mapanatili ang account mo, mangyaring mag-complete ng kahit 1 delivery sa loob ng susunod na 7 araw, o ang account mo ay maaaring i-deactivate.'\n\nNakakasakal ang irony. Hindi siya makapagtrabaho dahil naaksidente siya habang nagtatrabaho para sa kanila. At ngayon baka i-deactivate pa siya dahil hindi siya nagtatrabaho. Nagsindi ng kandila ang nanay niya sa Mandaluyong Church at nagdasal para sa isang solusyon.",
+      "theme": "no_benefits",
+      "choices": [
+        {
+          "text": "Lumapit sa Riders Pilipinas para sa legal help at alamin ang mga tunay na options mo.",
+          "nextNode": "rider_accident_06",
+          "consequence": "Sa wakas nakakonekta si Jake sa mga taong makakatulong sa kanya na maintindihan ang mga karapatan niya.",
+          "scoreChange": 10,
+          "knowledgeGained": "May libreng legal assistance para sa mga manggagawa sa pamamagitan ng PAO (Public Attorney's Office na nagbibigay ng libreng legal na tulong), law school legal aid clinics, at labor NGOs. Hindi mo kailangan ng pera para mag-file ng labor complaint -- libre ang NLRC proceedings at puwedeng mag-represent ang sarili kahit walang abogado."
+        },
+        {
+          "text": "Hilingin sa kaibigan na mag-log in sa account mo at gumawa ng deliveries para maiwasan ang deactivation.",
+          "nextNode": "rider_accident_06",
+          "consequence": "Nag-risk si Jake na lumabag sa ToS, na maaaring gamitin laban sa kanya mamaya.",
+          "scoreChange": -5,
+          "knowledgeGained": "Ang pagpapagamit ng rider account mo sa ibang tao ay lumalabag sa karamihan ng platform ToS at maaaring gamitin bilang grounds para sa lehitimong deactivation, na nagpapahina ng anumang future legal claim mo."
+        },
+        {
+          "text": "Talikuran na ang DeliverNa nang tuluyan at subukang mabuhay sa odd jobs habang binabayaran ang utang.",
+          "nextNode": "rider_resolve_05",
+          "consequence": "Nalaglag si Jake sa mga bitak, bumalik sa gig economy nang walang proteksyon.",
+          "scoreChange": -10,
+          "knowledgeGained": null
+        }
+      ],
+      "isEnding": false
+    },
+    "rider_accident_06": {
+      "id": "rider_accident_06",
+      "title": "Na-Deactivate ang Account",
+      "narrative": "Anim na linggo pagkatapos ng aksidente, gumagaling na ang braso ni Jake pero naka-sling pa rin. Nag-log in siya sa DeliverNa app para i-check ang account status niya. Ang screen ay nagpapakita ng red banner: 'Na-deactivate ang account mo dahil sa hindi pagtugon sa Minimum Activity Requirements (MAR) ayon sa Section 18.4 ng Delivery Partner Agreement.'\n\nSinubukan niyang i-contact ang support. Pagkatapos ng 45 minutos sa hold, sinabi ng agent: 'Sir, final na ang deactivation decisions. Puwede kayong mag-re-apply bilang bagong Delivery Partner pagkatapos ng 90-day cooling period, subject to approval.'\n\nMag-re-apply. Pagkatapos ng dalawang buwang pag-ride para sa kanila, na-aksidente sa delivery nila, at pinabayaan -- gusto nila mag-re-apply siya na parang stranger.\n\nNanginig ang mga kamay ni Jake habang sini-screenshot ang lahat. Mapa-nakahanap man siya ng legal help nang maaga o huli, ang sandaling ito ay nagpatatag ng isang bagay sa kanya. Hindi na ito tungkol lang sa P35-per-delivery niya. Ito ay tungkol sa bawat rider sa bawat platform sa Pilipinas na tinatrato bilang disposable.\n\nBinuksan niya ang Riders Pilipinas group chat at nag-type: 'Na-deactivate ako dahil na-aksidente ako habang nagde-deliver. Sino ang sasama sa akin?'",
+      "theme": "unfair_deductions",
+      "choices": [
+        {
+          "text": "Makipagtulungan kay Atty. Santos para mag-file ng illegal dismissal case sa NLRC.",
+          "nextNode": "rider_organize_01",
+          "consequence": "Gumawa ng formal legal action si Jake, ina-argue na ang account deactivation ay katumbas ng illegal dismissal.",
+          "scoreChange": 15,
+          "knowledgeGained": "Kung napatunayan ang employer-employee relationship, ang account deactivation nang walang just o authorized cause at due process ay bumubuo ng illegal dismissal sa ilalim ng Labor Code Art. 297-299. Ang remedyo ay kasama ang reinstatement at full back wages."
+        },
+        {
+          "text": "Unahin muna ang pag-organisa ng mga riders -- buuin ang collective power bago mag-file ng individual cases.",
+          "nextNode": "rider_organize_01",
+          "consequence": "Na-channel ni Jake ang galit niya sa movement-building, pinatitibay ang laban para sa lahat ng riders.",
+          "scoreChange": 12,
+          "knowledgeGained": "Ang collective action ay kadalasang mas epektibo kaysa sa individual cases. Ang reklamo ng isang manggagawa ay maaaring i-dismiss, pero ang coordinated effort na may mga dokumentadong ebidensya mula sa maraming riders ay lumikha ng systemic pressure para sa pagbabago."
+        }
+      ],
+      "isEnding": false
+    },
+    "rider_organize_01": {
+      "id": "rider_organize_01",
+      "title": "Nagsisimula ang Kilusan",
+      "narrative": "Nag-viral ang post ni Jake sa Riders Pilipinas chat sa loob ng delivery rider community. Sa loob ng 48 oras, mahigit 200 riders ang nagbahagi ng sariling kwento -- na-deactivate dahil sa mababang ratings na dulot ng app glitches, na-injure nang walang suporta, nagbabayad ng penalties para sa restaurant delays na hindi naman kasalanan nila.\n\nIsang core group ng 15 riders ang nagsimulang magkita sa isang Ministop malapit sa Boni MRT station tuwing Huwebes ng gabi. Si Jake, kahit may injury pa, ay naging de facto coordinator. Kasama sa grupo ang mga riders mula sa DeliverNa, FoodGrab, at PadelEats -- ang tatlong pinakamalaking platform sa Metro Manila. Halos magkapareho ang mga kwento nila sa lahat ng tatlong apps.\n\nPinayuhan sila ni Atty. Santos: 'Kung gusto ninyong mag-organisa nang pormal, may mga options kayo. Puwede kayong mag-register bilang workers' association sa DOLE, kahit hindi pa kayo kinikilala bilang employees. Puwede rin kayong bumuo ng cooperative. Para sa collective bargaining, kailangan munang makilala kayo bilang employees.'\n\nNag-debate ang grupo sa strategy. May gusto ng immediate action -- isang mass log-off para i-pressure ang mga platform. May iba namang gusto munang buuin nang maayos ang kaso bago lumantad. May isang rider na nagmungkahi na lumapit kay Senator Risa Hontiveros, na may mga nai-file na bills tungkol sa gig worker protection.",
+      "theme": "misclassification",
+      "choices": [
+        {
+          "text": "Mag-register bilang formal workers' association sa DOLE habang binubuuin ang legal case.",
+          "nextNode": "rider_organize_02",
+          "consequence": "Kumuha ang grupo ng structured at legally sound na approach sa pag-organisa.",
+          "scoreChange": 14,
+          "knowledgeGained": "Sa ilalim ng DOLE Department Order No. 40-03, ang mga workers' associations ay maaaring i-register kahit walang formal employer-employee relationships. Ang registration ay nagbibigay ng legal personality, nagpoprotekta sa mga miyembro, at nagbibigay-daan sa grupo na makipag-negotiate bilang isang recognized body."
+        },
+        {
+          "text": "Planuhin kaagad ang mass log-off protest para kumuha ng public attention habang mainit pa ang momentum.",
+          "nextNode": "rider_organize_03",
+          "consequence": "Inuna ng grupo ang visible action para i-pressure ang mga platform at makakuha ng media coverage.",
+          "scoreChange": 9,
+          "knowledgeGained": "Ang direct action ay makakapag-create ng urgency, pero may mga risks din. Kung walang formal organizational structure, mas vulnerable ang bawat miyembro sa platform retaliation."
+        }
+      ],
+      "isEnding": false
+    },
+    "rider_organize_02": {
+      "id": "rider_organize_02",
+      "title": "Pormal na Pagtatatag ng Samahan",
+      "narrative": "Nagdesisyon ang grupo na mag-register bilang 'Samahan ng mga Delivery Riders ng Metro Manila' (SDRM) sa DOLE Bureau of Labor Relations. Ginabayan sila ni Atty. Santos sa mga requirements: constitution and bylaws, listahan ng officers at members (minimum 20), minutes ng organizational meeting, at registration fee.\n\nNa-elect si Jake bilang Vice President -- gusto sana niyang less visible, pero iginiit ng grupo. Nakalap sila ng 47 initial members sa tatlong platforms, kumpleto na may mga signed membership forms. Tumagal ng tatlong linggo ang registration process.\n\nPagka-register, may legal standing na ang SDRM para mag-file ng collective complaints, mag-represent ng mga miyembro sa DOLE proceedings, at makipag-negotiate sa mga platform. Nagbukas din sila ng maliit na mutual aid fund -- nag-co-contribute ang bawat miyembro ng P100 per week para sa emergency fund na tutulong sa mga riders na na-injure sa trabaho.\n\nNapansin ng mga platform. Nakatanggap si Jake ng email mula sa legal team ng DeliverNa -- hindi tungkol sa deactivation niya, kundi isang general notice na ipinadala sa 'lahat ng Delivery Partners' na nagpapaalala na 'ang anumang coordinated action para manipulahin ang platform availability ay maaaring magresulta sa account suspension sa ilalim ng Section 34.2 ng Delivery Partner Agreement.'\n\nMalinaw ang mensahe: mag-organisa kayo, at puputulin namin kayo.",
+      "theme": "misclassification",
+      "choices": [
+        {
+          "text": "I-report ang threatening email sa DOLE bilang interference sa right to self-organization.",
+          "nextNode": "rider_organize_04",
+          "consequence": "Pormal na inakusahan ng SDRM ang DeliverNa ng unfair labor practice sa pamamagitan ng intimidation.",
+          "scoreChange": 15,
+          "knowledgeGained": "Ang pagbabanta sa mga manggagawa dahil sa pag-organisa ay unfair labor practice sa ilalim ng Labor Code Art. 259. Kahit disputed pa ang employment status ng riders, ang constitutional right to self-organization (Art. XIII, Sec. 3) ay nag-a-apply sa lahat ng manggagawa, hindi lang sa mga empleyado."
+        },
+        {
+          "text": "Balewalain ang banta at ituloy ang pag-organisa nang tahimik para hindi ma-provoke ang platform.",
+          "nextNode": "rider_organize_04",
+          "consequence": "Nagpatuloy ang SDRM sa pagpapalawak ng membership pero napalagpas ang pagkakataon na mag-establish ng legal precedent laban sa intimidation.",
+          "scoreChange": 4,
+          "knowledgeGained": "Bagaman may halaga ang pag-iingat, ang pag-document at pag-report ng mga banta ng retaliation ay gumagawa ng legal precedent at nagpapatibay sa mas malawak na kaso para sa rider rights."
+        }
+      ],
+      "isEnding": false
+    },
+    "rider_organize_03": {
+      "id": "rider_organize_03",
+      "title": "Ang Log-Off Protest",
+      "narrative": "Sa isang Sabado ng 11:30 AM -- peak lunch delivery time -- mahigit 300 riders sa buong Metro Manila ang sabay-sabay na nag-offline sa lahat ng tatlong major platforms. Ang hashtag na #RidersLogOff ay nag-trend sa Twitter Philippines sa loob ng isang oras.\n\nAgad ang epekto. Ang mga customer sa BGC, Makati, at Ortigas ay nag-report na tumalon ang delivery wait times mula 20 minutos hanggang mahigit isang oras. Tumawag ang mga restaurant sa mga platform na nagrereklamo ng unfulfilled orders. Na-overwhelm ang customer service lines ng tatlong platforms.\n\nSi Jake, nanonood mula sa apartment niya habang gumagaling pa ang braso, nagko-coordinate sa Telegram group. Ang mga riders sa mga strategic locations -- Mall of Asia, Eastwood, UP Town Center -- binaliktad ang kanilang thermal bags bilang solidarity habang nagla-livestream sa Facebook.\n\nPagsapit ng 2 PM, ang GMA News, ABS-CBN, at maraming online outlets ay nagco-cover na ng kwento. Nag-release ng statement ang isang DOLE Undersecretary: 'Minomonitor namin ang sitwasyon at nanawagan sa lahat ng parties na makisali sa constructive dialogue. Handa ang DOLE na mag-facilitate ng mediation.'\n\nPero pagsapit ng 3 PM, dumating ang unang reports: 12 riders na sumali ay na-deactivate ng DeliverNa dahil sa 'coordinated manipulation of platform availability.'",
+      "theme": "algorithmic_management",
+      "choices": [
+        {
+          "text": "Kaagad na mag-file ng unfair labor practice complaints para sa 12 na-deactivate na riders at hilingin ang DOLE intervention.",
+          "nextNode": "rider_organize_04",
+          "consequence": "Ang mga deactivation ay naging sentro ng mas malaking legal na laban tungkol sa rider rights.",
+          "scoreChange": 14,
+          "knowledgeGained": "Ang mass deactivation bilang tugon sa collective action ay matibay na ebidensya ng unfair labor practice. Sa ilalim ng Labor Code Art. 259, ang pagtanggal o diskriminasyon para sa union activities ay ilegal. Nagpapahiwatig din ito na may 'power of dismissal' ang platform -- isa sa apat na test para sa employment."
+        },
+        {
+          "text": "Gamitin ang media attention para i-push ang emergency legislation na nagpoprotekta sa gig workers.",
+          "nextNode": "rider_organize_04",
+          "consequence": "Lumipat ang kilusan mula sa platform negotiation tungong legislative advocacy.",
+          "scoreChange": 11,
+          "knowledgeGained": "Ang legislative advocacy ay isang long-term strategy. Maraming bills tungkol sa gig worker protection ang nai-file na sa Congress, kasama ang mga proposal para sa mandatory accident insurance, minimum per-delivery rates, at malinaw na employment classification standards."
+        }
+      ],
+      "isEnding": false
+    },
+    "rider_organize_04": {
+      "id": "rider_organize_04",
+      "title": "Pumasok ang DOLE",
+      "narrative": "Ang kombinasyon ng media coverage, formal complaints, at public pressure ay nagpilit sa DOLE na kumilos. Nanawagan ng tripartite conference ang Secretary of Labor na si Maria Elena Quisumbing -- mga representative mula sa mga delivery platform, mga rider associations (kasama ang SDRM), at DOLE mediators -- sa DOLE Central Office sa Intramuros.\n\nDumalo si Jake na naka-sling, kasama si Atty. Santos at Kuya Rodel. Sa kabila ng mesa ay ang mga abogado ng DeliverNa, FoodGrab, at PadelEats na naka-expensive suits. Tensyonado ang atmosphere.\n\nIpinresenta ng DOLE ang findings mula sa preliminary investigation: 'Base sa mga interview sa 87 riders mula sa tatlong platforms, site inspections ng platform hubs, at review ng Delivery Partner Agreements, natagpuan ng Department ang mga indicators na consistent sa employer-employee relationship sa ilalim ng four-fold test, lalo na tungkol sa element ng control.'\n\nNag-push back nang husto ang mga platform lawyers: 'Ito ay mga technology companies na nagbibigay ng marketplace. Ang mga riders ay micro-entrepreneurs na gumagamit ng platform namin bilang tool. Ang flexibility na mag-online o mag-offline kahit kailan ay nagpapatunay ng kanilang independent contractor status.'\n\nSumagot ang DOLE mediator: 'Ang flexibility ng schedule lamang ay hindi nagne-negate ng employment relationship kung ang ibang elements ng control ay present.'",
+      "theme": "misclassification",
+      "choices": [
+        {
+          "text": "I-push ang formal DOLE ruling na nagde-declare na empleyado ang mga riders, hindi lang mediation.",
+          "nextNode": "rider_organize_05",
+          "consequence": "Itinutulak ng SDRM ang binding determination na magse-set ng precedent para sa lahat ng platform riders.",
+          "scoreChange": 13,
+          "knowledgeGained": "Ang ruling ng DOLE Secretary sa employment status ay maaaring i-appeal sa Court of Appeals at ultimately sa Supreme Court. Ang favorable ruling ay magse-set ng precedent na makakaapekto sa lahat ng gig workers sa Pilipinas."
+        },
+        {
+          "text": "Makipag-negotiate ng compromise: manatiling contractors ang riders pero may mandatory minimum protections.",
+          "nextNode": "rider_organize_06",
+          "consequence": "Tinanggap ng SDRM ang middle-ground solution na nagbibigay ng ilang agarang kaluwagan.",
+          "scoreChange": 6,
+          "knowledgeGained": "Ang mga compromise agreements ay makakapagbigay ng mas mabilis na relief pero maaari ring mag-entrench ng contractor classification. May ilang bansa na gumawa ng 'third category' ng worker na may partial protections, bagaman argue ng mga labor advocates na sinisira nito ang full employee rights."
+        }
+      ],
+      "isEnding": false
+    },
+    "rider_organize_05": {
+      "id": "rider_organize_05",
+      "title": "Ang Desisyon ng DOLE",
+      "narrative": "Pagkatapos ng mga linggo ng hearings, document reviews, at testimonya ng mga riders, nag-issue ang DOLE Regional Director for NCR ng isang order: ang mga delivery riders sa lahat ng tatlong platforms ay napatunayang empleyado, hindi independent contractors, base sa kabuuan ng four-fold test.\n\nSinasabi ng ruling: 'Ang mga platform ay may kontrol sa paraan at pamamaraan ng trabaho ng mga riders sa pamamagitan ng algorithmic assignment, route designation, uniform requirements, performance rating systems, at kapangyarihang i-deactivate ang accounts. Ang designation bilang independent contractors sa Delivery Partner Agreements ay hindi nag-o-override sa tunay na katangian ng working relationship.'\n\nIno-order ng desisyon ang lahat ng tatlong platforms na: (1) i-regularize ang lahat ng active riders bilang empleyado sa loob ng 60 araw; (2) magremit ng SSS, PhilHealth, at Pag-IBIG contributions na retroactive sa start date ng bawat rider; (3) magbayad ng minimum wage differentials; (4) i-reinstate lahat ng riders na na-deactivate kaugnay ng protesta o organizational activities.\n\nAgad na inanunsyo ng mga platform na mag-a-appeal sila sa NLRC. Bumaba ang stock prices nila. Headlines sa buong Asia ang nagco-cover ng kwento. Hindi na humihinto ang phone ni Jake sa dami ng interview requests.",
+      "theme": "misclassification",
+      "choices": [
+        {
+          "text": "Ituloy ang laban sa NLRC appeal process habang itinutulak ang legislative reform.",
+          "nextNode": "rider_resolve_01",
+          "consequence": "Naghahanda si Jake at ang SDRM para sa mahabang legal na laban habang nag-a-advocate din para sa mga bagong batas.",
+          "scoreChange": 15,
+          "knowledgeGained": "Ang DOLE orders ay maaaring i-appeal sa NLRC (National Labor Relations Commission na naghahatol sa mga labor disputes), pagkatapos sa Court of Appeals, at sa huli sa Supreme Court. Maaaring tumagal ng mga taon ang legal process, pero bawat favorable ruling ay nagpapatibay ng precedent."
+        },
+        {
+          "text": "Gamitin ang ruling bilang leverage para makipag-negotiate nang direkta sa mga platform para sa immediate relief.",
+          "nextNode": "rider_resolve_02",
+          "consequence": "Nakikipag-negotiate ang SDRM mula sa posisyon ng lakas na sinusuportahan ng DOLE ruling.",
+          "scoreChange": 10,
+          "knowledgeGained": "Ang favorable government ruling, kahit under appeal pa, ay malaking nakakapatibay sa bargaining position ng grupo ng mga manggagawa. Mas pipiliin ng mga kumpanya ang settlement kaysa sa risk ng final unfavorable precedent."
+        },
+        {
+          "text": "Gamitin ang momentum para mag-launch ng rider-owned cooperative delivery platform.",
+          "nextNode": "rider_resolve_06",
+          "consequence": "Na-channel ni Jake at ng SDRM ang enerhiya ng kilusan sa pagbuo ng alternatibo sa mga corporate platforms.",
+          "scoreChange": 14,
+          "knowledgeGained": "Ang platform cooperatives ay isang alternatibo sa corporate gig platforms. Sa ilalim ng RA 9520 (Philippine Cooperative Code na batas sa mga kooperatiba), puwedeng bumuo ng cooperatives ang mga manggagawa na nakarehistro sa CDA (Cooperative Development Authority), na nagbibigay sa kanila ng democratic ownership, shared profits, at collective social security enrollment."
+        }
+      ],
+      "isEnding": false
+    },
+    "rider_organize_06": {
+      "id": "rider_organize_06",
+      "title": "Ang Compromise Offer",
+      "narrative": "Nag-alok ang mga platform ng counter-proposal habang nasa mediation: mananatiling classified bilang independent contractors ang mga riders, pero magbibigay ang mga platform ng: (1) mandatory accident insurance hanggang P100,000 per incident, (2) minimum base fee na P40 per delivery (mula P35), (3) rating appeals process, (4) 24-hour advance notice para sa anumang fee changes, at (5) P500/month health subsidy.\n\nMaingat si Atty. Santos: 'Mas maganda ito kaysa wala, pero fraction lang ito ng makukuha ninyo bilang empleyado. SSS alone ay magbibigay sa inyo ng sickness, disability, at retirement benefits. PhilHealth ay magco-cover ng hospitalization. Ang minimum wage sa NCR ay P610/day. Hindi malapit dito ang offer na ito.'\n\nSabi ni Kuya Rodel, pragmatic as always: 'Atty, tama po kayo. Pero ilang taon bago mag-decide ang Supreme Court? Samantalang yung mga kasamahan natin, nagde-deliver pa rin nang walang insurance ngayon na.'\n\nNahati ang grupo. Gusto ng mga nakababatang rider na ipaglaban ang full employee status. Gusto naman ng mga mas nakakatandang riders na may pamilya ang agarang kaluwagan, kahit partial.",
+      "theme": "no_benefits",
+      "choices": [
+        {
+          "text": "Tanggapin ang compromise bilang interim measure pero ituloy ang paghabol ng full employee classification.",
+          "nextNode": "rider_resolve_03",
+          "consequence": "Kinuha ng SDRM ang agarang gains habang buhay pa ang mas malaking laban.",
+          "scoreChange": 9,
+          "knowledgeGained": "Ang mga interim agreements ay makakapagbigay ng agarang relief habang pinapanatili ang karapatang mag-pursue ng mas malalaking claims. Palaging siguraduhing ang anumang settlement ay malinaw na nagsasaad na hindi ito waiver ng mga future rights o claims."
+        },
+        {
+          "text": "Tanggihan ang compromise at itulak ang full DOLE ruling sa employment status.",
+          "nextNode": "rider_resolve_04",
+          "consequence": "Nagsugal ang SDRM sa legal process, tumangging mag-settle nang mas mababa sa full rights.",
+          "scoreChange": 11,
+          "knowledgeGained": "Ang pagtanggi sa compromise offer ay isang strategic risk. Kung manalo ang legal case, mas malaki ang makukuha. Kung matalo o tumagal ng taon, patuloy ang mga riders na walang proteksyon samantala."
+        }
+      ],
+      "isEnding": false
+    },
+    "rider_resolve_01": {
+      "id": "rider_resolve_01",
+      "title": "Ang Mahabang Laban",
+      "narrative": "Inuphold ng NLRC ang DOLE ruling pagkatapos ng walong buwan na proceedings. Nag-appeal ang mga platform sa Court of Appeals. Samantala, ang SDRM, na may mahigit 2,000 members na, ay nakipagtulungan sa mga sympathetic legislators para i-draft ang 'Gig Workers Protection Act' -- isang bill na lilikha ng malinaw na classification standards, magma-mandate ng social security enrollment, magre-require ng accident insurance, at mag-e-establish ng minimum per-delivery rates.\n\nSi Jake, fully healed na ang braso, ay naging kilalang labor advocate. Nag-testify siya sa harap ng Senate Committee on Labor, Employment and Human Resources Development. 'Kami po ay hindi robot. Hindi po kami algorithm. Tao po kami na may pamilya, may pangarap, may karapatan,' sabi niya sa mga senador. Nag-viral ang clip.\n\nLabingwalong buwan pagkatapos ng aksidente niya, in-affirm ng Court of Appeals ang NLRC ruling. Nag-file ang DeliverNa sa Supreme Court. Pero lumiliko na ang agos -- overwhelmingly sumusuporta ang public opinion sa mga riders, at dalawa sa tatlong platform ay tahimik nang nagsisimulang mag-implement ng ilang employee-like protections para mauna sa legislation.\n\nMinsan pa ring nagrride si Jake -- para sa isang mas maliit na rider-owned cooperative delivery platform na tinulungan ng SDRM na i-launch. Pero ang tunay niyang trabaho ngayon ay advocacy. Hindi niya nakalimutan ang gabing iyon sa Shaw Boulevard, at ang batang rider na hindi kayang huminto dahil hindi niya kayang huminto.",
+      "theme": "misclassification",
+      "choices": [],
+      "isEnding": true
+    },
+    "rider_resolve_02": {
+      "id": "rider_resolve_02",
+      "title": "Tagumpay sa Negosasyon",
+      "narrative": "May hawak na DOLE ruling, agresibong nakipag-negotiate ang SDRM. Pagkatapos ng tatlong rounds ng mediation, pumayag ang DeliverNa sa isang landmark settlement: ang mga riders ay ire-reclassify bilang 'regular employees on flexible schedules.' Makakatanggap sila ng SSS, PhilHealth, at Pag-IBIG contributions; guaranteed minimum na P610 per day kapag active sa platform; accident at health insurance; at karapatang bumuo ng unyon.\n\nSumunod ang FoodGrab at PadelEats ng mga katulad na agreements sa loob ng dalawang buwan, bahagyang dahil sa public pressure at bahagyang dahil senyales ng DOLE ruling kung saan papunta ang legal na hangin.\n\nAng back pay at SSS contributions ni Jake, kinuwenta nang retroactive mula sa start date niya, ay umabot sa P47,200. Na-reimburse ang medical bills niya mula sa aksidente sa halagang P68,000. Na-reactivate ang account niya na may full priority status restored.\n\nPero mas importante, mahigit 50,000 delivery riders sa buong Metro Manila ang mayroon nang social security coverage, accident insurance, at guaranteed minimum income. Tinignan ni Jake ang SSS ID card niya at naalala ang sinabi ni Kuya Rodel dalawang taon na ang nakakaraan sa Pasig parking lot: 'Track everything, hijo. Someday it will matter.'\n\nNag-matter nga.\n\n--- WAKAS ---\n\nMga resources para sa Philippine gig workers:\n- DOLE Hotline: 1349\n- NLRC: nlrc.dole.gov.ph\n- SSS: sss.gov.ph (Voluntary Coverage)\n- PhilHealth: philhealth.gov.ph (Informal Economy Program)\n- PAO (Libreng Legal na Tulong): pao.gov.ph\n- Riders Pilipinas (Advocacy): facebook.com/RidersPilipinas",
+      "theme": "misclassification",
+      "choices": [],
+      "isEnding": true
+    },
+    "rider_resolve_03": {
+      "id": "rider_resolve_03",
+      "title": "Partial na Panalo, Patuloy na Laban",
+      "narrative": "Tinanggap ng SDRM ang compromise ng mga platform: accident insurance, bahagyang mas mataas na base fee, rating appeals process, at health subsidy. Nilagdaan ang kasunduan sa DOLE office na may media present. Tunay na pagbabago ito para sa libu-libong riders.\n\nPero hindi pa rin naresolba ang classification question. 'Independent contractors' pa rin ang mga rider. Wala pa ring SSS, walang PhilHealth employer share, walang 13th month pay, walang separation pay. Ang accident insurance ay may P100,000 cap -- ang actual medical costs ni Jake mula sa isang insidente ay halos umabot doon.\n\nGinamit ni Jake ang bahagi niya sa settlement -- P12,500 na pantakip sa lumang medical bills niya -- para mag-register sa voluntary SSS at PhilHealth coverage. Nagbabayad siya ng P580/month para sa SSS at P400/month para sa PhilHealth mula sa sarili niyang bulsa. Pera na halos hindi niya afford, pero itinuro sa kanya ng aksidente na ang pagri-ride nang walang coverage ay parang pagri-ride nang walang helmet.\n\nPinagpapatuloy niyang maging SDRM Vice President, at patuloy na itinutulak ng samahan ang full employee recognition. Hindi pa tapos ang laban. Pero 3,000 riders na ngayon ang may accident insurance na dati ay wala, at isang rating appeals process na nag-reverse na ng 450 unfair deactivations.\n\nMabagal ang progreso. Pero progreso pa rin.\n\n--- WAKAS ---\n\nMga resources para sa Philippine gig workers:\n- DOLE Hotline: 1349\n- SSS Voluntary Registration: sss.gov.ph\n- PhilHealth Informal Economy: philhealth.gov.ph\n- PAO Libreng Legal na Tulong: pao.gov.ph\n- Ateneo Human Rights Center: ateneo.edu/ahr\n- SENTRO (Labor Center): sentro.org",
+      "theme": "no_benefits",
+      "choices": [],
+      "isEnding": true
+    },
+    "rider_resolve_04": {
+      "id": "rider_resolve_04",
+      "title": "Lahat o Wala",
+      "narrative": "Tinanggihan ng SDRM ang compromise at itinulak ang DOLE para sa formal ruling. Nag-drag ang proseso ng ilang buwan. Samantala, nag-implement ang mga platform ng bagong strategy: tinaasan nila ang commission mula 25% tungong 30%, sabi nila dahil sa 'insurance and compliance costs,' na effectively mas bumawas pa sa kita ng mga rider. Nagsimula rin silang agresibong mag-hire ng mga bagong rider, dini-dilute ang delivery pool at binabawasan ang order volume ng bawat rider.\n\nMay mga miyembro ng SDRM na umalis, frustrated sa kawalan ng agarang resulta. Bumaba ang membership mula 2,000 tungong 1,100. Tahimik na sini-settle ng mga platform ang individual complaints gamit ang mga cash offers at NDAs, isa-isang kinukuha ang mga riders.\n\nPero ang core group ay nanatiling matatag. Pagkatapos ng 14 na buwan, sa wakas nag-issue ang DOLE ng ruling: empleyado ang mga riders. Nag-appeal ang mga platform. Patuloy ang legal na laban.\n\nSi Jake, pagod pero hindi sumusuko, ngayon ay part-time na motorcycle mechanic habang hinahabol ang kaso. Sinabi niya sa isang reporter: 'Mas madali sana kung tinanggap namin yung compromise. Pero kung tinanggap namin, wala nang magbabago para sa mga rider na darating pagkatapos namin. Yung laban na 'to, hindi lang para sa amin. Para sa lahat ng gig worker sa Pilipinas.'\n\nAng Supreme Court ang magpapasya sa bandang huli. Nanonood ang kasaysayan.\n\n--- WAKAS ---\n\nMga resources para sa Philippine gig workers:\n- DOLE Hotline: 1349\n- NLRC: nlrc.dole.gov.ph\n- PAO Libreng Legal na Tulong: pao.gov.ph\n- National Union of Workers in Hotel, Restaurant and Allied Industries (NUWHRAIN)\n- Kilusang Mayo Uno (KMU): kmu.ph\n- SENTRO: sentro.org",
+      "theme": "misclassification",
+      "choices": [],
+      "isEnding": true
+    },
+    "rider_resolve_05": {
+      "id": "rider_resolve_05",
+      "title": "Balik sa Simula",
+      "narrative": "Hindi nakahanap ng legal help si Jake. Hindi siya nag-organisa kasama ang ibang riders. Pagkagaling ng braso niya, nag-re-apply siya sa DeliverNa bilang 'bagong' rider -- bumili ulit ng starter kit na P2,650 kasi nasira ang lumang thermal bag niya sa aksidente. Ang dating earnings history at rating niya? Wala na. Nagsimula siya mula sa zero.\n\nP95,000 na siya sa utang ngayon -- medical bills, motorcycle repairs, lending app loans na may compounding interest. 14 oras siyang nagrride araw-araw, anim na araw sa isang linggo. Bumaba na ang base fee sa P32. Tumaas ang presyo ng gas. Ang daily net niya ay nasa P200 lang.\n\nHindi na niya pinag-uusapan ang aksidente. Hindi na niya pinag-uusapan ang mga karapatan. Nagra-ride na lang siya. Pag may bagong rider na nagtatanong sa kanya ng advice, dalawang bagay lang ang sinasabi niya: 'Mag-ipon ka para sa SSS at PhilHealth sa sarili mo. At huwag mong iisiping may pake sa iyo ang platform.'\n\nIsang gabi, nakita niya ang Facebook ad ng DeliverNa: 'Join the DeliverNa family! Be your own boss!' Matagal niyang tinitignan ang salitang 'family,' tapos nag-scroll na lang siya.\n\n--- WAKAS ---\n\nHindi kailangan ganito. Alamin ang mga karapatan mo:\n- DOLE Hotline: 1349\n- NLRC: nlrc.dole.gov.ph\n- SSS Voluntary Coverage: sss.gov.ph\n- PhilHealth: philhealth.gov.ph\n- PAO Libreng Legal na Tulong: pao.gov.ph\n- Ateneo Human Rights Center Legal Aid\n- Riders Pilipinas: facebook.com/RidersPilipinas",
+      "theme": "no_benefits",
+      "choices": [],
+      "isEnding": true
+    },
+    "rider_resolve_06": {
+      "id": "rider_resolve_06",
+      "title": "Bagong Uri ng Platform",
+      "narrative": "Ang paglalakbay ni Jake sa exploitation, injury, at pag-organisa ay humantong sa isang radikal na ideya: paano kung ang mga riders mismo ang nagmamay-ari ng platform?\n\nSa gabay ng Cooperative Development Authority (CDA) at seed funding mula sa isang social enterprise incubator, inilabas ng SDRM ang 'HatidKo' -- isang rider-owned cooperative delivery platform. Bawat rider-member ay nag-co-contribute ng P2,000 bilang share, na nagbibigay sa kanila ng voting rights at bahagi ng kita. 10% lang ang service fee ng platform kumpara sa 25-30%. Lahat ng rider-members ay naka-enroll sa SSS, PhilHealth, at Pag-IBIG sa pamamagitan ng cooperative.\n\nNagsimula ang HatidKo nang maliit -- 200 riders na nagse-serve sa Mandaluyong, Pasig, at ilang bahagi ng Quezon City. Nakipagtulungan sila sa mga local restaurants at sari-sari stores. Hindi kasing-ganda ng DeliverNa ang technology, pero ang mga riders ay kumikita ng 40-60% mas mataas per delivery, may accident insurance, at tunay na may boses sa kung paano pinapatakbo ang platform.\n\nNaging General Manager si Jake ng cooperative. Sa unang general assembly, nag-address siya sa mga rider-members: 'Sa DeliverNa, tayo ang product. Sa HatidKo, tayo ang may-ari. Hindi na tayo pipila para sa algorithm. Tayo na ang magde-decide para sa sarili natin.'\n\nNangingibabaw pa rin ang mga malaking platform. Pero pinatunayan ng HatidKo na may ibang modelo na posible.\n\n--- WAKAS ---\n\nMga resources:\n- Cooperative Development Authority: cda.gov.ph\n- DOLE Hotline: 1349\n- SSS: sss.gov.ph\n- PhilHealth: philhealth.gov.ph\n- Platform Cooperativism Consortium: platform.coop\n- IT for Change: itforchange.net",
+      "theme": "misclassification",
+      "choices": [],
+      "isEnding": true
+    }
+  },
+  "startNode": "rider_start"
+}

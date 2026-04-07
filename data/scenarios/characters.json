@@ -1,0 +1,64 @@
+{
+  "characters": [
+    {
+      "id": "ofw",
+      "name": "Maria Santos",
+      "role": "Overseas Filipino Worker",
+      "description": "A 28-year-old from Pampanga heading to work as a domestic helper in the Middle East. First time working abroad, supporting her family back home.",
+      "avatar": "OFW",
+      "themes": ["recruitment_scams", "contract_substitution", "wage_theft", "unsafe_conditions", "document_confiscation"],
+      "startNode": "ofw_start",
+      "category": "overseas"
+    },
+    {
+      "id": "rider",
+      "name": "Jake Reyes",
+      "role": "Delivery Rider",
+      "description": "A 24-year-old motorcycle delivery rider in Metro Manila working for multiple food delivery platforms. Classified as an 'independent contractor' with no benefits.",
+      "avatar": "RIDER",
+      "themes": ["misclassification", "no_benefits", "algorithmic_management", "accident_liability", "unfair_deductions"],
+      "startNode": "rider_start",
+      "category": "gig"
+    },
+    {
+      "id": "bpo",
+      "name": "Angela Cruz",
+      "role": "BPO Worker",
+      "description": "A 26-year-old call center agent in Makati working night shifts for an international outsourcing company. Dealing with mandatory overtime and health issues.",
+      "avatar": "BPO",
+      "themes": ["forced_overtime", "health_hazards", "contractualization", "union_busting", "wage_theft"],
+      "startNode": "bpo_start",
+      "category": "office"
+    },
+    {
+      "id": "construction",
+      "name": "Roberto Dela Cruz",
+      "role": "Construction Worker",
+      "description": "A 35-year-old construction worker in Cebu. Works for a subcontractor on a large commercial project with questionable safety practices.",
+      "avatar": "CONSTRUCTION",
+      "themes": ["unsafe_conditions", "no_contract", "wage_theft", "illegal_deductions", "no_benefits"],
+      "startNode": "construction_start",
+      "category": "industrial"
+    },
+    {
+      "id": "driver",
+      "name": "Mang Ernesto Bautista",
+      "role": "Family Driver",
+      "description": "A 52-year-old private driver in Quezon City who has been driving for a wealthy family for 8 years with no written contract. His employer treats him 'like family' — but that means no SSS, no overtime, and no days off.",
+      "avatar": "DRIVER",
+      "themes": ["no_contract", "wage_theft", "no_benefits", "overtime", "employer_employee_test"],
+      "startNode": "driver_start",
+      "category": "domestic"
+    },
+    {
+      "id": "maid",
+      "name": "Aling Rosa Mendoza",
+      "role": "Household Helper (Kasambahay)",
+      "description": "A 48-year-old live-in household helper in a subdivision in Paranaque. She cooks, cleans, does laundry, and cares for two children — working from 5 AM to 10 PM with no rest day and no written contract.",
+      "avatar": "MAID",
+      "themes": ["kasambahay_law", "no_contract", "wage_theft", "no_benefits", "abuse"],
+      "startNode": "maid_start",
+      "category": "domestic"
+    }
+  ]
+}

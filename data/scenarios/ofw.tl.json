@@ -1,0 +1,738 @@
+{
+  "nodes": {
+    "ofw_start": {
+      "id": "ofw_start",
+      "title": "Ang Pangako ng Dubai",
+      "narrative": "Nakatitig si Maria Santos sa makulay na flyer na nakadikit sa pader ng sari-sari store sa Bacolor, Pampanga: 'HIRING! Domestic Helper - Dubai, UAE. Salary: $800/month. Free food and accommodation. Apply now!' Sumasayaw ang halaga sa isip niya. Walong daang dolyar — halos apatnapu't limang libong piso bawat buwan. Mahigit triple sa kinikita ng tatay niyang tricycle driver.\n\nKailangan ng kapatid niyang si Miguel ang tuition para sa last year niya ng engineering. Lumalaki naman ang gastos sa gamot ng nanay niya sa diabetes. Ang maliit nilang bahay, tarp pa rin ang bubong mula nung huling bagyo. Nararamdaman ni Maria ang bigat ng utang na loob — lahat ay isinakripisyo ng mga magulang niya para makatapos siya ng college, at ngayon, turn na niyang magbigay pabalik.\n\nKinagabihan, bumisita si Ate Becky sa bahay nila. Sabi niya recruiter daw siya at nabalitaan niyang interesado si Maria. Magiliw siyang nagsalita sa Kapampangan, pinuri ang nanay ni Maria, may dala pang isang kahon ng polvoron. 'Daan-daan na akong nakapagpadala ng mga babae sa abroad,' sabi niya na nakangiti. 'Lahat sila nagpapadala ng pera. Yung mga pamilya nila, nagpapatayo ng concrete na bahay.' Nilapag niya sa mesa ang glossy brochure na may mga nakangiting Filipina sa maayos na uniform.\n\nPinipisil ng nanay ni Maria ang kamay niya sa ilalim ng mesa, nagniningning ang mga mata sa pag-asa. Ang tatay niya, tahimik lang, nakatitig sa mga kamay niyang puro kalyo.",
+      "theme": "recruitment_scams",
+      "choices": [
+        {
+          "text": "Tanungin si Ate Becky kung ano ang pangalan ng agency at POEA license number para i-verify online.",
+          "nextNode": "ofw_recruit_01",
+          "consequence": "Nagdesisyon si Maria na i-verify muna ang legitimacy ng agency bago mag-commit.",
+          "scoreChange": 15,
+          "knowledgeGained": "Ayon sa RA 10022, tanging mga POEA-licensed agencies lang ang pwedeng mag-recruit ng mga OFW nang legal. Pwede mong i-verify ang license status ng agency sa DMW (dating POEA) website."
+        },
+        {
+          "text": "Sabihin kay Ate Becky na interested ka at itanong kung ano ang kailangan gawin para mag-apply agad.",
+          "nextNode": "ofw_recruit_02",
+          "consequence": "Dahil sa pagnanais na tulungan ang pamilya, nilaktawan ni Maria ang verification at sumulong na kasama ang recruiter.",
+          "scoreChange": -5,
+          "knowledgeGained": null
+        },
+        {
+          "text": "Sabihin na kailangan mo ng ilang araw para pag-isipan at mag-research tungkol sa pagtatrabaho sa abroad.",
+          "nextNode": "ofw_recruit_03",
+          "consequence": "Binigyan ni Maria ang sarili niya ng oras para malaman ang tungkol sa OFW process.",
+          "scoreChange": 8,
+          "knowledgeGained": "Palaging matalino na mag-research muna tungkol sa legal na proseso ng overseas employment bago mag-commit sa kahit anong recruiter o agency."
+        }
+      ],
+      "isEnding": false
+    },
+    "ofw_recruit_01": {
+      "id": "ofw_recruit_01",
+      "title": "Pag-check ng License",
+      "narrative": "Sandali lang nawala ang ngiti ni Ate Becky bago niya naibalik. 'Siyempre naman, anak! Ang agency ay Golden Future International Manpower. Very legitimate. Fifteen years na kami sa business.' Sinulat niya ang pangalan sa papel pero hindi nagbigay ng license number, sabi niya ite-text na lang daw niya later.\n\nKinaumagahan, pumunta si Maria sa internet cafe malapit sa palengke. Hinanap niya ang pangalan ng agency sa DMW website sa listahan ng licensed agencies. Tinanong din niya si Kuya Ronaldo, kapitbahay nila na sampung taon na nagtrabaho sa Saudi Arabia.\n\nSinabi ni Kuya Ronaldo: 'Mareng Maria, ang pinaka-importante talaga ay i-check mo kung licensed ang agency. Kung hindi nila maipakita ang valid na POEA o DMW license, lumayo ka. At huwag kang magbabayad ng higit sa isang buwang sahod bilang placement fee — yun ang batas sa ilalim ng RA 10022. May mga agency na singil nang singil, limampung libo, walumpung libo — illegal lahat yun!'",
+      "theme": "recruitment_scams",
+      "choices": [
+        {
+          "text": "Nasa DMW list ang agency at licensed. Puntahan ang official office nila sa Manila para mag-apply nang formal.",
+          "nextNode": "ofw_recruit_04",
+          "consequence": "Na-confirm ni Maria na legitimate ang agency at nagpatuloy sa tamang proseso.",
+          "scoreChange": 12,
+          "knowledgeGained": "Palaging mag-apply sa official office address ng agency na nakalista sa DMW website. Ang mga legitimate na agency ay nagpo-process ng applications sa kanilang registered offices, hindi sa mga bahay o hotel rooms."
+        },
+        {
+          "text": "Wala sa DMW list ang agency pero iginigiit ni Ate Becky na may 'special arrangement' sila. Trust her pa rin.",
+          "nextNode": "ofw_recruit_05",
+          "consequence": "Binalewala ni Maria ang red flag at nagpatuloy sa unlicensed recruiter.",
+          "scoreChange": -8,
+          "knowledgeGained": null
+        },
+        {
+          "text": "Wala sa DMW list ang agency. I-report si Ate Becky sa local PESO office at maghanap ng licensed agency.",
+          "nextNode": "ofw_recruit_06",
+          "consequence": "Ni-report ni Maria ang illegal recruiter at nagsimulang dumaan sa tamang proseso.",
+          "scoreChange": 15,
+          "knowledgeGained": "Ang illegal recruitment ay krimen sa ilalim ng RA 10022. Pwede mong i-report ang mga suspected illegal recruiters sa POEA/DMW, sa local Public Employment Service Office (PESO), o tumawag sa POEA hotline."
+        }
+      ],
+      "isEnding": false
+    },
+    "ofw_recruit_02": {
+      "id": "ofw_recruit_02",
+      "title": "Nagmamadali",
+      "narrative": "Sumaya si Ate Becky. 'Mabilis ka talaga! I like that. Okay, ito ang kailangan natin: passport mo, NBI clearance, medical exam, at — ito yung importante — ang placement fee. Seventy-five thousand pesos. Alam kong malaki, pero isipin mo na lang na investment 'to. Babalik din yan sa 'yo sa dalawang buwan!'\n\nSeventy-five thousand pesos. Nagtaka si Maria. Higit pa yun sa kinikita ng tatay niya sa anim na buwan. Pero nagsasalita na si Ate Becky tungkol sa kung paano ang ibang mga babae at ang mga pamilya nila ay nag-mortgage ng lupa o nanghiram sa 5-6 lender sa palengke.\n\nNarinig ng nanay ni Maria at agad siyang nagsabi na hihingi siya ng pautang kay Tita Lourdes. 'Para sa kinabukasan mo, anak,' sabi niya. Ang pressure ng expectations ng pamilya parang pader na papalapit nang papalapit. Naalala ni Maria na ang college classmate niyang si Joy, pumunta rin sa Dubai last year through kakilala. Hindi na siya nabalitaan sa loob ng tatlong buwan.\n\nIdiniin ni Ate Becky ang gusot na receipt pad. 'Magbayad ka muna ng twenty-five thousand ngayon bilang reservation fee. Baka wala na yung slot next week.'",
+      "theme": "recruitment_scams",
+      "choices": [
+        {
+          "text": "Magbayad ng 25,000 peso reservation fee para ma-secure ang slot.",
+          "nextNode": "ofw_recruit_05",
+          "consequence": "Nagbayad si Maria sa isang unverified recruiter nang hindi muna ni-check kung licensed ang agency.",
+          "scoreChange": -10,
+          "knowledgeGained": null
+        },
+        {
+          "text": "Huminto muna at tanungin si Ate Becky ng POEA/DMW license number ng agency bago magbayad ng kahit ano.",
+          "nextNode": "ofw_recruit_01",
+          "consequence": "Naisip ni Maria na i-verify muna ang agency.",
+          "scoreChange": 10,
+          "knowledgeGained": "Huwag kailanman magbayad ng kahit anong fee bago mo ma-verify na licensed ng DMW (dating POEA) ang recruitment agency. Ang legal maximum na placement fee sa ilalim ng RA 10022 ay isang buwang sahod."
+        },
+        {
+          "text": "Sabihin kay Ate Becky na parang ang laki naman ng 75,000 pesos at itanong kung legal ba yang halaga.",
+          "nextNode": "ofw_recruit_03",
+          "consequence": "Kinuwestyon ni Maria ang halaga ng fee, na nagbigay sa kanya ng oras para matuto pa.",
+          "scoreChange": 5,
+          "knowledgeGained": "Sa ilalim ng RA 10022, ang maximum placement fee na pwedeng singilin ng licensed agency ay katumbas ng isang buwang sahod ng worker. Ang pagsingil ng higit dito ay illegal."
+        }
+      ],
+      "isEnding": false
+    },
+    "ofw_recruit_03": {
+      "id": "ofw_recruit_03",
+      "title": "Pag-aaral ng Proseso",
+      "narrative": "Sinabi ni Maria kay Ate Becky na kailangan niya ng oras. Naiinis ang recruiter — 'Hindi maghihintay forever yung slot, ha' — pero nanatiling matatag si Maria kahit may hiya siyang nararamdaman na parang walang utang na loob sa opportunity.\n\nSa mga susunod na araw, nag-research si Maria. Pumunta siya sa PESO office sa Pampanga Provincial Capitol, kung saan ang mabait na government employee na si Ate Dina ang nagpaliwanag ng legal na proseso para magtrabaho sa abroad. Maraming natutunan si Maria:\n\nUna, lahat ng agencies ay dapat licensed ng DMW. Pwede niyang i-check sa dmw.gov.ph. Pangalawa, ang maximum placement fee ay isang buwang sahod — para sa domestic helper position na nagpapasahod ng $400-800/month, ang fee ay hindi dapat lumampas sa katumbas niyan sa piso. Pangatlo, dapat siyang dumalo ng PDOS (Pre-Departure Orientation Seminar) bago umalis. Pang-apat, huwag niyang ibibigay ang original passport niya sa kahit sino maliban sa immigration officers.\n\nBinigyan din siya ni Ate Dina ng listahan ng DMW-licensed agencies na may verified job orders para sa domestic helpers sa Middle East. 'Huwag kang magmadali, Maria. Mas mabuti ang matagal pero ligtas, kaysa mabilis pero mapanganib.'",
+      "theme": "recruitment_scams",
+      "choices": [
+        {
+          "text": "Mag-apply sa isa sa mga licensed agencies sa PESO list.",
+          "nextNode": "ofw_recruit_04",
+          "consequence": "Pumili si Maria ng verified at licensed na agency mula sa government list.",
+          "scoreChange": 12,
+          "knowledgeGained": "Ang Public Employment Service Office (PESO) sa inyong provincial o city hall ay makapagbibigay ng listahan ng verified licensed agencies at makakatulong sa OFW application process nang libre."
+        },
+        {
+          "text": "Bumalik kay Ate Becky pero makipag-negotiate para sa mas mababang placement fee.",
+          "nextNode": "ofw_recruit_02",
+          "consequence": "Bumalik si Maria sa unverified recruiter kahit may mas magandang options na.",
+          "scoreChange": -3,
+          "knowledgeGained": null
+        }
+      ],
+      "isEnding": false
+    },
+    "ofw_recruit_04": {
+      "id": "ofw_recruit_04",
+      "title": "Ang Licensed na Agency",
+      "narrative": "Sumakay si Maria ng bus papuntang Manila at binisita ang Bright Horizons International Placement, isang licensed agency sa Ermita na may maayos na office, aircon, at naka-frame na DMW certificates sa pader. Professional ang staff. Malinaw nilang ipinaliwanag ang proseso: medical exam, NBI clearance, skills training para sa household service workers, PDOS seminar, contract signing, at deployment.\n\nAng placement fee ay $400 — katumbas ng isang buwang sahod para sa Dubai position, exact na legal maximum. Nag-issue sila ng official receipt at sinabi kay Maria na pwede siyang magbayad nang installment through salary deduction pagkastart niya ng trabaho, na legal din naman.\n\nNi-review ng agency coordinator na si Sir Dennis ang job order kasama si Maria. Ang position ay para sa household service worker sa Dubai, UAE. Monthly salary: $400. Benefits: free food at accommodation, isang rest day per week, 30 days annual leave after one year, round-trip airfare. Contract duration: dalawang taon.\n\nSabi ni Sir Dennis: 'Maria, kailangan kong maging honest sa 'yo. Mahirap ang trabaho. Malayo ka sa pamilya mo. Pero kung alam mo ang rights mo at sinusunod mo ang legal process, mapoprotektahan ka. Let me explain the next steps.'",
+      "theme": "recruitment_scams",
+      "choices": [
+        {
+          "text": "Ituloy ang application at dumalo sa lahat ng required pre-departure seminars.",
+          "nextNode": "ofw_predep_01",
+          "consequence": "Sinunod ni Maria ang tamang deployment process sa licensed agency.",
+          "scoreChange": 10,
+          "knowledgeGained": "Ang mga licensed agencies ay required na i-process ang workers sa tamang proseso kasama ang medical exams, skills testing, PDOS, at contract verification sa POLO."
+        },
+        {
+          "text": "Magtanong kay Sir Dennis ng mga detalyadong katanungan tungkol sa employer at working conditions bago mag-sign ng kahit ano.",
+          "nextNode": "ofw_predep_02",
+          "consequence": "Nag-due diligence si Maria sa pamamagitan ng pagtatanong tungkol sa future employer niya.",
+          "scoreChange": 12,
+          "knowledgeGained": "Bago tumanggap ng job order, may karapatan kang magtanong tungkol sa background ng employer, specific duties, working hours, accommodation details, at experiences ng mga naunang na-deploy na workers."
+        }
+      ],
+      "isEnding": false
+    },
+    "ofw_recruit_05": {
+      "id": "ofw_recruit_05",
+      "title": "Ang Unlicensed na Daan",
+      "narrative": "Nagpatuloy si Maria kay Ate Becky kahit may mga warning signs. Lahat ay pini-process ng recruiter sa bahay niya sa isang subdivision sa San Fernando, Pampanga — walang maayos na office, walang official receipts, puro handwritten notes at pangako lang. Nagbayad si Maria ng 75,000 pesos na hiniram sa 5-6 money lender na may nakakamatay na interest.\n\nKinuha ni Ate Becky ang passport ni Maria 'para sa processing' at nangako na ready na ang visa sa dalawang linggo. Naghintay si Maria. Dalawang linggo naging tatlo, tapos apat. Tuwing nagtatanong siya, sabi ni Ate Becky, 'Malapit na, sandali lang.'\n\nPagkatapos ng anim na linggo, binigay ni Ate Becky kay Maria ang tourist visa sa Kuwait — hindi ang work visa sa Dubai na ipinangako. 'Nagbago ang plano,' sabi ni Becky nang pa-casual. 'Pero don't worry, same salary. Yung employer mo sa Kuwait ay very kind. Iko-convert sa work visa pag-dating mo doon.' Major red flag 'to — ang pagpasok gamit ang tourist visa para magtrabaho ay illegal at walang labor protections si Maria.\n\nNahiram na ng pamilya ni Maria ang pera. Sinabi na ng nanay niya sa lahat ng kapitbahay. Ang pressure na ituloy na lang para hindi mapahiya ay napakalaki. Mapapahiya sila kung hindi na tuloy.",
+      "theme": "recruitment_scams",
+      "choices": [
+        {
+          "text": "Tumanggi na pumunta gamit ang tourist visa at i-demand ang refund, babantaan mong ire-report si Ate Becky sa authorities.",
+          "nextNode": "ofw_recruit_06",
+          "consequence": "Nanindigan si Maria para sa sarili niya kahit na may financial at social pressure.",
+          "scoreChange": 15,
+          "knowledgeGained": "Ang pagde-deploy ng worker gamit ang tourist visa ay illegal recruitment sa ilalim ng RA 10022. Ang mga worker na na-deploy sa ganitong paraan ay walang labor protections at pwedeng ma-detain o ma-deport. Pwede kang mag-file ng case laban sa mga illegal recruiters sa DMW o NBI."
+        },
+        {
+          "text": "Tanggapin ang tourist visa sa Kuwait kasi naubos na ng pamilya mo ang pera at hindi ka na pwedeng umurong.",
+          "nextNode": "ofw_predep_04",
+          "consequence": "Sumunod si Maria sa illegal na arrangement dahil sa desperasyon.",
+          "scoreChange": -10,
+          "knowledgeGained": null
+        },
+        {
+          "text": "Humingi ng advice sa isang kaibigan o kamag-anak na OFW tungkol sa biglaang pagbabago ng plano.",
+          "nextNode": "ofw_predep_05",
+          "consequence": "Humingi si Maria ng gabay mula sa taong may karanasan sa overseas work.",
+          "scoreChange": 7,
+          "knowledgeGained": "Ang mga experienced OFWs at ang kanilang support networks ay mahahalagang source ng impormasyon at makakatulong mag-identify ng recruitment scams."
+        }
+      ],
+      "isEnding": false
+    },
+    "ofw_recruit_06": {
+      "id": "ofw_recruit_06",
+      "title": "Paninindigan",
+      "narrative": "Ni-report ni Maria si Ate Becky sa local PESO office at nag-file ng complaint sa DMW. Nakakatakot ang proseso — nagpadala ng galit na text messages si Ate Becky, at may mga kapitbahay na nagbubulong na walang utang na loob si Maria at nagdadala ng gulo. Nag-aalala ang nanay niya na may naging kaaway sila.\n\nPero pinagpasyahan siya ni Ate Dina mula sa PESO: 'Tama ang ginawa mo, Maria. Baka na-save mo ang ibang kababaihan mula sa trafficking.' Nag-imbestiga ang DMW at nadiskubre na nagpadala na si Ate Becky ng hindi bababa sa labindalawang babae sa abroad gamit ang tourist visas sa nakaraang taon. Tatlo sa kanila ay stranded ngayon sa Kuwait na walang work permits, walang contracts, at walang paraan para makauwi.\n\nAnim na linggo ang imbestigasyon, pero sa huli, na-charge si Ate Becky ng illegal recruitment — isang krimen na may parusa ng 12 taong pagkakakulong at multa na hindi bababa sa 500,000 pesos sa ilalim ng RA 10022. Nakuha pabalik ni Maria ang passport niya. Ang 75,000 pesos ay mas mahirap i-recover, pero tinulungan siya ng DMW na mag-file ng case.\n\nSamantala, ikinonekta ng PESO office si Maria sa isang legitimate at licensed na agency na may verified job order para sa Dubai. Parang pag-uumpisa ulit, at nandoon pa rin ang utang, pero alam ni Maria na tama ang ginawa niya.",
+      "theme": "recruitment_scams",
+      "choices": [
+        {
+          "text": "Magpatuloy sa licensed agency at simulan ulit ang tamang deployment process.",
+          "nextNode": "ofw_recruit_04",
+          "consequence": "Nagsimulang muli si Maria sa tamang paraan, mas matalino at mas maingat.",
+          "scoreChange": 10,
+          "knowledgeGained": "Ang illegal recruitment sa ilalim ng RA 10022 ay pinarurusahan ng 12 taon hanggang habambuhay na pagkakakulong (kung ginawa ng sindikato o sa malaking scale) at multa na 500,000 hanggang 1 milyong piso."
+        }
+      ],
+      "isEnding": false
+    },
+    "ofw_predep_01": {
+      "id": "ofw_predep_01",
+      "title": "Pre-Departure Orientation Seminar",
+      "narrative": "Dumalo si Maria sa PDOS sa OWWA office sa Pasay City. Punong-puno ang seminar room ng iba pang mga OFW — mga nurse papuntang UK, construction workers papuntang Qatar, domestic helpers papuntang Hong Kong at Middle East. May kakaibang pagkaka-ugma ang naramdaman ni Maria sa kanilang lahat: mga Pilipinong iniiwan ang pamilya para kumita.\n\nSinasaklaw ng PDOS ang country profile ng UAE, cultural differences, labor laws, worker rights, emergency hotlines, at kung paano haharapin ang mga common na problema. Masipag na nagno-notes si Maria. Ang facilitator, dating OFW mismo, nagsasalita mula sa karanasan: 'Tandaan — hindi pwedeng kunin ng employer mo ang passport mo. Ang rest day mo ay karapatan mo, hindi pabor. Kung inaabuso ka, tumawag agad sa Philippine Embassy.'\n\nNamigay ang facilitator ng mga card na may emergency numbers: ang Philippine Overseas Labor Office (POLO) sa Dubai, ang OWWA hotline 1348, at ang DFA hotline para sa mga distressed na OFW. Ni-save lahat ni Maria ang mga number sa phone niya at sinulat sa maliit na papel na itinago sa wallet niya.\n\nPagkatapos ng seminar, sinabi ng agency na ready na ang contract niya para i-review at i-sign.",
+      "theme": "contract_substitution",
+      "choices": [
+        {
+          "text": "Basahin nang maigi ang employment contract, linya sa linya, bago mag-sign.",
+          "nextNode": "ofw_predep_02",
+          "consequence": "Naglaan si Maria ng oras para i-review ang bawat clause ng contract niya.",
+          "scoreChange": 12,
+          "knowledgeGained": "Palaging basahin nang buo ang employment contract mo bago mag-sign. Ang contract ay dapat tugma sa mga terms sa job order: sahod, benefits, working hours, rest days, at termination conditions."
+        },
+        {
+          "text": "I-sign agad ang contract dahil licensed naman ang agency at tiwala ka sa kanila.",
+          "nextNode": "ofw_predep_03",
+          "consequence": "Nag-sign si Maria nang hindi maingat na binasa ang mga detalye.",
+          "scoreChange": -3,
+          "knowledgeGained": null
+        }
+      ],
+      "isEnding": false
+    },
+    "ofw_predep_02": {
+      "id": "ofw_predep_02",
+      "title": "Pagbasa ng Fine Print",
+      "narrative": "Umupo si Maria sa agency office at binasa ang contract salita per salita. Medyo naiinip si Sir Dennis pero nirerespeto ang kasipagan niya. Napansin ni Maria ang ilang mahahalagang bagay:\n\nNakalagay sa contract na $400/month ang sahod niya, tugma sa job order. Libre ang pagkain at maayos na tirahan. May isang rest day per week. Medical insurance ay sagot ng employer. Dalawang taon ang contract na may tatlong buwang probation period. Malinaw na nakasulat ang mga termination provisions.\n\nGayunpaman, may isang clause na nag-alala kay Maria: 'Employee agrees to perform such duties as assigned by the employer, including but not limited to household duties, cooking, cleaning, childcare, and any other tasks as required.' Ang phrase na 'any other tasks as required' ay malabo. Napansin din niyang walang nakalagay sa contract tungkol sa maximum working hours per day.\n\nIpinaliwanag ni Sir Dennis na ang Standard Employment Contract para sa domestic helpers ay dapat mag-guarantee ng minimum na 8 oras na pahinga sa isang araw. Inadvice niya si Maria na i-request na isulat ito nang malinaw sa contract niya. 'Kung mas specific ang contract mo, mas protected ka,' sabi niya.",
+      "theme": "contract_substitution",
+      "choices": [
+        {
+          "text": "I-request na malinaw na isulat sa contract ang maximum working hours at specific duties.",
+          "nextNode": "ofw_predep_06",
+          "consequence": "Iginiit ni Maria ang mas malinaw na contract terms para protektahan ang sarili.",
+          "scoreChange": 15,
+          "knowledgeGained": "Sa ilalim ng Standard Employment Contract para sa domestic workers, may karapatan ka sa minimum na 8 tuloy-tuloy na oras na pahinga bawat araw. Igiiit ang malinaw at specific na contract terms tungkol sa duties, working hours, at rest periods."
+        },
+        {
+          "text": "I-sign na lang ang contract dahil okay naman ang itsura at ayaw mong ma-delay ang deployment.",
+          "nextNode": "ofw_predep_03",
+          "consequence": "Tinanggap ni Maria ang malabong wording para iwasan ang komplikasyon.",
+          "scoreChange": -2,
+          "knowledgeGained": null
+        }
+      ],
+      "isEnding": false
+    },
+    "ofw_predep_03": {
+      "id": "ofw_predep_03",
+      "title": "Araw ng Pag-sign ng Contract",
+      "narrative": "Ni-sign ni Maria ang contract. Pinroseso ng agency ang OEC (Overseas Employment Certificate) niya at nag-book ng flight. Sa mga araw bago umalis, naghanda ng maliit na despedida ang pamilya ni Maria. Nagluto ang nanay niya ng dinuguan at puto, binigyan siya ng tatay niya ng maliit na krus na kahoy, at nangako si Miguel na mag-aaral nang mabuti para hindi masayang ang sakripisyo niya.\n\nSa airport, umiyak ang nanay niya at kumapit sa kanya. 'Mag-ingat ka, anak. Tawagan mo kami palagi.' Pinigilan ni Maria ang sarili niyang luha at ipinaalala sa sarili na ginagawa niya ito para sa kanila.\n\nSinalubong siya ni Sir Dennis mula sa agency sa NAIA Terminal 1 na may ticket at documents. Inabot sa kanya ang isang sealed na envelope. 'Ibigay mo 'to sa taong susundo sa 'yo sa Dubai Airport. Huwag mong buksan.' Nagtataka si Maria kung ano ang laman pero hindi na siya nagtanong.\n\nHabang naghihintay sa gate, nakita niya ang daan-daang Filipina na may parehong tingin sa mata — pag-asa na may halong takot. Isang babae sa tabi niya, si Ate Gemma, na pangatlong deployment na, ay nag-umpisa ng usapan.",
+      "theme": "contract_substitution",
+      "choices": [
+        {
+          "text": "Humingi ng advice kay Ate Gemma kung ano ang aasahan pag-dating sa Dubai.",
+          "nextNode": "ofw_work_01",
+          "consequence": "Nakakuha si Maria ng mahahalagang kaalaman mula sa isang experienced OFW.",
+          "scoreChange": 7,
+          "knowledgeGained": "Ang mga experienced na OFW ay mahahalagang source ng practical advice. Ang pagbuo ng support network kasama ang kapwa Pilipino sa abroad ay napakahalaga para sa safety at well-being."
+        },
+        {
+          "text": "Buksan ang sealed envelope para makita kung anong documents ang nasa loob.",
+          "nextNode": "ofw_predep_06",
+          "consequence": "Nadiskubre ni Maria na may mga documents sa envelope na dapat niyang malaman.",
+          "scoreChange": 10,
+          "knowledgeGained": "May karapatan kang malaman at mag-keep ng copies ng lahat ng documents na may kinalaman sa employment mo. Huwag kailanman magdala ng sealed documents na hindi mo pa nare-review."
+        }
+      ],
+      "isEnding": false
+    },
+    "ofw_predep_04": {
+      "id": "ofw_predep_04",
+      "title": "Pagdating Gamit ang Tourist Visa",
+      "narrative": "Dumating si Maria sa Kuwait gamit ang tourist visa, takot na takot na mahuli sa immigration. Hindi naman siya nahuli — ni-stamp ng officers ang passport niya nang walang masyadong tanong. Pero habang naglalakad siya sa arrivals hall, narealize niya kung gaano siya ka-alone. Walang POLO ang nagproseso ng papers niya. Walang contract na naka-register sa Philippine Embassy. Walang OEC, walang OWWA membership, walang insurance. Invisible siya sa sistema na dapat nagpoprotekta sa kanya.\n\nMay lalaking hindi niya kilala na may hawak na cardboard sign na may pangalan niya. Hindi siya marunong mag-Tagalog at kaunti lang ang English. Dinala siya sa isang residential compound sa maaalikabok na suburb. Malaki ang bahay pero nakakatakot. Isang matapang na babaeng mukhang — ang employer niya, si Madam Fatima — ang nagbukas ng pinto at agad kinuha ang passport ni Maria. 'I keep this. For safekeeping,' sabi niya nang walang emosyon.\n\nIpinakita kay Maria ang maliit na kwarto sa tabi ng kusina, halos kasingliit ng closet, na may manipis na kutson sa sahig. Ipinaliwanag ni Madam Fatima na aalagaan ni Maria ang apat na bata, magluluto ng tatlong beses isang araw, maglilinis ng buong bahay na may anim na kwarto, maglalaba, at mag-aalaga ng hardin. 'You start now,' sabi niya. Alas-diyes na ng gabi.\n\nWalang contract si Maria, walang na-save na embassy number, at walang ideya kung nasaan siya. Ang 75,000 pesos na hiniram ng pamilya niya ay parang sumpa na nakabitin sa kanya.",
+      "theme": "document_confiscation",
+      "choices": [
+        {
+          "text": "Sumunod sa demands ni Madam Fatima at magsimulang magtrabaho agad, umaasang gaganda ang sitwasyon.",
+          "nextNode": "ofw_work_04",
+          "consequence": "Sumuko si Maria sa sitwasyon dahil sa takot at desperasyon.",
+          "scoreChange": -8,
+          "knowledgeGained": null
+        },
+        {
+          "text": "Magalang pero matatag na sabihin kay Madam Fatima na kailangan mong i-keep ang sarili mong passport.",
+          "nextNode": "ofw_work_02",
+          "consequence": "Sinubukan ni Maria na i-assert ang rights niya kahit vulnerable ang position niya.",
+          "scoreChange": 5,
+          "knowledgeGained": "Ang pagkumpiska ng passport ng employer ay illegal sa batas ng karamihan sa mga bansa sa Middle East at lumalabag sa international labor standards. Ang passport mo ay property mo."
+        }
+      ],
+      "isEnding": false
+    },
+    "ofw_predep_05": {
+      "id": "ofw_predep_05",
+      "title": "Paghingi ng Advice sa Kapwa OFW",
+      "narrative": "Tinawagan ni Maria ang pinsan niyang si Ate Fely, na limang taon nang nagtatrabaho bilang domestic helper sa Riyadh. Ipinaliwanag niya ang sitwasyon — ang tourist visa, ang pagbabago mula Dubai patungong Kuwait, at ang mga assurance ni Ate Becky.\n\nNagulat si Ate Fely. 'Maria, huwag kang pumunta! Illegal recruitment yan! May kilala akong mga babae na pumunta gamit tourist visa. Pinagmalupitan sila ng mga employer kasi walang legal protection. Yung isang babae mula Tarlac, hindi na siya makatawag ng tulong kasi kinuha ng employer yung phone niya. Stuck siya doon ng dalawang taon bago siya nakita ng embassy.'\n\nSinabi ni Ate Fely kay Maria ang tamang proseso: licensed agencies, verified job orders, POEA-processed contracts, OEC, PDOS, at OWWA membership. 'Kung sa backdoor ka pumasok, walang protection. Kung bugbugin ka ng employer, sino tatawagan mo? Hindi mo pa pangalan nasa file ng embassy.'\n\nNaramdaman ni Maria ang malamig na bigat ng katotohanan. Seventy-five thousand pesos na napunta kay Ate Becky. May utang ang pamilya niya. Pero narinig niya ang mga salita ni Ate Fely: 'Mas mabuting mawalan ng pera kaysa mawalan ng buhay.'",
+      "theme": "recruitment_scams",
+      "choices": [
+        {
+          "text": "Sundin ang advice ni Ate Fely — tanggihan ang tourist visa at i-report si Ate Becky sa authorities.",
+          "nextNode": "ofw_recruit_06",
+          "consequence": "Pinakinggan ni Maria ang babala at dumaan sa legal na daan kahit may financial loss.",
+          "scoreChange": 12,
+          "knowledgeGained": "Ang mga worker na na-deploy nang walang tamang dokumento (walang OEC, walang registered contract) ay walang access sa government protection, OWWA benefits, o embassy assistance sa abroad."
+        },
+        {
+          "text": "Salamat kay Ate Fely pero ituloy pa rin — hindi mo kayang harapin ang pamilya mo na walang maipapakita para sa 75,000 pesos.",
+          "nextNode": "ofw_predep_04",
+          "consequence": "Itinuloy ni Maria ang illegal deployment kahit may mga babala.",
+          "scoreChange": -7,
+          "knowledgeGained": null
+        }
+      ],
+      "isEnding": false
+    },
+    "ofw_predep_06": {
+      "id": "ofw_predep_06",
+      "title": "Contract Verification sa POLO",
+      "narrative": "Kinontrol ni Maria ang deployment process niya. Maging dahil sa pagigiit ng mas malinaw na contract terms o sa pagbukas ng sealed envelope at pagkakita ng pangalawang contract na iba ang terms, naintindihan na ngayon ni Maria ang kritikal na importansya ng contract verification.\n\nSi Sir Dennis, sa kabutihan niya, sinuportahan si Maria na ma-verify at ma-authenticate ang contract niya sa Philippine Overseas Labor Office (POLO) sa UAE. Tinitiyak ng prosesong ito na ang contract na ni-sign ni Maria sa Pilipinas ay pareho sa gagamitin na contract sa employment niya sa abroad.\n\nNalaman ni Maria ang tungkol sa contract substitution — isang karaniwang abuso kung saan ang workers ay nagsa-sign ng magandang contract sa Pilipinas, pero pag-dating sa abroad, ibang contract ang ipapakita ng employer na may mas mababang sahod at mas masamang conditions. Dahil na-verify ng POLO ang contract niya, may legal proof si Maria ng napagkasunduan.\n\nTiniyak din niyang may copies siya ng lahat ng documents niya: passport, contract, OEC, medical certificate, at OWWA membership. Pini-photograph niya lahat at ine-email ang copies sa sarili niya, sa pamilya niya, at kay Ate Fely na nasa abroad. Tumango si Sir Dennis nang may paghanga: 'Maria, isa ka sa mga pinaka-matalinong worker na na-process ko. You'll be okay.'",
+      "theme": "contract_substitution",
+      "choices": [
+        {
+          "text": "Umalis papuntang Dubai na handa, kumpleto ang documents at naka-save ang emergency numbers.",
+          "nextNode": "ofw_work_01",
+          "consequence": "Umalis si Maria sa Pilipinas na fully prepared at may dokumentasyon.",
+          "scoreChange": 10,
+          "knowledgeGained": "Ang contract substitution ay illegal. Palaging ipa-verify ang contract mo sa POLO. Mag-keep ng copies ng lahat ng documents — i-photograph at ipadala ang copies sa pamilya. Ang POLO-verified contract mo ang pinakamalakas mong legal protection sa abroad."
+        }
+      ],
+      "isEnding": false
+    },
+    "ofw_work_01": {
+      "id": "ofw_work_01",
+      "title": "Pagdating sa Dubai",
+      "narrative": "Lumanding si Maria sa Dubai International Airport. Ang malamig na air-conditioned terminal ay nagbigay-daan sa isang pader ng init nang lumabas siya. May driver na may hawak na sign na may pangalan niya. Dinala siya sa isang villa sa Jumeirah, isang mayamang residential area. Napakalaki ng bahay — marble floors, swimming pool, at mga kwartong hindi mabilang.\n\nAng employer niya, si Madam Aisha, ay isang magandang damit na babae na nasa forty's. Magalang siyang bumati kay Maria at ipinakita ang isang malinis na private room na may kama, maliit na closet, at sariling banyo. Mas maganda kaysa inaasahan ni Maria. Ipinaliwanag ni Madam Aisha ang household: tatlong anak (ages 4, 7, at 10), asawang madalas mag-travel, at isang driver.\n\nTapos, casual na sinabi ni Madam Aisha, 'I'll keep your passport in the house safe. Don't worry, it's just for security. Everyone does this here.' Inilahad niya ang kamay, naghihintay.\n\nNaalala ni Maria ang sinabi ng PDOS facilitator: 'Hindi pwedeng kunin ng employer mo ang passport mo.' Naalala rin niya si Ate Gemma sa airport na nagsabi, 'May mga employer na mabait pero kinukuha pa rin ang passport dahil sanay na. Nasa 'yo yan kung tatanggi ka nang magalang.'",
+      "theme": "document_confiscation",
+      "choices": [
+        {
+          "text": "Magalang na tumanggi at ipaliwanag na mas gusto mong ikaw na lang ang mag-keep ng passport mo, ayon sa payo ng Philippine Embassy.",
+          "nextNode": "ofw_work_03",
+          "consequence": "Magalang na inassert ni Maria ang karapatan niyang panatilihin ang passport niya.",
+          "scoreChange": 15,
+          "knowledgeGained": "Sa ilalim ng batas ng UAE at international conventions, illegal ang pagkumpiska ng passport ng employer. Ang passport mo ay property mo. Pwede mong i-cite ang Philippine Embassy guidelines kapag tumanggi ka."
+        },
+        {
+          "text": "Ibigay ang passport mo para maiwasan ang gulo sa unang araw mo.",
+          "nextNode": "ofw_work_02",
+          "consequence": "Isinuko ni Maria ang passport niya para mapanatili ang kapayapaan.",
+          "scoreChange": -5,
+          "knowledgeGained": null
+        },
+        {
+          "text": "Tanungin kung pwede mo munang i-photocopy ang passport at ikaw na lang ang mag-keep ng copy, tapos ibigay ang original.",
+          "nextNode": "ofw_work_02",
+          "consequence": "Nag-compromise si Maria na nag-keep ng copy pero ibinigay ang original.",
+          "scoreChange": 0,
+          "knowledgeGained": "Kahit palaging advisable na mag-keep ng photocopy ng passport mo, hindi ito kapalit ng pag-keep ng original. Walang legal na karapatan ang mga employer na kumpiskahin ang passport mo."
+        }
+      ],
+      "isEnding": false
+    },
+    "ofw_work_02": {
+      "id": "ofw_work_02",
+      "title": "Walang Passport",
+      "narrative": "Nasa safe na ni Madam Aisha ang passport ni Maria — o sa drawer ni Madam Fatima, depende sa path na nagdala sa kanya dito. Anuman ang sitwasyon, may kilabot si Maria sa kaalaman na ang pinaka-importanteng dokumento niya, ang lifeline niya pauwi, ay wala sa mga kamay niya.\n\nLumipas ang unang ilang linggo sa sunod-sunod na trabaho. Gumigising si Maria ng 5:30 AM para magluto ng almusal, inaayos ang mga bata para sa school, naglilinis ng bahay, naglalaba, nagluluto ng tanghalian, sinusundo ang mga bata, tumutulong sa homework, nagluluto ng hapunan, nag-aayos, at sa wakas bumabagsak sa kama ng mga 11 PM. Labing-pitong oras at kalahati ng trabaho bawat araw.\n\nNakalagay sa contract niya na may karapatan siya sa isang rest day per week. Pero pagdating ng Friday — ang day off sa UAE — sabi ni Madam Aisha, 'Maria, kailangan kita ngayon. Nasa bahay ang mga bata. Siguro next week.' Dumating at lumipas ang next week. Tapos ang susunod pa. Wala pa ring isang araw na pahinga si Maria sa loob ng isang buwan.\n\nPagod na pagod siya pero takot mag-reklamo. Naririnig niya ang boses ng nanay niya: 'Tiis-tiis lang, anak.' Pero nagsisimula nang sumuko ang katawan niya. Nakatulog siya ng nakatayo habang nagpi-plantsa at napaso ang braso niya.",
+      "theme": "unsafe_conditions",
+      "choices": [
+        {
+          "text": "Magalang pero matatag na ipaalala kay Madam Aisha na garantisado ng contract mo ang isang rest day per week.",
+          "nextNode": "ofw_work_05",
+          "consequence": "Inassert ni Maria ang contractual right niya sa rest day.",
+          "scoreChange": 12,
+          "knowledgeGained": "Ang Standard Employment Contract para sa household service workers ay nagga-guarantee ng isang rest day per week. Ito ay mandated din ng UAE labor law para sa domestic workers (Federal Law No. 10 of 2017)."
+        },
+        {
+          "text": "Magpatuloy na lang magtrabaho nang walang reklamo — kailangan mo ang trabahong ito para sa pamilya mo.",
+          "nextNode": "ofw_work_04",
+          "consequence": "Tiniis ni Maria ang exploitation nang tahimik.",
+          "scoreChange": -5,
+          "knowledgeGained": null
+        },
+        {
+          "text": "Palihim na kontakin ang Philippine Embassy para humingi ng advice.",
+          "nextNode": "ofw_help_01",
+          "consequence": "Humingi ng tulong si Maria nang hindi direktang kinaharap ang employer.",
+          "scoreChange": 10,
+          "knowledgeGained": "Pwede mong kontakin ang Philippine Embassy o POLO office nang confidential para sa advice tungkol sa mga labor issues. Pwede ka nilang gabayan kung paano i-address ang mga violations nang hindi inilalagay sa panganib ang sarili mo."
+        }
+      ],
+      "isEnding": false
+    },
+    "ofw_work_03": {
+      "id": "ofw_work_03",
+      "title": "Pag-keep ng Passport",
+      "narrative": "Huminga nang malalim si Maria. 'Ma'am Aisha, thank you po sa concern ninyo, pero ang Philippine Embassy ay nag-aadvise sa amin na i-keep namin ang sarili naming passport. I-keep ko po siya safely sa room ko, promise po. Very important po kasi sa akin.' Sinabi niya ito na may mahinahong ngiti, sinusubukang huwag pakinggan na confrontational.\n\nNag-angat ng kilay si Madam Aisha pero nag-shrug. 'Fine, as you wish. Just don't lose it.' Huminga ng may ginhawa si Maria. Nasa kanya ang passport niya, ang lifeline niya.\n\nAng unang mga linggo ng trabaho ay demanding pero kaya naman. Gumigising nang maaga si Maria, inaalagaan ang mga bata, pinapanatiling malinis ang bahay, at nagluluto ng Filipino dishes na nagustuhan ng buong pamilya. Strict si Madam Aisha pero hindi naman cruel. Ang mga bata, lalo na ang bunso na si Haya, ay naging attached kay Maria, tinatawag siyang 'Ate Maria.'\n\nPero sa katapusan ng unang buwan, may mali. Inabot ni Madam Aisha kay Maria ang isang envelope na may sahod niya: 1,100 AED. Nakalagay sa contract ni Maria na 1,470 AED ($400/month). Kulang siya ng 370 AED — mga $100.\n\n'That is after deductions,' sabi ni Madam Aisha nang malabo. 'Food, electricity, your room.' Alam ni Maria na nakalagay sa contract niya na libre ang pagkain at tirahan.",
+      "theme": "wage_theft",
+      "choices": [
+        {
+          "text": "Ipakita kay Madam Aisha ang contract clause na nagsasabing libre ang food at accommodation, at magalang na hingin ang buong sahod.",
+          "nextNode": "ofw_work_05",
+          "consequence": "Ginamit ni Maria ang contract niya para i-dispute ang unauthorized deductions.",
+          "scoreChange": 15,
+          "knowledgeGained": "Sa ilalim ng Standard Employment Contract, libre ang pagkain at maayos na tirahan na sagot ng employer. Anumang deduction na hindi nakalagay sa contract ay illegal na wage theft."
+        },
+        {
+          "text": "Tanggapin ang nababawasang sahod ngayong buwan at umasa na maitatama sa susunod na buwan.",
+          "nextNode": "ofw_work_06",
+          "consequence": "Pinapalampas ni Maria ang wage theft, na nagse-set ng mapanganib na precedent.",
+          "scoreChange": -5,
+          "knowledgeGained": null
+        },
+        {
+          "text": "I-document ang discrepancy — itago ang pay envelope, i-photograph, at i-note ang petsa at halagang natanggap.",
+          "nextNode": "ofw_work_06",
+          "consequence": "Hindi pa kinaharap ni Maria ang issue pero maingat na dino-document ang ebidensya.",
+          "scoreChange": 8,
+          "knowledgeGained": "Palaging i-document ang mga salary payments: itago ang pay slips, i-photograph ang cash amounts, i-record ang petsa at halaga sa isang notebook. Ang ebidensyang ito ay napakahalaga kung kailangan mong mag-file ng wage theft complaint sa hinaharap."
+        }
+      ],
+      "isEnding": false
+    },
+    "ofw_work_04": {
+      "id": "ofw_work_04",
+      "title": "Papalala nang Papalala",
+      "narrative": "Naghalo-halo na ang mga buwan sa walang katapusang cycle ng trabaho. Nagtatrabaho na si Maria ng 18 oras bawat araw, pitong araw sa isang linggo. Wala pa siyang kahit isang rest day sa loob ng tatlong buwan. Ang sahod niya — kung dumating man — ay mas mababa kaysa sa ipinangako. Minsan, sabi ng employer na 'next month' at hindi na dumating ang bayad.\n\nPumayat si Maria. Basag at hilaw ang mga kamay niya dahil sa walang tigil na paglilinis gamit ang matapang na chemicals. Apat hanggang limang oras lang ang tulog niya sa gabi. Kapag nagkamali siya — nasunog ang kanin, may mantsa sa baso — sigaw nang sigaw ang employer niya sa Arabic. Minsan, hinagis ni Madam ang sapatos sa ulo niya.\n\nTumatawag si Maria sa bahay tuwing may pagkakataon siyang magamit ang phone. Sinasabi niya sa nanay niya na okay lang ang lahat. 'Okay naman po dito, 'Nay. Maganda yung bahay.' Hindi niya kayang sabihin ang totoo. Mag-aalala nang sobra ang nanay niya, at mahihirapan ang tatay niya. Bukod pa roon, kailangan nila ang pera na pinapadala niya — o sinusubukan niyang ipadala.\n\nIsang gabi, habang naglilinis ng kusina ng hatinggabi, narinig ni Maria ang boses ng isang Filipina sa kabilang pader. Ang helper ng kapitbahay nila, si Jen, ay tumatawag sa Tagalog: 'Tulong, may tao ba diyan?'",
+      "theme": "unsafe_conditions",
+      "choices": [
+        {
+          "text": "Maghanap ng paraan para makausap si Jen at i-share ang mga sitwasyon ninyo — mas malakas ang dalawang boses kaysa isa.",
+          "nextNode": "ofw_help_03",
+          "consequence": "Nag-connect si Maria sa isang kapwa OFW na nasa distress.",
+          "scoreChange": 10,
+          "knowledgeGained": "Ang pagbuo ng connections sa mga kapwa OFW ay maaaring maging lifesaving. Magkasama, pwede ninyong i-share ang impormasyon, magbigay ng emotional support, at tulungan ang isa't isa na ma-access ang tulong."
+        },
+        {
+          "text": "Balewalain ang boses ni Jen — baka lumala pa ang sarili mong sitwasyon kung makikialam ka.",
+          "nextNode": "ofw_work_07",
+          "consequence": "Lalo pang nagkulong si Maria sa isolation.",
+          "scoreChange": -3,
+          "knowledgeGained": null
+        },
+        {
+          "text": "Sa susunod na pagkakataon na magamit ang phone, tawagan ang OWWA hotline 1348 o ang Philippine Embassy.",
+          "nextNode": "ofw_help_01",
+          "consequence": "Sa wakas, nagdesisyon si Maria na humingi ng opisyal na tulong.",
+          "scoreChange": 12,
+          "knowledgeGained": "Ang OWWA hotline 1348 at ang DFA hotline para sa mga distressed na OFW ay available 24/7. Ang Philippine Embassy ay pwedeng mag-intervene para sa 'yo kahit irregular ang pagpasok mo sa bansa."
+        }
+      ],
+      "isEnding": false
+    },
+    "ofw_work_05": {
+      "id": "ofw_work_05",
+      "title": "Paggigiit ng Karapatan",
+      "narrative": "Nangalap ng lakas ng loob si Maria at kinausap ang employer niya. Ipinakita niya ang POLO-verified contract niya — o ang kopya ng signed agreement — at itinuro ang mga specific clauses: ang napagkasunduang sahod, ang libreng pagkain at tirahan, ang weekly rest day.\n\n'Ma'am, with all respect, ito po ang pinagkasunduan natin. Masipag po akong nagtatrabaho para sa inyo at masaya po akong nandito, pero kailangan din pong igalang ang rights ko. Ang Philippine Embassy po ang nagsasabi na protected ito ng batas.'\n\nMixed ang reaksyon ng employer. May pagkagulat — karamihan sa mga helper ay hindi lumalaban. May pagkairita. Pero may grudging respect din. Sa kaso ni Maria kay Madam Aisha sa Dubai, sumunod din sa bandang huli ang employer: 'Fine. Makukuha mo ang buong sahod mo at ang Friday off mo. Pero inaasahan ko na perpekto ang bahay sa natitirang araw ng linggo.'\n\nPara kay Maria sa mas mahirap na landas — sa abusive na employer — iba ang tugon. Pwedeng maging hostile ang employer, bantaan na ipapauwi si Maria, o ikukulong sa kwarto. Sa ganung sitwasyon, kailangang maging maingat si Maria sa susunod na hakbang.\n\nKabog ang dibdib ni Maria, pero nanatili siyang matatag. Natutunan niyang hindi sapat na malaman lang ang rights mo — kailangan mo ring magkaroon ng tapang na ipaglaban ang mga ito.",
+      "theme": "wage_theft",
+      "choices": [
+        {
+          "text": "Pasalamatan ang employer at magpatuloy na magtrabaho sa corrected terms, habang dino-document lahat.",
+          "nextNode": "ofw_work_08",
+          "consequence": "Gumanda ang sitwasyon ni Maria at patuloy siyang nagre-record nang maayos.",
+          "scoreChange": 10,
+          "knowledgeGained": "Kapag ni-correct ng employer ang violation matapos harapin, patuloy na i-document lahat ng payments at conditions. Ang positive resolution ngayon ay hindi garantiya na walang problema sa hinaharap."
+        },
+        {
+          "text": "Nagalit ang employer at binalaan kang ite-terminate. Kontakin agad ang Philippine Embassy.",
+          "nextNode": "ofw_help_01",
+          "consequence": "Lumala ang confrontation at kailangan ni Maria ng embassy support.",
+          "scoreChange": 8,
+          "knowledgeGained": "Kung gumanti ang employer laban sa 'yo dahil inassert mo ang legal rights mo, kontakin agad ang Philippine Embassy o POLO. Ang pagganti dahil sa pag-assert ng rights ay violation din."
+        }
+      ],
+      "isEnding": false
+    },
+    "ofw_work_06": {
+      "id": "ofw_work_06",
+      "title": "Pumapaliit na Sahod",
+      "narrative": "Sa ikatlong buwan, malinaw na ang pattern. Hindi kailanman nakatanggap si Maria ng buong contractual salary niya. Nagbabago ang deductions bawat buwan — ngayon ay 'advance,' sa susunod ay 'nabasag na baso,' tapos 'phone calls.' Ang net salary niya ay halos $250 lang sa $400 na ipinangako.\n\nNag-compute si Maria na nanginginig ang kamay. Pagkatapos bayaran ang monthly installment sa placement fee, magpadala ng pera sa bahay para sa tuition ni Miguel at gamot ng nanay niya, halos wala nang natitira para sa sarili niya. Hindi na siya nakabili ng bagong damit simula nang dumating. Ang isang pares niyang tsinelas ay nagsisimula nang masira.\n\nMaingat siyang nag-record sa maliit na notebook na itinatago niya sa ilalim ng kutson: petsa, halagang ipinangako, halagang natanggap, dahilan ng mga deductions. Pini-photograph niya ang pay slips kapag binibigay, na bihira lang mangyari.\n\nIsang araw, habang naglilinis ng home office ni Madam Aisha, narinig ni Maria ang isang phone call. Kinakausap ni Madam Aisha ang kapatid niya tungkol sa 'the helper': 'She's so naive. I told the agency I'd pay $400 but I'm only spending $250. She doesn't know her rights.' Nanlamig ang buong katawan ni Maria.",
+      "theme": "wage_theft",
+      "choices": [
+        {
+          "text": "Harapin si Madam Aisha gamit ang mga records mo at i-demand ang buong bayad ng lahat ng back wages.",
+          "nextNode": "ofw_work_05",
+          "consequence": "May ebidensya na, hinarap na ni Maria nang direkta ang wage theft.",
+          "scoreChange": 12,
+          "knowledgeGained": "Ang systematic na underpayment ay wage theft. I-document lahat: petsa, halaga, deductions. Ang ebidensyang ito ay essential para sa pag-file ng complaint sa Philippine Embassy o sa labor ministry ng host country."
+        },
+        {
+          "text": "Palihim na kontakin ang Philippine Embassy at i-report ang wage theft.",
+          "nextNode": "ofw_help_01",
+          "consequence": "Humingi si Maria ng opisyal na intervention para sa wage theft.",
+          "scoreChange": 10,
+          "knowledgeGained": "Pwede mong i-report ang wage theft sa POLO office sa Philippine Embassy. Pwede nilang i-mediate sa employer at, kung kinakailangan, tulungan kang mag-file ng formal complaint."
+        },
+        {
+          "text": "Patuloy na mag-document pero wag munang kumilos — takot kang mawalan ng trabaho.",
+          "nextNode": "ofw_work_07",
+          "consequence": "Pinigilan ng takot ni Maria na kumilos base sa ebidensyang nakalap niya.",
+          "scoreChange": -2,
+          "knowledgeGained": null
+        }
+      ],
+      "isEnding": false
+    },
+    "ofw_work_07": {
+      "id": "ofw_work_07",
+      "title": "Breaking Point",
+      "narrative": "Walong buwan na sa deployment. Anino na lang si Maria ng masayang babaeng umalis sa Pampanga. Pumayat siya ng labinlimang pounds. Itim ang paligid ng mga mata niya. Nanginginig ang mga kamay niya kapag pagod, na palagi namang nangyayari.\n\nNgayong gabi, nagkamali siya. Nagkamaling ginamit ang maling spice sa hapunan. Nagalit nang husto ang employer, tinumba ang kaldero sa sahig ng kusina. 'Clean it up! You are useless! I should send you back to your poor country!' Napaso ang mga bukung-bukong ni Maria sa mainit na sabaw. Kinagat niya ang labi para hindi umiyak.\n\nMag-isa sa kwarto niya nang gabing iyon, umiyak siya sa unan. Naisip niya ang pamilya niya, ang mga pangarap nila noong umalis siya. Tinignan niya ang phone niya — ang isang luxury na ipinaglaban niyang panatilihin — at nag-scroll sa contacts. Nandoon ang number ng Philippine Embassy. Nandoon ang OWWA hotline. Nandoon ang number ni Ate Fely.\n\nNagsisimula na rin siyang magkaroon ng madidilim na iniisip. Parang sumisikip ang pader ng maliit niyang kwarto. Naaalala niya ang sinabi ng PDOS facilitator: 'Walang halaga ng pera ang katumbas ng buhay mo. Kung nasa panganib ka, humingi ng tulong. Hindi iyon kahinaan — iyon ay survival.'",
+      "theme": "unsafe_conditions",
+      "choices": [
+        {
+          "text": "Tawagan ang Philippine Embassy emergency hotline ngayon, ngayong gabi mismo.",
+          "nextNode": "ofw_help_01",
+          "consequence": "Sa wakas, humingi ng tulong si Maria sa pinaka-desperado niyang sandali.",
+          "scoreChange": 15,
+          "knowledgeGained": "Ang Philippine Embassy ay may emergency hotline para sa mga distressed na OFW. Ang abuse — pisikal, verbal, o psychological — ay sapat na dahilan para sa emergency rescue at repatriation."
+        },
+        {
+          "text": "Mag-text kay Ate Fely at ipakiusap na kontakin niya ang embassy para sa 'yo.",
+          "nextNode": "ofw_help_03",
+          "consequence": "Humingi ng tulong si Maria sa pamamagitan ng support network niya.",
+          "scoreChange": 10,
+          "knowledgeGained": "Kung hindi ka ligtas na makontact ang embassy nang mag-isa, hilingin sa isang pinagkakatiwalaang kaibigan o kamag-anak na i-report ang sitwasyon mo. Tinatanggap at inaaksyunan ang mga third-party reports."
+        },
+        {
+          "text": "Subukang tiisin pa ng isang buwan — malapit ka nang mabayaran ang utang ng pamilya.",
+          "nextNode": "ofw_resolve_05",
+          "consequence": "Pinilit ni Maria ang sarili niya lampas sa kanyang breaking point.",
+          "scoreChange": -8,
+          "knowledgeGained": null
+        }
+      ],
+      "isEnding": false
+    },
+    "ofw_work_08": {
+      "id": "ofw_work_08",
+      "title": "Isang Stable na Sitwasyon",
+      "narrative": "Matapos igiit ang rights niya, gumanda nang malaki ang working conditions ni Maria. Nagbabayad si Madam Aisha ng buong $400 na sahod nang on time. Nakukuha ni Maria ang Friday off niya, na ginugugol niya sa Pinoy community gathering sa isang simbahan sa Deira, kung saan nakikilala niya ang ibang mga OFW, nagkukuwentuhan, at nakakahanap ng emotional support.\n\nLumipas ang mga buwan. Tapat na nagpapadala ng pera si Maria sa bahay. Last semester na ni Miguel. Covered na ang gamot ng nanay niya. Ginamit ng tatay niya ang ipon para palitan ang tarp na bubong ng galvanized iron sheets. Pinapayagan ni Maria ang sarili na makaramdam ng maingat na pagmamalaki.\n\nPero isang araw, nakilala ni Maria ang isang bagong Filipina helper sa neighborhood na si Grace. Halata ang distress ni Grace — payat, takot, may mga pasa sa mga braso na tinatago. Sinabi niya kay Maria sa mabilis na bulong na binubugbog siya ng employer, tatlong buwan na siyang hindi binabayaran, at kinuha ang passport niya. Nagmamakaawa si Grace kay Maria para sa tulong.\n\nNarealize ni Maria na hindi lahat ay kasingswerte niya. Alam niya ang sistema, ang mga number, ang mga rights. May pagpipilian siya kung ano ang gagawin sa kaalaman na iyon.",
+      "theme": "unsafe_conditions",
+      "choices": [
+        {
+          "text": "Tulungan si Grace na kontakin ang Philippine Embassy at i-offer na samahan siya sa POLO office sa day off mo.",
+          "nextNode": "ofw_help_02",
+          "consequence": "Ginamit ni Maria ang kaalaman niya para tulungan ang isang kapwa OFW na nasa krisis.",
+          "scoreChange": 15,
+          "knowledgeGained": "Pwede mong tulungan ang mga kapwa OFW sa pamamagitan ng pagkokonekta sa kanila sa Philippine Embassy, POLO, o OWWA. Ang pagsamang mag-report ng abuse ay nagbibigay ng moral support at makakapagpalakas ng case."
+        },
+        {
+          "text": "Ibigay kay Grace ang embassy number pero huwag nang makisangkot pa — ayaw mong ilagay sa panganib ang sarili mong posisyon.",
+          "nextNode": "ofw_help_04",
+          "consequence": "Nag-offer si Maria ng limitadong tulong para maiwasan ang mga posibleng komplikasyon.",
+          "scoreChange": 5,
+          "knowledgeGained": "Kahit ang pagbabahagi lang ng impormasyon tungkol sa rights at emergency contacts ay makakapagligtas ng buhay. Bawat kaalaman na ibinabahagi ay nagbibigay-kapangyarihan sa isa pang worker."
+        }
+      ],
+      "isEnding": false
+    },
+    "ofw_help_01": {
+      "id": "ofw_help_01",
+      "title": "Ang Tawag sa Embassy",
+      "narrative": "Nag-dial si Maria sa Philippine Embassy. Nanginginig ang kamay niya. Sumagot ang boses ng isang Filipina: 'Philippine Overseas Labor Office, Dubai. Paano po kita matutulungan?'\n\nBinuhos ni Maria ang kwento niya nang mabilis, halo-halong Tagalog at luha — ang mahabang oras ng trabaho, ang kinumpiskang passport, ang hindi binayarang sahod, ang verbal abuse, ang paso sa mga bukung-bukong niya. Ang POLO officer na si Ma'am Elena ay matiyagang nakinig at maingat na nagnotes.\n\n'Maria, hindi ka nag-iisa. We handle cases like yours every day. Ito ang pwede naming gawin: Una, pwede naming i-summon ang employer mo para sa mediation. Kung hindi makipagtulungan ang employer, pwede kaming mag-file ng case sa UAE Ministry of Human Resources. Pangalawa, kung nasa immediate danger ka, pwede naming i-arrange ang emergency shelter mo sa Bahay Kalinga — isang shelter para sa mga distressed na OFW sa embassy. Pangatlo, tutulungan ka naming makuha pabalik ang passport mo at unpaid wages.'\n\nIpinaliwanag din ni Ma'am Elena na pwedeng mag-file si Maria ng complaint laban sa recruitment agency sa Pilipinas sa ilalim ng RA 8042, na nagho-hold sa agency na jointly at solidarily liable kasama ng foreign employer para sa lahat ng money claims.\n\n'Maria, kailan mo gusto pumunta dito?'",
+      "theme": "unsafe_conditions",
+      "choices": [
+        {
+          "text": "Pumunta agad sa embassy at mag-request ng shelter sa Bahay Kalinga — hindi ka na ligtas na bumalik.",
+          "nextNode": "ofw_help_05",
+          "consequence": "Humingi si Maria ng emergency shelter at proteksyon sa embassy.",
+          "scoreChange": 12,
+          "knowledgeGained": "Ang Bahay Kalinga ay isang temporary shelter na pinapatakbo ng Philippine Embassy para sa mga distressed na OFW. Nagbibigay ito ng ligtas na tirahan, pagkain, counseling, at legal assistance habang pinoproseso ang mga kaso."
+        },
+        {
+          "text": "Hilingin sa embassy na i-summon ang employer mo para sa mediation para subukan mong ayusin ang mga bagay nang hindi umaalis sa trabaho.",
+          "nextNode": "ofw_help_04",
+          "consequence": "Pinili ni Maria ang mediation, umaasang maayos ang sitwasyon habang nananatili sa trabaho.",
+          "scoreChange": 8,
+          "knowledgeGained": "Pwedeng mag-summon ang POLO ng employers para sa mediation na magresolba ng labor disputes. Ito ay kadalasang mas mabilis kaysa mag-file ng formal case at pwedeng magresulta sa bayad ng back wages at pagbuti ng conditions."
+        },
+        {
+          "text": "Pasalamatan ang embassy pero magdesisyon na ikaw na lang ang bahala — kakausapin mo muna ang employer mo.",
+          "nextNode": "ofw_work_05",
+          "consequence": "Sinubukan ni Maria na resolbahin ang sitwasyon nang mag-isa bago humingi ng formal intervention.",
+          "scoreChange": 3,
+          "knowledgeGained": null
+        }
+      ],
+      "isEnding": false
+    },
+    "ofw_help_02": {
+      "id": "ofw_help_02",
+      "title": "Pagtulong kay Grace",
+      "narrative": "Sa susunod niyang Friday off, nakipagkita si Maria kay Grace sa Pinoy community gathering. Nanginginig si Grace, naka-long sleeves kahit mainit para itago ang mga pasa. Hinawakan ni Maria ang kamay niya at sinabi: 'Kayang-kaya natin 'to, Grace. Hindi ka nag-iisa.'\n\nTinawagan ni Maria ang POLO office at ipinaliwanag ang sitwasyon ni Grace. Sinamahan niya si Grace sa embassy sa susunod na linggo, na nakakuha ng permission kay Madam Aisha na sinabi niyang may medical appointment siya. Sa POLO office, ikinuwento ni Grace ang kwento niya sa labor attache, na dino-document ang physical abuse, wage theft, at passport confiscation.\n\nMabilis kumilos ang embassy. Sa loob ng isang linggo, nakuha nila pabalik ang passport ni Grace sa pamamagitan ng coordination sa UAE authorities. Na-shelter si Grace sa Bahay Kalinga. Nag-file ng case laban sa employer ni Grace sa UAE Ministry of Human Resources, at kasabay nito, nag-file din ng complaint laban sa recruitment agency sa Manila.\n\nKumapit si Grace kay Maria sa shelter. 'Salamat, Ate Maria. Kung hindi dahil sa 'yo...' Naramdaman ni Maria na may nagbago sa loob niya — hindi na lang siya nagsu-survive. Nagdudulot na siya ng pagbabago.\n\nKumalat ang balita sa mga Filipina helpers sa neighborhood. Naging tahimik na source si Maria ng impormasyon at pag-asa. Nagsimula siyang mag-keep ng listahan ng emergency numbers at rights sa isang card na discreetly niyang ibinabahagi sa mga bagong dating.",
+      "theme": "unsafe_conditions",
+      "choices": [
+        {
+          "text": "Ituloy ang contract mo na may sense of purpose, tumutulong sa ibang mga OFW at nagtatayo ng support network.",
+          "nextNode": "ofw_resolve_01",
+          "consequence": "Tinupad ni Maria ang contract niya bilang isang empowered advocate para sa mga kapwa OFW.",
+          "scoreChange": 15,
+          "knowledgeGained": "Ang mga OFW na tumutulong sa kapwa workers ay protected ng RA 10022. Walang sinuman ang pwedeng parusahan dahil sa pag-report ng labor violations o pagtulong sa iba na ma-access ang government services."
+        }
+      ],
+      "isEnding": false
+    },
+    "ofw_help_03": {
+      "id": "ofw_help_03",
+      "title": "Ang Network ng mga OFW",
+      "narrative": "Nag-connect si Maria kay Jen, ang Filipina helper sa kabilang bahay, sa pamamagitan ng mga bulong na usapan sa garden wall sa maikling minutong parehong nasa labas sila. Pareho ang sitwasyon ni Jen kay Maria — overworked, underpaid, kinumpiska ang passport. Pero mas matagal na si Jen dito at may mga connections.\n\nSinabi ni Jen kay Maria na may informal network ng Filipina domestic helpers sa area na nag-aalagaan sa isa't isa. Nag-uusap sila sa secret WhatsApp group gamit ang mga hinihiram na phone at ninakaw na minuto. Ang group, na tinatawag na 'Bahay Kalinga sa Bayan,' ay nagbabahagi ng practical na impormasyon: aling mga employer ang kilalang abusive, paano kontakin ang embassy, aling ospital ang pupuntahan sa emergency, at paano makakuha ng legal help.\n\nSa pamamagitan ng network, nalaman ni Maria na ang OWWA ay nagbibigay ng ilang benefits na hindi niya alam: death and disability benefits, education assistance para sa mga anak ng OFW, repatriation assistance, at reintegration programs. Nalaman din niya na sa ilalim ng RA 8042, pwede siyang mag-file ng money claims laban sa recruitment agency kahit pagbalik na niya sa Pilipinas.\n\nBinigyan ng network si Maria ng bagay na nawala na sa kanya: pag-asa. Sabi ni Jen, 'Ate Maria, hindi natin kailangang magdusa nang mag-isa. Milyun-milyon tayong mga OFW — hindi tayo walang kapangyarihan kung magsasama-sama tayo.'",
+      "theme": "unsafe_conditions",
+      "choices": [
+        {
+          "text": "Gamitin ang tulong ng network para kontakin ang Philippine Embassy at magplano ng safe exit mula sa employer.",
+          "nextNode": "ofw_help_05",
+          "consequence": "Ginamit ni Maria ang support network para humingi ng opisyal na tulong.",
+          "scoreChange": 12,
+          "knowledgeGained": "Ang mga OFW community networks ay nagbibigay ng kritikal na support: emotional aid, practical information, tulong sa pag-contact sa authorities, at maging temporary assistance para sa mga nakatakas sa abusive employers."
+        },
+        {
+          "text": "Manatili sa employer pero gamitin ang impormasyon ng network para mag-document ng violations at magplano ng future complaint.",
+          "nextNode": "ofw_help_04",
+          "consequence": "Nanatili si Maria pero nagbuild ng mas matibay na case sa tulong ng network.",
+          "scoreChange": 7,
+          "knowledgeGained": "Ang dokumentasyon ng mga labor violations — mga litrato, records, witness statements — ay nagpapalakas ng kahit anong legal complaint sa hinaharap. Ang well-documented case ay may mas mataas na chance na magresulta sa compensation."
+        }
+      ],
+      "isEnding": false
+    },
+    "ofw_help_04": {
+      "id": "ofw_help_04",
+      "title": "Mediation at Dokumentasyon",
+      "narrative": "Nagpursige si Maria sa middle path — dino-document ang lahat habang humihiling ng mediation sa POLO office. Nagpadala ang POLO labor attache ng formal letter sa employer ni Maria na humihiling ng meeting para pag-usapan ang terms of employment.\n\nNaganap ang mediation meeting sa POLO office. Si Maria, ang employer niya, at isang POLO officer ang nagkakahareap sa isang mesa. Tensyonado ang atmospera. Inilahad ng POLO officer ang mga katotohanan: garantisado ng contract ni Maria ang $400/month na may libreng pagkain at tirahan. Nakatanggap lang siya ng $250-300/month na may illegal deductions. Hindi niya natanggap ang mandated rest days niya.\n\nHarap-harapan sa opisyal na dokumentasyon at presensya ng isang Philippine government officer, napilitang sumagot ang employer. Sa ibang kaso, pumapayag ang employer na sumunod at magbayad ng back wages. Sa iba naman, tumatanggi ang employer at kailangang i-escalate ang case sa UAE Ministry of Human Resources o sa Philippine government.\n\nNagresulta ang mediation sa isang signed agreement: babayaran ng employer si Maria ng buong sahod mula ngayon at babayaran ang back wages sa installments. Makukuha ni Maria ang weekly rest day niya. Binalaan ng POLO officer ang employer na anumang pagganti ay magre-result sa formal case filing.",
+      "theme": "wage_theft",
+      "choices": [
+        {
+          "text": "Bumalik sa trabaho na may mediation agreement, maingat na minomonitor para matiyak na sinusunod ito.",
+          "nextNode": "ofw_work_08",
+          "consequence": "Bumalik si Maria na may opisyal na proteksyon at documented agreement.",
+          "scoreChange": 10,
+          "knowledgeGained": "Ang mga POLO-mediated agreements ay documented at lumilikha ng record. Kung lalabag ang employer sa agreement, awtomatikong i-e-escalate ang case sa formal complaint na may mas mabigat na legal consequences."
+        },
+        {
+          "text": "Magdesisyon na hindi mapagkakatiwalaan ang employer — mag-request ng contract termination at repatriation assistance mula sa embassy.",
+          "nextNode": "ofw_help_06",
+          "consequence": "Nagdesisyon si Maria na umalis at humingi ng repatriation assistance.",
+          "scoreChange": 7,
+          "knowledgeGained": "May karapatan kang i-terminate ang employment mo kung nilabag ng employer ang contract. Sa ganitong sitwasyon, may karapatan ka sa repatriation na sagot ng employer."
+        }
+      ],
+      "isEnding": false
+    },
+    "ofw_help_05": {
+      "id": "ofw_help_05",
+      "title": "Bahay Kalinga",
+      "narrative": "Dumating si Maria sa Philippine Embassy compound sa Dubai. Ang Bahay Kalinga ay isang simple pero malinis na pasilidad sa loob ng embassy grounds. May mga dalawampung iba pang Filipina doon — ilan ang nabugbog, ilan ang hindi binayaran ng ilang buwan, at ilan ang na-traffic. Kahit may kalungkutan, may sense of solidarity. Nagluluto sila nang magkakasama, nagkukuwentuhan, at nag-aalagaan sa isa't isa.\n\nIsang social worker na si Ate Joy ang nagproseso ng case ni Maria. Isinuko ni Maria ang phone niya para sa documentation — mga litrato ng injuries, screenshots ng messages, ang maingat niyang notebook ng mga salary records. Impressed si Ate Joy: 'Maria, excellent ang documentation mo. Magkakaroon ito ng very strong case.'\n\nNakipag-coordinate ang embassy sa UAE authorities para makuha pabalik ang passport ni Maria. Sa loob ng limang araw, nakabalik na. Nag-file ang POLO office ng formal complaint laban sa employer ni Maria sa UAE Ministry of Human Resources, na nagde-demand ng bayad ng lahat ng back wages, overtime, at compensation para sa abuse.\n\nNagbigay din si Maria ng sworn statement na gagamitin para mag-file ng case laban sa recruitment agency niya sa Pilipinas sa ilalim ng RA 8042 para sa joint and solidary liability. Ibig sabihin nito, ang agency ay pwedeng ma-hold na equally responsible para sa mga violations ng employer.",
+      "theme": "unsafe_conditions",
+      "choices": [
+        {
+          "text": "Ituloy ang case nang buo — mag-file ng complaints laban sa parehong employer at recruitment agency.",
+          "nextNode": "ofw_help_06",
+          "consequence": "Nag-commit si Maria na hanapin ang buong hustisya sa legal na paraan.",
+          "scoreChange": 15,
+          "knowledgeGained": "Sa ilalim ng RA 8042, ang recruitment agency at ang foreign employer ay may joint and solidary liability. Ibig sabihin, pwedeng mangolekta si Maria ng damages mula sa agency sa Pilipinas kahit tumanggi ang foreign employer na magbayad."
+        },
+        {
+          "text": "Kunin lang pabalik ang passport at mag-request ng immediate repatriation — gusto mo nang umuwi.",
+          "nextNode": "ofw_resolve_03",
+          "consequence": "Pinili ni Maria na umuwi nang pinakamabilis na paraan.",
+          "scoreChange": 5,
+          "knowledgeGained": "Nagbibigay ang OWWA ng repatriation assistance para sa mga distressed na OFW, kasama ang plane tickets at airport assistance. Pwede ka pa ring mag-file ng cases pagbalik mo sa Pilipinas."
+        }
+      ],
+      "isEnding": false
+    },
+    "ofw_help_06": {
+      "id": "ofw_help_06",
+      "title": "Pag-file ng Case",
+      "narrative": "Nagdesisyon si Maria na ipaglaban ang hustisya nang buo. Sa POLO office, nag-file siya ng formal complaint na naglilista ng lahat ng violations: wage theft (underpayment na nagkakahalaga ng approximately $1,800 sa buong duration ng employment), illegal salary deductions, passport confiscation, pagkait ng rest days, physical at verbal abuse, at violation ng Standard Employment Contract.\n\nIpinaliwanag ng POLO labor attache ang legal process: Sa UAE, dadaan ang case sa Ministry of Human Resources. Kung hindi mag-settle ang employer, pwedeng umabot sa UAE labor court. Kasabay nito, sa Pilipinas, mag-fi-file ng case sa National Labor Relations Commission (NLRC) laban sa recruitment agency sa ilalim ng joint and solidary liability provision ng RA 8042.\n\nNalaman din ni Maria ang tungkol sa surety bond ng recruitment agency — isang financial guarantee na required ng batas para sa lahat ng licensed agencies. Ang bond na ito ay pwedeng gamitin para bayaran ang claims ng mga workers kung hindi magbayad ang agency o employer.\n\n'Matagal ang proseso,' babala ng POLO attache. 'Pwedeng tumagal ng anim na buwan hanggang isang taon. Pero matibay ang case mo, Maria. At hindi ka magiging mag-isa.' Naisip ni Maria ang sinabi ng nanay niya: 'Ang taong nagtitiyaga, ay may makukuha rin.'\n\nHabang pinoproseso ang case, inaprubahan ng OWWA ang repatriation ni Maria. Uuwi siya sa susunod na linggo.",
+      "theme": "wage_theft",
+      "choices": [
+        {
+          "text": "Bumalik sa Pilipinas at ipagpatuloy ang case mo sa NLRC habang bina-build muli ang buhay mo.",
+          "nextNode": "ofw_resolve_02",
+          "consequence": "Umuwi si Maria para ipaglaban ang hustisya mula sa Pilipinas.",
+          "scoreChange": 12,
+          "knowledgeGained": "Ang mga case na nai-file sa NLRC sa ilalim ng RA 8042 ay pwedeng ipagpatuloy kahit nakabalik na ang OFW sa Pilipinas. Ang surety bond ng agency ay nagsisilbing garantiya para sa mga money claims."
+        },
+        {
+          "text": "Manatili sa UAE sa Bahay Kalinga hanggang maresolba ang case para matiyak na hindi makakaiwas ang employer sa liability.",
+          "nextNode": "ofw_resolve_04",
+          "consequence": "Nanatili si Maria sa abroad para tapusin ang case sa UAE courts.",
+          "scoreChange": 8,
+          "knowledgeGained": "May mga OFW na pinipiling manatili sa host country habang pinoproseso ang cases. Ang embassy ay pwedeng magbigay ng shelter at tulong sa panahong ito, kahit pwedeng tumagal ng ilang buwan."
+        }
+      ],
+      "isEnding": false
+    },
+    "ofw_resolve_01": {
+      "id": "ofw_resolve_01",
+      "title": "Ang Empowered na OFW",
+      "narrative": "Tinupad ni Maria ang dalawang-taong contract niya sa Dubai na buo ang kanyang mga karapatan. Natanggap niya ang buong sahod gaya ng ipinangako, nakuha ang weekly rest days niya, naitatag ang passport niya sa buong panahon, at natulungan pa ang ilang kapwa Filipina na ma-access ang embassy services at ipaglaban ang sarili nilang mga karapatan.\n\nBumalik siya sa Pilipinas na may ipon na halos 400,000 pesos — sapat para matapos ang pagbabayad ng engineering degree ni Miguel, magpatayo ng maliit na extension sa bahay ng pamilya, at magbukas ng maliit na sari-sari store na pwedeng pamahalaan ng nanay niya. Sa NAIA, naghihintay ang buong pamilya niya, may hawak na banner na nagsasabing 'Welcome Home, Ate Maria!'\n\nPero hindi nagtapos doon ang journey ni Maria. Nag-enroll siya sa OWWA reintegration program na nagbibigay ng livelihood training at small business loans para sa mga returning OFWs. Nag-volunteer din siya sa local PESO office, ibinabahagi ang karanasan niya sa ibang aspiring OFWs.\n\n'Ang pinaka-importante,' sabi niya sa kanila, 'ay malaman mo ang rights mo bago ka umalis. Huwag kang matakot magtanong. Huwag kang matakot tumanggi. At palagi, palaging i-keep ang passport mo.'\n\nAng kwento ni Maria ay naging kwento ng empowerment — hindi dahil madali ang lahat, kundi dahil handa siya, may alam, at may tapang na manindigan para sa sarili niya at sa iba.",
+      "theme": "unsafe_conditions",
+      "choices": [],
+      "isEnding": true
+    },
+    "ofw_resolve_02": {
+      "id": "ofw_resolve_02",
+      "title": "Hustisya sa NLRC",
+      "narrative": "Bumalik si Maria sa Pilipinas at agad nag-file ng case sa NLRC office sa Quezon City. Ang abogado niya — libre mula sa Public Attorney's Office (PAO) — ay nag-file ng money claim laban sa Bright Horizons International Placement (o ang relevant agency) sa ilalim ng RA 8042, na nag-ci-cite ng joint and solidary liability.\n\nKasama sa mga documents ng case ang detalyadong salary records ni Maria, mga litrato ng injuries, ang POLO-verified contract na nagpapakita ng agreed terms kumpara sa actual payments, mga mediation records ng embassy, at mga sworn statements ni Maria at ibang witnesses.\n\nWalong buwan ang proseso sa NLRC. Inaargumento ng recruitment agency na hindi sila responsible sa mga violations ng employer, pero ni-cite ng NLRC ang Section 10 ng RA 8042 na ini-amend ng RA 10022: ang agency at ang employer ay jointly at solidarily liable para sa lahat ng claims na nagmumula sa employment contract. Ang surety bond ng agency na isang milyong piso ay inutos na i-release para i-cover ang claims ni Maria.\n\nNa-award kay Maria ang 180,000 pesos sa back wages, 50,000 pesos sa moral damages, at 25,000 sa attorney's fees. Hindi man malaking kayamanan, ito ay hustisya. Ginamit niya ang pera para tapusin ang repairs sa bahay ng pamilya at mag-invest sa maliit na catering business.\n\nSumali rin siya sa Migrante International, isang OFW advocacy organization, para tulungang i-reform ang sistema na nagpahintulot sa exploitation sa kanya.\n\nResources: NLRC hotline (02) 527-3000 | PAO hotline (02) 929-9436 | OWWA hotline 1348 | DMW website: dmw.gov.ph",
+      "theme": "wage_theft",
+      "choices": [],
+      "isEnding": true
+    },
+    "ofw_resolve_03": {
+      "id": "ofw_resolve_03",
+      "title": "Maagang Pag-uwi",
+      "narrative": "Pinili ni Maria na umuwi. Inayos ng OWWA ang repatriation niya — plane ticket, airport assistance, at maliit na cash allowance para sa immediate needs. Sa NAIA Terminal 1, dumaan si Maria sa arrivals gate na may dalang isang bag, mas magaan kaysa noong umalis siya.\n\nNalito at nag-aalala ang pamilya niya. Sinabi ni Maria ang totoo — hindi lahat, hindi ang pinakamasama, pero sapat na. Umiyak ang nanay niya. Pumiglas ang panga ng tatay niya. Tahimik na sinabi ni Miguel, 'Ate, sana sinabi mo sa amin. Naghanap sana kami ng ibang paraan.'\n\nMahirap ang adjustment. Nagkakaroon si Maria ng bangungot. Pakiramdam niya siya ay bigo, kahit alam niyang hindi. Ni-refer siya ng OWWA office sa San Fernando, Pampanga sa kanilang psychosocial support program — libreng counseling para sa mga returning OFWs. Nag-attend siya na nag-aalangan sa simula, tapos regular na.\n\nSinabi ng counselor sa kanya: 'Maria, naka-survive ka. Hindi iyon pagkabigo. Iyon ay lakas.' Unti-unti, nagsimulang maniwala si Maria. Nalaman niya ang tungkol sa OWWA livelihood assistance program, na nagbibigay ng hanggang 20,000 pesos na seed capital para sa mga returning OFWs na gustong mag-start ng small business.\n\nHindi nag-file ng case si Maria laban sa employer o agency niya. Ang mga nawalang sahod ay malamang na nawala na. Pero nasa bahay siya, ligtas siya, at buong buhay pa ang nasa harap niya. Sinabi niya sa sarili: sa susunod — kung meron man — magiging handa siya.\n\nResources: OWWA reintegration program | OWWA hotline 1348 | National Center for Mental Health Crisis Hotline: 0917-899-8727 | DMW website: dmw.gov.ph",
+      "theme": "unsafe_conditions",
+      "choices": [],
+      "isEnding": true
+    },
+    "ofw_resolve_04": {
+      "id": "ofw_resolve_04",
+      "title": "Pagtatapos sa Abroad",
+      "narrative": "Nanatili si Maria sa Bahay Kalinga ng apat na buwan habang dumadaan ang case niya sa UAE Ministry of Human Resources. Matagal at nakakapagod ang proseso. May mga araw na parang walang pag-asa. Pero pinapanatili ng embassy staff at mga kasama niya sa shelter ang spirits niya. Tumutulong siyang magluto, tinuturuan ang ibang Filipina tungkol sa rights nila, at nagsimula pa ng informal English class.\n\nNagdesisyon ang UAE labor court pabor kay Maria. In-order ang employer na magbayad ng: buong back wages para sa duration ng underpayment (approximately 6,660 AED), compensation para sa unpaid rest days (2,940 AED), return plane ticket, at end-of-service gratuity. Ang kabuuan ay roughly 12,000 AED — mga $3,200.\n\nNagbayad ang employer nang may pag-aatubili, sa banta ng travel ban. Natanggap ni Maria ang pera sa pamamagitan ng embassy. Nakatanggap din siya ng confirmation na nagpapatuloy ang NLRC case laban sa recruitment agency sa Pilipinas.\n\nLumipad pauwi si Maria na nakataas ang ulo. Hindi lang siya naka-survive — lumaban siya sa sistema at nanalo. Sa NAIA, sinabi niya sa nanay niya: ''Nay, okay na po ako. Dumaan ako sa mahirap na bagay, pero lumabas akong mas malakas.'\n\nBumalik siya sa Pampanga at nagsimulang mag-rebuild. Ginamit niya ang OWWA reintegration program para mag-start ng maliit na business at nag-volunteer sa local PESO office. Naging siya ang taong pinupuntahan ng mga future OFWs para sa advice — ang Kuya Ronaldo ng susunod na henerasyon.\n\nResources: POLO-Dubai: +971-4-220-7999 | OWWA hotline 1348 | DMW hotline: (02) 7217-2399 | Bahay Kalinga Emergency Shelter sa Philippine Embassies worldwide",
+      "theme": "wage_theft",
+      "choices": [],
+      "isEnding": true
+    },
+    "ofw_resolve_05": {
+      "id": "ofw_resolve_05",
+      "title": "Ang Presyo ng Katahimikan",
+      "narrative": "Nagtiis si Maria. Isang buwan pa naging dalawa, naging anim. Hindi na siya nagbibilang ng oras, hindi na sinusubaybayan ang hindi binayarang sahod, hindi na umaasang magkaroon ng rest day. Naging multo siya sa malaking bahay — tahimik, efficient, invisible.\n\nLumala ang kalusugan niya. Nagkaroon siya ng chronic back pain dahil sa pagtulog sa manipis na kutson. Humina ang paningin niya dahil sa pagtatrabaho sa madilim na mga kwarto. Grabe na ang pagpapayat niya na hindi na siya makikilala ng pamilya niya. Kapag tumatawag sa bahay, nagsisinungaling siya. 'Okay naman po ako dito.'\n\nIsang araw, bumagsak siya habang nagmomop sa hagdan. Ang employer, takot sa liability, tumawag ng ambulansya. Sa ospital, napansin ng doktor ang mga palatandaan ng severe exhaustion, malnutrition, at hindi natratong mga pinsala. Kinontact ng social worker ang Philippine Embassy.\n\nNag-intervene ang embassy. Dinala si Maria sa Bahay Kalinga, nakuha pabalik ang passport niya, at ni-report ang employer sa UAE authorities. Pero sa puntong ito, halos dalawang taon na ng buhay ni Maria ang nawala sa exploitation, nasira ang kalusugan niya, at malalim ang mga sugat sa emosyon.\n\nAng kwento ni Maria ay nakakalungkot na karaniwang nangyayari. Libu-libong OFW ang nagtitiis nang tahimik dahil sa pressure ng pamilya, utang, hiya, at isang sistema na hindi palaging nagpoprotekta sa kanila. Pero palaging may tulong na available — ang susi ay ang humingi ng tulong bago pa huli ang lahat.",
+      "theme": "unsafe_conditions",
+      "choices": [
+        {
+          "text": "Tanggapin ang tulong ng embassy at simulan ang proseso ng recovery at repatriation.",
+          "nextNode": "ofw_resolve_06",
+          "consequence": "Sa wakas natanggap ni Maria ang tulong na kailangan niya noon pa.",
+          "scoreChange": 5,
+          "knowledgeGained": "Hindi kailanman huli para humingi ng tulong. Ang Philippine Embassy, POLO, at OWWA ay tumutulong sa mga distressed na OFW anuman ang tagal ng abuse o kung legal man ang pagpasok ng worker sa bansa."
+        }
+      ],
+      "isEnding": false
+    },
+    "ofw_resolve_06": {
+      "id": "ofw_resolve_06",
+      "title": "Isang Mahirap na Pag-uwi",
+      "narrative": "Bumalik si Maria sa Pampanga na ibang-iba sa taong umalis. Mas payat, mas tahimik, at nagigilid kapag may malakas na boses. Nagulat ang pamilya niya sa itsura niya. Niyakap siya ng nanay niya at bumulong, 'Patawarin mo kami, anak. Hindi namin alam.'\n\nMabagal ang recovery. Ikinonekta siya ng OWWA psychosocial support program sa isang counselor na specialized sa OFW trauma. Umaattend siya ng sessions dalawang beses sa isang buwan. May bangungot siya tungkol sa malaking bahay, sa kumukulong pagkain, sa boses ng employer niya. Pero unti-unti, sa tulong ng pamilya at counselor, naging mas bihira ang mga bangungot.\n\nNag-file ang embassy ng cases laban sa employer at recruitment agency ni Maria. Sa pamamagitan ng NLRC at surety bond ng agency, nakarecover si Maria ng ilan sa unpaid wages niya — hindi lahat, pero sapat para mabayaran ang utang ng pamilya. Na-blacklist ng DMW ang recruitment agency.\n\nHindi na muling umalis si Maria sa abroad. Sa halip, nakahanap siya ng trabaho sa isang local BPO company sa Clark, Pampanga. Modest ang sahod pero nasa bahay siya, ligtas siya, at gumagaling siya. Nag-volunteer siya sa simbahan, tahimik na ibinabahagi ang kwento niya sa mga babaeng nag-iisip na pumunta sa abroad: 'Alamin ang rights mo. I-verify ang agency. Huwag kailanman ibigay ang passport mo. At kung may maging mali — tumawag para humingi ng tulong. Huwag kang maghintay tulad ko.'\n\nResources: OWWA hotline 1348 | National Center for Mental Health Crisis Hotline: 0917-899-8727 | DMW hotline: (02) 7217-2399 | PAO (libreng legal assistance): (02) 929-9436 | Migrante International: migrante.net | Blas F. Ople Policy Center: blasfople.com",
+      "theme": "unsafe_conditions",
+      "choices": [],
+      "isEnding": true
+    }
+  },
+  "startNode": "ofw_start"
+}

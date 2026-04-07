@@ -1,0 +1,64 @@
+{
+  "characters": [
+    {
+      "id": "ofw",
+      "name": "Maria Santos",
+      "role": "Overseas Filipino Worker",
+      "description": "Isang 28-anyos na taga-Pampanga na papuntang Middle East bilang domestic helper. Unang beses niyang magtrabaho sa ibang bansa, sinusuportahan ang pamilya sa Pilipinas.",
+      "avatar": "OFW",
+      "themes": ["recruitment_scams", "contract_substitution", "wage_theft", "unsafe_conditions", "document_confiscation"],
+      "startNode": "ofw_start",
+      "category": "overseas"
+    },
+    {
+      "id": "rider",
+      "name": "Jake Reyes",
+      "role": "Delivery Rider",
+      "description": "Isang 24-anyos na motorcycle delivery rider sa Metro Manila na nagtatrabaho sa iba't ibang food delivery platform. Itinuturing na 'independent contractor' na walang benefits.",
+      "avatar": "RIDER",
+      "themes": ["misclassification", "no_benefits", "algorithmic_management", "accident_liability", "unfair_deductions"],
+      "startNode": "rider_start",
+      "category": "gig"
+    },
+    {
+      "id": "bpo",
+      "name": "Angela Cruz",
+      "role": "BPO Worker",
+      "description": "Isang 26-anyos na call center agent sa Makati na nagta-trabaho ng night shift sa isang international outsourcing company. Hinaharap ang mandatory overtime at mga problema sa kalusugan.",
+      "avatar": "BPO",
+      "themes": ["forced_overtime", "health_hazards", "contractualization", "union_busting", "wage_theft"],
+      "startNode": "bpo_start",
+      "category": "office"
+    },
+    {
+      "id": "construction",
+      "name": "Roberto Dela Cruz",
+      "role": "Construction Worker",
+      "description": "Isang 35-anyos na construction worker sa Cebu. Nagtatrabaho sa isang subcontractor sa malaking commercial project na may mga mapanganib na safety practices.",
+      "avatar": "CONSTRUCTION",
+      "themes": ["unsafe_conditions", "no_contract", "wage_theft", "illegal_deductions", "no_benefits"],
+      "startNode": "construction_start",
+      "category": "industrial"
+    },
+    {
+      "id": "driver",
+      "name": "Mang Ernesto Bautista",
+      "role": "Family Driver",
+      "description": "Isang 52-anyos na pribadong driver sa Quezon City na walong taon nang nagmamaneho para sa isang mayamang pamilya nang walang kontrata. Itinuturing siyang 'parang pamilya' — ibig sabihin, walang SSS, walang overtime, at walang day-off.",
+      "avatar": "DRIVER",
+      "themes": ["no_contract", "wage_theft", "no_benefits", "overtime", "employer_employee_test"],
+      "startNode": "driver_start",
+      "category": "domestic"
+    },
+    {
+      "id": "maid",
+      "name": "Aling Rosa Mendoza",
+      "role": "Kasambahay",
+      "description": "Isang 48-anyos na live-in na kasambahay sa isang subdivision sa Paranaque. Nagluluto, naglilinis, naglalaba, at nag-aalaga ng dalawang bata — mula 5 AM hanggang 10 PM, walang day-off, at walang kontrata.",
+      "avatar": "MAID",
+      "themes": ["kasambahay_law", "no_contract", "wage_theft", "no_benefits", "abuse"],
+      "startNode": "maid_start",
+      "category": "domestic"
+    }
+  ]
+}

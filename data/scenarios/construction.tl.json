@@ -1,0 +1,793 @@
+{
+  "nodes": {
+    "construction_start": {
+      "id": "construction_start",
+      "title": "Ang Alok ng Kumpare",
+      "narrative": "Mainit na Lunes ng umaga sa Cebu City. Si Roberto Dela Cruz, 35 anyos, nakaupo sa plastic chair sa labas ng sari-sari store sa Barangay Lahug, humihigop ng instant coffee. Ilang linggo na siyang walang maayos na trabaho. Si Marites, ang asawa niya, pinagtitipid na ang huling P2,000 nila sa loob ng isang linggo, at kailangan pa ng mga bata ng school supplies para sa bagong semester.\n\nBiglang nag-buzz ang phone niya. Si Eddie — ang ninong ng bunso niya. 'Pre, naa koy project diri sa IT Park. Commercial building, dako kaayo. Kinahanglan ug mga mason ug carpenter. P500 a day, sugod dayon ugma. Tara na!'\n\nNag-light up ang mukha ni Roberto. P500 a day — may pagkain na ulit sa mesa. Pero may kumakatok sa isip niya — si Eddie ay cabo, recruiter ng subcontractor na si Mang Tony. May narinig na si Roberto na mga kwento mula sa ibang workers tungkol sa mga subcontractor na biglang nawawala kapag payday. Pero kumpare niya si Eddie. Utang na loob — tinulungan siya nito nung na-hospital si Marites last year.\n\n'Pre, wala bang kontrata? Papel man lang?' maingat na tanong ni Roberto. Tumawa si Eddie. 'Ay, Pre, dili na kinahanglan ana. Trust lang ta diri. Kumpare mo pa naman ko. Tara, daghan nag nag-wait.'",
+      "theme": "no_contract",
+      "choices": [
+        {
+          "text": "Tanggapin ang trabaho dahil sa loyalty kay Eddie — hindi na kailangan ng kontrata sa pagitan ng mga kumpare.",
+          "nextNode": "construction_hire_01",
+          "consequence": "Nagsimula si Roberto sa trabaho kinabukasan na walang kahit anong papel — usapan lang.",
+          "scoreChange": -8,
+          "knowledgeGained": null
+        },
+        {
+          "text": "Humingi kay Eddie ng written contract bago pumayag na magtrabaho.",
+          "nextNode": "construction_hire_02",
+          "consequence": "Nagulat si Eddie pero nag-stand firm si Roberto na gusto niya may papel.",
+          "scoreChange": 10,
+          "knowledgeGained": "Ayon sa Labor Code, LAHAT ng empleyado ay may karapatang magkaroon ng written employment contract na nakalagay ang sahod, working conditions, at tagal ng employment."
+        },
+        {
+          "text": "Itanong kay Eddie ang tungkol sa benefits — SSS, PhilHealth, at Pag-IBIG contributions.",
+          "nextNode": "construction_hire_03",
+          "consequence": "Tinanong ni Roberto ang mga uncomfortable na tanong tungkol sa statutory benefits.",
+          "scoreChange": 12,
+          "knowledgeGained": "Ayon sa RA 11199 (SSS Act), RA 11223 (PhilHealth), at RA 9679 (Pag-IBIG), required ang mga employer na i-register ang empleyado at mag-remit ng contributions. Ang hindi pagsunod dito ay criminal offense."
+        }
+      ],
+      "isEnding": false
+    },
+    "construction_hire_01": {
+      "id": "construction_hire_01",
+      "title": "Tiwala sa Pagitan ng mga Kumpare",
+      "narrative": "Dumating si Roberto sa construction site nang 6 AM kinabukasan. Ang IT Park project ay malaki — 12-story commercial building na tumataas mula sa maputik na lote na napapaligiran ng chain-link fence. Daan-daang workers na ang naroroon, karamihan ay na-recruit din gaya ni Roberto: tawag sa phone mula sa kaibigan, verbal promise na P500 a day.\n\nSi Mang Tony, ang subcontractor, malaki ang katawan, may clipboard at gold chain. Bahagya niyang tiningnan si Roberto. 'Ikaw yung kumpare ni Eddie? Sige, mason ka? Start ka na. Pakyaw ang bayad — per task, ha. Pag paspas ka, mas dako imong makuha.' Hindi niya inexplain kung ano ang ibig sabihin ng 'pakyaw' sa actual rates, walang binanggit na contract, at umalis na habang sumisigaw ng mga utos.\n\nNapansin ni Roberto na hindi pag-aari ni Mang Tony ang kahit anong equipment. Ang cement mixer ay sa principal contractor, ang WellBuild Construction Corp. Ang mga tools, scaffolding, materials — lahat galing sa WellBuild. Si Mang Tony ay nagsu-supply lang ng mga tao.\n\nTinapik ni Eddie si Roberto sa likod. 'Tara na, Pre. Trabaho na ta.' Kinuha ni Roberto ang trowel na hindi naman sa kanya at nagsimulang magtrabaho.",
+      "theme": "no_contract",
+      "choices": [
+        {
+          "text": "Mag-focus na lang sa pagtrabaho nang mabuti — pwede namang ayusin ang mga details mamaya.",
+          "nextNode": "construction_hire_04",
+          "consequence": "Ibinuhos ni Roberto ang sarili sa trabaho, umaasang magiging okay ang lahat.",
+          "scoreChange": -5,
+          "knowledgeGained": null
+        },
+        {
+          "text": "Lapitan si Mang Tony sa lunch at humingi ng written agreement tungkol sa pakyaw rates.",
+          "nextNode": "construction_hire_05",
+          "consequence": "Sinubukan ni Roberto na i-clarify ang terms ng bayad.",
+          "scoreChange": 8,
+          "knowledgeGained": "Ayon sa Labor Code, ang mga pakyaw (task-based) workers ay considered pa rin na empleyado kung kinokontrol ng employer ang paraan at pamamaraan ng trabaho. Entitled sila sa minimum wage at benefits."
+        }
+      ],
+      "isEnding": false
+    },
+    "construction_hire_02": {
+      "id": "construction_hire_02",
+      "title": "Paghingi ng Kontrata",
+      "narrative": "Nagbago ang mukha ni Eddie. Nawala ang ngiti. 'Pre, unsa ba na. Dili ta corporate diri. Construction ni. Walay kontrata sa ingon ani. Trust system lang.' Nagpababa siya ng boses. 'Pag nangutana ka ug ingon ana kay Mang Tony, basin dili ka na dawaton. Daghan nag nakapila na gusto ug trabaho.'\n\nNaramdaman ni Roberto ang pressure. Alam niya na tama si Eddie na ganito talaga sa construction — handshake deals, verbal promises, day rates na nakalagay sa piraso ng karton. Pero naalala din niya ang nangyari sa kapitbahay niyang si Totoy, na nagtrabaho ng tatlong buwan sa isang subcontractor at hindi nakuha ang huling buwan ng sahod. Walang kontrata, walang proof.\n\n'Pre, dili naman ko nagduda nimo,' maingat na sabi ni Roberto. 'Pero para sa pamilya ko, gusto ko lang may papel. Para alam natin kung ano ang usapan — magkano, kailan ang sahod, gaano katagal. Fair lang, di ba?'\n\nBumuntong-hininga si Eddie pero dahan-dahang tumango. 'Sige, sultihin nako si Mang Tony. Pero ayaw paglaum nga naa diri ug HR department, ha.'",
+      "theme": "no_contract",
+      "choices": [
+        {
+          "text": "Pumunta sa site at personally kausapin si Mang Tony para humingi ng kahit simpleng written agreement.",
+          "nextNode": "construction_hire_05",
+          "consequence": "Nag-initiative si Roberto na direktang makipag-negotiate sa subcontractor.",
+          "scoreChange": 12,
+          "knowledgeGained": "Kahit simpleng sulat-kamay na nagsasabi ng sahod, schedule ng bayad, at job description ay pwedeng gamitin bilang ebidensya ng employment relationship sa labor disputes."
+        },
+        {
+          "text": "Hayaan na lang si Eddie ang bahala at pumunta na lang sa trabaho bukas.",
+          "nextNode": "construction_hire_04",
+          "consequence": "Ipinasa ni Roberto kay Eddie ang responsibilidad, na predictably nakalimutan nang sundan.",
+          "scoreChange": -3,
+          "knowledgeGained": null
+        }
+      ],
+      "isEnding": false
+    },
+    "construction_hire_03": {
+      "id": "construction_hire_03",
+      "title": "Ang Tanong Tungkol sa Benefits",
+      "narrative": "Matagal na katahimikan sa phone. Naririnig ni Roberto ang ingay ng construction sa background — kalampag ng rebar, grinding ng cement mixer. Sa wakas tumawa si Eddie, pero nervous ang tawa.\n\n'Pre, unsa ba. SSS? PhilHealth? Sa construction? Wala na diri. Voluntary na lang kung gusto nimo. Si Mang Tony, subcontractor lang na — wala siyay obligation sa ingon ana. Sabi niya, independent contractor daw ta.'\n\nKumunot ang noo ni Roberto. Narinig na niya ang line na ito — 'independent contractor.' Ito ang magic words na ginagamit ng mga employer para iwasan ang pagbayad ng benefits. Pero alam ni Roberto na si Mang Tony ang nagsasabi kung kailan sila papasok, saan sila magtatrabaho, at paano gagawin ang trabaho. Hindi naman mukhang 'independent' yun.\n\n'Pre, ang alam ko, pag may employer-employee relationship, required ang SSS,' sabi ni Roberto. 'Bisag construction worker ta, naa tay katungod.'\n\nNa-uncomfortable si Eddie. 'Oo nga, pero mao na jud ni diri, Pre. Pag nagreklamo ka, ilisan ra ka. Daghan gustong mo-sud.'",
+      "theme": "no_benefits",
+      "choices": [
+        {
+          "text": "Tanggapin ang trabaho pero tahimik na i-document ang lahat — kumuha ng photos sa worksite, mag-keep ng personal log ng oras at bayad.",
+          "nextNode": "construction_hire_06",
+          "consequence": "Nagsimulang gumawa ng paper trail si Roberto simula pa lang sa unang araw.",
+          "scoreChange": 15,
+          "knowledgeGained": "Napakaimportante ng documentation sa labor disputes. Ang mga photos, text messages, personal logs ng oras ng trabaho, at resibo ng bayad ay pwedeng magpatunay ng employer-employee relationship gamit ang four-fold test."
+        },
+        {
+          "text": "I-insist ang SSS registration bago magsimula — sabihin kay Eddie na non-negotiable ito.",
+          "nextNode": "construction_hire_05",
+          "consequence": "Naglagay si Roberto ng hard line sa benefits coverage.",
+          "scoreChange": 10,
+          "knowledgeGained": "Ayon sa RA 11199, ang mga employer na hindi nag-register ng empleyado sa SSS ay may penalty na multa na P5,000 hanggang P20,000 at pagkakakulong ng 6 na taon at 1 araw hanggang 12 taon."
+        },
+        {
+          "text": "Tanggapin na lang ang trabaho as-is — pwede ka namang mag-file ng voluntary SSS coverage sa sarili mo.",
+          "nextNode": "construction_hire_01",
+          "consequence": "Nag-decide si Roberto na pwede pang maghintay ang benefits kapag kailangan ng pamilya ng pera ngayon.",
+          "scoreChange": -5,
+          "knowledgeGained": null
+        }
+      ],
+      "isEnding": false
+    },
+    "construction_hire_04": {
+      "id": "construction_hire_04",
+      "title": "Walang Paper Trail",
+      "narrative": "Lumipas ang dalawang linggo. Nagtratrabaho si Roberto ng 10 oras araw-araw, anim na araw sa isang linggo, nagbubuhat ng semento, naglalagay ng blocks, at ginagawa ang kahit anong iutos ng foreman ni Mang Tony. Nakakapagod ang trabaho — ang init ng Cebu ay parang oven ang construction site, at halos walang lilim.\n\nWalang record si Roberto. Hindi niya nino-note ang oras, hindi niya pinipicturan ang site, at hindi niya sine-save ang ilang text messages mula kay Eddie tungkol sa trabaho. Kapag payday, binibigyan siya ng assistant ni Mang Tony ng P5,000 cash — walang payslip, walang pirma, walang record. Binilang ni Roberto ang pera. Sampung araw sa P500 ay tama, pero labindalawang araw talaga siya nagtrabaho sa unang pay period. Nung binanggit niya ang nawawalang dalawang araw, kinamot lang ng assistant: 'Ang una duha ka adlaw, training pa to. Wala pay bayad.'\n\nGusto sanang makipagtalo ni Roberto, pero wala siyang proof. Walang kontrata na nagsasabi kung kailan nagsimula ang trabaho niya. Walang time records. Salita niya laban sa salita nila.\n\nSinabi ni Eddie na huwag na niyang problemahin. 'Mao jud na sa sugod, Pre. Maayo ra na.'",
+      "theme": "wage_theft",
+      "choices": [
+        {
+          "text": "Magsimulang mag-keep ng detailed na logbook ng oras, gawain, at bayad mula ngayon.",
+          "nextNode": "construction_safety_01",
+          "consequence": "Nagsimulang i-document ni Roberto ang lahat — better late than never.",
+          "scoreChange": 8,
+          "knowledgeGained": "Pwedeng gamitin ng mga workers ang personal records, testimonya ng co-workers, at text messages bilang ebidensya sa labor cases. Ang burden of proof para sa pagbayad ng sahod ay nasa employer ayon sa Philippine labor law."
+        },
+        {
+          "text": "Hayaan na lang — dalawang araw na sahod hindi naman sulit na gumawa ng gulo sa connection ng kumpare mo.",
+          "nextNode": "construction_safety_01",
+          "consequence": "Nilunok ni Roberto ang pagkalugi at nagpatuloy sa trabaho.",
+          "scoreChange": -5,
+          "knowledgeGained": null
+        }
+      ],
+      "isEnding": false
+    },
+    "construction_hire_05": {
+      "id": "construction_hire_05",
+      "title": "Pagharap kay Mang Tony",
+      "narrative": "Nahanap ni Roberto si Mang Tony sa oras ng tanghalian, nakaupo sa lilim ng concrete column habang kumakain ng tapsilog mula sa styrofoam container. Tiningnan siya ni Mang Tony nang may pagkairita.\n\n'Mang Tony, gusto ko lang sana mag-ask — pwede ba tayong mag-sign ng kahit simpleng agreement? Para klaro lang kung magkano ang bayad, at kung kailan ang payday. Para sa record lang,' sabi ni Roberto, maayos ang tono.\n\nIbinaba ni Mang Tony ang kutsara. 'Oy, Roberto. Kinsa ka ba, abogado? Kinse ka tuig na ko nag-operate, walay kontrata. Kumpare mo si Eddie, di ba? Dili ba igo ang pagsalig? Pag ayaw nimo, daghan ug lain diha na gusto ug trabaho.'\n\nPero napansin ni Roberto na kumisap ang mata ni Mang Tony — may bahid ng kaba. Dahil alam ni Mang Tony na ang written contract ay mag-e-expose ng katotohanan: labor-only contractor siya. Walang capital, walang equipment, walang tools. Middleman lang siya na nagsu-supply ng workers sa WellBuild Construction Corp. At ayon sa batas, ang WellBuild ang tunay na employer.\n\n'Hindi po sa ayaw ko,' maingat na sabi ni Roberto. 'Gusto ko lang po na protected tayo lahat.'",
+      "theme": "no_contract",
+      "choices": [
+        {
+          "text": "I-stand firm — sabihin kay Mang Tony na magtatrabaho ka, pero kailangan mo ng written agreement, kahit sulat-kamay lang.",
+          "nextNode": "construction_hire_06",
+          "consequence": "Nakipag-negotiate si Roberto ng basic written agreement na may payment terms.",
+          "scoreChange": 12,
+          "knowledgeGained": "Ayon sa Labor Code Articles 106-109, ang labor-only contractor (walang sapat na kapital o investment at ang mga workers ay gumagawa ng activities na directly related sa business ng principal) ay itinuturing na agent lamang. Ang principal ang nagiging direct employer."
+        },
+        {
+          "text": "Umurong na lang para iwasan ang gulo — totoo naman ang banta ni Mang Tony na palitan ka.",
+          "nextNode": "construction_hire_04",
+          "consequence": "Umurong si Roberto dahil sa pressure at nagpatuloy nang walang documentation.",
+          "scoreChange": -5,
+          "knowledgeGained": null
+        }
+      ],
+      "isEnding": false
+    },
+    "construction_hire_06": {
+      "id": "construction_hire_06",
+      "title": "Pagbuo ng Paper Trail",
+      "narrative": "Hindi nakakuha si Roberto ng formal contract — hindi kailanman papayag si Mang Tony doon. Pero mas matalino si Roberto kaysa diyan. Nagsimula siyang gumawa ng sarili niyang paper trail simula sa unang araw.\n\nTuwing umaga, kumuha siya ng timestamped photo sa phone ng entrance ng worksite kung saan nakikita ang banner ng WellBuild Construction Corp. Naglagay siya ng maliit na notebook — isang logbook kung saan niya nire-record ang oras ng pagdating, oras ng alis, mga ginawang task, at kahit anong instruction mula sa foreman. Sine-save niya ang bawat text message mula kay Eddie at Mang Tony tungkol sa work schedule.\n\nSinabihan pa niya ang mga kasama na kumuha ng group photos tuwing lunch break, na may building sa likod. 'Para sa alaala lang,' sabi niya, pero sa totoo lang, ebidensya ito — patunay na nandoon siya, nagtatrabaho, under the control ng project ng WellBuild.\n\nAng pinakamahalaga, nag-te-text si Roberto sa sarili niya tuwing payday na nakarecord ang eksaktong halaga na natanggap niya at kahit anong deductions. Walang payslips na ibinibigay, kaya si Roberto ang gumagawa ng sarili niyang records.\n\nMakalipas ang dalawang linggo, may maliit nang notebook si Roberto na puno ng documentation. Hindi ito kontrata, pero baka mas powerful pa ito sa labor case: contemporaneous evidence ng employer-employee relationship.",
+      "theme": "no_contract",
+      "choices": [
+        {
+          "text": "Magpatuloy sa masipag na pagtratrabaho habang patuloy na nagdo-document.",
+          "nextNode": "construction_safety_01",
+          "consequence": "Nag-settle si Roberto sa trabaho kasama ang tahimik niyang routine ng pag-document.",
+          "scoreChange": 5,
+          "knowledgeGained": null
+        }
+      ],
+      "isEnding": false
+    },
+    "construction_safety_01": {
+      "id": "construction_safety_01",
+      "title": "Limang Palapag ang Taas",
+      "narrative": "Ika-apat na linggo na ni Roberto sa trabaho. Ang building ay umabot na sa ikalimang palapag, at ang trabaho ay nasa itaas na ng maalikabok na mga kalye ng Cebu. Nakatayo si Roberto sa bamboo scaffolding, tinitignan ang mga sasakyang kasing liit ng langgam sa kalsada sa ibaba. Mas malakas ang hangin dito sa taas, at gumagalaw-galaw ang scaffolding kapag gumagalaw ang mga workers.\n\nNi isang piraso ng personal protective equipment ay hindi natanggap si Roberto. Walang hard hat. Walang safety harness. Walang steel-toed boots — tsinelas ang suot niya. Walang safety goggles kahit puno ng alikabok ng semento ang hangin. Ang scaffolding ay walang guardrails, walang safety nets sa ilalim. Isang maling hakbang at limang palapag ang bagsak sa semento sa ibaba.\n\n'Boss, wala po ba tayong hard hat? Safety harness?' tanong ni Roberto sa foreman, ang beteranong si Tatay Jun.\n\nKumaway lang si Tatay Jun. 'Wala yan. Sanay na ta ana. Kinse ka tuig na ko nagtrabaho sa construction, walay helmet. Tan-awa, buhi pa man ko.' Tumawa siya. 'Pag nagsul-ob kag harness, hinay ka. Pag hinay ka, mabawasan imong sweldo.'\n\nTiningnan ulit ni Roberto ang scaffolding. May plywood plank na ginagamit bilang daanan na may visible crack sa haba nito.",
+      "theme": "unsafe_conditions",
+      "choices": [
+        {
+          "text": "Tumanggi na magtrabaho sa scaffolding hangga't walang maayos na PPE at fall protection.",
+          "nextNode": "construction_safety_02",
+          "consequence": "Ginamit ni Roberto ang karapatan niyang tumanggi sa unsafe na trabaho.",
+          "scoreChange": 15,
+          "knowledgeGained": "Ayon sa RA 11058 (OSH Act o Occupational Safety and Health Act), Section 5, may KARAPATAN ang mga workers na TUMANGGI sa unsafe na trabaho nang walang banta ng pagkatanggal. Obligasyon ng employer na magbigay ng PPE na WALANG BAYAD sa empleyado."
+        },
+        {
+          "text": "Umakyat nang dahan-dahan at magtrabaho ng mabagal — kailangan mo ang pera pero mag-iingat ka.",
+          "nextNode": "construction_safety_03",
+          "consequence": "Nag-compromise si Roberto sa pagitan ng kaligtasan at kabuhayan, nagtatrabaho nang walang proteksyon.",
+          "scoreChange": -5,
+          "knowledgeGained": null
+        },
+        {
+          "text": "Tanungin ang mga kasama kung may iba ring nababahala, at i-suggest na sabay-sabay nilang i-raise ang issue kay Mang Tony.",
+          "nextNode": "construction_safety_04",
+          "consequence": "Sinubukan ni Roberto na mag-organize ng collective voice para sa safety.",
+          "scoreChange": 12,
+          "knowledgeGained": "May karapatan ang mga workers na mag-organize at kumilos nang sama-sama para sa safety concerns. Ayon sa RA 11058, kinakailangan ang Safety and Health Committee sa mga lugar ng trabaho na may hazardous operations."
+        }
+      ],
+      "isEnding": false
+    },
+    "construction_safety_02": {
+      "id": "construction_safety_02",
+      "title": "Ang Karapatang Tumanggi",
+      "narrative": "Nanatiling nakatapak si Roberto sa ground floor. 'Dili ko motungas diha nga walay harness ug helmet,' sabi niya kay Tatay Jun. Nagdilim ang mukha ng foreman.\n\n'Unsa? Nagpaarte ka? Tanan tao diri nitungas nga walay harness. Ikaw ra may problema.' Lumapit si Tatay Jun, binabaan ang boses. 'Pag ayaw nimo, uli na. Daghan gustong mo-sud diri.'\n\nPero nag-research si Roberto sa phone niya tuwing break. Binuksan niya ang RA 11058 — ang Occupational Safety and Health Standards Act — sa cracked smartphone niya. 'Boss, naa tay balaod. RA 11058. Bawal na walay PPE ang workers, lalo na sa taas. Pag may naaksidente, ang employer ang mananagot — si Mang Tony man, ang WellBuild man.'\n\nKinuha ni Tatay Jun ang phone at binasa, gumagalaw ang labi niya. Nagbago ang mukha — hindi na galit, kundi worry. Matagal na siyang nasa construction para malaman na nangyayari ang mga aksidente. May nakita na siyang mga nahulog. Binalik niya ang phone.\n\n'Sige, pag-usapan nato ni,' bulong niya. 'Pero ayaw nimo i-report sa DOLE. Mawad-an tang tanan ug trabaho.'",
+      "theme": "unsafe_conditions",
+      "choices": [
+        {
+          "text": "Pumayag na bigyan si Mang Tony ng 48 hours para magbigay ng PPE bago i-escalate sa DOLE.",
+          "nextNode": "construction_safety_05",
+          "consequence": "Nagbigay si Roberto ng reasonable na deadline habang pina-pressure pa rin.",
+          "scoreChange": 10,
+          "knowledgeGained": "Ayon sa RA 11058, ang mga employer ay may penalty na P100,000 bawat araw ng hindi pagsunod sa safety violations. Ang DOLE ay pwedeng mag-issue ng Work Stoppage Orders kapag may imminent danger situations."
+        },
+        {
+          "text": "Mag-file ng complaint sa DOLE Regional Office VII sa Cebu agad.",
+          "nextNode": "construction_safety_06",
+          "consequence": "Dumiretso na si Roberto sa government agency.",
+          "scoreChange": 12,
+          "knowledgeGained": "Tumatanggap ang DOLE ng anonymous complaints at nagco-conduct ng inspections. Ang mga nagrereklamo ay protected mula sa retaliation ayon sa RA 11058 Section 7."
+        }
+      ],
+      "isEnding": false
+    },
+    "construction_safety_03": {
+      "id": "construction_safety_03",
+      "title": "Trabaho nang Walang Proteksyon",
+      "narrative": "Umakyat si Roberto sa scaffolding na nakatsinelas, hawak-hawak ang mga bamboo poles ng pawisang kamay. Tirik ang araw ng Cebu. Sa ikalimang palapag, hinihila ng hangin ang manipis niyang t-shirt. Sa baba niya, wala — walang net, walang platform, hangin lang at matigas na semento.\n\nNagtatrabaho siya nang maingat, naglalagay ng blocks sa outer wall. Bawat galaw ay pinag-iisipan. Pinapanood niya kung saan nakatapak ang paa niya sa makitid na bamboo platform. Pag inabot niya ang balde ng mortar, sumasandal siya sa dingding. Ang ibang workers ay mas malaya kumilos — taon-taon nang nagtatrabaho nang walang safety equipment kaya fearless na o wala nang pakialam.\n\nBandang 2 PM, nabali ang cracked plywood plank na napansin niya kanina dahil sa bigat ng wheelbarrow ng semento. Bumagsak ang wheelbarrow, nagkalat ang semento limang palapag pababa. Muntik na itong matamaan ng isang worker sa baba — wala pang isang metro ang layo. Lahat tumigil. Tapos, dahan-dahan, bumalik sila sa trabaho. Walang incident report. Walang safety review. Walang nagbago.\n\nNanginginig ang kamay ni Roberto. Pwede sanang namatay ang isang tao.",
+      "theme": "unsafe_conditions",
+      "choices": [
+        {
+          "text": "Gamitin ang phone mo para i-photo ang sirang plank at mga unsafe conditions — i-document lahat.",
+          "nextNode": "construction_safety_04",
+          "consequence": "Nagsimulang mag-gather ng photographic evidence si Roberto ng safety violations.",
+          "scoreChange": 10,
+          "knowledgeGained": "Ang photographic evidence ng safety violations ay napaka-powerful sa DOLE complaints. Ang timestamped photos mula sa phone ay pwedeng mag-establish ng petsa at kondisyon ng workplace."
+        },
+        {
+          "text": "Magtrabaho pa rin — part of construction ang mga aksidente, at kailangan mo ang trabaho.",
+          "nextNode": "construction_wage_01",
+          "consequence": "Pinilit ni Roberto na kalimutan ang near-miss at nagpatuloy sa delikadong routine.",
+          "scoreChange": -8,
+          "knowledgeGained": null
+        }
+      ],
+      "isEnding": false
+    },
+    "construction_safety_04": {
+      "id": "construction_safety_04",
+      "title": "Lakas ng Sama-sama",
+      "narrative": "Sa oras ng tanghalian, umupo si Roberto kasama ng limang coworkers sa lilim ng hindi pa tapos na dingding. Kinakain nila ang baon — kanin na nakabalot sa dahon ng saging, tuyo, at maligamgam na tubig mula sa recycled bottles. Binanggit ni Roberto ang scaffolding.\n\n'Mga pre, dili ba mo nahadlok? Walay harness, walay helmet. Kadtong plywood ganina, hapit napatay si Dodong sa ubos.' Nagtinginan ang mga lalaki.\n\nSi Jerome, isang carpenter mula sa Minglanilla, dahan-dahang tumango. 'Oo nga, Pre. Pero unsa may atong mahimo? Pag nagreklamo ta, ilisan ta. Si Mang Tony, sayon ra magpailis ug tawo.'\n\nPero nagsalita si Lando, isa pang worker. 'Pare, nahibal-an nimo ang ig-agaw nako? Nagtrabaho sa Mandaue. Walang harness din. Nahulog, third floor. Patay. Walay SSS, walay ECC. Ang pamilya niya, walay nadawat. Wala gani maayos nga lungon.'\n\nNatahimik ang grupo. Tapos sabi ni Jerome nang mahina: 'Unsa imong gusto buhaton, Roberto?'",
+      "theme": "unsafe_conditions",
+      "choices": [
+        {
+          "text": "I-propose na sama-samang tumanggi ang grupo na magtrabaho sa taas hangga't walang PPE.",
+          "nextNode": "construction_safety_05",
+          "consequence": "Namuno si Roberto sa collective stand para sa safety — mas mahirap i-fire lahat sabay-sabay.",
+          "scoreChange": 15,
+          "knowledgeGained": "Ang mga workers na nagkakaisa para sa safety ay protected sa ilalim ng RA 11058. Ang group refusal na magtrabaho sa imminent danger conditions ay legally protected action."
+        },
+        {
+          "text": "I-suggest na isang tao ang mag-anonymous report sa DOLE ng safety violations habang ang iba ay patuloy na magtatrabaho.",
+          "nextNode": "construction_safety_06",
+          "consequence": "Pumili ang grupo ng strategic na anonymous complaint.",
+          "scoreChange": 10,
+          "knowledgeGained": "Ang mga DOLE Regional Offices ay tumatanggap ng walk-in complaints at anonymous tips. Ang DOLE hotline 1349 ay pwede ring makatanggap ng reports ng safety violations."
+        }
+      ],
+      "isEnding": false
+    },
+    "construction_safety_05": {
+      "id": "construction_safety_05",
+      "title": "Ang Deadline",
+      "narrative": "Lumapit si Roberto at apat na coworkers kay Mang Tony nang sabay-sabay. May lakas sa bilang — hindi kayang palitan ni Mang Tony ang limang experienced workers overnight, lalo na sa gitna ng critical phase ng project. May deadlines ang WellBuild, at ang delays ay may penalties.\n\n'Mang Tony, kinahanglan namo ug helmet ug harness. Naa tay balaod — RA 11058. Pag may naaksidente, kayo po at ang WellBuild ang mananagot. P100,000 a day ang penalty.' Matatag ang boses ni Roberto.\n\nNamula ang mukha ni Mang Tony. 'Kinsa man nagtudlo nimo ug balaod? Trabahante ra ka!' Pero nag-calculate ang mga mata niya. Limang workers na aalis ibig sabihin titigil ang masonry sa ikalimang palapag. Gusto malaman ng project manager ng WellBuild kung bakit.\n\nMakalipas ang dalawang araw, may lumitaw na kahon sa site: sampung yellow hard hats at limang safety harness. Mura ang mga ito — manipis ang harness, manipis ang plastic ng hard hats — pero nandoon na. Hindi pa full compliance, pero simula na.\n\nIpinamahagi ni Mang Tony ang mga ito na may masamang mukha. 'Naa na. Kontento na mo? Trabaho na.'",
+      "theme": "unsafe_conditions",
+      "choices": [
+        {
+          "text": "Tanggapin ang PPE bilang magandang first step, pero ipagpatuloy ang pag-document ng conditions at pag-push para sa mas maraming safety measures.",
+          "nextNode": "construction_wage_01",
+          "consequence": "Tinanggap ni Roberto ang panalo pero nananatiling alerto sa mga ongoing safety issues.",
+          "scoreChange": 8,
+          "knowledgeGained": "Dapat ang PPE na ibinibigay ng employer ay sumusunod sa DOLE standards (Department Order 198-18). Ang substandard PPE ay hindi considered na compliance sa RA 11058."
+        },
+        {
+          "text": "I-inspect ang quality ng PPE at i-point out na hindi pasado sa safety standards ang mga harness.",
+          "nextNode": "construction_wage_01",
+          "consequence": "Nag-push pa si Roberto pero nagdesisyon na pumili ng mga laban habang may mas urgent na issues na dumarating.",
+          "scoreChange": 10,
+          "knowledgeGained": "Ang PPE ay dapat sumusunod sa Philippine National Standards (PNS) o katumbas na international standards. Hindi pwedeng magbigay ang employer ng substandard equipment at sabihing compliant sila."
+        }
+      ],
+      "isEnding": false
+    },
+    "construction_safety_06": {
+      "id": "construction_safety_06",
+      "title": "Ang DOLE Complaint",
+      "narrative": "Sumakay si Roberto ng jeepney papunta sa DOLE Regional Office VII sa General Maxilom Avenue sa Cebu City sa day off niya. Puno ang opisina — workers mula sa iba't ibang industriya, nakaupo sa plastic chairs, hawak ang mga dokumento. Itinuro siya ng security guard sa Labor Standards Enforcement window.\n\nAng DOLE officer, si Ms. Villanueva, ay maingat na nakinig habang inilalarawan ni Roberto ang mga kondisyon: walang PPE, bamboo scaffolding na walang guardrails limang palapag ang taas, walang safety orientation, walang safety officer sa site, at ang near-miss incident ng bumagsak na wheelbarrow.\n\n'Sir, ang dami pong violation nito,' sabi ni Ms. Villanueva, mabilis na nagsusulat. 'RA 11058, DOLE Department Order 198-18, ang Construction Safety Standards. Pwede kaming mag-inspect. Anonymous po ang complaint ninyo — hindi malalaman ng employer na kayo ang nagreklamo.'\n\nNag-schedule siya ng inspection para sa susunod na linggo. Naramdaman ni Roberto ang halo-halong ginhawa at takot. Paano kung malaman nila na siya? Paano kung ma-shutdown ang project at mawalan lahat ng trabaho?\n\n'Ma'am, pag nag-inspect kayo, masisante po ba kami?' Umiling si Ms. Villanueva. 'Protected po kayo under RA 11058 Section 7. Bawal ang retaliation.'",
+      "theme": "unsafe_conditions",
+      "choices": [
+        {
+          "text": "Bumalik sa trabaho at hintayin ang DOLE inspection, i-keep confidential ang complaint.",
+          "nextNode": "construction_wage_01",
+          "consequence": "Bumalik si Roberto sa site at naghintay, alam na baka may pagbabago na darating.",
+          "scoreChange": 10,
+          "knowledgeGained": "Ang mga DOLE labor inspectors ay pwedeng mag-conduct ng unannounced inspections. Ayon sa RA 11058, pwede silang mag-issue ng Compliance Orders, Work Stoppage Orders, at magpataw ng penalty na hanggang P100,000 bawat araw bawat violation."
+        }
+      ],
+      "isEnding": false
+    },
+    "construction_wage_01": {
+      "id": "construction_wage_01",
+      "title": "Problema sa Payday",
+      "narrative": "Dalawang buwan na mula nang magsimula si Roberto. Naging isa na siya sa mga pinaka-reliable na workers sa crew — magaling sa masonry, hindi late, hindi masyadong nagrereklamo. Pero ang payday ay naging source ng kaba.\n\nAng usapan ay P500 bawat araw, binabayaran tuwing dalawang linggo. Pero ngayon, katapusan ng ika-apat na pay period, walang pera. Lumitaw ang assistant ni Mang Tony, si Jun-Jun, isang payat na binata, na may masamang balita: 'Wala pa raw gikan sa taas. Delay daw ang release. Sunod week na lang daw.'\n\n'Sa taas' — ibig sabihin, hindi pa raw naglabas ng bayad ang WellBuild kay Mang Tony. O yan ang claim ni Mang Tony. Nagbulung-bulungan ang mga workers pero narinig na nila ito dati. Last month, na-delay ang payday ng sampung araw. Ang buwan bago nun, dalawang buong linggo.\n\nNag-compute si Roberto. Sa P500/araw sa 26 na working days, dapat tumatanggap siya ng P13,000 bawat pay period. Pero P11,700 lang ang natatanggap niya. May pagkakaiba ng P1,300. Nung tinanong niya si Jun-Jun, sinabi: 'May kaltas — P50 kada adlaw para sa gamit, ug P30 kada adlaw para sa tubig ug meryenda.'\n\nP50 bawat araw para sa tools na hindi naman pag-aari ni Roberto. P30 bawat araw para sa tubig at murang biscuits. Yan ay P2,080 bawat buwan sa mga deductions na hindi naman napagkasunduan.",
+      "theme": "wage_theft",
+      "choices": [
+        {
+          "text": "Hingin ang itemized payslip na nagpapakita ng lahat ng deductions at tumanggi na tanggapin ang bayad nang wala ito.",
+          "nextNode": "construction_wage_02",
+          "consequence": "Nag-insist si Roberto sa transparency sa proseso ng bayad.",
+          "scoreChange": 12,
+          "knowledgeGained": "Ayon sa Labor Code Article 113-116, ipinagbabawal sa mga employer ang gumawa ng deductions mula sa sahod MALIBAN sa insurance premiums na awtorisado ng worker, union dues, at mga deductions na awtorisado ng batas. Ang mga kaltas para sa tools at supplies ay ILLEGAL maliban kung boluntaryong napagkasunduan nang nakasulat."
+        },
+        {
+          "text": "Tahimik na i-compute kung magkano ang dapat sayo at harapin si Mang Tony tungkol sa minimum wage violation.",
+          "nextNode": "construction_wage_03",
+          "consequence": "Nag-research si Roberto tungkol sa minimum wage rates at inihanda ang kaso niya.",
+          "scoreChange": 10,
+          "knowledgeGained": "Ang Regional Tripartite Wages and Productivity Board (RTWPB) ang nagtatakda ng minimum wage kada rehiyon. Sa Region VII (Central Visayas), ang minimum wage para sa non-agricultural workers ay itinakda ng latest Wage Order — dapat i-verify ng workers ang kasalukuyang rate."
+        },
+        {
+          "text": "Tanggapin na lang ang delayed pay — ayaw mong gumawa ng gulo para kay Eddie, na nag-recruit sayo.",
+          "nextNode": "construction_wage_04",
+          "consequence": "Hinayaan ni Roberto ang utang na loob na ma-override ang kanyang mga karapatan.",
+          "scoreChange": -8,
+          "knowledgeGained": null
+        }
+      ],
+      "isEnding": false
+    },
+    "construction_wage_02": {
+      "id": "construction_wage_02",
+      "title": "Ipakita ang mga Numero",
+      "narrative": "Lumapit si Roberto kay Jun-Jun na kalmado pero firm. 'Jun-Jun, kinahanglan nako ug payslip. Itemized — nakasulat tanan nga kaltas ug kung ngano. Bago ko pirmahan nga nadawat nako ang sweldo, gusto nako makita kung asa napadulong ang kwarta nako.'\n\nNa-panic si Jun-Jun. 'Walay payslip, kuya. Si Mang Tony ang naa sa listahan.' Umiling si Roberto. 'Ayon sa batas, dapat may payslip ang bawat empleyado. Kung wala, paano natin mapapatunayan na tama ang bayad?'\n\nTumakbo si Jun-Jun para hanapin si Mang Tony. Pagkalipas ng dalawampung minuto, lumitaw si Mang Tony na may gusot na papel — handwritten na listahan ng mga pangalan na may halaga sa tabi. Walang breakdown ng deductions. Walang explanation ng rates.\n\n'Ayan, Roberto. Sahod mo. Dawata o ayaw,' sabi ni Mang Tony, iniaabot ang manipis na sobre ng P100 at P50 bills. Binilang ni Roberto: P11,700. Tiningnan niya ang listahan — ang pangalan niya, P11,700, yun lang.\n\n'Mang Tony, ang usapan po P500 a day. 26 days po ako nagtrabaho. P13,000 po dapat yun. Asa man ang P1,300?'",
+      "theme": "wage_theft",
+      "choices": [
+        {
+          "text": "I-press ang issue — sabihin kay Mang Tony na illegal ang deductions at hingin ang buong P13,000.",
+          "nextNode": "construction_wage_05",
+          "consequence": "Direktang hinarap ni Roberto ang illegal deductions.",
+          "scoreChange": 12,
+          "knowledgeGained": "Ayon sa Labor Code Art. 113, walang employer ang pwedeng gumawa ng deduction mula sa sahod maliban kung pinapayagan ng batas o may nakasulat na pahintulot ng empleyado para sa insurance o union dues. Ang deductions para sa tools, equipment, o loss/damage ay pwede lang kung malinaw na pinatunayan na responsable ang empleyado."
+        },
+        {
+          "text": "Tanggapin ang P11,700 sa ngayon pero i-record ang discrepancy sa logbook.",
+          "nextNode": "construction_wage_04",
+          "consequence": "Kinuha ni Roberto ang pwede niya makuha pero idinagdag sa lumalaking evidence file niya.",
+          "scoreChange": 3,
+          "knowledgeGained": "Ang pag-record ng bawat pagkakataon ng underpayment na may mga petsa at halaga ay gumagawa ng timeline ng wage theft na pwedeng sumuporta sa money claim sa NLRC."
+        }
+      ],
+      "isEnding": false
+    },
+    "construction_wage_03": {
+      "id": "construction_wage_03",
+      "title": "Below Minimum Wage",
+      "narrative": "Ginugol ni Roberto ang lunch break niya sa pag-research sa phone. Nakita niya ang latest Wage Order mula sa Regional Tripartite Wages and Productivity Board para sa Region VII — Central Visayas. Ang minimum wage para sa non-agricultural workers sa Cebu City ay mas mataas pa sa P500 bawat araw.\n\nNalamigan siya. Hindi lang illegal ang deductions — ang base pay niya mismo ay below sa legal minimum. Bawat araw na nagtrabaho siya, mas mababa ang bayad sa kanya kaysa sa hinihingi ng batas. At hindi lang siya — lahat ng workers sa site na nire-recruit ni Mang Tony ay P500 o mas mababa pa ang sweldo.\n\nKinalkula ni Roberto ang underpayment. Sa loob ng dalawang buwan, ang pagkakaiba ng actual pay niya at minimum wage, kasama ang illegal deductions, ay umabot na ng libu-libo. Pera na sana'y napunta sa bigas at ulam ng pamilya niya, sa school fees ng mga bata, sa gamot sa high blood ni Marites.\n\nLumapit siya kay Mang Tony pagkatapos ng shift. 'Mang Tony, ang minimum wage po sa Cebu City, mas taas po sa P500. Below minimum po ang sahod namin.'\n\nTumigas ang mukha ni Mang Tony. 'Roberto, pakyaw ka. Task-based. Dili applicable ang minimum wage sa pakyaw workers.'",
+      "theme": "wage_theft",
+      "choices": [
+        {
+          "text": "Salungatin si Mang Tony — ipaliwanag na ang pakyaw workers ay entitled pa rin sa minimum wage kung may employer-employee relationship.",
+          "nextNode": "construction_wage_05",
+          "consequence": "Hinarap ni Roberto ang karaniwang maling akala tungkol sa pakyaw payment.",
+          "scoreChange": 15,
+          "knowledgeGained": "Ayon sa Labor Code at DOLE Department Order 183-17, ang mga pakyaw (task-based) workers ay entitled sa minimum wage kung may employer-employee relationship. Ang paraan ng bayad ay hindi nagtatakda ng employment status — ang four-fold test ang basehan: (1) selection at hiring, (2) pagbayad ng sahod, (3) kapangyarihang mag-dismiss, (4) kontrol sa paraan ng trabaho."
+        },
+        {
+          "text": "Umurong — baka tama si Mang Tony na exempt ang pakyaw workers.",
+          "nextNode": "construction_wage_04",
+          "consequence": "Nagduda si Roberto sa sarili niya at tinanggap ang sahod na below minimum.",
+          "scoreChange": -7,
+          "knowledgeGained": null
+        }
+      ],
+      "isEnding": false
+    },
+    "construction_wage_04": {
+      "id": "construction_wage_04",
+      "title": "Ang 13th Month na Hindi Dumating",
+      "narrative": "Walong buwan na ang lumipas. Natiis ni Roberto ang delayed paydays — minsan tatlong linggo na delayed — at ang patuloy na illegal deductions. Nawala na sa isip niya kung magkano na ang naubos sa kanya, bagaman ang logbook niya (kung nag-keep siya) ay nagpapakita ng lumalaking kabuuan.\n\nDumating ang Disyembre, at kasama nito, ang pag-asam ng 13th month pay. Ayon sa Presidential Decree 851, lahat ng workers na nagtrabaho ng kahit isang buwan sa isang calendar year ay entitled sa 13th month pay — isa-sa-labing-dalawa ng kabuuang basic salary na kinita sa loob ng taon, binabayaran on or before December 24.\n\nKinalkula ni Roberto: walong buwan ng trabaho sa P500/araw times average na 26 working days bawat buwan, humigit-kumulang P104,000 sa basic pay. Ang 13th month pay niya ay dapat mga P8,667.\n\nNung tinanong niya si Jun-Jun tungkol dito, predictable ang sagot: 'Walay 13th month sa construction, kuya. Subcon lang ta. Dili ta regular employees.'\n\nNarinig ni Roberto ito mula sa bawat worker — ang paniniwala na ang construction workers, subcontracted workers, o project-based workers ay hindi entitled sa 13th month pay. Isang kasinungalingan na paulit-ulit na sinasabi hanggang sa maging katotohanan na.",
+      "theme": "wage_theft",
+      "choices": [
+        {
+          "text": "Sabihin sa mga kasama na LAHAT ng workers — kasama ang subcontracted at project-based employees — ay may karapatan sa 13th month pay ayon sa batas.",
+          "nextNode": "construction_wage_05",
+          "consequence": "Tinuruan ni Roberto ang mga kapwa worker tungkol sa legal rights nila.",
+          "scoreChange": 12,
+          "knowledgeGained": "Ayon sa PD 851, LAHAT ng rank-and-file employees ay entitled sa 13th month pay anuman ang employment status, posisyon, o paraan ng bayad. Ang mga exemptions lang ay government workers, kasambahay (na may sariling probisyon), at mga tumatanggap na ng katumbas na bayad."
+        },
+        {
+          "text": "Tanggapin na hindi siguro covered ang subcontracted workers at mag-focus na lang sa pag-iipon para sa Pasko.",
+          "nextNode": "construction_accident_01",
+          "consequence": "Suko na si Roberto sa libu-libong piso na legal na dapat sa kanya.",
+          "scoreChange": -10,
+          "knowledgeGained": null
+        }
+      ],
+      "isEnding": false
+    },
+    "construction_wage_05": {
+      "id": "construction_wage_05",
+      "title": "Alam ang Halaga Mo",
+      "narrative": "Nag-aral si Roberto. Armado ng impormasyon mula sa DOLE website at mga labor rights groups na nakita niya online, naiintindihan na niya ang buong larawan kung gaano kalaki ang ninakaw sa kanya at sa mga kasama niya.\n\nAng minimum wage violation. Ang illegal deductions para sa tools at tubig. Ang paulit-ulit na pag-delay ng sahod na lumalabag sa Labor Code na two-week maximum payment interval. Ang nawawalang 13th month pay. Ang walang SSS, PhilHealth, at Pag-IBIG contributions. Kung pagsasama-samahin sa loob ng walong buwan at tatlumpung workers, daan-daang libong piso ang ninakaw ng operasyon ni Mang Tony mula sa mga taong nagtatayo ng skyline ng Cebu.\n\nTinipon ni Roberto ang mga kasama niya isang Sabado ng hapon sa bahay ni Eddie. Si Eddie mismo ay hindi komportable — naiipit siya sa pagitan ng loyalty niya kay Roberto at relasyon niya kay Mang Tony. Pero kahit si Eddie ay nakikita ang mga numero.\n\n'Mga pre, dili ta subcontractors. Dili ta independent contractors. Empleyado ta — ng WellBuild Construction Corp. Si Mang Tony, labor-only contractor lang siya. Walay capital, walay equipment. Under the Labor Code, ang WellBuild ang tinuod natong employer. Ug naa silay utang nato.'\n\nNatahimik ang buong kwarto. Tapos sabi ni Lando: 'So, unsa man atong buhaton?'",
+      "theme": "wage_theft",
+      "choices": [
+        {
+          "text": "Mag-file ng formal complaint sa DOLE para sa wage theft, illegal deductions, at labor-only contracting.",
+          "nextNode": "construction_accident_01",
+          "consequence": "Nagdesisyon ang grupo na mag-file ng complaint — pero bago nila magawa, may nangyari.",
+          "scoreChange": 12,
+          "knowledgeGained": "Pwedeng mag-file ng complaints ang workers sa DOLE Regional Office para sa wage violations. Para sa money claims na lampas P5,000, pwedeng i-refer ang kaso sa NLRC para sa arbitration."
+        },
+        {
+          "text": "Subukang makipag-negotiate nang direkta sa project manager ng WellBuild, i-bypass si Mang Tony.",
+          "nextNode": "construction_accident_01",
+          "consequence": "Plano ni Roberto na lapitan ang principal contractor — pero may mangyayari na hindi niya inaasahan.",
+          "scoreChange": 8,
+          "knowledgeGained": "Dahil ang labor-only contracting ay ginagawang direct employer ang principal, pwedeng direktang lapitan ng workers ang principal para hingin ang pagsunod sa labor standards."
+        }
+      ],
+      "isEnding": false
+    },
+    "construction_accident_01": {
+      "id": "construction_accident_01",
+      "title": "Ang Pagbagsak",
+      "narrative": "Nangyari ito isang Martes ng umaga, bandang 9 AM. Mainit na ang araw, at ang crew ay nagtatrabaho sa ika-pitong palapag. Si Jerome, ang carpenter mula sa Minglanilla — ang tahimik na lalaki na lagi niyang ka-share ng baon — ay nag-i-install ng formwork sa east face ng building. Nakatayo siya sa scaffolding na binuo kahapon ng mga workers na walang training sa scaffold construction.\n\nNabali ang bamboo crossbar. Sobrang bilis. Isang sandali, inabot ni Jerome ang isang pako; sa sumunod, bumabagsak na siya. Narinig ni Roberto ang bali ng kawayan, isang sigaw, at ang nakakatakot na kalabog ng katawan na tumama sa concrete ledge sa ikatlong palapag.\n\nNagsunuran ang mga workers pababa. Buhay si Jerome pero grabe ang sakit — baluktot ang binti niya sa hindi natural na anggulo, compound fracture, at may dugo na kumakalat mula sa ulo niya. May tumawag ng 911. Dalawampung minuto bago dumating ang ambulansya. Lumitaw si Mang Tony, namumutla, at sinabing mga salitang hindi makakalimutan ni Roberto:\n\n'Ayaw ninyo i-report ni. Ingna ninyo na-aksidente siya sa balay. Dili mo akong empleyado — subcon lang mo. Walay ko liability.'\n\nDinala si Jerome sa Chong Hua Hospital. Ang medical bills ay nagsimula sa P150,000 at patuloy na tataas.",
+      "theme": "unsafe_conditions",
+      "choices": [
+        {
+          "text": "Tumanggi na i-cover up ang aksidente — mag-insist na mag-file ng maayos na incident report at tulungan si Jerome na mag-file para sa ECC benefits.",
+          "nextNode": "construction_accident_02",
+          "consequence": "Tumayo si Roberto para kay Jerome at sa katotohanan ng nangyari.",
+          "scoreChange": 15,
+          "knowledgeGained": "Ayon sa PD 626 (ECC Law o Employees' Compensation Commission), LAHAT ng work-related injuries ay may compensation sa pamamagitan ng ECC. Kasama sa benefits ang medical expenses, disability benefits, at death benefits para sa mga dependents."
+        },
+        {
+          "text": "Tumahimik tungkol sa tunay na dahilan ng aksidente — takot kang mawalan ng trabaho.",
+          "nextNode": "construction_accident_03",
+          "consequence": "Pinatahimik ng takot si Roberto habang ang pamilya ni Jerome ay harap sa financial ruin.",
+          "scoreChange": -10,
+          "knowledgeGained": null
+        },
+        {
+          "text": "Palihim na kumuha ng photos at videos ng accident scene, ng sirang scaffolding, at ng mga pinsala ni Jerome bilang ebidensya.",
+          "nextNode": "construction_accident_04",
+          "consequence": "Nag-document si Roberto ng scene habang nananatiling tahimik.",
+          "scoreChange": 10,
+          "knowledgeGained": "Ang pag-preserve ng ebidensya ay napakaimportante sa mga workplace accident cases. Ang mga photos ng scene, witness statements, at medical records ay makakapagpatunay ng negligence ng employer at sumusuporta sa claims para sa damages lampas pa sa ECC benefits."
+        }
+      ],
+      "isEnding": false
+    },
+    "construction_accident_02": {
+      "id": "construction_accident_02",
+      "title": "Pakikipaglaban para kay Jerome",
+      "narrative": "Sinamahan ni Roberto ang asawa ni Jerome, si Inday, sa SSS office sa Cebu kinabukasan. Ang opisina ay nasa Archbishop Reyes Avenue, puno ng tao. Nung ipinresenta nila ang details ni Jerome, chineck ng SSS officer ang system at umiling.\n\n'Ma'am, sir, wala pong record si Mr. Jerome Villanueva sa system. Hindi po siya naka-register bilang SSS member under any employer. Wala pong contributions.'\n\nNanlumo ang mukha ni Inday. Walang SSS registration ibig sabihin walang ECC coverage. Walang disability benefits. Walang medical reimbursement. Ang P150,000 hospital bill ni Jerome — at patuloy na tumataas — ay buong-buong sa pamilya niya.\n\nNaramdaman ni Roberto ang galit na tumataas sa dibdib niya. Si Mang Tony ang dapat nag-register sa kanila. Nangolekta siya ng P200 sa bawat worker noong umpisa para sa 'processing fees' — mga bayad na, lumalabas, hindi naman ginamit para sa SSS registration.\n\n'Ma'am,' sabi ni Roberto sa SSS officer, 'ang employer po namin — o ang principal contractor — ay dapat sana nag-register sa amin. Pag hindi sila nag-register, may penalty po ba?'\n\nTumango ang officer. 'Sir, ayon sa RA 11199, ang employer na hindi nag-register at nag-remit ng SSS contributions ay may penalty — multa na P5,000 hanggang P20,000 at pagkakakulong ng anim na taon at isang araw hanggang labindalawang taon. At may liability din po sila sa benefits na dapat natanggap ng empleyado.'",
+      "theme": "no_benefits",
+      "choices": [
+        {
+          "text": "Tulungan ang pamilya ni Jerome na mag-file ng complaint laban kay Mang Tony AT WellBuild para sa non-registration at employer liability.",
+          "nextNode": "construction_accident_05",
+          "consequence": "Tumulong si Roberto na buuin ang kaso laban sa subcontractor at principal employer.",
+          "scoreChange": 15,
+          "knowledgeGained": "Kapag hindi in-register ng employer ang workers sa SSS, ang employer ang magiging directly liable sa LAHAT ng benefits na sana'y natanggap ng worker. Sa ilalim ng labor-only contracting rules, umaabot ang liability na ito sa principal employer (WellBuild)."
+        },
+        {
+          "text": "Unahin muna ang medical help para kay Jerome — mag-set up ng crowdfunding campaign at i-organize ang workers na tumulong.",
+          "nextNode": "construction_accident_05",
+          "consequence": "In-address ni Roberto ang immediate crisis habang pinaplanuhan ang legal fight.",
+          "scoreChange": 8,
+          "knowledgeGained": "Pwedeng sabay na mag-pursue ng immediate medical assistance AT mag-file ng legal claims ang workers. Ang Public Attorney's Office (PAO) ay nagbibigay ng libreng legal assistance para sa workers na hindi kayang mag-afford ng abogado."
+        }
+      ],
+      "isEnding": false
+    },
+    "construction_accident_03": {
+      "id": "construction_accident_03",
+      "title": "Ang Halaga ng Katahimikan",
+      "narrative": "Walang sinabi si Roberto. Ang mga workers, sumusunod sa instructions ni Mang Tony, sinabi sa hospital na nahulog si Jerome sa bahay. Hindi na-report ang insidente sa DOLE, hindi sa SSS, sa kahit sino man. Nagbigay si Mang Tony ng P5,000 sa asawa ni Jerome — abuloy — at itinuturing niya na tapos na ang usapin.\n\nPero ang medical bills ni Jerome ay hindi natapos. Ang compound fracture ay kailangan ng surgery — P200,000. Physical therapy — P3,000 bawat session, dalawang beses sa isang linggo, sa loob ng ilang buwan. Hindi na kailanman makaka-akyat ng scaffolding si Jerome. Ang pamilya niya, mahirap na noon pa, ngayon ay lumulubog na sa utang. Nangutang si Inday sa lokal na 5-6 na may interes na 20% bawat buwan.\n\nHindi makatulog si Roberto sa gabi. Nakikita niya ang mukha ni Jerome tuwing umakyat siya ng scaffolding. Nakikita niya ang sirang bamboo crossbar na hindi pinalitan — basta may bago lang na itinatali sa tabi gamit ang alambre. Walang nagbago sa site. Parehong delikadong kondisyon. Parehong walang PPE. Parehong ticking clock.\n\nTatlong linggo pagkatapos mahulog si Jerome, nagtatrabaho si Roberto sa ika-walong palapag nang tamaan siya ng bumagsak na rebar sa balikat. Matindi ang sakit. Butas ang shirt at malalim ang sugat. Agad na nagkalat ang dugo sa tela.",
+      "theme": "unsafe_conditions",
+      "choices": [
+        {
+          "text": "Ngayon, tumanggi na i-cover up — i-report nang maayos ang sarili mong pinsala at hingin ang medical treatment mula sa employer.",
+          "nextNode": "construction_accident_05",
+          "consequence": "Ang sariling pinsala ni Roberto ang sa wakas ay nakabasag ng kanyang katahimikan.",
+          "scoreChange": 10,
+          "knowledgeGained": "Ayon sa RA 11058, obligasyon ng employer na magbigay ng agaran na first aid at emergency medical treatment para sa injured workers. Ang hindi pag-report ng workplace accidents sa DOLE ay hiwalay na violation na may sariling penalties."
+        },
+        {
+          "text": "Gamutin ang sugat mo mismo at magtrabaho pa rin — hindi mo kayang mag-miss ng isang araw.",
+          "nextNode": "construction_accident_06",
+          "consequence": "Binalutan ni Roberto ang balikat niya ng basahan at nagpatuloy sa paglalagay ng blocks.",
+          "scoreChange": -10,
+          "knowledgeGained": null
+        }
+      ],
+      "isEnding": false
+    },
+    "construction_accident_04": {
+      "id": "construction_accident_04",
+      "title": "Pag-iipon ng Ebidensya",
+      "narrative": "Habang nagkukumpol ang ibang workers sa accident site, mabilis at tahimik na kumilos si Roberto. Nanginginig ang kamay niya, pero pinilit niyang maging maayos. Gamit ang cracked smartphone, kumuha siya ng photos: ang nabaling bamboo crossbar, ang kawalan ng safety nets, ang scaffolding na walang guardrails, ang mga workers na nakatsinelas at naka-t-shirt na walang PPE. Kumuha siya ng video mula sa sirang scaffolding hanggang sa mantsa ng dugo sa third-floor ledge kung saan tumama si Jerome.\n\nPinicturan niya ang sign ng WellBuild Construction Corp sa gate. Pinicturan niya ang sasakyan ni Mang Tony kasama ang plate number. In-screenshot niya ang text conversations niya kay Eddie tungkol sa trabaho. Pinicturan niya ang gusot na 'pay list' na nagsisilbing tanging record ng bayad nila.\n\nTapos sinend niya lahat sa sarili niyang email, sa email ni Marites, at sa isang folder sa Google Drive. Triple backup. Kung kunin o masira ang phone niya, mabubuhay pa rin ang ebidensya.\n\nGanoong gabi, binisita ni Roberto si Jerome sa hospital. Ang binti ni Jerome ay nakatraction, ang ulo ay nakabalot. Mukhang matanda siya ng dalawampung taon. 'Pre,' bulong ni Jerome, 'wala koy pambayad diri. Walay ko SSS. Unsaon sa akong pamilya?'\n\nHinawakan ni Roberto ang kamay niya. 'Pre, tabangan tika. Naa tay ebidensya.'",
+      "theme": "unsafe_conditions",
+      "choices": [
+        {
+          "text": "Dalhin ang ebidensya sa PAO (Public Attorney's Office) lawyer at magtanong tungkol sa pag-file ng kaso laban kay Mang Tony at WellBuild.",
+          "nextNode": "construction_accident_05",
+          "consequence": "Kumonsulta si Roberto sa free legal aid lawyer na may dala-dalang ebidensya.",
+          "scoreChange": 15,
+          "knowledgeGained": "Ang Public Attorney's Office (PAO) ay nagbibigay ng LIBRENG legal representation sa mga workers na hindi kayang mag-afford ng private attorney. Ang mga PAO lawyers ay humahawak ng labor cases kasama ang money claims, illegal dismissal, at workplace injury cases."
+        },
+        {
+          "text": "I-share ang ebidensya sa mga kasama para kumbinsihin silang sumali sa collective complaint.",
+          "nextNode": "construction_accident_05",
+          "consequence": "Ni-rally ni Roberto ang mga workers gamit ang documented evidence.",
+          "scoreChange": 12,
+          "knowledgeGained": "Ang collective complaint na i-file ng maraming workers ay nagpapatibay ng kaso at mas mahirap para sa employer na mag-retaliate laban sa isang indibidwal."
+        }
+      ],
+      "isEnding": false
+    },
+    "construction_accident_05": {
+      "id": "construction_accident_05",
+      "title": "Pinsala ni Roberto",
+      "narrative": "Hindi pa tapos ang laban para sa karapatan ni Jerome nang si Roberto mismo ang naging biktima. Isang maalinsangang hapon, ang hangin ay parang basang tela. Nagmimix ng mortar si Roberto sa ika-anim na palapag nang isang steel bracket, hindi maayos na naka-secure dalawang palapag sa itaas, ay bumitiw at bumagsak. Tumama ito sa beam, tumalbog, at tumama sa kanang kamay ni Roberto — ang kamay niya sa trabaho.\n\nAgaran at matinding sakit. Dalawang daliri ang napisa. Ang 'first aid kit' ng site ay isang bote ng Betadine at gauze na expired na tatlong taon na ang nakakaraan. Si Roberto mismo ang nagbalot ng kamay niya habang si Lando ay naghahanap ng tricycle para dalhin siya sa hospital.\n\nSa Cebu Doctors' University Hospital, nagpakita ang X-rays ng fractures sa index at middle fingers niya. Kailangan ng surgery — pins, rehabilitation. Estimate ng bill: P80,000. Pera na wala kay Roberto.\n\nBinisita siya ni Mang Tony ganoong gabi. Hindi dahil sa concern — dahil sa takot. 'Roberto, aksidente lang yan. Ayaw na nimo i-report. Hatagan tika ug P10,000 para sa gastos. Ayuson nato ni og maayo.' Inilagay niya ang sobre sa bedside table.\n\nTiningnan ni Roberto ang sobre. P10,000 para sa kamay na baka hindi na gumana nang maayos. P10,000 para bilhin ang katahimikan niya.",
+      "theme": "no_benefits",
+      "choices": [
+        {
+          "text": "I-reject ang P10,000 — hingin na sagutan ni Mang Tony at WellBuild ang buong medical costs at mag-file para sa ECC benefits.",
+          "nextNode": "construction_accident_07",
+          "consequence": "Tumanggi si Roberto na mapabili at nag-insist sa buong legal rights niya.",
+          "scoreChange": 15,
+          "knowledgeGained": "Ayon sa PD 626, ang ECC benefits para sa work-related injuries ay kasama ang: buong medical benefits (walang limit), income benefit na 90% ng daily salary sa panahon ng disability, at disability benefits batay sa degree ng disability."
+        },
+        {
+          "text": "Kunin ang P10,000 pero mag-file din ng incident report sa DOLE at i-pursue ang ECC benefits nang hiwalay.",
+          "nextNode": "construction_accident_07",
+          "consequence": "Kinuha ni Roberto ang immediate cash pero hindi niya hinayaang mapigilan siya sa pag-pursue ng karapatan niya.",
+          "scoreChange": 8,
+          "knowledgeGained": "Ang pagtanggap ng 'goodwill money' mula sa employer ay hindi nag-wawaive ng karapatan mong mag-file ng legal claims. Ang mga quitclaim na pinirmahan dahil sa duress o walang buong pag-unawa ay voidable ayon sa Philippine labor jurisprudence."
+        },
+        {
+          "text": "Tanggapin ang P10,000 at pirmahan ang quitclaim na isinilid ni Mang Tony sa mesa.",
+          "nextNode": "construction_accident_08",
+          "consequence": "Pinirmahan ni Roberto ang karapatan niya kapalit ng maliit na bahagi ng dapat sa kanya.",
+          "scoreChange": -10,
+          "knowledgeGained": null
+        }
+      ],
+      "isEnding": false
+    },
+    "construction_accident_06": {
+      "id": "construction_accident_06",
+      "title": "Impeksyon",
+      "narrative": "Binalutan ni Roberto ang sugat sa balikat gamit ang punit na salawal at nagpatuloy sa trabaho. Sa gabi, masakit pero kaya naman. Bumili siya ng Biogesic sa sari-sari store at uminom ng tatlo. Kinabukasan, balik na siya sa scaffolding.\n\nPero sa ikatlong araw, nagka-impeksyon ang sugat. Namamaga, mapula, at mainit sa kamay ang balikat niya. Yellow pus ang lumalabas sa makeshift bandage. Nilagnat siya — 39 degrees, tumataas pa. Nagmakaawa si Marites na pumunta siya sa hospital, pero alam ni Roberto na isang araw na hindi nagtrabaho ay isang araw na walang bayad. Walang trabaho, walang sahod. Walang sick leave. Walang medical insurance.\n\nSa ika-apat na araw, hinimatay si Roberto sa scaffolding. Sinalo siya ni Lando bago mahulog. Dinala siya pababa at diniretso sa Chong Hua Hospital, kung saan na-diagnose ng mga doktor ang cellulitis — kumakalat na bacterial infection. Kailangan niya ng IV antibiotics, wound debridement, at kahit isang linggo na pahinga. Ang bill: P25,000.\n\nAng sagot ni Mang Tony nang tinawagan ni Eddie: 'Dili ko na problema. Careless siya. Dili man siya akong empleyado.'",
+      "theme": "no_benefits",
+      "choices": [
+        {
+          "text": "Mula sa hospital bed, tawagan ang DOLE hotline 1349 at i-report ang lahat — ang aksidente, ang conditions, ang non-registration.",
+          "nextNode": "construction_accident_07",
+          "consequence": "Sa wakas ay nagsalita si Roberto mula sa hospital bed niya.",
+          "scoreChange": 12,
+          "knowledgeGained": "Ang DOLE hotline 1349 ay available para sa pag-report ng labor violations. Pwedeng mag-file ng complaints ang workers kahit naka-confine sa hospital. Pwedeng mag-conduct ng inspections at mag-enforce ng compliance orders ang DOLE kahit wala ang complainant sa personal."
+        },
+        {
+          "text": "Hilingin kay Eddie na kausapin si Mang Tony na kahit man lang sagutan ang hospital bills.",
+          "nextNode": "construction_accident_08",
+          "consequence": "Sinubukan ni Roberto ang personal appeal route sa pamamagitan ng kumpare niya.",
+          "scoreChange": -3,
+          "knowledgeGained": null
+        }
+      ],
+      "isEnding": false
+    },
+    "construction_accident_07": {
+      "id": "construction_accident_07",
+      "title": "Tama Na",
+      "narrative": "Nakahiga si Roberto sa hospital bed, tumitibok ang nakabalot niyang kamay, nakatitig sa kisame. Katabi niya si Marites, pinipigilan ang luha habang tinitignan ang hospital bill. Ang ipon nila — kung meron man — ay wala na. Kailangan kumain ng mga bata. Due na ang renta.\n\nPero may nagbago sa loob ni Roberto. Ang takot na nagpapatahimik sa kanya — takot na mawalan ng trabaho, takot na magtaksil sa kumpare, takot na ma-blacklist — ay nasunog na ng sakit at kawalang-katarungan. Lumpo na si Jerome. Ang kamay ni Roberto ay baka hindi na maging tulad ng dati. Tatlumpung workers ang dinaya sa sahod, benefits, at basic safety. At naglalakad-lakad si Mang Tony na may gold chain habang nagpo-post ng record profits ang WellBuild Corporation.\n\n'Marites,' mahina ang sabi ni Roberto, 'pupunta tayo sa DOLE. At sa PAO. At sa NLRC. Hindi na tayo titigil hanggang hindi sila nagbabayad.'\n\nTiningnan siya ni Marites. 'Sigurado ka? Baka ma-blacklist ka. Baka walang kukuha sayong contractor.'\n\n'Mas malala kung wala tayong ginawa,' sagot ni Roberto. 'Para sa atin, para kina Jerome, para sa lahat ng construction worker na katulad natin.'",
+      "theme": "no_benefits",
+      "choices": [
+        {
+          "text": "Pumunta sa DOLE Regional Office sa Cebu at mag-file ng formal complaint sa ilalim ng SENA (Single Entry Approach).",
+          "nextNode": "construction_fight_01",
+          "consequence": "Kinuha ni Roberto ang unang legal step patungo sa katarungan.",
+          "scoreChange": 12,
+          "knowledgeGained": "Ang SENA (Single Entry Approach) ay mandatory na 30-araw na conciliation-mediation process sa DOLE bago pwedeng magpatuloy ang kahit anong labor case sa NLRC. Libre ito at dinisenyo para mabilis na resolbahin ang mga disputes."
+        },
+        {
+          "text": "Bisitahin muna ang Public Attorney's Office para makakuha ng libreng legal advice bago mag-file ng kahit ano.",
+          "nextNode": "construction_fight_02",
+          "consequence": "Humanap muna si Roberto ng professional legal guidance bago kumilos.",
+          "scoreChange": 10,
+          "knowledgeGained": "Ang PAO ay nagbibigay ng libreng legal services sa mga qualified individuals. Para sa labor cases, pwedeng tulungan ng PAO lawyers na i-prepare ang complaints, i-represent ang workers sa SENA mediation, at i-handle ang NLRC proceedings."
+        }
+      ],
+      "isEnding": false
+    },
+    "construction_accident_08": {
+      "id": "construction_accident_08",
+      "title": "Ang Bitag ng Quitclaim",
+      "narrative": "Kinuha ni Roberto ang P10,000. Dinala ni Eddie ang pera sa isang sobre, kasama ang isang piraso ng papel — isang 'Release, Waiver, and Quitclaim' na nakasulat sa English legalese na halos hindi naiintindihan ni Roberto. Nakalagay na rini-release niya si Mang Tony, WellBuild Construction Corp, at lahat ng associated entities mula sa anumang claims na nagmumula sa kanyang employment at sa aksidente.\n\nNa-uncomfortable si Eddie. 'Pre, pirmahi na lang ni. Para tapos na. Si Mang Tony, grabe na ug kasuko. Pag wala nimo pirmahi, wala kay makuha.'\n\nPumirma si Roberto. P10,000 para sa napisa niyang mga daliri, buwan-buwan na hindi nabayarang wage differentials, nawawalang 13th month pay, nawawalang SSS contributions, at isang construction site na halos pumatay sa kanya at nagpalumpo sa kaibigan niya.\n\nMakalipas ang dalawang linggo, ubos na ang P10,000 — nilamon ng hospital bills na tatlong beses ang halaga nito. Naka-splint pa rin ang kamay ni Roberto. Hindi siya makapagtrabaho. At ngayon pumirma siya ng papel na nagsasabing wala na siyang mga claims.\n\nPero sa sari-sari store, nakasalubong niya ang isang paralegal mula sa isang labor rights NGO na may sinabi na nagbago ng lahat.",
+      "theme": "wage_theft",
+      "choices": [
+        {
+          "text": "Pakinggan ang paralegal — alamin na ang mga quitclaim na nakuha sa pamamagitan ng pamimilit o para sa napakaababang halaga ay pwedeng i-void.",
+          "nextNode": "construction_fight_02",
+          "consequence": "Natuklasan ni Roberto na ang pinirmahan niyang quitclaim ay baka hindi pa ang katapusan ng daan.",
+          "scoreChange": 10,
+          "knowledgeGained": "Ayon sa Philippine labor jurisprudence, ang mga quitclaim ay HINDI absolute. Consistent na iniruling ng Supreme Court na ang mga quitclaim na nakuha sa ilalim ng duress, para sa napakaababang halaga, o kung hindi lubos na naintindihan ng worker ang terms, ay VOIDABLE. Sa kaso ng Periquet v. NLRC, itinatag na valid lang ang quitclaims kung boluntaryong ginawa, may buong pag-unawa, at para sa reasonable na consideration."
+        },
+        {
+          "text": "Umalis na lang — pumirma ka na ng papel, wala nang magagawa.",
+          "nextNode": "construction_fight_06",
+          "consequence": "Sumuko na si Roberto, naniniwala na ang pinirmahang quitclaim ay final na.",
+          "scoreChange": -10,
+          "knowledgeGained": null
+        }
+      ],
+      "isEnding": false
+    },
+    "construction_fight_01": {
+      "id": "construction_fight_01",
+      "title": "DOLE Regional Office VII",
+      "narrative": "Sumakay si Roberto ng jeepney papunta sa DOLE Regional Office VII sa General Maxilom Avenue, Cebu City. Dala niya ang notebook — ang logbook na may mga petsa, oras, natatanggap na sahod, at deductions. Dala niya ang phone na puno ng photos. Kasama niya si Jerome, na naglalakad gamit ang saklay kasama ang asawang si Inday. Pumunta rin si Lando, at tatlo pang workers mula sa site.\n\nSinuri ng DOLE officer, si Atty. Mendoza, ang mga dokumento nila sa SENA desk. Patuloy na tumaas ang kilay niya sa bawat pahina. 'Sir, ang dami pong violation dito. Minimum wage violation. Illegal deductions. Non-registration sa SSS. Walang PPE provision. Hindi na-report ang workplace accidents. At base sa sinasabi ninyo — labor-only contracting.'\n\nIniexplain ni Atty. Mendoza ang SENA: mandatory na 30-araw na conciliation-mediation program. Ang SENA Desk Officer (SEADO) ang tatawag sa dalawang panig — ang workers at ang respondents — para sa isang conference. Ang layunin ay makarating sa amicable settlement nang hindi pumupunta sa korte.\n\n'Sino po ang i-respondent namin?' tanong ni Roberto.\n\n'Both,' matatag na sabi ni Atty. Mendoza. 'Si Mang Tony bilang subcontractor, AT ang WellBuild Construction Corp bilang principal employer. Sa ilalim ng Articles 106 hanggang 109 ng Labor Code, pag labor-only contracting yan, solidary liability ang principal at ang contractor. Ibig sabihin, pareho silang liable.'",
+      "theme": "wage_theft",
+      "choices": [
+        {
+          "text": "Ituloy ang SENA complaint laban kay Mang Tony at WellBuild Construction Corp.",
+          "nextNode": "construction_fight_03",
+          "consequence": "Nag-file si Roberto ng complaint, pinangalanan ang subcontractor at principal employer.",
+          "scoreChange": 12,
+          "knowledgeGained": "Sa ilalim ng SENA (DOLE Department Order 107-10), ang proseso ay libre, mabilis (30 araw), at hindi kailangan ng abogado. Kung hindi mag-settle, mag-i-issue ang SEADO ng referral sa tamang opisina — DOLE para sa labor standards violations, o NLRC para sa money claims at illegal dismissal."
+        },
+        {
+          "text": "Magtanong din tungkol sa pag-file ng labor inspection sa construction site.",
+          "nextNode": "construction_fight_03",
+          "consequence": "Humingi si Roberto ng complaint at inspection para matulungan ang lahat ng workers sa site.",
+          "scoreChange": 15,
+          "knowledgeGained": "Pwedeng mag-conduct ang DOLE ng labor inspections (routine o complaint-based) sa ilalim ng Labor Laws Compliance System (LLCS). Sine-check ng mga inspectors ang compliance sa labor standards, OSH standards, at social legislation. Ang hindi compliant na employers ay binibigyan ng Compliance Order na may deadline para ayusin ang mga violation."
+        }
+      ],
+      "isEnding": false
+    },
+    "construction_fight_02": {
+      "id": "construction_fight_02",
+      "title": "Ang Abogado ng PAO",
+      "narrative": "Ang Public Attorney's Office sa Cebu ay nasa Hall of Justice sa Capitol Compound. Maaga dumating si Roberto, may dala-dalang folder ng lahat ng meron siya: logbook, photos, text messages na na-print sa computer shop, medical records ni Jerome, at ang quitclaim (kung pumirma siya).\n\nSi Atty. Resurreccion, isang PAO lawyer na specialized sa labor cases, gumugol ng isang oras sa pag-review ng mga dokumento ni Roberto. Masusing magtanong, itinatanong ang bawat detalye — kailan siya nagsimula, sino ang nagsasabi kung ano ang gagawin, sino ang nagbibigay ng tools, paano siya binabayaran.\n\n'Mr. Dela Cruz, malakas ang kaso ninyo,' sabi niya. 'Based sa sinabi ninyo, si Mang Tony ay textbook labor-only contractor sa ilalim ng Article 106 ng Labor Code. Walang substantial capital — walang equipment, walang tools, walang opisina. Ang mga workers niya ay gumagawa ng activities na directly related sa principal business ng WellBuild. Ibig sabihin, WellBuild ang tunay na employer ninyo, at sila ang liable sa lahat: sahod, benefits, safety violations, at mga pinsala ninyo.'\n\nHuminto siya kung pumirma si Roberto ng quitclaim. 'At itong quitclaim? P10,000 para sa napisa na daliri at walong buwan ng wage theft? Unconscionably low ito. Sa ilalim ng Supreme Court jurisprudence — Periquet v. NLRC, Peftok Integrated Services v. NLRC — voidable itong quitclaim. Pwede natin itong i-challenge.'\n\nPara sa unang pagkakataon sa loob ng ilang buwan, naramdaman ni Roberto na may kakampi siya.",
+      "theme": "wage_theft",
+      "choices": [
+        {
+          "text": "Hilingin kay Atty. Resurreccion na i-represent ka at ang mga kasama mo sa pag-file sa DOLE at, kung kailangan, sa NLRC.",
+          "nextNode": "construction_fight_03",
+          "consequence": "Nakakuha si Roberto ng libreng legal representation para sa grupo.",
+          "scoreChange": 12,
+          "knowledgeGained": "Libre ang PAO representation para sa mga qualified indigent individuals. Para sa labor cases, pwedeng i-represent ng PAO ang workers sa SENA, NLRC, at kahit sa Court of Appeals. Walang filing fee para sa labor cases sa NLRC."
+        },
+        {
+          "text": "Magtanong tungkol sa timeline — gaano katagal ang legal process?",
+          "nextNode": "construction_fight_03",
+          "consequence": "Gusto muna ni Roberto na maintindihan ang proseso bago mag-commit.",
+          "scoreChange": 8,
+          "knowledgeGained": "Ang SENA mediation ay tumatagal ng 30 araw. Kung hindi mag-settle, ang NLRC arbitration ay karaniwang tumatagal ng 3-6 na buwan para sa desisyon. Ang mga appeals ay pwedeng mag-extend ng proseso. Gayunpaman, pwedeng mag-issue ng orders ang NLRC para sa reinstatement at pagbayad ng back wages kahit pending pa ang kaso sa appeal."
+        }
+      ],
+      "isEnding": false
+    },
+    "construction_fight_03": {
+      "id": "construction_fight_03",
+      "title": "Ang SENA Conference",
+      "narrative": "Dalawang linggo pagkatapos mag-file, ginanap ang SENA conference sa DOLE Regional Office. Nakaupo si Roberto sa isang panig ng mesa kasama si Jerome (may saklay), si Lando, at tatlo pang workers. Kasama nila si Atty. Resurreccion mula sa PAO.\n\nSa kabilang panig: si Mang Tony, pinagpapawisan sa polo shirt niya, at isang surprise appearance — isang abogado na nagrerepresenta sa WellBuild Construction Corp. Ipinadala ng WellBuild ang corporate counsel nila, si Atty. Tan, isang pormal na babae na naka-blazer.\n\nBinuksan ng SEADO, si Mr. Santos, ang conference. 'Ang mga complainants ay nagsasabing: minimum wage violations, illegal deductions, non-payment ng 13th month pay, non-registration sa SSS/PhilHealth/Pag-IBIG, hindi nagbigay ng PPE, hindi na-report ang workplace accidents, at labor-only contracting.'\n\nAgad na inilayo ni Atty. Tan ang WellBuild. 'Ang WellBuild ay may legitimate subcontracting agreement kay Mr. Antonio Torres — Mang Tony. Independent contractor siya. Hindi namin empleyado ang mga workers niya.'\n\nSumalungat si Atty. Resurreccion: 'With all due respect, si Mang Tony ay walang substantial capital. Walang equipment. Walang tools. Walang registered business. Ang mga workers niya ay gumagamit ng tools ng WellBuild, sumusunod sa foreman ng WellBuild, at nagtatrabaho sa project site ng WellBuild. Sa ilalim ng Article 106, textbook labor-only contracting ito. Ang WellBuild ang principal employer at solidarily liable sila.'\n\nNatahimik ang buong kwarto. Tiningnan ni Mr. Santos si Atty. Tan. 'Counsel, do you have evidence of Mr. Torres's substantial capitalization?'",
+      "theme": "no_contract",
+      "choices": [
+        {
+          "text": "Ipresenta ang lahat ng ebidensya — ang photos, logbook, text messages, at testimonya ng mga kasama.",
+          "nextNode": "construction_fight_04",
+          "consequence": "Ang masinop na documentation ni Roberto ang naging pundasyon ng kaso.",
+          "scoreChange": 12,
+          "knowledgeGained": "Sa mga labor cases, mas maluwag ang rules of evidence kaysa sa regular courts. Ang personal logbooks, photographs, text messages, at witness testimony ay lahat admissible. Ang burden of proving na legitimate ang isang contractor (hindi labor-only) ay nasa employer."
+        },
+        {
+          "text": "Hayaan si Atty. Resurreccion ang mag-handle ng legal arguments habang mag-focus ka sa pagbibigay ng malinaw at tapat na testimonya tungkol sa experience mo.",
+          "nextNode": "construction_fight_04",
+          "consequence": "Nagtiwala si Roberto sa abogado niya at nagbigay ng personal account.",
+          "scoreChange": 10,
+          "knowledgeGained": "Sa mga SENA proceedings, ang testimonya ng worker tungkol sa pang-araw-araw na working conditions ay powerful evidence. Ang 'control test' — kung kinokontrol ng employer hindi lang ang resulta kundi pati ang paraan at pamamaraan ng trabaho — ang pinakamahalagang factor sa pagtukoy ng employer-employee relationship."
+        }
+      ],
+      "isEnding": false
+    },
+    "construction_fight_04": {
+      "id": "construction_fight_04",
+      "title": "Settlement o Arbitration",
+      "narrative": "Tumagal ang SENA conference sa tatlong session sa loob ng dalawang linggo. Una, pinanindigan ng abogado ng WellBuild ang 'independent contractor' defense, pero habang dumadami ang ebidensya — ang photos ni Roberto ng WellBuild equipment na ginagamit lang ng workers ni Mang Tony, ang direct supervision ng foreman, ang kawalan ng business registration o capital ni Mang Tony — bumagsak ang depensa.\n\nSa ikatlong session, nagbago na ang tono ng WellBuild. Lumapit si Atty. Tan kay Atty. Resurreccion sa break. 'Willing ang client ko na pag-usapan ang settlement. Hindi na kailangang pumunta sa NLRC ito.'\n\nAng settlement offer: P50,000 bawat worker para sa lahat ng claims — wage differentials, illegal deductions, 13th month pay, at SSS/PhilHealth/Pag-IBIG contributions. Para kay Jerome, dagdag na P200,000 para sa medical expenses. Kabuuang package para sa tatlumpung workers: humigit-kumulang P1.7 million.\n\nKinausap ni Atty. Resurreccion ang mga workers sa tabi. 'Reasonable first offer ito, pero baka entitled pa kayo sa mas malaki. Kung pupunta tayo sa NLRC arbitration, pwede tayong mag-claim ng moral at exemplary damages dagdag pa sa monetary claims. Pero mas matagal ang arbitration — tatlo hanggang anim na buwan minimum — at laging may uncertainty. Ano ang gusto ninyong gawin?'",
+      "theme": "wage_theft",
+      "choices": [
+        {
+          "text": "Mag-counter-offer: hingin ang buong computation ng lahat ng back wages, benefits, damages, AT commitment ng WellBuild na i-register lahat ng kasalukuyang workers sa SSS.",
+          "nextNode": "construction_fight_05",
+          "consequence": "Nag-push si Roberto para sa settlement na tumutugon sa pera at systemic change.",
+          "scoreChange": 15,
+          "knowledgeGained": "Sa labor settlements, pwedeng makipag-negotiate ang workers para sa monetary compensation AT institutional reforms. Ang paghingi ng SSS registration ay nagpoprotekta sa kasalukuyan at mga susunod na workers sa site."
+        },
+        {
+          "text": "Tanggapin ang P50,000 settlement — totoong pera ngayon versus hindi siguradong pera mamaya.",
+          "nextNode": "ending_partial",
+          "consequence": "Nag-decide si Roberto at ang mga workers na sulit ang guaranteed money.",
+          "scoreChange": 5,
+          "knowledgeGained": "Ang settlement ay isang lehitimong opsyon sa labor disputes. Ang ibon sa kamay ay baka mas wise kaysa sa pag-aantay ng posibleng mas malaking award na pwedeng tumagal ng ilang taon kung ma-appeal."
+        },
+        {
+          "text": "I-reject ang settlement nang buo at ituloy sa NLRC arbitration para sa buong halaga na dapat.",
+          "nextNode": "ending_blacklisted",
+          "consequence": "Pinili ni Roberto at ng mga workers na ipaglaban ang bawat pisong utang sa kanila sa pamamagitan ng buong legal process.",
+          "scoreChange": 8,
+          "knowledgeGained": "Ang NLRC arbitration ay kinabibilangan ng pag-file ng formal complaint, submission ng position papers, at hearing. Pwedeng i-award ng Labor Arbiter ang back wages, wage differentials, 13th month pay, moral damages, exemplary damages, at attorney's fees (10% ng total award)."
+        }
+      ],
+      "isEnding": false
+    },
+    "construction_fight_05": {
+      "id": "construction_fight_05",
+      "title": "Resolusyon",
+      "narrative": "Pagkalipas ng mga linggong negosasyon — minsan tensyonado, minsan puno ng pag-asa — nabuo ang resolusyon. Ang final terms ay depende sa daan na pinili ni Roberto at ng mga kasama niya, pero ang laban mismo ay nagbago na ng mga bagay-bagay.\n\nAng WellBuild Construction Corp, na harap sa posibleng DOLE compliance order, NLRC case, at posibleng criminal liability sa SSS non-registration, ay pumayag sa comprehensive settlement. Ang eksaktong halaga ay pinag-usapan nang linya-linya: wage differentials na kinompute mula sa actual minimum wage, refund ng lahat ng illegal deductions, 13th month pay para sa buong panahon ng employment, at pagsaklaw sa medical expenses nina Jerome at Roberto.\n\nMas mahalaga pa, pumayag ang WellBuild na wakasan ang arrangement nila kay Mang Tony at direktang i-hire ang mga construction workers — na may maayos na contracts, SSS registration, PhilHealth, Pag-IBIG, at compliance sa RA 11058 safety standards.\n\nNawala si Mang Tony sa construction industry — sa ngayon. Hindi siya mapoprotektahan ng gold chain niya mula sa DOLE compliance order o sa SSS criminal complaint.\n\nNakaupo si Roberto sa DOLE office, pinipirmahan ang settlement agreement. Masakit pa rin ang kamay niya — ang pins sa mga daliri niya ay nandoon pa sa susunod na anim na buwan. Pero para sa unang pagkakataon mula nang umakyat siya sa scaffolding na nakatsinelas, naramdaman niya na nakatapak siya sa matatag na lupa.",
+      "theme": "no_contract",
+      "choices": [
+        {
+          "text": "Gamitin ang karanasan mo para tulungan ang ibang construction workers na matutunan ang kanilang mga karapatan.",
+          "nextNode": "ending_advocate",
+          "consequence": "Naging tagapagtaguyod si Roberto para sa safety at karapatan ng mga construction worker.",
+          "scoreChange": 15,
+          "knowledgeGained": "Ang worker education at organizing ay isa sa pinaka-epektibong paraan para pigilan ang labor exploitation. Ang mga organisasyon tulad ng Trade Union Congress of the Philippines (TUCP), Kilusang Mayo Uno (KMU), at iba't ibang construction worker unions ay nagbibigay ng edukasyon at suporta."
+        },
+        {
+          "text": "Bumalik sa trabaho sa ngayon ay compliant na site na may maayos na contract, benefits, at PPE.",
+          "nextNode": "ending_justice",
+          "consequence": "Bumalik si Roberto sa pinakamahusay niyang ginagawa — pagtatayo — pero ngayon ay may dignidad at proteksyon.",
+          "scoreChange": 10,
+          "knowledgeGained": null
+        }
+      ],
+      "isEnding": false
+    },
+    "construction_fight_06": {
+      "id": "construction_fight_06",
+      "title": "Pag-alis",
+      "narrative": "Tumigil nang pumunta si Roberto sa construction site. Hindi gumagaling nang maayos ang kamay niya — ang sugat mula sa bumagsak na rebar, hindi naayos nang maayos, ay nagpahina ng grip niya. Walang SSS o PhilHealth, hindi niya kayang bayaran ang physical therapy na inirekomenda ng doktor.\n\nNag-aabang siya ng maliliit na trabaho sa paligid ng barangay — nagpipinta ng bahay ng kapitbahay sa P300, nagaayos ng tumatagas na bubong sa P500. Halos hindi sapat ang pera. Si Marites ay naglalaba, naglilinis ng damit gamit ang kamay sa P150 bawat bungkos. Ang mga bata ay pumapasok sa eskwela na walang laman ang lunchbox.\n\nTumigil nang tumawag si Eddie. Ang kumpare bond na dapat nagprotekta kay Roberto ay naging kadena pala na gumapos sa kanya. Utang na loob — ang utang ng pasasalamat — ay naging kasangkapan ng pagsasamantala.\n\nMinsan dumadaan si Roberto sa tapat ng IT Park construction site sa daan papunta sa trabaho. Mas mataas na ang building ngayon — sampung palapag, labindalawa, tumataas sa langit ng Cebu. Nagtataka siya kung ang mga bagong workers ay may contracts. Kung may hard hats sila. Kung mababayaran sila on time. Nagtataka siya pero hindi tumitigil.\n\nPumirma siya ng quitclaim. Nanatili siyang tahimik. Umalis siya. May mga gabi na sinasabi niya sa sarili na wala siyang choice. Sa ibang gabi, alam niyang hindi totoo yun.",
+      "theme": "no_benefits",
+      "choices": [],
+      "isEnding": true
+    },
+    "ending_advocate": {
+      "id": "ending_advocate",
+      "title": "Si Roberto ang Tagapagtaguyod",
+      "narrative": "Anim na buwan pagkatapos ng settlement, nakatayo si Roberto sa harap ng apatnapung construction workers sa isang union hall sa Barangay Guadalupe, Cebu City. Gumaling na ang kamay niya — hindi perpekto, dalawang daliri pa rin ang hindi nababaluktot nang buo — pero sapat na para humawak ng mikropono.\n\n'Mga kapatid, nahibal-an nako ang inyong gibati,' simula niya. 'Nahadlok mo nga mosulti kay basin mawad-an mo ug trabaho. Nahadlok mo mag-file ug reklamo kay basin ma-blacklist mo. Nahibal-an nako — ingon sab ko sa una. Pero mas makahadlok ang walay gihimo. Mas makahadlok nga mahulog ka gikan sa scaffolding nga walay harness, walay SSS, walay katungod nga madangpan.'\n\nKinuwento niya ang tungkol sa RA 11058 — ang karapatan nilang tumanggi sa unsafe na trabaho. Tungkol sa Articles 106-109 — na ang labor-only contracting ay ginagawang tunay na employer ang principal. Tungkol sa PD 851 — ang karapatan nila sa 13th month pay. Tungkol sa SENA at NLRC — libre at accessible na mga remedyo.\n\nNandoon si Jerome sa audience, may saklay pa pero nakangiti. Nasagot na ng settlement ang medical bills niya. Nakaligtas ang pamilya niya.\n\nSi Roberto ngayon ay nagtatrabaho bilang volunteer paralegal para sa isang construction workers' rights organization, na sinanay ng mga PAO lawyers at labor rights NGOs. Bumibisita siya sa mga construction sites, namimigay ng know-your-rights flyers sa Bisaya, at sinasamahan ang mga workers sa DOLE.\n\nMason pa rin siya. Naglalagay pa rin siya ng blocks at naghahalo ng mortar. Pero ngayon ay nagtatayo rin siya ng iba: kamalayan na bawat Filipino construction worker ay nararapat sa kontrata, hard hat, tamang sahod, at ang dignidad ng pag-alam sa kanilang mga karapatan.\n\nMGA RESOURCES:\n- DOLE Hotline: 1349\n- DOLE Region VII (Cebu): (032) 266-2511\n- Public Attorney's Office: (02) 8929-9436\n- SSS Hotline: 1455\n- National Labor Relations Commission: (02) 8527-3000\n- TUCP (Trade Union Congress of the Philippines): (02) 8922-5765",
+      "theme": "unsafe_conditions",
+      "choices": [],
+      "isEnding": true
+    },
+    "ending_justice": {
+      "id": "ending_justice",
+      "title": "Isang Tunay na Manggagawa",
+      "narrative": "Bumalik si Roberto sa IT Park construction site — ang parehong site kung saan minsan siyang nagtrabaho na nakatsinelas sa bamboo scaffolding na walang harness. Pero iba na ang lahat ngayon.\n\nNaka-yellow hard hat siya na may WellBuild sticker. Naka-clip ang safety harness sa anchor point bago siya tumapak sa (ngayon ay bakal na) scaffolding. May steel-toed boots siya. Safety goggles. Gloves. Bago ang unang araw niya pabalik, dumaan siya sa mandatory safety orientation — apat na oras ng training sa fall prevention, hazard identification, at emergency procedures.\n\nSa bulsa niya ay may nakatiklop na papel: ang employment contract niya sa WellBuild Construction Corp. Nakalagay ang daily wage niya (katumbas o higit sa kasalukuyang Cebu minimum wage), ang work schedule, ang benefits niya (SSS, PhilHealth, Pag-IBIG), at ang job description. Nilagdaan ng HR manager ng WellBuild.\n\nTuwing dalawang linggo, tumatanggap siya ng payslip — itemized, nagpapakita ng gross pay, deductions (yung legally mandated lang), at net pay. Lumalabas ang SSS contribution niya sa online SSS account niya. Garantisado ang 13th month pay niya.\n\nMasakit pa rin ang kamay ni Roberto tuwing malamig ang umaga. Ipinaalala sa kanya ng pins sa mga daliri niya kung ano ang nagastos para makarating dito. Naglalakad nang may pilay si Jerome ngayon, pero bumalik na rin siya sa trabaho — light duty, bilang safety marshal sa ground floor.\n\nTumataas ang building palapag-palapag. Tinutulungan ni Roberto na itayo ito — sa pagkakataong ito, kasama na ang karapatan niyang kasing-tibay ng semento na ibinubuhos niya.\n\nMGA RESOURCES:\n- DOLE Hotline: 1349\n- DOLE Region VII (Cebu): (032) 266-2511\n- Public Attorney's Office: (02) 8929-9436\n- SSS Hotline: 1455\n- Know Your Rights: www.dole.gov.ph/labor-standards",
+      "theme": "no_contract",
+      "choices": [],
+      "isEnding": true
+    },
+    "ending_partial": {
+      "id": "ending_partial",
+      "title": "Partial na Settlement",
+      "narrative": "Nagbunga ang SENA mediation ng partial settlement. Pumayag ang WellBuild na magbayad ng P30,000 bawat worker — mas mababa sa buong utang sa kanila, pero totoong pera na ibibigay sa loob ng dalawang linggo. Nakatanggap si Jerome ng P150,000 para sa medical expenses, na sumasaklaw sa karamihan ng hospital bills niya pero hindi ang patuloy na physical therapy.\n\nAng mga systemic issues ay hindi lubos na naayos. Tinanggal ng WellBuild si Mang Tony pero kumuha ng bagong subcontractor na katulad din ang operasyon — medyo mas maayos sa papel, pero ang pundamental na structure ng labor-only contracting ay nandoon pa rin. Ang ilan sa mga workers ay nakakuha ng SSS registration; ang iba ay nahulog sa mga bitak.\n\nKinuha ni Roberto ang P30,000 niya at ginamit para bayaran ang mga utang at bilhin ang school supplies ng mga anak niya. Gumaling nang sapat ang kamay niya para magtrabaho, bagaman hindi na buong lakas ang dalawang daliri na yun kailanman. Nakahanap siya ng trabaho sa ibang contractor — isa na talagang nagbibigay ng hard hats, kahit ang harness ay optional pa rin sa karamihan ng sites.\n\nBinago ng laban si Roberto. Tine-check niya kung ang employers ay registered sa DOLE bago tumanggap ng trabaho. Nagtatanong siya tungkol sa SSS coverage sa unang araw. Kinekeep niya ang logbook. Na-save niya ang DOLE hotline number — 1349 — sa phone niya.\n\nHindi ito kumpletong tagumpay. Ang construction industry sa Pilipinas ay tumatakbo pa rin sa informal labor, verbal agreements, at kumpare system. Pero hindi na si Roberto ang lalaking umakyat ng limang palapag na nakatsinelas at walang sinabi. Alam na niya ang karapatan niya. At ang kaalamang iyon, kapag nakuha na, ay hindi na maaaring bawiin.\n\nMGA RESOURCES:\n- DOLE Hotline: 1349\n- Public Attorney's Office: (02) 8929-9436\n- SSS Hotline: 1455\n- Para sa mga katanungan sa sahod: NWPC sa nwpc.dole.gov.ph",
+      "theme": "wage_theft",
+      "choices": [],
+      "isEnding": true
+    },
+    "ending_blacklisted": {
+      "id": "ending_blacklisted",
+      "title": "Na-blacklist",
+      "narrative": "Nanalo si Roberto sa kaso — sa papel. Nagdesisyon ang NLRC Labor Arbiter na pabor sa mga workers, inutos sa WellBuild at Mang Tony na magbayad ng wage differentials, 13th month pay, illegal deduction refunds, at damages na kabuuang P85,000 para kay Roberto lang. Si Jerome ay na-award ng P350,000 para sa medical expenses at disability.\n\nPero ang pananalo sa labor case at ang pagkolekta ng pera ay dalawang magkaibang bagay. Nag-appeal ang WellBuild sa NLRC Commission, tapos sa Court of Appeals. Ang kaso ay tumagal ng mahigit isang taon. Samantala, kailangan magtrabaho ni Roberto.\n\nKumalat ang balita. Sa maliit na mundo ng Cebu construction, kilala na ngayon si Roberto Dela Cruz bilang 'troublemaker.' Nagpa-pasahan ang mga contractors ng mga pangalan — informal blacklists na pinapasa sa text message at tsismis. 'Ayaw ninyo kuha-a si Roberto. Nag-file na sa DOLE. Abogado ang kauban.'\n\nNag-apply si Roberto sa site after site. Iba ay tumangging agad. Ang iba ay kinuha siya ng isang linggo, tapos pinaalis nang lumabas ang pangalan niya. Ang blacklist ay hindi legal — hindi nakasulat, hindi opisyal — pero totoo.\n\nPero nagpatuloy si Roberto. Nag-connect siya sa isang construction workers' cooperative na nagbu-pool ng labor at nakikipag-negotiate nang direkta sa developers, inaalis ang mga mapang-samantala na subcontractors. Nakahanap siya ng trabaho sa isang TESDA-accredited construction firm na nagpapahalaga sa mga skilled masons. Unti-unti, bumangon siya ulit.\n\nAng kaso ay eventually na-settle sa appeal — P60,000 para kay Roberto, P250,000 para kay Jerome. Mas mababa sa buong award, pero kasama nito ang isang bagay na mas mahalaga: ang precedent. Ang NLRC decision, na-publish at pwedeng i-cite, ay nagtatatag na ang partikular na pattern ng labor-only contracting na ginagamit ni Mang Tony ay illegal. Ang mga susunod na workers ay pwedeng ituro ito.\n\nNasa blacklist pa rin ang pangalan ni Roberto. Pero ang kaso niya ay nasa law books. Minsan, mas mahalaga yun.\n\nMGA RESOURCES:\n- DOLE Hotline: 1349\n- NLRC: (02) 8527-3000 o nlrc.dole.gov.ph\n- PAO: (02) 8929-9436\n- TESDA: tesda.gov.ph\n- Para sa blacklisting complaints: DOLE o CHR (Commission on Human Rights)",
+      "theme": "no_contract",
+      "choices": [],
+      "isEnding": true
+    }
+  },
+  "startNode": "construction_start"
+}

@@ -1,0 +1,917 @@
+{
+  "nodes": {
+    "bpo_start": {
+      "id": "bpo_start",
+      "title": "The Offer Letter",
+      "narrative": "Angela Cruz stares at the offer letter spread across the laminated table of a Jollibee in Makati. She's 26, a graduate of a provincial university, and this is her third month job-hunting in Metro Manila. The BPO company, GlobalConnect Solutions, occupies three floors of a glass tower along Ayala Avenue. The pay is 18,000 pesos a month -- not great, but enough for a bedspace in Poblacion and remittances back to her family in Leyte.\n\nThe HR coordinator, a cheerful woman named Ms. Reyes, explained everything quickly during the orientation. The contract is for five months -- 'project-based,' she called it. Angela noticed the term but didn't ask about it. Everyone she knows in the BPO industry has the same deal. Five months here, five months there. Never six.\n\nBut something nags at her. Her tita, a labor organizer in Tacloban, once told her: 'Anak, if they keep you past six months, you're regular. That's the law.' Angela rereads the contract. Start date: January 15. End date: June 14. Exactly five months. The timing feels deliberate.\n\nShe uncaps her pen. The Jollibee is noisy with the lunch crowd. Ms. Reyes is waiting for the signed copy by 5 PM.",
+      "theme": "contractualization",
+      "choices": [
+        {
+          "text": "Sign the contract without question -- she needs the job.",
+          "nextNode": "bpo_hire_01",
+          "consequence": "Angela signs and starts work, but remains vulnerable to the endo cycle.",
+          "scoreChange": -5,
+          "knowledgeGained": null
+        },
+        {
+          "text": "Ask Ms. Reyes why the contract is only five months and whether regularization is possible.",
+          "nextNode": "bpo_hire_02",
+          "consequence": "Angela asks a direct but polite question about the contract term.",
+          "scoreChange": 10,
+          "knowledgeGained": "Under Labor Code Art. 295, an employee who has rendered at least 6 months of service shall be considered a regular employee."
+        },
+        {
+          "text": "Sign the contract but privately research her rights about contract duration.",
+          "nextNode": "bpo_hire_03",
+          "consequence": "Angela signs but begins educating herself about labor law.",
+          "scoreChange": 5,
+          "knowledgeGained": "DOLE Department Order 174 prohibits 'endo' -- the practice of terminating workers before they reach 6 months to avoid regularization."
+        }
+      ],
+      "isEnding": false
+    },
+    "bpo_hire_01": {
+      "id": "bpo_hire_01",
+      "title": "Five Months In",
+      "narrative": "The five months fly by in a blur of headsets and scripts. Angela learns to navigate the IVR system, memorizes the troubleshooting flowcharts, and survives her first encounter with an American customer who screamed at her for forty minutes about a cable bill. Her team leader, Sir Jomar, says she's one of the best new hires.\n\nOn June 10, four days before her contract ends, Ms. Reyes from HR sends a cheerful email: 'Hi Angela! We'd love to keep you on board. Attached is your new project-based contract. Same terms, same role. Please sign and return by Friday.'\n\nAnother five-month contract. Angela's officemate, Denise, laughs bitterly. 'Girl, this is my fourth contract renewal. Same job, same desk, same everything. They just change the project name.' Denise has been with GlobalConnect for almost two years -- always on five-month contracts, never regularized.\n\nAngela stares at the new contract. Something about this doesn't feel right.",
+      "theme": "contractualization",
+      "choices": [
+        {
+          "text": "Sign the renewal -- at least she still has a job.",
+          "nextNode": "bpo_hire_04",
+          "consequence": "Angela continues the endo cycle, sacrificing long-term security for short-term stability.",
+          "scoreChange": -5,
+          "knowledgeGained": null
+        },
+        {
+          "text": "Ask Denise if they can both approach HR together to ask about regularization.",
+          "nextNode": "bpo_hire_05",
+          "consequence": "Angela tries to build solidarity with a coworker who shares her situation.",
+          "scoreChange": 10,
+          "knowledgeGained": "Workers who perform activities necessary and desirable to the employer's business for at least 6 months are considered regular employees regardless of contract label."
+        },
+        {
+          "text": "Quietly call the DOLE hotline (1349) to ask about her situation.",
+          "nextNode": "bpo_hire_06",
+          "consequence": "Angela seeks expert guidance from the government labor agency.",
+          "scoreChange": 15,
+          "knowledgeGained": "DOLE Hotline 1349 provides free labor law assistance. You can also visit any DOLE regional/field office for consultation."
+        }
+      ],
+      "isEnding": false
+    },
+    "bpo_hire_02": {
+      "id": "bpo_hire_02",
+      "title": "Ms. Reyes Deflects",
+      "narrative": "Angela calls Ms. Reyes before the deadline. 'Ma'am, I noticed the contract is for five months. Is there a pathway to becoming a regular employee?'\n\nThere's a pause on the line. When Ms. Reyes speaks again, her voice is still friendly but carries a rehearsed quality. 'Angela, all our agents start as project-based. It's standard in the BPO industry. Regularization depends on client volume and company needs. Just focus on your metrics and we'll see what happens.'\n\nIt's a non-answer. Angela has heard the same vague promises from other companies. But she signs the contract anyway -- she needs the income. Her mother's medication in Leyte costs 3,000 pesos a month.\n\nFive months later, the same thing happens. A new five-month contract. Same desk. Same phone. Same headset. By her third renewal, Angela has been with GlobalConnect for fifteen months. She is, by law, already a regular employee -- but the company treats her as if each five-month stint is a fresh start.",
+      "theme": "contractualization",
+      "choices": [
+        {
+          "text": "Confront HR directly and cite Article 295 of the Labor Code about regularization after six months.",
+          "nextNode": "bpo_hire_05",
+          "consequence": "Angela asserts her legal rights directly to the company.",
+          "scoreChange": 15,
+          "knowledgeGained": "Labor Code Art. 295: An employee who has rendered at least 6 months of service is considered regular, regardless of any written contract stating otherwise."
+        },
+        {
+          "text": "File a complaint with DOLE about the repeated short-term contracts.",
+          "nextNode": "bpo_hire_06",
+          "consequence": "Angela takes formal action through the proper government channel.",
+          "scoreChange": 12,
+          "knowledgeGained": "You can file an endo complaint at any DOLE field office. Bring copies of all your contracts and payslips as evidence."
+        },
+        {
+          "text": "Accept the situation and just keep signing renewals.",
+          "nextNode": "bpo_hire_04",
+          "consequence": "Angela gives up on regularization and remains vulnerable.",
+          "scoreChange": -5,
+          "knowledgeGained": null
+        }
+      ],
+      "isEnding": false
+    },
+    "bpo_hire_03": {
+      "id": "bpo_hire_03",
+      "title": "Late-Night Research",
+      "narrative": "Angela signs the contract but spends her next rest day at an internet cafe in Guadalupe, researching Philippine labor law. She finds the full text of the Labor Code on the DOLE website and reads Article 295 carefully. She discovers DOLE Department Order 174, which explicitly targets the endo practice.\n\nShe also joins a Facebook group called 'BPO Workers Rights PH,' where thousands of call center agents share stories eerily similar to hers -- five-month contracts, no benefits, no security. One post from a labor lawyer offers free consultations every Saturday at the Ateneo Human Rights Center.\n\nFive months later, as expected, GlobalConnect offers her another five-month contract. But this time Angela is prepared. She has screenshots of her contract dates, copies of her payslips, and a clear understanding of what the law says.\n\nShe also notices something else on her payslip that doesn't look right. Her night shift hours are not showing any differential pay.",
+      "theme": "contractualization",
+      "choices": [
+        {
+          "text": "Raise both the regularization issue and the missing night differential with HR.",
+          "nextNode": "bpo_hire_05",
+          "consequence": "Angela confronts multiple labor violations at once, armed with knowledge.",
+          "scoreChange": 15,
+          "knowledgeGained": "Labor Code Art. 86: Night shift differential of at least 10% must be paid for work performed between 10:00 PM and 6:00 AM."
+        },
+        {
+          "text": "Attend the free legal consultation at Ateneo to get proper advice first.",
+          "nextNode": "bpo_hire_06",
+          "consequence": "Angela seeks professional legal advice before making her move.",
+          "scoreChange": 12,
+          "knowledgeGained": "Several organizations offer free legal aid for workers: FLAG (Free Legal Assistance Group), Ateneo Human Rights Center, and PAO (Public Attorney's Office)."
+        },
+        {
+          "text": "Focus only on the night differential issue since it's easier to prove.",
+          "nextNode": "bpo_night_01",
+          "consequence": "Angela prioritizes the wage issue she can document clearly.",
+          "scoreChange": 7,
+          "knowledgeGained": null
+        }
+      ],
+      "isEnding": false
+    },
+    "bpo_hire_04": {
+      "id": "bpo_hire_04",
+      "title": "Trapped in the Cycle",
+      "narrative": "Angela signs her third five-month contract. Then her fourth. Each time, Ms. Reyes assures her that regularization is 'being reviewed by management.' Each time, nothing changes.\n\nBy now, Angela has been with GlobalConnect for twenty months. She trains new hires, handles the most difficult accounts, and consistently hits her metrics. But on paper, she's still 'project-based.' No separation pay if they let her go. No security of tenure. No real benefits beyond the legally mandated SSS and PhilHealth.\n\nOne evening during her shift, she overhears Sir Jomar on the phone. 'Yeah, we're letting go of the batch from January. The client is downsizing.' Angela's stomach drops. Her batch is from January.\n\nTwo days later, Ms. Reyes sends another email. This time it's not a renewal. 'Due to the completion of the project, your contract will not be extended. Your last day is Friday. Please surrender your ID and headset to Security.'",
+      "theme": "contractualization",
+      "choices": [
+        {
+          "text": "Accept the termination quietly and start job-hunting again.",
+          "nextNode": "bpo_term_05",
+          "consequence": "Angela walks away without asserting any of her rights.",
+          "scoreChange": -10,
+          "knowledgeGained": null
+        },
+        {
+          "text": "Tell HR that after 20 months she is legally a regular employee and cannot be terminated this way.",
+          "nextNode": "bpo_term_01",
+          "consequence": "Angela finally stands up and asserts her right to security of tenure.",
+          "scoreChange": 12,
+          "knowledgeGained": "A worker who has been continuously employed for more than 6 months performing tasks necessary to the business is a regular employee. Termination without just or authorized cause is illegal dismissal."
+        },
+        {
+          "text": "Consult with a labor lawyer before responding to the termination.",
+          "nextNode": "bpo_term_02",
+          "consequence": "Angela seeks legal counsel to understand her options.",
+          "scoreChange": 10,
+          "knowledgeGained": null
+        }
+      ],
+      "isEnding": false
+    },
+    "bpo_hire_05": {
+      "id": "bpo_hire_05",
+      "title": "Strength in Numbers",
+      "narrative": "Angela and Denise sit across from Ms. Reyes in the HR conference room. Angela has brought printouts of Labor Code Article 295 and DOLE Department Order 174. Her hands are trembling slightly under the table, but her voice is steady.\n\n'Ma'am, Denise has been here for two years and I've been here for over a year. We've been continuously performing the same work. Under the Labor Code, we should have been regularized after our sixth month. We're requesting that the company recognize our status as regular employees.'\n\nMs. Reyes's smile doesn't waver, but her eyes harden. 'I understand your concern, Angela. But your contracts clearly state that your employment is project-based. When the project ends, the contract ends. That's how it works in BPO.'\n\n'With respect, ma'am,' Denise interjects, 'the Supreme Court has ruled that the nature of the work, not the contract label, determines employment status. We're doing the same work as your regular agents.'\n\nMs. Reyes excuses herself to 'consult with legal.' The next day, Angela and Denise are called into a meeting with the operations manager, who is noticeably less friendly.",
+      "theme": "contractualization",
+      "choices": [
+        {
+          "text": "Stand firm and repeat the demand for regularization, citing specific legal provisions.",
+          "nextNode": "bpo_night_01",
+          "consequence": "Angela maintains her position despite management pressure. The company grudgingly begins processing their regularization but assigns them to the worst shift.",
+          "scoreChange": 15,
+          "knowledgeGained": "Supreme Court precedent (Magsalin v. National Organization of Working Men) holds that repeated rehiring for the same position is evidence of regular employment."
+        },
+        {
+          "text": "Back down when the operations manager says pushing this could 'affect their standing.'",
+          "nextNode": "bpo_hire_04",
+          "consequence": "Intimidated by the veiled threat, Angela retreats.",
+          "scoreChange": -5,
+          "knowledgeGained": null
+        },
+        {
+          "text": "File a formal request in writing and send a copy to DOLE for documentation.",
+          "nextNode": "bpo_hire_06",
+          "consequence": "Angela creates a paper trail that will protect her legally.",
+          "scoreChange": 13,
+          "knowledgeGained": "Always document labor complaints in writing. A written request to the employer, with copies sent to DOLE, creates a paper trail that is critical in any future labor case."
+        }
+      ],
+      "isEnding": false
+    },
+    "bpo_hire_06": {
+      "id": "bpo_hire_06",
+      "title": "DOLE Steps In",
+      "narrative": "Angela visits the DOLE-NCR field office in Intramuros on her day off. The waiting area is packed -- construction workers, factory employees, domestic helpers, all with their own stories. She takes a number and waits three hours.\n\nThe labor inspector who handles her case, Attorney Mendoza, is thorough. He reviews her contracts, payslips, and the timeline of her employment. 'Ms. Cruz, based on what you've shown me, you have a strong case. Repeated five-month contracts for the same position is a textbook endo scheme. Under DO 174, this is prohibited.'\n\nHe explains her options: DOLE can conduct a routine inspection of GlobalConnect, or Angela can file a formal complaint. The inspection route is less confrontational but slower. A formal complaint is faster but means Angela will be identified.\n\n'Either way,' Attorney Mendoza says, 'you should know that you are already a regular employee under the law. The question is whether the company will acknowledge it voluntarily or if we need to compel them.'\n\nAngela takes the bus back to Makati, her mind racing. Tonight is another night shift.",
+      "theme": "contractualization",
+      "choices": [
+        {
+          "text": "Request DOLE to conduct a routine inspection to avoid being singled out.",
+          "nextNode": "bpo_night_01",
+          "consequence": "DOLE schedules an inspection. Meanwhile, Angela returns to her night shift grind.",
+          "scoreChange": 10,
+          "knowledgeGained": "DOLE can conduct labor inspections under the Labor Standards Enforcement Framework (LSEF) without requiring a formal complaint from a specific worker."
+        },
+        {
+          "text": "File a formal complaint to speed up the process despite the risk.",
+          "nextNode": "bpo_night_01",
+          "consequence": "Angela files the complaint, knowing the company may retaliate. DOLE processes her case.",
+          "scoreChange": 13,
+          "knowledgeGained": "It is illegal for employers to retaliate against workers who file DOLE complaints. Retaliation is itself an unfair labor practice under Art. 248 of the Labor Code."
+        },
+        {
+          "text": "Decide to wait and think about it more before taking action.",
+          "nextNode": "bpo_night_01",
+          "consequence": "Angela hesitates but returns to the night shift, where new problems await.",
+          "scoreChange": 0,
+          "knowledgeGained": null
+        }
+      ],
+      "isEnding": false
+    },
+    "bpo_night_01": {
+      "id": "bpo_night_01",
+      "title": "The Graveyard Shift",
+      "narrative": "It's 2:47 AM. Angela is on her sixth hour of back-to-back calls. The office aircon is cranked so high she wears a jacket over her company polo. The fluorescent lights make everyone look slightly ill. Around her, a hundred other agents murmur into their headsets, their voices blurring into a low hum.\n\nSir Jomar walks up to her station and leans in. 'Angela, the queue is still long. I need you to extend for two hours tonight. Mandatory OT.' Angela checks her schedule -- she's already on a 10 PM to 6 AM shift. Two more hours means she won't get home to her bedspace in Poblacion until almost 10 AM, and she has to be back by 9:30 PM for her next shift.\n\n'Sir, it's mandatory? I have errands tomorrow,' she says. Jomar shrugs. 'Management decision. Everyone on the floor is extending. If you don't, it will reflect on your performance review.'\n\nAngela's feet ache. Her eyes are dry from staring at the monitor. The thought of two more hours of irate callers makes her chest tighten.",
+      "theme": "forced_overtime",
+      "choices": [
+        {
+          "text": "Agree to the mandatory overtime without complaint.",
+          "nextNode": "bpo_night_02",
+          "consequence": "Angela stays, exhausted, and doesn't check whether the OT will even be paid properly.",
+          "scoreChange": -5,
+          "knowledgeGained": null
+        },
+        {
+          "text": "Agree but ask Sir Jomar to confirm in writing that OT pay will be computed correctly.",
+          "nextNode": "bpo_night_03",
+          "consequence": "Angela complies but protects herself by requesting documentation.",
+          "scoreChange": 8,
+          "knowledgeGained": "Labor Code Art. 87: Overtime work shall be paid an additional 25% of the regular wage. If performed on a rest day or holiday, the premium is 30%."
+        },
+        {
+          "text": "Politely decline, citing that overtime should be voluntary under the Labor Code.",
+          "nextNode": "bpo_night_04",
+          "consequence": "Angela asserts her right to refuse involuntary overtime.",
+          "scoreChange": 12,
+          "knowledgeGained": "Under the Labor Code, overtime work is generally voluntary. Employers cannot compel overtime except in cases of emergency or urgent work to prevent loss of life or property."
+        }
+      ],
+      "isEnding": false
+    },
+    "bpo_night_02": {
+      "id": "bpo_night_02",
+      "title": "The Missing Differential",
+      "narrative": "Angela extends her shift until 8 AM. By the time she gets back to her bedspace, the sun is brutal through the thin curtains. She sleeps fitfully, waking every hour to the sounds of the neighborhood -- jeepneys, karaoke, construction.\n\nWhen her next payslip arrives via email, Angela almost doesn't check it. But something Denise said nags at her: 'Always check your payslip, girl. They bank on us not looking.'\n\nAngela opens the PDF on her phone. Her basic pay is there. SSS and PhilHealth deductions look right. But there are two things missing. First, her overtime hours from last week show the regular hourly rate -- no 25% premium. Second, and this surprises her more, there is no night shift differential at all. She has been working 10 PM to 6 AM for months, and not once has the 10% night differential appeared on any of her payslips.\n\nShe scrolls back through her old payslips saved in her email. Not a single one shows night differential pay. Angela does the math on her phone calculator: at 10% of her hourly rate for every night shift hour, the company owes her thousands of pesos in back pay.",
+      "theme": "wage_theft",
+      "choices": [
+        {
+          "text": "Immediately bring the payslip discrepancies to HR with a written computation of what she's owed.",
+          "nextNode": "bpo_night_05",
+          "consequence": "Angela confronts the wage theft with evidence.",
+          "scoreChange": 13,
+          "knowledgeGained": "Labor Code Art. 86: Every employee shall be paid a night shift differential of not less than 10% of his regular wage for each hour of work performed between 10 PM and 6 AM."
+        },
+        {
+          "text": "Ask around if other agents on night shift are also missing their differential pay.",
+          "nextNode": "bpo_night_06",
+          "consequence": "Angela investigates whether this is a company-wide issue.",
+          "scoreChange": 10,
+          "knowledgeGained": "Wage theft affecting multiple workers can be reported to DOLE as a labor standards violation, triggering a company-wide inspection."
+        },
+        {
+          "text": "Assume it's probably included in the base pay and don't make an issue of it.",
+          "nextNode": "bpo_health_01",
+          "consequence": "Angela lets the wage theft continue unchallenged.",
+          "scoreChange": -8,
+          "knowledgeGained": null
+        }
+      ],
+      "isEnding": false
+    },
+    "bpo_night_03": {
+      "id": "bpo_night_03",
+      "title": "Paper Trails",
+      "narrative": "Sir Jomar looks surprised when Angela asks for written confirmation of the overtime arrangement. 'Written? Just check your payslip next cut-off, it'll be there.' Angela smiles but insists gently. 'Sir, just for my records. Can you email me the OT authorization? It helps with my budget planning.'\n\nJomar sends a brief email: 'Angela Cruz, authorized for 2 hrs OT, March 15.' It's not much, but it's something. Angela forwards it to her personal email and screenshots it.\n\nShe works the extra two hours. The calls are brutal -- one customer threatens to 'get her fired' over a billing error that isn't even her department. By 8 AM, her voice is hoarse and her right hand is cramping from typing case notes.\n\nWhen the payslip comes, Angela checks it carefully. The overtime hours are listed, but the rate is wrong -- it shows straight time, not the legally required 25% premium. And just like every other payslip, there is zero night shift differential.\n\nArmed with Jomar's email as proof of the overtime authorization, Angela has clear evidence of underpayment.",
+      "theme": "wage_theft",
+      "choices": [
+        {
+          "text": "Compile all evidence -- payslips, OT authorization, contract -- and bring everything to HR.",
+          "nextNode": "bpo_night_05",
+          "consequence": "Angela builds a comprehensive case before approaching management.",
+          "scoreChange": 13,
+          "knowledgeGained": "Keep copies of all employment documents: contracts, payslips, emails, and company memos. These are critical evidence in any labor dispute."
+        },
+        {
+          "text": "Report the underpayment to DOLE along with the documentary evidence.",
+          "nextNode": "bpo_night_06",
+          "consequence": "Angela goes directly to the enforcement agency.",
+          "scoreChange": 12,
+          "knowledgeGained": "DOLE can order employers to pay wage differentials and penalties. Claims for unpaid wages can cover up to 3 years of back pay."
+        },
+        {
+          "text": "Mention it casually to Sir Jomar and hope he escalates it.",
+          "nextNode": "bpo_night_02",
+          "consequence": "Angela takes the passive approach, and nothing changes.",
+          "scoreChange": -3,
+          "knowledgeGained": null
+        }
+      ],
+      "isEnding": false
+    },
+    "bpo_night_04": {
+      "id": "bpo_night_04",
+      "title": "Standing Her Ground",
+      "narrative": "Angela tells Sir Jomar she'll finish her regular shift but won't extend. Jomar's face tightens. 'Angela, everyone else is staying. This will be noted.' She nods. 'I understand, Sir. But I've already worked eight hours and I need to rest. I'll be more productive on my next shift if I'm not running on fumes.'\n\nShe logs off at exactly 6 AM, grabs her bag from the locker, and takes the elevator down to the Ayala Avenue lobby. The early morning air hits her face -- warm already, even at dawn. Jeepneys rumble past. Security guards from the neighboring buildings are doing their shift change.\n\nOn the shuttle home, Angela pulls up her payslip on her phone. She wants to check if last week's overtime (which she did agree to) was paid correctly. The numbers don't add up. No 25% premium. And something else is missing -- the night shift differential. Ten percent extra for every hour worked between 10 PM and 6 AM. It's not there. It's never been there.\n\nAngela feels a slow anger building. It's one thing to be pressured into overtime. It's another to not even be paid correctly for the work she's already done.",
+      "theme": "wage_theft",
+      "choices": [
+        {
+          "text": "Document everything and raise the payslip issues formally with HR.",
+          "nextNode": "bpo_night_05",
+          "consequence": "Angela decides to fight the wage theft head-on.",
+          "scoreChange": 12,
+          "knowledgeGained": "Night shift differential and overtime premiums are mandatory under the Labor Code. They cannot be waived by contract or company policy."
+        },
+        {
+          "text": "Talk to coworkers about the missing night differential to see if it's affecting everyone.",
+          "nextNode": "bpo_night_06",
+          "consequence": "Angela builds awareness among her fellow agents.",
+          "scoreChange": 10,
+          "knowledgeGained": null
+        },
+        {
+          "text": "Let it go for now and focus on surviving the night shifts.",
+          "nextNode": "bpo_health_01",
+          "consequence": "Angela suppresses her frustration, and the physical toll begins to mount.",
+          "scoreChange": -5,
+          "knowledgeGained": null
+        }
+      ],
+      "isEnding": false
+    },
+    "bpo_night_05": {
+      "id": "bpo_night_05",
+      "title": "HR's Excuses",
+      "narrative": "Angela sits in the HR office with a folder of printed payslips, highlighted in yellow where the night differential and OT premiums should appear. Ms. Reyes receives her with the same practiced smile.\n\n'Angela, I've reviewed your concern. The night shift differential is actually already factored into your base pay. It's what we call an all-in rate. And regarding the overtime, our policy computes OT based on the basic rate before adjustments.'\n\nAngela shakes her head. 'Ma'am, with respect, the Labor Code is clear. Article 86 says night differential is at least 10% on top of the regular wage. It has to appear as a separate line item. An all-in rate that doesn't break it out doesn't comply. And overtime under Article 87 must be computed at 125% of the hourly rate, not 100%.'\n\nMs. Reyes's smile falters. 'I'll... need to escalate this to our legal department.' She takes Angela's folder. 'We'll get back to you within the week.'\n\nA week passes. Then two. No response. Angela sends a follow-up email. No reply. The silence is deliberate.",
+      "theme": "wage_theft",
+      "choices": [
+        {
+          "text": "File a wage complaint with DOLE, attaching the payslips and the unanswered emails to HR.",
+          "nextNode": "bpo_health_01",
+          "consequence": "Angela escalates to the government. DOLE processes the complaint and schedules a conference.",
+          "scoreChange": 15,
+          "knowledgeGained": "When an employer ignores a valid wage complaint, the worker can file directly with DOLE. Employers who fail to pay correct wages face penalties under RA 8188 (Strengthening the Penalties for Violations of the Labor Code)."
+        },
+        {
+          "text": "Send a final written demand with a deadline, copying a labor lawyer.",
+          "nextNode": "bpo_health_01",
+          "consequence": "Angela increases the pressure with legal backing.",
+          "scoreChange": 12,
+          "knowledgeGained": "A demand letter from a lawyer often prompts employers to settle. If they don't, it becomes strong evidence of bad faith in a labor case."
+        },
+        {
+          "text": "Drop the issue -- she's afraid of being blacklisted in the BPO industry.",
+          "nextNode": "bpo_health_01",
+          "consequence": "Fear wins. Angela lets the company keep money that is legally hers.",
+          "scoreChange": -7,
+          "knowledgeGained": null
+        }
+      ],
+      "isEnding": false
+    },
+    "bpo_night_06": {
+      "id": "bpo_night_06",
+      "title": "The Night Shift Coalition",
+      "narrative": "Angela brings it up during a 3 AM break in the pantry. She's eating cup noodles with Denise, Paolo (a team leader from another account), and Meg, a new hire who's still in training. 'Have any of you checked your payslips for night differential?'\n\nThe reaction is immediate. Paolo nearly spills his coffee. 'Wait, we're supposed to get night differential? I've been on graveyard for two years.' Meg looks confused. 'What's night differential?'\n\nOver the next few days, Angela quietly asks more colleagues. Out of the thirty agents on their floor working the 10 PM to 6 AM shift, not a single one is receiving the legally mandated 10% night shift premium. That's thirty workers being underpaid every single paycheck. The amount owed across all of them could be in the hundreds of thousands of pesos.\n\nThe group starts a Signal chat -- encrypted, away from company monitoring. They call it 'Night Shift Rights.' Within a week, it has forty-five members from multiple accounts and floors.",
+      "theme": "wage_theft",
+      "choices": [
+        {
+          "text": "Organize a collective written complaint to management signed by all 45 members.",
+          "nextNode": "bpo_health_01",
+          "consequence": "The group presents a united front. Management can't retaliate against everyone.",
+          "scoreChange": 15,
+          "knowledgeGained": "Collective action by workers is protected under the constitutional right to self-organization (Art. XIII, Sec. 3, 1987 Philippine Constitution). Employers cannot penalize workers for collective complaints."
+        },
+        {
+          "text": "File a group complaint with DOLE on behalf of all affected night shift workers.",
+          "nextNode": "bpo_health_01",
+          "consequence": "The group takes the formal legal route together.",
+          "scoreChange": 13,
+          "knowledgeGained": "Multiple workers can file a joint complaint with DOLE. Group complaints often receive faster attention and trigger company-wide inspections."
+        },
+        {
+          "text": "Keep the Signal group for information-sharing only and let each person decide individually.",
+          "nextNode": "bpo_health_01",
+          "consequence": "The group stays informal. Some members act, most don't. The impact is diluted.",
+          "scoreChange": 5,
+          "knowledgeGained": null
+        }
+      ],
+      "isEnding": false
+    },
+    "bpo_health_01": {
+      "id": "bpo_health_01",
+      "title": "The Body Keeps Score",
+      "narrative": "Three months of graveyard shift and Angela's body is breaking down. She hasn't seen sunlight properly in weeks. Her sleep schedule is shattered -- she lies awake in her bedspace at noon, eyes burning, while the neighborhood pulses with life outside the thin plywood walls. When she does sleep, it's shallow and dreamless, interrupted by her racing heart.\n\nThe company nurse, Ate Cristina, sees a steady stream of night shift agents with the same complaints: insomnia, acid reflux, chronic headaches, anxiety. 'It's normal for BPO,' she says, handing Angela a pack of melatonin tablets from the company supply. 'Your body will adjust.'\n\nBut Angela's body isn't adjusting. Her right wrist has started aching from the constant typing -- a sharp pain that shoots up to her elbow when she reaches for her mouse. She's been Googling her symptoms: carpal tunnel syndrome, repetitive strain injury. The WebMD rabbit hole terrifies her.\n\nLast Tuesday, she had a panic attack during a call. A customer was screaming about unauthorized charges, and suddenly Angela couldn't breathe. She put the caller on hold, went to the restroom, and sobbed for ten minutes. No one noticed. No one asked.",
+      "theme": "health_hazards",
+      "choices": [
+        {
+          "text": "See a doctor about the wrist pain and sleep issues, and request a medical certificate for sick leave.",
+          "nextNode": "bpo_health_02",
+          "consequence": "Angela prioritizes her health by seeking proper medical attention.",
+          "scoreChange": 10,
+          "knowledgeGained": "Employees are entitled to sick leave under company policy and, for SSS members, the SSS Sickness Benefit (up to 120 days per year at 90% of daily salary credit)."
+        },
+        {
+          "text": "Ask the company about mental health support programs as required by the Mental Health Act.",
+          "nextNode": "bpo_health_03",
+          "consequence": "Angela invokes her rights under RA 11036.",
+          "scoreChange": 12,
+          "knowledgeGained": "RA 11036 (Philippine Mental Health Act) requires all workplaces to develop policies on mental health, including access to psychosocial support and non-discrimination against workers with mental health conditions."
+        },
+        {
+          "text": "Power through it -- she can't afford to miss work or show weakness.",
+          "nextNode": "bpo_health_04",
+          "consequence": "Angela ignores her deteriorating health and pushes toward burnout.",
+          "scoreChange": -8,
+          "knowledgeGained": null
+        }
+      ],
+      "isEnding": false
+    },
+    "bpo_health_02": {
+      "id": "bpo_health_02",
+      "title": "The Doctor's Note",
+      "narrative": "Angela visits a clinic in Makati during her off-hours. Dr. Santos, a general practitioner, examines her wrist, asks about her work schedule, and listens to her describe the panic attack. He's seen hundreds of BPO workers.\n\n'You have early signs of carpal tunnel syndrome. Your sleep pattern is completely disrupted -- we call it shift work sleep disorder. And what you described in the restroom sounds like a panic attack, possibly related to chronic work stress.' He writes prescriptions for a wrist brace, sleep hygiene recommendations, and a referral to a psychiatrist. He also gives her a medical certificate recommending three days of rest.\n\nThe next day, Angela submits the medical certificate to HR. Ms. Reyes frowns. 'Angela, you've only been on this contract for four months. Our sick leave benefit is five days per year, but it only applies after regularization.' Angela stares. 'So I don't get sick leave?' Ms. Reyes shrugs apologetically. 'You can file for leave without pay. Or you can apply for SSS sickness benefit if the illness extends beyond four days.'\n\nAngela walks out of HR feeling the familiar mix of anger and helplessness. She's sick because of this job, and the job won't even let her rest.",
+      "theme": "health_hazards",
+      "choices": [
+        {
+          "text": "File for SSS sickness benefit and take the medical leave regardless of company policy.",
+          "nextNode": "bpo_health_05",
+          "consequence": "Angela uses the social safety net available to her.",
+          "scoreChange": 12,
+          "knowledgeGained": "SSS Sickness Benefit: Members who are unable to work due to illness can receive a daily cash allowance for up to 120 days. The employer advances the benefit and is later reimbursed by SSS."
+        },
+        {
+          "text": "Challenge HR's claim -- even project-based employees are entitled to service incentive leave after one year.",
+          "nextNode": "bpo_health_05",
+          "consequence": "Angela pushes back on the denial of sick leave.",
+          "scoreChange": 13,
+          "knowledgeGained": "Labor Code Art. 95: Every employee who has rendered at least one year of service is entitled to 5 days of service incentive leave with pay, regardless of employment status."
+        },
+        {
+          "text": "Skip the leave and return to work despite the doctor's recommendation.",
+          "nextNode": "bpo_health_04",
+          "consequence": "Angela's condition worsens without rest.",
+          "scoreChange": -5,
+          "knowledgeGained": null
+        }
+      ],
+      "isEnding": false
+    },
+    "bpo_health_03": {
+      "id": "bpo_health_03",
+      "title": "The Mental Health Act",
+      "narrative": "Angela emails HR a formal request citing Republic Act 11036, the Philippine Mental Health Act. She writes: 'Under RA 11036 and its implementing rules, all workplaces are required to develop and implement mental health workplace policies, including psychosocial support programs and referral systems. I am requesting information about GlobalConnect's mental health program and access to counseling services.'\n\nThe response takes a week. It comes not from Ms. Reyes but from the legal department: 'GlobalConnect Solutions is committed to employee wellness. We have a quarterly wellness webinar series and an Employee Assistance Program (EAP) through our third-party provider. Attached is the EAP hotline number.'\n\nAngela calls the EAP number during her break. It's a call center -- ironic. She waits on hold for twenty minutes before speaking to a counselor who gives her generic stress management advice: 'Try deep breathing between calls. Stay hydrated. Get exercise.' No mention of the structural issues -- the mandatory overtime, the abusive KPIs, the sleep deprivation built into the shift schedule.\n\nMeanwhile, Sir Jomar has started giving her harder accounts -- 'escalation calls,' the ones where customers are already furious before Angela even says hello. She suspects it's retaliation for the HR email.",
+      "theme": "health_hazards",
+      "choices": [
+        {
+          "text": "Document the apparent retaliation and report it to DOLE as a violation of the Mental Health Act's non-discrimination provisions.",
+          "nextNode": "bpo_health_05",
+          "consequence": "Angela treats the retaliation as a separate legal violation.",
+          "scoreChange": 15,
+          "knowledgeGained": "RA 11036 Sec. 28: Discrimination in the workplace on the basis of a person having a mental health condition is prohibited. This includes retaliation for seeking mental health support."
+        },
+        {
+          "text": "Request a formal occupational health and safety assessment of the night shift conditions.",
+          "nextNode": "bpo_health_05",
+          "consequence": "Angela pushes for systemic change in working conditions.",
+          "scoreChange": 12,
+          "knowledgeGained": "RA 11058 (Occupational Safety and Health Standards Act) requires employers to ensure safe working conditions and conduct regular assessments, including for psychosocial hazards."
+        },
+        {
+          "text": "Use the EAP counseling but don't push the issue further with management.",
+          "nextNode": "bpo_health_04",
+          "consequence": "Angela gets minimal support but the root causes remain.",
+          "scoreChange": 0,
+          "knowledgeGained": null
+        }
+      ],
+      "isEnding": false
+    },
+    "bpo_health_04": {
+      "id": "bpo_health_04",
+      "title": "Burnout",
+      "narrative": "Angela stops fighting and starts surviving. She takes calls mechanically, hitting her metrics just enough to avoid a performance improvement plan. She sleeps in snatches -- two hours here, three hours there. She lives on instant coffee and convenience store meals. Her wrist pain becomes a constant companion.\n\nOne night, she falls asleep during a bathroom break. Just five minutes, slumped against the cubicle wall. When she jolts awake, her heart hammering, she realizes she's been gone for fifteen minutes. Sir Jomar is looking for her.\n\nHer CSAT scores -- customer satisfaction -- have dropped. Her average handle time has gone up. She's making mistakes: entering wrong account numbers, misquoting policies, forgetting to log cases. A quality assurance audit flags three of her calls in one week.\n\nSir Jomar calls her into a meeting room. 'Angela, your performance has been declining. I'm putting you on a Performance Improvement Plan. You have thirty days to get your numbers up, or we'll have to discuss your continued employment.'\n\nThe PIP feels like a death sentence. Angela knows she's sick, knows the job is making her sicker, and knows the company is using her declining performance as grounds to push her out.",
+      "theme": "health_hazards",
+      "choices": [
+        {
+          "text": "Finally see a doctor, get a proper diagnosis, and file for sick leave with SSS sickness benefit.",
+          "nextNode": "bpo_health_05",
+          "consequence": "Angela stops the downward spiral and addresses her health.",
+          "scoreChange": 10,
+          "knowledgeGained": "A PIP (Performance Improvement Plan) cannot override medical leave rights. If the performance decline is due to a work-related illness, the employer may be liable under occupational health laws."
+        },
+        {
+          "text": "Talk to coworkers about the systemic health problems caused by the working conditions.",
+          "nextNode": "bpo_union_01",
+          "consequence": "Angela's personal crisis becomes a catalyst for collective action.",
+          "scoreChange": 8,
+          "knowledgeGained": null
+        },
+        {
+          "text": "Try to survive the 30-day PIP alone through sheer willpower.",
+          "nextNode": "bpo_health_06",
+          "consequence": "Angela pushes herself to the breaking point.",
+          "scoreChange": -7,
+          "knowledgeGained": null
+        }
+      ],
+      "isEnding": false
+    },
+    "bpo_health_05": {
+      "id": "bpo_health_05",
+      "title": "Recovery and Resolve",
+      "narrative": "Angela takes a stand for her health. She sees a doctor, gets diagnosed with shift work sleep disorder and early carpal tunnel syndrome, and secures a medical certificate. She files for SSS sickness benefit and takes a proper leave of absence.\n\nDuring her leave, she sleeps -- really sleeps -- for the first time in months. She eats her tita's cooking (her tita came up from Tacloban to take care of her). She goes to physical therapy for her wrist. She starts seeing a psychologist through PhilHealth's mental health coverage.\n\nThe psychologist, Dr. Villanueva, helps Angela see the bigger picture. 'What you're experiencing isn't a personal failure. It's a predictable consequence of working conditions that are designed to extract maximum productivity while minimizing labor costs. The question is: what do you want to do about it?'\n\nAngela returns to work after two weeks. She's rested, clearer-headed, and angry in a productive way. The Signal group has grown to sixty members. Word has spread about the night differential issue. And people are starting to whisper about something bigger -- a union.",
+      "theme": "health_hazards",
+      "choices": [
+        {
+          "text": "Join the growing conversation about forming a union at GlobalConnect.",
+          "nextNode": "bpo_union_01",
+          "consequence": "Angela channels her experience into organizing for systemic change.",
+          "scoreChange": 12,
+          "knowledgeGained": null
+        },
+        {
+          "text": "Focus on her individual case -- file the remaining wage complaints and pursue her regularization.",
+          "nextNode": "bpo_union_01",
+          "consequence": "Angela pursues her personal claims while the union conversation continues around her.",
+          "scoreChange": 8,
+          "knowledgeGained": null
+        },
+        {
+          "text": "Keep her head down and just try to survive until she finds a better job.",
+          "nextNode": "bpo_union_01",
+          "consequence": "Angela retreats but can't escape the growing movement at GlobalConnect.",
+          "scoreChange": 0,
+          "knowledgeGained": null
+        }
+      ],
+      "isEnding": false
+    },
+    "bpo_health_06": {
+      "id": "bpo_health_06",
+      "title": "Collapse",
+      "narrative": "Angela pushes through the PIP. She takes double doses of energy drinks, straps on her wrist brace, and forces herself through every shift. For two weeks, her numbers improve marginally.\n\nThen, on a Wednesday night at 3 AM, mid-call with a customer in Texas, Angela's vision blurs. Her chest tightens. She can't breathe. The room tilts. She pulls off her headset, stands up, and promptly collapses next to her workstation.\n\nShe wakes up in Makati Medical Center. Acute anxiety attack complicated by severe sleep deprivation. The attending doctor orders a minimum of one week's rest and refers her to a psychiatrist. Her tita flies in from Tacloban. The medical bills are covered partly by PhilHealth, partly by the company's HMO, but the HMO only covers the ER visit -- not the follow-up psychiatric care.\n\nSir Jomar visits the hospital, looking uncomfortable. 'Get well, Angela. HR will be in touch about your leave.' The way he says it makes clear that this incident will not help her PIP situation.",
+      "theme": "health_hazards",
+      "choices": [
+        {
+          "text": "File for SSS sickness benefit and Employees' Compensation (EC) since the illness is work-related.",
+          "nextNode": "bpo_union_01",
+          "consequence": "Angela pursues every available benefit and recognizes this as a systemic problem.",
+          "scoreChange": 12,
+          "knowledgeGained": "Employees' Compensation Commission (ECC) provides benefits for work-related illness or injury, separate from SSS. Night shift sleep disorders and anxiety from hostile working conditions may qualify."
+        },
+        {
+          "text": "Return to work as soon as possible despite the doctor's advice.",
+          "nextNode": "bpo_union_01",
+          "consequence": "Angela is physically present but barely functional. The crisis has opened her eyes.",
+          "scoreChange": -5,
+          "knowledgeGained": null
+        }
+      ],
+      "isEnding": false
+    },
+    "bpo_union_01": {
+      "id": "bpo_union_01",
+      "title": "The Whisper Network",
+      "narrative": "It starts, like most things in the BPO, during the 3 AM break. Angela is in the pantry with Denise, Paolo, and a few others from the Signal group. The conversation turns to last week's announcement: GlobalConnect is 'streamlining operations,' which everyone knows means layoffs.\n\n'Twenty agents from the telco account got cut last Friday,' Paolo says, stirring his coffee. 'No separation pay. No notice. They were all on five-month contracts.' Denise adds: 'My friend in the healthcare account said their whole floor might be dissolved by June.'\n\nAngela looks around the pantry. Every face shows the same tired fear. 'What if we did something about it?' she says quietly. 'What if we organized?'\n\nThe word 'union' drops into the conversation like a stone into water. Some faces light up. Others go pale. 'Are you crazy?' whispers Meg. 'They'll fire us all.' But Paolo leans forward. 'My uncle is a union leader at the port. He says the right to organize is constitutional. They can't legally stop us.'\n\nThe Signal group evolves. What was a chat about payslips becomes a discussion about something much bigger.",
+      "theme": "union_busting",
+      "choices": [
+        {
+          "text": "Take the lead in researching how to legally form a union and share the process with the group.",
+          "nextNode": "bpo_union_02",
+          "consequence": "Angela becomes an organizer, educating her coworkers about their rights.",
+          "scoreChange": 15,
+          "knowledgeGained": "To form a union, at least 20% of the bargaining unit must sign union membership. Registration is filed with DOLE Bureau of Labor Relations (BLR). Once registered, the union can petition for a certification election."
+        },
+        {
+          "text": "Support the idea but let others take the lead -- she's worried about being targeted.",
+          "nextNode": "bpo_union_03",
+          "consequence": "Angela participates but avoids the spotlight.",
+          "scoreChange": 5,
+          "knowledgeGained": null
+        },
+        {
+          "text": "Warn the group to be very careful because the company is probably monitoring their communications.",
+          "nextNode": "bpo_union_02",
+          "consequence": "Angela's caution helps the group organize more securely.",
+          "scoreChange": 8,
+          "knowledgeGained": "Employer surveillance of union organizing activities is a form of unfair labor practice under Art. 248(a) of the Labor Code -- interfering with the right to self-organization."
+        }
+      ],
+      "isEnding": false
+    },
+    "bpo_union_02": {
+      "id": "bpo_union_02",
+      "title": "Organizing Underground",
+      "narrative": "Angela, Paolo, and Denise form the core organizing committee. They operate carefully. Meetings happen outside the office -- in a Pancake House in Legaspi Village, at Paolo's apartment in Mandaluyong, sometimes in the parking lot of a 7-Eleven after shift. They never use company devices or the office Wi-Fi for union business.\n\nPaolo's uncle, Mang Boy, connects them with a federation -- the Alliance of BPO Workers (ABW), a group that has been trying to organize in the call center industry for years. ABW sends an organizer, Ate Jen, who walks them through the legal process.\n\n'You need signatures from at least 20% of the rank-and-file employees in your bargaining unit,' Ate Jen explains over a shared order of sisig. 'That's your first target. Once you file for registration with DOLE-BLR, you're protected. The company cannot legally interfere.'\n\nThe signature campaign begins. It's slow -- many workers are afraid. Some don't believe a union can help. Others have never heard of one. Angela finds herself giving the same speech over and over: 'Remember the night differential they stole from us? Remember the endo contracts? A union gives us the power to negotiate.'\n\nAfter three weeks, they have 67 signatures out of a bargaining unit of 280. That's 24% -- enough to file.",
+      "theme": "union_busting",
+      "choices": [
+        {
+          "text": "File the union registration with DOLE-BLR immediately before the company catches wind.",
+          "nextNode": "bpo_union_04",
+          "consequence": "The organizers move fast to lock in their legal protection.",
+          "scoreChange": 13,
+          "knowledgeGained": "Once a union files for registration with DOLE-BLR, its members gain legal protection against retaliation. The registration process takes about 30 days."
+        },
+        {
+          "text": "Keep gathering more signatures to build an even stronger base before filing.",
+          "nextNode": "bpo_union_03",
+          "consequence": "The delay allows the company to discover the organizing effort.",
+          "scoreChange": 5,
+          "knowledgeGained": null
+        },
+        {
+          "text": "First consult with a labor lawyer to make sure the petition is airtight.",
+          "nextNode": "bpo_union_04",
+          "consequence": "Angela ensures the filing is legally solid.",
+          "scoreChange": 10,
+          "knowledgeGained": "Common grounds for rejecting union registration include: incorrect bargaining unit definition, insufficient signatures, and technical errors in the application. Legal review helps avoid these pitfalls."
+        }
+      ],
+      "isEnding": false
+    },
+    "bpo_union_03": {
+      "id": "bpo_union_03",
+      "title": "Management Finds Out",
+      "narrative": "The company finds out about the union drive. Maybe someone talked, maybe IT flagged the Signal group, maybe a supervisor noticed the hushed conversations in the pantry. However it happened, the response is swift.\n\nOn Monday, all agents receive an email from the CEO, Mr. David Tan: 'Dear GlobalConnect Family, it has come to our attention that certain individuals are attempting to disrupt our workplace harmony by promoting external organizations. GlobalConnect has always treated its employees as family. We have an open-door policy and multiple channels for your concerns. Third-party interference is unnecessary and counterproductive.'\n\nThat afternoon, a 'town hall' is called. Attendance is mandatory. The operations director, Ms. Navarro, stands at the podium. 'We're a family here,' she repeats. 'If you have problems, come to us. Don't go to outsiders. Those who try to disrupt our operations will find that this family has boundaries.'\n\nAfter the town hall, individual agents are pulled into 'one-on-one conversations' with their team leaders. The message is clear: joining a union will make you a target.\n\nAngela receives a text from Denise: 'They pulled me into a meeting. They know I'm involved. I'm scared.'",
+      "theme": "union_busting",
+      "choices": [
+        {
+          "text": "Document all of management's anti-union actions and file an unfair labor practice complaint with DOLE.",
+          "nextNode": "bpo_union_04",
+          "consequence": "Angela recognizes the company's behavior as textbook union-busting and takes legal action.",
+          "scoreChange": 15,
+          "knowledgeGained": "Labor Code Art. 248: It is an unfair labor practice for employers to interfere with, restrain, or coerce employees in the exercise of their right to self-organization. This includes threats, surveillance, and 'captive audience' meetings."
+        },
+        {
+          "text": "Reassure the group and accelerate the union filing before management can retaliate further.",
+          "nextNode": "bpo_union_04",
+          "consequence": "Angela pushes to formalize the union while they still have momentum.",
+          "scoreChange": 12,
+          "knowledgeGained": "Speed matters in union organizing. Once the employer knows, they will typically escalate interference. Filing the petition quickly provides legal protection to organizers."
+        },
+        {
+          "text": "Back off from the organizing effort -- the risk is too high.",
+          "nextNode": "bpo_term_01",
+          "consequence": "Angela withdraws, but it's too late. Management already has her name.",
+          "scoreChange": -5,
+          "knowledgeGained": null
+        }
+      ],
+      "isEnding": false
+    },
+    "bpo_union_04": {
+      "id": "bpo_union_04",
+      "title": "The Filing",
+      "narrative": "Angela, Paolo, and Ate Jen from ABW take a jeepney to the DOLE Bureau of Labor Relations office in Intramuros. They carry a folder thick with documents: the union charter and constitution, the list of officers, the 67 signed membership forms, and proof of the company's unfair labor practices.\n\nThe filing is straightforward but nerve-wracking. The BLR officer reviews their documents, stamps the application, and issues a receipt. 'Processing takes about thirty days,' she says. 'During this period, the employer is prohibited from interfering with the union's formation.'\n\nThat evening, Angela goes back to the office for her shift. She half-expects security to stop her at the door. But nothing happens. The night passes normally -- calls, scripts, metrics. It's almost anticlimactic.\n\nThe anticlimax doesn't last. The next morning, Angela receives an email from HR: 'Please report to the Operations Director's office at the start of your next shift for a meeting regarding your employment status.' Denise and three other known organizers receive identical emails.",
+      "theme": "union_busting",
+      "choices": [
+        {
+          "text": "Attend the meeting but bring a witness and record everything (informing them of the recording).",
+          "nextNode": "bpo_union_05",
+          "consequence": "Angela protects herself with documentation while facing management.",
+          "scoreChange": 12,
+          "knowledgeGained": "Under RA 4200 (Anti-Wiretapping Act), recording a conversation is legal if at least one party (e.g., Angela herself) consents. The recording is admissible as evidence."
+        },
+        {
+          "text": "Contact DOLE immediately to report the apparent retaliation and request assistance before attending.",
+          "nextNode": "bpo_union_05",
+          "consequence": "Angela preemptively seeks government protection against retaliation.",
+          "scoreChange": 15,
+          "knowledgeGained": "Workers can request DOLE assistance under the 'assumption of jurisdiction' power if there is an imminent threat of retaliation related to union organizing."
+        },
+        {
+          "text": "Attend alone and try to de-escalate the situation with management.",
+          "nextNode": "bpo_union_06",
+          "consequence": "Angela faces management without backup, which weakens her position.",
+          "scoreChange": -3,
+          "knowledgeGained": null
+        }
+      ],
+      "isEnding": false
+    },
+    "bpo_union_05": {
+      "id": "bpo_union_05",
+      "title": "The Confrontation",
+      "narrative": "Angela enters the Operations Director's office with Ate Jen from ABW as her representative. Paolo sits outside, ready to go in next. Ms. Navarro is at her desk, flanked by the company lawyer, Attorney Chua.\n\n'Angela,' Ms. Navarro begins, 'we've decided to implement a redundancy program affecting several positions, including yours. Your last day will be--'\n\n'With respect, ma'am,' Ate Jen interrupts, 'Angela and four other employees received these notices on the same day they were identified as union organizers. The timing is not coincidental. This is a textbook unfair labor practice under Article 248 of the Labor Code.'\n\nAttorney Chua leans forward. 'This is a legitimate business decision. The client has reduced the scope of the contract. We have documentation.'\n\nAte Jen places a folder on the desk. 'We also have documentation. We filed the union registration yesterday. Under the Labor Code, interfering with union organizing -- including terminating organizers -- is illegal. We've already notified DOLE. If you proceed, we will file an unfair labor practice charge and an illegal dismissal case at the NLRC.'\n\nThe room goes quiet. Ms. Navarro and Attorney Chua exchange glances.",
+      "theme": "union_busting",
+      "choices": [
+        {
+          "text": "Let Ate Jen continue negotiating -- this is exactly why they affiliated with the federation.",
+          "nextNode": "bpo_term_01",
+          "consequence": "The federation's experience in labor disputes proves invaluable.",
+          "scoreChange": 12,
+          "knowledgeGained": "Affiliating with a labor federation provides organizing support, legal assistance, and experienced negotiators -- resources that individual workers cannot access alone."
+        },
+        {
+          "text": "Speak up personally and tell management that the union will not be intimidated.",
+          "nextNode": "bpo_term_01",
+          "consequence": "Angela adds her voice to the confrontation, showing personal resolve.",
+          "scoreChange": 10,
+          "knowledgeGained": null
+        }
+      ],
+      "isEnding": false
+    },
+    "bpo_union_06": {
+      "id": "bpo_union_06",
+      "title": "Alone in the Room",
+      "narrative": "Angela sits across from Ms. Navarro and Attorney Chua. Alone. She chose not to bring a representative, hoping to keep things civil.\n\nMs. Navarro gets straight to it. 'Angela, due to business restructuring, your position has been deemed redundant. We're offering a separation package: one month's salary. We just need you to sign this.' She slides a document across the desk.\n\nAngela reads it. It's a quitclaim and waiver. By signing, she would release GlobalConnect from 'any and all claims, past, present, or future, arising from or connected with her employment.' That would mean giving up her right to file for illegal dismissal, unpaid night differential, overtime pay -- everything.\n\n'This is standard,' Attorney Chua says smoothly. 'Everyone signs it. It's part of the separation process.'\n\nAngela's hands are shaking. The one-month salary would help with rent. But her tita's voice echoes in her head: 'Never sign anything you don't fully understand.'",
+      "theme": "union_busting",
+      "choices": [
+        {
+          "text": "Refuse to sign the quitclaim and say she needs time to consult a lawyer.",
+          "nextNode": "bpo_term_01",
+          "consequence": "Angela protects her legal rights by refusing to sign under pressure.",
+          "scoreChange": 15,
+          "knowledgeGained": "Quitclaims signed under pressure or without full understanding of rights are voidable under Philippine jurisprudence. The Supreme Court has consistently ruled that quitclaims are scrutinized strictly and are void if the consideration is unconscionably low."
+        },
+        {
+          "text": "Sign the quitclaim to get the separation pay -- she needs the money.",
+          "nextNode": "bpo_term_05",
+          "consequence": "Angela signs away her rights for a fraction of what she's owed.",
+          "scoreChange": -10,
+          "knowledgeGained": null
+        },
+        {
+          "text": "Ask to take the document home and bring it back tomorrow.",
+          "nextNode": "bpo_term_02",
+          "consequence": "Angela buys time without revealing her intentions.",
+          "scoreChange": 8,
+          "knowledgeGained": "You are never obligated to sign any document on the spot. Any employer who insists on an immediate signature is likely trying to prevent you from seeking legal advice."
+        }
+      ],
+      "isEnding": false
+    },
+    "bpo_term_01": {
+      "id": "bpo_term_01",
+      "title": "The Termination",
+      "narrative": "Despite everything -- the union filing, the DOLE notifications, the legal threats -- GlobalConnect proceeds with terminating Angela and the four other union organizers. The company's position is that the termination is due to 'redundancy' and has nothing to do with union activities.\n\nAngela's last day is surreal. She takes calls for eight hours, knowing it's the end. Her regular callers don't know. Her coworkers hug her in the pantry, some with tears. Denise squeezes her hand. 'We're not letting this go.'\n\nAt the exit interview, Ms. Reyes slides the quitclaim across the desk. Angela has been expecting this. 'I'm not signing that,' she says calmly. 'I believe my termination is illegal and I intend to file a case with the NLRC.'\n\nMs. Reyes's smile vanishes. 'If you don't sign, we can't process your final pay and 13th month.' Angela nods. 'That's also illegal, ma'am. Final pay must be released within thirty days of separation regardless of whether I sign a waiver. And withholding 13th month pay is a criminal offense under PD 851.'\n\nAngela surrenders her ID and headset. She walks out of the glass tower on Ayala Avenue into the mid-morning heat. For the first time in months, she's going to sleep when it's dark outside.",
+      "theme": "union_busting",
+      "choices": [
+        {
+          "text": "File an illegal dismissal case with the NLRC immediately, citing unfair labor practice.",
+          "nextNode": "bpo_term_03",
+          "consequence": "Angela takes the fight to the labor courts.",
+          "scoreChange": 15,
+          "knowledgeGained": "Art. 294: An illegally dismissed employee is entitled to reinstatement without loss of seniority and full backwages from the time of dismissal until actual reinstatement."
+        },
+        {
+          "text": "Consult with PAO (Public Attorney's Office) for free legal representation before filing.",
+          "nextNode": "bpo_term_02",
+          "consequence": "Angela secures proper legal representation.",
+          "scoreChange": 12,
+          "knowledgeGained": "The Public Attorney's Office (PAO) provides free legal assistance to qualified individuals, including representation in labor cases at the NLRC."
+        },
+        {
+          "text": "Try to negotiate with the company for a better separation package without filing a case.",
+          "nextNode": "bpo_term_04",
+          "consequence": "Angela attempts to resolve the matter without litigation.",
+          "scoreChange": 5,
+          "knowledgeGained": null
+        }
+      ],
+      "isEnding": false
+    },
+    "bpo_term_02": {
+      "id": "bpo_term_02",
+      "title": "Seeking Justice",
+      "narrative": "Angela visits the Public Attorney's Office in Makati. After a two-hour wait, she meets Attorney Garcia, a labor law specialist who has handled hundreds of illegal dismissal cases.\n\nHe listens to her entire story -- the endo contracts, the missing night differential, the overtime without premium pay, the denied sick leave, the union organizing, and the retaliatory termination. His face is a study in controlled indignation.\n\n'Ms. Cruz, you have multiple causes of action here,' he says, counting on his fingers. 'Illegal dismissal. Unfair labor practice. Wage underpayment including night shift differential and overtime premium. Non-payment of service incentive leave. Possible moral and exemplary damages. And if they're withholding your final pay and 13th month, that's another violation.'\n\nHe agrees to take her case pro bono. 'We'll file a complaint with the NLRC. I want you to know this process takes time -- months, sometimes over a year for a decision. But the law is clearly on your side.'\n\nAngela nods. She's tired, but she's not broken. 'Attorney, it's not just about me. There are hundreds of agents at GlobalConnect going through the same thing. And we have a union now.'",
+      "theme": "contractualization",
+      "choices": [
+        {
+          "text": "File the comprehensive NLRC complaint covering all violations.",
+          "nextNode": "bpo_term_03",
+          "consequence": "Angela and her lawyer file a thorough case.",
+          "scoreChange": 15,
+          "knowledgeGained": "NLRC complaints should include all causes of action: illegal dismissal, unpaid wages, damages, and attorney's fees. The complaint must be filed within 4 years for money claims and 4 years for illegal dismissal."
+        },
+        {
+          "text": "Ask Attorney Garcia if a settlement is possible to avoid a long legal battle.",
+          "nextNode": "bpo_term_04",
+          "consequence": "Angela explores a faster resolution.",
+          "scoreChange": 8,
+          "knowledgeGained": "NLRC mandatory conciliation-mediation happens before the formal hearing. Many cases settle at this stage. A reasonable settlement should include backwages, separation pay, and unpaid benefits."
+        }
+      ],
+      "isEnding": false
+    },
+    "bpo_term_03": {
+      "id": "bpo_term_03",
+      "title": "The NLRC Case",
+      "narrative": "Attorney Garcia files the complaint at the NLRC-NCR. The case is docketed and assigned to Labor Arbiter Dimaculangan. The first conference is set for three weeks from now.\n\nGlobalConnect's legal team sends their position paper, arguing that Angela was a project-based employee whose contract simply expired due to the completion of the project. They deny any connection between the termination and the union organizing. They claim the night differential was included in the 'all-in' rate and that overtime was properly compensated.\n\nAttorney Garcia files a devastating reply. He presents Angela's four consecutive five-month contracts, all for the same position. He shows payslip computations proving the mathematical impossibility of the 'all-in rate' claim. He submits the timeline showing that the termination came within days of the union registration filing.\n\nThe mandatory conciliation conference happens at the NLRC. The company's lawyer, Attorney Chua, pulls Attorney Garcia aside. 'Let's talk settlement. What does your client want?'\n\nThe offer: three months' salary as separation pay, payment of the computed night differential for the last three months only, and a 'neutral' certificate of employment. In exchange, Angela drops all charges.",
+      "theme": "contractualization",
+      "choices": [
+        {
+          "text": "Reject the low offer and proceed to full hearing -- she deserves reinstatement and full backwages.",
+          "nextNode": "bpo_term_ending_win",
+          "consequence": "Angela refuses to settle for less than what the law entitles her to.",
+          "scoreChange": 15,
+          "knowledgeGained": "In illegal dismissal cases, the employee is entitled to reinstatement AND full backwages. Settlement offers are often significantly lower than what the court would award. Consider the full value of your claim before accepting."
+        },
+        {
+          "text": "Negotiate for a better settlement -- ask for 12 months' salary and full back pay of all differentials.",
+          "nextNode": "bpo_term_ending_settle",
+          "consequence": "Angela pushes for a fair settlement that avoids a long court battle.",
+          "scoreChange": 10,
+          "knowledgeGained": "A strong negotiating position includes knowing the full value of your claims. Use the potential court award (backwages + reinstatement + damages) as leverage for a fair settlement."
+        },
+        {
+          "text": "Accept the company's settlement offer to end the ordeal.",
+          "nextNode": "bpo_term_ending_low",
+          "consequence": "Angela takes a fraction of what she's owed to avoid the stress of litigation.",
+          "scoreChange": -3,
+          "knowledgeGained": null
+        }
+      ],
+      "isEnding": false
+    },
+    "bpo_term_04": {
+      "id": "bpo_term_04",
+      "title": "Negotiation Table",
+      "narrative": "Before the NLRC case progresses, both sides agree to a settlement conference facilitated by the NCMB (National Conciliation and Mediation Board). Angela sits across the table from Attorney Chua and Ms. Navarro. Attorney Garcia is at her side.\n\nThe company opens with an offer: two months' salary and a clean employment record. Attorney Garcia counters: reinstatement as a regular employee, full backwages from the date of termination, payment of all unpaid night shift differentials and overtime premiums for the entire duration of Angela's employment, moral and exemplary damages, and recognition of the union.\n\nThe negotiations are tense. Attorney Chua argues that reinstatement is 'impractical given the damaged relationship.' Attorney Garcia responds that this is exactly why the law provides for separation pay in lieu of reinstatement -- one month per year of service -- plus full backwages.\n\nAfter six hours of back-and-forth, the mediator proposes a compromise: separation pay equivalent to one month per year of service, six months' backwages, full payment of computed night differentials and OT premiums, 13th month pay, and the company withdraws any opposition to the union registration.",
+      "theme": "contractualization",
+      "choices": [
+        {
+          "text": "Accept the mediator's compromise -- it covers most of what Angela is owed and protects the union.",
+          "nextNode": "bpo_term_ending_settle",
+          "consequence": "Angela secures a meaningful settlement that also benefits her coworkers.",
+          "scoreChange": 12,
+          "knowledgeGained": "NCMB-mediated settlements are binding and enforceable. A good settlement balances the worker's full legal entitlements against the time, cost, and uncertainty of prolonged litigation."
+        },
+        {
+          "text": "Push for the full legal entitlement and take the case to a full NLRC hearing.",
+          "nextNode": "bpo_term_ending_win",
+          "consequence": "Angela insists on the maximum the law provides.",
+          "scoreChange": 10,
+          "knowledgeGained": null
+        },
+        {
+          "text": "Accept but negotiate for an additional non-retaliation clause protecting all union members.",
+          "nextNode": "bpo_term_ending_settle",
+          "consequence": "Angela makes sure the settlement protects not just herself but her coworkers.",
+          "scoreChange": 15,
+          "knowledgeGained": "Settlement agreements can include protective clauses for third parties. A non-retaliation clause ensures the company cannot punish other union members."
+        }
+      ],
+      "isEnding": false
+    },
+    "bpo_term_05": {
+      "id": "bpo_term_05",
+      "title": "Walking Away Empty",
+      "narrative": "Angela signs the quitclaim. She collects her one month's separation pay -- 18,000 pesos. She surrenders her ID, her headset, and her access card. Security escorts her to the elevator.\n\nShe stands on Ayala Avenue at 7 in the morning, holding a brown envelope with her certificate of employment and her final paycheck. Commuters rush past. The morning traffic is a wall of sound. She feels invisible.\n\nBy signing the quitclaim, Angela has waived her right to claim the thousands of pesos in unpaid night shift differential, overtime premium pay, and the potential hundreds of thousands in backwages from an illegal dismissal case. She has given up everything for one month's salary.\n\nShe takes the MRT back to her bedspace. She has enough savings for two months' rent. After that, she'll need another job. She opens JobStreet on her phone and starts scrolling through BPO listings. Five-month contracts. Night shifts. The same cycle, at a different company.\n\nHer phone buzzes. It's a message from the Signal group: 'Angela, the union registration was approved. We won. Where are you?'",
+      "theme": "contractualization",
+      "choices": [
+        {
+          "text": "Realize her mistake and consult a lawyer about whether the quitclaim can be voided.",
+          "nextNode": "bpo_term_ending_second_chance",
+          "consequence": "Angela discovers there may still be a way to fight.",
+          "scoreChange": 8,
+          "knowledgeGained": "Philippine courts have voided quitclaims when: (1) the employee was coerced, (2) the consideration was unconscionably low, (3) the employee did not fully understand the document, or (4) it was contrary to law and public policy."
+        },
+        {
+          "text": "Move on and apply to other BPO companies.",
+          "nextNode": "bpo_term_ending_exploited",
+          "consequence": "Angela accepts her loss and re-enters the same exploitative cycle.",
+          "scoreChange": -5,
+          "knowledgeGained": null
+        }
+      ],
+      "isEnding": false
+    },
+    "bpo_term_ending_win": {
+      "id": "bpo_term_ending_win",
+      "title": "Justice Served",
+      "narrative": "After eight months of hearings, Labor Arbiter Dimaculangan rules in Angela's favor. The decision is unequivocal: GlobalConnect Solutions is found guilty of illegal dismissal and unfair labor practice.\n\nThe award: reinstatement to her former position as a regular employee, with full backwages from the date of termination until actual reinstatement. Payment of all unpaid night shift differentials and overtime premiums for the entire duration of her employment, computed at 10% and 25% respectively. Moral damages of 50,000 pesos. Exemplary damages of 50,000 pesos. Attorney's fees equivalent to 10% of the total monetary award.\n\nGlobalConnect appeals to the NLRC Commission, but the decision is affirmed. Angela returns to work -- this time as a recognized regular employee, with full benefits, security of tenure, and the protection of a registered union behind her.\n\nThe union wins its certification election three months later. Angela is elected as the first secretary of the GlobalConnect Employees Union. Their first CBA negotiation begins the following quarter. On the agenda: night shift differential compliance, overtime policy reform, mental health programs, and an end to the endo system.\n\nAngela's case is cited in a DOLE advisory on contractualization in the BPO industry. Her story, and the stories of workers like her, become part of the growing movement for labor rights in the Philippine outsourcing sector.\n\nResources: DOLE Hotline 1349 | NLRC: nlrc.dole.gov.ph | PAO: pao.gov.ph | DOLE-BLR for union registration | SSS: sss.gov.ph | PhilHealth mental health coverage | Employees' Compensation Commission (ECC)",
+      "theme": "union_busting",
+      "choices": [],
+      "isEnding": true
+    },
+    "bpo_term_ending_settle": {
+      "id": "bpo_term_ending_settle",
+      "title": "A Hard-Won Settlement",
+      "narrative": "Angela signs the settlement agreement at the NCMB office. It's not everything she fought for, but it's substantial: separation pay for her years of service, six months' backwages, full payment of the computed night shift differentials and overtime premiums, her 13th month pay, and -- most importantly for her coworkers -- the company's written commitment not to oppose the union registration or retaliate against union members.\n\nThe check is more money than Angela has ever held at one time. But it's the union provision that matters most. When she shows the agreement to the Signal group, the reaction is electric. For the first time, the workers of GlobalConnect have leverage.\n\nAngela doesn't go back to GlobalConnect. She uses part of the settlement to enroll in a paralegal course at UP Open University. Ate Jen from ABW offers her a part-time position as an organizer, reaching out to other BPO companies in Makati, BGC, and Ortigas.\n\nSix months later, Angela speaks at a DOLE forum on labor rights in the BPO industry. She tells her story -- the endo contracts, the stolen night differential, the burnout, the union, the fight. 'The law is on our side,' she says to a room full of call center agents. 'But the law only works if we know it and use it.'\n\nThe room gives her a standing ovation. Then they exchange numbers and start a new Signal group.\n\nResources: DOLE Hotline 1349 | NLRC: nlrc.dole.gov.ph | NCMB: ncmb.dole.gov.ph | PAO: pao.gov.ph | DOLE-BLR for union registration | SSS: sss.gov.ph | Alliance of BPO Workers",
+      "theme": "union_busting",
+      "choices": [],
+      "isEnding": true
+    },
+    "bpo_term_ending_low": {
+      "id": "bpo_term_ending_low",
+      "title": "Settling for Less",
+      "narrative": "Angela accepts the company's first offer: three months' salary and the last three months of night differential. Attorney Garcia sighs but respects her decision. 'It's your right to accept, Angela. But I want you to know that the court would have awarded significantly more.'\n\nThe settlement comes to about 70,000 pesos total. It's enough to cover a few months of expenses, but it represents a fraction of what Angela was legally owed. The full computation of unpaid night differentials alone -- for all the months she worked the graveyard shift -- would have been over 40,000 pesos. The backwages from the illegal dismissal, had the case been fully litigated, could have exceeded 200,000 pesos.\n\nAngela takes a new BPO job in BGC. The hours are better -- a mid-shift, 2 PM to 10 PM. But the contract is five months. The cycle begins again.\n\nShe stays in the Signal group, though. The union at GlobalConnect moves forward without her. She follows their progress with mixed feelings -- pride in what they built, regret that she didn't see her own fight through.\n\nOne night, a new member of the Signal group asks: 'My company isn't paying night differential. What should I do?' Angela types her response: a detailed explanation of Labor Code Article 86, the DOLE complaint process, and a warning -- 'Don't settle for less than what you're owed. I did, and I wish I hadn't.'\n\nResources: DOLE Hotline 1349 | NLRC: nlrc.dole.gov.ph | PAO: pao.gov.ph | Free legal aid: FLAG (Free Legal Assistance Group) | DOLE-BLR for union questions",
+      "theme": "wage_theft",
+      "choices": [],
+      "isEnding": true
+    },
+    "bpo_term_ending_exploited": {
+      "id": "bpo_term_ending_exploited",
+      "title": "The Cycle Continues",
+      "narrative": "Angela starts at a new BPO company the following month. Different building, different logo on the ID, same fluorescent-lit floor, same headset, same script. The contract is for five months. The night shift differential is nowhere on the payslip. The team leader tells her overtime is 'expected.'\n\nShe doesn't check her payslip. She doesn't ask about regularization. She doesn't join any group chats. She keeps her head down, takes her calls, and sends money home to Leyte.\n\nThe months blur. Angela is 27 now. Then 28. She moves from company to company, always on short-term contracts, never building seniority, never earning security. Each time a contract ends, she spends a few anxious weeks job-hunting before the next one starts. There is no safety net. No union. No one fighting for her.\n\nSometimes, late at night between calls, she thinks about the Signal group and wonders what happened to the union at GlobalConnect. She thinks about the quitclaim she signed and the rights she gave away. She thinks about her tita's words: 'Know your rights, anak. They can't take what you won't give.'\n\nBut knowing your rights and acting on them are different things. Angela learned the cost of silence. The question is whether she'll find the courage to speak again.\n\nResources: It is never too late to learn your rights. DOLE Hotline 1349 | NLRC: nlrc.dole.gov.ph | PAO: pao.gov.ph | SSS: sss.gov.ph | BPO Industry Employees Network (BIEN) | Atty. On Duty - Free legal consultations at DOLE regional offices",
+      "theme": "contractualization",
+      "choices": [],
+      "isEnding": true
+    },
+    "bpo_term_ending_second_chance": {
+      "id": "bpo_term_ending_second_chance",
+      "title": "A Second Chance",
+      "narrative": "Angela visits Attorney Garcia at the PAO, clutching the quitclaim she signed. 'Attorney, I made a mistake. Is it too late?'\n\nAttorney Garcia reads the document carefully. Then he looks up with a slight smile. 'Angela, the Supreme Court has been very clear on this. In Periquet v. NLRC, the Court held that quitclaims are frowned upon as contrary to public policy. Your quitclaim may be voidable for several reasons: the consideration was unconscionably low -- one month's pay for almost two years of service. You were under duress -- they told you they'd withhold your final pay if you didn't sign. And the quitclaim attempts to waive rights that cannot legally be waived, like unpaid night differential.'\n\nHe files the case. The NLRC Labor Arbiter voids the quitclaim and proceeds with Angela's illegal dismissal complaint. The process takes nine months, but the decision awards Angela reinstatement, backwages, and payment of all unpaid wage differentials.\n\nAngela doesn't go back to GlobalConnect -- she accepts separation pay in lieu of reinstatement. With the money, she pays off her mother's medical bills and enrolls in a labor studies program. She starts volunteering with ABW, teaching other BPO workers about their rights.\n\n'I almost gave up everything,' she tells a group of call center agents at a Saturday seminar in Quezon City. 'The company was counting on me not knowing my rights. Now I make sure every worker I meet knows theirs.'\n\nResources: DOLE Hotline 1349 | NLRC: nlrc.dole.gov.ph | PAO: pao.gov.ph | DOLE-BLR for union registration | SSS: sss.gov.ph | UP SOLAIR (School of Labor and Industrial Relations) | TUCP (Trade Union Congress of the Philippines)",
+      "theme": "contractualization",
+      "choices": [],
+      "isEnding": true
+    }
+  },
+  "startNode": "bpo_start"
+}

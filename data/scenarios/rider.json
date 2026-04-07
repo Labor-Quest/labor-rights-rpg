@@ -1,0 +1,677 @@
+{
+  "nodes": {
+    "rider_start": {
+      "id": "rider_start",
+      "title": "A New Rider Signs Up",
+      "narrative": "Jake Reyes, 24, stares at the GrabFood-style app on his phone screen. The sign-up page for 'DeliverNa' -- one of Manila's biggest food delivery platforms -- promises 'Be your own boss! Earn up to P20,000 a week!' He's been unemployed for three months since graduating from a two-year TESDA course in automotive servicing, and his nanay keeps reminding him about the P3,500 monthly contribution to the household in their small apartment in Mandaluyong.\n\nThe requirements are straightforward: a motorcycle (he's still paying P4,800/month installment on his Honda TMX), a valid driver's license, and an Android phone. But first, he needs to buy the 'official starter kit' -- a thermal delivery bag for P1,500, a branded jacket for P800, and a phone mount for P350. That's P2,650 from his dwindling savings.\n\nHis kumpare Bong, who's been riding for DeliverNa for six months, messages him: 'Kuya Jake, punta ka na. Okay naman kita, lalo pag weekends. Pero basahin mo muna yung Terms of Service ha. May mga kakaiba dun.'\n\nJake scrolls to the Terms of Service -- a dense wall of legal text, 47 pages long.",
+      "theme": "misclassification",
+      "choices": [
+        {
+          "text": "Read the entire Terms of Service carefully before signing anything.",
+          "nextNode": "rider_onboard_01",
+          "consequence": "Jake spends two hours reading the fine print and discovers important clauses.",
+          "scoreChange": 10,
+          "knowledgeGained": "Always read contracts before signing. Under Philippine law, ignorance of contract terms you signed is generally not an excuse."
+        },
+        {
+          "text": "Skim through it quickly -- just look for the important parts.",
+          "nextNode": "rider_onboard_02",
+          "consequence": "Jake catches some key terms but misses critical details buried deep in the document.",
+          "scoreChange": 5,
+          "knowledgeGained": "Skimming contracts can cause you to miss clauses about dispute resolution, liability waivers, and employment classification."
+        },
+        {
+          "text": "Just scroll to the bottom and tap 'I Agree' -- everyone does this.",
+          "nextNode": "rider_onboard_03",
+          "consequence": "Jake unknowingly agrees to terms that waive many of his potential rights.",
+          "scoreChange": -5,
+          "knowledgeGained": null
+        }
+      ],
+      "isEnding": false
+    },
+    "rider_onboard_01": {
+      "id": "rider_onboard_01",
+      "title": "The Fine Print Reveals All",
+      "narrative": "Jake reads carefully and his eyes widen at Section 14.3: 'The Delivery Partner acknowledges and agrees that they are an independent contractor and NOT an employee of DeliverNa Technologies Inc. The Delivery Partner shall have no claim to employee benefits including but not limited to SSS, PhilHealth, Pag-IBIG, 13th month pay, overtime pay, holiday pay, or separation pay.'\n\nSection 22.1 is even more alarming: 'DeliverNa reserves the right to modify delivery fees, incentive structures, and platform policies at any time without prior notice.' Section 28.7: 'Any disputes shall be resolved through binding arbitration, and the Delivery Partner waives their right to file a case before the NLRC or any labor tribunal.'\n\nJake remembers something from a Facebook post by Riders Pilipinas -- a riders' advocacy group. They mentioned the 'four-fold test' that determines whether someone is really an employee or a contractor. He screenshots the suspicious clauses and sends them to the group chat.\n\nA labor law student in the group responds: 'Kuya, that arbitration clause might be void. Labor rights are constitutional rights under Article XIII of the 1987 Constitution -- you can't waive NLRC jurisdiction through a contract.'",
+      "theme": "misclassification",
+      "choices": [
+        {
+          "text": "Research the four-fold test before proceeding with sign-up.",
+          "nextNode": "rider_onboard_04",
+          "consequence": "Jake learns about the legal test that could prove he's actually an employee.",
+          "scoreChange": 15,
+          "knowledgeGained": "The four-fold test under Art. 295 of the Labor Code: (1) selection and engagement, (2) payment of wages, (3) power of dismissal, (4) power to control not just results but the means and methods of work. The control test is the most important factor."
+        },
+        {
+          "text": "Sign up anyway but save the screenshots for future reference.",
+          "nextNode": "rider_onboard_05",
+          "consequence": "Jake proceeds with awareness of the risks, keeping evidence.",
+          "scoreChange": 7,
+          "knowledgeGained": "Documenting contract terms and platform policies is important evidence if you later need to file a labor complaint."
+        }
+      ],
+      "isEnding": false
+    },
+    "rider_onboard_02": {
+      "id": "rider_onboard_02",
+      "title": "Speed Reading the Contract",
+      "narrative": "Jake skims through the document, catching a few things: he'll be classified as an 'independent contractor,' the platform takes a 25% commission on each delivery, and there's something about a rating system that determines order priority. He also notices a P500 penalty for 'order cancellations after acceptance.'\n\nBut he misses the clauses about binding arbitration, the platform's right to change pay rates without notice, and the broad indemnification clause that makes him personally liable for any damage, injury, or loss during deliveries -- including to customers, restaurants, or third parties.\n\nHe shrugs. 'Parang normal naman,' he thinks. His friend Bong earns decent money, and thousands of riders are on the platform. It can't be that bad, right?\n\nHe taps 'I Agree' and proceeds to purchase the starter kit at the DeliverNa hub in Pasig, where he's surrounded by dozens of other new riders signing up on the same day.",
+      "theme": "misclassification",
+      "choices": [
+        {
+          "text": "Ask the hub staff if riders are really independent contractors or employees.",
+          "nextNode": "rider_onboard_05",
+          "consequence": "The staff gives a rehearsed answer, but Jake starts thinking critically about the arrangement.",
+          "scoreChange": 5,
+          "knowledgeGained": "Platform companies often train staff to emphasize 'flexibility' and 'being your own boss' to justify contractor classification, but the actual working relationship may tell a different story."
+        },
+        {
+          "text": "Just pay for the starter kit and start riding immediately.",
+          "nextNode": "rider_onboard_06",
+          "consequence": "Jake dives in without understanding his legal standing.",
+          "scoreChange": -3,
+          "knowledgeGained": null
+        }
+      ],
+      "isEnding": false
+    },
+    "rider_onboard_03": {
+      "id": "rider_onboard_03",
+      "title": "Signed Without Reading",
+      "narrative": "Jake scrolls rapidly to the bottom of the Terms of Service and taps 'I Agree' without reading a single clause. He proceeds to the DeliverNa hub at Ortigas Center to buy the starter kit -- P2,650 that he charges to his already-strained GCash credit.\n\nAt the hub, a perky orientation facilitator runs through a 30-minute video presentation. 'You are independent contractors,' she emphasizes with a bright smile. 'That means freedom! No boss, no time clock, no office politics. You earn what you hustle for.' The room of 40 new riders nods along.\n\nBut Jake notices something odd during the 'onboarding checklist': he must follow a specific dress code (DeliverNa jacket at all times), use only the DeliverNa thermal bag (no third-party bags), follow the app's prescribed route, and complete deliveries within the app's time estimate or face penalties. He must also maintain a 4.5-star rating or higher to keep 'priority rider' status.\n\n'Para sa independent contractor, ang daming rules ah,' mutters the rider seated next to him. Jake shrugs it off and focuses on the earning projections shown on screen.",
+      "theme": "misclassification",
+      "choices": [
+        {
+          "text": "Raise your hand and ask why independent contractors have so many mandatory rules.",
+          "nextNode": "rider_onboard_05",
+          "consequence": "The facilitator deflects, but Jake's question plants seeds of doubt among the other riders.",
+          "scoreChange": 8,
+          "knowledgeGained": "When a company controls the means and methods of your work -- not just the result -- it suggests an employer-employee relationship under the control test, regardless of what the contract says."
+        },
+        {
+          "text": "Stay quiet and complete the onboarding without making waves.",
+          "nextNode": "rider_onboard_06",
+          "consequence": "Jake finishes onboarding and starts accepting deliveries the next day.",
+          "scoreChange": -2,
+          "knowledgeGained": null
+        }
+      ],
+      "isEnding": false
+    },
+    "rider_onboard_04": {
+      "id": "rider_onboard_04",
+      "title": "Understanding the Four-Fold Test",
+      "narrative": "Jake spends his evening researching. He finds a PAO (Public Attorney's Office) explainer and a Supreme Court decision, and maps it against his situation with DeliverNa:\n\n1) Selection and engagement -- DeliverNa chose him after reviewing his application, requiring specific documents. They can reject applicants. This looks like hiring.\n2) Payment of wages -- DeliverNa sets the delivery fee, takes its commission, and pays him through the app. He doesn't negotiate rates with customers. This looks like wage payment.\n3) Power of dismissal -- DeliverNa can 'deactivate' his account for low ratings, policy violations, or at its own discretion per Section 31 of the ToS. Deactivation is effectively termination.\n4) Power of control -- This is the big one. DeliverNa dictates the uniform, the bag, the route, the time limits, and penalizes deviation. The app even tracks his GPS in real-time and sends automated warnings if he stops too long.\n\nJake realizes: 'Mukhang employee talaga ako.' He signs up anyway because he needs the income, but he joins Riders Pilipinas on Facebook and starts documenting everything from Day 1.",
+      "theme": "misclassification",
+      "choices": [
+        {
+          "text": "Sign up but meticulously document every instance of platform control over your work.",
+          "nextNode": "rider_onboard_06",
+          "consequence": "Jake begins building a detailed record that could support a future misclassification claim.",
+          "scoreChange": 12,
+          "knowledgeGained": "Documentation is critical in labor cases. Screenshots of app instructions, GPS tracking, penalty notices, and pay rate changes can all serve as evidence of employer control under the four-fold test."
+        },
+        {
+          "text": "Sign up and share your research with other new riders at the hub.",
+          "nextNode": "rider_onboard_06",
+          "consequence": "Jake helps other riders understand their rights before they even start.",
+          "scoreChange": 14,
+          "knowledgeGained": "Collective awareness is the first step toward collective action. Under Art. III, Sec. 8 of the Constitution, the right to form unions and associations is guaranteed even for workers in non-traditional arrangements."
+        }
+      ],
+      "isEnding": false
+    },
+    "rider_onboard_05": {
+      "id": "rider_onboard_05",
+      "title": "Seeds of Doubt",
+      "narrative": "Whether from reading the contract, questioning the staff, or speaking up during orientation, Jake now has a gnawing feeling that something isn't right about the 'independent contractor' label. The DeliverNa hub staff insisted: 'You're free to go online or offline whenever you want -- that's what makes you independent.'\n\nBut a senior rider named Kuya Rodel, who's been riding for two years, pulls Jake aside near the parking area. 'Hijo, free ka nga mag-online anytime. Pero pag hindi ka nag-online during peak hours, bababa yung priority score mo. Tapos pag bumaba yun, konti lang orders mo. So technically free ka, pero practically, pinapapasok ka rin nila sa schedule nila.'\n\nKuya Rodel shows Jake his phone -- a spreadsheet he's been keeping of his daily earnings, hours worked, and platform deductions. 'I've been averaging P380 a day for 10-12 hours of riding. Minus gas, maintenance, data load -- minsan P200 na lang talaga ang net ko. Mas mababa pa sa minimum wage.'\n\nJake's jaw tightens. The minimum wage in NCR is P610 per day. Even gross, Kuya Rodel is earning well below that.",
+      "theme": "misclassification",
+      "choices": [
+        {
+          "text": "Start keeping your own detailed earnings spreadsheet from Day 1.",
+          "nextNode": "rider_onboard_06",
+          "consequence": "Jake follows Kuya Rodel's example and begins tracking everything.",
+          "scoreChange": 10,
+          "knowledgeGained": "Tracking actual hours worked vs. net earnings can demonstrate that gig workers earn below minimum wage, which strengthens arguments that they should be classified as employees entitled to minimum wage protection under RA 6727."
+        },
+        {
+          "text": "Convince yourself it will be different for you -- you'll hustle harder.",
+          "nextNode": "rider_onboard_06",
+          "consequence": "Jake dismisses the warning and dives in with naive optimism.",
+          "scoreChange": -3,
+          "knowledgeGained": null
+        }
+      ],
+      "isEnding": false
+    },
+    "rider_onboard_06": {
+      "id": "rider_onboard_06",
+      "title": "First Day on the Road",
+      "narrative": "Jake's first day as a DeliverNa rider begins at 10:30 AM on a sweltering Tuesday. He positions himself near the Megamall area in Mandaluyong, where restaurants are clustered. The app pings: his first order, a P189 lunch from Jollibee to a condo in Shaw Boulevard. Delivery fee: P49. His cut after the 25% platform commission: P36.75.\n\nHe weaves through the chaotic EDSA traffic, heart pounding as buses swerve and jeepneys stop without warning. He completes the delivery in 22 minutes -- under the app's 30-minute estimate. The customer gives him 5 stars. A small rush of achievement.\n\nBy 9 PM, after nearly 11 hours on the road, Jake has completed 14 deliveries. Gross earnings: P514.50. Minus P180 for gas, P50 for phone data, P30 for water and a piece of bread from 7-Eleven -- his net is P254.50. His back aches, his hands are cramped from gripping the handlebars, and his phone battery is at 3%.\n\nHe does the math. P254.50 for 11 hours. That's P23.14 per hour. Below minimum wage by any measure. But the app notification says: 'Great first day! Keep grinding to unlock BONUS TIER rewards!'",
+      "theme": "algorithmic_management",
+      "choices": [
+        {
+          "text": "Continue riding and hope the earnings improve with experience and bonus tiers.",
+          "nextNode": "rider_daily_01",
+          "consequence": "Jake pushes through, chasing the platform's gamified incentive promises.",
+          "scoreChange": 0,
+          "knowledgeGained": null
+        },
+        {
+          "text": "Post your actual earnings breakdown in the Riders Pilipinas group chat.",
+          "nextNode": "rider_daily_01",
+          "consequence": "Jake's transparency helps other riders see the real numbers behind the platform's promises.",
+          "scoreChange": 8,
+          "knowledgeGained": "Sharing actual earnings data among workers helps counter information asymmetry. Platforms benefit when riders don't compare notes -- transparency is a form of collective power."
+        }
+      ],
+      "isEnding": false
+    },
+    "rider_daily_01": {
+      "id": "rider_daily_01",
+      "title": "The Pay Cut",
+      "narrative": "Three weeks into riding, Jake opens the app one morning to find a notification buried under promotional banners: 'Updated Fee Structure Effective Today.' The base delivery fee has been slashed from P49 to P35 -- a 28.5% cut. His per-delivery take after commission drops from P36.75 to P26.25.\n\nThe Riders Pilipinas Telegram group explodes with angry messages. 'Wala man lang notice!' 'Paano na yung installment ko?' 'Pataas ng pataas presyo ng gas, pababa ng pababa ang bayad!' Kuya Rodel sends a voice message: 'Dalawang taon na ako dito. Dati P65 ang base fee. Ngayon P35 na. Pero yung commission nila, 25% pa rin.'\n\nJake pulls up Section 22.1 of the ToS -- the clause that lets DeliverNa change fees 'at any time without prior notice.' He remembers now. The clause he may or may not have read.\n\nThat afternoon, a message circulates: some riders are planning to gather at the DeliverNa office in BGC to demand an explanation. Others say they should file a complaint with DTI or DOLE. Some say just keep riding -- 'walang magagawa eh.'",
+      "theme": "algorithmic_management",
+      "choices": [
+        {
+          "text": "Join the riders going to the DeliverNa office to demand transparency on the pay cut.",
+          "nextNode": "rider_daily_02",
+          "consequence": "Jake joins dozens of riders at the BGC office, making their grievance visible.",
+          "scoreChange": 12,
+          "knowledgeGained": "Under the Labor Code, workers have the right to self-organization and collective action. Even if classified as contractors, the constitutional right to peaceful assembly (Art. III, Sec. 4) protects public gatherings."
+        },
+        {
+          "text": "Work extra hours to compensate for the lower per-delivery rate.",
+          "nextNode": "rider_daily_03",
+          "consequence": "Jake extends his riding hours from 11 to 14 hours per day, increasing fatigue and risk.",
+          "scoreChange": -5,
+          "knowledgeGained": null
+        },
+        {
+          "text": "Research if DOLE can intervene on pay rates for gig workers.",
+          "nextNode": "rider_daily_04",
+          "consequence": "Jake discovers existing government mechanisms that might help.",
+          "scoreChange": 10,
+          "knowledgeGained": "DOLE has issued Labor Advisories on the gig economy. If an employer-employee relationship exists, minimum wage laws under RA 6727 apply regardless of what the contract says."
+        }
+      ],
+      "isEnding": false
+    },
+    "rider_daily_02": {
+      "id": "rider_daily_02",
+      "title": "Confrontation at the BGC Office",
+      "narrative": "Around 50 riders gather outside the DeliverNa Philippines office in a commercial building along 26th Street in BGC, Taguig. They park their motorcycles in a line, thermal bags displayed prominently. Some carry handwritten signs: 'Hindi Kami Robot -- Rider Kami!' and 'P35 Para Sa Buhay Namin?'\n\nBuilding security tries to disperse them, but the riders remain peaceful and orderly on the public sidewalk. A DeliverNa community manager eventually comes out -- a young woman with a tablet, visibly nervous. 'The fee adjustment is part of a system-wide optimization to ensure platform sustainability,' she reads from what appears to be a prepared script.\n\n'Sustainability for who?' Kuya Rodel responds. 'Kayo nag-IPO last year, billions ang valuation niyo. Kami naman, P200 ang net per day.'\n\nA reporter from Rappler arrives -- someone had tipped off the media. The community manager retreats inside. Within an hour, DeliverNa issues a vague statement about 'reviewing rider concerns' and 'ongoing dialogue with our delivery partner community.'",
+      "theme": "algorithmic_management",
+      "choices": [
+        {
+          "text": "Talk to the Rappler reporter and share your actual earnings data on record.",
+          "nextNode": "rider_daily_05",
+          "consequence": "Jake's story gets published, bringing public attention to rider exploitation.",
+          "scoreChange": 13,
+          "knowledgeGained": "Media coverage of labor issues creates public pressure and can push both companies and regulators to act. Freedom of the press (Art. III, Sec. 4) and freedom of expression protect workers who speak publicly about their conditions."
+        },
+        {
+          "text": "Stay in the background -- you're worried about retaliation from the platform.",
+          "nextNode": "rider_daily_05",
+          "consequence": "Jake supports the protest but keeps a low profile to protect his account.",
+          "scoreChange": 3,
+          "knowledgeGained": "Fear of retaliation is a major barrier to worker organizing. Under the Labor Code, any form of retaliation against workers for exercising their rights is an unfair labor practice (Art. 259)."
+        }
+      ],
+      "isEnding": false
+    },
+    "rider_daily_03": {
+      "id": "rider_daily_03",
+      "title": "The Grind Intensifies",
+      "narrative": "Jake starts waking up at 5 AM to catch the breakfast rush and doesn't stop until 11 PM or later. He's now doing 14-16 hour days, six days a week. His daily deliveries increase from 14 to 20-22, but his net earnings only climb to around P320-P350 per day after expenses.\n\nThe exhaustion is crushing. He nearly rear-ends a truck on C5 one evening when his eyes droop for a split second. He's surviving on energy drinks and lugaw from a street vendor near his staging area in Ortigas. His weight drops. His nanay notices the dark circles under his eyes.\n\nThe app keeps pushing notifications: 'Complete 5 more deliveries to unlock your DAILY BONUS of P75!' The gamification feels like a trap -- he's always just a few deliveries away from a bonus that barely covers his gas.\n\nOne night, riding home along Shaw Boulevard at midnight, he sees another rider pulled over on the side of the road, sitting on the curb with his head in his hands. Jake stops. The rider, barely 20, says he's been riding for 18 hours straight. 'Hindi ko na kaya, kuya. Pero hindi ko rin kayang huminto.'",
+      "theme": "algorithmic_management",
+      "choices": [
+        {
+          "text": "Help the exhausted rider and commit to setting healthier work limits for yourself.",
+          "nextNode": "rider_daily_05",
+          "consequence": "Jake realizes the unsustainability of the grind and starts being more strategic.",
+          "scoreChange": 7,
+          "knowledgeGained": "Under RA 11058 (Occupational Safety and Health Standards Act), all workers -- including those in non-traditional arrangements -- are entitled to a safe working environment. Fatigue-related accidents are an occupational safety issue."
+        },
+        {
+          "text": "Keep pushing -- you can rest when you've saved enough.",
+          "nextNode": "rider_daily_06",
+          "consequence": "Jake continues the punishing schedule, putting himself at increasing risk.",
+          "scoreChange": -7,
+          "knowledgeGained": null
+        }
+      ],
+      "isEnding": false
+    },
+    "rider_daily_04": {
+      "id": "rider_daily_04",
+      "title": "Researching Legal Options",
+      "narrative": "Jake visits the DOLE NCR office in Intramuros during a rare day off. The waiting area is packed -- mostly factory workers and construction laborers. When he finally speaks to a labor officer, he explains his situation.\n\nThe officer listens carefully. 'Marami na kaming naririnig na ganyang kwento,' she says. 'The classification of platform workers is a gray area, but DOLE has been studying it. If you can show that the platform controls the means and methods of your work -- not just the result -- there may be grounds to argue employer-employee relationship.'\n\nShe gives Jake a pamphlet about DOLE's Single Entry Approach (SEnA) -- a mandatory 30-day conciliation-mediation process before formal labor cases. She also mentions DOLE Department Order No. 174 on contracting and subcontracting. 'If the platform is found to be a labor-only contractor, then all riders would be considered regular employees.'\n\nThe officer adds: 'In the meantime, you can register for voluntary SSS coverage under RA 11199. It won't solve everything, but at least you'll have some social protection.'",
+      "theme": "misclassification",
+      "choices": [
+        {
+          "text": "File a request for SEnA conciliation-mediation with DOLE.",
+          "nextNode": "rider_daily_05",
+          "consequence": "Jake formally engages the government dispute resolution process.",
+          "scoreChange": 14,
+          "knowledgeGained": "DOLE's SEnA (Single Entry Approach) under RA 10396 is a free, mandatory 30-day conciliation-mediation process. It's faster and cheaper than going directly to the NLRC, and settlement agreements are enforceable."
+        },
+        {
+          "text": "Register for voluntary SSS coverage first while considering further legal action.",
+          "nextNode": "rider_daily_05",
+          "consequence": "Jake takes a practical step to protect himself while weighing his options.",
+          "scoreChange": 9,
+          "knowledgeGained": "Under RA 11199 (Social Security Act of 2018), self-employed and voluntary members can register for SSS coverage. Monthly contributions start at P580 for the minimum bracket, providing sickness, disability, maternity, and death benefits."
+        }
+      ],
+      "isEnding": false
+    },
+    "rider_daily_05": {
+      "id": "rider_daily_05",
+      "title": "The Rating Trap",
+      "narrative": "A month in, Jake's rider rating drops from 4.8 to 4.3 stars after a string of bad luck: a restaurant took 25 minutes to prepare an order (customer blamed Jake), a customer entered the wrong address and rated him 1 star when the delivery was late, and the app glitched during a delivery causing a 'late completion' flag.\n\nThe consequences are immediate. With a rating below 4.5, Jake loses 'priority rider' status. His order queue dries up -- he goes from receiving a ping every 5-8 minutes to waiting 20-30 minutes between orders. His daily delivery count drops to 8-10, and earnings crash to P180-P220 per day gross.\n\nThe app shows a cheerful message: 'Improve your rating to unlock more orders! Tips: Be faster, smile more, double-check orders!' There's no appeals process, no way to dispute unfair ratings, and no mechanism to remove ratings caused by restaurant delays or app errors.\n\nJake realizes the rating system isn't just feedback -- it's a control mechanism. Perform exactly as the algorithm demands, or starve. The platform doesn't fire you. It just stops giving you work.",
+      "theme": "algorithmic_management",
+      "choices": [
+        {
+          "text": "Document the unfair rating system and propose a rider appeals process to DeliverNa.",
+          "nextNode": "rider_daily_06",
+          "consequence": "Jake drafts a formal letter with evidence of rating system flaws.",
+          "scoreChange": 10,
+          "knowledgeGained": "Algorithmic management that penalizes workers for factors beyond their control may constitute constructive dismissal. If the platform effectively prevents you from working by manipulating the algorithm, this could be challenged as illegal dismissal under Art. 297 of the Labor Code."
+        },
+        {
+          "text": "Work even harder to bring your rating back up -- take every order, no matter how far.",
+          "nextNode": "rider_daily_06",
+          "consequence": "Jake accepts unprofitable long-distance deliveries trying to recover his rating.",
+          "scoreChange": -4,
+          "knowledgeGained": null
+        }
+      ],
+      "isEnding": false
+    },
+    "rider_daily_06": {
+      "id": "rider_daily_06",
+      "title": "Typhoon Signal No. 2",
+      "narrative": "Typhoon Dagundong makes landfall near Aurora province, and PAGASA raises Signal No. 2 over Metro Manila. Rain hammers the city, flooding streets in low-lying areas of Mandaluyong and Pasig. The wind bends trees sideways. MMDA advises people to stay indoors.\n\nBut Jake's phone buzzes relentlessly. DeliverNa has activated 'Storm Surge Pricing' -- delivery fees jump to P85 per order, nearly triple the reduced base rate. The app notification reads: 'High demand! Maximize your earnings today!' There's a special badge: 'Storm Warrior' for riders who complete 15+ deliveries during the typhoon.\n\nBut the real pressure is subtler. A small notification at the bottom of the screen: 'Note: Rider priority scores may be affected by availability during high-demand periods.' In other words: if you don't ride during the typhoon, your score drops and you'll get fewer orders for days afterward.\n\nThe Telegram group is split. Some riders are already out there, posting videos of flooded streets. Others share news about a rider in Quezon City who was electrocuted by a downed power line during the last typhoon.",
+      "theme": "no_benefits",
+      "choices": [
+        {
+          "text": "Refuse to ride -- no amount of money is worth risking your life in a typhoon.",
+          "nextNode": "rider_accident_01",
+          "consequence": "Jake stays home, accepting the hit to his priority score to protect his safety.",
+          "scoreChange": 12,
+          "knowledgeGained": "Under RA 11058 (Occupational Safety and Health Act), workers cannot be required to work in conditions that pose imminent danger. Even gig workers should not be coerced into unsafe work through algorithmic penalties."
+        },
+        {
+          "text": "Ride during the typhoon to earn the surge pricing and keep your priority score.",
+          "nextNode": "rider_accident_01",
+          "consequence": "Jake rides through dangerous conditions, pushed by financial desperation and algorithmic pressure.",
+          "scoreChange": -8,
+          "knowledgeGained": null
+        },
+        {
+          "text": "Coordinate with other riders to collectively go offline during the typhoon and post about it publicly.",
+          "nextNode": "rider_accident_01",
+          "consequence": "A group of riders publicly refuses to ride, highlighting the platform's dangerous incentive structure.",
+          "scoreChange": 15,
+          "knowledgeGained": "Collective refusal to work in unsafe conditions is a protected form of concerted activity. RA 11058 Sec. 5 states that workers shall have the right to refuse unsafe work without threat of reprisal."
+        }
+      ],
+      "isEnding": false
+    },
+    "rider_accident_01": {
+      "id": "rider_accident_01",
+      "title": "The Accident",
+      "narrative": "Two months into his DeliverNa career, on a Thursday evening during rush hour, Jake is making a delivery along 5th Avenue in BGC. He's carrying a P680 sushi order to a condo in Burgos Circle. The app's timer shows 8 minutes remaining on the delivery estimate.\n\nA white SUV runs a red light at the intersection of 5th Avenue and 28th Street. Jake swerves to avoid it but clips the SUV's bumper. He's thrown from his motorcycle, skidding across the asphalt. His thermal bag flies open, scattering sushi containers across the road.\n\nWhen Jake opens his eyes, he's on the ground. His left arm is bent at a wrong angle -- fractured. Road rash covers his right leg. His motorcycle's front fork is bent, the headlight shattered. A crowd gathers. Someone calls an ambulance.\n\nThrough the pain, Jake's first instinct is to check his phone. The app is still running. A notification: 'Delivery overdue. Customer has been refunded. A P500 cancellation penalty has been applied to your account.' His eyes blur with tears -- from pain and from the sheer injustice of it.",
+      "theme": "accident_liability",
+      "choices": [
+        {
+          "text": "Call the DeliverNa hotline immediately to report the accident and demand they take responsibility.",
+          "nextNode": "rider_accident_02",
+          "consequence": "Jake tries to hold the platform accountable while still at the scene.",
+          "scoreChange": 10,
+          "knowledgeGained": "Report workplace accidents immediately and in writing. Under the Employees' Compensation Commission (ECC) rules, work-related injuries must be reported promptly. Even as a gig worker, documenting the accident creates a record."
+        },
+        {
+          "text": "Focus on getting medical help first -- deal with the platform later.",
+          "nextNode": "rider_accident_03",
+          "consequence": "Jake prioritizes his health, which is the right immediate choice but delays the paper trail.",
+          "scoreChange": 5,
+          "knowledgeGained": "Your health comes first, but try to have someone photograph the scene, get witness information, and note the time and location. This evidence will be important for any future claim."
+        },
+        {
+          "text": "Accept that this is the risk of being a rider -- you're an independent contractor after all.",
+          "nextNode": "rider_accident_03",
+          "consequence": "Jake internalizes the platform's messaging that he bears all the risk.",
+          "scoreChange": -8,
+          "knowledgeGained": null
+        }
+      ],
+      "isEnding": false
+    },
+    "rider_accident_02": {
+      "id": "rider_accident_02",
+      "title": "The Platform's Response",
+      "narrative": "From the ambulance, Jake calls the DeliverNa rider support hotline. After 12 minutes on hold listening to upbeat music, a support agent answers. Jake explains he was in an accident while making a delivery.\n\n'I'm sorry to hear that, sir. Are you okay?' the agent asks. 'Let me check your account.' A pause. 'Sir, I can see the cancelled delivery. I can waive the P500 penalty as a one-time courtesy. Regarding medical expenses, unfortunately, our Delivery Partner Agreement states that as an independent contractor, you are responsible for your own insurance and medical costs.'\n\nJake protests: 'I was delivering YOUR customer's order, using YOUR app, following YOUR route, wearing YOUR uniform. How am I not your responsibility?'\n\nThe agent, sounding genuinely sympathetic but helpless, says: 'Sir, I understand your frustration. I can escalate this to our Partner Relations team. They will contact you within 5-7 business days. In the meantime, I recommend you file a police report for insurance purposes.'\n\nFive to seven business days. Jake is being loaded into an ambulance with a fractured arm and the platform is giving him a customer service timeline.",
+      "theme": "accident_liability",
+      "choices": [
+        {
+          "text": "Demand a supervisor and insist on a formal, written response about accident liability.",
+          "nextNode": "rider_accident_04",
+          "consequence": "Jake escalates aggressively, creating a documented trail of the platform's refusal.",
+          "scoreChange": 12,
+          "knowledgeGained": "Always get responses in writing -- emails, chat transcripts, or recorded calls. Verbal promises have weak evidentiary value. Written refusals to provide benefits can be used as evidence in labor cases."
+        },
+        {
+          "text": "Accept the penalty waiver and hang up to focus on getting medical treatment.",
+          "nextNode": "rider_accident_04",
+          "consequence": "Jake loses a chance to create an immediate record but focuses on recovery.",
+          "scoreChange": 2,
+          "knowledgeGained": null
+        }
+      ],
+      "isEnding": false
+    },
+    "rider_accident_03": {
+      "id": "rider_accident_03",
+      "title": "The Emergency Room",
+      "narrative": "Jake is brought to the Taguig-Pateros District Hospital emergency room. The initial assessment: a closed fracture of the left radius, multiple contusions, and deep road rash requiring debridement. The ER doctor says he needs surgery to set the bone -- a metal plate and screws.\n\nThe hospital cashier presents the estimate: ER fees P3,500, X-ray P1,800, surgery P45,000-P65,000, medications P5,000-P8,000, room and board (3-4 days) P12,000-P16,000. Total estimated cost: P67,300 to P94,300.\n\nJake stares at the numbers. He has P8,200 in his savings. No SSS. No PhilHealth. No ECC. No HMO. Nothing. Because he's an 'independent contractor,' none of the mandatory employer contributions that every regular employee gets were ever made for him.\n\nHis nanay arrives at the hospital, crying. His younger sister, a call center agent, offers to lend P15,000 from her savings. His tito in Bulacan can maybe send P10,000. But they're still massively short. And this doesn't even account for the motorcycle repair -- estimated at P18,000 -- or the weeks of lost income while he recovers.",
+      "theme": "no_benefits",
+      "choices": [
+        {
+          "text": "Apply for PhilHealth coverage retroactively as a self-employed individual to offset hospital costs.",
+          "nextNode": "rider_accident_04",
+          "consequence": "Jake explores whether he can still access government health insurance.",
+          "scoreChange": 8,
+          "knowledgeGained": "PhilHealth allows retroactive enrollment for the informal sector, but benefits may be limited for the first few months. The PhilHealth Z-benefit package covers certain catastrophic conditions. For gig workers, registering early is critical."
+        },
+        {
+          "text": "Start a GoFundMe/GCash fundraiser and share your story on social media.",
+          "nextNode": "rider_accident_04",
+          "consequence": "Jake's story gains traction online, highlighting the human cost of gig misclassification.",
+          "scoreChange": 6,
+          "knowledgeGained": "While crowdfunding can provide immediate relief, it should not replace systemic protections. The need for gig workers to fundraise for accident costs is itself evidence of the failure of the contractor classification model."
+        },
+        {
+          "text": "Borrow from a 5-6 lending scheme to cover the immediate bills.",
+          "nextNode": "rider_accident_05",
+          "consequence": "Jake falls into a high-interest debt trap on top of his injuries.",
+          "scoreChange": -10,
+          "knowledgeGained": null
+        }
+      ],
+      "isEnding": false
+    },
+    "rider_accident_04": {
+      "id": "rider_accident_04",
+      "title": "Building the Case",
+      "narrative": "During his recovery at home -- his arm in a cast, unable to ride -- Jake begins piecing things together with help from Riders Pilipinas and a volunteer lawyer from the Ateneo Human Rights Center who takes pro bono cases for gig workers.\n\nAtty. Marga Santos reviews Jake's situation over a video call. 'Jake, based on what you've told me, you have a strong case for employer-employee relationship under the four-fold test. The platform selects riders, sets and pays fees, can deactivate accounts which is effectively dismissal, and exercises control through the app -- routes, uniforms, timing, ratings.'\n\nShe explains the options: 'We can file a complaint with DOLE for misclassification, which could lead to an order declaring you an employee. If they deactivate your account in retaliation, we file for illegal dismissal with the NLRC. We can also file with the SSS for coverage, arguing the platform should have been contributing all along.'\n\nBut she warns: 'These cases take time -- months, sometimes years. And the platform will have expensive lawyers. We need strong documentation. Do you have records?'",
+      "theme": "misclassification",
+      "choices": [
+        {
+          "text": "Present all documentation -- screenshots, earnings records, the contract analysis -- and agree to file with DOLE.",
+          "nextNode": "rider_accident_06",
+          "consequence": "Jake's careful record-keeping pays off as Atty. Santos sees strong evidence for the case.",
+          "scoreChange": 15,
+          "knowledgeGained": "In labor cases, the burden of proof often shifts to the employer to prove there is NO employer-employee relationship. Strong documentation from the worker's side -- screenshots, payment records, communications -- makes the case much harder to dismiss."
+        },
+        {
+          "text": "Ask Atty. Santos to send a demand letter to DeliverNa first, before formal filing.",
+          "nextNode": "rider_accident_06",
+          "consequence": "A formal demand letter is sent, putting DeliverNa on notice.",
+          "scoreChange": 10,
+          "knowledgeGained": "A demand letter from a lawyer puts the company on notice and creates a formal record. Many disputes are resolved at this stage because companies prefer settlements over the reputational risk of a public labor case."
+        }
+      ],
+      "isEnding": false
+    },
+    "rider_accident_05": {
+      "id": "rider_accident_05",
+      "title": "Drowning in Debt",
+      "narrative": "Desperate and in pain, Jake borrows P50,000 from a lending app at 15% monthly interest -- the kind advertised on Facebook with 'No collateral, instant approval!' The money covers his surgery, but now he owes P57,500 after the first month's interest.\n\nHis motorcycle is still broken, so he can't ride even after his arm heals. He borrows another P20,000 for repairs. Total debt: P77,500 and climbing. The lending app sends threatening text messages when he misses payments. His credit score -- such as it is -- tanks.\n\nMeanwhile, his DeliverNa account sits idle. After 30 days of inactivity, he receives an automated email: 'Your Delivery Partner account has been flagged for extended inactivity. To maintain your account, please complete at least 1 delivery within the next 7 days, or your account may be subject to deactivation.'\n\nThe irony is suffocating. He can't work because he was injured working for them. And now they might deactivate him for not working. His nanay lights a candle at the Mandaluyong Church and prays for a way out.",
+      "theme": "no_benefits",
+      "choices": [
+        {
+          "text": "Reach out to Riders Pilipinas for legal help and learn about your actual options.",
+          "nextNode": "rider_accident_06",
+          "consequence": "Jake finally connects with people who can help him understand his rights.",
+          "scoreChange": 10,
+          "knowledgeGained": "Free legal assistance for workers is available through PAO (Public Attorney's Office), law school legal aid clinics, and labor NGOs. You don't need money to file a labor complaint -- NLRC proceedings are free and non-lawyers can represent themselves."
+        },
+        {
+          "text": "Ask a friend to log into your account and do deliveries to prevent deactivation.",
+          "nextNode": "rider_accident_06",
+          "consequence": "Jake risks violating the ToS, which could be used against him later.",
+          "scoreChange": -5,
+          "knowledgeGained": "Having someone else use your rider account violates most platform ToS and could be used as grounds for legitimate deactivation, weakening any future legal claim you might have."
+        },
+        {
+          "text": "Give up on DeliverNa entirely and try to survive on odd jobs while paying off debt.",
+          "nextNode": "rider_resolve_05",
+          "consequence": "Jake falls through the cracks, returning to the gig economy without any protections.",
+          "scoreChange": -10,
+          "knowledgeGained": null
+        }
+      ],
+      "isEnding": false
+    },
+    "rider_accident_06": {
+      "id": "rider_accident_06",
+      "title": "Account Deactivated",
+      "narrative": "Six weeks after the accident, Jake's arm is healing but still in a sling. He logs into the DeliverNa app to check his account status. The screen shows a red banner: 'Your account has been deactivated due to failure to meet Minimum Activity Requirements (MAR) as outlined in Section 18.4 of the Delivery Partner Agreement.'\n\nHe tries to contact support. After 45 minutes on hold, an agent tells him: 'Sir, deactivation decisions are final. You may re-apply as a new Delivery Partner after a 90-day cooling period, subject to approval.'\n\nRe-apply. After two months of riding for them, getting injured on their delivery, and being abandoned -- they want him to re-apply like he's a stranger.\n\nJake's hands tremble as he screenshots everything. Whether he found legal help early or late, this moment crystallizes something in him. This isn't just about his P35-per-delivery anymore. This is about every rider on every platform in the Philippines being treated as disposable.\n\nHe opens the Riders Pilipinas group chat and types: 'Na-deactivate ako dahil na-aksidente ako habang nagde-deliver. Sino ang sasama sa akin?'",
+      "theme": "unfair_deductions",
+      "choices": [
+        {
+          "text": "Work with Atty. Santos to file an illegal dismissal case with the NLRC.",
+          "nextNode": "rider_organize_01",
+          "consequence": "Jake takes formal legal action, arguing that account deactivation equals illegal dismissal.",
+          "scoreChange": 15,
+          "knowledgeGained": "If an employer-employee relationship is proven, account deactivation without just or authorized cause and due process constitutes illegal dismissal under Art. 297-299 of the Labor Code. The remedy includes reinstatement and full back wages."
+        },
+        {
+          "text": "Focus on organizing riders first -- build collective power before filing individual cases.",
+          "nextNode": "rider_organize_01",
+          "consequence": "Jake channels his anger into movement-building, strengthening the cause for all riders.",
+          "scoreChange": 12,
+          "knowledgeGained": "Collective action is often more effective than individual cases. A single worker's complaint can be dismissed, but a coordinated effort involving multiple riders with documented evidence creates systemic pressure for change."
+        }
+      ],
+      "isEnding": false
+    },
+    "rider_organize_01": {
+      "id": "rider_organize_01",
+      "title": "The Movement Begins",
+      "narrative": "Jake's post in the Riders Pilipinas chat goes viral within the delivery rider community. Within 48 hours, over 200 riders share their own stories -- deactivated for low ratings caused by app glitches, injured with no support, paying penalties for restaurant delays that aren't their fault.\n\nA core group of 15 riders begins meeting at a Ministop near Boni MRT station every Thursday evening. Jake, despite his injury, becomes a de facto coordinator. The group includes riders from DeliverNa, FoodGrab, and PadelEats -- the three biggest platforms in Metro Manila. Their stories are almost identical across all three apps.\n\nAtty. Santos advises them: 'If you want to organize formally, you have options. You can register as a workers' association with DOLE, even without being recognized as employees. You can also form a cooperative. For collective bargaining, you'd need to be recognized as employees first.'\n\nThe group debates strategy. Some want immediate action -- a mass log-off to pressure the platforms. Others want to build their case methodically before going public. One rider suggests reaching out to Senator Risa Hontiveros, who has filed bills on gig worker protection.",
+      "theme": "misclassification",
+      "choices": [
+        {
+          "text": "Register as a formal workers' association with DOLE while building the legal case.",
+          "nextNode": "rider_organize_02",
+          "consequence": "The group takes a structured, legally sound approach to organizing.",
+          "scoreChange": 14,
+          "knowledgeGained": "Under DOLE Department Order No. 40-03, workers' associations can be registered even without formal employer-employee relationships. Registration gives legal personality, protects members, and enables the group to negotiate as a recognized body."
+        },
+        {
+          "text": "Plan the mass log-off protest immediately to get public attention while momentum is high.",
+          "nextNode": "rider_organize_03",
+          "consequence": "The group prioritizes visible action to pressure platforms and attract media coverage.",
+          "scoreChange": 9,
+          "knowledgeGained": "Direct action can create urgency, but it also carries risks. Without a formal organizational structure, individual members are more vulnerable to platform retaliation."
+        }
+      ],
+      "isEnding": false
+    },
+    "rider_organize_02": {
+      "id": "rider_organize_02",
+      "title": "Formalizing the Association",
+      "narrative": "The group decides to register as 'Samahan ng mga Delivery Riders ng Metro Manila' (SDRM) with the DOLE Bureau of Labor Relations. Atty. Santos guides them through the requirements: a constitution and bylaws, list of officers and members (minimum 20), minutes of the organizational meeting, and a registration fee.\n\nJake is elected Vice President -- he wanted to be less visible, but the group insisted. They gather 47 initial members across the three platforms, complete with signed membership forms. The registration process takes three weeks.\n\nOnce registered, SDRM has legal standing to file collective complaints, represent members in DOLE proceedings, and negotiate with platforms. They also open a small mutual aid fund -- each member contributes P100 per week for an emergency fund to help riders injured on the job.\n\nThe platforms notice. Jake receives an email from DeliverNa's legal team -- not about his deactivation, but a general notice sent to 'all Delivery Partners' reminding them that 'any coordinated action to manipulate platform availability may result in account suspension under Section 34.2 of the Delivery Partner Agreement.'\n\nThe message is clear: organize, and we'll cut you off.",
+      "theme": "misclassification",
+      "choices": [
+        {
+          "text": "Report the threatening email to DOLE as interference with the right to self-organization.",
+          "nextNode": "rider_organize_04",
+          "consequence": "SDRM formally accuses DeliverNa of unfair labor practice through intimidation.",
+          "scoreChange": 15,
+          "knowledgeGained": "Threatening workers for organizing is an unfair labor practice under Art. 259 of the Labor Code. Even if rider employment status is disputed, the constitutional right to self-organization (Art. XIII, Sec. 3) applies to all workers, not just employees."
+        },
+        {
+          "text": "Ignore the threat and proceed with organizing quietly to avoid provoking the platform.",
+          "nextNode": "rider_organize_04",
+          "consequence": "SDRM continues building membership but loses the chance to establish a legal precedent against intimidation.",
+          "scoreChange": 4,
+          "knowledgeGained": "While caution has value, documenting and reporting threats of retaliation creates legal precedent and strengthens the broader case for rider rights."
+        }
+      ],
+      "isEnding": false
+    },
+    "rider_organize_03": {
+      "id": "rider_organize_03",
+      "title": "The Log-Off Protest",
+      "narrative": "On a Saturday at 11:30 AM -- peak lunch delivery time -- over 300 riders across Metro Manila simultaneously go offline on all three major platforms. The hashtag #RidersLogOff trends on Twitter Philippines within the hour.\n\nThe effect is immediate. Customers in BGC, Makati, and Ortigas report delivery wait times jumping from 20 minutes to over an hour. Restaurants call the platforms complaining about unfulfilled orders. The three platforms' customer service lines are overwhelmed.\n\nJake, watching from his apartment with his arm still healing, coordinates through the Telegram group. Riders at strategic locations -- Mall of Asia, Eastwood, UP Town Center -- hold their thermal bags upside down in solidarity while livestreaming on Facebook.\n\nBy 2 PM, GMA News, ABS-CBN, and multiple online outlets are covering the story. A DOLE Undersecretary issues a statement: 'We are monitoring the situation and call on all parties to engage in constructive dialogue. DOLE is ready to facilitate mediation.'\n\nBut by 3 PM, the first reports come in: 12 riders who participated have been deactivated by DeliverNa for 'coordinated manipulation of platform availability.'",
+      "theme": "algorithmic_management",
+      "choices": [
+        {
+          "text": "Immediately file unfair labor practice complaints for the 12 deactivated riders and demand DOLE intervention.",
+          "nextNode": "rider_organize_04",
+          "consequence": "The deactivations become the centerpiece of a larger legal battle over rider rights.",
+          "scoreChange": 14,
+          "knowledgeGained": "Mass deactivation in response to collective action is strong evidence of unfair labor practice. Under Art. 259 of the Labor Code, dismissal or discrimination for union activities is illegal. This also suggests the platform has the 'power of dismissal' -- one of the four tests for employment."
+        },
+        {
+          "text": "Use the media attention to push for emergency legislation protecting gig workers.",
+          "nextNode": "rider_organize_04",
+          "consequence": "The movement pivots from platform negotiation to legislative advocacy.",
+          "scoreChange": 11,
+          "knowledgeGained": "Legislative advocacy is a long-term strategy. Several bills on gig worker protection have been filed in Congress, including proposals for mandatory accident insurance, minimum per-delivery rates, and clear employment classification standards."
+        }
+      ],
+      "isEnding": false
+    },
+    "rider_organize_04": {
+      "id": "rider_organize_04",
+      "title": "DOLE Steps In",
+      "narrative": "The combination of media coverage, formal complaints, and public pressure forces DOLE to act. Secretary of Labor Maria Elena Quisumbing calls a tripartite conference -- representatives from the delivery platforms, the rider associations (including SDRM), and DOLE mediators -- at the DOLE Central Office in Intramuros.\n\nJake attends in his sling, flanked by Atty. Santos and Kuya Rodel. Across the table are lawyers from DeliverNa, FoodGrab, and PadelEats in expensive suits. The atmosphere is tense.\n\nDOLE presents its findings from a preliminary investigation: 'Based on interviews with 87 riders across three platforms, site inspections of platform hubs, and review of Delivery Partner Agreements, the Department has found indicators consistent with an employer-employee relationship under the four-fold test, particularly regarding the element of control.'\n\nThe platform lawyers push back hard: 'These are technology companies providing a marketplace. Riders are micro-entrepreneurs who use our platform as a tool. The flexibility to go online or offline at will is dispositive of their independent contractor status.'\n\nThe DOLE mediator responds: 'Flexibility of schedule alone does not negate an employment relationship if the other elements of control are present.'",
+      "theme": "misclassification",
+      "choices": [
+        {
+          "text": "Push for a formal DOLE ruling declaring riders as employees, not just mediation.",
+          "nextNode": "rider_organize_05",
+          "consequence": "SDRM pushes for a binding determination that would set a precedent for all platform riders.",
+          "scoreChange": 13,
+          "knowledgeGained": "A DOLE Secretary's ruling on employment status can be appealed to the Court of Appeals and ultimately the Supreme Court. A favorable ruling would set a precedent affecting all gig workers in the Philippines."
+        },
+        {
+          "text": "Negotiate a compromise: riders remain contractors but with mandatory minimum protections.",
+          "nextNode": "rider_organize_06",
+          "consequence": "SDRM accepts a middle-ground solution that provides some immediate relief.",
+          "scoreChange": 6,
+          "knowledgeGained": "Compromise agreements can provide faster relief but may also entrench the contractor classification. Some countries have created a 'third category' of worker with partial protections, though labor advocates argue this undermines full employee rights."
+        }
+      ],
+      "isEnding": false
+    },
+    "rider_organize_05": {
+      "id": "rider_organize_05",
+      "title": "The DOLE Ruling",
+      "narrative": "After weeks of hearings, document reviews, and rider testimonies, the DOLE Regional Director for NCR issues an order: delivery riders on all three platforms are found to be employees, not independent contractors, based on the totality of the four-fold test.\n\nThe ruling states: 'The platforms exercise control over the means and methods of the riders' work through algorithmic assignment, route designation, uniform requirements, performance rating systems, and the power to deactivate accounts. The designation as independent contractors in the Delivery Partner Agreements does not override the actual nature of the working relationship.'\n\nThe order directs all three platforms to: (1) regularize all active riders as employees within 60 days; (2) remit SSS, PhilHealth, and Pag-IBIG contributions retroactive to each rider's start date; (3) pay minimum wage differentials; (4) reinstate all riders deactivated in connection with the protest or organizational activities.\n\nThe platforms immediately announce they will appeal to the NLRC. Their stock prices dip. Headlines across Asia cover the story. Jake's phone won't stop ringing with interview requests.",
+      "theme": "misclassification",
+      "choices": [
+        {
+          "text": "Continue the fight through the NLRC appeal process while pushing for legislative reform.",
+          "nextNode": "rider_resolve_01",
+          "consequence": "Jake and SDRM prepare for a long legal battle while also advocating for new laws.",
+          "scoreChange": 15,
+          "knowledgeGained": "DOLE orders can be appealed to the NLRC (National Labor Relations Commission), then to the Court of Appeals, and finally to the Supreme Court. The legal process can take years, but each favorable ruling builds stronger precedent."
+        },
+        {
+          "text": "Use the ruling as leverage to negotiate directly with the platforms for immediate relief.",
+          "nextNode": "rider_resolve_02",
+          "consequence": "SDRM negotiates from a position of strength with the DOLE ruling backing them.",
+          "scoreChange": 10,
+          "knowledgeGained": "A favorable government ruling, even if under appeal, significantly strengthens a worker group's bargaining position. Companies often prefer to settle rather than risk a final unfavorable precedent."
+        },
+        {
+          "text": "Use the momentum to launch a rider-owned cooperative delivery platform.",
+          "nextNode": "rider_resolve_06",
+          "consequence": "Jake and SDRM channel the movement's energy into building an alternative to corporate platforms.",
+          "scoreChange": 14,
+          "knowledgeGained": "Platform cooperatives are an alternative to corporate gig platforms. Under RA 9520 (Philippine Cooperative Code), workers can form cooperatives registered with the CDA, giving them democratic ownership, shared profits, and collective social security enrollment."
+        }
+      ],
+      "isEnding": false
+    },
+    "rider_organize_06": {
+      "id": "rider_organize_06",
+      "title": "The Compromise Offer",
+      "narrative": "The platforms offer a counter-proposal during mediation: riders remain classified as independent contractors, but the platforms will provide: (1) mandatory accident insurance up to P100,000 per incident, (2) a minimum base fee of P40 per delivery (up from P35), (3) a rating appeals process, (4) 24-hour advance notice for any fee changes, and (5) a P500/month health subsidy.\n\nAtty. Santos is cautious: 'This is better than nothing, but it's a fraction of what you'd get as employees. SSS alone would give you sickness, disability, and retirement benefits. PhilHealth would cover hospitalization. Minimum wage for NCR is P610/day. This offer doesn't come close.'\n\nKuya Rodel, pragmatic as always, says: 'Atty, tama po kayo. Pero ilang taon bago mag-decide ang Supreme Court? Samantalang yung mga kasamahan natin, nagde-deliver pa rin nang walang insurance ngayon na.'\n\nThe group is divided. The younger riders want to fight for full employee status. The older riders with families want immediate relief, even if partial.",
+      "theme": "no_benefits",
+      "choices": [
+        {
+          "text": "Accept the compromise as an interim measure but continue pursuing full employee classification.",
+          "nextNode": "rider_resolve_03",
+          "consequence": "SDRM takes the immediate gains while keeping the bigger fight alive.",
+          "scoreChange": 9,
+          "knowledgeGained": "Interim agreements can provide immediate relief while preserving the right to pursue larger claims. Always ensure that any settlement explicitly states it does not constitute a waiver of future rights or claims."
+        },
+        {
+          "text": "Reject the compromise and push for the full DOLE ruling on employment status.",
+          "nextNode": "rider_resolve_04",
+          "consequence": "SDRM gambles on the legal process, refusing to settle for less than full rights.",
+          "scoreChange": 11,
+          "knowledgeGained": "Rejecting a compromise offer is a strategic risk. If the legal case succeeds, the gains are much larger. If it fails or takes years, riders continue without any protections in the meantime."
+        }
+      ],
+      "isEnding": false
+    },
+    "rider_resolve_01": {
+      "id": "rider_resolve_01",
+      "title": "The Long Fight",
+      "narrative": "The NLRC upholds the DOLE ruling after eight months of proceedings. The platforms appeal to the Court of Appeals. Meanwhile, SDRM, now with over 2,000 members, works with sympathetic legislators to draft the 'Gig Workers Protection Act' -- a bill that would create clear classification standards, mandate social security enrollment, require accident insurance, and establish minimum per-delivery rates.\n\nJake, his arm now fully healed, has become a recognized labor advocate. He testifies before the Senate Committee on Labor, Employment and Human Resources Development. 'Kami po ay hindi robot. Hindi po kami algorithm. Tao po kami na may pamilya, may pangarap, may karapatan,' he tells the senators. The clip goes viral.\n\nEighteen months after his accident, the Court of Appeals affirms the NLRC ruling. DeliverNa files with the Supreme Court. But the tide is turning -- public opinion overwhelmingly supports the riders, and two of the three platforms begin quietly implementing some employee-like protections to preempt the legislation.\n\nJake still rides occasionally -- for a smaller, rider-owned cooperative delivery platform that SDRM helped launch. But his real work now is advocacy. He never forgot that night on Shaw Boulevard, and the young rider who couldn't stop because he couldn't afford to.",
+      "theme": "misclassification",
+      "choices": [],
+      "isEnding": true
+    },
+    "rider_resolve_02": {
+      "id": "rider_resolve_02",
+      "title": "Negotiated Victory",
+      "narrative": "With the DOLE ruling in hand, SDRM negotiates aggressively. After three rounds of mediation, DeliverNa agrees to a landmark settlement: riders will be reclassified as 'regular employees on flexible schedules.' They will receive SSS, PhilHealth, and Pag-IBIG contributions; a guaranteed minimum of P610 per day when active on the platform; accident and health insurance; and the right to form a union.\n\nFoodGrab and PadelEats follow with similar agreements within two months, partly due to public pressure and partly because the DOLE ruling signals which way the legal wind is blowing.\n\nJake's back pay and SSS contributions, calculated retroactively from his start date, total P47,200. His medical bills from the accident are reimbursed at P68,000. His account is reactivated with full priority status restored.\n\nBut more importantly, over 50,000 delivery riders across Metro Manila now have social security coverage, accident insurance, and a guaranteed minimum income. Jake looks at his SSS ID card and thinks about what Kuya Rodel said two years ago in the Pasig parking lot: 'Track everything, hijo. Someday it will matter.'\n\nIt mattered.\n\n--- END ---\n\nResources for Philippine gig workers:\n- DOLE Hotline: 1349\n- NLRC: nlrc.dole.gov.ph\n- SSS: sss.gov.ph (Voluntary Coverage)\n- PhilHealth: philhealth.gov.ph (Informal Economy Program)\n- PAO (Free Legal Aid): pao.gov.ph\n- Riders Pilipinas (Advocacy): facebook.com/RidersPilipinas",
+      "theme": "misclassification",
+      "choices": [],
+      "isEnding": true
+    },
+    "rider_resolve_03": {
+      "id": "rider_resolve_03",
+      "title": "Partial Win, Ongoing Struggle",
+      "narrative": "SDRM accepts the platforms' compromise: accident insurance, a slightly higher base fee, a rating appeals process, and the health subsidy. The agreement is signed at the DOLE office with media present. It's a real, tangible improvement for thousands of riders.\n\nBut the classification question remains unresolved. Riders are still 'independent contractors.' There's still no SSS, no PhilHealth employer share, no 13th month pay, no separation pay. The accident insurance has a P100,000 cap -- Jake's actual medical costs were close to that from a single incident.\n\nJake uses his share of the settlement -- P12,500 covering his old medical bills -- to register for voluntary SSS and PhilHealth coverage. He pays P580/month for SSS and P400/month for PhilHealth out of his own pocket. It's money he can barely afford, but the accident taught him that riding without coverage is like riding without a helmet.\n\nHe continues to serve as SDRM Vice President, and the association continues to push for full employee recognition. The fight isn't over. But 3,000 riders now have accident insurance they didn't have before, and a rating appeals process that has already reversed 450 unfair deactivations.\n\nProgress is slow. But it is progress.\n\n--- END ---\n\nResources for Philippine gig workers:\n- DOLE Hotline: 1349\n- SSS Voluntary Registration: sss.gov.ph\n- PhilHealth Informal Economy: philhealth.gov.ph\n- PAO Free Legal Aid: pao.gov.ph\n- Ateneo Human Rights Center: ateneo.edu/ahr\n- SENTRO (Labor Center): sentro.org",
+      "theme": "no_benefits",
+      "choices": [],
+      "isEnding": true
+    },
+    "rider_resolve_04": {
+      "id": "rider_resolve_04",
+      "title": "All or Nothing",
+      "narrative": "SDRM rejects the compromise and pushes DOLE for a formal ruling. The process drags on for months. Meanwhile, the platforms implement a new strategy: they increase the commission from 25% to 30%, citing 'insurance and compliance costs,' effectively cutting rider earnings further. They also begin hiring new riders aggressively, diluting the delivery pool and reducing each rider's order volume.\n\nSome SDRM members defect, frustrated by the lack of immediate results. Membership drops from 2,000 to 1,100. The platforms quietly settle individual complaints with cash offers and NDAs, picking off riders one by one.\n\nBut the core group holds firm. After 14 months, DOLE finally issues its ruling: riders are employees. The platforms appeal. The legal battle continues.\n\nJake, exhausted but unbroken, now works part-time as a motorcycle mechanic while pursuing the case. He tells a reporter: 'Mas madali sana kung tinanggap namin yung compromise. Pero kung tinanggap namin, wala nang magbabago para sa mga rider na darating pagkatapos namin. Yung laban na 'to, hindi lang para sa amin. Para sa lahat ng gig worker sa Pilipinas.'\n\nThe Supreme Court will eventually decide. History is watching.\n\n--- END ---\n\nResources for Philippine gig workers:\n- DOLE Hotline: 1349\n- NLRC: nlrc.dole.gov.ph\n- PAO Free Legal Aid: pao.gov.ph\n- National Union of Workers in Hotel, Restaurant and Allied Industries (NUWHRAIN)\n- Kilusang Mayo Uno (KMU): kmu.ph\n- SENTRO: sentro.org",
+      "theme": "misclassification",
+      "choices": [],
+      "isEnding": true
+    },
+    "rider_resolve_05": {
+      "id": "rider_resolve_05",
+      "title": "Back to Square One",
+      "narrative": "Jake never found legal help. He never organized with other riders. After his arm healed, he re-applied to DeliverNa as a 'new' rider -- buying another starter kit for P2,650 because his old thermal bag was destroyed in the accident. His previous earnings history and rating? Gone. He starts from zero.\n\nHe's now P95,000 in debt -- medical bills, motorcycle repairs, lending app loans with compounding interest. He rides 14 hours a day, six days a week. The base fee has dropped to P32. Gas prices have gone up. His daily net hovers around P200.\n\nHe doesn't talk about the accident. He doesn't talk about rights. He just rides. When new riders ask him for advice, he says two things: 'Save up for SSS and PhilHealth on your own. And don't ever think the platform cares about you.'\n\nOne evening, he sees a Facebook ad from DeliverNa: 'Join the DeliverNa family! Be your own boss!' He stares at the word 'family' for a long time, then keeps scrolling.\n\n--- END ---\n\nIt doesn't have to be this way. Know your rights:\n- DOLE Hotline: 1349\n- NLRC: nlrc.dole.gov.ph\n- SSS Voluntary Coverage: sss.gov.ph\n- PhilHealth: philhealth.gov.ph\n- PAO Free Legal Aid: pao.gov.ph\n- Ateneo Human Rights Center Legal Aid\n- Riders Pilipinas: facebook.com/RidersPilipinas",
+      "theme": "no_benefits",
+      "choices": [],
+      "isEnding": true
+    },
+    "rider_resolve_06": {
+      "id": "rider_resolve_06",
+      "title": "A New Kind of Platform",
+      "narrative": "Jake's journey through exploitation, injury, and organizing leads him to a radical idea: what if riders owned the platform themselves?\n\nWith guidance from the Cooperative Development Authority (CDA) and seed funding from a social enterprise incubator, SDRM launches 'HatidKo' -- a rider-owned cooperative delivery platform. Each rider-member contributes P2,000 as a share, giving them voting rights and a share of profits. The platform takes only a 10% service fee instead of 25-30%. All rider-members are enrolled in SSS, PhilHealth, and Pag-IBIG through the cooperative.\n\nHatidKo starts small -- 200 riders serving Mandaluyong, Pasig, and parts of Quezon City. They partner with local restaurants and sari-sari stores. The technology isn't as slick as DeliverNa's, but the riders earn 40-60% more per delivery, have accident insurance, and actually have a voice in how the platform operates.\n\nJake becomes the cooperative's General Manager. At the first general assembly, he addresses the rider-members: 'Sa DeliverNa, tayo ang product. Sa HatidKo, tayo ang may-ari. Hindi na tayo pipila para sa algorithm. Tayo na ang magde-decide para sa sarili natin.'\n\nThe big platforms still dominate. But HatidKo proves that another model is possible.\n\n--- END ---\n\nResources:\n- Cooperative Development Authority: cda.gov.ph\n- DOLE Hotline: 1349\n- SSS: sss.gov.ph\n- PhilHealth: philhealth.gov.ph\n- Platform Cooperativism Consortium: platform.coop\n- IT for Change: itforchange.net",
+      "theme": "misclassification",
+      "choices": [],
+      "isEnding": true
+    }
+  },
+  "startNode": "rider_start"
+}
