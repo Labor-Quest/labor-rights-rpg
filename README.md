@@ -80,4 +80,4 @@ Labor Rights RPG is a solo-developed social impact project aimed at educating Fi
 
 ## License
 
-[MIT](LICENSE) &copy; 2026 Joshua Cuballes
+[MIT](LICENSE) &copy; 2026 Labor Quest
