@@ -1,8 +1,40 @@
 node_modules/
 dist/
-.env
-.env.local
 *.log
+
+# Environment and secrets — never commit these
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.cert
+*.p12
+*.pfx
+*.jks
+*credentials*.json
+*service-account*.json
+*secret*
+!SECURITY.md
+
+# Google Cloud
+.gcloud/
+gcloud-key.json
+
+# Firebase
+.firebase/
+firebase-debug.log
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
 
 # Keep generated data in git (it's the whole point — no runtime AI costs)
 # data/scenarios/*.json is tracked

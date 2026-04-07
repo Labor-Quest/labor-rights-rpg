@@ -44,9 +44,9 @@ labor-rights-rpg/
 │   └── index.html                    # OG meta tags, Google Fonts, manifest + apple-touch-icon
 ├── server/                           # Express API (port 8080)
 │   └── src/
-│       ├── index.js                  # Server entry, serves React build in prod
+│       ├── index.js                  # Server entry: helmet, rate limiting, CORS, error handler
 │       └── routes/scenarios.js       # /api/characters, /api/scenarios/:id, /api/resources
-│                                     # Supports ?locale=tl (tries {id}.tl.json first)
+│                                     # Whitelisted character IDs + locales, path traversal protection
 ├── data/scenarios/                   # Pre-generated content (committed to git)
 │   ├── characters.json               # 6 characters with category field
 │   ├── characters.tl.json            # Tagalog character descriptions
@@ -56,9 +56,11 @@ labor-rights-rpg/
 ├── scripts/
 │   ├── generate.js                   # Claude API content generator (optional, not needed)
 │   └── package.json                  # @anthropic-ai/sdk dependency
-├── Dockerfile                        # Cloud Run container
+├── Dockerfile                        # Multi-stage Cloud Run container (non-root)
 ├── firebase.json                     # Firebase Hosting → Cloud Run proxy
 ├── deploy.sh                         # One-command GCP deployment
+├── .env.example                      # Env var template (never commit .env)
+├── SECURITY.md                       # Security documentation
 └── package.json                      # Root: concurrently runs server + client
 ```
 
@@ -114,7 +116,9 @@ Ending nodes have `"isEnding": true` and empty/no choices.
 2. Create `data/scenarios/{id}.json` with 30+ nodes following the structure above
 3. Create `data/scenarios/{id}.tl.json` (Tagalog translation, same structure/IDs)
 4. Add icon to `ROLE_ICONS` in `client/src/screens/CharacterSelect.jsx`
-5. Existing categories: overseas, gig, office, industrial, domestic. Add new ones in `CATEGORIES` array in CharacterSelect.jsx and `ui.json` translations.
+5. **Add the character ID to `VALID_CHARACTERS` in `server/src/routes/scenarios.js`** (security whitelist)
+6. Existing categories: overseas, gig, office, industrial, domestic. Add new ones in `CATEGORIES` array in CharacterSelect.jsx and `ui.json` translations.
+7. If adding a new locale beyond `en`/`tl`, add it to `VALID_LOCALES` in `server/src/routes/scenarios.js`.
 
 ## i18n System
 - Lightweight, no library — just React context + JSON file
@@ -139,9 +143,17 @@ Ending nodes have `"isEnding": true` and empty/no choices.
 - Icons: simple gold background with dark "LR" text (192px + 512px)
 - Build outputs: `sw.js`, `registerSW.js` (auto-injected into index.html)
 
+## Security
+- **Helmet.js**: CSP, HSTS, X-Content-Type-Options, X-Frame-Options, Referrer-Policy, COOP, CORP
+- **Rate limiting**: 300 req/15min per IP on `/api/*` (express-rate-limit)
+- **CORS**: Restricted to Firebase domains in prod, localhost in dev, GET-only
+- **Path traversal prevention**: Character IDs and locales are whitelisted; resolved paths verified against DATA_DIR
+- **Error handling**: Generic error messages, no stack traces in production, `dotfiles: "deny"` on static serving
+- **Docker**: Multi-stage build, non-root user, production deps only
+- **Privacy**: Zero analytics, zero cookies, zero PII — see `SECURITY.md` for full details
+
 ## What's NOT Done Yet
 - **GCP deployment**: Dockerfile and configs exist but not deployed yet
-- **Analytics**: No tracking of play sessions, scores, or dropout points
 - **More characters**: Could add fisher folk, jeepney driver, vendor, farm worker
 
 ## Design Decisions
