@@ -49,6 +49,26 @@ const EPILOGUES = {
     en: "You survived, barely. Money is tight, confidence gone, body worn. But you're still here. Sometimes just surviving the system is its own kind of strength. Rest. Then figure out the next step.",
     tl: "Nakaligtas ka, halos hindi. Kapos sa pera, wala nang tapang, pagod ang katawan. Pero nandito ka pa rin. Minsan, ang makaligtas lang sa sistema ay sarili na nitong lakas. Magpahinga ka. Tapos isipin ang susunod na hakbang."
   },
+  "stable_aware_worn": {
+    en: "You picked your battles wisely and your savings show it, even if the work wore you down. You didn't fight every fight — but the ones you fought, you fought smart. That's not compromise. That's strategy.",
+    tl: "Matalino kang pumili ng laban at kitang-kita sa ipon mo, kahit napagod ka sa trabaho. Hindi mo nilaban lahat — pero ang mga nilaban mo, matalino ang laban. Hindi iyon kompromiso. Iyon ay diskarte."
+  },
+  "surviving_empowered_healthy": {
+    en: "Money is tight, but your spirit is unbroken and your health held. You stood up when it mattered. The financial struggle is real — but you have something money can't buy: the courage to fight for what's right.",
+    tl: "Kapos sa pera, pero matapang ka pa rin at malusog. Tumayo ka noong kailangan. Totoo ang hirap sa pera — pero mayroon kang hindi mabibili ng pera: ang tapang na lumaban para sa tama."
+  },
+  "surviving_aware_worn": {
+    en: "Not enough money, not enough rest, but enough knowledge to know this isn't how it should be. You see the system clearly now. That clarity will serve you — and maybe others — when the next fight comes.",
+    tl: "Kulang sa pera, kulang sa pahinga, pero sapat ang kaalaman para malaman na hindi dapat ganito. Malinaw mo nang nakikita ang sistema. Makakatulong ang linaw na iyan — sa iyo at sa iba — sa susunod na laban."
+  },
+  "indebted_empowered_worn": {
+    en: "In debt and exhausted, but unbroken. You paid a steep price for standing up — and you'd probably do it again. That stubbornness is not a flaw. It's the reason labor rights exist at all.",
+    tl: "May utang at pagod, pero hindi sumuko. Malaki ang ibinayad mo sa pagtindig — at malamang gagawin mo ulit. Hindi kapintasan ang katigasan ng ulo mo. Iyan ang dahilan kung bakit mayroon tayong karapatan sa paggawa."
+  },
+  "indebted_aware_worn": {
+    en: "Debt, exhaustion, and a head full of knowledge you wish you'd had sooner. The system ground you down, but it didn't keep you ignorant. Share what you've learned. It might save someone else the same price you paid.",
+    tl: "Utang, pagod, at kaalamang sana mas maaga mong nalaman. Giniling ka ng sistema, pero hindi ka nito pinanatiling mangmang. Ibahagi mo ang natutunan mo. Baka maligtas nito ang iba sa parehong presyong binayaran mo."
+  },
 };
 
 // Fallback for combinations without specific text

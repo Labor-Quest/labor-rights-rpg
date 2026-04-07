@@ -90,7 +90,7 @@ export default function GameScreen({ character, onGameEnd }) {
   }
 
   function handleDismissEvent() {
-    const event = gameState.pendingExpense || gameState.pendingCrisis;
+    const event = gameState.pendingExpense || gameState.pendingCrisis || gameState.pendingBoost;
     if (event) {
       setGameState(applyEvent(gameState, event));
     }
@@ -104,21 +104,36 @@ export default function GameScreen({ character, onGameEnd }) {
   if (error) return <div className="loading">{t("game.error")}: {error}</div>;
   if (!gameState || !scenarioData) return null;
 
-  // Show event interstitials
-  const pendingEvent = gameState.pendingExpense || gameState.pendingCrisis;
+  // Show event interstitials (expense, crisis, or boost)
+  const pendingEvent = gameState.pendingExpense || gameState.pendingCrisis || gameState.pendingBoost;
   if (pendingEvent) {
     const eventText = locale === "tl" ? pendingEvent.tl : pendingEvent.en;
     const isExpense = !!gameState.pendingExpense;
+    const isBoost = !!gameState.pendingBoost;
+    const eventType = isBoost ? "event-boost" : (isExpense ? "event-expense" : "event-crisis");
+    const eventLabel = isBoost ? t("event.boost") : (isExpense ? t("event.expense") : t("event.crisis"));
+
+    // Build stat change summary for boosts
+    const boostChanges = isBoost ? [
+      pendingEvent.peraGain && `+₱${pendingEvent.peraGain.toLocaleString()}`,
+      pendingEvent.confidenceGain && `+${pendingEvent.confidenceGain} ${t("stat.confidence")}`,
+      pendingEvent.wellbeingGain && `+${pendingEvent.wellbeingGain} ${t("stat.wellbeing")}`,
+    ].filter(Boolean).join("  ") : null;
+
     return (
       <div className="fade-in">
-        <div className={`event-interstitial ${isExpense ? "event-expense" : "event-crisis"}`}>
-          <h3>{isExpense ? t("event.expense") : t("event.crisis")}</h3>
+        <div className={`event-interstitial ${eventType}`}>
+          <h3>{eventLabel}</h3>
           <p style={{ color: "var(--text-primary)", fontSize: "1.05rem", lineHeight: 1.8 }}>
             {eventText}
           </p>
-          <div className="event-cost">
-            -₱{pendingEvent.cost?.toLocaleString()}
-          </div>
+          {isBoost ? (
+            <div className="event-gain">{boostChanges}</div>
+          ) : (
+            <div className="event-cost">
+              -₱{pendingEvent.cost?.toLocaleString()}
+            </div>
+          )}
           <button className="btn btn-primary" onClick={handleDismissEvent} style={{ marginTop: "1rem", width: "100%" }}>
             {t("event.continue")}
           </button>
@@ -133,6 +148,19 @@ export default function GameScreen({ character, onGameEnd }) {
   if (!currentNode) {
     return <div className="loading">{t("game.brokenLink")}</div>;
   }
+
+  // Detect theme change for chapter markers
+  const prevTheme = gameState.history.length > 0 ? gameState.history[gameState.history.length - 1].theme : null;
+  const currentTheme = currentNode.theme;
+  const isNewChapter = currentTheme && prevTheme && currentTheme !== prevTheme;
+  // Count distinct themes seen so far for chapter numbering
+  const seenThemes = [];
+  for (const h of gameState.history) {
+    if (h.theme && (seenThemes.length === 0 || seenThemes[seenThemes.length - 1] !== h.theme)) {
+      seenThemes.push(h.theme);
+    }
+  }
+  const chapterNumber = seenThemes.length + 1;
 
   // Evaluate choice availability
   const choiceResults = currentNode.choices && !currentNode.isEnding
@@ -152,6 +180,16 @@ export default function GameScreen({ character, onGameEnd }) {
       <div className="progress-bar" style={{ marginBottom: "1rem" }}>
         <div className="progress-fill" style={{ width: `${currentNode.isEnding ? 100 : progressPct}%` }} />
       </div>
+
+      {/* Chapter transition marker */}
+      {isNewChapter && (
+        <div className="chapter-marker">
+          <div className="chapter-marker-label">{t("chapter.label")} {chapterNumber}</div>
+          <div className="chapter-marker-theme">
+            {THEME_ICONS[currentTheme] || "\uD83D\uDCCC"} {t(`chapter.theme.${currentTheme}`) || currentTheme?.replace(/_/g, " ")}
+          </div>
+        </div>
+      )}
 
       {/* Knowledge unlock celebration */}
       {showKnowledgeUnlock && (

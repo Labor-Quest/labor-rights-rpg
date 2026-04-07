@@ -4,7 +4,7 @@
  */
 
 import { CHARACTER_STARTING_STATS, deriveStatChanges, applyStatChanges } from "./StatRules.js";
-import { EXPENSE_INTERVAL, getExpenseEvent, rollForCrisis, applyDebtInterest } from "./CrisisEngine.js";
+import { EXPENSE_INTERVAL, getExpenseEvent, rollForCrisis, rollForBoost, applyDebtInterest } from "./CrisisEngine.js";
 
 export function createGameState(characterId, scenarioData) {
   const startingStats = CHARACTER_STARTING_STATS[characterId] || { pera: 5000, confidence: 50, wellbeing: 75 };
@@ -24,6 +24,7 @@ export function createGameState(characterId, scenarioData) {
     nodesSinceLastExpense: 0,
     pendingExpense: null,
     pendingCrisis: null,
+    pendingBoost: null,
     forceWorstChoice: false,
   };
 }
@@ -75,6 +76,12 @@ export function makeChoice(scenarioData, gameState, choiceIndex) {
     pendingCrisis = rollForCrisis(newStats.wellbeing, gameState.characterId);
   }
 
+  // Check for morale boost (don't stack with expense or crisis)
+  let pendingBoost = null;
+  if (!pendingExpense && !pendingCrisis) {
+    pendingBoost = rollForBoost(newStats, gameState.characterId);
+  }
+
   return {
     ...gameState,
     currentNodeId: choice.nextNode,
@@ -88,6 +95,7 @@ export function makeChoice(scenarioData, gameState, choiceIndex) {
         choiceText: choice.text,
         consequence: choice.consequence,
         scoreChange,
+        theme: currentNode.theme,
       },
     ],
     knowledgeGained: newKnowledge,
@@ -97,14 +105,37 @@ export function makeChoice(scenarioData, gameState, choiceIndex) {
     nodesSinceLastExpense,
     pendingExpense,
     pendingCrisis,
+    pendingBoost,
     forceWorstChoice: pendingCrisis?.forceWorstChoice || false,
   };
 }
 
 /**
- * Apply an expense or crisis event to the game state.
+ * Apply an expense, crisis, or boost event to the game state.
  */
 export function applyEvent(gameState, event) {
+  // Boost events have gains instead of costs
+  if (event.peraGain || event.confidenceGain || event.wellbeingGain) {
+    const peraGain = event.peraGain || 0;
+    const confidenceGain = event.confidenceGain || 0;
+    const wellbeingGain = event.wellbeingGain || 0;
+    return {
+      ...gameState,
+      stats: {
+        pera: gameState.stats.pera + peraGain,
+        confidence: Math.min(100, gameState.stats.confidence + confidenceGain),
+        wellbeing: Math.min(100, gameState.stats.wellbeing + wellbeingGain),
+      },
+      lastStatChanges: {
+        pera: peraGain,
+        confidence: confidenceGain,
+        wellbeing: wellbeingGain,
+      },
+      pendingBoost: null,
+    };
+  }
+
+  // Expense/crisis events have costs
   const cost = event.cost || 0;
   const wellbeingLoss = event.wellbeingLoss || 0;
   const confidenceLoss = event.confidenceLoss || 0;

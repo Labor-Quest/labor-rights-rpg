@@ -792,12 +792,51 @@ p {
   background: rgba(224, 80, 80, 0.05);
 }
 
+.event-boost {
+  border-color: var(--positive);
+  background: rgba(64, 192, 128, 0.05);
+}
+
 .event-cost {
   font-family: var(--font-mono);
   font-size: 1.5rem;
   font-weight: 700;
   color: var(--negative);
   margin-top: 1rem;
+}
+
+.event-gain {
+  font-family: var(--font-mono);
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--positive);
+  margin-top: 1rem;
+}
+
+/* Chapter transition card */
+.chapter-marker {
+  text-align: center;
+  padding: 0.75rem 1rem;
+  margin-bottom: 1rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--bg-card);
+  animation: fadeIn 0.4s ease-out;
+}
+
+.chapter-marker-label {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--text-dim);
+  margin-bottom: 0.2rem;
+}
+
+.chapter-marker-theme {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--accent);
 }
 
 /* Mobile: stats HUD */

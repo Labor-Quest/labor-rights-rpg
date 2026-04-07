@@ -105,6 +105,76 @@ export function rollForCrisis(wellbeing, characterId) {
   return { ...pool[Math.floor(Math.random() * pool.length)], tier };
 }
 
+// Positive events that trigger when stats are healthy (symmetric to crises)
+const BOOST_POOLS = {
+  generic: {
+    social: [
+      { en: "A coworker thanks you for speaking up at the meeting. You feel less alone.", tl: "Nagpasalamat ang isang katrabaho dahil nagsalita ka sa meeting. Hindi ka na nag-iisa.", confidenceGain: 3, wellbeingGain: 2 },
+      { en: "A neighbor asks for your advice about a workplace problem. Your knowledge matters.", tl: "Humingi ng payo ang kapitbahay mo tungkol sa problema sa trabaho. Mahalaga ang kaalaman mo.", confidenceGain: 4, wellbeingGain: 1 },
+      { en: "You slept well for the first time in weeks. Small wins count.", tl: "Nakatulog ka nang mahimbing sa unang pagkakataon sa ilang linggo. Mahalaga ang maliliit na panalo.", confidenceGain: 1, wellbeingGain: 4 },
+    ],
+    financial: [
+      { en: "A relative paid back ₱500 they owed you. Every bit helps.", tl: "Nagbayad ang kamag-anak mo ng ₱500 na utang. Malaking tulong kahit maliit.", peraGain: 500, wellbeingGain: 1 },
+      { en: "You found a cheaper route to work this month. Saved ₱300.", tl: "Nakahanap ka ng mas murang ruta papasok. Nakatipid ka ng ₱300.", peraGain: 300, wellbeingGain: 1 },
+    ],
+  },
+  ofw: {
+    social: [
+      { en: "Your family sent a video message. Miguel is doing well in school.", tl: "Nagpadala ng video message ang pamilya mo. Magaling si Miguel sa school.", confidenceGain: 2, wellbeingGain: 5 },
+    ],
+  },
+  rider: {
+    social: [
+      { en: "A regular customer gave you a ₱100 tip and a thank you note.", tl: "Binigyan ka ng ₱100 tip at thank you note ng suki mo.", peraGain: 100, confidenceGain: 2, wellbeingGain: 2 },
+    ],
+  },
+  bpo: {
+    social: [
+      { en: "Your team hit their metrics this month. The team lead acknowledged your effort.", tl: "Naabot ng team mo ang target ngayong buwan. Kinilala ng team lead ang effort mo.", confidenceGain: 4, wellbeingGain: 2 },
+    ],
+  },
+  construction: {
+    social: [
+      { en: "The foreman noticed your careful work and told the others to follow your example.", tl: "Napansin ng foreman ang maayos mong trabaho at sinabi sa iba na tularan ka.", confidenceGain: 5, wellbeingGain: 1 },
+    ],
+  },
+  driver: {
+    social: [
+      { en: "Lorna packed your favorite lunch today. You ate well for once.", tl: "Naghanda si Lorna ng paborito mong baon. Kumain ka nang maayos.", confidenceGain: 1, wellbeingGain: 4 },
+    ],
+  },
+  maid: {
+    social: [
+      { en: "The children in the household drew you a thank-you card. It made your day.", tl: "Gumawa ng thank-you card para sa iyo ang mga bata sa bahay. Naging masaya ang araw mo.", confidenceGain: 3, wellbeingGain: 3 },
+    ],
+  },
+};
+
+/**
+ * Roll for a morale boost event based on stats.
+ * Triggers when confidence > 55 or wellbeing > 55 (things are going okay).
+ * Returns null (no boost) or a boost event object.
+ */
+export function rollForBoost(stats, characterId) {
+  // Only trigger when at least one stat is in a good place
+  const { confidence, wellbeing } = stats;
+  if (confidence <= 55 && wellbeing <= 55) return null;
+
+  // 15% chance per eligible node
+  if (Math.random() > 0.15) return null;
+
+  // Pick pool type: financial boost if confidence is high, social if wellbeing is high
+  const poolType = confidence > wellbeing ? "social" : (Math.random() > 0.5 ? "financial" : "social");
+
+  // Try character-specific pool first, fall back to generic
+  const charPool = BOOST_POOLS[characterId];
+  const genericPool = BOOST_POOLS.generic;
+  const pool = (charPool && charPool[poolType]) || genericPool[poolType] || genericPool.social;
+  if (!pool || pool.length === 0) return null;
+
+  return { ...pool[Math.floor(Math.random() * pool.length)] };
+}
+
 /**
  * Apply debt interest when in debt during an expense cycle.
  */

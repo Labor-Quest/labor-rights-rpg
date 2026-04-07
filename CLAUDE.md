@@ -30,16 +30,16 @@ labor-rights-rpg/
 │   │   │   ├── GameEngine.js         # Core: state, scoring, stats, expenses, crises
 │   │   │   ├── StatRules.js          # Theme-to-stat-weight mapping, stat derivation
 │   │   │   ├── GatingRules.js        # Choice gating: lock choices based on stats
-│   │   │   ├── CrisisEngine.js       # Monthly expenses, health crises, debt system
-│   │   │   ├── EndingModifiers.js    # 27 stat-based ending epilogues (EN + TL)
+│   │   │   ├── CrisisEngine.js       # Monthly expenses, health crises, debt system, morale boosts
+│   │   │   ├── EndingModifiers.js    # 27 stat-based ending epilogues (EN + TL), 14 hand-written
 │   │   │   └── api.js                # Fetch wrapper, passes ?locale= param
 │   │   ├── i18n/
 │   │   │   └── ui.json               # UI string translations (en + tl, ~70 keys)
 │   │   ├── screens/
 │   │   │   ├── TitleScreen.jsx       # Landing page
 │   │   │   ├── CharacterSelect.jsx   # Grouped by category, collapsible sections
-│   │   │   ├── GameScreen.jsx        # Narrative reveal + gated choices + stat HUD
-│   │   │   └── EndScreen.jsx         # Stats + epilogue + knowledge + resources
+│   │   │   ├── GameScreen.jsx        # Narrative reveal + gated choices + stat HUD + chapter markers
+│   │   │   └── EndScreen.jsx         # Stats + epilogue + story summary + knowledge + resources
 │   │   ├── styles/global.css         # Dark theme, animations, RPG UI styles
 │   │   ├── App.jsx                   # Screen router, wraps 3 context providers
 │   │   └── main.jsx                  # Entry point
@@ -108,11 +108,18 @@ Stats are derived from existing `scoreChange` + `theme` fields via `StatRules.js
 - Every 5 nodes: mandatory expense event (per-character, e.g., "Installment ng Honda TMX: ₱4,800")
 - Debt locks ALL money-requiring choices (filing complaints, lawyers, transport)
 - Health crises: wellbeing < 40 → random illness events that cost money
+- **Morale boosts**: confidence or wellbeing > 55 → 15% chance of positive event per node (e.g., "A coworker thanks you for speaking up"). Character-specific pools (social + financial). Symmetric to crisis system architecture.
 - This creates the real tension: "I know my rights but can't afford to use them"
+
+### Chapter System
+- Theme changes between nodes trigger a **chapter transition card** ("Kabanata 3: Wage Theft") with theme icon
+- Chapter numbering counts distinct consecutive theme transitions
+- All 20 themes have EN + TL translations in `ui.json` under `chapter.theme.*` keys
 
 ### Endings
 - 27 ending modifiers (3×3×3: financial × agency × health)
-- Epilogue paragraph in EN + TL contextualizes the ending based on final stats
+- 14 hand-written epilogues for key combinations (EN + TL), fallback composition for the rest
+- Epilogue paragraph contextualizes the ending based on final stats
 
 ## Scenario JSON Structure
 Each character has a `.json` (English) and `.tl.json` (Tagalog) file:
@@ -147,12 +154,12 @@ Each character has a `.json` (English) and `.tl.json` (Tagalog) file:
 4. Add icon to `ROLE_ICONS` in `client/src/screens/CharacterSelect.jsx`
 5. **Add the character ID to `VALID_CHARACTERS` in `server/src/routes/scenarios.js`** (security whitelist)
 6. **Add starting money to `CHARACTER_STARTING_STATS` in `client/src/engine/StatRules.js`**
-7. **Add expense events to `EXPENSE_EVENTS` in `client/src/engine/CrisisEngine.js`**
+7. **Add expense events to `EXPENSE_EVENTS` and boost events to `BOOST_POOLS` in `client/src/engine/CrisisEngine.js`**
 8. Existing categories: overseas, gig, office, industrial, domestic. Add new ones in `CATEGORIES` array in CharacterSelect.jsx and `ui.json` translations.
 
 ## i18n System
 - Lightweight, no library — just React context + JSON file
-- UI strings: `client/src/i18n/ui.json` (keys under "en" and "tl", ~70 keys)
+- UI strings: `client/src/i18n/ui.json` (keys under "en" and "tl", ~110 keys)
 - Use `const { t } = useLanguage()` then `t("key.name")` in components
 - Scenario files: `{id}.json` (English) / `{id}.tl.json` (Tagalog)
 - Server route tries locale-specific file first, falls back to default
@@ -199,9 +206,12 @@ Each character has a `.json` (English) and `.tl.json` (Tagalog) file:
 - **Deploy command**: `bash deploy.sh --skip-setup`
 
 ## What's NOT Done Yet
-- **Custom domain**: laborquest.app (Cloudflare DNS → Firebase Hosting, DNS-only mode)
+- **Trap choices**: 2-3 per character that sound right but backfire (addresses "choices too obvious" feedback)
+- **DOLE realism**: Institutional failure nodes + expanded resources (addresses "DOLE walang silbe" feedback)
+- **Shareable score card**: Canvas-generated share image + challenge URL for competitive replay
+- **Union organizer character**: New character focused on right to organize (Art. 253), based on real playtester experience
+- **More characters**: Could add fisher folk, jeepney driver, vendor, farm worker, HR antagonist
 - **Billing budget alert**: Create at GCP Console ($5/month)
-- **More characters**: Could add fisher folk, jeepney driver, vendor, farm worker
 - **Analytics**: No tracking yet (intentionally — privacy first)
 
 ## Design Principles
