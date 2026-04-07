@@ -1,6 +1,7 @@
 node_modules/
 dist/
 *.log
+*.tgz
 
 # Environment and secrets — never commit these
 .env

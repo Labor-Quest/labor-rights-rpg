@@ -6,12 +6,14 @@ import TitleScreen from "./screens/TitleScreen.jsx";
 import CharacterSelect from "./screens/CharacterSelect.jsx";
 import GameScreen from "./screens/GameScreen.jsx";
 import EndScreen from "./screens/EndScreen.jsx";
+import AboutScreen from "./screens/AboutScreen.jsx";
 
 const SCREENS = {
   TITLE: "title",
   CHARACTER_SELECT: "character_select",
   GAME: "game",
   END: "end",
+  ABOUT: "about",
 };
 
 function FontSizeToggle() {
@@ -106,6 +108,10 @@ function AppContent() {
     setScreen(SCREENS.TITLE);
   }
 
+  function handleAbout() {
+    setScreen(SCREENS.ABOUT);
+  }
+
   return (
     <>
       {screen !== SCREENS.TITLE && (
@@ -122,7 +128,8 @@ function AppContent() {
         </div>
       )}
       <div className="container fade-in" key={screen + (selectedCharacter?.id || "")}>
-        {screen === SCREENS.TITLE && <TitleScreen onStart={handleStart} />}
+        {screen === SCREENS.TITLE && <TitleScreen onStart={handleStart} onAbout={handleAbout} />}
+        {screen === SCREENS.ABOUT && <AboutScreen />}
         {screen === SCREENS.CHARACTER_SELECT && <CharacterSelect onSelect={handleCharacterSelect} />}
         {screen === SCREENS.GAME && (
           <GameScreen character={selectedCharacter} onGameEnd={handleGameEnd} />

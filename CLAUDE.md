@@ -21,6 +21,7 @@ labor-rights-rpg/
 │   ├── src/
 │   │   ├── components/
 │   │   │   ├── NarrativeRevealer.jsx # Paragraph-by-paragraph text reveal
+│   │   │   ├── ShareButtons.jsx      # Copy Link + Facebook + X/Twitter share (EndScreen)
 │   │   │   └── StatDelta.jsx         # Floating +/- stat change animation
 │   │   ├── context/
 │   │   │   ├── FontSizeContext.jsx   # A-/A/A+ font size toggle, localStorage
@@ -34,14 +35,15 @@ labor-rights-rpg/
 │   │   │   ├── EndingModifiers.js    # 27 stat-based ending epilogues (EN + TL), 14 hand-written
 │   │   │   └── api.js                # Fetch wrapper, passes ?locale= param
 │   │   ├── i18n/
-│   │   │   └── ui.json               # UI string translations (en + tl, ~70 keys)
+│   │   │   └── ui.json               # UI string translations (en + tl, ~120 keys)
 │   │   ├── screens/
-│   │   │   ├── TitleScreen.jsx       # Landing page
+│   │   │   ├── TitleScreen.jsx       # Landing page + About link
 │   │   │   ├── CharacterSelect.jsx   # Grouped by category, collapsible sections
 │   │   │   ├── GameScreen.jsx        # Narrative reveal + gated choices + stat HUD + chapter markers
-│   │   │   └── EndScreen.jsx         # Stats + epilogue + story summary + knowledge + resources
+│   │   │   ├── EndScreen.jsx         # Stats + epilogue + story summary + knowledge + share buttons
+│   │   │   └── AboutScreen.jsx       # Mission, builder story, gov resource links, partnership CTA
 │   │   ├── styles/global.css         # Dark theme, animations, RPG UI styles
-│   │   ├── App.jsx                   # Screen router, wraps 3 context providers
+│   │   ├── App.jsx                   # Screen router (title/select/game/end/about), wraps 3 context providers
 │   │   └── main.jsx                  # Entry point
 │   ├── public/
 │   │   ├── manifest.json             # PWA manifest (standalone, theme #f0c040)
@@ -65,6 +67,8 @@ labor-rights-rpg/
 ├── deploy.sh                         # One-command GCP deployment
 ├── .env.example                      # Env var template
 ├── SECURITY.md                       # Security documentation
+├── CONTRIBUTING.md                   # How to add scenarios, submit PRs
+├── LICENSE                           # MIT License
 └── package.json                      # Root: concurrently runs server + client
 ```
 
@@ -159,7 +163,7 @@ Each character has a `.json` (English) and `.tl.json` (Tagalog) file:
 
 ## i18n System
 - Lightweight, no library — just React context + JSON file
-- UI strings: `client/src/i18n/ui.json` (keys under "en" and "tl", ~110 keys)
+- UI strings: `client/src/i18n/ui.json` (keys under "en" and "tl", ~120 keys)
 - Use `const { t } = useLanguage()` then `t("key.name")` in components
 - Scenario files: `{id}.json` (English) / `{id}.tl.json` (Tagalog)
 - Server route tries locale-specific file first, falls back to default
@@ -208,7 +212,7 @@ Each character has a `.json` (English) and `.tl.json` (Tagalog) file:
 ## What's NOT Done Yet
 - **Trap choices**: 2-3 per character that sound right but backfire (addresses "choices too obvious" feedback)
 - **DOLE realism**: Institutional failure nodes + expanded resources (addresses "DOLE walang silbe" feedback)
-- **Shareable score card**: Canvas-generated share image + challenge URL for competitive replay
+- **Shareable score card**: Canvas-generated share image + challenge URL for competitive replay (share buttons with Copy/Facebook/X already built)
 - **Union organizer character**: New character focused on right to organize (Art. 253), based on real playtester experience
 - **More characters**: Could add fisher folk, jeepney driver, vendor, farm worker, HR antagonist
 - **Billing budget alert**: Create at GCP Console ($5/month)

@@ -1,6 +1,6 @@
 import { useLanguage } from "../context/LanguageContext.jsx";
 
-export default function TitleScreen({ onStart }) {
+export default function TitleScreen({ onStart, onAbout }) {
   const { t } = useLanguage();
 
   return (
@@ -34,6 +34,16 @@ export default function TitleScreen({ onStart }) {
             </div>
           </div>
         ))}
+      </div>
+
+      <div style={{ marginTop: "3rem" }}>
+        <button
+          className="btn"
+          onClick={onAbout}
+          style={{ fontSize: "0.85rem", padding: "0.5rem 1.5rem" }}
+        >
+          {t("nav.about")}
+        </button>
       </div>
     </div>
   );

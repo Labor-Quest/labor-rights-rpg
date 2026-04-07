@@ -3,10 +3,10 @@ import { fetchResources } from "../engine/api.js";
 import { useLanguage } from "../context/LanguageContext.jsx";
 import { getScoreGrade, getPlayTime } from "../engine/GameEngine.js";
 import { getEpilogue, classifyEnding } from "../engine/EndingModifiers.js";
+import ShareButtons from "../components/ShareButtons.jsx";
 
 export default function EndScreen({ gameState, character, onRestart }) {
   const [resources, setResources] = useState(null);
-  const [shareMsg, setShareMsg] = useState(null);
   const { t, locale } = useLanguage();
   const grade = getScoreGrade(gameState);
   const gradeLabel = t(`grade.${grade.grade}`);
@@ -14,18 +14,6 @@ export default function EndScreen({ gameState, character, onRestart }) {
   useEffect(() => {
     fetchResources().then(setResources).catch(() => {});
   }, []);
-
-  function handleShare() {
-    const text = `${gradeLabel} (${grade.grade}) — ${character.name} | Labor Rights RPG ${window.location.origin}`;
-    if (navigator.share) {
-      navigator.share({ title: "Labor Rights RPG", text, url: window.location.origin }).catch(() => {});
-    } else {
-      navigator.clipboard.writeText(text).then(() => {
-        setShareMsg(t("end.shareCopied"));
-        setTimeout(() => setShareMsg(null), 2000);
-      }).catch(() => {});
-    }
-  }
 
   return (
     <div>
@@ -61,17 +49,8 @@ export default function EndScreen({ gameState, character, onRestart }) {
           </div>
         </div>
 
-        {/* Share button */}
-        <div style={{ marginTop: "1.5rem" }}>
-          <button className="btn" onClick={handleShare} style={{ fontSize: "0.9rem" }}>
-            {t("end.share")}
-          </button>
-          {shareMsg && (
-            <div style={{ color: "var(--positive)", fontSize: "0.8rem", marginTop: "0.5rem" }}>
-              {shareMsg}
-            </div>
-          )}
-        </div>
+        {/* Share buttons */}
+        <ShareButtons character={character} grade={grade.grade} />
       </div>
 
       {/* RPG Stats summary */}
