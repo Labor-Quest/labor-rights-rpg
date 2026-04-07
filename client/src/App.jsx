@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { FontSizeProvider, useFontSize } from "./context/FontSizeContext.jsx";
 import { LanguageProvider, useLanguage } from "./context/LanguageContext.jsx";
+import { GameSettingsProvider, useGameSettings } from "./context/GameSettingsContext.jsx";
 import TitleScreen from "./screens/TitleScreen.jsx";
 import CharacterSelect from "./screens/CharacterSelect.jsx";
 import GameScreen from "./screens/GameScreen.jsx";
@@ -30,6 +31,24 @@ function FontSizeToggle() {
           {labels[size]}
         </button>
       ))}
+    </div>
+  );
+}
+
+function QuickModeToggle() {
+  const { quickMode, setQuickMode } = useGameSettings();
+  const { t } = useLanguage();
+
+  return (
+    <div className="font-size-toggle">
+      <button
+        className={`font-size-btn ${quickMode ? "font-size-btn-active" : ""}`}
+        onClick={() => setQuickMode(!quickMode)}
+        aria-label="Quick mode"
+        title={quickMode ? t("settings.full") : t("settings.quick")}
+      >
+        {quickMode ? "\u26A1" : "\uD83D\uDCD6"}
+      </button>
     </div>
   );
 }
@@ -93,6 +112,7 @@ function AppContent() {
         <div className="header">
           <span className="header-title">{t("app.title")}</span>
           <div className="header-controls">
+            <QuickModeToggle />
             <LanguageToggle />
             <FontSizeToggle />
             <button className="btn" onClick={handleHome} style={{ padding: "0.4rem 0.8rem", fontSize: "0.8rem" }}>
@@ -123,7 +143,9 @@ export default function App() {
   return (
     <LanguageProvider>
       <FontSizeProvider>
-        <AppContent />
+        <GameSettingsProvider>
+          <AppContent />
+        </GameSettingsProvider>
       </FontSizeProvider>
     </LanguageProvider>
   );

@@ -538,3 +538,274 @@ p {
 .resource-card a:hover {
   text-decoration: underline;
 }
+
+/* ============================================
+   RPG Game Enhancements
+   ============================================ */
+
+/* Narrative progressive reveal */
+.narrative-paragraph-reveal {
+  animation: fadeInParagraph 0.5s ease-out;
+}
+
+@keyframes fadeInParagraph {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.narrative-controls {
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.narrative-continue-btn {
+  width: 100%;
+  min-height: 52px;
+  font-size: 1rem;
+  animation: subtlePulse 2s ease-in-out infinite;
+}
+
+@keyframes subtlePulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(240, 192, 64, 0); }
+  50% { box-shadow: 0 0 0 4px rgba(240, 192, 64, 0.15); }
+}
+
+.narrative-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 0.5rem;
+}
+
+.narrative-progress {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--text-dim);
+}
+
+.narrative-skip {
+  background: none;
+  border: none;
+  color: var(--text-dim);
+  font-family: var(--font-sans);
+  font-size: 0.8rem;
+  cursor: pointer;
+  padding: 0.3rem;
+  text-decoration: underline;
+}
+
+.narrative-skip:hover {
+  color: var(--text-secondary);
+}
+
+/* Scene transitions */
+@keyframes fadeOut {
+  from { opacity: 1; }
+  to { opacity: 0; }
+}
+
+.fade-out {
+  animation: fadeOut 0.3s ease-in forwards;
+}
+
+/* Consequence slide-in */
+.consequence-slide {
+  animation: slideInLeft 0.4s ease-out;
+}
+
+@keyframes slideInLeft {
+  from { opacity: 0; transform: translateX(-20px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+/* Choice selection feedback */
+.choice-selected {
+  background: var(--accent) !important;
+  color: var(--bg) !important;
+  border-color: var(--accent) !important;
+  transform: scale(1.02);
+}
+
+.choice-dimmed {
+  opacity: 0.3;
+  pointer-events: none;
+}
+
+/* Gated/locked choices */
+.choice-locked {
+  opacity: 0.45;
+  border-color: var(--text-dim);
+  cursor: not-allowed;
+  padding: 1rem 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.choice-locked-reason {
+  font-size: 0.8rem;
+  color: var(--negative);
+  font-style: italic;
+  margin-top: 0.25rem;
+}
+
+.choice-locked-req {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  color: var(--text-dim);
+  display: block;
+  margin-top: 0.2rem;
+}
+
+/* Confidence doubt text */
+.choice-doubt {
+  color: var(--text-dim);
+  font-style: italic;
+  font-size: 0.85rem;
+}
+
+/* Knowledge unlock celebration */
+.knowledge-unlock {
+  background: var(--bg-card);
+  border: 2px solid var(--accent);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  animation: knowledgePop 0.5s ease-out;
+  cursor: pointer;
+}
+
+.knowledge-unlock-title {
+  color: var(--accent);
+  text-align: center;
+  margin-bottom: 0.75rem;
+  font-size: 0.85rem;
+}
+
+@keyframes knowledgePop {
+  0% { transform: scale(0.9); opacity: 0; }
+  60% { transform: scale(1.03); }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+/* RPG Stats HUD */
+.stats-hud {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 0.75rem 0;
+  border-top: 1px solid var(--border);
+  margin-top: 1rem;
+  flex-wrap: wrap;
+}
+
+.stat-item {
+  flex: 1;
+  min-width: 3.5rem;
+  text-align: center;
+  position: relative;
+}
+
+.stat-value-row {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.25rem;
+  min-height: 1.5rem;
+}
+
+.stat-value {
+  font-family: var(--font-mono);
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: var(--accent);
+}
+
+.stat-debt {
+  color: var(--negative) !important;
+}
+
+.stat-label {
+  font-family: var(--font-mono);
+  font-size: 0.6rem;
+  color: var(--text-dim);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-top: 0.15rem;
+}
+
+.stat-bar-mini {
+  width: 100%;
+  height: 3px;
+  background: var(--border);
+  border-radius: 2px;
+  overflow: hidden;
+  margin-top: 0.2rem;
+}
+
+.stat-bar-fill {
+  height: 100%;
+  border-radius: 2px;
+  transition: width 0.5s ease, background 0.3s ease;
+}
+
+/* Floating stat delta animation */
+@keyframes floatUp {
+  0% { opacity: 1; transform: translateY(0); }
+  100% { opacity: 0; transform: translateY(-20px); }
+}
+
+.stat-delta {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  font-weight: 600;
+  animation: floatUp 1.5s ease-out forwards;
+  position: absolute;
+  top: -12px;
+  white-space: nowrap;
+}
+
+.stat-delta-positive {
+  color: var(--positive);
+}
+
+.stat-delta-negative {
+  color: var(--negative);
+}
+
+/* Event interstitials (expense / crisis) */
+.event-interstitial {
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 2rem 1.5rem;
+  margin: 2rem 0;
+  text-align: center;
+  animation: fadeIn 0.4s ease-out;
+}
+
+.event-expense {
+  border-color: var(--accent);
+  background: rgba(240, 192, 64, 0.05);
+}
+
+.event-crisis {
+  border-color: var(--negative);
+  background: rgba(224, 80, 80, 0.05);
+}
+
+.event-cost {
+  font-family: var(--font-mono);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--negative);
+  margin-top: 1rem;
+}
+
+/* Mobile: stats HUD */
+@media (max-width: 480px) {
+  .stats-hud {
+    gap: 0.5rem;
+  }
+  .stat-value {
+    font-size: 0.8rem;
+  }
+}

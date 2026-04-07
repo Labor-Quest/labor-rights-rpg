@@ -1,9 +1,13 @@
 /**
- * Core Game Engine — manages scenario state, choices, and scoring.
+ * Core Game Engine — manages scenario state, choices, scoring, and RPG stats.
  * Pure logic, no React dependency.
  */
 
+import { CHARACTER_STARTING_STATS, deriveStatChanges, applyStatChanges } from "./StatRules.js";
+import { EXPENSE_INTERVAL, getExpenseEvent, rollForCrisis, applyDebtInterest } from "./CrisisEngine.js";
+
 export function createGameState(characterId, scenarioData) {
+  const startingStats = CHARACTER_STARTING_STATS[characterId] || { pera: 5000, confidence: 50, wellbeing: 75 };
   return {
     characterId,
     currentNodeId: scenarioData.startNode,
@@ -13,6 +17,14 @@ export function createGameState(characterId, scenarioData) {
     knowledgeGained: [],
     startTime: Date.now(),
     isComplete: false,
+    // RPG stats
+    stats: { ...startingStats },
+    startingStats: { ...startingStats },
+    lastStatChanges: null,
+    nodesSinceLastExpense: 0,
+    pendingExpense: null,
+    pendingCrisis: null,
+    forceWorstChoice: false,
   };
 }
 
@@ -29,19 +41,44 @@ export function makeChoice(scenarioData, gameState, choiceIndex) {
   const choice = currentNode.choices[choiceIndex];
   if (!choice) return gameState;
 
-  // Calculate max possible score from this node
   const bestScore = Math.max(...currentNode.choices.map(c => c.scoreChange || 0));
+  const scoreChange = choice.scoreChange || 0;
+
+  // Derive RPG stat changes from theme + scoreChange
+  const theme = currentNode.theme || "";
+  const statChanges = deriveStatChanges(theme, scoreChange);
+  const newStats = applyStatChanges(gameState.stats, statChanges);
 
   const newKnowledge = choice.knowledgeGained
     ? [...gameState.knowledgeGained, choice.knowledgeGained]
     : gameState.knowledgeGained;
 
   const nextNode = scenarioData.nodes[choice.nextNode];
+  const newNodeCount = gameState.nodesSinceLastExpense + 1;
+
+  // Check for expense interval
+  let pendingExpense = null;
+  let nodesSinceLastExpense = newNodeCount;
+  if (newNodeCount >= EXPENSE_INTERVAL) {
+    pendingExpense = getExpenseEvent(gameState.characterId);
+    // Also apply debt interest if in debt
+    if (newStats.pera < 0) {
+      const interest = applyDebtInterest(newStats.pera);
+      newStats.pera += interest;
+    }
+    nodesSinceLastExpense = 0;
+  }
+
+  // Check for crisis (don't stack with expense on same node)
+  let pendingCrisis = null;
+  if (!pendingExpense) {
+    pendingCrisis = rollForCrisis(newStats.wellbeing, gameState.characterId);
+  }
 
   return {
     ...gameState,
     currentNodeId: choice.nextNode,
-    score: gameState.score + (choice.scoreChange || 0),
+    score: gameState.score + scoreChange,
     maxPossibleScore: gameState.maxPossibleScore + bestScore,
     history: [
       ...gameState.history,
@@ -50,11 +87,42 @@ export function makeChoice(scenarioData, gameState, choiceIndex) {
         nodeTitle: currentNode.title,
         choiceText: choice.text,
         consequence: choice.consequence,
-        scoreChange: choice.scoreChange || 0,
+        scoreChange,
       },
     ],
     knowledgeGained: newKnowledge,
     isComplete: nextNode ? !!nextNode.isEnding : true,
+    stats: newStats,
+    lastStatChanges: statChanges,
+    nodesSinceLastExpense,
+    pendingExpense,
+    pendingCrisis,
+    forceWorstChoice: pendingCrisis?.forceWorstChoice || false,
+  };
+}
+
+/**
+ * Apply an expense or crisis event to the game state.
+ */
+export function applyEvent(gameState, event) {
+  const cost = event.cost || 0;
+  const wellbeingLoss = event.wellbeingLoss || 0;
+  const confidenceLoss = event.confidenceLoss || 0;
+
+  return {
+    ...gameState,
+    stats: {
+      pera: gameState.stats.pera - cost,
+      confidence: Math.max(0, gameState.stats.confidence - confidenceLoss),
+      wellbeing: Math.max(0, gameState.stats.wellbeing - wellbeingLoss),
+    },
+    lastStatChanges: {
+      pera: -cost,
+      confidence: -confidenceLoss,
+      wellbeing: -wellbeingLoss,
+    },
+    pendingExpense: null,
+    pendingCrisis: null,
   };
 }
 

@@ -2,11 +2,12 @@ import { useState, useEffect } from "react";
 import { fetchResources } from "../engine/api.js";
 import { useLanguage } from "../context/LanguageContext.jsx";
 import { getScoreGrade, getPlayTime } from "../engine/GameEngine.js";
+import { getEpilogue, classifyEnding } from "../engine/EndingModifiers.js";
 
 export default function EndScreen({ gameState, character, onRestart }) {
   const [resources, setResources] = useState(null);
   const [shareMsg, setShareMsg] = useState(null);
-  const { t } = useLanguage();
+  const { t, locale } = useLanguage();
   const grade = getScoreGrade(gameState);
   const gradeLabel = t(`grade.${grade.grade}`);
 
@@ -72,6 +73,52 @@ export default function EndScreen({ gameState, character, onRestart }) {
           )}
         </div>
       </div>
+
+      {/* RPG Stats summary */}
+      {gameState.stats && (
+        <div style={{ marginBottom: "2rem" }}>
+          <h3>{t("end.epilogue")}</h3>
+          <div className="stats-hud" style={{ borderTop: "none", marginTop: 0, marginBottom: "1rem" }}>
+            <div className="stat-item">
+              <div className="stat-value-row">
+                <span className={`stat-value ${gameState.stats.pera < 0 ? "stat-debt" : ""}`}>
+                  {gameState.stats.pera < 0 ? "-" : ""}₱{Math.abs(gameState.stats.pera).toLocaleString()}
+                </span>
+              </div>
+              <div className="stat-bar-mini">
+                <div className="stat-bar-fill" style={{
+                  width: `${Math.max(0, Math.min(100, (gameState.stats.pera / (gameState.startingStats?.pera || 10000)) * 50 + 50))}%`,
+                  background: gameState.stats.pera >= 0 ? "var(--accent)" : "var(--negative)"
+                }} />
+              </div>
+              <div className="stat-label">{gameState.stats.pera < 0 ? t("stat.debt") : t("stat.money")}</div>
+            </div>
+            <div className="stat-item">
+              <div className="stat-value-row"><span className="stat-value">{gameState.stats.wellbeing}</span></div>
+              <div className="stat-bar-mini">
+                <div className="stat-bar-fill" style={{
+                  width: `${gameState.stats.wellbeing}%`,
+                  background: gameState.stats.wellbeing > 40 ? "var(--positive)" : "var(--negative)"
+                }} />
+              </div>
+              <div className="stat-label">{t("stat.wellbeing")}</div>
+            </div>
+            <div className="stat-item">
+              <div className="stat-value-row"><span className="stat-value">{gameState.stats.confidence}</span></div>
+              <div className="stat-bar-mini">
+                <div className="stat-bar-fill" style={{
+                  width: `${gameState.stats.confidence}%`,
+                  background: gameState.stats.confidence > 50 ? "var(--info)" : "var(--negative)"
+                }} />
+              </div>
+              <div className="stat-label">{t("stat.confidence")}</div>
+            </div>
+          </div>
+          <div className="consequence consequence-neutral" style={{ animation: "none" }}>
+            {getEpilogue(gameState.stats, locale)}
+          </div>
+        </div>
+      )}
 
       {/* Knowledge gained */}
       {gameState.knowledgeGained.length > 0 && (
