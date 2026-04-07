@@ -35,8 +35,13 @@ labor-rights-rpg/
 │   │   ├── styles/global.css         # Dark theme, 3 breakpoints (480/768/1024)
 │   │   ├── App.jsx                   # Screen router, wraps FontSize + Language providers
 │   │   └── main.jsx                  # Entry point
-│   ├── vite.config.js                # Proxies /api to :8080
-│   └── index.html                    # OG meta tags, Google Fonts
+│   ├── public/
+│   │   ├── manifest.json             # PWA manifest (standalone, theme #f0c040)
+│   │   └── icons/
+│   │       ├── icon-192.png          # App icon 192x192 (gold bg + "LR" text)
+│   │       └── icon-512.png          # App icon 512x512
+│   ├── vite.config.js                # Proxies /api to :8080, vite-plugin-pwa config
+│   └── index.html                    # OG meta tags, Google Fonts, manifest + apple-touch-icon
 ├── server/                           # Express API (port 8080)
 │   └── src/
 │       ├── index.js                  # Server entry, serves React build in prod
@@ -126,12 +131,18 @@ Ending nodes have `"isEnding": true` and empty/no choices.
 - Min touch targets: 48px for choice buttons, 44px for regular buttons
 - 3 responsive breakpoints: 480px, 768px, 1024px
 
+## PWA / Offline Support
+- **vite-plugin-pwa** with Workbox `generateSW` mode, `registerType: "autoUpdate"`
+- Precaches all static assets (JS, CSS, HTML, images) on first visit
+- Runtime caching: `NetworkFirst` for `/api/` (3s timeout), `StaleWhileRevalidate` for Google Fonts CSS, `CacheFirst` for font files
+- Manifest: standalone display, theme `#f0c040`, background `#0a0a0f`
+- Icons: simple gold background with dark "LR" text (192px + 512px)
+- Build outputs: `sw.js`, `registerSW.js` (auto-injected into index.html)
+
 ## What's NOT Done Yet
-- **PWA**: manifest.json + service worker (vite-plugin-pwa) for offline play / "Add to Home Screen"
 - **GCP deployment**: Dockerfile and configs exist but not deployed yet
 - **Analytics**: No tracking of play sessions, scores, or dropout points
 - **More characters**: Could add fisher folk, jeepney driver, vendor, farm worker
-- **Git**: Changes not committed since initial commit
 
 ## Design Decisions
 - **Zero runtime AI costs**: All 412 scenario nodes are pre-generated static JSON, committed to git
