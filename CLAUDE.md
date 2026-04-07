@@ -11,7 +11,7 @@ A text-based narrative RPG about OFW and gig worker labor rights in the Philippi
 - **Frontend**: React 18 + Vite (client/)
 - **Backend**: Express.js (server/)
 - **Data**: Pre-generated static JSON — zero runtime AI costs
-- **Deployment**: GCP Cloud Run + Firebase Hosting (live at https://labor-rights-rpg.web.app)
+- **Deployment**: GCP Cloud Run + Firebase Hosting (live at https://laborquest.app)
 - **Language**: JavaScript (no TypeScript)
 
 ## Project Structure
@@ -199,7 +199,7 @@ Each character has a `.json` (English) and `.tl.json` (Tagalog) file:
 - **Deploy command**: `bash deploy.sh --skip-setup`
 
 ## What's NOT Done Yet
-- **Custom domain**: Not yet configured
+- **Custom domain**: laborquest.app (Cloudflare DNS → Firebase Hosting, DNS-only mode)
 - **Billing budget alert**: Create at GCP Console ($5/month)
 - **More characters**: Could add fisher folk, jeepney driver, vendor, farm worker
 - **Analytics**: No tracking yet (intentionally — privacy first)

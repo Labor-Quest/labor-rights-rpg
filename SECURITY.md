@@ -85,7 +85,7 @@ A request like `/api/scenarios/../../etc/passwd` is rejected at the whitelist be
 - Exceeded limit returns `429 Too Many Requests` with a JSON error
 
 ### CORS
-- **Production**: only `labor-rights-rpg.web.app` and `labor-rights-rpg.firebaseapp.com`
+- **Production**: `laborquest.app`, `www.laborquest.app`, `labor-rights-rpg.web.app`, and `labor-rights-rpg.firebaseapp.com`
 - **Development**: `localhost:3000` and `localhost:8080`
 - Methods restricted to `GET` only (this is a read-only API)
 

@@ -37,6 +37,8 @@ app.use(helmet({
 // --- CORS ---
 const ALLOWED_ORIGINS = isProd
   ? [
+      "https://laborquest.app",
+      "https://www.laborquest.app",
       "https://labor-rights-rpg.web.app",
       "https://labor-rights-rpg.firebaseapp.com"
     ]
