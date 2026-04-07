@@ -76,7 +76,7 @@ Labor Rights RPG is a solo-developed social impact project aimed at educating Fi
 - **NGOs and labor organizations** for scenario review and outreach
 - **Translators** for regional language support (Cebuano, Ilocano, etc.)
 
-**Contact**: joshua22.mbt@gmail.com
+**Contact**: hello@laborquest.app
 
 ## License
 

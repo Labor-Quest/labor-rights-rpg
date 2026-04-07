@@ -54,7 +54,7 @@ export default function AboutScreen() {
         <h3>{t("about.partnerTitle")}</h3>
         <p>{t("about.partnerBody")}</p>
         <p style={{ fontFamily: "var(--font-mono)", color: "var(--accent)", fontSize: "0.95rem" }}>
-          joshua22.mbt@gmail.com
+          hello@laborquest.app
         </p>
       </div>
     </div>
