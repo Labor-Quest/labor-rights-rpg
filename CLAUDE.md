@@ -11,7 +11,7 @@ A text-based narrative branching RPG about OFW and gig worker labor rights in th
 - **Frontend**: React 18 + Vite (client/)
 - **Backend**: Express.js (server/)
 - **Data**: Pre-generated static JSON — zero runtime AI costs
-- **Deployment**: GCP Cloud Run + Firebase Hosting (not yet deployed)
+- **Deployment**: GCP Cloud Run + Firebase Hosting (live at https://labor-rights-rpg.web.app)
 - **Language**: JavaScript (no TypeScript)
 
 ## Project Structure
@@ -152,8 +152,20 @@ Ending nodes have `"isEnding": true` and empty/no choices.
 - **Docker**: Multi-stage build, non-root user, production deps only
 - **Privacy**: Zero analytics, zero cookies, zero PII — see `SECURITY.md` for full details
 
+## Deployment Architecture
+- **Firebase Hosting** serves static files (HTML/CSS/JS/PWA) → free CDN
+- **Cloud Run** handles only `/api/*` requests, proxied via Firebase rewrites
+- **Artifact Registry** (`asia-southeast1`) stores Docker images (replaces deprecated GCR)
+- **Scale-to-zero**: `min-instances: 0`, `cpu-throttling`, `max-instances: 1`
+- **Cost**: $0/month at low traffic — all within GCP free tier
+- **Region**: `asia-southeast1` (closest to Philippines)
+- **Deploy command**: `bash deploy.sh --skip-setup` (or full `bash deploy.sh` for first-time setup)
+- **GCP Project ID**: `labor-rights-rpg`
+- **GCP Account**: `joshua22.mbt@gmail.com`
+
 ## What's NOT Done Yet
-- **GCP deployment**: Dockerfile and configs exist but not deployed yet
+- **Custom domain**: Not yet configured (use Firebase Console when ready)
+- **Billing budget alert**: Create at GCP Console → Billing → Budgets ($5/month)
 - **More characters**: Could add fisher folk, jeepney driver, vendor, farm worker
 
 ## Design Decisions
