@@ -148,18 +148,17 @@ FBRC
 fi
 
 # =============================================================================
-# PHASE 2: Build & Push Docker Image
+# PHASE 2: Build & Push via Cloud Build (no local Docker needed)
 # =============================================================================
 if [ "$SKIP_BUILD" = false ]; then
-  echo "--- Phase 2: Build & Push ---"
+  echo "--- Phase 2: Cloud Build ---"
   echo ""
 
-  echo "[1/2] Building Docker image..."
-  docker build -t "$IMAGE" .
-
-  echo ""
-  echo "[2/2] Pushing to Artifact Registry..."
-  docker push "$IMAGE"
+  echo "[1/1] Submitting build to Cloud Build..."
+  gcloud builds submit \
+    --tag "$IMAGE" \
+    --region "$REGION" \
+    --project "$PROJECT_ID"
 
   echo ""
   echo "--- Phase 2 Complete ---"
