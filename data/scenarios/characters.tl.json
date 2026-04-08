@@ -59,6 +59,26 @@
       "themes": ["kasambahay_law", "no_contract", "wage_theft", "no_benefits", "abuse"],
       "startNode": "maid_start",
       "category": "domestic"
+    },
+    {
+      "id": "jeepney",
+      "name": "Mang Boy Villanueva",
+      "role": "Tsuper ng Dyipni",
+      "description": "Isang 55-anyos na tsuper ng dyipni sa rutang Monumento-Baclaran na 30 taon nang nagmamaneho. Malapit na ang deadline ng PUV modernization, papaexpire na ang kanyang prangkisa, at halos lahat ng kinikita ay napupunta sa boundary.",
+      "avatar": "JEEPNEY",
+      "themes": ["boundary_system", "franchise_rights", "modernization", "fare_disputes", "no_benefits"],
+      "startNode": "jeepney_start",
+      "category": "transport"
+    },
+    {
+      "id": "vendor",
+      "name": "Aling Nena Ramos",
+      "role": "Nagtitinda ng Street Food",
+      "description": "Isang 48-anyos na nagtitinda sa bangketa malapit sa Divisoria, Manila. Walang business permit, walang permanenteng pwesto — kariton lang, pangarap, at palaging banta ng demolition team at mga enforcer.",
+      "avatar": "VENDOR",
+      "themes": ["informal_economy", "local_ordinance", "demolition", "vendor_rights", "no_benefits"],
+      "startNode": "vendor_start",
+      "category": "informal"
     }
   ]
 }

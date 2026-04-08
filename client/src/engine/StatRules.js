@@ -11,6 +11,8 @@ export const CHARACTER_STARTING_STATS = {
   construction: { pera: 5000,  confidence: 50, wellbeing: 75 },
   driver:       { pera: 7000,  confidence: 50, wellbeing: 75 },
   maid:         { pera: 1500,  confidence: 50, wellbeing: 75 },
+  jeepney:      { pera: 4000,  confidence: 50, wellbeing: 75 },
+  vendor:       { pera: 2000,  confidence: 50, wellbeing: 75 },
 };
 
 // How each theme distributes scoreChange across the three stats
@@ -35,6 +37,14 @@ const THEME_WEIGHTS = {
   accident_liability:     { pera: 0.5,  confidence: 0.2, wellbeing: 0.3 },
   unfair_deductions:      { pera: 0.8,  confidence: 0.1, wellbeing: 0.1 },
   illegal_deductions:     { pera: 0.8,  confidence: 0.1, wellbeing: 0.1 },
+  boundary_system:        { pera: 0.7,  confidence: 0.2, wellbeing: 0.1 },
+  franchise_rights:       { pera: 0.3,  confidence: 0.5, wellbeing: 0.2 },
+  modernization:          { pera: 0.5,  confidence: 0.3, wellbeing: 0.2 },
+  fare_disputes:          { pera: 0.6,  confidence: 0.2, wellbeing: 0.2 },
+  informal_economy:       { pera: 0.5,  confidence: 0.3, wellbeing: 0.2 },
+  local_ordinance:        { pera: 0.3,  confidence: 0.4, wellbeing: 0.3 },
+  demolition:             { pera: 0.6,  confidence: 0.3, wellbeing: 0.1 },
+  vendor_rights:          { pera: 0.3,  confidence: 0.5, wellbeing: 0.2 },
 };
 
 const DEFAULT_WEIGHTS = { pera: 0.33, confidence: 0.34, wellbeing: 0.33 };

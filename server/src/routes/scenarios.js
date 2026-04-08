@@ -8,7 +8,7 @@ const DATA_DIR = path.resolve(__dirname, "../../../data/scenarios");
 
 // Whitelist of allowed character IDs — prevents path traversal
 const VALID_CHARACTERS = new Set([
-  "ofw", "rider", "bpo", "construction", "driver", "maid"
+  "ofw", "rider", "bpo", "construction", "driver", "maid", "jeepney", "vendor"
 ]);
 
 // Whitelist of allowed locales — prevents injection via locale param

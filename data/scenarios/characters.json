@@ -59,6 +59,26 @@
       "themes": ["kasambahay_law", "no_contract", "wage_theft", "no_benefits", "abuse"],
       "startNode": "maid_start",
       "category": "domestic"
+    },
+    {
+      "id": "jeepney",
+      "name": "Mang Boy Villanueva",
+      "role": "Jeepney Driver",
+      "description": "A 55-year-old jeepney driver on the Monumento-Baclaran route who has been driving for 30 years. The PUV modernization deadline looms, his franchise is expiring, and the boundary system takes most of his earnings.",
+      "avatar": "JEEPNEY",
+      "themes": ["boundary_system", "franchise_rights", "modernization", "fare_disputes", "no_benefits"],
+      "startNode": "jeepney_start",
+      "category": "transport"
+    },
+    {
+      "id": "vendor",
+      "name": "Aling Nena Ramos",
+      "role": "Street Food Vendor",
+      "description": "A 48-year-old sidewalk vendor selling street food near Divisoria, Manila. No business permit, no fixed stall — just a cart, a dream, and the constant threat of demolition teams and local enforcers.",
+      "avatar": "VENDOR",
+      "themes": ["informal_economy", "local_ordinance", "demolition", "vendor_rights", "no_benefits"],
+      "startNode": "vendor_start",
+      "category": "informal"
     }
   ]
 }

@@ -32,6 +32,16 @@ export const EXPENSE_EVENTS = {
   maid: [
     { en: "Money sent home to Samar for medicine and tuition: ₱2,000.", tl: "Padala sa Samar para sa gamot at tuition: ₱2,000.", cost: 2000 },
   ],
+  jeepney: [
+    { en: "Daily boundary payment to operator: ₱1,200.", tl: "Boundary sa operator: ₱1,200.", cost: 1200 },
+    { en: "Diesel for the week: ₱3,500.", tl: "Diesel ngayong linggo: ₱3,500.", cost: 3500 },
+    { en: "Family expenses and Lola's medicine: ₱2,500.", tl: "Gastusin sa bahay at gamot ni Lola: ₱2,500.", cost: 2500 },
+  ],
+  vendor: [
+    { en: "Ingredients and supplies for the week: ₱2,800.", tl: "Sangkap at gamit ngayong linggo: ₱2,800.", cost: 2800 },
+    { en: "Rent for cart storage overnight: ₱500.", tl: "Upa sa pagpapagarahe ng kariton: ₱500.", cost: 500 },
+    { en: "Children's school expenses: ₱1,500.", tl: "Gastusin ng mga anak sa eskwela: ₱1,500.", cost: 1500 },
+  ],
 };
 
 // Crisis events by severity tier, per character
@@ -146,6 +156,24 @@ const BOOST_POOLS = {
   maid: {
     social: [
       { en: "The children in the household drew you a thank-you card. It made your day.", tl: "Gumawa ng thank-you card para sa iyo ang mga bata sa bahay. Naging masaya ang araw mo.", confidenceGain: 3, wellbeingGain: 3 },
+    ],
+  },
+  jeepney: {
+    social: [
+      { en: "A regular passenger thanks you for always waiting for seniors to sit down before driving. You feel seen.", tl: "Nagpasalamat ang isang suki dahil palagi kang naghihintay na makaupo ang mga matatanda bago magmaneho. Naramdaman mong pinapahalagahan ka.", confidenceGain: 3, wellbeingGain: 3 },
+      { en: "Fellow drivers at the terminal share food with you. Solidarity on the road.", tl: "Nagbahaginan ng pagkain ang mga kapwa mo driver sa terminal. Damayan sa kalsada.", confidenceGain: 2, wellbeingGain: 3 },
+    ],
+    financial: [
+      { en: "Good traffic today — you completed more trips than usual. Extra ₱400.", tl: "Magaan ang trapiko ngayon — mas marami kang natapos na biyahe. Dagdag ₱400.", peraGain: 400, wellbeingGain: 1 },
+    ],
+  },
+  vendor: {
+    social: [
+      { en: "A suki tells you your fishball sauce is the best in the area. Small pride, big warmth.", tl: "Sinabi ng isang suki na pinakamasarap ang sarsa mo sa buong lugar. Maliit na papuri, malaking saya.", confidenceGain: 3, wellbeingGain: 3 },
+      { en: "A fellow vendor watches your cart while you take a break. Community matters.", tl: "Binantayan ng kapwa mo tindera ang kariton mo habang nagpapahinga ka. Mahalaga ang komunidad.", confidenceGain: 2, wellbeingGain: 3 },
+    ],
+    financial: [
+      { en: "Sold out early today! Extra ₱350 in profit.", tl: "Naubos agad ang paninda ngayon! Dagdag ₱350 na kita.", peraGain: 350, wellbeingGain: 2 },
     ],
   },
 };

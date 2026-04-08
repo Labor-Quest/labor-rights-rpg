@@ -77,7 +77,13 @@ function LanguageToggle() {
 }
 
 function AppContent() {
-  const [screen, setScreen] = useState(SCREENS.TITLE);
+  // Deep link: ?character=ofw skips to character select
+  const initialScreen = (() => {
+    const params = new URLSearchParams(window.location.search);
+    return params.get("character") ? SCREENS.CHARACTER_SELECT : SCREENS.TITLE;
+  })();
+
+  const [screen, setScreen] = useState(initialScreen);
   const [selectedCharacter, setSelectedCharacter] = useState(null);
   const [finalGameState, setFinalGameState] = useState(null);
   const { t } = useLanguage();
@@ -130,7 +136,12 @@ function AppContent() {
       <div className="container fade-in" key={screen + (selectedCharacter?.id || "")}>
         {screen === SCREENS.TITLE && <TitleScreen onStart={handleStart} onAbout={handleAbout} />}
         {screen === SCREENS.ABOUT && <AboutScreen />}
-        {screen === SCREENS.CHARACTER_SELECT && <CharacterSelect onSelect={handleCharacterSelect} />}
+        {screen === SCREENS.CHARACTER_SELECT && (
+          <CharacterSelect
+            onSelect={handleCharacterSelect}
+            highlightId={new URLSearchParams(window.location.search).get("character")}
+          />
+        )}
         {screen === SCREENS.GAME && (
           <GameScreen character={selectedCharacter} onGameEnd={handleGameEnd} />
         )}

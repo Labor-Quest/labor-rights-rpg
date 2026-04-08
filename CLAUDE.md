@@ -57,11 +57,11 @@ labor-rights-rpg/
 │       ├── index.js                  # Server: helmet, rate limiting, CORS, error handler
 │       └── routes/scenarios.js       # Whitelisted character IDs + locales
 ├── data/scenarios/                   # Pre-generated content (committed to git)
-│   ├── characters.json               # 6 characters with category field
+│   ├── characters.json               # 8 characters with category field
 │   ├── characters.tl.json            # Tagalog character descriptions
 │   ├── resources.json                # DOLE, NLRC, DMW, PAO, OWWA contacts
-│   ├── {ofw,rider,bpo,construction,driver,maid}.json       # English scenarios
-│   └── {ofw,rider,bpo,construction,driver,maid}.tl.json    # Tagalog scenarios
+│   ├── {ofw,rider,bpo,construction,driver,maid,jeepney,vendor}.json       # English scenarios
+│   └── {ofw,rider,bpo,construction,driver,maid,jeepney,vendor}.tl.json    # Tagalog scenarios
 ├── Dockerfile                        # Multi-stage Cloud Run container (non-root)
 ├── firebase.json                     # Firebase Hosting → Cloud Run proxy
 ├── deploy.sh                         # One-command GCP deployment
@@ -81,7 +81,7 @@ npm run build        # Build React for production (client/dist)
 npm start            # Production server (serves built client + API)
 ```
 
-## Characters (6 total, 206 nodes EN + 206 nodes TL = 412 total)
+## Characters (8 total, 272 nodes EN + 272 nodes TL = 544 total)
 
 | ID | Name | Role | Category | Nodes | Starting ₱ | Key Laws |
 |---|---|---|---|---|---|---|
@@ -91,6 +91,8 @@ npm start            # Production server (serves built client + API)
 | construction | Roberto Dela Cruz | Construction worker | industrial | 36 | ₱5,000 | RA 11058, Art. 106-109 |
 | driver | Mang Ernesto Bautista | Family driver | domestic | 36 | ₱7,000 | Art. 82-96, PD 851, Art. 295 |
 | maid | Aling Rosa Mendoza | Kasambahay | domestic | 35 | ₱1,500 | RA 10361 (Batas Kasambahay) |
+| jeepney | Mang Boy Villanueva | Jeepney driver | transport | 33 | ₱4,000 | LTFRB, PUV Modernization, Jardin v. NLRC |
+| vendor | Aling Nena Ramos | Street food vendor | informal | 33 | ₱2,000 | RA 9178 (BMBE), RA 7279, RA 11032 |
 
 ## RPG Mechanics (layered on top of existing JSON — no data changes)
 
@@ -118,7 +120,7 @@ Stats are derived from existing `scoreChange` + `theme` fields via `StatRules.js
 ### Chapter System
 - Theme changes between nodes trigger a **chapter transition card** ("Kabanata 3: Wage Theft") with theme icon
 - Chapter numbering counts distinct consecutive theme transitions
-- All 20 themes have EN + TL translations in `ui.json` under `chapter.theme.*` keys
+- All 28 themes have EN + TL translations in `ui.json` under `chapter.theme.*` keys
 
 ### Endings
 - 27 ending modifiers (3×3×3: financial × agency × health)
@@ -159,7 +161,7 @@ Each character has a `.json` (English) and `.tl.json` (Tagalog) file:
 5. **Add the character ID to `VALID_CHARACTERS` in `server/src/routes/scenarios.js`** (security whitelist)
 6. **Add starting money to `CHARACTER_STARTING_STATS` in `client/src/engine/StatRules.js`**
 7. **Add expense events to `EXPENSE_EVENTS` and boost events to `BOOST_POOLS` in `client/src/engine/CrisisEngine.js`**
-8. Existing categories: overseas, gig, office, industrial, domestic. Add new ones in `CATEGORIES` array in CharacterSelect.jsx and `ui.json` translations.
+8. Existing categories: overseas, gig, office, industrial, domestic, transport, informal. Add new ones in `CATEGORIES` array in CharacterSelect.jsx and `ui.json` translations.
 
 ## i18n System
 - Lightweight, no library — just React context + JSON file
@@ -214,12 +216,12 @@ Each character has a `.json` (English) and `.tl.json` (Tagalog) file:
 - **DOLE realism**: Institutional failure nodes + expanded resources (addresses "DOLE walang silbe" feedback)
 - **Shareable score card**: Canvas-generated share image + challenge URL for competitive replay (share buttons with Copy/Facebook/X already built)
 - **Union organizer character**: New character focused on right to organize (Art. 253), based on real playtester experience
-- **More characters**: Could add fisher folk, jeepney driver, vendor, farm worker, HR antagonist
+- **More characters**: Could add fisher folk, farm worker, HR antagonist
 - **Billing budget alert**: Create at GCP Console ($5/month)
 - **Analytics**: No tracking yet (intentionally — privacy first)
 
 ## Design Principles
-- **Zero runtime AI costs**: All 412 scenario nodes are pre-generated static JSON
+- **Zero runtime AI costs**: All 544 scenario nodes are pre-generated static JSON
 - **Stats must affect gameplay**: Every stat gates choices, triggers events, or changes outcomes
 - **The mechanic IS the lesson**: Economic pressure creates the same dilemmas real workers face
 - **Elderly-first design**: Progressive reveal, large fonts, high contrast, big touch targets

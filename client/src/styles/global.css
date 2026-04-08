@@ -112,6 +112,11 @@ p {
   min-height: 48px;
 }
 
+.card-highlight {
+  border-color: var(--gold);
+  box-shadow: 0 0 12px rgba(240, 192, 64, 0.4);
+}
+
 /* Buttons */
 .btn {
   display: inline-block;

@@ -1,0 +1,737 @@
+{
+  "nodes": {
+    "vendor_start": {
+      "id": "vendor_start",
+      "title": "Bago Pa Sumikat ang Araw",
+      "narrative": "Gising na si Aling Nena Ramos, 48, ng alas-tres y medya ng umaga sa kanilang nirerentahang kwarto sa Tondo -- halos kasya lang ang dalawang foam mattress at isang plastic na kabinet. Nakaalis na ang asawa niyang si Mang Carding isang oras na ang nakalipas, papunta sa construction job niya sa Makati. Tulog pa ang tatlong anak nila -- si Jessa na 16 at Grade 11 sa Tondo High, si Kevin na 10, at si Bea na 7.\n\nSinindihan ni Nena ang solo niyang burner at nagsimulang mag-prepare ng paninda. Dalawang kilo ng fishball mula sa supplier sa Divisoria, isang batch ng kwek-kwek batter na may orange na food coloring, at isang kilong isaw na kanina pa niyang gabi nilinis at tinusok. Yung mantika, yung suka-bawang sauce, yung matamis na sauce, yung mga bamboo sticks -- lahat nilagay na sa kariton na naka-park sa makitid na eskinita sa labas.\n\nBago mag-alas-singko, itinulak na niya ang kariton sa madilim pang kalye papunta sa spot niya malapit sa Divisoria market -- isang parte ng sidewalk na inookupa niya sa loob ng labindalawang taon. Walang lease. Walang permit. Walang nakasulat na kasunduan kahit kanino. Unawaan lang nila ng mga kapwa vendor at ng barangay tanod na nagpapatrolya sa area.\n\nNgayong umaga, may kakaiba. May bagong tarpaulin sign sa kanto: 'CLEARING OPERATION -- Bawal ang mga illegal vendor. By order of the City Engineer's Office.' Kumikirot ang sikmura ni Nena.",
+      "theme": "informal_economy",
+      "choices": [
+        {
+          "text": "Mag-set up pa rin ng kariton -- nandyan na yang sign na yan dati, wala namang nangyari.",
+          "nextNode": "vendor_daily_01",
+          "consequence": "Nag-set up si Nena sa usual spot niya, umaasa na empty threat lang ulit yung sign.",
+          "scoreChange": -3,
+          "knowledgeGained": null
+        },
+        {
+          "text": "Tanungin ang ibang vendor kung ano ang alam nila tungkol sa clearing operation sign.",
+          "nextNode": "vendor_daily_02",
+          "consequence": "Nangalap muna ng impormasyon si Nena sa mga kapwa vendor bago mag-desisyon.",
+          "scoreChange": 7,
+          "knowledgeGained": "May constitutional right sa hanapbuhay ang mga informal workers ayon sa Article XIII, Section 3 ng 1987 Philippine Constitution: 'Ang Estado ay magbibigay ng buong proteksyon sa lakas-paggawa.'"
+        },
+        {
+          "text": "Humanap ng ibang lugar na hindi masyadong kitang-kita -- mas safe na.",
+          "nextNode": "vendor_daily_03",
+          "consequence": "Lumipat si Nena sa hindi pamilyar na lugar na mas kaunti ang tao, nawalan ng suki.",
+          "scoreChange": 3,
+          "knowledgeGained": null
+        }
+      ],
+      "isEnding": false
+    },
+    "vendor_daily_01": {
+      "id": "vendor_daily_01",
+      "title": "Tulad ng Dati",
+      "narrative": "Ni-park ni Nena ang kariton sa usual na lugar niya sa pagitan ng hardware store at ukay-ukay stall. Pagdating ng alas-seis ng umaga, dumaloy na ang mga early morning customers -- mga construction worker, mga kargador sa palengke, mga jeepney driver na naghahanap ng almusal. Tatlong stick ng fishball sa P15. Kwek-kwek sa P5 bawat isa. Pamilyar na ritmo, nakakapanatag.\n\nPag-alas-nuwebe ng umaga, P480 na ang nabenta niya. Hindi masama para sa Martes. Tapos nakita niya -- si Bantay, ang barangay tanod na kilala ng lahat. Mataba ang leeg, naglalakad sa sidewalk na parang kanya. Huminto sa kariton ni Nena, dumampot ng fishball stick nang hindi nagpapaalam, at kinagat.\n\n'Aling Nena,' sabi niya habang ngumuya, 'nakita mo na ba yung sign? Clearing operation next week. Pero alam mo naman, may paraan.' Nag-rub ng daliri niya -- ang universal na gesture para sa pera. 'Limang daan lang, Aling Nena. Para walang problema.'\n\nLimang daang piso. Halos katlo yun ng inaasahang kita niya ngayong araw. Pero may kapangyarihan si Bantay na tawagin ang mga enforcer, i-confiscate ang kariton niya, itapon ang paninda niya. Nakita niya ang nangyari kay Aling Merly noong nakaraang buwan -- tatlong araw na kita, nawala sa limang minuto.",
+      "theme": "local_ordinance",
+      "choices": [
+        {
+          "text": "Bayaran ang P500 -- gastos na lang yan sa pagbebenta sa sidewalk.",
+          "nextNode": "vendor_shakedown_01",
+          "consequence": "Nag-abot ng P500 si Nena, pinapalakas ang cycle ng korupsyon na nagpapanatiling vulnerable sa mga vendor.",
+          "scoreChange": -5,
+          "knowledgeGained": null
+        },
+        {
+          "text": "Sabihin kay Bantay na ire-report siya sa barangay captain dahil sa extortion.",
+          "nextNode": "vendor_shakedown_02",
+          "consequence": "Tumayo si Nena laban sa tanod, nirerisgo ang ganti pero iniingatan ang dignidad niya.",
+          "scoreChange": 12,
+          "knowledgeGained": "Ang extortion ng mga barangay official ay criminal offense sa ilalim ng Revised Penal Code (Art. 294-299). Pwedeng mag-file ng complaint ang mga vendor sa barangay captain, city ombudsman, o PNP."
+        },
+        {
+          "text": "Mag-negotiate -- mag-alok ng P200 at libreng fishball na lang.",
+          "nextNode": "vendor_shakedown_03",
+          "consequence": "Nag-tawaran si Nena, nabawasan ang gastos pero nagbayad pa rin ng lagay.",
+          "scoreChange": -3,
+          "knowledgeGained": null
+        }
+      ],
+      "isEnding": false
+    },
+    "vendor_daily_02": {
+      "id": "vendor_daily_02",
+      "title": "Ang Tsismis ng mga Vendor",
+      "narrative": "Nilapitan ni Nena si Mang Bert, na nagbebenta ng taho mula sa luma niyang aluminum na balde, at si Aling Ditas, na may tindahang yosi-at-kendi na gawa sa lumang ref box. Mas matagal pa sila dito kaysa kay Nena -- dalawampung taon na si Mang Bert.\n\n'Totoo yan, Nena,' sabi ni Mang Bert, nagbubuhos ng taho sa isang customer nang hindi tumitingin. 'May memo galing City Hall. Clearing operation daw next week. Pero alam mo naman kung paano 'to -- may nagla-lagay, may nakakalusot.' Tumingin siya sa barangay tanod post sa dulo ng kalye.\n\nLumapit si Aling Ditas. 'Pero may bago, Mare. Yung anak ni Mang Boy -- yung nagtapos ng law -- sabi niya may batas daw na pang-protekta sa mga vendor. Yung BMBE daw, o yung tungkol sa right to livelihood. Sabi niya kung mag-organize daw tayo, may magagawa tayo.'\n\nNarinig na ni Nena ang tungkol sa pag-oorganize dati, pero parang para lang lagi yun sa mga factory worker o driver. Hindi para sa mga taong katulad niya, nagbebenta ng fishball sa sidewalk. Pero totoo ang clearing operation sign, at kumpirmado ni Mang Bert. Kailangang may magbago.",
+      "theme": "vendor_rights",
+      "choices": [
+        {
+          "text": "Hingan ng contact si Aling Ditas ng anak ni Mang Boy na abogado.",
+          "nextNode": "vendor_organize_01",
+          "consequence": "Nagsimula si Nena sa unang hakbang tungo sa pag-unawa ng legal protection na available sa mga street vendor.",
+          "scoreChange": 10,
+          "knowledgeGained": "Ang BMBE Act (RA 9178) ay nagpapahintulot sa mga micro business na may assets na wala pang P3 milyon na mag-register para sa tax exemption at simplified permits. Pwedeng mag-qualify ang mga street vendor bilang BMBE."
+        },
+        {
+          "text": "Mag-set up na lang ng kariton at magbenta ng normal -- harapin ang clearing operation pag dumating.",
+          "nextNode": "vendor_daily_01",
+          "consequence": "Pinili ni Nena na huwag munang isipin ang clearing at mag-focus sa kita ngayong araw.",
+          "scoreChange": -3,
+          "knowledgeGained": null
+        },
+        {
+          "text": "Isuggest na mag-ambag-ambag ang mga vendor para lagyan si barangay tanod nang sabay-sabay.",
+          "nextNode": "vendor_shakedown_03",
+          "consequence": "Nag-propose si Nena ng collective na lagay, pinapanatili ang corrupt system pero hinahati ang gastos.",
+          "scoreChange": -5,
+          "knowledgeGained": null
+        }
+      ],
+      "isEnding": false
+    },
+    "vendor_daily_03": {
+      "id": "vendor_daily_03",
+      "title": "Estranghero sa Bagong Lugar",
+      "narrative": "Itinulak ni Nena ang kariton tatlong bloke ang layo, sa isang bahagi ng sidewalk malapit sa Recto LRT station. Hindi pamilyar ang lugar. Iba ang mga dumadaan dito -- mas maraming estudyante, mas kaunting construction worker. Walang nakakakilala sa kanya. Walang sumisigaw ng 'Aling Nena, tatlo nga!' mula sa kabilang kalye.\n\nPag-tanghali, P320 pa lang ang nabenta niya. Karaniwan, lagpas P600 na siya nito. Bibili ang mga estudyante ng isang kwek-kwek tapos magti-tirik, nahaharang ang daanan. Palaging nakatitig sa kanya ang security guard ng katabing pawnshop. 'Bawal dyan, Ma'am. Private property yan hanggang dyan sa gutter.'\n\nLumipat ulit si Nena ng kariton, ngayon sa gilid ng kalsada malapit sa pedestrian lane. May nadampot siyang konting customers mula sa jeepney stop, pero malala ang usok at tirik ang araw sa hapon. Walang lilim. Walang suki. Walang ritmo.\n\nNg alas-tres ng hapon, nag-vibrate ang phone niya. May message sa vendor group chat na matagal na niyang kasali: 'Emergency meeting ngayong gabi, 7 PM sa bahay ni Mang Bert. May clearing operation daw. Pag-usapan natin kung ano gagawin.' Binasa ni Nena ang message nang tatlong beses.",
+      "theme": "informal_economy",
+      "choices": [
+        {
+          "text": "Pumunta sa emergency vendor meeting sa bahay ni Mang Bert ngayong gabi.",
+          "nextNode": "vendor_organize_01",
+          "consequence": "Sumama si Nena sa mga kapwa vendor para planuhin ang collective na tugon sa clearing operation.",
+          "scoreChange": 10,
+          "knowledgeGained": "Ang mga informal worker ay may karapatang mag-organize sa ilalim ng Philippine Constitution (Art. XIII, Sec. 3). Ang National Anti-Poverty Commission (NAPC) ay may dedicated sector para sa mga manggagawa sa informal economy."
+        },
+        {
+          "text": "Manatili sa bagong spot bukas at subukang bumuo ng bagong customer base dito.",
+          "nextNode": "vendor_permit_01",
+          "consequence": "Pinili ni Nena na mag-establish sa bagong lokasyon kaysa lumaban para sa dati.",
+          "scoreChange": 3,
+          "knowledgeGained": null
+        }
+      ],
+      "isEnding": false
+    },
+    "vendor_shakedown_01": {
+      "id": "vendor_shakedown_01",
+      "title": "Ang Presyo ng Sidewalk",
+      "narrative": "Binunot ni Nena ang isang P500 bill mula sa maliit na rolyo na itinago niya sa bra -- kita niya kahapon, dapat pang-school project materials ni Jessa. Iniabot niya kay Bantay, na mabilis na ibinulsa, tinapik ang kariton, at umalis na humahalakhak.\n\nPag-gabi, kumita si Nena ng P1,400. Pagkabawas ng P500 kay Bantay, P380 para sa restock bukas, at P50 para sa karinderyang tanghalian, natira sa kanya ang P470. Kailangan na lang munang maghintay ang school project ni Jessa.\n\nGanoong gabi sa bahay, tahimik si Mang Carding nang ikwento ni Nena ang lagay. Alam niya. May sarili rin siyang binabayarang 'lagay' sa construction site -- P100 kada linggo sa foreman para lang ma-maintain ang slot niya sa crew. Ito ang buwis na walang government office ang nangongolekta pero lahat nagbabayad.\n\nPero may binanggit si Carding: 'Yung ka-trabaho ko, si Danny, sabi niya may asawa daw na nag-register sa BMBE. Yung maliit na negosyo. Tax-exempt daw, at may ID pa na pinoprotekta ka sa clearing operation. Hindi ko alam kung totoo.' Nakinig si Nena. Hindi pa niya narinig ang BMBE kailanman.",
+      "theme": "local_ordinance",
+      "choices": [
+        {
+          "text": "Pakisabihan si Carding na alamin ang detalye ng BMBE sa katrabaho niyang si Danny.",
+          "nextNode": "vendor_permit_01",
+          "consequence": "Sinundan ni Nena ang lead, natutuhan ang tungkol sa lehitimong paraan para sa legal protection ng negosyo niya.",
+          "scoreChange": 8,
+          "knowledgeGained": "Ang Barangay Micro Business Enterprise (BMBE) Act (RA 9178) ay nagbibigay ng tax exemption at simplified registration sa mga negosyong may total assets na wala pang P3 milyon. Karamihan ng mga street vendor ay kwalipikado."
+        },
+        {
+          "text": "Kalimutan na lang -- ang mga permit at registration ay isa lang paraan para kunin ng gobyerno ang pera.",
+          "nextNode": "vendor_clearing_01",
+          "consequence": "Binalewala ni Nena ang BMBE option, naiwan ang sarili nang walang proteksyon nang dumating ang clearing operation.",
+          "scoreChange": -5,
+          "knowledgeGained": null
+        }
+      ],
+      "isEnding": false
+    },
+    "vendor_shakedown_02": {
+      "id": "vendor_shakedown_02",
+      "title": "Paninindigan",
+      "narrative": "Nanginginig ang kamay ni Nena, pero matatag ang boses. 'Bantay, alam mo ba na extortion yan? Lalagay kita sa blotter sa barangay hall.' Galing ang mga salita sa kung saan sa kaibuturan niya -- siguro mula sa labindalawang taon ng pagbabayad at pagtahimik, o sa galit ng pagkakita kay Aling Merly na kinamkam ang kariton.\n\nSumikip ang mga mata ni Bantay. 'Ah ganyan ka ha, Aling Nena? Sige. Tingnan natin kung sino ang maniwala sa 'yo -- isang ilegal na vendor na walang permit.' Umalis siya, nagbubulung-bulong ng mga banta.\n\nNapanood ng ibang vendor ang lahat. Nahuli ni Nena ang tingin ni Mang Bert at nagbigay ng maliit na tango. Bumulong si Aling Ditas, 'Ang tapang mo, Mare. Pero mag-ingat ka.' Tatlong vendor ang tahimik na inilipat ang kanilang kariton nang mas malapit kay Nena, isang banayad na hudyat ng pagkakaisa.\n\nBuong araw, nagbenta si Nena nang may isang mata sa kalye, naghihintay na bumalik si Bantay kasama ang mga enforcer. Hindi siya bumalik. Pero alam ni Nena na hindi pa ito tapos. Kumita siya ng P1,200 ngayon -- mas mababa sa karaniwan dahil kinakabahan siyang kausapin ang mga customer. Ganoong gabi, hindi siya makatulog.",
+      "theme": "local_ordinance",
+      "choices": [
+        {
+          "text": "Pumunta sa barangay hall bukas at talagang mag-file ng complaint laban kay Bantay.",
+          "nextNode": "vendor_organize_01",
+          "consequence": "Tinupad ni Nena ang banta niya, pormal na nai-document ang extortion.",
+          "scoreChange": 12,
+          "knowledgeGained": "Pwedeng mag-file ng complaint ang sinumang mamamayan sa barangay hall sa pamamagitan ng Lupong Tagapamayapa (Barangay Justice System) sa ilalim ng RA 7160 Sec. 399-422. Ang extortion complaint ay pwede ring i-file sa PNP o Office of the Ombudsman."
+        },
+        {
+          "text": "Mag-lay low muna ng ilang araw -- magbenta sa ibang lugar habang humuhupa ang init.",
+          "nextNode": "vendor_daily_03",
+          "consequence": "Umatras si Nena, binigyan si Bantay ng panahon para magplano ng ganti nang walang opposition.",
+          "scoreChange": 3,
+          "knowledgeGained": null
+        }
+      ],
+      "isEnding": false
+    },
+    "vendor_shakedown_03": {
+      "id": "vendor_shakedown_03",
+      "title": "Ang Tawaran",
+      "narrative": "Ginamit ni Nena ang pinaka-magaling niyang palengke haggling voice. 'Naman, Bantay, P500 agad? Maliit lang kinikita ko dito. Eto, P200 at libre na fishball mo araw-araw this week.' Inilabas niya ang dalawang P100 at itinuro ang kumukulo na mantika.\n\nSumimangot si Bantay, nag-isip, tapos sinambar ang pera. 'Sige na nga. Pero next week, lagay ka ulit. At dagdagan mo -- P300.' Kumuha siya ng limang sticks ng fishball at naglakad sa susunod na vendor.\n\nHuminga nang malalim si Nena. Nakatipid siya ng P300 ngayon, pero locked na siya sa weekly payment. P200 this week, P300 next week -- P2,000 ang iyan kada buwan sa lagay lang. Halos kasing-laki ng renta niya. At hindi lang si Bantay ang meron. Pag clearing operations, ang mga city enforcer mismo ay minsan humihingi ng sarili nilang 'contribution.'\n\nSi Aling Ditas, na nanood ng negotiation mula sa tindahan niya, umiling. 'Mare, hanggang kailan tayo ganito? Yung sa Quiapo, nag-organize daw yung mga vendor. May association na sila, may permit, hindi na sila naga-lagay. Baka pwede rin tayo?'",
+      "theme": "local_ordinance",
+      "choices": [
+        {
+          "text": "Tanungin si Aling Ditas tungkol sa vendors' association ng Quiapo at paano sila nag-organize.",
+          "nextNode": "vendor_organize_01",
+          "consequence": "In-explore ni Nena ang posibilidad ng collective action, na-inspire ng tagumpay ng mga vendor sa Quiapo.",
+          "scoreChange": 10,
+          "knowledgeGained": "Ang mga vendor association ay pwedeng mag-register sa SEC o DOLE at mag-negotiate sa LGU para sa designated vending zones. Pinapahintulutan ng Local Government Code (RA 7160) ang mga LGU na mag-allocate ng public spaces para sa livelihood activities."
+        },
+        {
+          "text": "Tanggapin na lang -- ganyan talaga ang lagay para sa mga katulad natin.",
+          "nextNode": "vendor_clearing_01",
+          "consequence": "Tinanggap ni Nena ang sistema, patuloy na nagbabayad para sa karapatan na kumita.",
+          "scoreChange": -5,
+          "knowledgeGained": null
+        }
+      ],
+      "isEnding": false
+    },
+    "vendor_organize_01": {
+      "id": "vendor_organize_01",
+      "title": "Ang Unang Pagtitipon",
+      "narrative": "Labindalawang vendor ang nagsiksikan sa maliit na sala ni Mang Bert sa makitid na kalye sa Tondo. Bare na concrete ang mga dingding, may Santo Nino at kalendaryo mula sa funeraria lang ang nakadikit. Nakaupo sila sa mga plastic chair, monobloc stool, at sahig. May nagdala ng pandesal at kape sa Styrofoam cups.\n\nSi Atty. Paolo, ang anak ni Mang Boy, nakatayo nang awkward sa sulok. Dalawampu't-walong taong gulang, kakapasa lang sa bar, nakasuot ng gusot na polo shirt. Hindi siya kamukha ng mga abogado sa TV. Pero nang magsalita siya, tumahimik ang buong kwarto.\n\n'Hindi kayo illegal,' sabi niya nang diretso. 'Walang batas sa Pilipinas na nagsasabi na bawal mag-negosyo ng mahirap sa sidewalk. Ang meron lang, kailangan ng permit. At ang permit, karapatan ninyong kunin -- hindi pribilehiyo.' Ipinaliwanag niya ang BMBE Act, ang Ease of Doing Business Act, at ang constitutional right to livelihood.\n\n'Pero ang pinaka-importante,' patuloy ni Atty. Paolo, 'hindi kayo pwedeng i-clearing ng basta-basta. Under RA 7279, kailangan ng relocation plan bago kayo tanggalin. At kailangan kayong i-consult. May due process kayo.' May naramdamang pagbabago si Nena sa kwarto -- hindi pag-asa eksakto, pero ang kawalan ng kawalang-magawa.",
+      "theme": "vendor_rights",
+      "choices": [
+        {
+          "text": "Mag-volunteer na tumulong sa pag-organize ng formal vendor association kasama si Atty. Paolo.",
+          "nextNode": "vendor_organize_02",
+          "consequence": "Nag-step up si Nena bilang isa sa mga organizer, nag-take on ng leadership role sa mga vendor.",
+          "scoreChange": 15,
+          "knowledgeGained": "Sa ilalim ng RA 7279 (Urban Development and Housing Act), ang mga informal settler at vendor ay hindi pwedeng paalisin nang walang sapat na relocation at prior consultation. Ang mga clearing operation na walang mga ito ay labag sa batas."
+        },
+        {
+          "text": "Makinig at matuto, pero hayaang iba ang manguna sa pag-organize.",
+          "nextNode": "vendor_organize_03",
+          "consequence": "Sumuporta nang tahimik si Nena, natututo nang hindi masyadong exposed.",
+          "scoreChange": 7,
+          "knowledgeGained": "Ang Ease of Doing Business Act (RA 11032) ay nag-require sa mga government agency na i-process ang mga permit sa loob ng nakatakdang oras. Ang mga vendor na nag-a-apply ng BMBE registration ay dapat makatanggap ng certificate sa loob ng 15 working days."
+        },
+        {
+          "text": "Maganda pakinggan pero hindi afford ni Nena na mag-miss ng trabaho para sa mga meeting at papeles.",
+          "nextNode": "vendor_clearing_01",
+          "consequence": "Inuna ni Nena ang immediate na kita kaysa sa long-term na proteksyon, hindi sumama sa organizing effort.",
+          "scoreChange": -3,
+          "knowledgeGained": null
+        }
+      ],
+      "isEnding": false
+    },
+    "vendor_organize_02": {
+      "id": "vendor_organize_02",
+      "title": "Bumubuo ng Isang Bagay na Magkasama",
+      "narrative": "Sa loob ng dalawang linggo, si Nena ang naging hindi inaasahang gulugod ng bagong Divisoria Sidewalk Vendors Association (DSVA). Nag-door to door siya sa vendor community -- o mas tamang sabihin, kariton to kariton -- nangongolekta ng mga pangalan, cellphone number, at kwento. Dalawampu't tatlong vendor ang nag-sign up. Nahalal si Mang Bert bilang presidente ('Ayaw ko, pero wala namang iba,' reklamo niya). Si Nena ang vice president at treasurer.\n\nTinulungan sila ni Atty. Paolo na mag-draft ng bylaws at mag-prepare ng SEC registration papers. Ang filing fee ay P1,000 -- nag-ambagan sila ng P50 bawat isa mula sa dalawampung miyembro. Itinago ni Nena ang mga resibo sa isang notebook na binili niya sa National Bookstore sa P35. Nilagyan niya ng label na 'DSVA Official Records' sa maingat na sulat-kamay.\n\nAng SEC registration ay tumagal ng labindalawang working days. Nang dumating ang certificate, ni-frame ito ni Atty. Paolo sa P50 na frame mula sa Divisoria. Nakasabit sa sala ni Mang Bert, katabi ng Santo Nino. 'Legitimate na tayo,' sabi niya, binabasa ang mga salitang 'Divisoria Sidewalk Vendors Association, Inc.' nang paulit-ulit.\n\nPero iba ang legitimacy sa papel sa realidad. Ang clearing operation ay naka-schedule sa Lunes. Apat na araw na lang ang meron si Nena para malaman ang susunod na hakbang.",
+      "theme": "vendor_rights",
+      "choices": [
+        {
+          "text": "Mag-request ng formal meeting sa barangay captain para i-present ang DSVA at mag-negotiate ng vending zones.",
+          "nextNode": "vendor_permit_02",
+          "consequence": "Pormal na nilapitan ng DSVA ang local government, armado ng registration at legal knowledge nila.",
+          "scoreChange": 12,
+          "knowledgeGained": "Ang mga registered organization ay may karapatang mag-request ng dialogue sa mga LGU official sa ilalim ng RA 7160. Ang mga barangay captain ay required na tugunan ang mga concerns ng constituency at pwedeng mag-designate ng area para sa livelihood activities."
+        },
+        {
+          "text": "I-focus ang pagkuha ng individual BMBE certificates para sa bawat vendor member nang mabilis.",
+          "nextNode": "vendor_permit_01",
+          "consequence": "Inuna ni Nena ang individual na legal protection sa pamamagitan ng BMBE registration para sa bawat miyembro.",
+          "scoreChange": 10,
+          "knowledgeGained": "Ang BMBE registration ay ginagawa sa barangay level. Mga requirement: filled-out application form, DTI business name registration (o sworn statement), at proof na ang total assets ay wala pang P3 milyon."
+        }
+      ],
+      "isEnding": false
+    },
+    "vendor_organize_03": {
+      "id": "vendor_organize_03",
+      "title": "Nagmamasid Mula sa Gilid",
+      "narrative": "Dumadalo si Nena sa mga meeting pero palaging nasa likod. Nakikinig siya kapag nagpapaliwanag si Atty. Paolo tungkol sa batas, tumango kapag nagsasalita ang iba, at nag-ambag ng P50 niya para sa SEC registration. Pero hindi siya nag-volunteer sa kahit ano. May mga dahilan siya -- midterms ni Jessa next week, kailangan ni Kevin ng bagong sapatos sa school, at lumalalala ang ubo ni Carding.\n\nNabuo ang association nang wala siya sa leadership role. Si Mang Bert ang presidente, si Aling Ditas ang secretary. Nagmi-meeting sila tuwing Miyerkules ng gabi na pinupuntahan ni Nena kapag kaya niya. Natututo siya -- tungkol sa BMBE, sa RA 7279, sa NAPC -- pero natututo siyang secondhand, mula sa group chat summaries na ipinapadala ni Aling Ditas.\n\nIsang hapon, habang nagbebenta ng kwek-kwek sa grupo ng high school students, tinanong siya ng isa, 'Tita, legal ba kayo dito? Yung teacher namin sa Araling Panlipunan, sabi niya lahat ng street vendor illegal daw.' Huminto si Nena, hawak ang tongs. Dalawang linggo na ang nakakaraan, hindi niya malalaman ang isasagot. Ngayon alam na niya.\n\n'Hindi kami illegal, anak,' sabi niya nang tahimik. 'May karapatan kami sa hanapbuhay. Nasa Constitution yan.'",
+      "theme": "vendor_rights",
+      "choices": [
+        {
+          "text": "Magsimulang mas aktibong dumalo sa DSVA meetings at tumulong sa BMBE applications.",
+          "nextNode": "vendor_permit_01",
+          "consequence": "Unti-unting dinagdagan ni Nena ang partisipasyon niya, dinala ang organizational skills niya sa BMBE registration effort.",
+          "scoreChange": 8,
+          "knowledgeGained": "Ang NAPC (National Anti-Poverty Commission) ay may designated sector seat para sa mga manggagawa sa informal economy. Ibig sabihin, ang mga informal worker tulad ng mga vendor ay may opisyal na representasyon sa gobyerno."
+        },
+        {
+          "text": "Mag-low profile lang -- suportahan ang association ng pera pero huwag makilahok nang husto.",
+          "nextNode": "vendor_clearing_01",
+          "consequence": "Patuloy si Nena bilang passive member, iniiwan ang laban sa iba.",
+          "scoreChange": 3,
+          "knowledgeGained": null
+        }
+      ],
+      "isEnding": false
+    },
+    "vendor_permit_01": {
+      "id": "vendor_permit_01",
+      "title": "Ang Permit Maze",
+      "narrative": "Dumating si Nena sa Tondo barangay hall ng alas-siyete ng umaga, umaasang mauna sa pila para sa BMBE application. Pangalawa na siya -- may sari-sari store owner mula sa kabilang kalye na nauna. Ang barangay hall ay isang concrete na building na may corrugated na bubong, mga oscillating fan na halos hindi gumagana, at litrato ng presidente na naka-flanked ng mga kupas na bandila.\n\nAng clerk, isang babae sa mga 30s na maingat ang pintura ng kuko, tumingin kay Nena sa ibabaw ng salamin. 'BMBE? Ano pong klaseng negosyo?' Nang sabihin ni Nena na 'street food vendor,' nagbago ang ekspresyon ng clerk. 'Ma'am, kailangan niyo muna ng DTI Business Name Registration. Tapos barangay clearance. Tapos cedula. Tapos health certificate from the city health office. Tapos fire safety clearance--'\n\n'Sandali,' putol ni Nena, mabilis na nagsusulat sa notebook niya. 'Ilan pong araw lahat ng yan?' Nag-kibit balikat ang clerk. 'Depende po. Usually one to two months kung walang problema.' Dalawang buwan. Ang clearing operation ay apat na araw na lang.\n\nTinitigan ni Nena ang listahan ng requirements. DTI registration: P200 plus P500 para sa business name. Barangay clearance: P75. Cedula: P30. Health certificate: P150 plus lab fees. Fire safety: P300 para sa inspection na tatagal ng tatlong linggo bago ma-schedule. Total: hindi bababa sa P1,255 sa fees lang, dagdag pa ang pamasahe at nawalang kita dahil sa mga araw na ginugol sa pila.",
+      "theme": "local_ordinance",
+      "choices": [
+        {
+          "text": "Tanungin ang clerk tungkol sa Anti-Red Tape Act -- wala bang simplified requirements para sa micro-businesses?",
+          "nextNode": "vendor_permit_02",
+          "consequence": "Ginamit ni Nena ang Ease of Doing Business Act, hinarap ang bureaucratic na pagpapaikot.",
+          "scoreChange": 12,
+          "knowledgeGained": "Sa ilalim ng Anti-Red Tape Act (RA 11032), ang mga government agency ay hindi pwedeng humingi ng mga dokumento na wala sa Citizens Charter nila. Para sa BMBE applications, sworn statement of assets lang ang kailangan -- hindi kailangan ng DTI registration kung walang registered business name."
+        },
+        {
+          "text": "Simulan na ang process -- kunin muna ang DTI registration at sundin ang listahan.",
+          "nextNode": "vendor_permit_03",
+          "consequence": "Sinimulan ni Nena ang mahabang bureaucratic process, tinanggap ang timeline.",
+          "scoreChange": 5,
+          "knowledgeGained": "Ang DTI Business Name Registration ay pwedeng gawin online sa bnrs.dti.gov.ph sa halagang P200. Valid ito ng 5 taon."
+        },
+        {
+          "text": "Kalimutan na ang permit -- ginawa talaga itong imposible para sa mga katulad niya.",
+          "nextNode": "vendor_clearing_01",
+          "consequence": "Isinuko ni Nena ang permit process, naiwan ang sarili nang walang legal na proteksyon.",
+          "scoreChange": -5,
+          "knowledgeGained": null
+        }
+      ],
+      "isEnding": false
+    },
+    "vendor_permit_02": {
+      "id": "vendor_permit_02",
+      "title": "Pinuputol ang Red Tape",
+      "narrative": "Sa barangay hall man o sa meeting kasama ang local officials, natututo si Nena at ang DSVA na magsalita ng wika ng gobyerno. Tine-train sila ni Atty. Paolo: 'Kapag sinabi nilang kailangan ng ganito, ganyan, tanungin niyo: naka-lista ba yan sa Citizens Charter niyo? Kung hindi, hindi niyo kailangan ibigay.'\n\nAng barangay captain, si Kap. Rodel, ay isang pandak na lalaking tumakbo sa plataporma ng 'malinis at maayos na kalye.' Hindi naman siya galit sa mga vendor -- marami sa kanila ang bumoto sa kanya -- pero napi-pressure siya ng city na sumunod sa clearing operation. Pumayag siyang makipag-meet sa DSVA.\n\n'Kap, hindi namin kaaway ang gobyerno,' sabi ni Mang Bert, kinakabahang nagbabasa mula sa notes na pina-prepare ni Nena. 'Ang gusto lang namin, legal na lugar na mabentahan. Handang kami mag-comply sa requirements. Pero bigyan niyo kami ng panahon at designated area.'\n\nSumandal si Kap. Rodel sa upuan niya. 'Ang problema, galing sa itaas ang clearing order. City Engineer. Hindi ko yan kayang pigilan.' Huminto siya. 'Pero... kung may registered association kayo, at may ongoing BMBE applications, baka may magawa tayo. Pag-usapan natin.'",
+      "theme": "vendor_rights",
+      "choices": [
+        {
+          "text": "Mag-propose ng designated vending zone na may malinaw na rules -- schedule, sanitation standards, fees.",
+          "nextNode": "vendor_legal_01",
+          "consequence": "Nag-present si Nena at ang DSVA ng concrete at propesyonal na proposal na humanga kay Kap. Rodel.",
+          "scoreChange": 15,
+          "knowledgeGained": "Sa ilalim ng RA 7160, ang mga barangay ay pwedeng magpasa ng resolution na nagde-designate ng public area para sa livelihood activities. Ang barangay resolution ay may legal na bigat at pwedeng maging batayan ng vending permit system."
+        },
+        {
+          "text": "Hilingin kay Kap. Rodel na i-delay ang clearing operation habang pina-process ang mga BMBE application.",
+          "nextNode": "vendor_legal_02",
+          "consequence": "Bumili ng oras ang DSVA, pero na-postpone lang ang clearing operation, hindi na-cancel.",
+          "scoreChange": 7,
+          "knowledgeGained": "Ang mga government operation na nakakaapekto sa hanapbuhay ay nangangailangan ng due process. Sa ilalim ng RA 7279, kailangan ng 30-day notice at sapat na consultation bago ang clearing o demolition ng mga informal structures."
+        }
+      ],
+      "isEnding": false
+    },
+    "vendor_permit_03": {
+      "id": "vendor_permit_03",
+      "title": "Ang Mahabang Daan Tungo sa Isang Piraso ng Papel",
+      "narrative": "Sinimulan ni Nena ang permit process sa mahirap na paraan. Unang araw: DTI registration sa Divisoria office. Tatlong oras siyang naghintay ng number, nag-fill out ng forms, nagbayad ng P700, at sinabihang bumalik sa limang working days. Pangalawang araw: barangay clearance. Hinihingi ng clerk ang DTI certificate muna. 'Wala pa po, processing pa.' 'Bumalik ka na lang pag meron na.'\n\nDalawang araw siyang hindi nakapagbenta. Mga P2,400 ang nawalang kita, dagdag pa ang P700 sa DTI. Napansin ni Carding ang nawawalang pera. 'Saan napunta yung pambili sana ng bigas?' Ipinaliwanag ni Nena. Matagal na tahimik si Carding. 'Sana worth it yan, Nena.'\n\nSa Day 5, kinuha niya ang DTI certificate. Sa Day 6, nakuha ang barangay clearance. Sa Day 8, pumunta siya sa city health office para sa health certificate -- pero kailangan ng stool exam, chest X-ray, at drug test. Kabuuang gastos: P450. Resulta sa limang working days.\n\nDay 8 na ngayon. Ang clearing operation ay Day 4 -- lumipas na. Wala doon si Nena -- nasa DTI office siya. Pero narinig niya ang nangyari. Dumating ang mga enforcer. Na-confiscate ang kariton ni Aling Merly at grill ni Mang Totoy. Nakapag-usap si Mang Bert para huwag kunin ang taho container niya dahil ipinakita niya ang DSVA registration.",
+      "theme": "local_ordinance",
+      "choices": [
+        {
+          "text": "Sumama sa effort ng DSVA na mag-negotiate sa barangay captain para sa proteksyon ng mga vendor.",
+          "nextNode": "vendor_permit_02",
+          "consequence": "Ang personal na karanasan ni Nena sa bureaucratic delays ay naging malakas na argumento sa negotiation ng DSVA.",
+          "scoreChange": 10,
+          "knowledgeGained": "Sa ilalim ng Ease of Doing Business Act (RA 11032), lahat ng government transaction ay kailangang matapos sa loob ng nakatakdang oras: 3 araw para sa simple, 7 para sa complex, 20 para sa highly technical. Ang mga violation ay pwedeng i-report sa Anti-Red Tape Authority (ARTA)."
+        },
+        {
+          "text": "Ituloy ang solo na permit process -- tapusin ang sinimulan.",
+          "nextNode": "vendor_health_01",
+          "consequence": "Nagpatuloy si Nena sa bureaucracy nang mag-isa, unti-unting naipon ang mga papeles.",
+          "scoreChange": 5,
+          "knowledgeGained": null
+        }
+      ],
+      "isEnding": false
+    },
+    "vendor_clearing_01": {
+      "id": "vendor_clearing_01",
+      "title": "Dumating Sila ng Alas-Seis ng Umaga",
+      "narrative": "Dumating ang clearing operation isang Lunes, gaya ng ipinangako ng sign. Ng alas-seis ng umaga, habang nag-se-set up pa ang mga vendor, dalawang truck mula sa City Engineer's Office ang huminto na may police escort. Isang lalaki na may megaphone ang nag-announce: 'Clearing operation ito. Lahat ng illegal structures at kariton sa sidewalk ay iko-confiscate. Huwag lumaban.'\n\nKaguluhan. Nagmadali ang mga vendor na damputin ang kaya nila. Isang matandang babae na nagbebenta ng kamote cue ang yumakap sa kawali niya at tumakbo. Isang tindera ng yosi ang nagsiksik ng mga pakete sa bulsa niya. Dalawang enforcer ang lumapit sa kariton ni Nena. 'Ma'am, pwede niyong kunin ang personal belongings niyo, pero ang kariton at equipment, iko-confiscate namin.'\n\nPinanood ni Nena habang kinaladkad nila ang kariton niya -- ang kariton na ginawa ni Carding mula sa scrap wood at gulong ng bisikleta labindalawang taon na ang nakakaraan -- papunta sa truck. Ang deep fryer niya. Ang mga lalagyan ng sauce. Ang mga tongs at skewers niya. Dalawang kilo ng hilaw na fishball. Ang mantika na binili niya kahapon. Tinantya niya ang pagkawala: P8,500 sa equipment at paninda, dagdag pa ang P1,500 o higit pa kada araw na nawalang kita.\n\nSa paligid niya, may mga vendor na umiiyak. Iba ang nakikipagtalo sa mga enforcer. May isang naghagis ng plastic stool at agad na na-handcuff. Paulit-ulit ang megaphone: 'Huwag lumaban. Huwag lumaban.'",
+      "theme": "demolition",
+      "choices": [
+        {
+          "text": "Hilingin na ipakita ang written order at itanong ang relocation plan -- hindi nila pwedeng gawin ito nang walang due process.",
+          "nextNode": "vendor_legal_02",
+          "consequence": "Ginamit ni Nena ang kanyang mga karapatan, iniinsistong makita ang dokumentasyon ng clearing operation.",
+          "scoreChange": 12,
+          "knowledgeGained": "Sa ilalim ng RA 7279 Sec. 28, ang demolition o eviction ay pwede lang gawin kung may: (1) 30-day written notice, (2) sapat na consultation, (3) presensya ng LGU officials, (4) tamang identification ng mga enforcer, at (5) walang demolition sa masamang panahon, gabi, o holiday."
+        },
+        {
+          "text": "Tahimik na kunin ang kaya niyang dalhin at umalis bago lumala ang sitwasyon.",
+          "nextNode": "vendor_health_01",
+          "consequence": "Nailigtas ni Nena ang mga sauce jar at ilang kagamitan pero nawala ang kariton at karamihan ng paninda.",
+          "scoreChange": -3,
+          "knowledgeGained": null
+        },
+        {
+          "text": "Sumama sa ibang vendor sa pisikal na pagharang sa mga enforcer para hindi na kumuha ng mas maraming kariton.",
+          "nextNode": "vendor_crisis_01",
+          "consequence": "Lumala ang confrontation nang mapanganib.",
+          "scoreChange": 5,
+          "knowledgeGained": "Bagama't may karapatan ang mga manggagawa sa mapayapang protesta, ang pisikal na pagharang sa government enforcers ay pwedeng magresulta sa pagka-aresto dahil sa obstruction of justice o resistance to authority."
+        }
+      ],
+      "isEnding": false
+    },
+    "vendor_legal_01": {
+      "id": "vendor_legal_01",
+      "title": "Kasunduan sa Sidewalk",
+      "narrative": "Binasa ni Kap. Rodel ang proposal ng DSVA, na tinulungan ni Atty. Paolo na i-draft sa laptop niya sa isang computer shop sa Divisoria: isang designated vending area sa hindi masyadong matao na bahagi ng kalye, operating hours mula alas-singko ng umaga hanggang alas-nuwebe ng gabi, mga vendor na nagme-maintain ng sanitation standards, at monthly fees na P200 kada stall na mapupunta sa barangay.\n\n'Maganda naman 'to,' amin ni Kap. Rodel, binabaling-baling ang mga naka-print na pahina. 'Pero ang clearing order, galing sa city. Kailangan ko ng pang-cover ko. Kung may barangay resolution tayo na nag-a-authorize ng designated vending zone, at may listahan ng registered vendors, may panlaban ako.'\n\nNagsalita si Atty. Paolo. 'Kap, under RA 7160, ang Sangguniang Barangay ay pwedeng magpasa ng resolution na nagde-designate ng area para sa livelihood. Pwede natin itong i-present sa next session. Pero kailangan namin ng suporta niyo -- i-introduce niyo bilang initiative ng barangay captain.'\n\nNag-isip si Kap. Rodel. Dalawampu't tatlong botante sa DSVA, kasama ang mga pamilya nila -- madaling isang daang boto sa susunod na eleksyon. 'Sige,' sabi niya. 'Pero kailangan professional tingnan. At kailangan lahat kayo mag-comply -- health certificate, BMBE, sanitation. Ayaw kong mapahiya.'\n\nAng barangay council session ay sa tatlong araw. Pitumpu't dalawang oras ang meron ni Nena at ng DSVA para mag-prepare.",
+      "theme": "vendor_rights",
+      "choices": [
+        {
+          "text": "I-rally ang lahat ng DSVA members na tapusin ang BMBE applications bago ang council session.",
+          "nextNode": "vendor_victory_01",
+          "consequence": "Ipinakita ng DSVA ang mga organized at compliant vendors na handang i-formalize ang kanilang mga negosyo.",
+          "scoreChange": 12,
+          "knowledgeGained": "Ang BMBE Certificate of Authority ay nag-e-exempt sa micro-businesses mula sa income tax at minimum wage law. Nagbibigay rin ito ng legal standing sa mga vendor kapag nakikitungo sa LGU enforcement."
+        },
+        {
+          "text": "I-focus na gawin ang presentation sa Sangguniang Barangay nang pinaka-compelling hangga't maaari.",
+          "nextNode": "vendor_victory_02",
+          "consequence": "Binuhos ni Nena ang lakas niya sa pag-prepare ng pinakamahusay na kaso para sa council.",
+          "scoreChange": 10,
+          "knowledgeGained": "Ang mga Sangguniang Barangay session ay bukas sa publiko. Anumang registered organization ay pwedeng mag-request na mag-present sa open forum period ng session."
+        }
+      ],
+      "isEnding": false
+    },
+    "vendor_legal_02": {
+      "id": "vendor_legal_02",
+      "title": "Due Process sa Lupa",
+      "narrative": "Tumayo si Nena sa harap ng mga enforcer, nanginginig ang kamay pero malinaw ang boses. 'May written notice ba kayo na 30 days prior? May relocation plan ba kayo? Nasa batas yan -- RA 7279.' Nagtinginan ang mga enforcer. Sanay sila sa mga vendor na umiiyak, nagmamakaawa, o tumatakbo. Hindi sa nag-ci-cite ng batas.\n\nLumapit ang team leader, isang lalaki na may asul na vest na may nakaprint na 'City Engineer.' 'Ma'am, may order kami galing sa City Engineer's Office. Ito.' Ipinakita niya ang isang papel -- isang memo na nag-uutos ng clearing ng 'illegal obstructions' sa tatlong kalye malapit sa Divisoria. Walang specific na banggit ng mga vendor. Walang relocation plan. Walang ebidensya ng prior consultation.\n\n'Wala kayong relocation plan,' sabi ni Nena, maingat na binabasa ang memo. 'At walang 30-day notice. Kahapon lang namin nakita yung sign.' Sa paligid niya, nakikinig ang ibang vendor. May nag-re-record sa cellphone.\n\nNag-radio ang team leader. Pagkatapos ng tensiyong limang minuto, bumalik siya. 'Ma'am, kausapin ko muna yung supervisor namin. Pero hindi ko kayo ma-promise na hindi magpapatuloy ang clearing.' Lumipat siya sa susunod na bloke, pansamantalang nilampasan ang area ni Nena. Maliit na tagumpay, pero delay lang ito, hindi solusyon.",
+      "theme": "demolition",
+      "choices": [
+        {
+          "text": "I-organize ang mga vendor para mag-file ng formal complaint tungkol sa illegal na clearing operation.",
+          "nextNode": "vendor_legal_03",
+          "consequence": "Pinangunahan ni Nena ang mga vendor sa pagsasampa ng legal na aksyon laban sa improper na clearing.",
+          "scoreChange": 15,
+          "knowledgeGained": "Ang mga reklamo tungkol sa illegal na demolition o clearing ay pwedeng i-file sa Commission on Human Rights (CHR), na may jurisdiction sa mga paglabag sa economic at social rights. Pwedeng mag-issue ng ceasefire order at mag-imbestiga ang CHR."
+        },
+        {
+          "text": "Gamitin ang delay para mabilis na mag-impake at lumipat bago sila bumalik.",
+          "nextNode": "vendor_health_01",
+          "consequence": "Ginamit ni Nena ang pansamantalang ginhawa para mai-save ang kariton pero nawala ang spot niya.",
+          "scoreChange": 3,
+          "knowledgeGained": null
+        }
+      ],
+      "isEnding": false
+    },
+    "vendor_legal_03": {
+      "id": "vendor_legal_03",
+      "title": "Bakas ng Papel",
+      "narrative": "Tatlong gabi ang ginugol ni Nena at Atty. Paolo sa pag-document ng lahat. Nangolekta sila ng mga cellphone video ng clearing operation mula sa anim na iba't ibang vendor. Kinuhanan nila ng litrato ang tarpaulin sign na siyang nag-serve bilang nag-iisang 'notice' -- naka-post limang araw bago, hindi tatlumpu. Kumuha sila ng sworn statements mula sa labindalawang vendor na hindi na-consult bago ang operasyon.\n\nNag-draft si Atty. Paolo ng complaint letter na naka-address sa Commission on Human Rights (CHR) Regional Office sa Manila. 'Ang CHR,' paliwanag niya sa mga vendor na nagtipon sa sala ni Mang Bert, 'may mandato na protektahan ang economic at social rights. Kasama dun ang right to livelihood. At ang clearing operation na walang due process, violation yan.'\n\nNag-prepare din siya ng sulat sa City Council, humihiling ng dialogue tungkol sa pagtatatag ng legal framework para sa street vending sa Divisoria area. 'Dalawang approach,' sabi ni Atty. Paolo. 'Legal complaint para sa protection, at dialogue para sa long-term solution.'\n\nSi Nena mismo ang nagdala ng CHR complaint sa regional office, sumakay ng dalawang jeepney para makarating. Ini-stamp ng receiving clerk ang mga dokumento at binigyan siya ng case number. Parang hawak ng lottery ticket -- hindi niya alam kung mananalo, pero at least nasa laro na siya.",
+      "theme": "vendor_rights",
+      "choices": [
+        {
+          "text": "I-push ang City Council dialogue habang naghihintay na umusad ang CHR complaint.",
+          "nextNode": "vendor_victory_02",
+          "consequence": "Sinundan ni Nena ang legal at political track nang sabay, pinalaki ang leverage ng DSVA.",
+          "scoreChange": 12,
+          "knowledgeGained": "Pwedeng mag-summon ng government officials, mag-conduct ng investigation, at mag-recommend ng prosecution ang CHR. Bagama't hindi binding ang findings ng CHR, may malaking moral at political na bigat ang mga ito."
+        },
+        {
+          "text": "I-focus ang pagkuha ng individual permits at BMBE certificates habang pending ang complaint.",
+          "nextNode": "vendor_school_01",
+          "consequence": "Gumawa ng praktikal na hakbang si Nena para protektahan ang mga vendor habang nagpapatuloy ang institutional fight.",
+          "scoreChange": 8,
+          "knowledgeGained": "Nag-aalok na ngayon ang PhilHealth ng coverage para sa mga informal worker sa pamamagitan ng Indirect Contributors program. Pwedeng mag-register ang mga street vendor sa kahit anong PhilHealth office na may valid ID."
+        }
+      ],
+      "isEnding": false
+    },
+    "vendor_health_01": {
+      "id": "vendor_health_01",
+      "title": "Kapag Umulan, Bumuhos",
+      "narrative": "Walang regular na spot, bumaba ang kita ni Nena sa P600-800 kada araw, mula sa dating P1,200-1,500. Nagpapalipat-lipat siya ng lugar, hindi nagtatagal nang sapat para bumuo ng customer base. Lumabas ang stress sa katawan -- hindi makatulog, tumaas ang blood pressure, at lumala ang paulit-ulit na ubo mula sa maraming taon na nakatayo sa ibabaw ng mainit na mantika.\n\nTapos si Kevin, ang 10-year-old niyang anak, umuwi mula sa school na may mataas na lagnat. Sa ikalawang araw, umabot na sa 39.8°C ang temperatura niya. Dinala ni Nena sa Tondo General Hospital emergency room, kung saan naghintay sila ng apat na oras. Ang diagnosis: dengue fever. Kailangang ma-confine si Kevin para ma-monitor.\n\nHumingi ang hospital ng P5,000 na deposit. P2,300 ang nasa coin purse ni Nena at P1,000 na emergency fund na itinago sa medyas sa bahay. P3,300 yan. Tinawagan niya si Carding, na pwedeng mag-ambag ng P500 mula sa kita nitong linggo. Kulang pa rin ng P1,200.\n\nMahabagin pero mahigpit ang admitting clerk: 'Ma'am, kailangan po ng deposit bago ma-admit. Pero pwede niyo po i-try ang MSWDO -- may assistance po sila for indigent patients. O kaya PhilHealth, kung member po kayo?' Hindi PhilHealth member si Nena. Kailanman ay hindi siya na-cover ng anumang government health insurance.",
+      "theme": "no_benefits",
+      "choices": [
+        {
+          "text": "Magtanong tungkol sa PhilHealth Indigent Program -- baka kwalipikado siya para sa libreng coverage.",
+          "nextNode": "vendor_health_02",
+          "consequence": "Natuklasan ni Nena ang isang government program na espesyal na dinisenyo para sa mga worker na tulad niya.",
+          "scoreChange": 10,
+          "knowledgeGained": "Ang PhilHealth Indigent Program ay nagbibigay ng libreng health insurance sa mga pamilyang identified bilang mahirap ng DSWD sa pamamagitan ng Listahanan system. Pwede ring mag-register ang mga informal worker bilang voluntary members sa halagang P400/buwan."
+        },
+        {
+          "text": "Mangutang sa lending company para ma-cover ang deposit -- hindi pwedeng maghintay si Kevin.",
+          "nextNode": "vendor_crisis_02",
+          "consequence": "Nangutang ng mataas na interest si Nena para iligtas ang anak, dagdag na financial pressure sa desperadong sitwasyon.",
+          "scoreChange": -5,
+          "knowledgeGained": null
+        },
+        {
+          "text": "Pumunta sa MSWDO office sa hospital at mag-apply ng medical assistance.",
+          "nextNode": "vendor_health_03",
+          "consequence": "Nag-navigate si Nena sa hospital bureaucracy para ma-access ang social welfare assistance program.",
+          "scoreChange": 7,
+          "knowledgeGained": "Ang Medical Social Work Department (MSWDO) sa mga government hospital ay pwedeng magbigay ng financial assistance para sa mga indigent patients. Kailangan: valid ID, barangay certificate of indigency, at social case study."
+        }
+      ],
+      "isEnding": false
+    },
+    "vendor_health_02": {
+      "id": "vendor_health_02",
+      "title": "Ang Safety Net na Hindi Niya Alam",
+      "narrative": "Ang MSWDO social worker, isang batang babae na nagngangalang Grace, ay matiyaga. Ipinaliwanag niya: 'Ma'am, kung nasa Listahanan kayo -- yung DSWD poverty list -- automatic covered na kayo ng PhilHealth. Kung wala, pwede kayong mag-apply as voluntary member. P400 a month lang, covered na buong pamilya.'\n\nP400 kada buwan. Halos katumbas ng ginagastos ni Nena sa lagay sa barangay tanod. Masakit ang irony.\n\nChineck ni Grace ang Listahanan database sa computer niya. Wala sa listahan ang pamilya ni Nena -- nalaglag sila sa huling assessment cycle. 'Pero Ma'am,' patuloy ni Grace, 'pwede kayo mag-file ng grievance para ma-include sa next assessment. At for now, pwede kayong mag-register as voluntary member at gamitin agad after three months.' Tatlong buwan ay masyadong matagal para sa dengue ni Kevin.\n\nNag-phone call si Grace, mabilis na Tagalog ang usapan, tapos bumalik kay Nena. 'Ma'am, may PCSO assistance at may Malasakit Center dito sa hospital. Pwede kayong mag-apply for both. If approved, covered na yung deposit at most of the bills. Pero kailangan niyo ng barangay certificate of indigency. May barangay hall malapit dito -- pwede kayong kumuha ngayon, tapos balik kayo dito.'\n\nNakatayo na si Nena. 'Saan po yung barangay hall?'",
+      "theme": "no_benefits",
+      "choices": [
+        {
+          "text": "Kumuha ng barangay certificate at mag-apply sa PCSO at Malasakit Center assistance kaagad.",
+          "nextNode": "vendor_health_03",
+          "consequence": "Nag-navigate si Nena sa maraming assistance programs, nasigurado ang coverage para sa hospitalization ni Kevin.",
+          "scoreChange": 10,
+          "knowledgeGained": "Ang Malasakit Center Act (RA 11463) ay lumikha ng one-stop shops sa mga government hospital kung saan pwedeng mag-apply ang mga pasyente para sa PCSO, PhilHealth, DSWD, at DOH assistance sa iisang lugar. Lahat ng public hospitals na may 100+ beds ay kailangang magkaroon nito."
+        },
+        {
+          "text": "Mag-register kaagad bilang PhilHealth voluntary member para covered ang pamilya niya sa hinaharap.",
+          "nextNode": "vendor_health_03",
+          "consequence": "Gumawa ng hakbang si Nena para maiwasan na ang mga future health crisis ay maging financial disaster.",
+          "scoreChange": 12,
+          "knowledgeGained": "Available din ang SSS voluntary membership sa mga informal worker. Sa P580/buwan na minimum contribution, makukuha ng mga vendor ang sickness, maternity, disability, retirement, at death benefits. Kailangan lang ng valid ID para mag-register."
+        }
+      ],
+      "isEnding": false
+    },
+    "vendor_health_03": {
+      "id": "vendor_health_03",
+      "title": "Paggaling ni Kevin",
+      "narrative": "Na-admit si Kevin. Tinakpan ng Malasakit Center ang karamihan ng hospital bill sa pamamagitan ng kombinasyon ng PhilHealth Indigent sponsorship at PCSO assistance. Kailangan pa rin ni Nena na magbayad ng P1,800 mula sa sariling bulsa para sa mga gamot na hindi covered ng programa. Nangutang siya ng P1,000 kay Aling Ditas at kinuha ang natira sa natitirang ipon niya.\n\nApal na araw, natulog si Nena sa sahig ng hospital katabi ng kama ni Kevin, kumakain ng cup noodles at crackers. Si Carding ang pumalit sa morning shift, ibinebenta ang anumang stock na kayang i-prepare ni Nena ng alas-tres ng umaga bago pumunta sa hospital. Halos kalahati lang ng kita ni Nena ang kinikita niya -- wala siyang sales touch ni Nena.\n\nGumaling si Kevin. Sa araw ng discharge, bumalik na sa normal ang platelet count niya, at binigyan si Nena ng lektura ng doktor tungkol sa mosquito nets at stagnant water na kabisado na niya. Tuwing tag-init, pare-pareho: fogging na hindi gumagana, drainage na hindi dumadrain, at mga batang nagbabayad ng presyo.\n\nPapalabas ng hospital na hawak ang kamay ni Kevin, nagdesisyon si Nena. Kailangan niyang mag-rebuild -- hindi lang ng negosyo niya, kundi ng seguridad sa paligid ng pamilya niya. Narinig na niya ang tungkol sa SSS at PhilHealth para sa mga informal worker. Narinig na niya ang tungkol sa BMBE. Narinig na niya ang tungkol sa vendor association. Oras na para itigil ang pakikinig at magsimulang gumawa.",
+      "theme": "no_benefits",
+      "choices": [
+        {
+          "text": "Sumali sa DSVA at i-push ang collective SSS at PhilHealth enrollment para sa lahat ng vendor members.",
+          "nextNode": "vendor_organize_02",
+          "consequence": "Ginawang collective action ni Nena ang karanasan niya, determinado na walang pamilya ng vendor ang dapat humarap sa health crisis na walang proteksyon.",
+          "scoreChange": 12,
+          "knowledgeGained": "Ang mga grupo ng informal workers ay pwedeng mag-apply ng SSS voluntary membership nang sabay-sabay. Pwede ring i-sponsor ng DSWD ang PhilHealth coverage para sa organized groups ng informal workers sa pamamagitan ng Sponsored Program."
+        },
+        {
+          "text": "I-focus muna ang pag-rebuild ng negosyo -- hindi siya makakatulong sa iba kung siya mismo ay broke.",
+          "nextNode": "vendor_fire_01",
+          "consequence": "Inuna ni Nena ang economic recovery, pero may iba pang setback ang naghihintay.",
+          "scoreChange": 5,
+          "knowledgeGained": null
+        }
+      ],
+      "isEnding": false
+    },
+    "vendor_crisis_01": {
+      "id": "vendor_crisis_01",
+      "title": "Ang Linya sa Pagitan ng Tapang at Panganib",
+      "narrative": "Labinlimang vendor, kasama si Nena, ang nagkabit ng braso sa harap ng mga natitirang kariton. Huminto ang mga enforcer. Nag-radio ulit ang team leader. Ang mga pulis na naka-escort -- tatlong opisyal na nakatayo lang sa tabi ng mga motorsiklo nila, nababagot -- ay lumapit na.\n\n'Ma'am, Sir, huwag po kayong lumaban,' sabi ng isang pulis, nakasandal ang kamay sa baton. 'Cooperation na lang po. Kung may reklamo kayo, file kayo ng complaint after. Pero ngayon, clearing operation po ito, may order po kami.'\n\nSi Mang Bert, nakatayo sa tabi ni Nena, nagsalita: 'Officer, nasaan po ang 30-day notice? Nasaan ang relocation plan? May RA 7279 po -- hindi pwedeng basta-basta clearing.' Tiningnan siya ng pulis nang blangko. Hindi niya narinig ang RA 7279 kailanman.\n\nAng standoff ay tumagal ng dalawampung minuto. Dumating ang isang GMA News crew -- may tumawag sa kanila. Nagbago kaagad ang dinamika dahil sa mga camera. Nag-announce ang team leader ng 'temporary suspension' ng clearing operation 'pending consultation with the city.' Nagpalakpakan ang mga vendor. Pero napansin ni Nena na ang mga truck ay may anim na kariton na naka-load na, kasama ang buong setup ni Aling Merly.\n\nGanoong gabi, ang standoff ay isang labinlimang segundong clip sa 24 Oras. Sandaling nakita ang mukha ni Nena. Ipinakita sa kanya ni Jessa ang clip sa phone: 'Nanay, sikat ka!'",
+      "theme": "demolition",
+      "choices": [
+        {
+          "text": "Gamitin ang media attention para i-pressure ang city na makipag-dialogue sa mga vendor.",
+          "nextNode": "vendor_solidarity_01",
+          "consequence": "Ginamit ni Nena at ng mga vendor ang sandali ng visibility para mag-demand ng formal na negotiation.",
+          "scoreChange": 12,
+          "knowledgeGained": "Ang media coverage ng mga clearing operation ay historically nag-pressure sa mga LGU na mag-negotiate. Sa ilalim ng Philippine Information Act, ang mga government operation ay subject sa public scrutiny at hindi pwedeng i-restrict ang media coverage."
+        },
+        {
+          "text": "Idemand ang immediate na pagbabalik ng mga na-confiscate na kariton bilang kondisyon sa anumang dialogue.",
+          "nextNode": "vendor_rebuild_01",
+          "consequence": "Nag-push si Nena para sa pagbabalik ng nasamsam na ari-arian, isang basic demand bago ang anumang negotiation.",
+          "scoreChange": 8,
+          "knowledgeGained": "Ang mga na-confiscate na ari-arian sa clearing operations ay kailangang itago nang maayos at ibalik kapag nag-comply na. Kung nasira o nawala ang ari-arian habang nasa pag-iingat ng gobyerno, pwedeng mag-file ng claim for damages ang may-ari."
+        }
+      ],
+      "isEnding": false
+    },
+    "vendor_crisis_02": {
+      "id": "vendor_crisis_02",
+      "title": "Ang Bitag ng Utang",
+      "narrative": "Nangutang si Nena ng P5,000 sa isang lending company na tinatawag na '5-6' -- pinangalan sa interest rate nila: umutang ng 5, bayaran ng 6. Dalawampung porsyento ang interest, due sa isang buwan. P5,000 ang naging P6,000. Alam niyang masamang deal ito, pero naglalagnat si Kevin at naghihintay ang admitting clerk.\n\nNa-admit si Kevin at gumaling sa apat na araw. Kabuuang hospital bill: P12,500. Tinakpan ng Malasakit Center ang P8,000. Utang ni Nena: P4,500 sa hospital (babayaran sa installment) dagdag ang P6,000 sa lending company. Kabuuang utang: P10,500.\n\nPagbalik sa improvised na vending spot, kinalkula ni Nena sa likod ng isang resibo. Daily earnings: P800 average. Daily expenses (paninda, pamasahe, pagkain): P350. Net income: P450/araw. Monthly net: mga P13,500. Monthly na obligasyon: renta P3,500, gamot ni Carding P800, school expenses ng mga bata P2,000, pagkain P4,000, bayad sa utang P6,000, hospital installment P1,500. Kabuuan: P17,800.\n\nKulang siya ng P4,300 kada buwan. Ang tanging paraan para punan ang puwang ay mag-trabaho ng mas matagal, magbenta sa iba't ibang lugar, o umutang pa. Ang 5-6 agent, na naramdaman ito, nag-alok na 'i-restructure' ang utang niya. 'Babayaran mo lang yung interest this month -- P1,000. Tapos next month, bayaran mo na yung buong P6,000.' Ganito gumagana ang cycle.",
+      "theme": "no_benefits",
+      "choices": [
+        {
+          "text": "Tanggihan ang restructuring at maghanap ng government alternatives -- DTI lending, microfinance cooperatives.",
+          "nextNode": "vendor_rebuild_01",
+          "consequence": "Naghanap si Nena ng lehitimong tulong sa pananalapi kaysa lumubog pa sa predatory lending.",
+          "scoreChange": 10,
+          "knowledgeGained": "Ang Pondo sa Pagbabago at Pag-asenso (P3) program ng DTI ay nag-aalok ng micro-loans sa 2.5% interest kada buwan para sa mga street vendor at market vendor. Maximum loan: P100,000. Walang collateral na kailangan para sa mga utang na wala pang P10,000."
+        },
+        {
+          "text": "Tanggapin ang restructuring -- wala namang ibang option ngayon.",
+          "nextNode": "vendor_ending_displaced",
+          "consequence": "Lalong lumubog si Nena sa debt cycle, bawat buwan umuutang ng mas marami para takpan ang interest ng nakaraang buwan.",
+          "scoreChange": -8,
+          "knowledgeGained": null
+        }
+      ],
+      "isEnding": false
+    },
+    "vendor_rebuild_01": {
+      "id": "vendor_rebuild_01",
+      "title": "Magsimula Muli",
+      "narrative": "Inimbentaryo ni Nena ang meron siya: P3,200 sa ipon, isang hiniram na kariton mula kay Aling Ditas (may spare ang asawa nito), at labindalawang taon ng pagkakaalam kung ano ang gusto ng mga customer sa Divisoria ng alas-seis ng umaga. Kailangan niya ng P2,500 para sa basic na stock: fishball, kwek-kwek batter, mantika, sawsawan, sticks, at suka.\n\nMeron din siyang isang bagay na wala sa kanya dati: kaalaman. Alam na niya ang tungkol sa BMBE. Alam na niya ang tungkol sa RA 7279. Alam na niya ang tungkol sa PhilHealth para sa mga informal worker. Alam na niya na ang 'illegal vendor' ay hindi legal na kategorya -- ito ay isang label na ginagamit para bigyang-katwiran ang pag-alis ng hanapbuhay niya nang walang due process.\n\nAng tanong ay kung ano ang gagawin sa kaalamang iyon. Bumalik sa sidewalk nang mag-isa, armado ng BMBE application at pag-asa? O sumama sa ibang vendor at bumuo ng isang bagay na pwedeng protektahan silang lahat?\n\nSi Carding, nakahiga sa mattress na masakit ang likod, nagsabi: 'Nena, labindalawang taon ka na sa kalsada. Alam mo na lahat ng tricks. Pero tricks lang yun -- pansamantala. Yung mga vendor na nag-organize, parang may shield sila. Baka kailangan mo na rin ng shield mo.'",
+      "theme": "informal_economy",
+      "choices": [
+        {
+          "text": "Sumali sa DSVA at tumulong na i-push ang designated vending zone resolution.",
+          "nextNode": "vendor_victory_02",
+          "consequence": "Idinagdag ni Nena ang boses at karanasan niya sa collective effort para sa permanenteng proteksyon ng mga vendor.",
+          "scoreChange": 12,
+          "knowledgeGained": "Ang mga organized vendor group sa mga lungsod tulad ng Baguio, Cebu, at Marikina ay matagumpay na nag-negotiate ng designated vending areas sa kanilang mga LGU. Nandyan na ang modelo -- kailangan lang i-replicate."
+        },
+        {
+          "text": "Mag-rebuild nang solo -- mag-apply ng BMBE at bumalik sa sidewalk nang mag-isa.",
+          "nextNode": "vendor_victory_03",
+          "consequence": "Nag-rebuild si Nena sa sarili niyang paraan, gamit ang bagong legal knowledge bilang personal na proteksyon.",
+          "scoreChange": 7,
+          "knowledgeGained": "Ang BMBE certificate, bagama't hindi vending permit, ay nagbibigay ng legal standing bilang registered business sa isang vendor. Dahil dito, mas mahirap para sa mga enforcer na i-classify sila bilang 'illegal.'"
+        },
+        {
+          "text": "Sumuko na sa street vending -- maghanap na lang ng factory job o domestic work.",
+          "nextNode": "vendor_ending_crushed",
+          "consequence": "Labindalawang taon ng pagbuo ng hanapbuhay, nawala. Umalis si Nena sa nag-iisang trabahong alam niya.",
+          "scoreChange": -5,
+          "knowledgeGained": null
+        }
+      ],
+      "isEnding": false
+    },
+    "vendor_victory_01": {
+      "id": "vendor_victory_01",
+      "title": "Pumasa ang Resolution",
+      "narrative": "Punong-puno ang Sangguniang Barangay session. Dalawampu't tatlong DSVA members ang nakaupo sa mga plastic chairs, nakasuot ng magkakatugmang yellow na t-shirts na ipina-print ni Aling Ditas ('DSVA - Karapatan sa Hanapbuhay'). Nag-present si Atty. Paolo ng proposal. Si Kap. Rodel, totoo sa salita niya, ang nag-introduce.\n\nTumutol si Konsehal Minda: 'Kap, pa'no naman yung mga residente na nagrereklamo sa dumi at traffic ng mga vendor?' Nagtaas ng kamay si Nena at tumayo. 'Konsehal, kasama po sa proposal namin ang sanitation standards at designated hours. Kami mismo ang maglilinis ng area namin. At hindi po namin haharangin ang sidewalk -- sa gilid lang kami, may dalawang metro pa para sa pedestrian.'\n\nAng boto ay 5-2 pabor. Barangay Resolution 2026-07: 'Pagde-designate ng Livelihood Vending Zone sa western sidewalk ng Dagupan Street, Barangay 125, Tondo, Manila.' Kasama sa resolution ang operating hours, sanitation requirements, monthly fees, at listahan ng registered vendors.\n\nUmiyak si Nena sa hallway pagkatapos. Nagkunwari si Mang Bert na may pumasok sa mata niya. Kinuhanan ni Atty. Paolo ng litrato ang signed resolution gamit ang phone niya. 'Ito ang simula,' sabi niya. 'Hindi pa tapos. But this is real.'\n\nAng clearing operation, nang dumating noong sumunod na linggo, nilampasan ang Dagupan Street.",
+      "theme": "vendor_rights",
+      "choices": [],
+      "isEnding": true
+    },
+    "vendor_victory_02": {
+      "id": "vendor_victory_02",
+      "title": "Mas Malakas na Magkakasama",
+      "narrative": "Anim na buwan matapos ang clearing operation, ang Divisoria Sidewalk Vendors Association ay may apatnapu't isang miyembro, isang barangay resolution na nagpoprotekta sa vending zone nila, at labinlimang BMBE-registered vendors (may sampu pang applications na pending). Ang fishball cart ni Nena ay may maliit na laminated sign na ngayon: 'Nena's Fishball & Kwek-Kwek -- BMBE Registered, DTI-TN-2026-04182.'\n\nAng monthly fee sa barangay ay P200 kada vendor -- wala pang kalahati ng dating lagay. Ang pera ay napupunta sa waste collection at shared na handwashing station na ini-install ng barangay. Nagpapatrolya pa rin si Bantay na tanod sa area, pero hindi na siya humihinto sa kariton ni Nena. Nagpadala ang DSVA ng formal letter sa barangay captain na nagdo-document ng kanyang extortion history. Na-reassign siya sa night shift.\n\nKumikita ngayon si Nena ng mga P1,400 sa magandang araw. Naka-enroll na siya sa PhilHealth bilang voluntary member at nagsimula na ng SSS contributions. Si Jessa, na tumulong mag-design ng Facebook page ng DSVA, gusto na ngayong mag-political science sa college. 'Para matulungan ko kayo, Nanay,' sabi niya. Gusto sanang sabihin ni Nena na 'mag-nursing ka na lang,' pero pinigilan niya ang sarili.\n\nAng beautification program ng city ay hindi nawala. May mga tsismis ng isa pang clearing operation sa kabilang district. Nire-reach out na ng DSVA ang mga vendor groups doon. 'Tinuruan tayo ni Atty. Paolo,' sabi ni Nena sa kanila. 'Ngayon, tayo naman ang magtuturo.'",
+      "theme": "vendor_rights",
+      "choices": [],
+      "isEnding": true
+    },
+    "vendor_victory_03": {
+      "id": "vendor_victory_03",
+      "title": "Maliliit na Panalo, Totoong Pag-unlad",
+      "narrative": "Nakuha ni Nena ang BMBE certificate niya matapos ang anim na linggo ng tiyaga sa bureaucracy. Ni-frame niya ito -- tulad ng ginawa ni Mang Bert sa DSVA registration -- at may laminated copy sa kariton niya. Nag-register din siya bilang PhilHealth voluntary member, nagbabayad ng P400 kada buwan, at nagsimula ng SSS contributions sa P580 kada buwan. P980 sa monthly deductions na wala dati sa kanya, pero naalala niya ang hospital stay ni Kevin at alam niyang sulit.\n\nAng vending situation niya ay precarious pero manageable. Nagpapalipat-lipat siya sa dalawang spot -- ang Divisoria sidewalk kapag epektibo ang designated zone ng DSVA, at ang Recto area kapag mabigat ang enforcement. Alam na niya ang schedule ngayon, alam kung sinong inspector ang mahigpit at sino ang maluwag, alam kung kailan itutulak at kailan sususuko.\n\nHindi siya fully nag-organize kasama ang DSVA, pero dumadalo siya sa mga meeting kapag kaya at nagbabayad ng dues. Ang association ay safety net na masasandalan niya pero hindi pa niya fully na-commit. Kompromiso ito -- hindi ang matapang na collective victory na naisip nina Mang Bert at Atty. Paolo, pero isang tunay at nararamdamang pag-unlad sa buhay ni Nena.\n\nSa gabi, habang nagpe-prepare ng paninda kinabukasan, minsan nag-iisip si Nena tungkol sa umagang iyon nang unang makita niya ang clearing operation sign. Kung gaano siya katakot noon. Kung gaano siya kawalang-magawa noon. Hindi na siya walang magawa ngayon. Natatakot pa rin siya minsan -- hindi nawawala ang takot kapag ang hanapbuhay mo ay nakadepende sa isang sidewalk na hindi mo pag-aari. Pero ngayon, ang takot ay kasama ng kaalaman, at ang kaalaman, natutuhan niya, ay sarili nitong uri ng kariton: dinadala ka nito pasulong.",
+      "theme": "informal_economy",
+      "choices": [],
+      "isEnding": true
+    },
+    "vendor_ending_displaced": {
+      "id": "vendor_ending_displaced",
+      "title": "Naitulak sa Gilid",
+      "narrative": "Tatlong buwan matapos ang clearing operation, hindi na nagbebenta ng fishball si Nena malapit sa Divisoria. Nawala ang kariton niya, hindi afford na mag-rebuild, at nilamon ng utang sa 5-6 lender ang anumang natirang cushion. Ngayon ay nagtatrabaho siya bilang tagahugas ng pinggan sa isang carinderia sa Tondo, kumikita ng P350 kada araw -- wala pang kalahati ng kinikita niya bilang vendor, at walang independensya.\n\nAng construction job ni Carding ang lifeline ng pamilya ngayon, pero lumalalala ang ubo niya at ayaw niyang magpatingin sa doktor. 'Sayang sa pera,' sabi niya. Kinansela ni Jessa ang plano para sa school trip. Ang school supplies ni Kevin ay galing sa donation drive ng barangay. Parang lumiliit ang kwarto sa Tondo tuwing gabi.\n\nMinsan, habang naglalakad sa Divisoria papuntang trabaho, nakikita ni Nena ang mga vendor na nanatili -- yung mga nag-organize, yung mga nakakuha ng BMBE certificates, yung mga nag-negotiate ng designated zone. Nandoon pa rin sila, nagbebenta ng fishball at kwek-kwek, tumatawa kasama ang mga suki. Kumakaway si Mang Bert kapag nakikita siya. 'Nena, bumalik ka na. May slot pa naman sa zone.'\n\nBaka bumalik siya. Alam pa rin niya ang mga recipe, mayroon pa siyang mga kamay para dito, gumigising pa rin siya ng alas-tres y medya ng umaga dahil sa ugali. Pero sa ngayon, ang agwat sa pagitan ng pagkakaalam ng karapatan mo at pagkakaroon ng resources para kunin ang mga ito ay kasing-laki ng Ilog Pasig. Tinitingnan ni Nena ito araw-araw, pinaplanuhan ang pagbabalik niya.",
+      "theme": "informal_economy",
+      "choices": [],
+      "isEnding": true
+    },
+    "vendor_ending_crushed": {
+      "id": "vendor_ending_crushed",
+      "title": "Panalo ang Sistema",
+      "narrative": "Nagpatuloy ang mga clearing operation, bawat isa'y nagtulak kay Nena nang mas malayo sa Divisoria. Walang permit, walang association, walang ipon, naging isa siya sa mga hindi nakikitang na-displace -- mga vendor na isang araw na lang nawala sa sidewalk at hindi na napag-usapan pa.\n\nKumuha siya ng piece work -- naglalaba para sa kapitbahay, tumutulong sa karinderya sa tanghalian, nag-aassemble ng plastic na bulaklak para sa isang pabrika sa Valenzuela na nagbabayad per piraso. Ang trabaho ay hindi regular at halos sapat lang sa renta. Si Carding na ang nagdadala sa pamilya ngayon, ang sahod niya sa construction ay lalong pumipis bawat buwan.\n\nHindi na nagsasalita si Nena tungkol sa labindalawang taon niya bilang vendor. Saradong kabanata na ito -- hindi dahil pinili niyang isara, kundi dahil nagdesisyon ang lungsod na mas pangit ang kariton niya kaysa sa walang laman na sidewalk kung saan ito dati nakatayo. Kumpleto na ang 'beautification' ng Divisoria: malinis na concrete, pinintahang gutter, at walang fishball ng alas-seis ng umaga.\n\nMay gabi na nakita ni Jessa ang nanay niyang nakatingin sa phone, nag-i-scroll sa mga lumang litrato ng kariton. 'Nanay, sabi ng teacher namin, may batas daw na nagpoprotekta sa mga vendor. RA 7279 daw.' Ibinaba ni Nena ang phone. 'Oo, anak. May batas. Pero ang batas, parang payong sa bagyo -- may tama, pero hindi lahat ng ulan, nakakaltas.' Huminto siya. 'Pero mas mabuti nang may payong kaysa wala.'",
+      "theme": "demolition",
+      "choices": [],
+      "isEnding": true
+    },
+    "vendor_napc_01": {
+      "id": "vendor_napc_01",
+      "title": "Isang Upuan sa Mesa",
+      "narrative": "May dalang hindi inaasahang balita si Atty. Paolo sa DSVA meeting: may regional consultation ang National Anti-Poverty Commission para sa informal sector sa Manila sa susunod na buwan. 'Ang NAPC,' paliwanag niya, 'may sector representative para sa informal economy workers. Ibig sabihin, may boses kayo sa national level -- hindi lang sa barangay.'\n\nParang kalokohan ang ideya para kay Nena. Isang fishball vendor mula sa Tondo na nakaupo sa government consultation? Pero seryoso si Atty. Paolo. 'They need real stories from real workers. Hindi yung mga galing sa NGO na nagsasalita para sa inyo. Kayo mismo.'\n\nAgad na tumanggi si Mang Bert -- 'Matanda na ako para sa ganyan.' Sabi ni Aling Ditas, pupunta siya 'kung may kasama.' Lahat ng mata ay napunta kay Nena, na naging pinaka-epektibong spokesperson ng association mula nang barangay council session.\n\nAng consultation ay sa NAPC office sa Quezon City. Tatlong sakay ng jeepney. Isang buong araw na malayo sa kariton. Pero ang pagkakataong ikwento ang istorya nila sa mga tao na pwedeng talagang magbago ng policy -- iba yun.",
+      "theme": "vendor_rights",
+      "choices": [
+        {
+          "text": "Dumalo sa NAPC consultation at ibahagi ang karanasan ng mga vendor sa Divisoria.",
+          "nextNode": "vendor_victory_01",
+          "consequence": "Dinala ni Nena ang boses ng mga street vendor sa national policy discussion sa unang pagkakataon.",
+          "scoreChange": 15,
+          "knowledgeGained": "Ang NAPC Basic Sector Representation Act (RA 8425) ay nag-mandate ng 14 basic sector seats, kasama ang isa para sa mga manggagawa sa informal economy. Ang mga sector representative ay pwedeng mag-influence ng national policy sa urban poor, livelihood, at social protection."
+        },
+        {
+          "text": "Magpadala na lang ng written statement -- hindi afford na mag-miss ng isang araw na pagbebenta.",
+          "nextNode": "vendor_victory_03",
+          "consequence": "Nag-contribute si Nena sa consultation sa sulat, isang kompromiso sa pagitan ng paglahok at survival.",
+          "scoreChange": 7,
+          "knowledgeGained": "Ang mga written submission sa NAPC consultations ay tinatanggap at kasama sa official record. Pwedeng lumahok sa policy-making ang mga informal worker kahit hindi personal na dumalo."
+        }
+      ],
+      "isEnding": false
+    },
+    "vendor_fire_01": {
+      "id": "vendor_fire_01",
+      "title": "Ang Sunog sa Gabi",
+      "narrative": "Ng alas-dos ng madaling araw, tumunog ang phone ni Nena. Si Mang Bert, nanginginig ang boses: 'Nena, may sunog sa may Dagupan. Yung mga kariton.' Nagbihis siya agad at tumakbo ng anim na bloke para makatagpo ng tatlong fire truck at mga kapitbahay na nakapantulog. Isang sunog mula sa katabing bodega ang kumalat sa makeshift storage area kung saan pitong vendor, kasama si Nena, ang nag-iiwan ng kariton nila overnight.\n\nWala na ang kariton niya. Hindi na-confiscate ngayon -- nasunog. Ang deep fryer na bigay ng biyenan niya bilang wedding gift: natunaw na plastic at baluktot na metal. Ang ipon na ini-invest niya sa bagong stock ng fishball at isaw: abo. Kabuuang pagkawala: P12,000 sa equipment at paninda.\n\nSabi ng fire chief, faulty wiring sa bodega ang sanhi. Ang may-ari ng bodega, isang landlord na nag-rerentang storage sa mga vendor ng P500/buwan, ay walang insurance at walang fire safety compliance certificate. Nag-kibit balikat siya nang harapin: 'Wala akong pananagutan. Hindi ko naman sinunog.'\n\nPero si Atty. Paolo, tinawagan ni Mang Bert sa lugar ng alas-kwatro ng umaga, iba ang tingin. 'Ang may-ari ng bodega ay may liability sa ilalim ng Civil Code. At ito mismo ang dahilan kung bakit kailangan ng mga BMBE-registered vendor ng access sa government micro-insurance programs.'",
+      "theme": "no_benefits",
+      "choices": [
+        {
+          "text": "Magtrabaho kasama si Atty. Paolo para papanagutin ang may-ari ng bodega at alamin ang micro-insurance options.",
+          "nextNode": "vendor_rebuild_01",
+          "consequence": "Hinalinhinan ni Nena ang accountability habang natututo tungkol sa financial protection mechanisms para sa mga micro-enterprise.",
+          "scoreChange": 12,
+          "knowledgeGained": "Ang Philippine Crop Insurance Corporation (PCIC) at Government Service Insurance System (GSIS) ay nag-explore ng micro-insurance programs para sa mga informal worker. Ang mga BMBE-registered business ay pwede ring mag-access ng DTI livelihood insurance referral program."
+        },
+        {
+          "text": "Tanggapin ang pagkawala at magsimula muli mula sa wala -- walang point na mag-demanda ng taong walang wala rin.",
+          "nextNode": "vendor_crisis_02",
+          "consequence": "Tinanggap ni Nena ang isa pang mapaminsalang pagkawala, ang sunod-sunod na setbacks na nagtulak sa kanya sa financial breaking point.",
+          "scoreChange": -5,
+          "knowledgeGained": null
+        }
+      ],
+      "isEnding": false
+    },
+    "vendor_solidarity_01": {
+      "id": "vendor_solidarity_01",
+      "title": "Ang Kabilang Panig ng Kariton",
+      "narrative": "Isang babae na hindi kilala ni Nena ang lumapit sa kariton niya isang hapon. Mas bata, mga 30, nakasuot ng malinis na blouse at may hawak na folder. 'Aling Nena? I'm Sarah from the Urban Poor Alliance. Narinig namin ang kwento niyo sa Dagupan Street. Gusto naming i-feature kayo sa isang documentary about informal workers' rights.'\n\nAng unang instinct ni Nena ay tumanggi. Naisip niya si Bantay na nakakita sa kanya sa TV, ang City Engineer's office na pumapansin, na ma-label siyang troublemaker. Pero ipinaliwanag ni Sarah: 'Hindi naming kayo ie-expose. Ang goal namin ay ipakita sa mga lawmakers kung paano talaga nabubuhay ang mga vendor. Maraming batas na ginagawa tungkol sa inyo, pero walang lawmaker na nakikita kung paano kayo nagtratrabaho.'\n\nGanoong gabi, pinag-usapan ni Nena ito sa DSVA. Nahati ang opinyon. Pumayag si Aling Ditas -- 'Kailangan marinig ang boses natin.' Tumanggi si Mang Totoy -- 'Baka lalo tayong targeten.' Neutral si Mang Bert: 'Ikaw ang magdesisyon, Nena. Ikaw ang may pinakamagandang kwento.'\n\nNaisip ni Nena si Jessa, na nagsusulat ng mga essay tungkol sa trabaho ng nanay niya para sa school. Si Kevin, na nagsasabi sa mga kaklase na ang Nanay niya ay 'business owner.' Ang bawat vendor na tahimik na tinanggal sa sidewalk nang walang nakakaalam o nagmamalasakit.",
+      "theme": "vendor_rights",
+      "choices": [
+        {
+          "text": "Pumayag sa documentary -- kailangang ikwento ang istorya ng mga street vendor.",
+          "nextNode": "vendor_victory_02",
+          "consequence": "Umabot sa mas malawak na audience ang kwento ni Nena, nag-ambag sa public awareness tungkol sa mga karapatan ng informal workers.",
+          "scoreChange": 12,
+          "knowledgeGained": "Ang media advocacy at documentary evidence ay naging instrumental sa pagpasa ng mga pro-poor na batas sa Pilipinas, kasama ang Kasambahay Law (RA 10361) at ang Expanded Solo Parents Welfare Act."
+        },
+        {
+          "text": "Tumanggi pero i-connect si Sarah sa DSVA para sa group feature na lang.",
+          "nextNode": "vendor_victory_03",
+          "consequence": "Prinotektahan ni Nena ang privacy niya habang sinisiguradong maikkwento pa rin ang vendor community.",
+          "scoreChange": 7,
+          "knowledgeGained": "Ang mga workers' organization ay pwedeng makipag-engage sa media at advocacy groups nang sama-sama, binabawasan ang individual risk habang pinapalaki ang mensahe ng grupo."
+        },
+        {
+          "text": "Tumanggi nang tuluyan -- sobrang daming visibility ay sobrang daming panganib para sa taong walang permit.",
+          "nextNode": "vendor_ending_sole",
+          "consequence": "Pinili ni Nena ang kaligtasan kaysa advocacy, yumuko lang tulad ng dati.",
+          "scoreChange": -3,
+          "knowledgeGained": null
+        }
+      ],
+      "isEnding": false
+    },
+    "vendor_school_01": {
+      "id": "vendor_school_01",
+      "title": "Ang Essay ni Jessa",
+      "narrative": "Umuwi si Jessa na may school assignment: 'Sumulat tungkol sa isang social issue sa community mo at mag-propose ng solution, i-cite ang mga relevant na Philippine laws.' Gusto niyang isulat ang tungkol sa mga street vendor. 'Nanay, pwede ba kitang i-interview?'\n\nNakaupo si Nena sa maliit na mesa, hindi komportable sa ilalim ng mga tanong ng sariling anak. Pero matalim ang mga tanong ni Jessa: 'Magkano ang binabayaran mo sa lagay kada buwan? Na-harass ka na ba ng mga enforcer? Alam mo ba ang RA 7279? Bakit hindi nag-o-organize ang mga vendor?'\n\nIsang oras, nagsalita si Nena. Tungkol sa alas-tres y medya ng umaga at alas-tres ng hapon. Tungkol sa mga clearing operation at mga nawalang kariton. Tungkol kay Bantay at P500 na shakedown. Tungkol sa DSVA at kay Atty. Paolo at sa barangay resolution. Tungkol sa PhilHealth at SSS at BMBE -- lahat ng bagay na natutunan niya sa nakaraang buwan na hindi niya alam sa unang labindalawang taon.\n\nNanalo ng second place ang essay ni Jessa sa school competition. Ang titulo: 'Ang Kariton ni Nanay: Karapatan sa Hanapbuhay ng mga Street Vendor sa Maynila.' Hiniling ng school principal na i-publish sa school paper. May local newspaper na nag-pick up. Binasa ni Nena ang sariling kwento, sinabi sa mga salita ng anak, at sa unang pagkakataon nakita ang buhay niya hindi bilang survival kundi bilang paglaban.",
+      "theme": "vendor_rights",
+      "choices": [
+        {
+          "text": "Gamitin ang atensyon mula sa essay ni Jessa para mag-advocate ng vendor-friendly policies sa district.",
+          "nextNode": "vendor_napc_01",
+          "consequence": "Ang essay ay nagbukas ng mga pintuan na hindi nagawa ng labindalawang taon ng pagbebenta ng fishball.",
+          "scoreChange": 10,
+          "knowledgeGained": "Ang public education tungkol sa karapatan ng mga informal worker ay lumilikha ng mas malawak na suporta para sa policy change. Ang mga paaralan at community organizations ay pwedeng maging allies sa advocacy efforts."
+        },
+        {
+          "text": "Maging proud kay Jessa pero i-focus ang daily survival -- hindi naman nagbabayad ng renta ang mga essay.",
+          "nextNode": "vendor_rebuild_01",
+          "consequence": "Napahalagahan ni Nena ang pagkilala pero nanatiling nakabase sa agarang pangangailangan ng pagpapakain sa pamilya.",
+          "scoreChange": 5,
+          "knowledgeGained": null
+        }
+      ],
+      "isEnding": false
+    },
+    "vendor_ending_sole": {
+      "id": "vendor_ending_sole",
+      "title": "Nakaligtas Nang Mag-isa",
+      "narrative": "Hindi sumali si Nena sa DSVA, pero nakaligtas siya. Nakuha niya ang BMBE certificate nang mag-isa, nag-enroll sa PhilHealth nang mag-isa, at nakahanap ng bagong spot malapit sa LRT station kung saan okay ang foot traffic at hindi pa nagba-bother ang barangay tanod sa lagay -- sa ngayon.\n\nHindi masyadong nagbago ang daily routine niya: alas-tres y medya gumising, mag-prepare ng stock, itulak ang kariton, magbenta hanggang alas-tres ng hapon, umuwi, maglinis ng skewers, matulog, ulitin. Pero ngayon may laminated na BMBE certificate sa kariton niya at PhilHealth card sa wallet niya. Maliliit na kalasag laban sa malalaking bagyo.\n\nPanood niya minsan ang balita -- mga kwento tungkol sa mga vendor sa ibang lungsod na nag-o-organize, nakakuha ng designated zones, nako-cover ng social protection programs. Naiisip niya kung ano ang mangyayari kung nanatili siya sa grupo, mas madalas na dumalo sa meeting, nagsalita sa barangay council. Pero palagi siyang mas komportable na mag-trabaho nang mag-isa. Ganoon niya itinayo ang negosyo, at ganoon niya ito ipagpapatuloy.\n\nAng sidewalk ay hindi pa rin sigurado. Tuwing ilang buwan, may tsismis ng isa pang clearing operation. Natutuhan na ni Nena na basahin ang mga palatandaan -- mga bagong tarpaulin, mas maraming tanod, bisita ng city officials na may clipboard. Kapag lumitaw ang mga palatandaan, nag-iimpake siya nang maaga at lumilipat. Hindi ito solusyon. Ito ay survival. At para kay Aling Nena, laging sapat na ang survival. Pero minsan, hatinggabi na, nagtatanong siya kung pwede pa bang mas higit pa.",
+      "theme": "informal_economy",
+      "choices": [],
+      "isEnding": true
+    }
+  },
+  "startNode": "vendor_start"
+}

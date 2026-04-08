@@ -12,6 +12,7 @@ const GATING_RULES = [
       "misclassification", "wage_theft", "no_contract", "contractualization",
       "kasambahay_law", "employer_employee_test", "no_benefits",
       "illegal_deductions", "unfair_deductions",
+      "boundary_system", "franchise_rights", "vendor_rights", "local_ordinance",
     ],
     minScore: 10,
     requires: { confidence: 40 },
@@ -22,6 +23,7 @@ const GATING_RULES = [
     matchThemes: [
       "misclassification", "wage_theft", "contractualization",
       "kasambahay_law", "employer_employee_test", "no_benefits",
+      "franchise_rights", "vendor_rights",
     ],
     minScore: 13,
     requires: { confidence: 60, pera: 3000 },

@@ -1,0 +1,723 @@
+{
+  "nodes": {
+    "jeepney_start": {
+      "id": "jeepney_start",
+      "title": "3 AM on EDSA",
+      "narrative": "Mang Boy Villanueva, 55, pulls himself out of bed at 3 AM in their rented apartment in Caloocan -- P4,500 a month, one bedroom shared with his wife Aling Merced and their youngest son, Jericho, 19, who's taking up HRM at a state college in Manila. Their older daughter, Maricel, 26, works as a cashier at a supermarket in Valenzuela and sends home P2,000 a month when she can.\n\nBy 3:30 AM, Mang Boy is walking through the still-dark streets toward the terminal near Monumento, where his jeepney -- a 1998 Isuzu engine on a Sarao body, Route: Monumento-Baclaran via EDSA -- waits in a row of identical vehicles. He's been driving this route for 30 years. He knows every pothole, every traffic light cycle, every MMDA enforcer's face.\n\nBefore he can turn the key, he has to settle accounts. His operator, Mang Cesar, owns the franchise and the jeepney. Mang Boy pays a daily 'boundary' of P1,200 -- rain or shine, holiday or not. Whatever he earns above that, he keeps. Today, with diesel at P67 per liter and his tank needing about 25 liters for a full day, that's another P1,675 for fuel. So Mang Boy needs to earn at least P2,875 before he makes a single peso for himself.\n\nHis phone buzzes. A text from Aling Merced: 'Boy, yung tuition ni Jericho, P8,500 due next week. Saan tayo kukuha?'",
+      "theme": "boundary_system",
+      "choices": [
+        {
+          "text": "Do the math carefully -- calculate how much you actually earn per day after boundary and fuel, and face the reality.",
+          "nextNode": "jeepney_boundary_01",
+          "consequence": "Mang Boy confronts the arithmetic of his daily grind and realizes how little he actually keeps.",
+          "scoreChange": 10,
+          "knowledgeGained": "Under the boundary system, jeepney drivers pay a fixed daily amount to the vehicle owner/operator. Courts have ruled in multiple cases (e.g., Jardin v. NLRC, G.R. No. 119268) that despite this arrangement, drivers are employees -- not lessees -- of the operator."
+        },
+        {
+          "text": "Don't think about it -- just start driving and hustle harder today. More trips, more passengers.",
+          "nextNode": "jeepney_route_01",
+          "consequence": "Mang Boy pushes the worry aside and focuses on surviving the day.",
+          "scoreChange": -3,
+          "knowledgeGained": null
+        },
+        {
+          "text": "Text back Merced and ask her to borrow from her sister for now, while you figure things out.",
+          "nextNode": "jeepney_fare_01",
+          "consequence": "Mang Boy delays the crisis but starts his day already weighed down by debt.",
+          "scoreChange": -5,
+          "knowledgeGained": null
+        }
+      ],
+      "isEnding": false
+    },
+    "jeepney_boundary_01": {
+      "id": "jeepney_boundary_01",
+      "title": "The Boundary Arithmetic",
+      "narrative": "Mang Boy sits in the driver's seat and pulls out a small notebook -- the same one he's kept for years, tracking his daily take. He does the math. On a good day, he grosses P3,800 to P4,200 from fares. After P1,200 boundary and P1,675 fuel, he's left with P925 to P1,325. On a bad day -- heavy traffic, EDSA construction, fewer passengers because of the MRT -- he might gross only P3,000. After expenses: P125. Sometimes less than zero.\n\nAverage it out and Mang Boy earns roughly P700 to P900 a day. For 14 to 16 hours of work. No weekends off -- if he doesn't drive, he doesn't earn. No vacation leave, no sick leave, no holiday pay. He has never received a 13th month bonus. He has no SSS. No PhilHealth. No Pag-IBIG.\n\nThirty years. He's been doing this for thirty years.\n\nHe stares at the notebook and a thought he's never had before surfaces: 'Empleyado ba ako ni Mang Cesar, o negosyante? Kasi kung empleyado ako -- may mga karapatan akong hindi ko nakukuha.'",
+      "theme": "boundary_system",
+      "choices": [
+        {
+          "text": "Talk to Ka Domeng, the old driver at the terminal who used to be a union organizer, about whether drivers are really employees.",
+          "nextNode": "jeepney_rights_01",
+          "consequence": "Mang Boy seeks out someone with knowledge of labor rights in the transport sector.",
+          "scoreChange": 12,
+          "knowledgeGained": "The Supreme Court has consistently ruled that jeepney drivers under the boundary system are employees of the operator, not independent contractors. The operator exercises control over the route, schedule, and vehicle -- satisfying the 'control test' under Art. 295 of the Labor Code."
+        },
+        {
+          "text": "Push the thought aside and start driving -- you can't afford to sit here philosophizing.",
+          "nextNode": "jeepney_route_01",
+          "consequence": "The question lingers but Mang Boy returns to survival mode.",
+          "scoreChange": -3,
+          "knowledgeGained": null
+        }
+      ],
+      "isEnding": false
+    },
+    "jeepney_route_01": {
+      "id": "jeepney_route_01",
+      "title": "The EDSA Grind",
+      "narrative": "The first trip of the day. 4:30 AM, and EDSA is still manageable -- the construction barriers for the subway project narrow the lanes, but at this hour there are more trucks than cars. Mang Boy picks up his first passengers at Monumento: factory workers heading to Pasay, a nurse going to a hospital in Makati, a student catching an early class.\n\nThe jeepney rattles and groans. The engine overheats if he idles too long. The seats are patched with electrical tape. Two of the handrails are loose. But this vehicle, old as it is, is Mang Boy's livelihood. And it's not even his.\n\nBy 9 AM, he's completed three round trips. He counts his coins and bills: P1,580 so far. He needs at least P2,875 just to break even. A passenger at the Cubao stop complains: 'Kuya, ang luma na ng jeep mo. Mag-MRT na lang sana ako kaso siksikan.' Mang Boy just nods. He's heard it a thousand times.\n\nThen his phone rings. It's Mang Cesar, the operator. 'Boy, kailangan nating mag-usap. May bagong memo ang LTFRB. Tungkol sa modernization.'",
+      "theme": "fare_disputes",
+      "choices": [
+        {
+          "text": "Meet with Mang Cesar after your shift to hear about the LTFRB memo.",
+          "nextNode": "jeepney_modern_01",
+          "consequence": "Mang Boy agrees to meet and learn about the looming changes to his livelihood.",
+          "scoreChange": 7,
+          "knowledgeGained": "The LTFRB (Land Transportation Franchising and Regulatory Board) regulates public utility vehicle routes, fares, and franchises. All jeepney operators must hold a valid Certificate of Public Convenience (CPC) to operate."
+        },
+        {
+          "text": "Tell Mang Cesar you're too busy driving -- you'll deal with it later.",
+          "nextNode": "jeepney_fare_01",
+          "consequence": "Mang Boy postpones the conversation, but the modernization deadline won't wait.",
+          "scoreChange": -3,
+          "knowledgeGained": null
+        },
+        {
+          "text": "Ask Mang Cesar directly: 'Boss, sasama ba ako sa usapan, o ikaw lang ang may say dito?'",
+          "nextNode": "jeepney_boundary_02",
+          "consequence": "Mang Boy questions whether he has any voice in decisions that affect his livelihood.",
+          "scoreChange": 10,
+          "knowledgeGained": "Under the PUV Modernization Program, drivers and operators are encouraged to form cooperatives or corporations. Drivers have the right to participate in decisions about route consolidation and fleet modernization."
+        }
+      ],
+      "isEnding": false
+    },
+    "jeepney_fare_01": {
+      "id": "jeepney_fare_01",
+      "title": "The Fare That Doesn't Add Up",
+      "narrative": "It's the afternoon rush. EDSA is its usual nightmare -- bumper to bumper from Ortigas to Guadalupe. Mang Boy's jeepney is packed, 24 passengers squeezed into seats designed for 20. The minimum fare is P13 for the first four kilometers, P1.80 for every succeeding kilometer. But at this crawl, fuel is burning and fares aren't covering the cost.\n\nA passenger hands Mang Boy a P20 bill for a short ride. 'Kuya, bayad po. Hanggang Ayala lang.' Mang Boy fishes for P7 change from the pile of coins on the dashboard. Another passenger shouts from the back: 'Kuya, ang tagal! Ang bagal! Parang hindi gumagalaw!' Mang Boy absorbs it. He always absorbs it.\n\nDiesel has gone up P8 per liter in the last three months. The LTFRB approved a P1 fare increase six months ago, but it barely covers the fuel hike. The boundary stayed the same -- P1,200 -- because Mang Cesar said, 'Boy, hindi ko pwedeng ibaba yan. May utang din ako sa bangko para sa franchise.'\n\nMang Boy finishes the day with P3,400 gross. After boundary and fuel: P525. Fourteen hours of work. P37.50 per hour. The minimum wage for NCR is P610 per day for eight hours -- P76.25 per hour.",
+      "theme": "fare_disputes",
+      "choices": [
+        {
+          "text": "Start keeping a daily record of your earnings, expenses, and hours -- document everything.",
+          "nextNode": "jeepney_rights_01",
+          "consequence": "Mang Boy begins building a paper trail that could prove invaluable later.",
+          "scoreChange": 10,
+          "knowledgeGained": "Documentation of daily earnings, expenses, and working hours is critical evidence in labor cases. Under the Rules of Evidence, even a personal notebook maintained consistently can be admitted as proof of employment conditions."
+        },
+        {
+          "text": "Accept the situation -- this is just how the jeepney business works. It's always been like this.",
+          "nextNode": "jeepney_fare_02",
+          "consequence": "Mang Boy resigns himself to the status quo, but the financial pressure keeps building.",
+          "scoreChange": -5,
+          "knowledgeGained": null
+        }
+      ],
+      "isEnding": false
+    },
+    "jeepney_fare_02": {
+      "id": "jeepney_fare_02",
+      "title": "The Fuel Price Hike",
+      "narrative": "Diesel jumps another P5 per liter overnight. At the Monumento terminal, the drivers are furious. The daily fuel cost goes from P1,675 to P1,800 -- but the LTFRB fare matrix hasn't been updated in four months. Mang Boy now needs to gross P3,000 just to break even. On a slow day, that's impossible.\n\nThe barker at the terminal, Kuya Popoy, shakes his head. 'Mga driver, kawawa kayo. Tumaas ang diesel, tumaas ang boundary, pero ang pasahero, ayaw magbayad ng dagdag. Sinong talo? Kayo.'\n\nMang Boy remembers that the LTFRB is supposed to adjust fares through a fare matrix system that tracks fuel prices. But the adjustments are slow, political, and never quite match the actual increase. The last fare hike of P1 covered barely half the fuel increase.\n\nAt the terminal, a photocopy of a newspaper article is passed around. It's about a group of drivers in Cebu who petitioned the LTFRB directly for an emergency fare adjustment. They collected signatures and submitted a formal petition. The LTFRB was forced to hold a hearing within 30 days.",
+      "theme": "fare_disputes",
+      "choices": [
+        {
+          "text": "Organize the drivers at the terminal to draft a petition to LTFRB for an emergency fare adjustment.",
+          "nextNode": "jeepney_organize_01",
+          "consequence": "Mang Boy channels the fuel crisis into collective action -- his first taste of organizing.",
+          "scoreChange": 12,
+          "knowledgeGained": "Under LTFRB rules, any stakeholder -- including individual drivers or driver groups -- can file a petition for fare adjustment. The LTFRB is required to act on petitions and may schedule public hearings. Petitions with supporting data (fuel receipts, earnings records) are stronger."
+        },
+        {
+          "text": "Start skipping the longer EDSA stretches and taking shortcuts through side streets to save fuel -- even if it means fewer passengers.",
+          "nextNode": "jeepney_nobenefits_01",
+          "consequence": "Mang Boy adapts individually but the systemic problem remains unsolved.",
+          "scoreChange": -3,
+          "knowledgeGained": null
+        }
+      ],
+      "isEnding": false
+    },
+    "jeepney_organize_03": {
+      "id": "jeepney_organize_03",
+      "title": "The PISTON Rally",
+      "narrative": "Ate Maricris invites the Monumento-Baclaran drivers to a PISTON transport strike -- a one-day work stoppage to protest the PUV modernization timeline and demand better terms for drivers. Thousands of jeepney drivers across Metro Manila will participate.\n\nMang Boy is torn. A strike means no earnings for the day. For a man who lives trip-to-trip, even one day's lost income hurts. But he also knows that individual complaints get ignored. Mass action gets attention.\n\n'Boy,' Aling Merced says that morning, 'pumunta ka. Isang araw lang yan. Pero kung manalo kayo, buhay natin ang magbabago.'\n\nAt the rally near Welcome Rotonda in Quezon City, Mang Boy sees something he's never seen: thousands of drivers, standing together, holding signs. 'HINDI KAMI KALABAN NG MODERNIZATION -- KALABAN NAMIN ANG KAWALAN NG HUSTISYA.' A labor lawyer speaks through a megaphone about the constitutional right to organize and the right to strike. A senator promises to file a bill extending the modernization deadline.\n\nFor the first time, Mang Boy doesn't feel invisible.",
+      "theme": "franchise_rights",
+      "choices": [
+        {
+          "text": "Join the march and speak to the media about what boundary drivers actually earn -- put a real face on the issue.",
+          "nextNode": "jeepney_confront_01",
+          "consequence": "Mang Boy becomes a public voice for transport workers' rights.",
+          "scoreChange": 15,
+          "knowledgeGained": "The right to peaceful assembly and petition is protected under Section 4, Article III of the 1987 Constitution. Transport strikes, when conducted peacefully, are a legitimate form of collective action. Workers cannot be terminated for participating in lawful strike activities."
+        },
+        {
+          "text": "Attend the rally but stay in the background -- listen and learn, but don't draw attention to yourself.",
+          "nextNode": "jeepney_coop_01",
+          "consequence": "Mang Boy absorbs the movement's energy and knowledge without putting himself at risk.",
+          "scoreChange": 5,
+          "knowledgeGained": "PISTON (Pinagkaisang Samahan ng mga Tsuper at Operators Nationwide) is the largest transport workers' organization in the Philippines. They provide legal assistance, cooperative formation guidance, and policy advocacy for drivers."
+        }
+      ],
+      "isEnding": false
+    },
+    "jeepney_boundary_02": {
+      "id": "jeepney_boundary_02",
+      "title": "The Operator's Answer",
+      "narrative": "Mang Cesar meets Mang Boy at a carinderia near the Monumento terminal. Over rice and adobo, the operator lays it out. 'Boy, ang franchise ko, malapit na mag-expire. Ang LTFRB, hindi na nagre-renew ng individual franchise. Kailangan mag-consolidate -- sumali sa cooperative o corporation. Kung hindi, bawal na tayo mag-operate by next year.'\n\nMang Boy asks the question that's been bothering him: 'Boss, kasama ba ako sa usapan? O ikaw lang?' Mang Cesar looks surprised. 'Boy, ikaw ang driver. Ako ang may-ari ng franchise at ng sasakyan. Ang usapan na ito, para sa mga operator.'\n\nThere it is. Thirty years of driving, and Mang Boy has no seat at the table. The franchise is in Mang Cesar's name. The vehicle is in Mang Cesar's name. When the LTFRB talks about 'stakeholders,' they mean operators. Drivers are invisible.\n\n'Pero Boss,' Mang Boy says carefully, 'kung mawala ang franchise, mawawala rin ang trabaho ko. Hindi ba dapat kasali ako sa desisyon?'",
+      "theme": "franchise_rights",
+      "choices": [
+        {
+          "text": "Insist on being part of the modernization discussions -- attend the LTFRB public hearing yourself.",
+          "nextNode": "jeepney_modern_02",
+          "consequence": "Mang Boy decides to claim his voice in the process that will determine his future.",
+          "scoreChange": 12,
+          "knowledgeGained": "LTFRB public hearings on route rationalization and franchise consolidation are open to the public. Drivers, even those without franchises, have the right to attend and submit position papers. The PUV Modernization Program (DO 2017-011) explicitly encourages driver participation in cooperatives."
+        },
+        {
+          "text": "Back down and let Mang Cesar handle it -- he's the boss, he knows the system.",
+          "nextNode": "jeepney_modern_01",
+          "consequence": "Mang Boy defers to the operator, trusting a system that hasn't served him well.",
+          "scoreChange": -3,
+          "knowledgeGained": null
+        }
+      ],
+      "isEnding": false
+    },
+    "jeepney_rights_01": {
+      "id": "jeepney_rights_01",
+      "title": "Ka Domeng's Lesson",
+      "narrative": "Ka Domeng is 68 years old, retired from driving but still a fixture at the Monumento terminal. He sits on a plastic chair under the corrugated tin awning, drinking black coffee from a plastic cup. In the 1990s, he helped organize the first transport workers' union on their route. The union didn't last -- the operators threatened to pull franchises from drivers who joined -- but Ka Domeng never forgot what he learned.\n\n'Boy,' he says, stubbing out a cigarette, 'ang tingin ng mundo sa atin, tayo ay nangungupahan ng sasakyan. Lessee, sabi nila. Pero ang Supreme Court, matagal na nilang sinabi -- empleyado tayo. Kasi sino ang nagde-decide ng ruta mo? Si operator. Sino ang nagse-set ng boundary? Si operator. Sino ang pwedeng mag-tanggal sa iyo sa jeep? Si operator. Yan ang four-fold test, Boy. Kung empleyado ka, may karapatan ka sa minimum wage, SSS, PhilHealth, 13th month.'\n\nMang Boy listens, stunned. Thirty years. No one ever told him this.\n\nKa Domeng continues: 'Alam mo ang problema? Walang nagfa-file kasi walang nakakaalam. At yung mga nakakaalam, takot. Kasi kung mag-reklamo ka, aalisin ka sa jeep. Pero isipin mo -- kung lahat kayo mag-sama-sama, ano ang gagawin ni operator? Siya ang walang driver.'",
+      "theme": "boundary_system",
+      "choices": [
+        {
+          "text": "Ask Ka Domeng to help you organize a meeting with the other drivers on your route.",
+          "nextNode": "jeepney_organize_01",
+          "consequence": "Mang Boy takes the first step toward collective action.",
+          "scoreChange": 15,
+          "knowledgeGained": "Transport workers have the right to self-organization under Art. 253 of the Labor Code. They can form unions or cooperatives. The right to organize is also protected under Section 3, Article XIII of the 1987 Philippine Constitution."
+        },
+        {
+          "text": "Thank Ka Domeng but keep the information to yourself for now -- you need to think about this carefully.",
+          "nextNode": "jeepney_nobenefits_01",
+          "consequence": "Mang Boy absorbs the knowledge but isn't ready to act on it yet.",
+          "scoreChange": 5,
+          "knowledgeGained": "The four-fold test (Jardin v. NLRC) determines employer-employee relationships: (1) selection and engagement, (2) payment of wages, (3) power of dismissal, (4) power to control. In boundary-system cases, the operator satisfies all four elements."
+        }
+      ],
+      "isEnding": false
+    },
+    "jeepney_nobenefits_01": {
+      "id": "jeepney_nobenefits_01",
+      "title": "The Body Breaks Down",
+      "narrative": "It's a Wednesday, three weeks later. Mang Boy is on his sixth trip of the day when a sharp pain shoots through his lower back -- the kind that locks his spine and makes him grip the steering wheel just to stay upright. He's had back problems for years. Fifteen hours a day on a jeepney seat with no lumbar support will do that to a man of 55.\n\nHe manages to finish the route and parks the jeepney at the Baclaran terminal. He can barely get out of the driver's seat. A fellow driver, Mang Tony, helps him onto a bench. 'Pre, kailangan mo ng doctor. Tignan mo na yang likod mo.'\n\nMang Boy knows he should see a doctor. But he has no PhilHealth. A consultation at a private clinic costs P500 to P800. An X-ray costs P1,500. If they recommend physical therapy -- P600 per session, twice a week. That's money he doesn't have.\n\nHe thinks about going to a public hospital -- the closest one is Jose Reyes Memorial Medical Center in Manila. Free consultation, but the wait is six hours. Six hours he could be driving and earning.\n\nAling Merced calls. 'Boy, kumain ka na? Ang anak mo, humihingi ng pera para sa field trip. P350.'",
+      "theme": "no_benefits",
+      "choices": [
+        {
+          "text": "Go to the public hospital -- your health is more important than one day's earnings. And ask about SSS voluntary membership while you're there.",
+          "nextNode": "jeepney_nobenefits_02",
+          "consequence": "Mang Boy prioritizes his health and starts learning about social protection options.",
+          "scoreChange": 10,
+          "knowledgeGained": "Even workers not registered by their employers can join SSS as voluntary members and pay their own contributions. The minimum monthly contribution for self-employed/voluntary members is around P1,000. PhilHealth also accepts voluntary members at P500/month."
+        },
+        {
+          "text": "Buy painkillers at the Mercury Drug near the terminal and keep driving -- you can't afford to miss a day.",
+          "nextNode": "jeepney_modern_01",
+          "consequence": "Mang Boy medicates the symptom and ignores the root problem -- both physical and systemic.",
+          "scoreChange": -5,
+          "knowledgeGained": null
+        },
+        {
+          "text": "Ask Mang Tony if any of the other drivers have PhilHealth or SSS -- how do they handle medical costs?",
+          "nextNode": "jeepney_nobenefits_03",
+          "consequence": "Mang Boy discovers he's not alone in being unprotected.",
+          "scoreChange": 7,
+          "knowledgeGained": "Under the Social Security Act, employers are required to register their employees with SSS and remit contributions. If a jeepney driver is legally an employee of the operator, the operator should be making SSS contributions on the driver's behalf."
+        }
+      ],
+      "isEnding": false
+    },
+    "jeepney_nobenefits_02": {
+      "id": "jeepney_nobenefits_02",
+      "title": "The Hospital Wait",
+      "narrative": "Mang Boy takes a jeepney -- someone else's jeepney, for once he's the passenger -- to Jose Reyes Memorial Medical Center. He arrives at 7 AM and joins the queue. Number 187. The waiting area is packed: construction workers, vendors, elderly women in tsinelas, mothers with sick children. The air smells of alcohol and sweat.\n\nBy 1 PM, he finally sees a doctor. The diagnosis: lumbar disc degeneration. Chronic, from years of sitting and vibration. The doctor prescribes anti-inflammatory medication (P1,200 for a month's supply), physical therapy (P600 per session, recommended twice weekly), and -- critically -- rest. 'Kailangan mo magpahinga, Mr. Villanueva. Kahit isang linggo. Pag hindi, lalala yan.'\n\nOne week of rest. That's seven days of no earnings. Seven boundaries of P1,200 each that he doesn't owe -- but also P6,000 to P9,000 in lost income. And Jericho's tuition is still due.\n\nOn his way out, he passes a PhilHealth enrollment desk in the hospital lobby. A staff member calls out: 'Sir, may PhilHealth po ba kayo? Kung wala, pwede po kayong mag-register as voluntary member. P500 a month lang po.'",
+      "theme": "no_benefits",
+      "choices": [
+        {
+          "text": "Enroll in PhilHealth as a voluntary member right now, and ask about what benefits you can claim.",
+          "nextNode": "jeepney_organize_01",
+          "consequence": "Mang Boy takes a concrete step toward protecting himself and his family.",
+          "scoreChange": 10,
+          "knowledgeGained": "PhilHealth voluntary members get coverage for inpatient and outpatient care. PhilHealth covers a portion of hospital bills, doctor's fees, and medications. The Konsulta Package provides free primary care consultations for all PhilHealth members at accredited health centers."
+        },
+        {
+          "text": "Take the pamphlet but don't enroll yet -- P500 a month is a lot when you're barely breaking even.",
+          "nextNode": "jeepney_modern_01",
+          "consequence": "Mang Boy hesitates. The safety net remains just out of reach.",
+          "scoreChange": 3,
+          "knowledgeGained": null
+        }
+      ],
+      "isEnding": false
+    },
+    "jeepney_nobenefits_03": {
+      "id": "jeepney_nobenefits_03",
+      "title": "The Drivers' Bench",
+      "narrative": "The bench near the Monumento terminal is where drivers gather between trips. Mang Tony, Kuya Danilo, and young Arnel -- 28, the youngest driver on the route -- are all there. Mang Boy asks the question.\n\n'Wala akong SSS. Wala akong PhilHealth. Kayo ba, meron?'\n\nSilence. Then Mang Tony shakes his head. 'Wala rin. Tatlumpung taon na ako, Boy. Wala.' Kuya Danilo: 'Meron akong PhilHealth, voluntary. Nagbabayad ako ng P500 a month. Pero SSS, wala. Saan naman tayo kukuha?' Arnel: 'Yung girlfriend ko, siya ang nag-register sa akin sa PhilHealth. P500 lang naman pero parang ang laki pag wala ka naman kinikita na sure.'\n\nMang Boy realizes the entire terminal -- fifteen drivers, all paying boundary to operators who own the franchises and vehicles -- has virtually no social protection. No retirement fund. No health coverage. No safety net. They are invisible to the system.\n\n'Dapat alam ng operator natin,' Mang Boy says. 'Kung empleyado tayo -- siya ang dapat nagbabayad ng SSS natin. Hindi tayo.'",
+      "theme": "no_benefits",
+      "choices": [
+        {
+          "text": "Propose that all the drivers at the terminal go together to the SSS office to ask about their rights as boundary-system workers.",
+          "nextNode": "jeepney_organize_01",
+          "consequence": "Mang Boy starts building solidarity among the drivers.",
+          "scoreChange": 12,
+          "knowledgeGained": "If drivers are legally employees of operators under the boundary system (as established by Supreme Court jurisprudence), then operators are required under the Social Security Act to register them with SSS and PhilHealth, and remit both employer and employee shares of contributions."
+        },
+        {
+          "text": "Register yourself as a voluntary SSS member -- at least protect yourself, even if the others don't act.",
+          "nextNode": "jeepney_modern_01",
+          "consequence": "Mang Boy acts alone. It's better than nothing, but it doesn't fix the systemic problem.",
+          "scoreChange": 5,
+          "knowledgeGained": "Workers can register as voluntary SSS members and pay their own contributions (currently minimum P1,000/month). However, this means the worker bears the full cost that should be shared with the employer."
+        }
+      ],
+      "isEnding": false
+    },
+    "jeepney_modern_01": {
+      "id": "jeepney_modern_01",
+      "title": "The Modernization Memo",
+      "narrative": "The news spreads through the terminal like wildfire. The LTFRB has released a new memorandum: all traditional jeepney franchises in Metro Manila must be consolidated under cooperatives or corporations by the end of the year. Individual franchises will no longer be renewed. Operators must either form or join a cooperative, or surrender their Certificate of Public Convenience.\n\nThe modern jeepney units -- Euro 4 compliant, air-conditioned, with automatic fare collection -- cost between P1.8 million and P2.5 million each. The government is offering subsidies of up to P160,000 per unit, and the Development Bank of the Philippines has a loan program. But the math still doesn't work for drivers like Mang Boy: even with the subsidy, a P2.2 million unit means a loan of over P2 million, with monthly amortization of at least P30,000.\n\nMang Cesar calls a meeting of his five drivers at the terminal. 'Mga Boys, ito ang sitwasyon. Kung hindi tayo mag-cooperatize, mawawala ang franchise ko. Kung mawawala ang franchise ko, wala na kayong masasakyan.'\n\nMang Boy raises his hand. 'Boss, magkano ba ang modern jeep? At sino ang magbabayad?'",
+      "theme": "modernization",
+      "choices": [
+        {
+          "text": "Ask Mang Cesar directly: if we form a cooperative, will the drivers have ownership and a vote -- or will it still be your show?",
+          "nextNode": "jeepney_modern_02",
+          "consequence": "Mang Boy pushes for real participation, not just a rubber-stamp cooperative.",
+          "scoreChange": 12,
+          "knowledgeGained": "Under the Cooperative Code of the Philippines (RA 9520), a cooperative is owned and controlled by its members -- one member, one vote. If drivers form a cooperative, each driver-member has equal decision-making power regardless of capital contribution."
+        },
+        {
+          "text": "Stay quiet and let Mang Cesar lead the discussion -- he's the one with the franchise and the connections.",
+          "nextNode": "jeepney_modern_03",
+          "consequence": "Mang Boy watches from the sidelines as decisions about his future are made without him.",
+          "scoreChange": -5,
+          "knowledgeGained": null
+        },
+        {
+          "text": "Ask Mang Cesar if the drivers can take a few days to research the modernization program before committing to anything.",
+          "nextNode": "jeepney_modern_04",
+          "consequence": "Mang Boy buys time to understand the program before being railroaded into a deal.",
+          "scoreChange": 7,
+          "knowledgeGained": "The PUV Modernization Program (Department Order 2017-011) has multiple components: fleet modernization, route rationalization, and industry consolidation. Drivers and operators should understand all three before making decisions."
+        }
+      ],
+      "isEnding": false
+    },
+    "jeepney_modern_02": {
+      "id": "jeepney_modern_02",
+      "title": "The LTFRB Hearing",
+      "narrative": "Mang Boy does something he's never done in thirty years of driving: he puts on his cleanest polo shirt and takes the MRT to the LTFRB office in Quezon City for a public hearing on route consolidation. The hearing room is packed -- operators in barong, lawyers with folders, government officials behind a long table, and in the back rows, drivers like Mang Boy in faded jeans and rubber shoes.\n\nThe discussion is mostly between operators and LTFRB officials. Terms fly around: 'route rationalization,' 'fleet management system,' 'automated fare collection,' 'Euro 4 emission standards.' Mang Boy understands maybe half of it. But he catches the key point: the old jeepneys have to go. The question is who pays, who drives, and who decides.\n\nDuring the open forum, Mang Boy stands up. His voice shakes. 'Sir, ako po si Boy Villanueva, driver po ako ng Monumento-Baclaran, tatlumpung taon na po. Ang tanong ko lang po -- sa modernization program na ito, may lugar po ba ang mga driver? O para lang po ito sa mga operator at sa gobyerno?'\n\nThe room goes quiet. A few drivers in the back clap. The LTFRB official adjusts his microphone and says, 'Sir, ang PUV Modernization Program po ay para sa lahat ng stakeholders -- operators, drivers, at riding public.'",
+      "theme": "modernization",
+      "choices": [
+        {
+          "text": "Follow up: ask specifically how drivers can form their own cooperative without needing an operator's permission.",
+          "nextNode": "jeepney_coop_01",
+          "consequence": "Mang Boy pushes for concrete information about driver-led cooperatives.",
+          "scoreChange": 15,
+          "knowledgeGained": "Drivers can form their own transport cooperative independently of operators. Under RA 9520, a minimum of 15 members can register a cooperative with the Cooperative Development Authority (CDA). A driver-owned cooperative can apply for its own franchise from LTFRB."
+        },
+        {
+          "text": "Sit back down -- you've said your piece. See what the officials and operators decide.",
+          "nextNode": "jeepney_modern_03",
+          "consequence": "Mang Boy made his voice heard, but doesn't push further.",
+          "scoreChange": 5,
+          "knowledgeGained": null
+        }
+      ],
+      "isEnding": false
+    },
+    "jeepney_modern_03": {
+      "id": "jeepney_modern_03",
+      "title": "The Operator's Cooperative",
+      "narrative": "Mang Cesar moves fast. Within two weeks, he's registered a 'cooperative' with the CDA -- the Monumento-Baclaran Transport Cooperative. On paper, it has 25 members: Mang Cesar, his wife, his brother, three other operators, and 19 drivers including Mang Boy. Each member supposedly contributed P5,000 in share capital.\n\nBut Mang Boy never contributed P5,000. Mang Cesar told the drivers, 'Huwag na kayong mag-alala sa share capital, ako na bahala. Pirmahan niyo na lang ito.' The documents were signed at the terminal, between trips, with no time to read the fine print.\n\nNow Mang Cesar is president of the cooperative, his wife is treasurer, and his brother is secretary. The drivers are 'members' with no real power. The boundary system continues unchanged -- Mang Boy still pays P1,200 a day. The only difference is the name on the franchise.\n\n'Pare,' Mang Tony whispers to Mang Boy at the terminal, 'parang wala namang nagbago. Cooperative daw tayo pero si Mang Cesar pa rin ang hari.'",
+      "theme": "franchise_rights",
+      "choices": [
+        {
+          "text": "Go to the Cooperative Development Authority (CDA) and report that the cooperative was formed without genuine member participation.",
+          "nextNode": "jeepney_coop_02",
+          "consequence": "Mang Boy challenges the fake cooperative through the proper regulatory channel.",
+          "scoreChange": 15,
+          "knowledgeGained": "Under the Cooperative Code (RA 9520), cooperatives must be democratically controlled by their members. Fake cooperatives -- where operators retain all control -- violate the principle of democratic member control and can be investigated by the CDA."
+        },
+        {
+          "text": "Accept the situation -- at least the franchise is saved and you still have a jeepney to drive.",
+          "nextNode": "jeepney_boundary_03",
+          "consequence": "Mang Boy settles for the status quo under a new name.",
+          "scoreChange": -5,
+          "knowledgeGained": null
+        },
+        {
+          "text": "Talk to the other drivers quietly about forming your own legitimate cooperative -- one actually controlled by drivers.",
+          "nextNode": "jeepney_organize_01",
+          "consequence": "Mang Boy starts building a real alternative from the ground up.",
+          "scoreChange": 12,
+          "knowledgeGained": "A transport cooperative must have at least 15 members, each with equal voting rights. The cooperative can then apply for its own Certificate of Public Convenience (CPC) from LTFRB to operate the route."
+        }
+      ],
+      "isEnding": false
+    },
+    "jeepney_modern_04": {
+      "id": "jeepney_modern_04",
+      "title": "Research at the Terminal",
+      "narrative": "Mang Boy asks Jericho -- his college-student son who's good with the internet -- to research the PUV Modernization Program. That evening, at their small kitchen table, Jericho shows him what he found on his phone.\n\n'Tatay, ito yung Department Order 2017-011 ng DOTr at LTFRB. Ang sabi, lahat ng traditional PUV -- kasama ang jeepney -- kailangang mag-modernize. Meaning, modern na sasakyan, Euro 4 emission, automated fare. Pero ang presyo ng modern jeepney, P1.8 million hanggang P2.5 million.'\n\nMang Boy's face falls. 'Saan naman tayo kukuha ng P2 million?'\n\nJericho continues: 'May subsidy, Tay. P80,000 to P160,000 per unit mula sa gobyerno. Tapos may loan sa Development Bank of the Philippines. Pero ang pinakamalaking news -- pwede kayong drivers na mag-form ng sarili ninyong cooperative. Hindi kailangan dumaan sa operator. Kung cooperative kayo, kayo ang may-ari ng fleet.'\n\nAling Merced, listening from the doorway, speaks up: 'Boy, tatlumpung taon kang nagda-drive ng jeep na hindi sa iyo. Baka ito na ang pagkakataon na magkaroon ka ng sarili mong jeep. O kahit parte ng cooperative.'",
+      "theme": "modernization",
+      "choices": [
+        {
+          "text": "Ask Jericho to help you gather the 15 drivers needed to form a cooperative and register with the CDA.",
+          "nextNode": "jeepney_coop_01",
+          "consequence": "Mang Boy enlists his son's help to build something real for the drivers.",
+          "scoreChange": 12,
+          "knowledgeGained": "The CDA (Cooperative Development Authority) provides free training on cooperative formation, governance, and management. CDA regional offices can guide transport workers through the registration process."
+        },
+        {
+          "text": "Tell Jericho it's a nice idea but too risky -- just let Mang Cesar handle the modernization.",
+          "nextNode": "jeepney_modern_03",
+          "consequence": "Mang Boy retreats to the familiar, even though it hasn't served him.",
+          "scoreChange": -3,
+          "knowledgeGained": null
+        }
+      ],
+      "isEnding": false
+    },
+    "jeepney_organize_01": {
+      "id": "jeepney_organize_01",
+      "title": "The Meeting at Mang Tony's House",
+      "narrative": "On a Sunday afternoon -- the one day some drivers take a half-day -- twelve drivers gather in Mang Tony's cramped living room in Caloocan. Plastic chairs, instant coffee, pandesal. Mang Boy stands in front of them, nervous but determined.\n\n'Mga kasama,' he begins, 'tatlumpu't limang taon na akong nagda-drive. Si Mang Tony, halos ganun din. Si Kuya Danilo, bente. Lahat tayo, walang SSS, walang PhilHealth na galing sa operator, walang retirement. Nagbabayad tayo ng boundary araw-araw, pero wala tayong seguridad. Tapos ngayon, sasabihin sa atin na kailangan mag-modernize -- pero hindi tayo kasama sa usapan.'\n\nKa Domeng, invited as an adviser, adds: 'Mga anak, ang unang hakbang ay alamin ninyo ang karapatan ninyo. Bilang empleyado -- at oo, empleyado kayo sa mata ng batas -- may karapatan kayo sa SSS, PhilHealth, Pag-IBIG. At bilang transport workers, may karapatan kayong mag-organize at magkaroon ng sariling cooperative.'\n\nThe room is electric. Some drivers nod. Others look scared. Arnel, the youngest, asks: 'Kuya Boy, paano kung malaman ni Mang Cesar? Tanggalin tayo sa jeep?'",
+      "theme": "boundary_system",
+      "choices": [
+        {
+          "text": "Address the fear directly: 'Kung tanggalin tayo, unfair dismissal yan. May batas tayo. Pero mas malakas tayo kung magkasama.'",
+          "nextNode": "jeepney_organize_02",
+          "consequence": "Mang Boy confronts the drivers' greatest fear with facts and solidarity.",
+          "scoreChange": 15,
+          "knowledgeGained": "Under Art. 294 of the Labor Code, employees can only be terminated for just or authorized causes. Dismissal for union organizing or asserting labor rights is unfair labor practice under Art. 259. The penalty includes reinstatement with full backwages."
+        },
+        {
+          "text": "Suggest starting quietly -- first gather information, then decide on action. No need to confront Mang Cesar yet.",
+          "nextNode": "jeepney_coop_01",
+          "consequence": "Mang Boy takes a cautious approach, building knowledge before making moves.",
+          "scoreChange": 7,
+          "knowledgeGained": "Workers have the right to self-organization even before formally creating a union. Preparatory activities like meetings, information-gathering, and consultations are protected under the Labor Code."
+        }
+      ],
+      "isEnding": false
+    },
+    "jeepney_organize_02": {
+      "id": "jeepney_organize_02",
+      "title": "Solidarity at the Terminal",
+      "narrative": "The meeting ends with a plan. Twelve of the fifteen drivers on the Monumento-Baclaran route are in. They agree on three goals: (1) demand SSS and PhilHealth registration from their operators, (2) form a legitimate driver-owned cooperative, and (3) apply for their own franchise under the modernization program.\n\nJericho volunteers to do the paperwork. Ka Domeng connects them with PISTON -- Pinagkaisang Samahan ng mga Tsuper at Operators Nationwide -- the largest transport workers' group in the country. A PISTON organizer, a young woman named Ate Maricris, visits the terminal the following week.\n\n'Mga kuya,' she says, 'ang laban ninyo, laban ng buong transport sector. May halos 200,000 jeepney drivers sa Pilipinas. Karamihan, walang benefits, walang security. Pero ngayon, dahil sa modernization, may pagkakataon tayo. Kung tayo ang mag-form ng cooperative, tayo ang may-ari. Hindi na tayo boundary driver -- magiging cooperative member-driver tayo.'\n\nBut then the counterpunch comes. Mang Cesar hears about the meeting. He shows up at the terminal the next morning, furious.",
+      "theme": "boundary_system",
+      "choices": [
+        {
+          "text": "Stand your ground and tell Mang Cesar calmly that the drivers are exercising their legal right to organize.",
+          "nextNode": "jeepney_confront_01",
+          "consequence": "Mang Boy faces the operator head-on, backed by his fellow drivers.",
+          "scoreChange": 15,
+          "knowledgeGained": "An employer who interferes with, restrains, or coerces employees in the exercise of their right to self-organization commits unfair labor practice under Art. 259 of the Labor Code. This includes threats of termination."
+        },
+        {
+          "text": "Try to calm Mang Cesar down -- explain that the cooperative is good for everyone, including operators.",
+          "nextNode": "jeepney_organize_03",
+          "consequence": "Mang Boy attempts diplomacy, but Mang Cesar isn't listening. Ate Maricris suggests a bigger stage.",
+          "scoreChange": 7,
+          "knowledgeGained": null
+        }
+      ],
+      "isEnding": false
+    },
+    "jeepney_boundary_03": {
+      "id": "jeepney_boundary_03",
+      "title": "The Boundary Goes Up",
+      "narrative": "Two months into the 'cooperative,' Mang Cesar announces the boundary is increasing from P1,200 to P1,500. His reason: 'Mga additional costs ng cooperative -- registration, compliance, accounting. Kailangan i-cover.' The drivers murmur but no one objects. They never do.\n\nFor Mang Boy, the P300 increase means his daily take drops from around P800 to P500. On bad traffic days, he might take home P200. Or nothing. He's now earning less than a fast food crew member, working twice the hours, with zero benefits.\n\nAling Merced tells him over dinner: 'Boy, hindi na kaya. Si Jericho, mag-se-second semester na. P8,500 ulit. Hindi na talaga kaya.'\n\nThat night, Mang Boy lies awake and stares at the ceiling. Thirty years of driving. Thirty years of boundary. Thirty years of building someone else's wealth. He thinks about Ka Domeng's words: 'Kung empleyado ka, may karapatan ka.' He thinks about what Arnel said last week: 'Kuya Boy, may narinig ako na may mga driver sa Pasig na nag-file ng kaso sa NLRC laban sa operator nila. Nanalo daw.'",
+      "theme": "boundary_system",
+      "choices": [
+        {
+          "text": "Find those Pasig drivers and learn how they won their case. Then talk to the other drivers about doing the same.",
+          "nextNode": "jeepney_confront_01",
+          "consequence": "Mang Boy is pushed to action by sheer economic desperation.",
+          "scoreChange": 12,
+          "knowledgeGained": "In Martinez v. NLRC and similar cases, the Supreme Court ruled that jeepney drivers under the boundary system are regular employees entitled to minimum wage, 13th month pay, and social security benefits. The boundary payment does not convert the relationship into a lease."
+        },
+        {
+          "text": "Ask Mang Cesar to at least keep the boundary at P1,200 -- negotiate individually, not as a group.",
+          "nextNode": "jeepney_confront_02",
+          "consequence": "Mang Boy tries to solve a systemic problem with an individual request.",
+          "scoreChange": 3,
+          "knowledgeGained": null
+        }
+      ],
+      "isEnding": false
+    },
+    "jeepney_coop_01": {
+      "id": "jeepney_coop_01",
+      "title": "Building the Cooperative",
+      "narrative": "The process is slower than Mang Boy expected. Forming a cooperative is not just signing papers -- it requires 15 members, a pre-registration seminar from the CDA (Cooperative Development Authority), a set of bylaws, articles of cooperation, and initial share capital. Ate Maricris from PISTON guides them through it.\n\nThe pre-registration seminar takes two Sundays. Fifteen drivers -- twelve from Mang Boy's terminal plus three from a nearby route -- attend. The CDA facilitator explains: 'Ang cooperative ay pag-aari ng members. One member, one vote. Hindi gaya ng corporation na ang may-ari ay yung mga may pinakamaraming shares.'\n\nThe share capital is the hardest part. Each member needs to contribute at least P5,000. That's P75,000 total. For drivers earning P500 to P800 a day, P5,000 is a week's earnings. But they pool together -- some borrow from relatives, some save for two months, Jericho sets up a simple tracking system on his phone.\n\nAfter three months, the Monumento-Baclaran Drivers' Cooperative (MBDC) is registered with the CDA. Fifteen members. Mang Boy is elected chairman. The first item of business: apply for their own Certificate of Public Convenience from LTFRB.",
+      "theme": "franchise_rights",
+      "choices": [
+        {
+          "text": "Apply for the LTFRB franchise AND file a labor complaint against Mang Cesar for unpaid SSS/PhilHealth contributions.",
+          "nextNode": "jeepney_confront_01",
+          "consequence": "The cooperative takes bold action on two fronts simultaneously.",
+          "scoreChange": 15,
+          "knowledgeGained": "A transport cooperative can apply directly to LTFRB for a Certificate of Public Convenience (CPC). The cooperative, as a legal entity, can also apply for government subsidies and loans for modern jeepney units under the PUV Modernization Program."
+        },
+        {
+          "text": "Focus on the franchise application first -- don't antagonize Mang Cesar with a labor complaint while you still drive his jeepney.",
+          "nextNode": "jeepney_coop_02",
+          "consequence": "The cooperative takes a strategic, step-by-step approach.",
+          "scoreChange": 7,
+          "knowledgeGained": "LTFRB franchise applications by cooperatives require: CDA registration, proof of financial capability, proposed fleet plan, and a route development plan. The process takes 3-6 months."
+        }
+      ],
+      "isEnding": false
+    },
+    "jeepney_coop_02": {
+      "id": "jeepney_coop_02",
+      "title": "The Franchise Fight",
+      "narrative": "The MBDC files its application with LTFRB for a Certificate of Public Convenience on the Monumento-Baclaran route. But they're not the only ones. Mang Cesar's 'cooperative' -- the one he controls -- has also filed. And two other operator groups are competing for the same route.\n\nThe LTFRB schedules a hearing. Mang Boy, in his polo shirt again, sits in the front row with Ate Maricris and a volunteer lawyer from the Public Attorney's Office (PAO) who's taken their case pro bono. The lawyer, Atty. Jocelyn Reyes, explains their position: 'The MBDC is a legitimate, driver-owned cooperative. Its members have a combined 200+ years of driving experience on this route. Under the PUV Modernization Program's intent to empower transport workers, our application deserves priority.'\n\nMang Cesar's lawyer argues the opposite: 'My client's cooperative has existing franchise rights, established operations, and the financial capacity to acquire modern units. The drivers' group has no vehicles and no capital.'\n\nThe LTFRB panel asks Mang Boy directly: 'Mr. Villanueva, does your cooperative have the financial capacity to acquire modern jeepney units?'",
+      "theme": "franchise_rights",
+      "choices": [
+        {
+          "text": "Tell the truth: 'Wala pa po kaming pera ngayon, pero nag-apply na kami sa DBP loan program, at may 15 committed members na magbabayad ng amortization.'",
+          "nextNode": "jeepney_modern_05",
+          "consequence": "Mang Boy is honest about the cooperative's situation but shows they have a plan.",
+          "scoreChange": 12,
+          "knowledgeGained": "The Development Bank of the Philippines (DBP) has a specific loan program for PUV modernization with lower interest rates for cooperatives. The Land Bank of the Philippines (LBP) also offers similar financing. Loan terms can extend to 7 years."
+        },
+        {
+          "text": "Let Atty. Reyes handle the answer -- she knows how to frame it legally.",
+          "nextNode": "jeepney_modern_05",
+          "consequence": "The PAO lawyer presents the cooperative's case professionally.",
+          "scoreChange": 7,
+          "knowledgeGained": "The Public Attorney's Office (PAO) provides free legal assistance to qualified individuals, including labor cases and administrative proceedings. Transport workers' cooperatives can seek PAO assistance for LTFRB proceedings."
+        }
+      ],
+      "isEnding": false
+    },
+    "jeepney_confront_01": {
+      "id": "jeepney_confront_01",
+      "title": "The Confrontation",
+      "narrative": "Mang Cesar arrives at the terminal with his brother and another operator. He points at Mang Boy. 'Ikaw, Boy. Tatlumpung taon kita pinagda-drive. Tapos ganito ang ganti mo? Nagpapaorganize ka ng drivers laban sa akin?'\n\nThe other drivers watch. Some look at the ground. Arnel stands behind Mang Boy. So does Mang Tony.\n\nMang Boy takes a breath. 'Boss, hindi ito laban sa iyo. Ito ay para sa karapatan namin. Tatlumpung taon akong nagbayad ng boundary. Wala akong SSS. Wala akong PhilHealth. Kung mawalan ako ng trabaho bukas, wala akong aasahan. Ang hinihingi lang namin ay ang nararapat sa amin sa batas.'\n\nMang Cesar's face hardens. 'Kung ganyan pala, Boy -- bukas, huwag ka nang mag-drive ng jeep ko. Ikaw rin, Tony. At ikaw, Arnel. Lahat kayo na sumali sa kung anong samahan na yan. Tapos na tayo.'\n\nHe turns and walks away. Just like that, thirty years of driving -- gone.",
+      "theme": "boundary_system",
+      "choices": [
+        {
+          "text": "Go immediately to DOLE and file an unfair labor practice and illegal dismissal complaint against Mang Cesar.",
+          "nextNode": "jeepney_fight_01",
+          "consequence": "Mang Boy fights back through the legal system, with the full backing of his fellow drivers.",
+          "scoreChange": 15,
+          "knowledgeGained": "Dismissal for union activity or asserting labor rights is illegal dismissal and unfair labor practice under the Labor Code. DOLE's Single Entry Approach (SENA) provides mandatory 30-day conciliation before formal complaints are filed with the NLRC."
+        },
+        {
+          "text": "Try to apologize to Mang Cesar and get your driving position back -- you can't afford to be unemployed.",
+          "nextNode": "jeepney_fight_02",
+          "consequence": "Mang Boy retreats under economic pressure, and the organizing effort falters.",
+          "scoreChange": -5,
+          "knowledgeGained": null
+        },
+        {
+          "text": "Accept the dismissal but accelerate the cooperative's franchise application -- if you get your own franchise, you won't need Mang Cesar.",
+          "nextNode": "jeepney_modern_05",
+          "consequence": "Mang Boy channels the crisis into motivation to build the cooperative faster.",
+          "scoreChange": 10,
+          "knowledgeGained": "Even while pursuing a labor case, workers can simultaneously build alternative livelihood structures like cooperatives. The two legal processes are independent."
+        }
+      ],
+      "isEnding": false
+    },
+    "jeepney_confront_02": {
+      "id": "jeepney_confront_02",
+      "title": "The Negotiation Attempt",
+      "narrative": "Mang Boy approaches Mang Cesar alone, at the carinderia after the shift. He tries diplomacy. 'Boss, hindi naman kailangan magkagalit tayo. Ang gusto lang namin, maayos ang sitwasyon. Kung mag-cooperatize tayo ng tama, mas mabuti para sa lahat. Kayo, may franchise pa rin. Kami, may proteksyon.'\n\nMang Cesar listens, arms crossed. 'Boy, alam mo kung gaano kalaki ang puhunan ko sa franchise na yan? P200,000 ang binayad ko sa LTFRB application. P150,000 sa jeep every time nagpa-repair ako. Ikaw, bayad ka lang ng boundary. Tapos ngayon, gusto mo pang mag-demand?'\n\n'Hindi demand, Boss. Request lang. SSS lang. PhilHealth lang. Para may protection kami.'\n\nMang Cesar shakes his head. 'Boy, kung ire-register kita sa SSS, P2,000 a month ang dagdag na gastos ko -- employer share at employee share. Multiply mo sa limang driver. P10,000 a month. Hindi ko kaya yan.'\n\nBut the law doesn't care if it's inconvenient. If Mang Boy is an employee, SSS registration is mandatory -- not optional.",
+      "theme": "no_benefits",
+      "choices": [
+        {
+          "text": "Tell Mang Cesar respectfully that SSS registration is not a request -- it's the law, and you'll file a complaint if he refuses.",
+          "nextNode": "jeepney_fight_01",
+          "consequence": "Mang Boy escalates from request to demand, backed by legal knowledge.",
+          "scoreChange": 12,
+          "knowledgeGained": "Under Section 24 of the Social Security Act (RA 11199), employers who fail to register employees and remit contributions can be penalized with a fine of P5,000 to P20,000 and imprisonment of 6 years and 1 day to 12 years."
+        },
+        {
+          "text": "Accept Mang Cesar's reasoning and drop the SSS issue -- at least the boundary isn't going up.",
+          "nextNode": "jeepney_boundary_03",
+          "consequence": "Mang Boy backs down, and the status quo continues.",
+          "scoreChange": -5,
+          "knowledgeGained": null
+        },
+        {
+          "text": "Say nothing more and just go back to driving. You've done what you can.",
+          "nextNode": "ending_backdown",
+          "consequence": "Mang Boy gives up the fight entirely, unable to push past the operator's resistance.",
+          "scoreChange": -10,
+          "knowledgeGained": null
+        }
+      ],
+      "isEnding": false
+    },
+    "jeepney_fight_01": {
+      "id": "jeepney_fight_01",
+      "title": "DOLE and NLRC",
+      "narrative": "Mang Boy, Mang Tony, Arnel, and nine other drivers go to the DOLE NCR office in Intramuros, Manila. They file complaints for: (1) non-registration with SSS, PhilHealth, and Pag-IBIG, (2) non-payment of minimum wage differential, (3) non-payment of 13th month pay, and (4) illegal dismissal and unfair labor practice for those terminated by Mang Cesar.\n\nThe DOLE officer processes their complaint through SENA -- the Single Entry Approach -- which requires a mandatory 30-day conciliation-mediation period. Mang Cesar is summoned.\n\nAt the SENA conference, Mang Cesar shows up with a lawyer. The lawyer argues: 'My client and the complainants have a lease arrangement, not an employer-employee relationship. The drivers are lessees of the vehicle. They are not employees.'\n\nAtty. Reyes from PAO responds: 'That argument has been rejected by the Supreme Court in multiple cases. Under the boundary system, the operator exercises control over the route, schedule, and conduct of the driver. The four-fold test is met. These are employees.'\n\nThe SENA officer asks both parties if they can reach a settlement.",
+      "theme": "boundary_system",
+      "choices": [
+        {
+          "text": "Refuse to settle for less than full SSS registration and backpay -- take the case to the NLRC if needed.",
+          "nextNode": "jeepney_fight_03",
+          "consequence": "The drivers stand firm, willing to go through the full legal process.",
+          "scoreChange": 15,
+          "knowledgeGained": "If SENA conciliation fails after 30 days, the complaint can be elevated to the NLRC (National Labor Relations Commission) for formal adjudication. NLRC Labor Arbiters handle cases involving employer-employee relationship disputes, illegal dismissal, and money claims."
+        },
+        {
+          "text": "Accept a partial settlement -- get Mang Cesar to register you with SSS going forward, but don't pursue backpay.",
+          "nextNode": "jeepney_fight_04",
+          "consequence": "The drivers get some protection but leave significant money on the table.",
+          "scoreChange": 5,
+          "knowledgeGained": "In SENA mediation, parties can agree to a compromise settlement. However, workers should be aware that accepting a settlement waives the right to pursue additional claims on the same issues."
+        }
+      ],
+      "isEnding": false
+    },
+    "jeepney_fight_02": {
+      "id": "jeepney_fight_02",
+      "title": "The Apology",
+      "narrative": "Mang Boy swallows his pride and goes to Mang Cesar's house in Malabon. He brings a plastic bag of mangoes -- a peace offering. 'Boss, pasensya na. Hindi ko naman intensyon na lumaban sa iyo. Mga driver lang kami, wala kaming ibang alam kundi mag-drive.'\n\nMang Cesar makes him wait outside for twenty minutes before opening the gate. 'Boy, nasaktan mo ako. Tatlumpung taon na tayo. Tapos ganun? Nagpapaorganize ka? May nag-file pa ng kaso sa DOLE?'\n\nThe price of forgiveness: Mang Boy must disavow the organizing effort. Stop attending meetings. Convince the other drivers to withdraw their complaints. And the boundary goes up to P1,400.\n\nMang Boy agrees. He goes back to driving. The cooperative dream dies. The SSS stays at zero. Aling Merced doesn't say anything when he comes home, but her silence is louder than words.\n\nTwo of the other drivers -- Arnel and Mang Tony -- refuse to go back. They continue with the complaint at DOLE. Mang Boy watches from the sidelines, driving Mang Cesar's old jeepney, paying P1,400 a day now, feeling something hollow in his chest.",
+      "theme": "boundary_system",
+      "choices": [
+        {
+          "text": "Realize you made a mistake surrendering. Quietly rejoin Arnel and Mang Tony's fight -- it's not too late.",
+          "nextNode": "jeepney_fight_03",
+          "consequence": "Mang Boy finds his courage again, inspired by the drivers who didn't give up.",
+          "scoreChange": 10,
+          "knowledgeGained": "Workers can join or rejoin labor complaints at any stage of the proceedings. A worker who was coerced into withdrawing a complaint can also file a separate complaint for the coercion itself, which constitutes unfair labor practice."
+        },
+        {
+          "text": "Stay quiet and just keep driving. You're too old for this fight.",
+          "nextNode": "ending_displaced",
+          "consequence": "Mang Boy chooses survival over dignity. The boundary keeps rising. The years keep passing.",
+          "scoreChange": -10,
+          "knowledgeGained": null
+        }
+      ],
+      "isEnding": false
+    },
+    "jeepney_fight_03": {
+      "id": "jeepney_fight_03",
+      "title": "The NLRC Case",
+      "narrative": "The SENA mediation fails. The case is elevated to the NLRC, NCR Arbitration Branch. Atty. Reyes files the formal complaint on behalf of twelve drivers. The case is docketed: NLRC-NCR Case No. 04-XXXXX-26.\n\nThe process is long. Position papers. Hearings. Waiting. Mang Boy, unemployed since Mang Cesar fired him, drives part-time for a ride-hailing app using Jericho's motorcycle -- P300 to P400 a day, barely enough. Aling Merced takes in laundry. Maricel sends an extra P1,000 a month.\n\nSix months later, the Labor Arbiter issues a decision. The ruling is clear: 'The complainants are regular employees of respondent Cesar Santos, doing business as Monumento-Baclaran Jeepney Operations. The boundary system does not negate the employer-employee relationship. The respondent is ordered to: (1) pay minimum wage differentials, (2) pay 13th month pay, (3) register all complainant-drivers with SSS, PhilHealth, and Pag-IBIG with retroactive contributions, (4) pay illegal dismissal backwages and separation pay to terminated drivers.'\n\nTotal monetary award for Mang Boy alone: P680,000 -- covering thirty years of unpaid benefits and wage differentials.\n\nMang Cesar's lawyer files an appeal.",
+      "theme": "boundary_system",
+      "choices": [
+        {
+          "text": "Stay the course -- let Atty. Reyes handle the appeal. Use the time to push the cooperative's franchise application forward.",
+          "nextNode": "jeepney_modern_05",
+          "consequence": "Mang Boy fights on two fronts: legal justice and building a new future.",
+          "scoreChange": 12,
+          "knowledgeGained": "NLRC decisions can be appealed to the NLRC Commission, then to the Court of Appeals, and finally to the Supreme Court. However, employers must post a cash or surety bond equal to the monetary award to perfect the appeal -- this protects workers' claims."
+        },
+        {
+          "text": "Offer Mang Cesar a settlement now -- take P400,000 and end the case, so you can move on with your life.",
+          "nextNode": "ending_settlement",
+          "consequence": "Mang Boy accepts less than what he's owed, but gets closure and capital for the cooperative.",
+          "scoreChange": 5,
+          "knowledgeGained": "Compromise settlements during appeal are common in labor cases. The advantage is certainty and speed. The risk is accepting less than the full award. Workers should consult their lawyer before agreeing."
+        }
+      ],
+      "isEnding": false
+    },
+    "jeepney_fight_04": {
+      "id": "jeepney_fight_04",
+      "title": "The Partial Victory",
+      "narrative": "The SENA settlement is signed. Mang Cesar agrees to: register all current drivers with SSS and PhilHealth going forward, maintain the boundary at P1,200 (no increase), and issue a written acknowledgment that drivers are 'workers associated with the operation.' It's not a full employment contract, but it's more than they had before.\n\nMang Cesar does not agree to: retroactive SSS contributions, 13th month pay, or any backpay. The settlement explicitly states that the drivers 'waive all claims prior to the date of this agreement.'\n\nAtty. Reyes pulls Mang Boy aside. 'Mang Boy, ito ay compromise. May nakuha kayo -- SSS at PhilHealth moving forward. Pero malaki ang binitawan ninyo. Tatlumpung taon ng unpaid benefits. Ang tanong: okay lang ba sa inyo yan?'\n\nMang Boy looks at the other drivers. Some are relieved. Mang Tony says, 'Kahit SSS lang, malaking tulong na.' Arnel disagrees: 'Parang pinalampas lang natin yung tatlumpung taon. May karapatan tayo sa backpay.'",
+      "theme": "no_benefits",
+      "choices": [
+        {
+          "text": "Accept the settlement and focus energy on building the cooperative -- the future matters more than the past.",
+          "nextNode": "ending_partial",
+          "consequence": "The drivers secure partial protection and channel their fight into building something new.",
+          "scoreChange": 7,
+          "knowledgeGained": null
+        },
+        {
+          "text": "Reject the settlement and push the case to NLRC for the full claim -- thirty years of unpaid benefits should not be waived.",
+          "nextNode": "jeepney_fight_03",
+          "consequence": "The drivers choose the harder but potentially more rewarding path.",
+          "scoreChange": 12,
+          "knowledgeGained": "Workers should carefully consider the long-term impact of settlements. While settlements provide quick resolution, they may waive significant claims. The prescriptive period for money claims under the Labor Code is 3 years, but claims for SSS non-remittance have a longer prescriptive period of 20 years."
+        }
+      ],
+      "isEnding": false
+    },
+    "jeepney_modern_05": {
+      "id": "jeepney_modern_05",
+      "title": "The Modern Jeepney",
+      "narrative": "Six months of paperwork, hearings, and waiting. The LTFRB grants the Monumento-Baclaran Drivers' Cooperative a provisional Certificate of Public Convenience. It's conditional on the acquisition of at least three modern jeepney units within 12 months.\n\nThe DBP approves a loan: P6.6 million for three modern jeepney units at P2.2 million each, less the P160,000 government subsidy per unit. Monthly amortization: P95,000 for the fleet, split among 15 members -- roughly P6,333 each. It's steep, but it's a fixed cost. No more boundary. The fare revenue is pooled and distributed after expenses.\n\nThe day the first modern jeepney arrives at the terminal is unlike anything Mang Boy has experienced in thirty years. It's brand new. Air-conditioned. Electronic fare system. Low-floor entry for elderly passengers and PWDs. On the side, painted in bright colors: 'MBDC -- Monumento-Baclaran Drivers' Cooperative.'\n\nMang Boy sits in the driver's seat. It's cushioned. The steering is power-assisted. There's a GPS tracker. The dashboard has actual gauges that work. He turns the key and the engine purrs -- no rattling, no overheating.\n\nAling Merced, Jericho, and Maricel are there. Aling Merced wipes her eyes. 'Boy, sa wakas. Sa iyo na ito.'",
+      "theme": "modernization",
+      "choices": [
+        {
+          "text": "Drive the first trip of the new cooperative jeepney -- and make sure every member gets a turn at the wheel.",
+          "nextNode": "ending_cooperative",
+          "consequence": "Mang Boy launches the cooperative's operations, thirty years of struggle transformed into ownership.",
+          "scoreChange": 15,
+          "knowledgeGained": "Under a cooperative model, drivers share revenue after pooled expenses (fuel, maintenance, loan amortization, insurance). Studies show cooperative drivers earn 30-50% more than boundary drivers because there is no operator taking a cut."
+        },
+        {
+          "text": "Before the first trip, hold a meeting to establish fair rules: rotation schedule, maintenance fund, and member benefits.",
+          "nextNode": "ending_organized",
+          "consequence": "Mang Boy ensures the cooperative starts right -- with systems, not just enthusiasm.",
+          "scoreChange": 12,
+          "knowledgeGained": "Successful transport cooperatives have clear bylaws covering: (1) driving rotation schedules, (2) revenue sharing formulas, (3) maintenance reserve funds (typically 10-15% of gross revenue), (4) member benefit programs including health insurance and emergency loans."
+        }
+      ],
+      "isEnding": false
+    },
+    "ending_cooperative": {
+      "id": "ending_cooperative",
+      "title": "The Road Ahead",
+      "narrative": "Mang Boy Villanueva, 56, drives the Monumento-Baclaran route in a brand-new modern jeepney. The air conditioning hums. Passengers tap their fare cards on the electronic reader. An elderly woman with a cane uses the low-floor entry and says, 'Salamat, kuya. Ang ginhawa naman ng jeep na ito.'\n\nThe cooperative is not perfect. The loan payments are heavy -- P6,333 a month per member. Some months, after fuel and maintenance, the take-home is only slightly better than the old boundary days. But there's a difference now: every peso earned goes to the cooperative. No operator taking a cut. No boundary that goes up without explanation.\n\nMore importantly, Mang Boy has SSS now -- the cooperative registers all its member-drivers. PhilHealth. Pag-IBIG. Jericho's tuition is still a stretch, but there's a cooperative emergency loan program that covers it at zero interest.\n\nKa Domeng visits the terminal and watches the modern jeepneys line up. He smiles. 'Boy, ito yung pangarap namin noong '90s. Na ang driver, hindi lang driver -- kundi may-ari. Natupad mo.'\n\nMang Boy parks the jeepney at the end of his shift. He does the math in his notebook -- the same notebook, with newer pages. Today's take: P1,200 after all expenses. Twelve hours of work. Not enough. But his. Truly his.\n\nIf you are a jeepney driver or transport worker: you have the right to organize. You have the right to social protection. You have the right to a voice in the decisions that affect your livelihood. Call DOLE Hotline 1349. Visit the CDA for cooperative formation assistance. Contact PISTON or your local transport workers' group. The road is long, but you don't have to drive it alone.",
+      "theme": "modernization",
+      "choices": [],
+      "isEnding": true
+    },
+    "ending_organized": {
+      "id": "ending_organized",
+      "title": "Built to Last",
+      "narrative": "The Monumento-Baclaran Drivers' Cooperative holds its first general assembly in a rented function room near Monumento. Fifteen members, plus Ate Maricris from PISTON and Atty. Reyes from PAO as advisers. Mang Boy, as chairman, reads the agenda from a printed sheet -- Jericho typed it up.\n\nThey establish everything: driving rotation (two shifts, 4 AM to 12 PM and 12 PM to 8 PM), revenue sharing (65% to the driving member, 25% to the cooperative fund, 10% to maintenance reserve), member benefits (SSS and PhilHealth fully covered, emergency loan fund, education assistance for members' children).\n\nThe cooperative applies for additional units. By the end of the year, they have five modern jeepneys on the route. Three more cooperatives in nearby routes reach out to learn from their model. Ate Maricris invites Mang Boy to speak at a national transport workers' congress in Quezon City.\n\nMang Boy stands at the podium in his cleanest polo -- the same one from the LTFRB hearing. 'Mga kasama,' he says, 'noong una, akala ko boundary driver lang ako habang buhay. Walang SSS, walang PhilHealth, walang boses. Pero natutunan ko na may batas na nagpoprotekta sa atin. At higit doon -- natutunan ko na kapag nagkaisa tayo, walang operator na pwedeng pigilan tayo.'\n\nHe goes home to Caloocan that night. Aling Merced has cooked sinigang. Jericho is studying for finals. Maricel sent a message: 'Proud ako sa iyo, Tatay.'\n\nMang Boy sits at the kitchen table and, for the first time in thirty years, doesn't calculate whether tomorrow's earnings will be enough. The cooperative is his. The future is shared.\n\nTransport workers: visit the Cooperative Development Authority (CDA) for free cooperative formation training. Call DOLE Hotline 1349 for labor rights information. Contact PISTON for transport sector organizing support. You built this country's roads. It's time you owned your place on them.",
+      "theme": "franchise_rights",
+      "choices": [],
+      "isEnding": true
+    },
+    "ending_settlement": {
+      "id": "ending_settlement",
+      "title": "The Compromise",
+      "narrative": "Mang Cesar's lawyer calls Atty. Reyes. They negotiate for two weeks. The final settlement: P400,000 for Mang Boy, P250,000 each for the other dismissed drivers, and Mang Cesar's agreement to register all remaining drivers with SSS and PhilHealth going forward. The settlement is signed at the NLRC.\n\nMang Boy holds the check. P400,000. It's less than the P680,000 the Labor Arbiter awarded. But it's real. It's now. No more appeals, no more waiting.\n\nHe uses P100,000 for Jericho's college tuition and dormitory. P50,000 for Aling Merced's long-delayed dental work. P50,000 for a small emergency fund. And P200,000 as his increased share capital in the Monumento-Baclaran Drivers' Cooperative, which is still pursuing its LTFRB franchise.\n\nThe cooperative gets its provisional franchise six months later. Mang Boy is one of the first to drive the new unit. He's not the chairman anymore -- he stepped aside for Arnel, who's younger and more energetic. But he's a founding member. His name is on the incorporation papers.\n\nAt 56, Mang Boy has SSS for the first time. The contributions start fresh -- he'll have maybe nine years of contributions before he turns 65. It's not thirty years' worth. It's not what he was owed. But it's something.\n\nSome fights are won in full. Some are won in part. The important thing is that they are fought.\n\nKnow your rights. Document everything. Seek help from DOLE (Hotline 1349), PAO (free legal aid), and the CDA (cooperative formation). Even partial justice is better than silence.",
+      "theme": "boundary_system",
+      "choices": [],
+      "isEnding": true
+    },
+    "ending_displaced": {
+      "id": "ending_displaced",
+      "title": "The Last Trip",
+      "narrative": "The LTFRB deadline passes. Mang Cesar's franchise expires. He does not form a cooperative -- at least not a real one. The jeepney is impounded at an MMDA lot in Quezon City. Mang Boy watches from the sidewalk as the old Sarao body, dented and patched and painted with thirty years of road memory, is towed away.\n\nHe's 56 now. No jeepney. No franchise. No SSS. No savings. No cooperative. The modern jeepneys on the Monumento-Baclaran route are run by a large cooperative dominated by operators from another area. They have no room for an old driver without a membership.\n\nMang Boy tries ride-hailing on Jericho's motorcycle. P300 to P400 a day on good days. He tries applying as a driver for a delivery company -- they want someone under 45. He goes to DOLE, but without a clear employer-employee relationship (he never filed the complaint when he had the chance), the options are limited.\n\nAling Merced takes a job as a kasambahay in a nearby subdivision. Jericho takes a leave of absence from college to work at a warehouse. Maricel increases her monthly contribution to P3,000.\n\nMang Boy sits in their apartment in Caloocan, the small notebook on the table. He flips through the pages -- years of daily earnings, P800, P600, P1,100, P450. A lifetime of numbers that added up to almost nothing.\n\nBut even in this ending, there is a lesson. Mang Boy's story did not have to end this way. The rights were there. The laws existed. The path was available. What was missing was the knowledge -- and the courage -- to take it.\n\nIf you are a transport worker: do not wait until the franchise expires. Call DOLE Hotline 1349 now. Visit the CDA now. Organize now. Form your cooperative now. Register for SSS and PhilHealth now. The road doesn't wait. Neither should you.",
+      "theme": "modernization",
+      "choices": [],
+      "isEnding": true
+    },
+    "ending_partial": {
+      "id": "ending_partial",
+      "title": "Somewhere in Between",
+      "narrative": "Mang Boy gets some of what he fought for. The SENA settlement gives him SSS registration going forward. The cooperative is formed but struggles -- only eight members committed, and the LTFRB franchise application is still pending. The modern jeepney loan is approved but the monthly payments are brutal.\n\nHe's still driving, but now it's a mix: three days a week on the cooperative's one modern jeepney (split among members), and the rest doing odd driving jobs -- delivery runs, airport transfers, whatever comes through word of mouth.\n\nThe income is unstable. Some weeks, P4,000. Other weeks, P2,000. But there's SSS now -- P1,000 a month in contributions. PhilHealth -- P500 a month. It's not much, but when Mang Boy's back flares up again and he needs an MRI, PhilHealth covers 40% of the cost. It's the first time in his life that insurance paid for anything.\n\nJericho graduates from college. Gets a job at a BPO in Makati. Sends home P5,000 a month. The pressure eases, slightly.\n\nMang Boy still goes to the terminal some mornings. He sits on Ka Domeng's old bench -- Ka Domeng passed away last year, quietly, at home, also without SSS -- and watches the modern jeepneys come and go. Some are run by real cooperatives. Some are cooperatives in name only, with operators still pulling the strings.\n\nThe fight isn't over. It never is. But Mang Boy is still in it, and that counts for something.\n\nFor transport workers struggling with partial victories: every SSS contribution matters, every PhilHealth registration matters, every step toward organization matters. Perfection is not the standard. Progress is. Call DOLE Hotline 1349. Visit CDA. Talk to PISTON. Keep fighting.",
+      "theme": "no_benefits",
+      "choices": [],
+      "isEnding": true
+    },
+    "ending_backdown": {
+      "id": "ending_backdown",
+      "title": "The Quiet Road",
+      "narrative": "Mang Boy never files the complaint. He never joins the cooperative. He keeps driving Mang Cesar's jeepney, paying the boundary that has now reached P1,500 a day. The modernization deadline is extended twice -- the government keeps pushing it back, because the reality is that most drivers and operators aren't ready.\n\nAt 58, Mang Boy's back gives out for good. The doctor says no more driving. He has no separation pay, no retirement fund, no SSS pension. Mang Cesar gives him P15,000 -- 'Para sa pagpapagamot mo, Boy' -- and finds a new driver within a week.\n\nP15,000 for thirty-two years.\n\nJericho, now working, becomes the family breadwinner. Maricel chips in. Aling Merced takes care of Mang Boy at home, stretching every peso. They manage. Filipinos always manage.\n\nBut managing is not living. And surviving is not justice.\n\nMang Boy sometimes tells Jericho: 'Anak, huwag kang maging katulad ko. Alamin mo ang karapatan mo. Huwag kang matakot. Kasi ang takot -- mas mahal ang presyo kaysa sa laban.'\n\nIf you know a driver, a rider, a worker like Mang Boy -- share this story. Tell them about DOLE Hotline 1349. Tell them about the CDA and cooperative formation. Tell them about SSS voluntary membership. Tell them about their rights. Because the biggest injustice is not exploitation. It's exploitation that no one knows is exploitation.\n\nIt's not too late. It's never too late.",
+      "theme": "boundary_system",
+      "choices": [],
+      "isEnding": true
+    }
+  },
+  "startNode": "jeepney_start"
+}

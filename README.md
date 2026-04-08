@@ -18,12 +18,14 @@ A text-based narrative RPG that teaches Filipino workers their labor rights thro
 | Roberto Dela Cruz | Construction Worker | Subcontracted worker in Cebu facing unsafe conditions and wage theft |
 | Mang Ernesto Bautista | Family Driver | Private driver for 8 years with no written contract, SSS, or overtime pay |
 | Aling Rosa Mendoza | Kasambahay | Live-in household helper working 5 AM to 10 PM with no rest day |
+| Mang Boy Villanueva | Jeepney Driver | 55-year-old driver on the Monumento-Baclaran route facing PUV modernization and the exploitative boundary system |
+| Aling Nena Ramos | Street Food Vendor | Sidewalk vendor near Divisoria with no permit, navigating demolition threats and the informal economy |
 
 ## Tech Stack
 
 - **Frontend**: React 18 + Vite (PWA with offline support)
 - **Backend**: Express.js (Helmet, CORS, rate limiting)
-- **Content**: 412 pre-generated static JSON scenario nodes (zero runtime AI costs)
+- **Content**: 544 pre-generated static JSON scenario nodes (zero runtime AI costs)
 - **Content Generation**: Anthropic Claude API (one-time, via `scripts/generate.js`)
 - **Deployment**: GCP Cloud Run + Firebase Hosting
 - **Languages**: English and Tagalog (bilingual UI + scenarios)

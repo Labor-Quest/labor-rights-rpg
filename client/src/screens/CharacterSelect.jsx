@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { fetchCharacters } from "../engine/api.js";
 import { useLanguage } from "../context/LanguageContext.jsx";
 
@@ -9,6 +9,8 @@ const ROLE_ICONS = {
   construction: "\u2692",
   driver: "\uD83D\uDE97",
   maid: "\uD83C\uDFE0",
+  jeepney: "\uD83D\uDE90",
+  vendor: "\uD83C\uDF62",
 };
 
 const CATEGORIES = [
@@ -17,14 +19,17 @@ const CATEGORIES = [
   { id: "gig", icon: "\u26A1" },
   { id: "office", icon: "\uD83C\uDFE2" },
   { id: "industrial", icon: "\u2692" },
+  { id: "transport", icon: "\uD83D\uDE8C" },
+  { id: "informal", icon: "\uD83D\uDED2" },
 ];
 
-export default function CharacterSelect({ onSelect }) {
+export default function CharacterSelect({ onSelect, highlightId }) {
   const [characters, setCharacters] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const [collapsed, setCollapsed] = useState({});
   const { t, locale } = useLanguage();
+  const highlightRef = useRef(null);
 
   useEffect(() => {
     fetchCharacters(locale)
@@ -37,6 +42,13 @@ export default function CharacterSelect({ onSelect }) {
         setLoading(false);
       });
   }, [locale]);
+
+  // Scroll to highlighted character from deep link
+  useEffect(() => {
+    if (!loading && highlightId && highlightRef.current) {
+      highlightRef.current.scrollIntoView({ behavior: "smooth", block: "center" });
+    }
+  }, [loading, highlightId]);
 
   if (loading) return <div className="loading">{t("loading.characters")}</div>;
   if (error) return <div className="loading">{t("game.error")}: {error}</div>;
@@ -87,7 +99,8 @@ export default function CharacterSelect({ onSelect }) {
               {grouped[cat.id].map((char) => (
                 <div
                   key={char.id}
-                  className="card card-clickable"
+                  ref={char.id === highlightId ? highlightRef : undefined}
+                  className={`card card-clickable${char.id === highlightId ? " card-highlight" : ""}`}
                   onClick={() => onSelect(char)}
                   role="button"
                   tabIndex={0}
