@@ -32,7 +32,7 @@ A text-based narrative RPG that teaches Filipino workers their labor rights thro
 
 ```bash
 # Clone and install
-git clone https://github.com/jmbt25/labor-rights-rpg.git
+git clone https://github.com/Labor-Quest/labor-rights-rpg.git
 cd labor-rights-rpg
 npm install
 cd client && npm install && cd ..
